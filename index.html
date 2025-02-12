@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Atualização da meta viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>INOSX</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --font-size-large: clamp(1.5rem, 5vw, 3rem);
+      --font-size-medium: clamp(1.2rem, 4vw, 2rem);
+      --font-size-small: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    html, body {
+      width: 100%;
+      height: 500vh;
+      overflow-x: hidden;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .start-container {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      gap: clamp(10px, 2vw, 20px);
+      z-index: 2000; /* Aumentado para garantir que fique acima de tudo */
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      padding: 0 clamp(10px, 3vw, 20px);
+      width: min(90%, 600px);
+      justify-content: center;
+      cursor: pointer; /* Adicionado para melhor feedback visual */
+      pointer-events: auto; /* Garantir que os eventos de clique funcionem */
+    }
+
+    .start-text {
+      color: var(--text-color);
+      font-size: var(--font-size-medium);
+      white-space: nowrap;
+    }
+
+    .text-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: min(90%, 800px);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      padding: 0 clamp(10px, 3vw, 20px);
+    }
+
+    .text-container span {
+      display: block;
+      font-size: var(--font-size-large);
+      margin: clamp(5px, 1vh, 10px) 0;
+      white-space: pre-wrap;
+    }
+
+    #text3-anim {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: var(--font-size-large);
+      opacity: 0;
+      white-space: nowrap;
+      text-align: center;
+      z-index: 98;
+    }
+
+    #text4 {
+      font-size: 8rem;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 8rem;
+      opacity: 0; /* Importante: começar invisível */
+      white-space: nowrap;
+      text-align: center;
+      z-index: 98;
+    }
+
+    .scroll-indicator {
+      position: fixed;
+      bottom: clamp(10px, 3vh, 20px);
+      right: clamp(10px, 3vw, 20px);
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+      z-index: 100;
+      transform: scale(clamp(0.7, 0.7 + 0.3vw, 1));
+    }
+
+    .chat-instructions {
+      position: fixed;
+      bottom: 100px; /* Valor fixo para garantir posição */
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: var(--font-size-small);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      width: min(90%, 600px);
+      z-index: 99; /* Garantir que fique acima de outros elementos */
+    }
+
+    .chat-input-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background-color: var(--bg-color);
+      z-index: 100; /* Garantir que fique acima de outros elementos */
+    }
+
+    .chat-input-wrapper {
+      display: flex;
+      align-items: center;
+      width: min(90%, 800px);
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      padding: 10px 20px;
+      gap: 10px;
+    }
+
+    .chat-input {
+      flex: 1;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: var(--font-size-small);
+      padding: 8px;
+      outline: none;
+      width: 100%;
+    }
+
+    .send-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: clamp(3px, 1vw, 5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+      transform: scale(clamp(0.8, 0.8 + 0.2vw, 1));
+    }
+
+    /* Modo escuro */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #000000;
+        --text-color: #ffffff;
+      }
+    }
+
+    /* Ajustes para orientação paisagem em dispositivos móveis */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .text-container {
+        top: 60%;
+      }
+
+      .chat-instructions {
+        top: 20%;
+      }
+
+      .chat-input-container {
+        padding: clamp(5px, 2vh, 10px);
+      }
+    }
+
+    /* Classe para esconder elementos */
+    .hidden {
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container com os três textos em linha -->
+  <div class="start-container" id="startContainer">
+    <span class="start-text">Welcome to the future.Start the experience</span>
+    <div class="start-arrow">
+      <svg width="40" height="40" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+      </svg>
+    </div>
+  </div>
+  <div class="text-container">
+    <span id="text1">There are no more websites...</span>
+    <span id="text2">... there's only AI.</span>
+    <span id="text3">And, WE CREATE AI.</span>
+  </div>
+  <!-- Elemento duplicado para animar "And, WE CREATE AI." -->
+  <div id="text3-anim">WE CREATE AI.</div>
+  <!-- Elemento para exibir "INOSX" -->
+  <div id="text4">INOSX</div>
+  <!-- Ícone de seta para baixo -->
+  <div class="scroll-indicator">
+    <svg width="40" height="40" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12,16.5L5,9.5L6.41,8.09L12,13.67L17.59,8.09L19,9.5L12,16.5Z" />
+    </svg>
+  </div>
+
+  <div class="chat-instructions" id="chatInstructions">
+    I am INOSX, what would you like to know about our company? I can answer any question.
+  </div>
+
+  <div class="chat-input-container" id="chatInput">
+    <div class="chat-input-wrapper">
+      <input type="text" class="chat-input" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem">
+      <button class="send-button" aria-label="Enviar mensagem">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Adicione os elementos de áudio no HTML -->
+  <audio id="audio1" preload="auto">
+    <source src="audio/there-are-no-more-websites.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audio2" preload="auto">
+    <source src="audio/theres-only-ai.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audio3" preload="auto">
+    <source src="audio/we-create-ai.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="audio4" preload="auto">
+    <source src="audio/inosx.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    (function(){
+      let vh = window.innerHeight;
+      let fadeRange = 0.2 * vh; // 20% da viewport para fade in/out
+
+      const startContainer = document.getElementById("startContainer");
+      const textContainer = document.querySelector(".text-container");
+      const text1 = document.getElementById("text1");
+      const text2 = document.getElementById("text2");
+      const text3 = document.getElementById("text3");
+      const text3Anim = document.getElementById("text3-anim");
+      const text4 = document.getElementById("text4");
+      const scrollIndicator = document.querySelector(".scroll-indicator");
+      const chatInput = document.getElementById("chatInput");
+      const chatInstructions = document.getElementById("chatInstructions");
+      let audioInitialized = false;
+      let experienceStarted = false;
+
+      // Referências aos elementos de áudio
+      const audio1 = document.getElementById("audio1");
+      const audio2 = document.getElementById("audio2");
+      const audio3 = document.getElementById("audio3");
+      const audio4 = document.getElementById("audio4");
+      
+      let played1 = false;
+      let played2 = false;
+      let played3 = false;
+      let played4 = false;
+
+      // Função para iniciar a experiência
+      async function startExperience() {
+        try {
+          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          await audioContext.resume();
+          
+          // Carrega os áudios
+          audio1.load();
+          audio2.load();
+          audio3.load();
+          audio4.load();
+          
+          audioInitialized = true;
+          experienceStarted = true;
+
+          // Esconde o container inicial
+          startContainer.classList.add('hidden');
+
+          // Mostra os elementos da experiência
+          textContainer.style.opacity = '1';
+          scrollIndicator.style.opacity = '1';
+
+          // Inicia a atualização
+          update();
+        } catch (error) {
+          console.log('Erro ao inicializar áudio:', error);
+        }
+      }
+
+      // Adiciona evento de clique no botão inicial
+      startContainer.addEventListener('click', startExperience);
+
+      // Função para reproduzir áudio
+      async function playAudioWithFallback(audioElement) {
+        if (audioInitialized) {
+          try {
+            await audioElement.play();
+          } catch (error) {
+            console.log('Erro na reprodução do áudio:', error);
+          }
+        }
+      }
+
+      // Função auxiliar para calcular opacidade
+      function fadeOpacity(scrollPos, range) {
+        if (scrollPos < fadeRange) {
+          return scrollPos / fadeRange;
+        } else if (scrollPos > range - fadeRange) {
+          return (range - scrollPos) / fadeRange;
+        }
+        return 1;
+      }
+
+      // Função principal de atualização
+      function update() {
+        if (!experienceStarted) return;
+
+        const scrollY = window.scrollY;
+
+        // Esconde o container inicial imediatamente quando começar a rolar
+        if (scrollY > 0) {
+          startContainer.classList.add('hidden');
+        }
+
+        // Reset inicial - removida a linha que resetava text4
+        text3Anim.style.opacity = 0;
+
+        // Seção 1: [0, vh]
+        if (scrollY < vh) {
+          text1.style.opacity = 1;
+          scrollIndicator.style.opacity = 1;
+          if (!played1 && scrollY > vh * 0.3) {
+            playAudioWithFallback(audio1);
+            played1 = true;
+          }
+        } else {
+          text1.style.opacity = 0;
+        }
+
+        // Seção 2: [vh, 2vh]
+        if (scrollY >= vh && scrollY < 2 * vh) {
+          let rel = scrollY - vh;
+          text2.style.opacity = fadeOpacity(rel, vh);
+          if (!played2 && rel > vh * 0.3) {
+            playAudioWithFallback(audio2);
+            played2 = true;
+          }
+        } else {
+          text2.style.opacity = 0;
+        }
+
+        // Seção 3: [2vh, 3vh]
+        if (scrollY >= 2 * vh && scrollY < 3 * vh) {
+          let rel = scrollY - 2 * vh;
+          text3.style.opacity = fadeOpacity(rel, vh);
+          if (!played3 && rel > vh * 0.3) {
+            playAudioWithFallback(audio3);
+            played3 = true;
+          }
+        } else {
+          text3.style.opacity = 0;
+        }
+
+        // Seção 4: [3vh, 4vh] - Aqui o texto INOSX aparece
+        if (scrollY >= 3 * vh && scrollY < 4 * vh) {
+          let t = (scrollY - 3 * vh) / vh;
+          text3Anim.style.opacity = t;
+          text4.style.opacity = t;
+          if (!played4 && t > 0.3) {
+            playAudioWithFallback(audio4);
+            played4 = true;
+          }
+        }
+
+        // Seção 5: [4vh, 5vh] - Texto INOSX permanece visível
+        if (scrollY >= 4 * vh) {
+          text4.style.opacity = 1; // Mantém o texto visível
+          chatInput.style.opacity = 1;
+          chatInstructions.style.opacity = 1;
+        } else {
+          chatInput.style.opacity = 0;
+          chatInstructions.style.opacity = 0;
+        }
+      }
+
+      // Event listeners
+      window.addEventListener("scroll", update);
+      window.addEventListener("resize", () => {
+        vh = window.innerHeight;
+        fadeRange = 0.2 * vh;
+        if (experienceStarted) {
+          update();
+        }
+      });
+
+      // Primeira execução do update
+      update();
+    })();
+  </script>
+</body>
+</html>
