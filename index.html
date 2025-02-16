@@ -114,68 +114,77 @@
       transform: scale(clamp(0.7, 0.7 + 0.3vw, 1));
     }
 
-    .chat-instructions {
-      position: fixed;
-      bottom: 100px; /* Valor fixo para garantir posição */
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      font-size: var(--font-size-small);
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      width: min(90%, 600px);
-      z-index: 1000; /* Aumentado para garantir visibilidade */
-      background-color: var(--bg-color);
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    .chat-input-container {
+    .chat-section {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 20px;
+      z-index: 1000;
       display: flex;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      background-color: var(--bg-color);
-      z-index: 1000; /* Aumentado para garantir visibilidade */
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+      animation: slideUp 0.5s ease-out forwards;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .chat-instructions {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: min(90%, 600px);
+    }
+
+    .chat-input-container {
+      width: min(90%, 600px);
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      padding: 10px;
     }
 
     .chat-input-wrapper {
       display: flex;
-      align-items: center;
-      width: min(90%, 800px);
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 25px;
-      padding: 10px 20px;
       gap: 10px;
     }
 
     .chat-input {
       flex: 1;
-      background: none;
+      padding: 10px;
       border: none;
-      color: var(--text-color);
-      font-size: var(--font-size-small);
-      padding: 8px;
-      outline: none;
-      width: 100%;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: black;
     }
 
     .send-button {
-      background: none;
+      padding: 10px;
       border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
       cursor: pointer;
-      padding: clamp(3px, 1vw, 5px);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-color);
-      transform: scale(clamp(0.8, 0.8 + 0.2vw, 1));
+      transition: background-color 0.3s;
+    }
+
+    .send-button:hover {
+      background-color: #0056b3;
     }
 
     /* Modo escuro */
@@ -240,18 +249,20 @@
     </svg>
   </div>
 
-  <div class="chat-instructions" id="chatInstructions">
-    I am INOSX, what would you like to know about our company? I can answer any question.
-  </div>
+  <div class="chat-section">
+    <div class="chat-instructions" id="chatInstructions">
+      I am INOSX, what would you like to know about our company? I can answer any question.
+    </div>
 
-  <div class="chat-input-container" id="chatInput">
-    <div class="chat-input-wrapper">
-      <input type="text" class="chat-input" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem">
-      <button class="send-button" aria-label="Enviar mensagem">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
-        </svg>
-      </button>
+    <div class="chat-input-container" id="chatInput">
+      <div class="chat-input-wrapper">
+        <input type="text" class="chat-input" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem">
+        <button class="send-button" aria-label="Enviar mensagem">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
