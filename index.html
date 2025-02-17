@@ -128,6 +128,7 @@
       align-items: center;
       padding: 20px;
       background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+      transition: opacity 0.5s ease, transform 0.5s ease;
       animation: slideUp 0.5s ease-out forwards;
     }
 
@@ -217,12 +218,14 @@
     .hidden {
       opacity: 0 !important;
       pointer-events: none !important;
+      transform: translateY(100%);
     }
 
-    /* Adicione uma classe para quando os elementos devem estar visíveis */
+    /* Classe para quando os elementos devem estar visíveis */
     .visible {
       opacity: 1 !important;
       pointer-events: auto !important;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -457,6 +460,17 @@
           // Desativa eventos quando invisível
           chatInput.style.pointerEvents = 'none';
           chatInstructions.style.pointerEvents = 'none';
+        }
+
+        // Controle da visibilidade do chat
+        const chatSection = document.querySelector('.chat-section');
+        
+        if (scrollPercentage >= 75) { // Mostra quando atingir 75% do scroll
+          chatSection.classList.add('visible');
+          chatSection.classList.remove('hidden');
+        } else {
+          chatSection.classList.remove('visible');
+          chatSection.classList.add('hidden');
         }
       }
 
