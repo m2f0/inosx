@@ -6,6 +6,7 @@ function App() {
   const [pergunta, setPergunta] = useState("");
   const [respostas, setRespostas] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [sessionId, setSessionId] = useState(null);
   const chatContainerRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -32,13 +33,42 @@ function App() {
     setIsLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/perguntar", { pergunta });
-      const novaResposta = { tipo: "bot", texto: formatarResposta(res.data.resposta) };
+      const res = await axios.post("http://localhost:5000/chat", { 
+        message: pergunta,
+        session_id: sessionId
+      });
+      
+      // Atualiza o session_id se for uma nova conversa
+      if (!sessionId && res.data.session_id) {
+        setSessionId(res.data.session_id);
+      }
+      
+      const novaResposta = { 
+        tipo: "bot", 
+        texto: formatarResposta(res.data.response) 
+      };
       setRespostas(prev => [...prev, novaResposta]);
     } catch (error) {
       console.error("Erro ao obter resposta", error);
+      setRespostas(prev => [...prev, { 
+        tipo: "bot", 
+        texto: "Sorry, I encountered an error. Please try again." 
+      }]);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  // Função opcional para limpar o histórico
+  const limparHistorico = async () => {
+    if (sessionId) {
+      try {
+        await axios.post("http://localhost:5000/clear-history", { session_id: sessionId });
+        setRespostas([]);
+        setSessionId(null);
+      } catch (error) {
+        console.error("Erro ao limpar histórico", error);
+      }
     }
   };
 
