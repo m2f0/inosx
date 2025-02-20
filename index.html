@@ -117,23 +117,6 @@
       transform: scale(clamp(0.7, 0.7 + 0.3vw, 1));
     }
 
-    .chat-section {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      opacity: 0; /* Começa invisível */
-      transform: translateY(100%); /* Começa fora da tela */
-      pointer-events: none; /* Desativa interações inicialmente */
-    }
-
     @keyframes slideUp {
       from {
         transform: translateY(100%);
@@ -257,21 +240,15 @@
     </svg>
   </div>
 
-  <div class="chat-section">
-    <div class="chat-instructions" id="chatInstructions">
-      I am INOSX, what would you like to know about our company? I can answer any question.
-    </div>
-
-    <div class="chat-input-container" id="chatInput">
-      <div class="chat-input-wrapper">
-        <input type="text" class="chat-input" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem">
-        <button class="send-button" aria-label="Enviar mensagem">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
-          </svg>
-        </button>
-      </div>
-    </div>
+  <!-- Adicionar a nova div para o Flowise -->
+  <div id="flowise-container" style="display: none;">
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+      Chatbot.init({
+          chatflowid: "373bb9b2-26ff-4bf1-aa2b-89d1893eeb97",
+          apiHost: "https://flow.inosx.ai",
+      })
+    </script>
   </div>
 
   <!-- Adicione os elementos de áudio no HTML -->
@@ -465,14 +442,12 @@
         }
 
         // Controle da visibilidade do chat
-        const chatSection = document.querySelector('.chat-section');
+        const flowiseContainer = document.getElementById('flowise-container');
         
         if (scrollPercentage >= 75) { // Mostra quando atingir 75% do scroll
-          chatSection.classList.add('visible');
-          chatSection.classList.remove('hidden');
+          flowiseContainer.style.display = 'block';
         } else {
-          chatSection.classList.remove('visible');
-          chatSection.classList.add('hidden');
+          flowiseContainer.style.display = 'none';
         }
       }
 
