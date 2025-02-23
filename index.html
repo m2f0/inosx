@@ -40,7 +40,7 @@
 
     .start-container {
       position: fixed;
-      left: 0;
+      left: 100px;
       top: 50%;
       transform: translateY(-50%);
       display: flex;
@@ -50,7 +50,7 @@
       opacity: 1;
       transition: opacity 0.5s ease;
       padding: 0 clamp(20px, 5vw, 40px);
-      width: min(90%, 600px);
+      width: min(calc(90% - 100px), 600px);
       justify-content: flex-start;
       cursor: pointer;
       pointer-events: auto;
@@ -65,10 +65,10 @@
     .text-container {
       position: fixed;
       top: 50%;
-      left: 0;
+      left: 100px;
       transform: translateY(-50%);
       text-align: left;
-      width: min(90%, 800px);
+      width: min(calc(90% - 100px), 800px);
       opacity: 0;
       transition: opacity 0.5s ease;
       padding: 0 clamp(20px, 5vw, 40px);
@@ -85,7 +85,7 @@
     #text3-anim {
       position: fixed;
       top: 10%;
-      left: 0;
+      left: 100px;
       transform: translateY(-50%);
       font-size: var(--font-size-large);
       opacity: 0;
@@ -99,7 +99,7 @@
       font-size: 8rem;
       position: fixed;
       top: 50%;
-      left: 0;
+      left: 100px;
       transform: translateY(-50%);
       opacity: 0;
       white-space: nowrap;
@@ -134,19 +134,19 @@
       color: white;
       text-align: left;
       margin-bottom: 20px;
+      margin-left: 100px;
       padding: 10px clamp(20px, 5vw, 40px);
       border-radius: 8px;
       background-color: rgba(0, 0, 0, 0.5);
-      width: min(90%, 600px);
-      margin-left: 0;
+      width: min(calc(90% - 100px), 600px);
     }
 
     .chat-input-container {
-      width: min(90%, 600px);
+      width: min(calc(90% - 100px), 600px);
+      margin-left: 100px;
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 8px;
       padding: 10px clamp(20px, 5vw, 40px);
-      margin-left: 0;
     }
 
     .chat-input-wrapper {
@@ -215,6 +215,34 @@
       opacity: 1 !important;
       pointer-events: auto !important;
       transform: translateY(0);
+    }
+
+    /* Add media query for mobile responsiveness */
+    @media (max-width: 768px) {
+      .start-container,
+      .text-container,
+      #text3-anim,
+      #text4,
+      .chat-instructions,
+      .chat-input-container {
+        left: 50px;
+        margin-left: 50px;
+        width: min(calc(90% - 50px), 600px);
+      }
+    }
+
+    /* Add media query for very small screens */
+    @media (max-width: 480px) {
+      .start-container,
+      .text-container,
+      #text3-anim,
+      #text4,
+      .chat-instructions,
+      .chat-input-container {
+        left: 20px;
+        margin-left: 20px;
+        width: min(calc(90% - 20px), 600px);
+      }
     }
   </style>
 </head>
@@ -486,10 +514,10 @@
           startContainer.classList.add('hidden');
         }
 
-        // Reset inicial - removida a linha que resetava text4
+        // Reset inicial
         text3Anim.style.opacity = 0;
 
-        // Seção 1: [0, vh]
+        // Seção 1: Só mostra na primeira seção e depois mantém escondido
         if (scrollY < vh) {
           text1.style.opacity = 1;
           scrollIndicator.style.opacity = 1;
@@ -497,36 +525,39 @@
             playAudioWithFallback(audio1);
             played1 = true;
           }
-        } else {
+        } else if (!played1) {
+          // Só esconde se ainda não foi reproduzido
           text1.style.opacity = 0;
         }
 
-        // Seção 2: [vh, 2vh]
-        if (scrollY >= vh && scrollY < 2 * vh) {
+        // Seção 2: Só mostra na segunda seção e depois mantém escondido
+        if (scrollY >= vh && scrollY < 2 * vh && !played2) {
           let rel = scrollY - vh;
           text2.style.opacity = fadeOpacity(rel, vh);
           if (!played2 && rel > vh * 0.3) {
             playAudioWithFallback(audio2);
             played2 = true;
           }
-        } else {
+        } else if (!played2) {
+          // Só esconde se ainda não foi reproduzido
           text2.style.opacity = 0;
         }
 
-        // Seção 3: [2vh, 3vh]
-        if (scrollY >= 2 * vh && scrollY < 3 * vh) {
+        // Seção 3: Só mostra na terceira seção e depois mantém escondido
+        if (scrollY >= 2 * vh && scrollY < 3 * vh && !played3) {
           let rel = scrollY - 2 * vh;
           text3.style.opacity = fadeOpacity(rel, vh);
           if (!played3 && rel > vh * 0.3) {
             playAudioWithFallback(audio3);
             played3 = true;
           }
-        } else {
+        } else if (!played3) {
+          // Só esconde se ainda não foi reproduzido
           text3.style.opacity = 0;
         }
 
-        // Seção 4: [3vh, 4vh] - Aqui o texto INOSX aparece
-        if (scrollY >= 3 * vh && scrollY < 4 * vh) {
+        // Seção 4: Animação do INOSX
+        if (scrollY >= 3 * vh && scrollY < 4 * vh && !played4) {
           let t = (scrollY - 3 * vh) / vh;
           text3Anim.style.opacity = t;
           text4.style.opacity = t;
@@ -536,28 +567,25 @@
           }
         }
 
-        // Seção 5: [4vh, 5vh] - Texto INOSX permanece visível
-        if (scrollY >= 4 * vh || scrollPercentage >= 75) { // Mostra quando atingir 4vh OU 75% do scroll
+        // Seção 5: INOSX permanece visível após aparecer
+        if (scrollY >= 4 * vh || scrollPercentage >= 75) {
           text4.style.opacity = '1';
           chatInput.style.opacity = '1';
           chatInstructions.style.opacity = '1';
           
-          // Garante que os elementos sejam clicáveis
           chatInput.style.pointerEvents = 'auto';
           chatInstructions.style.pointerEvents = 'auto';
         } else {
           chatInput.style.opacity = '0';
           chatInstructions.style.opacity = '0';
           
-          // Desativa eventos quando invisível
           chatInput.style.pointerEvents = 'none';
           chatInstructions.style.pointerEvents = 'none';
         }
 
         // Controle da visibilidade do chat
         const flowiseContainer = document.getElementById('flowise-container');
-        
-        if (scrollPercentage >= 75) { // Mostra quando atingir 75% do scroll
+        if (scrollPercentage >= 75) {
           flowiseContainer.style.display = 'block';
         } else {
           flowiseContainer.style.display = 'none';
