@@ -500,12 +500,28 @@
         return 1;
       }
 
+      let lastScrollPosition = 0;
+      let hasReachedEnd = false;
+
       // Função principal de atualização
       function update() {
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
         const scrollPercentage = (scrollY / (documentHeight - windowHeight)) * 100;
+
+        // Verifica se chegou ao final da página
+        if (scrollPercentage >= 75) {
+          hasReachedEnd = true;
+        }
+
+        // Se já chegou ao final e está tentando rolar para cima, força voltar à posição final
+        if (hasReachedEnd && scrollY < lastScrollPosition) {
+          window.scrollTo(0, lastScrollPosition);
+          return;
+        }
+
+        lastScrollPosition = scrollY;
 
         if (!experienceStarted) return;
 
@@ -601,6 +617,38 @@
           update();
         }
       });
+
+      // Adicione este evento para prevenir scroll com roda do mouse e touchpad
+      window.addEventListener('wheel', function(e) {
+        if (hasReachedEnd && e.deltaY < 0) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      // Previne scroll com teclas
+      window.addEventListener('keydown', function(e) {
+        if (hasReachedEnd) {
+          if (e.key === 'ArrowUp' || e.key === 'PageUp' || 
+              (e.key === 'Home') || e.key === 'Space') {
+            e.preventDefault();
+          }
+        }
+      });
+
+      // Previne scroll com touch em dispositivos móveis
+      let touchStartY = 0;
+      window.addEventListener('touchstart', function(e) {
+        touchStartY = e.touches[0].clientY;
+      });
+
+      window.addEventListener('touchmove', function(e) {
+        if (hasReachedEnd) {
+          const touchY = e.touches[0].clientY;
+          if (touchY > touchStartY) {
+            e.preventDefault();
+          }
+        }
+      }, { passive: false });
 
       // Primeira execução do update
       update();
