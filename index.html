@@ -84,7 +84,7 @@
 
     #text3-anim {
       position: fixed;
-      top: 10%;
+      top: 40%;  /* Ajustado para ficar mais ao centro */
       left: 100px;
       transform: translateY(-50%);
       font-size: var(--font-size-large);
@@ -98,7 +98,7 @@
     #text4 {
       font-size: 8rem;
       position: fixed;
-      top: 50%;
+      top: 60%;  /* Ajustado para ficar abaixo do text3-anim */
       left: 100px;
       transform: translateY(-50%);
       opacity: 0;
@@ -106,6 +106,16 @@
       text-align: left;
       z-index: 98;
       padding: 0 clamp(20px, 5vw, 40px);
+    }
+
+    /* Ajuste responsivo para telas menores */
+    @media (max-height: 600px) {
+      #text3-anim {
+        top: 35%;
+      }
+      #text4 {
+        top: 65%;
+      }
     }
 
     .scroll-indicator {
@@ -259,10 +269,8 @@
   <div class="text-container">
     <span id="text1">There are no more websites...</span>
     <span id="text2">... there's only AI.</span>
-    <span id="text3">And, WE CREATE AI.</span>
+    <span id="text3">and, WE CREATE AI.</span>
   </div>
-  <!-- Elemento duplicado para animar "And, WE CREATE AI." -->
-  <div id="text3-anim">WE CREATE AI.</div>
   <!-- Elemento para exibir "INOSX" -->
   <div id="text4">INOSX</div>
   <!-- Ícone de seta para baixo -->
