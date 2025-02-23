@@ -538,50 +538,44 @@
           startContainer.classList.add('hidden');
         }
 
-        // Reset inicial
-        text3Anim.style.opacity = 0;
-
-        // Seção 1: Só mostra na primeira seção e depois mantém escondido
+        // Seção 1: Primeiro texto
         if (scrollY < vh) {
-          text1.style.opacity = 1;
+          text1.style.opacity = fadeOpacity(scrollY, vh);
           scrollIndicator.style.opacity = 1;
           if (!played1 && scrollY > vh * 0.3) {
             playAudioWithFallback(audio1);
             played1 = true;
           }
-        } else if (!played1) {
-          // Só esconde se ainda não foi reproduzido
+        } else {
           text1.style.opacity = 0;
         }
 
-        // Seção 2: Só mostra na segunda seção e depois mantém escondido
-        if (scrollY >= vh && scrollY < 2 * vh && !played2) {
+        // Seção 2: Segundo texto
+        if (scrollY >= vh && scrollY < 2 * vh) {
           let rel = scrollY - vh;
           text2.style.opacity = fadeOpacity(rel, vh);
           if (!played2 && rel > vh * 0.3) {
             playAudioWithFallback(audio2);
             played2 = true;
           }
-        } else if (!played2) {
-          // Só esconde se ainda não foi reproduzido
+        } else {
           text2.style.opacity = 0;
         }
 
-        // Seção 3: Só mostra na terceira seção e depois mantém escondido
-        if (scrollY >= 2 * vh && scrollY < 3 * vh && !played3) {
+        // Seção 3: Terceiro texto
+        if (scrollY >= 2 * vh && scrollY < 3 * vh) {
           let rel = scrollY - 2 * vh;
           text3.style.opacity = fadeOpacity(rel, vh);
           if (!played3 && rel > vh * 0.3) {
             playAudioWithFallback(audio3);
             played3 = true;
           }
-        } else if (!played3) {
-          // Só esconde se ainda não foi reproduzido
+        } else {
           text3.style.opacity = 0;
         }
 
         // Seção 4: Animação do INOSX
-        if (scrollY >= 3 * vh && scrollY < 4 * vh && !played4) {
+        if (scrollY >= 3 * vh && scrollY < 4 * vh) {
           let t = (scrollY - 3 * vh) / vh;
           text3Anim.style.opacity = t;
           text4.style.opacity = t;
@@ -589,20 +583,23 @@
             playAudioWithFallback(audio4);
             played4 = true;
           }
+        } else if (scrollY >= 4 * vh) {
+          text3Anim.style.opacity = 1;
+          text4.style.opacity = 1;
+        } else {
+          text3Anim.style.opacity = 0;
+          text4.style.opacity = 0;
         }
 
-        // Seção 5: INOSX permanece visível após aparecer
+        // Seção 5: Chat e elementos finais
         if (scrollY >= 4 * vh || scrollPercentage >= 75) {
-          text4.style.opacity = '1';
           chatInput.style.opacity = '1';
           chatInstructions.style.opacity = '1';
-          
           chatInput.style.pointerEvents = 'auto';
           chatInstructions.style.pointerEvents = 'auto';
         } else {
           chatInput.style.opacity = '0';
           chatInstructions.style.opacity = '0';
-          
           chatInput.style.pointerEvents = 'none';
           chatInstructions.style.pointerEvents = 'none';
         }
