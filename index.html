@@ -40,20 +40,20 @@
 
     .start-container {
       position: fixed;
-      left: 50%;
+      left: 0;
       top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateY(-50%);
       display: flex;
       align-items: center;
       gap: clamp(10px, 2vw, 20px);
-      z-index: 2000; /* Aumentado para garantir que fique acima de tudo */
+      z-index: 2000;
       opacity: 1;
       transition: opacity 0.5s ease;
-      padding: 0 clamp(10px, 3vw, 20px);
+      padding: 0 clamp(20px, 5vw, 40px);
       width: min(90%, 600px);
-      justify-content: center;
-      cursor: pointer; /* Adicionado para melhor feedback visual */
-      pointer-events: auto; /* Garantir que os eventos de clique funcionem */
+      justify-content: flex-start;
+      cursor: pointer;
+      pointer-events: auto;
     }
 
     .start-text {
@@ -65,13 +65,13 @@
     .text-container {
       position: fixed;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+      left: 0;
+      transform: translateY(-50%);
+      text-align: left;
       width: min(90%, 800px);
       opacity: 0;
       transition: opacity 0.5s ease;
-      padding: 0 clamp(10px, 3vw, 20px);
+      padding: 0 clamp(20px, 5vw, 40px);
     }
 
     .text-container span {
@@ -79,31 +79,33 @@
       font-size: var(--font-size-large);
       margin: clamp(5px, 1vh, 10px) 0;
       white-space: pre-wrap;
+      text-align: left;
     }
 
     #text3-anim {
       position: fixed;
       top: 10%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 0;
+      transform: translateY(-50%);
       font-size: var(--font-size-large);
       opacity: 0;
       white-space: nowrap;
-      text-align: center;
+      text-align: left;
       z-index: 98;
+      padding: 0 clamp(20px, 5vw, 40px);
     }
 
     #text4 {
       font-size: 8rem;
       position: fixed;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 8rem;
-      opacity: 0; /* Importante: começar invisível */
+      left: 0;
+      transform: translateY(-50%);
+      opacity: 0;
       white-space: nowrap;
-      text-align: center;
+      text-align: left;
       z-index: 98;
+      padding: 0 clamp(20px, 5vw, 40px);
     }
 
     .scroll-indicator {
@@ -130,19 +132,21 @@
 
     .chat-instructions {
       color: white;
-      text-align: center;
+      text-align: left;
       margin-bottom: 20px;
-      padding: 10px;
+      padding: 10px clamp(20px, 5vw, 40px);
       border-radius: 8px;
       background-color: rgba(0, 0, 0, 0.5);
       width: min(90%, 600px);
+      margin-left: 0;
     }
 
     .chat-input-container {
       width: min(90%, 600px);
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 8px;
-      padding: 10px;
+      padding: 10px clamp(20px, 5vw, 40px);
+      margin-left: 0;
     }
 
     .chat-input-wrapper {
