@@ -414,43 +414,39 @@
       const textContainer = document.querySelector(".text-container");
       const text4 = document.getElementById("text4");
       const flowiseContainer = document.getElementById('flowise-container');
-      
-      async function startExperience() {
-        // Adiciona um evento de clique para iniciar a experiência
-        document.addEventListener('click', async function initAudio() {
-          try {
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            await audioContext.resume();
-            
-            // Mostra todos os textos
-            textContainer.style.display = 'block';
-            textContainer.style.opacity = '1';
-            text4.style.opacity = '1';
-            flowiseContainer.style.display = 'block';
-            
-            // Reproduz os áudios em sequência
-            await playAudioSequence();
-            
-            // Remove o evento de clique após iniciar
-            document.removeEventListener('click', initAudio);
-          } catch (error) {
-            console.error('Erro ao inicializar áudio:', error);
-          }
-        });
-      }
 
       async function playAudioSequence() {
         const playAudio = (audio) => {
           return new Promise((resolve) => {
-            audio.play().catch(err => {
-              console.error('Erro ao reproduzir áudio:', err);
-              resolve();
-            });
-            audio.onended = resolve;
+            const playAttempt = audio.play();
+            
+            if (playAttempt !== undefined) {
+              playAttempt
+                .then(() => {
+                  // Áudio iniciou com sucesso
+                  audio.onended = resolve;
+                })
+                .catch(error => {
+                  console.warn('Autoplay foi bloqueado:', error);
+                  // Adiciona um evento de clique como fallback
+                  document.addEventListener('click', function playOnClick() {
+                    audio.play();
+                    document.removeEventListener('click', playOnClick);
+                  }, { once: true });
+                  resolve();
+                });
+            }
           });
         };
 
         try {
+          // Mostra os elementos visuais
+          textContainer.style.display = 'block';
+          textContainer.style.opacity = '1';
+          text4.style.opacity = '1';
+          flowiseContainer.style.display = 'block';
+
+          // Tenta reproduzir os áudios em sequência
           await playAudio(audio1);
           await playAudio(audio2);
           await playAudio(audio3);
@@ -461,7 +457,15 @@
       }
 
       // Inicia quando a página carregar
-      window.addEventListener('load', startExperience);
+      window.addEventListener('load', async () => {
+        try {
+          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          await audioContext.resume();
+          await playAudioSequence();
+        } catch (error) {
+          console.error('Erro ao inicializar áudio:', error);
+        }
+      });
     })();
   </script>
 </body>
