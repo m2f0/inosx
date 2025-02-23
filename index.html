@@ -53,9 +53,10 @@
       transform: translateY(-50%);
       text-align: left;
       width: min(calc(90% - 100px), 800px);
-      opacity: 0;
+      opacity: 1; /* Alterado de 0 para 1 */
       transition: opacity 0.5s ease;
       padding: 0 clamp(20px, 5vw, 40px);
+      display: block; /* Adicionado */
     }
 
     .text-container span {
@@ -72,7 +73,7 @@
       top: 65%;
       left: 100px;
       transform: translateY(-50%);
-      opacity: 0;
+      opacity: 1; /* Alterado de 0 para 1 */
       transition: opacity 0.5s ease;
       white-space: nowrap;
       text-align: left;
@@ -410,37 +411,51 @@
       const flowiseContainer = document.getElementById('flowise-container');
       
       async function startExperience() {
-        try {
-          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-          await audioContext.resume();
-          
-          // Mostra todos os textos imediatamente
-          textContainer.style.opacity = '1';
-          text4.style.opacity = '1';
-          flowiseContainer.style.display = 'block';
-          
-          // Reproduz os áudios em sequência
-          await playAudioSequence();
-        } catch (error) {
-          console.log('Erro ao inicializar áudio:', error);
-        }
+        // Adiciona um evento de clique para iniciar a experiência
+        document.addEventListener('click', async function initAudio() {
+          try {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            await audioContext.resume();
+            
+            // Mostra todos os textos
+            textContainer.style.display = 'block';
+            textContainer.style.opacity = '1';
+            text4.style.opacity = '1';
+            flowiseContainer.style.display = 'block';
+            
+            // Reproduz os áudios em sequência
+            await playAudioSequence();
+            
+            // Remove o evento de clique após iniciar
+            document.removeEventListener('click', initAudio);
+          } catch (error) {
+            console.error('Erro ao inicializar áudio:', error);
+          }
+        });
       }
 
       async function playAudioSequence() {
         const playAudio = (audio) => {
           return new Promise((resolve) => {
-            audio.play();
+            audio.play().catch(err => {
+              console.error('Erro ao reproduzir áudio:', err);
+              resolve();
+            });
             audio.onended = resolve;
           });
         };
 
-        await playAudio(audio1);
-        await playAudio(audio2);
-        await playAudio(audio3);
-        await playAudio(audio4);
+        try {
+          await playAudio(audio1);
+          await playAudio(audio2);
+          await playAudio(audio3);
+          await playAudio(audio4);
+        } catch (error) {
+          console.error('Erro na sequência de áudio:', error);
+        }
       }
 
-      // Inicia automaticamente quando a página carregar
+      // Inicia quando a página carregar
       window.addEventListener('load', startExperience);
     })();
   </script>
