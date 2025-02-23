@@ -285,7 +285,17 @@
                   blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
                   backgroundColor: 'white'
               },
-              customCSS: ``,
+              customCSS: `
+                .flowise-container {
+                  width: 90% !important;
+                  max-width: 800px !important;
+                }
+                @media (max-width: 768px) {
+                  .flowise-container {
+                    width: 95% !important;
+                  }
+                }
+              `,
               chatWindow: {
                   showTitle: true,
                   showAgentMessages: true,
@@ -296,7 +306,7 @@
                   backgroundColor: '#ffffff',
                   backgroundImage: 'enter image path or link',
                   height: 700,
-                  width: 400,
+                  width: '90%', // Changed from fixed 400px to responsive 90%
                   fontSize: 16,
                   starterPrompts: [
                       "What is a bot?",
