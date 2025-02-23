@@ -39,32 +39,16 @@
     }
 
     .start-container {
-      position: fixed;
-      left: 100px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
-      gap: clamp(10px, 2vw, 20px);
-      z-index: 2000;
-      opacity: 1;
-      transition: opacity 0.5s ease;
-      padding: 0 clamp(20px, 5vw, 40px);
-      width: min(calc(90% - 100px), 600px);
-      justify-content: flex-start;
-      cursor: pointer;
-      pointer-events: auto;
+      display: none;
     }
-
+    
     .start-text {
-      color: var(--text-color);
-      font-size: var(--font-size-medium);
-      white-space: nowrap;
+      display: none;
     }
 
     .text-container {
       position: fixed;
-      top: 50%;
+      top: 40%;
       left: 100px;
       transform: translateY(-50%);
       text-align: left;
@@ -82,26 +66,14 @@
       text-align: left;
     }
 
-    #text3-anim {
-      position: fixed;
-      top: 40%;  /* Ajustado para ficar mais ao centro */
-      left: 100px;
-      transform: translateY(-50%);
-      font-size: var(--font-size-large);
-      opacity: 0;
-      white-space: nowrap;
-      text-align: left;
-      z-index: 98;
-      padding: 0 clamp(20px, 5vw, 40px);
-    }
-
     #text4 {
       font-size: 8rem;
       position: fixed;
-      top: 60%;  /* Ajustado para ficar abaixo do text3-anim */
+      top: 65%;
       left: 100px;
       transform: translateY(-50%);
       opacity: 0;
+      transition: opacity 0.5s ease;
       white-space: nowrap;
       text-align: left;
       z-index: 98;
@@ -433,10 +405,7 @@
       const audio3 = document.getElementById("audio3");
       const audio4 = document.getElementById("audio4");
       
-      // Remove a necessidade de scroll e mostra todos os textos
-      const startContainer = document.getElementById("startContainer");
       const textContainer = document.querySelector(".text-container");
-      const text3Anim = document.getElementById("text3-anim");
       const text4 = document.getElementById("text4");
       const flowiseContainer = document.getElementById('flowise-container');
       
@@ -445,12 +414,8 @@
           const audioContext = new (window.AudioContext || window.webkitAudioContext)();
           await audioContext.resume();
           
-          // Esconde o container inicial
-          startContainer.classList.add('hidden');
-          
-          // Mostra todos os textos
+          // Mostra todos os textos imediatamente
           textContainer.style.opacity = '1';
-          text3Anim.style.opacity = '1';
           text4.style.opacity = '1';
           flowiseContainer.style.display = 'block';
           
@@ -475,8 +440,8 @@
         await playAudio(audio4);
       }
 
-      // Adiciona evento de clique no botão inicial
-      startContainer.addEventListener('click', startExperience);
+      // Inicia automaticamente quando a página carregar
+      window.addEventListener('load', startExperience);
     })();
   </script>
 </body>
