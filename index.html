@@ -241,6 +241,7 @@
       text-align: left;
       width: min(calc(90% - 100px), 800px);
       padding: 0 clamp(20px, 5vw, 40px);
+      z-index: 99; /* Adicionado para garantir visibilidade */
     }
 
     .products-title {
@@ -299,6 +300,15 @@
   </div>
   <!-- Elemento para exibir "INOSX" -->
   <div id="text4">INOSX</div>
+
+  <!-- Seção de Produtos - Adicionada aqui, antes do scroll-indicator -->
+  <div class="products-section">
+    <div class="products-title">Products:</div>
+    <a href="https://surveyflow.ai" target="_blank">
+      <button class="product-button">SurveyFlow AI</button>
+    </a>
+  </div>
+
   <!-- Ícone de seta para baixo -->
   <div class="scroll-indicator">
     <svg width="40" height="40" viewBox="0 0 24 24">
