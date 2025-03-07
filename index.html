@@ -53,7 +53,7 @@
 
     .text-container {
       position: fixed;
-      top: 40%;
+      top: 30%; /* Alterado de 40% para 30% para subir os textos */
       left: 100px;
       transform: translateY(-50%);
       text-align: left;
@@ -75,7 +75,7 @@
     #text4 {
       font-size: 8rem;
       position: fixed;
-      top: 65%;
+      top: 55%; /* Alterado de 65% para 55% */
       left: 100px;
       transform: translateY(-50%);
       opacity: 1; /* Alterado de 0 para 1 */
@@ -227,6 +227,54 @@
       #text4,
       .chat-instructions,
       .chat-input-container {
+        left: 20px;
+        margin-left: 20px;
+        width: min(calc(90% - 20px), 600px);
+      }
+    }
+
+    .products-section {
+      position: fixed;
+      top: 70%;
+      left: 100px;
+      transform: translateY(-50%);
+      text-align: left;
+      width: min(calc(90% - 100px), 800px);
+      padding: 0 clamp(20px, 5vw, 40px);
+    }
+
+    .products-title {
+      font-size: var(--font-size-large);
+      margin-bottom: 20px;
+      color: var(--text-color);
+    }
+
+    .product-button {
+      background-color: #B8860B; /* Cor dourada escura */
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: var(--font-size-small);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-button:hover {
+      background-color: #996D15; /* Dourado mais escuro no hover */
+    }
+
+    /* Ajuste responsivo para os novos elementos */
+    @media (max-width: 768px) {
+      .products-section {
+        left: 50px;
+        margin-left: 50px;
+        width: min(calc(90% - 50px), 600px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .products-section {
         left: 20px;
         margin-left: 20px;
         width: min(calc(90% - 20px), 600px);
