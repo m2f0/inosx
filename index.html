@@ -256,29 +256,48 @@
     .product-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 12px;
     }
 
     .product-button {
-      background-color: #B8860B; /* Cor dourada escura */
-      color: white;
       border: none;
-      padding: 15px 30px;
-      font-size: var(--font-size-small);
-      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: calc(var(--font-size-small) * 0.8);
+      border-radius: 6px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
       white-space: nowrap;
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .product-button:hover {
-      background-color: #996D15; /* Dourado mais escuro no hover */
+    .product-button.surveyflow {
+      background-color: #B8860B; /* Dourado para SurveyFlow */
+      color: white;
+    }
+
+    .product-button.surveyflow:hover {
+      background-color: #996D15;
+    }
+
+    .product-button.mcp {
+      background-color: #2E8B57; /* Verde esmeralda para MCP */
+      color: white;
+    }
+
+    .product-button.mcp:hover {
+      background-color: #1D6E43;
     }
 
     /* Ajuste responsivo para telas menores */
     @media (max-width: 600px) {
       .product-buttons {
         flex-direction: column;
+      }
+      
+      .product-button {
+        padding: 8px 16px;
+        font-size: calc(var(--font-size-small) * 0.7);
       }
     }
 
@@ -318,10 +337,10 @@
     <div class="products-title">Products:</div>
     <div class="product-buttons">
       <a href="https://surveyflow.ai" target="_blank">
-        <button class="product-button">SurveyFlow AI</button>
+        <button class="product-button surveyflow">SurveyFlow AI</button>
       </a>
       <a href="https://mcp.mariomayerle.com" target="_blank">
-        <button class="product-button">Mario Mayerle Personal MCP</button>
+        <button class="product-button mcp">Mario Mayerle Personal MCP</button>
       </a>
     </div>
   </div>
