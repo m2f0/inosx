@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-  <title>INOSX - The Future of AI</title>
-  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  <title>INOSX - O Futuro da IA</title>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" type="text/javascript"></script>
   <style>
     :root {
       --bg-color: #0a0a0a;
@@ -252,6 +252,10 @@
       }
     }
 
+
+
+
+
     /* Responsividade */
     @media (max-width: 768px) {
       .main-container {
@@ -485,30 +489,30 @@
       <!-- Coluna da esquerda - Texto -->
       <div class="left-column">
         <div class="hero-text fade-in">
-          There are no more websites...
+          Não existem mais websites...
         </div>
         <div class="hero-subtitle fade-in">
-          ... there's only AI.
+          ... só existem inteligências artificiais.
         </div>
-        <div class="hero-subtitle fade-in">
-          And we create these AIs
-        </div>
+                 <div class="hero-subtitle fade-in">
+           E nós criamos essas I.A.s
+         </div>
         <div class="logo fade-in">INOSX</div>
       </div>
       
-      <!-- Coluna da direita - Widget -->
-      <div class="right-column">
-        <div class="widget-container fade-in">
-          <elevenlabs-convai agent-id="agent_1801k2z5hgpfex3tzpdxfzv0h0e3"></elevenlabs-convai>
-          <!-- Fallback para mobile -->
-          <div id="mobile-fallback" style="display: none; width: 100%; height: 100%; background: rgba(255,255,255,0.1); border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 20px; text-align: center; cursor: pointer;">
-            <div style="font-size: 24px; margin-bottom: 10px;">🤖</div>
-            <div style="font-size: 18px; margin-bottom: 10px;">INOSX AI</div>
-            <div style="font-size: 14px; opacity: 0.8; margin-bottom: 15px;">Click to chat</div>
-            <button id="open-chat-btn" style="background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); border: none; color: white; padding: 12px 24px; border-radius: 25px; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">Open Chat</button>
-          </div>
-        </div>
-      </div>
+             <!-- Coluna da direita - Widget -->
+       <div class="right-column">
+         <div class="widget-container fade-in">
+           <elevenlabs-convai agent-id="agent_2601k2s56r9je9as9hhgd9ytnskj"></elevenlabs-convai>
+           <!-- Fallback para mobile -->
+           <div id="mobile-fallback" style="display: none; width: 100%; height: 100%; background: rgba(255,255,255,0.1); border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 20px; text-align: center; cursor: pointer;">
+             <div style="font-size: 24px; margin-bottom: 10px;">🤖</div>
+             <div style="font-size: 18px; margin-bottom: 10px;">IA INOSX</div>
+             <div style="font-size: 14px; opacity: 0.8; margin-bottom: 15px;">Clique para conversar</div>
+             <button id="open-chat-btn" style="background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); border: none; color: white; padding: 12px 24px; border-radius: 25px; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">Abrir Chat</button>
+           </div>
+         </div>
+       </div>
     </div>
   </div>
 
@@ -550,7 +554,7 @@
 
     // Função para abrir o chat em nova aba
     function openChat() {
-      const url = 'https://app.elevenlabs.io/convai/agent_1801k2z5hgpfex3tzpdxfzv0h0e3';
+      const url = 'https://app.elevenlabs.io/convai/agent_2601k2s56r9je9as9hhgd9ytnskj';
       window.open(url, '_blank');
     }
 
