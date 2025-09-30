@@ -43,6 +43,109 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    /* Carrossel de sites */
+    .carousel-wrapper {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 1rem 0 1rem; /* padding topo */
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .site-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      background: linear-gradient(180deg, rgba(0, 212, 255, 0.06), rgba(0, 0, 0, 0));
+      box-shadow: 0 10px 35px rgba(0, 212, 255, 0.15);
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 1rem;
+    }
+
+    .carousel-track::-webkit-scrollbar { display: none; }
+
+    .carousel-item {
+      flex: 0 0 75%;
+      max-width: 75%;
+      scroll-snap-align: center;
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0f0f10;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-item:hover { transform: translateY(-2px); }
+
+    .carousel-image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.95;
+    }
+
+    .carousel-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px 14px;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .carousel-caption a { color: #fff; text-decoration: none; }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 3;
+      transition: background 0.2s ease;
+      user-select: none;
+    }
+
+    .carousel-arrow:hover { background: rgba(0, 212, 255, 0.35); }
+
+    .carousel-arrow.left { left: 10px; }
+    .carousel-arrow.right { right: 10px; }
+
+    @media (max-width: 1024px) {
+      .carousel-item { flex-basis: 85%; max-width: 85%; }
+      .carousel-image { height: 300px; }
+    }
+
+    @media (max-width: 640px) {
+      .carousel-item { flex-basis: 95%; max-width: 95%; }
+      .carousel-image { height: 240px; }
+    }
+
     /* Efeito de partículas de fundo */
     .particles {
       position: fixed;
@@ -521,6 +624,32 @@
   <!-- Partículas de fundo -->
   <div class="particles" id="particles"></div>
 
+  <!-- Carrossel de sites -->
+  <div class="carousel-wrapper">
+    <div class="site-carousel">
+      <div class="carousel-arrow left" id="carouselPrev">‹</div>
+      <div class="carousel-arrow right" id="carouselNext">›</div>
+      <div class="carousel-track" id="carouselTrack">
+        <a class="carousel-item" href="https://surveyflow.ai" target="_blank" rel="noopener">
+          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://surveyflow.ai" alt="surveyflow.ai preview" />
+          <div class="carousel-caption"><span>surveyflow.ai</span><span>Open site →</span></div>
+        </a>
+        <a class="carousel-item" href="https://datagpt.com.br" target="_blank" rel="noopener">
+          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://datagpt.com.br" alt="datagpt.com.br preview" />
+          <div class="carousel-caption"><span>datagpt.com.br</span><span>Open site →</span></div>
+        </a>
+        <a class="carousel-item" href="https://messiax.com" target="_blank" rel="noopener">
+          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://messiax.com" alt="messiax.com preview" />
+          <div class="carousel-caption"><span>messiax.com</span><span>Open site →</span></div>
+        </a>
+        <a class="carousel-item" href="https://hubiabrasil.com.br" target="_blank" rel="noopener">
+          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://hubiabrasil.com.br" alt="hubiabrasil.com.br preview" />
+          <div class="carousel-caption"><span>hubiabrasil.com.br</span><span>Open site →</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- Container principal -->
   <div class="main-container">
     <!-- Layout de duas colunas -->
@@ -586,6 +715,41 @@
       }
 
       initParticleLines();
+    }
+
+    // Carrossel: navegação e autoplay
+    function initCarousel() {
+      const track = document.getElementById('carouselTrack');
+      const prev = document.getElementById('carouselPrev');
+      const next = document.getElementById('carouselNext');
+      if (!track || !prev || !next) return;
+
+      const getStep = () => Math.min(track.clientWidth * 0.8, 900);
+
+      prev.addEventListener('click', () => {
+        track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+      });
+      next.addEventListener('click', () => {
+        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+      });
+
+      let autoTimer;
+      function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(() => {
+          // Se estiver no fim, volta ao início
+          if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            track.scrollBy({ left: getStep(), behavior: 'smooth' });
+          }
+        }, 3500);
+      }
+      function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
+
+      track.addEventListener('mouseenter', stopAuto);
+      track.addEventListener('mouseleave', startAuto);
+      startAuto();
     }
 
     // Desenhar linhas entre partículas próximas usando canvas
@@ -674,6 +838,7 @@
     // Inicializar quando a página carregar
     window.addEventListener('load', function() {
       createParticles();
+      initCarousel();
       window.scrollTo(0, 0);
       
       // Verificar widget após carregamento
@@ -751,6 +916,7 @@
     // Forçar layout mobile no DOMContentLoaded
     document.addEventListener('DOMContentLoaded', function() {
       forceMobileLayout();
+      initCarousel();
     });
   </script>
 </body>
