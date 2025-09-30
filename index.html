@@ -74,8 +74,8 @@
     .carousel-track::-webkit-scrollbar { display: none; }
 
     .carousel-item {
-      flex: 0 0 75%;
-      max-width: 75%;
+      flex: 0 0 45%;
+      max-width: 640px;
       scroll-snap-align: center;
       position: relative;
       border-radius: 14px;
@@ -137,12 +137,12 @@
     .carousel-arrow.right { right: 10px; }
 
     @media (max-width: 1024px) {
-      .carousel-item { flex-basis: 85%; max-width: 85%; }
+      .carousel-item { flex-basis: 60%; max-width: 600px; }
       .carousel-image { height: 300px; }
     }
 
     @media (max-width: 640px) {
-      .carousel-item { flex-basis: 95%; max-width: 95%; }
+      .carousel-item { flex-basis: 90%; max-width: 520px; }
       .carousel-image { height: 240px; }
     }
 
