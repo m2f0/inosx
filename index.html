@@ -103,6 +103,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       max-width: 600px;
     }
 
@@ -162,7 +163,7 @@
     .widget-cta {
       width: 100%;
       max-width: 600px;
-      margin: 0 auto 1rem auto;
+      margin: 1rem auto 0 auto;
       padding: 14px 18px;
       border-radius: 14px;
       background: rgba(0, 212, 255, 0.08);
@@ -529,13 +530,6 @@
       
       <!-- Coluna da direita - Widget -->
       <div class="right-column">
-        <div class="widget-cta fade-in">
-          <strong>Talk to our AI now</strong> 👉 tap the phone button and say anything.
-          It will introduce INOSX products and services in seconds.
-          <div class="examples">
-            Try: "Show me INOSX products" • "What can you build for me?"
-          </div>
-        </div>
         <div class="widget-container fade-in">
           <elevenlabs-convai agent-id="agent_1801k2z5hgpfex3tzpdxfzv0h0e3"></elevenlabs-convai>
           <!-- Fallback para mobile -->
@@ -544,6 +538,13 @@
             <div style="font-size: 18px; margin-bottom: 10px;">INOSX AI</div>
             <div style="font-size: 14px; opacity: 0.8; margin-bottom: 15px;">Click to chat</div>
             <button id="open-chat-btn" style="background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); border: none; color: white; padding: 12px 24px; border-radius: 25px; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">Open Chat</button>
+          </div>
+        </div>
+        <div class="widget-cta fade-in">
+          <strong>Talk to our AI now</strong> 👉 tap the phone button and say anything.
+          It will introduce INOSX products and services in seconds.
+          <div class="examples">
+            Try: "Show me INOSX products" • "What can you build for me?"
           </div>
         </div>
       </div>
