@@ -158,6 +158,37 @@
       position: relative;
     }
 
+    /* CTA acima do widget */
+    .widget-cta {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 1rem auto;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: rgba(0, 212, 255, 0.08);
+      border: 1px solid rgba(0, 212, 255, 0.25);
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+      transition: transform 0.25s ease;
+    }
+
+    .widget-cta:hover {
+      transform: translateY(-2px);
+    }
+
+    .widget-cta strong {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .widget-cta .examples {
+      margin-top: 6px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
     elevenlabs-convai {
       width: 100%;
       max-width: 600px;
@@ -498,6 +529,13 @@
       
       <!-- Coluna da direita - Widget -->
       <div class="right-column">
+        <div class="widget-cta fade-in">
+          <strong>Fale com a nossa IA agora</strong> 👉 toque no botão do 
+          fone e diga algo. Ela apresenta produtos e serviços em segundos.
+          <div class="examples">
+            Exemplo: "Quero conhecer os produtos INOSX" • "Quanto custa?"
+          </div>
+        </div>
         <div class="widget-container fade-in">
           <elevenlabs-convai agent-id="agent_1801k2z5hgpfex3tzpdxfzv0h0e3"></elevenlabs-convai>
           <!-- Fallback para mobile -->
