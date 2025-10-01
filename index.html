@@ -52,6 +52,18 @@
       margin: 0 auto;
     }
 
+    .carousel-title {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
     .site-carousel {
       position: relative;
       overflow: hidden;
@@ -626,6 +638,7 @@
 
   <!-- Carrossel de sites -->
   <div class="carousel-wrapper">
+    <h2 class="carousel-title fade-in">Products</h2>
     <div class="site-carousel">
       <div class="carousel-arrow left" id="carouselPrev">‹</div>
       <div class="carousel-arrow right" id="carouselNext">›</div>
@@ -743,7 +756,7 @@
           } else {
             track.scrollBy({ left: getStep(), behavior: 'smooth' });
           }
-        }, 3500);
+        }, 8000);
       }
       function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
 
