@@ -53,7 +53,7 @@
     }
 
     .carousel-title {
-      text-align: center;
+      text-align: left;
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 700;
       background: var(--gradient-primary);
@@ -147,6 +147,34 @@
 
     .carousel-arrow.left { left: 10px; }
     .carousel-arrow.right { right: 10px; }
+
+    /* Indicadores do carrossel */
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 1rem;
+      padding: 0 1rem;
+    }
+
+    .carousel-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-indicator.active {
+      background: var(--accent-color);
+      transform: scale(1.2);
+    }
+
+    .carousel-indicator:hover {
+      background: rgba(0, 212, 255, 0.6);
+    }
 
     @media (max-width: 1024px) {
       .carousel-item { flex-basis: 60%; max-width: 600px; }
@@ -660,6 +688,13 @@
           <div class="carousel-caption"><span>hubiabrasil.com.br</span><span>Open site →</span></div>
         </a>
       </div>
+      <!-- Indicadores do carrossel -->
+      <div class="carousel-indicators" id="carouselIndicators">
+        <button class="carousel-indicator active" data-index="0"></button>
+        <button class="carousel-indicator" data-index="1"></button>
+        <button class="carousel-indicator" data-index="2"></button>
+        <button class="carousel-indicator" data-index="3"></button>
+      </div>
     </div>
   </div>
 
@@ -735,27 +770,51 @@
       const track = document.getElementById('carouselTrack');
       const prev = document.getElementById('carouselPrev');
       const next = document.getElementById('carouselNext');
+      const indicators = document.querySelectorAll('.carousel-indicator');
       if (!track || !prev || !next) return;
+
+      const items = track.querySelectorAll('.carousel-item');
+      const totalItems = items.length;
+      let currentIndex = 0;
 
       const getStep = () => Math.min(track.clientWidth * 0.8, 900);
 
+      function updateIndicators() {
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentIndex);
+        });
+      }
+
+      function scrollToIndex(index) {
+        const itemWidth = getStep();
+        track.scrollTo({ left: index * itemWidth, behavior: 'smooth' });
+        currentIndex = index;
+        updateIndicators();
+      }
+
       prev.addEventListener('click', () => {
-        track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+        const newIndex = currentIndex > 0 ? currentIndex - 1 : totalItems - 1;
+        scrollToIndex(newIndex);
       });
+
       next.addEventListener('click', () => {
-        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+        const newIndex = currentIndex < totalItems - 1 ? currentIndex + 1 : 0;
+        scrollToIndex(newIndex);
+      });
+
+      // Indicadores clicáveis
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          scrollToIndex(index);
+        });
       });
 
       let autoTimer;
       function startAuto() {
         stopAuto();
         autoTimer = setInterval(() => {
-          // Se estiver no fim, volta ao início
-          if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
-            track.scrollTo({ left: 0, behavior: 'smooth' });
-          } else {
-            track.scrollBy({ left: getStep(), behavior: 'smooth' });
-          }
+          const newIndex = currentIndex < totalItems - 1 ? currentIndex + 1 : 0;
+          scrollToIndex(newIndex);
         }, 8000);
       }
       function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
