@@ -64,6 +64,28 @@
       letter-spacing: -0.02em;
     }
 
+    /* Divisória criativa */
+    .section-divider {
+      position: relative;
+      max-width: 1400px;
+      margin: 3rem auto 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .divider-line {
+      height: 2px;
+      background: linear-gradient(90deg, rgba(0,212,255,0) 0%, rgba(0,212,255,0.6) 50%, rgba(0,212,255,0) 100%);
+      box-shadow: 0 0 25px rgba(0,212,255,0.35);
+      border-radius: 999px;
+    }
+
+    .divider-glow {
+      height: 8px;
+      filter: blur(12px);
+      background: radial-gradient(ellipse at center, rgba(0,212,255,0.25), rgba(0,212,255,0));
+      margin: 6px 0;
+    }
+
     .site-carousel {
       position: relative;
       overflow: hidden;
@@ -664,39 +686,7 @@
   <!-- Partículas de fundo -->
   <div class="particles" id="particles"></div>
 
-  <!-- Carrossel de sites -->
-  <div class="carousel-wrapper">
-    <h2 class="carousel-title fade-in">Products</h2>
-    <div class="site-carousel">
-      <div class="carousel-arrow left" id="carouselPrev">‹</div>
-      <div class="carousel-arrow right" id="carouselNext">›</div>
-      <div class="carousel-track" id="carouselTrack">
-        <a class="carousel-item" href="https://surveyflow.ai" target="_blank" rel="noopener">
-          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://surveyflow.ai" alt="surveyflow.ai preview" />
-          <div class="carousel-caption"><span>surveyflow.ai</span><span>Open site →</span></div>
-        </a>
-        <a class="carousel-item" href="https://datagpt.com.br" target="_blank" rel="noopener">
-          <img class="carousel-image" src="datagpt.png" alt="DataGPT - AI para análise de dados empresariais" />
-          <div class="carousel-caption"><span>DataGPT</span><span>Open site →</span></div>
-        </a>
-        <a class="carousel-item" href="https://messiax.com.br" target="_blank" rel="noopener">
-          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://messiax.com.br" alt="messiax.com.br preview" />
-          <div class="carousel-caption"><span>messiax.com.br</span><span>Open site →</span></div>
-        </a>
-        <a class="carousel-item" href="https://hubiabrasil.com.br" target="_blank" rel="noopener">
-          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://hubiabrasil.com.br" alt="hubiabrasil.com.br preview" />
-          <div class="carousel-caption"><span>hubiabrasil.com.br</span><span>Open site →</span></div>
-        </a>
-      </div>
-      <!-- Indicadores do carrossel -->
-      <div class="carousel-indicators" id="carouselIndicators">
-        <button class="carousel-indicator active" data-index="0"></button>
-        <button class="carousel-indicator" data-index="1"></button>
-        <button class="carousel-indicator" data-index="2"></button>
-        <button class="carousel-indicator" data-index="3"></button>
-      </div>
-    </div>
-  </div>
+  <!-- Espaço reservado: carrossel movido para baixo da divisória -->
 
   <!-- Container principal -->
   <div class="main-container">
@@ -735,6 +725,47 @@
             Try: "Show me INOSX products" • "What can you build for me?"
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divisória criativa entre herói e Products -->
+  <div class="section-divider" aria-hidden="true">
+    <div class="divider-glow"></div>
+    <div class="divider-line"></div>
+    <div class="divider-glow"></div>
+  </div>
+
+  <!-- Carrossel de sites (Products) -->
+  <div class="carousel-wrapper">
+    <h2 class="carousel-title fade-in">Products</h2>
+    <div class="site-carousel">
+      <div class="carousel-arrow left" id="carouselPrev">‹</div>
+      <div class="carousel-arrow right" id="carouselNext">›</div>
+      <div class="carousel-track" id="carouselTrack">
+        <a class="carousel-item" href="https://surveyflow.ai" target="_blank" rel="noopener">
+          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://surveyflow.ai" alt="surveyflow.ai preview" />
+          <div class="carousel-caption"><span>surveyflow.ai</span><span>Open site →</span></div>
+        </a>
+        <a class="carousel-item" href="https://datagpt.com.br" target="_blank" rel="noopener">
+          <img class="carousel-image" src="datagpt.png" alt="DataGPT - AI para análise de dados empresariais" />
+          <div class="carousel-caption"><span>DataGPT</span><span>Open site →</span></div>
+        </a>
+        <a class="carousel-item" href="https://messiax.com.br" target="_blank" rel="noopener">
+          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://messiax.com.br" alt="messiax.com.br preview" />
+          <div class="carousel-caption"><span>messiax.com.br</span><span>Open site →</span></div>
+        </a>
+        <a class="carousel-item" href="https://hubiabrasil.com.br" target="_blank" rel="noopener">
+          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://hubiabrasil.com.br" alt="hubiabrasil.com.br preview" />
+          <div class="carousel-caption"><span>hubiabrasil.com.br</span><span>Open site →</span></div>
+        </a>
+      </div>
+      <!-- Indicadores do carrossel -->
+      <div class="carousel-indicators" id="carouselIndicators">
+        <button class="carousel-indicator active" data-index="0"></button>
+        <button class="carousel-indicator" data-index="1"></button>
+        <button class="carousel-indicator" data-index="2"></button>
+        <button class="carousel-indicator" data-index="3"></button>
       </div>
     </div>
   </div>
