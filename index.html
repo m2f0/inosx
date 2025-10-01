@@ -198,6 +198,193 @@
       background: rgba(0, 212, 255, 0.6);
     }
 
+    /* Seção AI Services */
+    .services-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    .services-title {
+      text-align: left;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .services-intro {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 3rem;
+      max-width: 1000px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 212, 255, 0.4);
+      box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+    }
+
+    .service-title {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .service-icon {
+      font-size: 1.5rem;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-features li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    .service-features li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .service-benefits {
+      background: rgba(0, 212, 255, 0.08);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .service-benefits h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-benefits li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    .service-benefits li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    .value-proposition {
+      margin-top: 4rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 107, 53, 0.1));
+      border-radius: 16px;
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      text-align: center;
+    }
+
+    .value-proposition h3 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+    }
+
+    .value-proposition p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .service-card {
+        padding: 1.5rem;
+      }
+      
+      .services-section {
+        padding: 2rem 1rem;
+      }
+    }
+
     @media (max-width: 1024px) {
       .carousel-item { flex-basis: 60%; max-width: 600px; }
       .carousel-image { height: 300px; }
@@ -686,7 +873,195 @@
   <!-- Partículas de fundo -->
   <div class="particles" id="particles"></div>
 
-  <!-- Espaço reservado: carrossel movido para baixo da divisória -->
+  <!-- Divisória entre AI Products e AI Services -->
+  <div class="section-divider" aria-hidden="true">
+    <div class="divider-glow"></div>
+    <div class="divider-line"></div>
+    <div class="divider-glow"></div>
+  </div>
+
+  <!-- Seção AI Services -->
+  <div class="services-section">
+    <h2 class="services-title fade-in">AI Services</h2>
+    
+    <div class="services-intro fade-in">
+      A INOSX é uma empresa especializada no desenvolvimento de soluções em inteligência artificial, com foco em transformar dados, processos e sistemas em resultados concretos. Nosso portfólio combina automação, análise de dados, segurança e orquestração de agentes inteligentes, ajudando empresas a alcançarem maior eficiência, inovação e competitividade.
+    </div>
+
+    <div class="services-grid">
+      <!-- INOSX AI Agents -->
+      <div class="service-card fade-in">
+        <h3 class="service-title">
+          <span class="service-icon">🤖</span>
+          INOSX AI Agents
+        </h3>
+        <p class="service-description">
+          Agentes de automação inteligentes que eliminam tarefas repetitivas e integram diferentes plataformas de forma autônoma.
+        </p>
+        <div class="service-features">
+          <h4>Funcionalidades principais:</h4>
+          <ul>
+            <li>Integração automática entre ERPs, CRMs, bancos de dados e APIs</li>
+            <li>Execução de processos ponta a ponta com redução de erros</li>
+            <li>Análise e geração de insights em tempo real</li>
+            <li>Aprendizado contínuo e adaptação às necessidades do negócio</li>
+          </ul>
+        </div>
+        <div class="service-benefits">
+          <h4>Benefícios:</h4>
+          <ul>
+            <li>Redução de custos operacionais</li>
+            <li>Maior eficiência e produtividade</li>
+            <li>Decisões mais rápidas e assertivas</li>
+            <li>Escalabilidade para acompanhar o crescimento da empresa</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- INOSX DataGPT -->
+      <div class="service-card fade-in">
+        <h3 class="service-title">
+          <span class="service-icon">📊</span>
+          INOSX DataGPT
+        </h3>
+        <p class="service-description">
+          Plataforma de análise preditiva e conversacional. Permite que qualquer colaborador consulte dados corporativos usando linguagem natural, sem depender de especialistas.
+        </p>
+        <div class="service-features">
+          <h4>Funcionalidades principais:</h4>
+          <ul>
+            <li>Conexão com bancos de dados, data lakes e sistemas analíticos</li>
+            <li>Criação de relatórios e dashboards inteligentes em tempo real</li>
+            <li>Interação via chat ou voz para responder perguntas de negócio</li>
+          </ul>
+        </div>
+        <div class="service-benefits">
+          <h4>Benefícios:</h4>
+          <ul>
+            <li>Democratização do acesso a dados</li>
+            <li>Agilidade na tomada de decisão</li>
+            <li>Redução da dependência de equipes técnicas</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- INOSX AutoML -->
+      <div class="service-card fade-in">
+        <h3 class="service-title">
+          <span class="service-icon">⚙️</span>
+          INOSX AutoML
+        </h3>
+        <p class="service-description">
+          Plataforma de criação e treinamento de modelos de machine learning sem código.
+        </p>
+        <div class="service-features">
+          <h4>Funcionalidades principais:</h4>
+          <ul>
+            <li>Treinamento e ajuste automático de modelos de IA</li>
+            <li>Avaliação de performance com relatórios detalhados</li>
+            <li>Deploy rápido em nuvem ou on-premises</li>
+          </ul>
+        </div>
+        <div class="service-benefits">
+          <h4>Benefícios:</h4>
+          <ul>
+            <li>Aceleração da inovação</li>
+            <li>Redução da barreira técnica para uso de IA</li>
+            <li>Empowerment de equipes sem background em ciência de dados</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- INOSX CyberAI Security -->
+      <div class="service-card fade-in">
+        <h3 class="service-title">
+          <span class="service-icon">🔒</span>
+          INOSX CyberAI Security
+        </h3>
+        <p class="service-description">
+          Solução de segurança cibernética com inteligência artificial.
+        </p>
+        <div class="service-features">
+          <h4>Funcionalidades principais:</h4>
+          <ul>
+            <li>Monitoramento contínuo de sistemas e redes</li>
+            <li>Detecção de anomalias, fraudes e acessos indevidos</li>
+            <li>Resposta automática e inteligente a incidentes</li>
+          </ul>
+        </div>
+        <div class="service-benefits">
+          <h4>Benefícios:</h4>
+          <ul>
+            <li>Proteção de ativos digitais críticos</li>
+            <li>Redução de riscos e vulnerabilidades</li>
+            <li>Garantia de conformidade regulatória</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- INOSX Knowledge Agents -->
+      <div class="service-card fade-in">
+        <h3 class="service-title">
+          <span class="service-icon">📚</span>
+          INOSX Knowledge Agents
+        </h3>
+        <p class="service-description">
+          Agentes inteligentes especializados em documentos e bases de conhecimento internas.
+        </p>
+        <div class="service-features">
+          <h4>Funcionalidades principais:</h4>
+          <ul>
+            <li>Indexação e leitura automática de documentos corporativos</li>
+            <li>Busca inteligente e contextual em bases de conhecimento</li>
+            <li>Integração com SharePoint, Confluence, Google Drive e outras plataformas</li>
+          </ul>
+        </div>
+        <div class="service-benefits">
+          <h4>Benefícios:</h4>
+          <ul>
+            <li>Redução do tempo gasto na busca de informações</li>
+            <li>Aumento da produtividade de equipes</li>
+            <li>Centralização e aproveitamento do conhecimento organizacional</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- INOSX AI Orchestration -->
+      <div class="service-card fade-in">
+        <h3 class="service-title">
+          <span class="service-icon">🎯</span>
+          INOSX AI Orchestration
+        </h3>
+        <p class="service-description">
+          Orquestração de fluxos complexos entre múltiplos agentes de IA.
+        </p>
+        <div class="service-features">
+          <h4>Funcionalidades principais:</h4>
+          <ul>
+            <li>Coordenação de diferentes agentes em processos corporativos</li>
+            <li>Integração de áreas críticas como ERP, CRM, atendimento ao cliente e operações</li>
+            <li>Governança e rastreabilidade de todas as execuções</li>
+          </ul>
+        </div>
+        <div class="service-benefits">
+          <h4>Benefícios:</h4>
+          <ul>
+            <li>Ecossistema colaborativo de agentes inteligentes</li>
+            <li>Maior confiabilidade e transparência em processos automatizados</li>
+            <li>Flexibilidade para evoluir junto com a estratégia da empresa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proposta de Valor -->
+    <div class="value-proposition fade-in">
+      <h3>Proposta de Valor Unificada da INOSX</h3>
+      <p>
+        Com o portfólio de soluções da INOSX, sua empresa não apenas utiliza tecnologia, mas opera em parceria com a inteligência artificial. Nossos produtos são projetados para reduzir custos, aumentar a eficiência, democratizar o acesso a dados, proteger ativos digitais e orquestrar processos complexos em escala. O resultado é um ambiente de negócios mais ágil, seguro e competitivo.
+      </p>
+    </div>
+  </div>
 
   <!-- Container principal -->
   <div class="main-container">
