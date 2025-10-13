@@ -7,12 +7,15 @@
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
   <style>
     :root {
-      --bg-color: #0a0a0a;
-      --text-color: #ffffff;
-      --accent-color: #00d4ff;
-      --secondary-color: #ff6b35;
-      --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-      --gradient-secondary: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+      --bg-color: #0b1020;
+      --text-color: #e6f0ff;
+      --accent-color: #7dd3fc;
+      --secondary-color: #a78bfa;
+      --gradient-primary: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #8b5cf6 100%);
+      --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #60a5fa 100%);
+      --surface-glass: rgba(148, 163, 184, 0.08);
+      --surface-glass-strong: rgba(148, 163, 184, 0.14);
+      --border-soft: rgba(125, 211, 252, 0.28);
       --font-size-large: clamp(2rem, 6vw, 4rem);
       --font-size-medium: clamp(1.5rem, 4vw, 2.5rem);
       --font-size-small: clamp(1rem, 3vw, 1.5rem);
@@ -34,7 +37,9 @@
     body {
       width: 100%;
       min-height: 100vh;
-      background: var(--bg-color);
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(96,165,250,0.10), rgba(139,92,246,0.06) 40%, transparent 70%),
+                  radial-gradient(1000px 500px at 85% 20%, rgba(125,211,252,0.10), transparent 60%),
+                  var(--bg-color);
       color: var(--text-color);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       overflow-x: hidden;
@@ -74,15 +79,15 @@
 
     .divider-line {
       height: 2px;
-      background: linear-gradient(90deg, rgba(0,212,255,0) 0%, rgba(0,212,255,0.6) 50%, rgba(0,212,255,0) 100%);
-      box-shadow: 0 0 25px rgba(0,212,255,0.35);
+      background: linear-gradient(90deg, rgba(96,165,250,0) 0%, rgba(96,165,250,0.65) 50%, rgba(96,165,250,0) 100%);
+      box-shadow: 0 0 25px rgba(96,165,250,0.35);
       border-radius: 999px;
     }
 
     .divider-glow {
       height: 8px;
       filter: blur(12px);
-      background: radial-gradient(ellipse at center, rgba(0,212,255,0.25), rgba(0,212,255,0));
+      background: radial-gradient(ellipse at center, rgba(96,165,250,0.25), rgba(96,165,250,0));
       margin: 6px 0;
     }
 
@@ -90,9 +95,9 @@
       position: relative;
       overflow: hidden;
       border-radius: 16px;
-      border: 1px solid rgba(0, 212, 255, 0.2);
-      background: linear-gradient(180deg, rgba(0, 212, 255, 0.06), rgba(0, 0, 0, 0));
-      box-shadow: 0 10px 35px rgba(0, 212, 255, 0.15);
+      border: 1px solid var(--border-soft);
+      background: linear-gradient(180deg, var(--surface-glass), rgba(0, 0, 0, 0));
+      box-shadow: 0 10px 35px rgba(96, 165, 250, 0.15);
     }
 
     .carousel-track {
@@ -150,8 +155,8 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(2, 6, 23, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       color: #fff;
       width: 42px;
       height: 42px;
@@ -165,7 +170,7 @@
       user-select: none;
     }
 
-    .carousel-arrow:hover { background: rgba(0, 212, 255, 0.35); }
+    .carousel-arrow:hover { background: rgba(96, 165, 250, 0.35); }
 
     .carousel-arrow.left { left: 10px; }
     .carousel-arrow.right { right: 10px; }
@@ -195,7 +200,7 @@
     }
 
     .carousel-indicator:hover {
-      background: rgba(0, 212, 255, 0.6);
+      background: rgba(96, 165, 250, 0.6);
     }
 
     /* Seção AI Services */
@@ -236,18 +241,18 @@
     }
 
     .service-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(0, 212, 255, 0.2);
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
       border-radius: 16px;
       padding: 2rem;
       transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
     }
 
     .service-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(0, 212, 255, 0.4);
-      box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+      border-color: rgba(96, 165, 250, 0.55);
+      box-shadow: 0 12px 28px rgba(96, 165, 250, 0.20);
     }
 
     .service-title {
@@ -307,7 +312,7 @@
     }
 
     .service-benefits {
-      background: rgba(0, 212, 255, 0.08);
+      background: rgba(96, 165, 250, 0.10);
       border-radius: 8px;
       padding: 1rem;
     }
@@ -345,9 +350,9 @@
     .value-proposition {
       margin-top: 4rem;
       padding: 2rem;
-      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 107, 53, 0.1));
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(139, 92, 246, 0.12));
       border-radius: 16px;
-      border: 1px solid rgba(0, 212, 255, 0.3);
+      border: 1px solid rgba(96, 165, 250, 0.35);
       text-align: center;
     }
 
@@ -413,7 +418,8 @@
       background: var(--accent-color);
       border-radius: 50%;
       animation: float 6s ease-in-out infinite;
-      opacity: 0.6;
+      box-shadow: 0 0 12px rgba(96,165,250,0.6);
+      opacity: 0.7;
     }
 
     /* Canvas para linhas entre partículas */
@@ -559,7 +565,7 @@
       height: 600px;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+      box-shadow: 0 8px 25px rgba(96, 165, 250, 0.30);
       transition: all 0.3s ease;
       display: block;
       background: rgba(255, 255, 255, 0.1);
@@ -608,7 +614,7 @@
     }
 
     #open-chat-btn {
-      background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+      background: var(--gradient-primary);
       border: none;
       color: white;
       padding: 12px 24px;
@@ -617,7 +623,7 @@
       cursor: pointer;
       transition: all 0.3s ease;
       font-weight: 600;
-      box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.35);
     }
 
     #open-chat-btn:hover {
@@ -631,7 +637,7 @@
 
     elevenlabs-convai:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(0, 212, 255, 0.4);
+      box-shadow: 0 12px 35px rgba(96, 165, 250, 0.4);
     }
 
     /* Melhorias para dispositivos móveis */
