@@ -4,6 +4,46 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [2.1.0] - 2025-01-08
+
+### 🌍 Multilingual Support
+
+#### Added
+- **Complete i18n System**
+  - English (EN), Portuguese (PT-BR), and Spanish (ES) translations
+  - Language selector UI in top-right corner with flags
+  - Auto-detection of browser language on first visit
+  - Language preference saved in localStorage
+  - Instant language switching without page reload
+  - 208+ translated elements across entire site
+
+- **Translation Files:**
+  - `i18n/en.json` - English translations
+  - `i18n/pt.json` - Portuguese (Brazil) translations
+  - `i18n/es.json` - Spanish translations
+  - `i18n/i18n.js` - i18n system core
+
+- **Translated Sections:**
+  - Hero section (headlines, CTAs, trust indicators)
+  - Products carousel (all 6 products)
+  - Services section (7 service cards → 5 after cleanup)
+  - Contact modal (2-step form, all fields and options)
+  - Footer (all links and content)
+  - Meta tags (title, description)
+
+### ❌ Removed
+- **INOSX DataGPT service** - Removed from services section and all translations
+- **INOSX AutoML service** - Removed from services section and all translations
+- Services count reduced from 7 to 5 core offerings
+
+### 📊 Impact
+- **Market Reach:** Now covers 3 major languages reaching ~1B+ potential customers
+- **UX:** Better user experience with native language support
+- **SEO:** Improved international SEO with meta tag translations
+- **Conversion:** Expected higher conversion rates with localized content
+
+---
+
 ## [2.0.0] - 2026-01-08
 
 ### 🎉 Major Release: Conversion-Focused Redesign
