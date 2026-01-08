@@ -747,6 +747,32 @@
       opacity: 0.5;
     }
 
+    /* Fix select dropdown text visibility */
+    .lead-form select option {
+      background: #1a1f35;
+      color: #ffffff;
+      padding: 10px;
+    }
+    
+    /* Better visibility for select in all states */
+    .lead-form select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237dd3fc' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    /* Labels visibility */
+    .lead-form label {
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
     .lead-form label {
       color: var(--text-color);
       font-weight: 600;
