@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-  <title>INOSX - The Future of AI</title>
-  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  <title>INOSX - The Future of AI | Enterprise AI Solutions</title>
+  <meta name="description" content="INOSX delivers enterprise AI solutions including autonomous agents, conversational analytics, and AI-powered security. Transform your business with practical AI.">
   <style>
     :root {
       --bg-color: #0b1020;
@@ -518,140 +518,346 @@
       50% { transform: scale(1.05); }
     }
 
-    /* Widget da ElevenLabs */
-    .widget-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
-
-    /* CTA acima do widget */
-    .widget-cta {
+    /* Hero CTA Section */
+    .hero-cta-section {
       width: 100%;
       max-width: 600px;
-      margin: 1rem auto 0 auto;
-      padding: 14px 18px;
-      border-radius: 14px;
-      background: rgba(0, 212, 255, 0.08);
-      border: 1px solid rgba(0, 212, 255, 0.25);
       text-align: center;
-      box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
-      transition: transform 0.25s ease;
+      padding: 2rem;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(96, 165, 250, 0.2);
     }
 
-    .widget-cta:hover {
-      transform: translateY(-2px);
-    }
-
-    .widget-cta strong {
+    .cta-headline {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 700;
       background: var(--gradient-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
-    .widget-cta .examples {
-      margin-top: 6px;
-      font-size: 0.95rem;
+    .cta-subheadline {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+      color: var(--text-color);
       opacity: 0.9;
+      margin-bottom: 2rem;
     }
 
-    elevenlabs-convai {
-      width: 100%;
-      max-width: 600px;
-      height: 600px;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(96, 165, 250, 0.30);
-      transition: all 0.3s ease;
-      display: block;
-      background: rgba(255, 255, 255, 0.1);
-      position: relative;
-      z-index: 10;
-      min-height: 600px;
-    }
-
-    /* Estilos específicos para o iframe interno do widget */
-    elevenlabs-convai iframe {
-      width: 100% !important;
-      height: 100% !important;
-      border: none !important;
-      border-radius: 40px !important;
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-
-    /* Forçar exibição de todos os elementos internos */
-    elevenlabs-convai * {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-
-    /* Estilos para o fallback mobile */
-    #mobile-fallback {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: inherit;
-      display: none;
-      flex-direction: column;
-      align-items: center;
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
       justify-content: center;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
     }
 
-    #open-chat-btn {
+    .cta-primary {
       background: var(--gradient-primary);
-      border: none;
       color: white;
-      padding: 12px 24px;
-      border-radius: 25px;
-      font-size: 16px;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
       cursor: pointer;
       transition: all 0.3s ease;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.35);
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+      min-width: 200px;
     }
 
-    #open-chat-btn:hover {
+    .cta-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
     }
 
-    #open-chat-btn:active {
+    .cta-primary:active {
       transform: translateY(0);
     }
 
-    elevenlabs-convai:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(96, 165, 250, 0.4);
+    .cta-secondary {
+      background: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 200px;
     }
 
-    /* Melhorias para dispositivos móveis */
-    @media (hover: none) and (pointer: coarse) {
-      elevenlabs-convai:hover {
-        transform: none;
-        box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+    .cta-secondary:hover {
+      background: rgba(125, 211, 252, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .trust-indicators {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+
+    .trust-indicators span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: linear-gradient(180deg, #0f1424 0%, #1a1f35 100%);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2.5rem;
+      max-width: 600px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
       }
-      
-      elevenlabs-convai:active {
-        transform: scale(0.98);
-        box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
+
+    .modal-close {
+      color: var(--text-color);
+      float: right;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .modal-close:hover {
+      opacity: 1;
+    }
+
+    .modal-content h3 {
+      font-size: 2rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .modal-content > p {
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    /* Form Styles */
+    .lead-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-step {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-step.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .lead-form input,
+    .lead-form select,
+    .lead-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(148, 163, 184, 0.08);
+      border: 1px solid var(--border-soft);
+      border-radius: 10px;
+      color: var(--text-color);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .lead-form input:focus,
+    .lead-form select:focus,
+    .lead-form textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      background: rgba(125, 211, 252, 0.1);
+      box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+    }
+
+    .lead-form input::placeholder,
+    .lead-form textarea::placeholder {
+      color: var(--text-color);
+      opacity: 0.5;
+    }
+
+    .lead-form label {
+      color: var(--text-color);
+      font-weight: 600;
+      margin-bottom: -0.5rem;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn-back {
+      flex: 1;
+      background: transparent;
+      color: var(--accent-color);
+      border: 1px solid var(--border-soft);
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: rgba(125, 211, 252, 0.1);
+      border-color: var(--accent-color);
+    }
+
+    .btn-submit,
+    .btn-next {
+      flex: 2;
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .btn-submit:hover,
+    .btn-next:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+    }
+
+    .btn-submit:disabled,
+    .btn-next:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .privacy-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-color);
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+
+    .privacy-note a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .privacy-note a:hover {
+      text-decoration: underline;
+    }
+
+    .progress-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .progress-step {
+      flex: 1;
+      height: 4px;
+      background: rgba(148, 163, 184, 0.2);
+      border-radius: 2px;
+      transition: background 0.3s ease;
+    }
+
+    .progress-step.completed {
+      background: var(--accent-color);
+    }
+
+    /* Success Message */
+    .success-message {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .success-message h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .success-message p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .success-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
 
     /* Responsividade */
     @media (max-width: 768px) {
@@ -750,11 +956,6 @@
         min-height: 450px;
       }
       
-      .widget-container {
-        min-height: 450px;
-        width: 100% !important;
-      }
-      
       .hero-text {
         font-size: clamp(1.5rem, 7vw, 2.5rem);
       }
@@ -766,16 +967,6 @@
       .logo {
         font-size: clamp(2.5rem, 15vw, 4rem);
         margin: 0.5rem 0;
-      }
-      
-      elevenlabs-convai {
-        height: 450px;
-        min-height: 450px;
-        border-radius: 12px;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        width: 100% !important;
       }
     }
 
@@ -797,11 +988,6 @@
         min-height: 400px;
       }
       
-      .widget-container {
-        min-height: 400px;
-        width: 100% !important;
-      }
-      
       .hero-text {
         font-size: clamp(1.3rem, 6vw, 2rem);
       }
@@ -812,15 +998,6 @@
       
       .logo {
         font-size: clamp(2rem, 12vw, 3rem);
-      }
-      
-      elevenlabs-convai {
-        height: 400px;
-        min-height: 400px;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        width: 100% !important;
       }
     }
 
@@ -845,14 +1022,6 @@
         order: 2 !important;
       }
       
-      .widget-container {
-        width: 100% !important;
-      }
-      
-      elevenlabs-convai {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
     }
 
     /* Animações de entrada */
@@ -899,23 +1068,28 @@
         <div class="logo fade-in">INOSX</div>
       </div>
       
-      <!-- Coluna da direita - Widget -->
+      <!-- Coluna da direita - CTA Section -->
       <div class="right-column">
-        <div class="widget-container fade-in">
-          <elevenlabs-convai agent-id="agent_1801k2z5hgpfex3tzpdxfzv0h0e3"></elevenlabs-convai>
-          <!-- Fallback para mobile -->
-          <div id="mobile-fallback" style="display: none; width: 100%; height: 100%; background: rgba(255,255,255,0.1); border-radius: 15px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 20px; text-align: center; cursor: pointer;">
-            <div style="font-size: 24px; margin-bottom: 10px;">🤖</div>
-            <div style="font-size: 18px; margin-bottom: 10px;">INOSX AI</div>
-            <div style="font-size: 14px; opacity: 0.8; margin-bottom: 15px;">Click to chat</div>
-            <button id="open-chat-btn" style="background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%); border: none; color: white; padding: 12px 24px; border-radius: 25px; font-size: 16px; cursor: pointer; transition: all 0.3s ease;">Open Chat</button>
+        <div class="hero-cta-section fade-in">
+          <h2 class="cta-headline">Transform Your Business with Enterprise AI</h2>
+          <p class="cta-subheadline">
+            Get a free consultation with our AI experts to discover how INOSX solutions
+            can reduce costs, increase efficiency, and drive innovation.
+          </p>
+          
+          <div class="cta-buttons">
+            <button class="cta-primary" onclick="openContactModal()" data-location="hero">
+              Get Free Consultation
+            </button>
+            <button class="cta-secondary" onclick="scrollToProducts()">
+              Explore Products →
+            </button>
           </div>
-        </div>
-        <div class="widget-cta fade-in">
-          <strong>Talk to our AI now</strong> 👉 tap the phone button and say anything.
-          It will introduce INOSX products and services in seconds.
-          <div class="examples">
-            Try: "Show me INOSX products" • "What can you build for me?"
+          
+          <div class="trust-indicators">
+            <span>✓ No Credit Card Required</span>
+            <span>✓ Free ROI Analysis</span>
+            <span>✓ 30-Minute Strategy Call</span>
           </div>
         </div>
       </div>
@@ -1193,7 +1367,246 @@
     </div>
   </div>
 
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeContactModal()">&times;</span>
+      
+      <div id="formContainer">
+        <h3>Get Your Free AI Consultation</h3>
+        <p>Tell us about your business and we'll show you how AI can help.</p>
+        
+        <div class="progress-bar">
+          <div class="progress-step completed" id="progress-1"></div>
+          <div class="progress-step" id="progress-2"></div>
+        </div>
+        
+        <form id="leadForm" class="lead-form" onsubmit="handleFormSubmit(event)">
+          <!-- Step 1: Basic Info -->
+          <div class="form-step active" data-step="1">
+            <input type="text" name="name" id="name" placeholder="Full Name *" required />
+            <input type="email" name="email" id="email" placeholder="Work Email *" required />
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+            <input type="text" name="company" id="company" placeholder="Company Name *" required />
+            
+            <button type="button" class="btn-next" onclick="nextStep(2)">
+              Continue →
+            </button>
+          </div>
+          
+          <!-- Step 2: Needs -->
+          <div class="form-step" data-step="2">
+            <label>What brings you to INOSX?</label>
+            <select name="interest" id="interest" required>
+              <option value="">Select primary interest...</option>
+              <option value="automate">Automate business processes</option>
+              <option value="analytics">Data analytics & insights</option>
+              <option value="security">AI-powered security</option>
+              <option value="knowledge">Knowledge management</option>
+              <option value="robotics">Industrial robotics</option>
+              <option value="other">Other / Not sure</option>
+            </select>
+            
+            <label>Company size</label>
+            <select name="company_size" id="company_size">
+              <option value="">Select...</option>
+              <option value="1-10">1-10 employees</option>
+              <option value="11-50">11-50 employees</option>
+              <option value="51-200">51-200 employees</option>
+              <option value="201-1000">201-1,000 employees</option>
+              <option value="1000+">1,000+ employees</option>
+            </select>
+            
+            <label>Tell us about your AI goals (optional)</label>
+            <textarea name="message" id="message" placeholder="E.g., We want to automate our customer support process..." rows="4"></textarea>
+            
+            <div class="form-buttons">
+              <button type="button" class="btn-back" onclick="prevStep(1)">
+                ← Back
+              </button>
+              <button type="submit" class="btn-submit" id="submitBtn">
+                Get Free Consultation
+              </button>
+            </div>
+          </div>
+        </form>
+        
+        <p class="privacy-note">
+          We respect your privacy. See our <a href="terms.html#privacy" target="_blank">Privacy Policy</a>.
+        </p>
+      </div>
+      
+      <!-- Success Message (hidden by default) -->
+      <div id="successMessage" class="success-message" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3>Thank You!</h3>
+        <p>
+          We've received your request and one of our AI experts will contact you within 24 hours.
+        </p>
+        <p>
+          Check your email for confirmation and next steps.
+        </p>
+        <button class="cta-primary" onclick="closeContactModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Modal and Form Functions
+    function openContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Track event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'open_contact_form', {
+          'event_category': 'engagement',
+          'event_label': 'contact_modal'
+        });
+      }
+    }
+
+    function closeContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      
+      // Reset form
+      document.getElementById('leadForm').reset();
+      showStep(1);
+      document.getElementById('formContainer').style.display = 'block';
+      document.getElementById('successMessage').style.display = 'none';
+    }
+
+    function nextStep(step) {
+      // Validate current step
+      const currentStep = document.querySelector('.form-step.active');
+      const inputs = currentStep.querySelectorAll('input[required], select[required]');
+      let valid = true;
+      
+      inputs.forEach(input => {
+        if (!input.value || (input.type === 'email' && !isValidEmail(input.value))) {
+          valid = false;
+          input.style.borderColor = '#ff6b6b';
+        } else {
+          input.style.borderColor = '';
+        }
+      });
+      
+      if (!valid) return;
+      
+      showStep(step);
+      
+      // Track event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_step_' + step, {
+          'event_category': 'form_progress'
+        });
+      }
+    }
+
+    function prevStep(step) {
+      showStep(step);
+    }
+
+    function showStep(step) {
+      // Hide all steps
+      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+      
+      // Show target step
+      document.querySelector(`.form-step[data-step="${step}"]`).classList.add('active');
+      
+      // Update progress bar
+      document.getElementById('progress-1').classList.toggle('completed', step >= 1);
+      document.getElementById('progress-2').classList.toggle('completed', step >= 2);
+    }
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    async function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+      
+      // Add tracking data
+      data.utm_source = new URLSearchParams(window.location.search).get('utm_source') || 'direct';
+      data.utm_campaign = new URLSearchParams(window.location.search).get('utm_campaign') || '';
+      data.page_url = window.location.href;
+      data.referrer = document.referrer;
+      data.timestamp = new Date().toISOString();
+      
+      try {
+        // TODO: Replace with actual endpoint
+        // For now, log to console and show success
+        console.log('Form submission:', data);
+        
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        // Track conversion
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'generate_lead', {
+            'event_category': 'conversion',
+            'event_label': 'contact_form',
+            'value': 1
+          });
+        }
+        
+        // Show success message
+        document.getElementById('formContainer').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Optional: Send to actual backend
+        // const response = await fetch('/api/contact', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify(data)
+        // });
+        
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Something went wrong. Please try again or email us at contact@inosx.com');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Get Free Consultation';
+      }
+    }
+
+    function scrollToProducts() {
+      document.querySelector('.carousel-wrapper').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+      
+      // Track event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'scroll_to_products', {
+          'event_category': 'navigation'
+        });
+      }
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target == modal) {
+        closeContactModal();
+      }
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeContactModal();
+      }
+    });
+
     // Criar partículas de fundo
     function createParticles() {
       const particlesContainer = document.getElementById('particles');
@@ -1336,29 +1749,10 @@
       });
     }
 
-    // Função para verificar se o widget carregou
-    function checkWidgetLoaded() {
-      const widget = document.querySelector('elevenlabs-convai');
-      const fallback = document.getElementById('mobile-fallback');
-      
-      if (window.innerWidth <= 768) {
-        // Em mobile, verificar se o widget tem conteúdo
-        if (widget && (widget.innerHTML.trim() === '' || widget.innerHTML.includes('white;display:flex'))) {
-          console.log('Widget não carregou em mobile, mostrando fallback');
-          if (widget) widget.style.display = 'none';
-          if (fallback) fallback.style.display = 'flex';
-        } else {
-          console.log('Widget carregou corretamente');
-          if (widget) widget.style.display = 'block';
-          if (fallback) fallback.style.display = 'none';
-        }
-      }
-    }
-
-    // Função para abrir o chat em nova aba
-    function openChat() {
-      const url = 'https://app.elevenlabs.io/convai/agent_1801k2z5hgpfex3tzpdxfzv0h0e3';
-      window.open(url, '_blank');
+    // Analytics tracking helper (placeholder for future analytics)
+    function trackEvent(eventName, params) {
+      // Google Analytics can be added here later
+      console.log('Event:', eventName, params);
     }
 
     // Inicializar quando a página carregar
@@ -1367,10 +1761,27 @@
       initCarousel();
       window.scrollTo(0, 0);
       
-      // Verificar widget após carregamento
-      setTimeout(checkWidgetLoaded, 3000);
-      setTimeout(checkWidgetLoaded, 5000);
-      setTimeout(checkWidgetLoaded, 8000);
+      // Track page view
+      trackEvent('page_view', {
+        'page_title': document.title,
+        'page_location': window.location.href
+      });
+      
+      // Track scroll depth
+      let scrollTracked = { 25: false, 50: false, 75: false, 100: false };
+      window.addEventListener('scroll', function() {
+        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        
+        Object.keys(scrollTracked).forEach(threshold => {
+          if (scrollPercent >= parseInt(threshold) && !scrollTracked[threshold]) {
+            trackEvent('scroll_depth', {
+              'event_category': 'engagement',
+              'event_label': threshold + '%'
+            });
+            scrollTracked[threshold] = true;
+          }
+        });
+      });
     });
 
     // Prevenir scroll horizontal
@@ -1380,69 +1791,36 @@
       }
     });
 
-    // Adicionar evento de clique no botão do fallback
+    // Track product clicks
     document.addEventListener('DOMContentLoaded', function() {
-      const openChatBtn = document.getElementById('open-chat-btn');
-      if (openChatBtn) {
-        openChatBtn.addEventListener('click', openChat);
-      }
+      const productLinks = document.querySelectorAll('.carousel-item');
+      productLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          const productName = this.querySelector('.carousel-caption span').textContent;
+          trackEvent('product_click', {
+            'event_category': 'products',
+            'event_label': productName,
+            'outbound': true
+          });
+        });
+      });
       
-      // Também permitir clique na área do fallback
-      const fallback = document.getElementById('mobile-fallback');
-      if (fallback) {
-        fallback.addEventListener('click', function(e) {
-          if (e.target !== openChatBtn) {
-            openChat();
+      // Track service card views
+      const serviceCards = document.querySelectorAll('.service-card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.dataset.tracked) {
+            const serviceName = entry.target.querySelector('.service-title').textContent.trim();
+            trackEvent('service_view', {
+              'event_category': 'services',
+              'event_label': serviceName
+            });
+            entry.target.dataset.tracked = 'true';
           }
         });
-      }
-    });
-
-    // Verificar mudança de orientação
-    window.addEventListener('orientationchange', function() {
-      setTimeout(checkWidgetLoaded, 1000);
-    });
-
-    // Verificar redimensionamento
-    window.addEventListener('resize', function() {
-      setTimeout(checkWidgetLoaded, 500);
-      forceMobileLayout();
-    });
-
-    // Função para forçar layout mobile
-    function forceMobileLayout() {
-      if (window.innerWidth <= 768) {
-        const layout = document.querySelector('.two-column-layout');
-        const leftCol = document.querySelector('.left-column');
-        const rightCol = document.querySelector('.right-column');
-        
-        if (layout) {
-          layout.style.flexDirection = 'column';
-          layout.style.width = '100%';
-        }
-        
-        if (leftCol) {
-          leftCol.style.width = '100%';
-          leftCol.style.maxWidth = '100%';
-          leftCol.style.flex = 'none';
-        }
-        
-        if (rightCol) {
-          rightCol.style.width = '100%';
-          rightCol.style.maxWidth = '100%';
-        }
-      }
-    }
-
-    // Forçar layout mobile na inicialização
-    window.addEventListener('load', function() {
-      setTimeout(forceMobileLayout, 100);
-    });
-
-    // Forçar layout mobile no DOMContentLoaded
-    document.addEventListener('DOMContentLoaded', function() {
-      forceMobileLayout();
-      initCarousel();
+      }, { threshold: 0.5 });
+      
+      serviceCards.forEach(card => observer.observe(card));
     });
   </script>
   
