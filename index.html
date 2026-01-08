@@ -862,6 +862,59 @@
       margin-bottom: 1rem;
     }
 
+    /* Language Selector */
+    .language-selector {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 8px 12px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
+    }
+
+    .language-selector select {
+      background: transparent;
+      border: none;
+      color: var(--text-color);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .language-selector select:hover {
+      background: rgba(125, 211, 252, 0.1);
+    }
+
+    .language-selector select option {
+      background: #0f1424;
+      color: var(--text-color);
+      padding: 8px;
+    }
+
+    .lang-icon {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .language-selector {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+      }
+    }
+
 
     /* Responsividade */
     @media (max-width: 768px) {
@@ -1049,6 +1102,16 @@
   </style>
 </head>
 <body>
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <span class="lang-icon">🌍</span>
+    <select id="languageSelector">
+      <option value="en">🇺🇸 English</option>
+      <option value="pt">🇧🇷 Português</option>
+      <option value="es">🇪🇸 Español</option>
+    </select>
+  </div>
+
   <!-- Partículas de fundo -->
   <div class="particles" id="particles"></div>
 
@@ -1060,40 +1123,40 @@
     <div class="two-column-layout">
       <!-- Coluna da esquerda - Texto -->
       <div class="left-column">
-        <div class="hero-text fade-in">
+        <div class="hero-text fade-in" data-i18n="hero.headline1">
           There are no more websites...
         </div>
-        <div class="hero-subtitle fade-in">
+        <div class="hero-subtitle fade-in" data-i18n="hero.headline2">
           ... there's only AI.
         </div>
-        <div class="hero-subtitle fade-in">
+        <div class="hero-subtitle fade-in" data-i18n="hero.headline3">
           And we create these AIs
         </div>
-        <div class="logo fade-in">INOSX</div>
+        <div class="logo fade-in" data-i18n="hero.logo">INOSX</div>
       </div>
       
       <!-- Coluna da direita - CTA Section -->
       <div class="right-column">
         <div class="hero-cta-section fade-in">
-          <h2 class="cta-headline">Transform Your Business with Enterprise AI</h2>
-          <p class="cta-subheadline">
+          <h2 class="cta-headline" data-i18n="hero.cta_headline">Transform Your Business with Enterprise AI</h2>
+          <p class="cta-subheadline" data-i18n="hero.cta_subheadline">
             Get a free consultation with our AI experts to discover how INOSX solutions
             can reduce costs, increase efficiency, and drive innovation.
           </p>
           
           <div class="cta-buttons">
-            <button class="cta-primary" onclick="openContactModal()" data-location="hero">
+            <button class="cta-primary" onclick="openContactModal()" data-location="hero" data-i18n="hero.btn_primary">
               Get Free Consultation
             </button>
-            <button class="cta-secondary" onclick="scrollToProducts()">
+            <button class="cta-secondary" onclick="scrollToProducts()" data-i18n="hero.btn_secondary">
               Explore Products →
             </button>
           </div>
           
           <div class="trust-indicators">
-            <span>✓ No Credit Card Required</span>
-            <span>✓ Free ROI Analysis</span>
-            <span>✓ 30-Minute Strategy Call</span>
+            <span data-i18n="hero.trust_1">✓ No Credit Card Required</span>
+            <span data-i18n="hero.trust_2">✓ Free ROI Analysis</span>
+            <span data-i18n="hero.trust_3">✓ 30-Minute Strategy Call</span>
           </div>
         </div>
       </div>
@@ -1109,34 +1172,34 @@
 
   <!-- Carrossel de sites (Products) -->
   <div class="carousel-wrapper">
-    <h2 class="carousel-title fade-in">AI Products</h2>
+    <h2 class="carousel-title fade-in" data-i18n="products.title">AI Products</h2>
     <div class="site-carousel">
       <div class="carousel-arrow left" id="carouselPrev">‹</div>
       <div class="carousel-arrow right" id="carouselNext">›</div>
       <div class="carousel-track" id="carouselTrack">
         <a class="carousel-item" href="https://surveyflow.ai" target="_blank" rel="noopener">
           <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://surveyflow.ai" alt="surveyflow.ai preview" />
-          <div class="carousel-caption"><span>surveyflow.ai</span><span>Open site →</span></div>
+          <div class="carousel-caption"><span data-i18n="products.surveyflow">surveyflow.ai</span><span data-i18n="products.open_site">Open site →</span></div>
         </a>
         <a class="carousel-item" href="https://datagpt.com.br" target="_blank" rel="noopener">
           <img class="carousel-image" src="datagpt.png" alt="DataGPT - AI para análise de dados empresariais" />
-          <div class="carousel-caption"><span>DataGPT</span><span>Open site →</span></div>
+          <div class="carousel-caption"><span data-i18n="products.datagpt">DataGPT</span><span data-i18n="products.open_site">Open site →</span></div>
         </a>
         <a class="carousel-item" href="https://messiax.ai" target="_blank" rel="noopener">
           <img class="carousel-image" src="Messiax_tela.png" alt="messiax.ai preview" />
-          <div class="carousel-caption"><span>messiax.ai</span><span>Open site →</span></div>
+          <div class="carousel-caption"><span data-i18n="products.messiax">messiax.ai</span><span data-i18n="products.open_site">Open site →</span></div>
         </a>
         <a class="carousel-item" href="https://psychox.ai" target="_blank" rel="noopener">
           <img class="carousel-image" src="PSYCHOX_tela.png" alt="psychox.ai preview" />
-          <div class="carousel-caption"><span>psychox.ai</span><span>Open site →</span></div>
+          <div class="carousel-caption"><span data-i18n="products.psychox">psychox.ai</span><span data-i18n="products.open_site">Open site →</span></div>
         </a>
         <a class="carousel-item" href="https://hubiabrasil.com.br" target="_blank" rel="noopener">
           <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://hubiabrasil.com.br" alt="hubiabrasil.com.br preview" />
-          <div class="carousel-caption"><span>hubiabrasil.com.br</span><span>Open site →</span></div>
+          <div class="carousel-caption"><span data-i18n="products.hubia">hubiabrasil.com.br</span><span data-i18n="products.open_site">Open site →</span></div>
         </a>
         <a class="carousel-item" href="#" target="_blank" rel="noopener">
           <img class="carousel-image" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=600&fit=crop&crop=center" alt="INOSX Vision Robotics - 3D Vision and Visual Language Models" />
-          <div class="carousel-caption"><span>INOSX Vision Robotics</span><span>Coming Soon →</span></div>
+          <div class="carousel-caption"><span data-i18n="products.vision">INOSX Vision Robotics</span><span data-i18n="products.vision_subtitle">Coming Soon →</span></div>
         </a>
       </div>
       <!-- Indicadores do carrossel -->
@@ -1159,9 +1222,9 @@
 
   <!-- AI Services Section -->
   <div class="services-section">
-    <h2 class="services-title fade-in">AI Services</h2>
+    <h2 class="services-title fade-in" data-i18n="services.title">AI Services</h2>
     
-    <div class="services-intro fade-in">
+    <div class="services-intro fade-in" data-i18n="services.intro">
       INOSX builds practical, production-grade AI solutions that transform data, processes, and systems into measurable outcomes. Our portfolio blends automation, analytics, security, and multi-agent orchestration to drive efficiency, innovation, and competitiveness.
     </div>
 
@@ -1170,27 +1233,27 @@
       <div class="service-card fade-in">
         <h3 class="service-title">
           <span class="service-icon">🤖</span>
-          INOSX AI Agents
+          <span data-i18n="services.ai_agents.title">INOSX AI Agents</span>
         </h3>
-        <p class="service-description">
+        <p class="service-description" data-i18n="services.ai_agents.description">
           Autonomous agents that eliminate repetitive work and connect platforms end‑to‑end.
         </p>
         <div class="service-features">
-          <h4>Main capabilities:</h4>
+          <h4 data-i18n="services.ai_agents.capabilities_title">Main capabilities:</h4>
           <ul>
-            <li>Auto-integration with ERPs, CRMs, databases, and APIs</li>
-            <li>End-to-end process execution with error reduction</li>
-            <li>Real-time insights and action generation</li>
-            <li>Continuous learning and adaptation to business needs</li>
+            <li data-i18n="services.ai_agents.capability_1">Auto-integration with ERPs, CRMs, databases, and APIs</li>
+            <li data-i18n="services.ai_agents.capability_2">End-to-end process execution with error reduction</li>
+            <li data-i18n="services.ai_agents.capability_3">Real-time insights and action generation</li>
+            <li data-i18n="services.ai_agents.capability_4">Continuous learning and adaptation to business needs</li>
           </ul>
         </div>
         <div class="service-benefits">
-          <h4>Benefits:</h4>
+          <h4 data-i18n="services.ai_agents.benefits_title">Benefits:</h4>
           <ul>
-            <li>Lower operational costs</li>
-            <li>Higher efficiency and productivity</li>
-            <li>Faster, more confident decisions</li>
-            <li>Scales alongside your growth</li>
+            <li data-i18n="services.ai_agents.benefit_1">Lower operational costs</li>
+            <li data-i18n="services.ai_agents.benefit_2">Higher efficiency and productivity</li>
+            <li data-i18n="services.ai_agents.benefit_3">Faster, more confident decisions</li>
+            <li data-i18n="services.ai_agents.benefit_4">Scales alongside your growth</li>
           </ul>
         </div>
       </div>
@@ -1199,25 +1262,25 @@
       <div class="service-card fade-in">
         <h3 class="service-title">
           <span class="service-icon">📊</span>
-          INOSX DataGPT
+          <span data-i18n="services.datagpt.title">INOSX DataGPT</span>
         </h3>
-        <p class="service-description">
+        <p class="service-description" data-i18n="services.datagpt.description">
           Conversational and predictive analytics for everyone—ask questions in natural language and get answers from your data.
         </p>
         <div class="service-features">
-          <h4>Main capabilities:</h4>
+          <h4 data-i18n="services.datagpt.capabilities_title">Main capabilities:</h4>
           <ul>
-            <li>Connects to databases, data lakes, and BI systems</li>
-            <li>Generates real-time dashboards and reports</li>
-            <li>Chat or voice interface for business questions</li>
+            <li data-i18n="services.datagpt.capability_1">Connects to databases, data lakes, and BI systems</li>
+            <li data-i18n="services.datagpt.capability_2">Generates real-time dashboards and reports</li>
+            <li data-i18n="services.datagpt.capability_3">Chat or voice interface for business questions</li>
           </ul>
         </div>
         <div class="service-benefits">
-          <h4>Benefits:</h4>
+          <h4 data-i18n="services.datagpt.benefits_title">Benefits:</h4>
           <ul>
-            <li>Democratized data access</li>
-            <li>Faster decision-making</li>
-            <li>Reduced reliance on specialist teams</li>
+            <li data-i18n="services.datagpt.benefit_1">Democratized data access</li>
+            <li data-i18n="services.datagpt.benefit_2">Faster decision-making</li>
+            <li data-i18n="services.datagpt.benefit_3">Reduced reliance on specialist teams</li>
           </ul>
         </div>
       </div>
@@ -1226,25 +1289,25 @@
       <div class="service-card fade-in">
         <h3 class="service-title">
           <span class="service-icon">⚙️</span>
-          INOSX AutoML
+          <span data-i18n="services.automl.title">INOSX AutoML</span>
         </h3>
-        <p class="service-description">
+        <p class="service-description" data-i18n="services.automl.description">
           No-code platform to train and deploy machine learning models.
         </p>
         <div class="service-features">
-          <h4>Main capabilities:</h4>
+          <h4 data-i18n="services.automl.capabilities_title">Main capabilities:</h4>
           <ul>
-            <li>Automated training and hyperparameter tuning</li>
-            <li>Performance evaluation with detailed reports</li>
-            <li>Rapid deploy to cloud or on‑prem</li>
+            <li data-i18n="services.automl.capability_1">Automated training and hyperparameter tuning</li>
+            <li data-i18n="services.automl.capability_2">Performance evaluation with detailed reports</li>
+            <li data-i18n="services.automl.capability_3">Rapid deploy to cloud or on‑prem</li>
           </ul>
         </div>
         <div class="service-benefits">
-          <h4>Benefits:</h4>
+          <h4 data-i18n="services.automl.benefits_title">Benefits:</h4>
           <ul>
-            <li>Accelerated innovation</li>
-            <li>Lower technical barrier to AI adoption</li>
-            <li>Empowers non‑data‑science teams</li>
+            <li data-i18n="services.automl.benefit_1">Accelerated innovation</li>
+            <li data-i18n="services.automl.benefit_2">Lower technical barrier to AI adoption</li>
+            <li data-i18n="services.automl.benefit_3">Empowers non‑data‑science teams</li>
           </ul>
         </div>
       </div>
@@ -1253,25 +1316,25 @@
       <div class="service-card fade-in">
         <h3 class="service-title">
           <span class="service-icon">🔒</span>
-          INOSX CyberAI Security
+          <span data-i18n="services.security.title">INOSX CyberAI Security</span>
         </h3>
-        <p class="service-description">
+        <p class="service-description" data-i18n="services.security.description">
           AI-powered cybersecurity for modern infrastructures.
         </p>
         <div class="service-features">
-          <h4>Main capabilities:</h4>
+          <h4 data-i18n="services.security.capabilities_title">Main capabilities:</h4>
           <ul>
-            <li>Continuous monitoring across systems and networks</li>
-            <li>Anomaly, fraud, and intrusion detection</li>
-            <li>Automated and intelligent incident response</li>
+            <li data-i18n="services.security.capability_1">Continuous monitoring across systems and networks</li>
+            <li data-i18n="services.security.capability_2">Anomaly, fraud, and intrusion detection</li>
+            <li data-i18n="services.security.capability_3">Automated and intelligent incident response</li>
           </ul>
         </div>
         <div class="service-benefits">
-          <h4>Benefits:</h4>
+          <h4 data-i18n="services.security.benefits_title">Benefits:</h4>
           <ul>
-            <li>Protection of critical digital assets</li>
-            <li>Risk and vulnerability reduction</li>
-            <li>Regulatory compliance assurance</li>
+            <li data-i18n="services.security.benefit_1">Protection of critical digital assets</li>
+            <li data-i18n="services.security.benefit_2">Risk and vulnerability reduction</li>
+            <li data-i18n="services.security.benefit_3">Regulatory compliance assurance</li>
           </ul>
         </div>
       </div>
@@ -1280,25 +1343,25 @@
       <div class="service-card fade-in">
         <h3 class="service-title">
           <span class="service-icon">📚</span>
-          INOSX Knowledge Agents
+          <span data-i18n="services.knowledge.title">INOSX Knowledge Agents</span>
         </h3>
-        <p class="service-description">
+        <p class="service-description" data-i18n="services.knowledge.description">
           Document- and knowledge-centric agents for internal repositories.
         </p>
         <div class="service-features">
-          <h4>Main capabilities:</h4>
+          <h4 data-i18n="services.knowledge.capabilities_title">Main capabilities:</h4>
           <ul>
-            <li>Automatic indexing and reading of corporate documents</li>
-            <li>Contextual, semantic search over knowledge bases</li>
-            <li>Integrations with SharePoint, Confluence, Google Drive, and more</li>
+            <li data-i18n="services.knowledge.capability_1">Automatic indexing and reading of corporate documents</li>
+            <li data-i18n="services.knowledge.capability_2">Contextual, semantic search over knowledge bases</li>
+            <li data-i18n="services.knowledge.capability_3">Integrations with SharePoint, Confluence, Google Drive, and more</li>
           </ul>
         </div>
         <div class="service-benefits">
-          <h4>Benefits:</h4>
+          <h4 data-i18n="services.knowledge.benefits_title">Benefits:</h4>
           <ul>
-            <li>Less time spent searching for information</li>
-            <li>Higher team productivity</li>
-            <li>Centralized and reusable organizational knowledge</li>
+            <li data-i18n="services.knowledge.benefit_1">Less time spent searching for information</li>
+            <li data-i18n="services.knowledge.benefit_2">Higher team productivity</li>
+            <li data-i18n="services.knowledge.benefit_3">Centralized and reusable organizational knowledge</li>
           </ul>
         </div>
       </div>
@@ -1307,25 +1370,25 @@
       <div class="service-card fade-in">
         <h3 class="service-title">
           <span class="service-icon">🎯</span>
-          INOSX AI Orchestration
+          <span data-i18n="services.orchestration.title">INOSX AI Orchestration</span>
         </h3>
-        <p class="service-description">
+        <p class="service-description" data-i18n="services.orchestration.description">
           Orchestrates complex workflows across multiple AI agents.
         </p>
         <div class="service-features">
-          <h4>Main capabilities:</h4>
+          <h4 data-i18n="services.orchestration.capabilities_title">Main capabilities:</h4>
           <ul>
-            <li>Coordinates agents across corporate processes</li>
-            <li>Integrates ERP, CRM, customer support, and operations</li>
-            <li>Full governance and traceability of executions</li>
+            <li data-i18n="services.orchestration.capability_1">Coordinates agents across corporate processes</li>
+            <li data-i18n="services.orchestration.capability_2">Integrates ERP, CRM, customer support, and operations</li>
+            <li data-i18n="services.orchestration.capability_3">Full governance and traceability of executions</li>
           </ul>
         </div>
         <div class="service-benefits">
-          <h4>Benefits:</h4>
+          <h4 data-i18n="services.orchestration.benefits_title">Benefits:</h4>
           <ul>
-            <li>Collaborative ecosystem of intelligent agents</li>
-            <li>Greater reliability and transparency</li>
-            <li>Flexibility to evolve with business strategy</li>
+            <li data-i18n="services.orchestration.benefit_1">Collaborative ecosystem of intelligent agents</li>
+            <li data-i18n="services.orchestration.benefit_2">Greater reliability and transparency</li>
+            <li data-i18n="services.orchestration.benefit_3">Flexibility to evolve with business strategy</li>
           </ul>
         </div>
       </div>
@@ -1334,29 +1397,29 @@
       <div class="service-card fade-in">
         <h3 class="service-title">
           <span class="service-icon">🤖</span>
-          INOSX Vision Robotics
+          <span data-i18n="services.vision.title">INOSX Vision Robotics</span>
         </h3>
-        <p class="service-description">
+        <p class="service-description" data-i18n="services.vision.description">
           Advanced robotic solutions powered by 3D vision and visual language models for autonomous operations.
         </p>
         <div class="service-features">
-          <h4>Main capabilities:</h4>
+          <h4 data-i18n="services.vision.capabilities_title">Main capabilities:</h4>
           <ul>
-            <li>3D spatial perception and object recognition</li>
-            <li>Visual language model integration for natural interaction</li>
-            <li>Autonomous navigation and manipulation systems</li>
-            <li>Real-time decision making with computer vision</li>
-            <li>Multi-sensor fusion for enhanced accuracy</li>
+            <li data-i18n="services.vision.capability_1">3D spatial perception and object recognition</li>
+            <li data-i18n="services.vision.capability_2">Visual language model integration for natural interaction</li>
+            <li data-i18n="services.vision.capability_3">Autonomous navigation and manipulation systems</li>
+            <li data-i18n="services.vision.capability_4">Real-time decision making with computer vision</li>
+            <li data-i18n="services.vision.capability_5">Multi-sensor fusion for enhanced accuracy</li>
           </ul>
         </div>
         <div class="service-benefits">
-          <h4>Benefits:</h4>
+          <h4 data-i18n="services.vision.benefits_title">Benefits:</h4>
           <ul>
-            <li>Fully autonomous robotic operations</li>
-            <li>Reduced human intervention in complex tasks</li>
-            <li>Enhanced precision and reliability</li>
-            <li>Scalable solutions for industrial applications</li>
-            <li>Natural language control and interaction</li>
+            <li data-i18n="services.vision.benefit_1">Fully autonomous robotic operations</li>
+            <li data-i18n="services.vision.benefit_2">Reduced human intervention in complex tasks</li>
+            <li data-i18n="services.vision.benefit_3">Enhanced precision and reliability</li>
+            <li data-i18n="services.vision.benefit_4">Scalable solutions for industrial applications</li>
+            <li data-i18n="services.vision.benefit_5">Natural language control and interaction</li>
           </ul>
         </div>
       </div>
@@ -1364,8 +1427,8 @@
 
     <!-- Unified Value Proposition -->
     <div class="value-proposition fade-in">
-      <h3>INOSX Unified Value Proposition</h3>
-      <p>
+      <h3 data-i18n="services.value_title">INOSX Unified Value Proposition</h3>
+      <p data-i18n="services.value_text">
         With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business.
       </p>
     </div>
@@ -1377,8 +1440,8 @@
       <span class="modal-close" onclick="closeContactModal()">&times;</span>
       
       <div id="formContainer">
-        <h3>Get Your Free AI Consultation</h3>
-        <p>Tell us about your business and we'll show you how AI can help.</p>
+        <h3 data-i18n="modal.title">Get Your Free AI Consultation</h3>
+        <p data-i18n="modal.subtitle">Tell us about your business and we'll show you how AI can help.</p>
         
         <div class="progress-bar">
           <div class="progress-step completed" id="progress-1"></div>
@@ -1388,47 +1451,47 @@
         <form id="leadForm" class="lead-form" onsubmit="handleFormSubmit(event)">
           <!-- Step 1: Basic Info -->
           <div class="form-step active" data-step="1">
-            <input type="text" name="name" id="name" placeholder="Full Name *" required />
-            <input type="email" name="email" id="email" placeholder="Work Email *" required />
-            <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
-            <input type="text" name="company" id="company" placeholder="Company Name *" required />
+            <input type="text" name="name" id="name" data-i18n="modal.step1.name_placeholder" placeholder="Full Name *" required />
+            <input type="email" name="email" id="email" data-i18n="modal.step1.email_placeholder" placeholder="Work Email *" required />
+            <input type="tel" name="phone" id="phone" data-i18n="modal.step1.phone_placeholder" placeholder="Phone Number" />
+            <input type="text" name="company" id="company" data-i18n="modal.step1.company_placeholder" placeholder="Company Name *" required />
             
-            <button type="button" class="btn-next" onclick="nextStep(2)">
+            <button type="button" class="btn-next" onclick="nextStep(2)" data-i18n="modal.step1.btn_continue">
               Continue →
             </button>
           </div>
           
           <!-- Step 2: Needs -->
           <div class="form-step" data-step="2">
-            <label>What brings you to INOSX?</label>
-            <select name="interest" id="interest" required>
-              <option value="">Select primary interest...</option>
-              <option value="automate">Automate business processes</option>
-              <option value="analytics">Data analytics & insights</option>
-              <option value="security">AI-powered security</option>
-              <option value="knowledge">Knowledge management</option>
-              <option value="robotics">Industrial robotics</option>
-              <option value="other">Other / Not sure</option>
+            <label data-i18n="modal.step2.interest_label">What brings you to INOSX?</label>
+            <select name="interest" id="interest" required data-i18n-options="modal.step2">
+              <option value="" data-i18n="modal.step2.interest_placeholder">Select primary interest...</option>
+              <option value="automate" data-i18n="modal.step2.interest_automate">Automate business processes</option>
+              <option value="analytics" data-i18n="modal.step2.interest_analytics">Data analytics & insights</option>
+              <option value="security" data-i18n="modal.step2.interest_security">AI-powered security</option>
+              <option value="knowledge" data-i18n="modal.step2.interest_knowledge">Knowledge management</option>
+              <option value="robotics" data-i18n="modal.step2.interest_robotics">Industrial robotics</option>
+              <option value="other" data-i18n="modal.step2.interest_other">Other / Not sure</option>
             </select>
             
-            <label>Company size</label>
-            <select name="company_size" id="company_size">
-              <option value="">Select...</option>
-              <option value="1-10">1-10 employees</option>
-              <option value="11-50">11-50 employees</option>
-              <option value="51-200">51-200 employees</option>
-              <option value="201-1000">201-1,000 employees</option>
-              <option value="1000+">1,000+ employees</option>
+            <label data-i18n="modal.step2.size_label">Company size</label>
+            <select name="company_size" id="company_size" data-i18n-options="modal.step2">
+              <option value="" data-i18n="modal.step2.size_placeholder">Select...</option>
+              <option value="1-10" data-i18n="modal.step2.size_1_10">1-10 employees</option>
+              <option value="11-50" data-i18n="modal.step2.size_11_50">11-50 employees</option>
+              <option value="51-200" data-i18n="modal.step2.size_51_200">51-200 employees</option>
+              <option value="201-1000" data-i18n="modal.step2.size_201_1000">201-1,000 employees</option>
+              <option value="1000+" data-i18n="modal.step2.size_1000">1,000+ employees</option>
             </select>
             
-            <label>Tell us about your AI goals (optional)</label>
-            <textarea name="message" id="message" placeholder="E.g., We want to automate our customer support process..." rows="4"></textarea>
+            <label data-i18n="modal.step2.message_label">Tell us about your AI goals (optional)</label>
+            <textarea name="message" id="message" data-i18n="modal.step2.message_placeholder" placeholder="E.g., We want to automate our customer support process..." rows="4"></textarea>
             
             <div class="form-buttons">
-              <button type="button" class="btn-back" onclick="prevStep(1)">
+              <button type="button" class="btn-back" onclick="prevStep(1)" data-i18n="modal.step2.btn_back">
                 ← Back
               </button>
-              <button type="submit" class="btn-submit" id="submitBtn">
+              <button type="submit" class="btn-submit" id="submitBtn" data-i18n="modal.step2.btn_submit">
                 Get Free Consultation
               </button>
             </div>
@@ -1436,21 +1499,21 @@
         </form>
         
         <p class="privacy-note">
-          We respect your privacy. See our <a href="terms.html#privacy" target="_blank">Privacy Policy</a>.
+          <span data-i18n="modal.privacy">We respect your privacy. See our</span> <a href="terms.html#privacy" target="_blank" data-i18n="modal.privacy_link">Privacy Policy</a>.
         </p>
       </div>
       
       <!-- Success Message (hidden by default) -->
       <div id="successMessage" class="success-message" style="display: none;">
         <div class="success-icon">✓</div>
-        <h3>Thank You!</h3>
-        <p>
+        <h3 data-i18n="modal.success_title">Thank You!</h3>
+        <p data-i18n="modal.success_text1">
           We've received your request and one of our AI experts will contact you within 24 hours.
         </p>
-        <p>
+        <p data-i18n="modal.success_text2">
           Check your email for confirmation and next steps.
         </p>
-        <button class="cta-primary" onclick="closeContactModal()">Close</button>
+        <button class="cta-primary" onclick="closeContactModal()" data-i18n="modal.btn_close">Close</button>
       </div>
     </div>
   </div>
@@ -1863,8 +1926,8 @@
       <div class="grid">
         <div>
           <div class="brand"><span class="badge">💠</span><span>INOSX</span></div>
-          <p style="margin-top:0.5rem">Democratizing access to practical and secure AI solutions for businesses.</p>
-          <div class="company-meta">
+          <p style="margin-top:0.5rem" data-i18n="footer.tagline">Democratizing access to practical and secure AI solutions for businesses.</p>
+          <div class="company-meta" data-i18n="footer.company_meta">
             INOSX, Inc. • USA Corporation
           </div>
           <div class="social">
@@ -1873,30 +1936,30 @@
           </div>
         </div>
         <div>
-          <h4>Platform</h4>
+          <h4 data-i18n="footer.platform_title">Platform</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="index.html" data-i18n="footer.platform_home">Home</a></li>
+            <li><a href="#" data-i18n="footer.platform_products">Products</a></li>
+            <li><a href="#" data-i18n="footer.platform_services">Services</a></li>
           </ul>
         </div>
         <div>
-          <h4>Support</h4>
+          <h4 data-i18n="footer.support_title">Support</h4>
           <ul>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="terms.html#privacy">Privacy Policy</a></li>
-            <li><a href="mailto:contact@inosx.com">Contact</a></li>
+            <li><a href="terms.html" data-i18n="footer.support_terms">Terms of Service</a></li>
+            <li><a href="terms.html#privacy" data-i18n="footer.support_privacy">Privacy Policy</a></li>
+            <li><a href="mailto:contact@inosx.com" data-i18n="footer.support_contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4 data-i18n="footer.contact_title">Contact</h4>
           <div class="contact-box">
-            <div><strong>Email</strong><br><a href="mailto:contact@inosx.com">contact@inosx.com</a></div>
-            <div style="margin-top:8px">9450 SW Gemini Dr, Beaverton, OR 97008, USA</div>
+            <div><strong data-i18n="footer.contact_email">Email</strong><br><a href="mailto:contact@inosx.com">contact@inosx.com</a></div>
+            <div style="margin-top:8px" data-i18n="footer.contact_address">9450 SW Gemini Dr, Beaverton, OR 97008, USA</div>
           </div>
         </div>
       </div>
-      <div class="legal">
+      <div class="legal" data-i18n="footer.copyright">
         © 2025 INOSX, Inc. All rights reserved.
       </div>
     </div>
