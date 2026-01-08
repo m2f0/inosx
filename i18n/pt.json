@@ -44,30 +44,6 @@
       "benefit_3": "Decisões mais rápidas e confiantes",
       "benefit_4": "Escala junto com seu crescimento"
     },
-    "datagpt": {
-      "title": "INOSX DataGPT",
-      "description": "Análise conversacional e preditiva para todos—faça perguntas em linguagem natural e obtenha respostas dos seus dados.",
-      "capabilities_title": "Principais recursos:",
-      "capability_1": "Conecta-se a bancos de dados, data lakes e sistemas de BI",
-      "capability_2": "Gera dashboards e relatórios em tempo real",
-      "capability_3": "Interface de chat ou voz para questões de negócio",
-      "benefits_title": "Benefícios:",
-      "benefit_1": "Acesso democratizado aos dados",
-      "benefit_2": "Tomada de decisões mais rápida",
-      "benefit_3": "Menor dependência de equipes especializadas"
-    },
-    "automl": {
-      "title": "INOSX AutoML",
-      "description": "Plataforma sem código para treinar e implantar modelos de machine learning.",
-      "capabilities_title": "Principais recursos:",
-      "capability_1": "Treinamento automatizado e ajuste de hiperparâmetros",
-      "capability_2": "Avaliação de desempenho com relatórios detalhados",
-      "capability_3": "Implantação rápida em nuvem ou on-premises",
-      "benefits_title": "Benefícios:",
-      "benefit_1": "Inovação acelerada",
-      "benefit_2": "Menor barreira técnica para adoção de IA",
-      "benefit_3": "Capacita equipes não especializadas em ciência de dados"
-    },
     "security": {
       "title": "INOSX CyberAI Security",
       "description": "Cibersegurança alimentada por IA para infraestruturas modernas.",
