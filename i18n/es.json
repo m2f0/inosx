@@ -60,6 +60,22 @@
     "btn_access": "Probar Demo Gratis →",
     "mockup_subtitle": "Inteligencia de Encuestas con IA\nInteligente • Rápido • Perspicaz"
   },
+  "featured_psychox": {
+    "badge": "✨ Producto Destacado",
+    "headline": "Su Viaje de Bienestar Mental Comienza Aquí",
+    "description": "<strong>PsychoX.app</strong> es su compañero de apoyo psicológico con IA disponible 24/7. Reciba orientación basada en evidencia, seguimiento del estado de ánimo y apoyo personalizado cuando lo necesite.",
+    "feature_support": "💜 Soporte IA 24/7",
+    "feature_mood": "📊 Seguimiento del Ánimo",
+    "feature_private": "🔒 Privado y Seguro",
+    "feature_evidence": "🧠 Basado en Evidencia",
+    "highlight_1": "🌙 Siempre disponible, día o noche",
+    "highlight_2": "💭 Espacio sin juicios para expresarse",
+    "highlight_3": "📈 Rastree su viaje de bienestar emocional",
+    "highlight_4": "🤝 Apoyo profesional cuando lo necesite",
+    "btn_start": "Iniciar Su Viaje →",
+    "btn_learn": "Saber Más →",
+    "mockup_subtitle": "Apoyo Psicológico con IA\nPrivado • Seguro • Siempre Aquí"
+  },
   "testimonials": {
     "title": "Lo Que Dicen Nuestros Clientes",
     "testimonial_1_quote": "Los agentes INOSX redujeron nuestro tiempo de procesamiento en un 60% en el primer mes. El ROI fue inmediato y sigue creciendo.",

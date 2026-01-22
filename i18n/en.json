@@ -60,6 +60,22 @@
     "btn_access": "Try Free Demo →",
     "mockup_subtitle": "AI-Powered Survey Intelligence\nSmart • Fast • Insightful"
   },
+  "featured_psychox": {
+    "badge": "✨ Featured Product",
+    "headline": "Your Mental Wellness Journey Starts Here",
+    "description": "<strong>PsychoX.app</strong> is your AI-powered psychological support companion available 24/7. Get evidence-based guidance, mood tracking, and personalized support whenever you need it.",
+    "feature_support": "💜 24/7 AI Support",
+    "feature_mood": "📊 Mood Tracking",
+    "feature_private": "🔒 Private & Secure",
+    "feature_evidence": "🧠 Evidence-Based",
+    "highlight_1": "🌙 Always available, day or night",
+    "highlight_2": "💭 Non-judgmental space to express yourself",
+    "highlight_3": "📈 Track your emotional wellness journey",
+    "highlight_4": "🤝 Professional support when you need it",
+    "btn_start": "Start Your Journey →",
+    "btn_learn": "Learn More →",
+    "mockup_subtitle": "AI Psychological Support\nPrivate • Secure • Always Here"
+  },
   "testimonials": {
     "title": "What Our Clients Say",
     "testimonial_1_quote": "INOSX agents cut our processing time by 60% in the first month. The ROI was immediate and continues to grow.",
