@@ -76,6 +76,22 @@
     "btn_learn": "Saber Más →",
     "mockup_subtitle": "Apoyo Psicológico con IA\nPrivado • Seguro • Siempre Aquí"
   },
+  "featured_datagpt": {
+    "badge": "✨ Producto Destacado",
+    "headline": "Hable con Sus Datos Como un Humano",
+    "description": "<strong>DataGPT</strong> es su analista de IA conversacional que convierte preguntas complejas sobre datos en insights instantáneos. Sin necesidad de SQL—simplemente pregunte en lenguaje natural y obtenga respuestas en segundos, no semanas.",
+    "feature_conversational": "💬 IA Conversacional",
+    "feature_instant": "⚡ Insights Instantáneos",
+    "feature_nosql": "🚀 Sin Necesidad de SQL",
+    "feature_proactive": "🔍 Alertas Proactivas",
+    "highlight_1": "📊 Consulte miles de millones de filas en fracciones de segundo",
+    "highlight_2": "🎯 Reducción del 99% de ruido—muestre solo lo que importa",
+    "highlight_3": "🧠 Análisis de causa raíz y detección de anomalías",
+    "highlight_4": "⚡ Ganancias de eficiencia de 10x para equipos de analistas",
+    "btn_start": "Comenzar a Analizar →",
+    "btn_learn": "Vea Cómo Funciona →",
+    "mockup_subtitle": "Analista de IA Conversacional\nRápido • Inteligente • Accesible"
+  },
   "testimonials": {
     "title": "Lo Que Dicen Nuestros Clientes",
     "testimonial_1_quote": "Los agentes INOSX redujeron nuestro tiempo de procesamiento en un 60% en el primer mes. El ROI fue inmediato y sigue creciendo.",

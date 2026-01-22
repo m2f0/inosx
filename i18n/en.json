@@ -76,6 +76,22 @@
     "btn_learn": "Learn More →",
     "mockup_subtitle": "AI Psychological Support\nPrivate • Secure • Always Here"
   },
+  "featured_datagpt": {
+    "badge": "✨ Featured Product",
+    "headline": "Talk to Your Data Like a Human",
+    "description": "<strong>DataGPT</strong> is your conversational AI analyst that turns complex data questions into instant insights. No SQL required—just ask in plain language and get answers in seconds, not weeks.",
+    "feature_conversational": "💬 Conversational AI",
+    "feature_instant": "⚡ Instant Insights",
+    "feature_nosql": "🚀 No SQL Needed",
+    "feature_proactive": "🔍 Proactive Alerts",
+    "highlight_1": "📊 Query billions of rows in fractions of a second",
+    "highlight_2": "🎯 99% noise reduction—surface only what matters",
+    "highlight_3": "🧠 Root cause analysis and anomaly detection",
+    "highlight_4": "⚡ 10x efficiency gains for analyst teams",
+    "btn_start": "Start Analyzing →",
+    "btn_learn": "See How It Works →",
+    "mockup_subtitle": "Conversational AI Analyst\nFast • Intelligent • Accessible"
+  },
   "testimonials": {
     "title": "What Our Clients Say",
     "testimonial_1_quote": "INOSX agents cut our processing time by 60% in the first month. The ROI was immediate and continues to grow.",
