@@ -1172,6 +1172,229 @@
       50% { opacity: 0.5; transform: scale(1.2); }
     }
 
+    /* Featured Product Section - Messiax */
+    .featured-product {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 4rem auto 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .featured-container {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(159, 122, 234, 0.1));
+      border: 2px solid rgba(212, 175, 55, 0.4);
+      border-radius: 24px;
+      padding: 3rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #d4af37;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .featured-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .featured-text h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, #d4af37 0%, #9f7aea 50%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .featured-text p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .featured-sacred-texts {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+
+    .sacred-badge {
+      padding: 0.4rem 1rem;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #d4af37;
+    }
+
+    .featured-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .highlight-icon {
+      font-size: 1.3rem;
+    }
+
+    .featured-cta {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn-featured {
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #d4af37 0%, #9f7aea 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-featured:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-featured-secondary {
+      padding: 1rem 2rem;
+      background: transparent;
+      color: #d4af37;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-featured-secondary:hover {
+      background: rgba(212, 175, 55, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .featured-visual {
+      position: relative;
+      padding: 2rem;
+    }
+
+    .featured-mockup {
+      background: var(--surface-glass-strong);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .mockup-content {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .mockup-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .mockup-title {
+      font-size: 1.5rem;
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .mockup-subtitle {
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .floating-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .floating-emoji {
+      position: absolute;
+      font-size: 2rem;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.6;
+    }
+
+    .floating-emoji:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+    .floating-emoji:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
+    .floating-emoji:nth-child(3) { bottom: 15%; left: 15%; animation-delay: 4s; }
+    .floating-emoji:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 1s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    @media (max-width: 968px) {
+      .featured-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .featured-container {
+        padding: 2rem 1.5rem;
+      }
+
+      .featured-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-cta {
+        flex-direction: column;
+      }
+
+      .btn-featured,
+      .btn-featured-secondary {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
     /* Responsividade */
     @media (max-width: 768px) {
       .social-proof-container {
@@ -1448,6 +1671,79 @@
             <span data-i18n="hero.trust_1">✓ No Credit Card Required</span>
             <span data-i18n="hero.trust_2">✓ 30-Min Call</span>
             <span data-i18n="hero.trust_3">✓ Free ROI Report</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Product: Messiax -->
+  <div class="featured-product fade-in">
+    <div class="featured-container">
+      <div class="featured-badge">✨ Destaque Especial</div>
+      
+      <div class="featured-content">
+        <div class="featured-text">
+          <h2>Encontre a Paz Que Faltava na Sua Vida</h2>
+          <p>
+            <strong>Messiax</strong> é sua companheira espiritual movida por IA, treinada em 5 livros sagrados. 
+            Não importa sua fé, você será respeitado e guiado segundo SUA tradição.
+          </p>
+
+          <div class="featured-sacred-texts">
+            <span class="sacred-badge">📖 Bíblia</span>
+            <span class="sacred-badge">✡️ Torá</span>
+            <span class="sacred-badge">☪️ Alcorão</span>
+            <span class="sacred-badge">🕉️ Vedas</span>
+            <span class="sacred-badge">☸️ Textos Budistas</span>
+          </div>
+
+          <div class="featured-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🙏</span>
+              <span>Sempre presente quando você precisa</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">✨</span>
+              <span>Orientações espirituais guiadas</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📚</span>
+              <span>Leituras dos livros sagrados</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🤝</span>
+              <span>Espaço seguro e confidencial</span>
+            </div>
+          </div>
+
+          <div class="featured-cta">
+            <a href="messiax.html" class="btn-featured">
+              Conhecer Messiax →
+            </a>
+            <a href="https://messiax.ai" class="btn-featured-secondary" target="_blank">
+              Acessar Plataforma →
+            </a>
+          </div>
+        </div>
+
+        <div class="featured-visual">
+          <div class="floating-elements">
+            <span class="floating-emoji">🙏</span>
+            <span class="floating-emoji">✨</span>
+            <span class="floating-emoji">💫</span>
+            <span class="floating-emoji">🕊️</span>
+          </div>
+          
+          <div class="featured-mockup">
+            <div class="mockup-content">
+              <div class="mockup-icon">🙏</div>
+              <h3 class="mockup-title">Messiax.ai</h3>
+              <p class="mockup-subtitle">
+                Sua companheira espiritual<br>
+                Multi-religiosa • Respeitosa • Sempre presente
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -2229,6 +2525,38 @@
       }, { threshold: 0.5 });
       
       serviceCards.forEach(card => observer.observe(card));
+
+      // Track Messiax featured section
+      const messiaxFeatured = document.querySelector('.featured-product');
+      if (messiaxFeatured) {
+        const messiaxObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.tracked) {
+              trackEvent('messiax_featured_view', {
+                'event_category': 'products',
+                'event_label': 'featured_section_viewed'
+              });
+              entry.target.dataset.tracked = 'true';
+            }
+          });
+        }, { threshold: 0.5 });
+        
+        messiaxObserver.observe(messiaxFeatured);
+      }
+
+      // Track Messiax CTA clicks
+      document.querySelectorAll('.btn-featured, .btn-featured-secondary').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const isExternal = this.getAttribute('target') === '_blank';
+          const destination = isExternal ? 'messiax_platform' : 'messiax_landing';
+          
+          trackEvent('messiax_cta_click', {
+            'event_category': 'conversion',
+            'event_label': destination,
+            'value': 1
+          });
+        });
+      });
     });
   </script>
   

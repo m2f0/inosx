@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messiax.ai - Sua Companheira Espiritual | INOSX</title>
+  <meta name="description" content="Encontre a paz que faltava na sua vida. Messiax é sua companheira espiritual movida por IA, treinada em 5 livros sagrados, respeitando sua tradição e guiando sua jornada.">
+  
+  <style>
+    :root {
+      --bg-color: #0a0e1a;
+      --text-color: #e6f0ff;
+      --accent-gold: #d4af37;
+      --accent-purple: #9f7aea;
+      --accent-blue: #60a5fa;
+      --gradient-spiritual: linear-gradient(135deg, #d4af37 0%, #9f7aea 50%, #60a5fa 100%);
+      --gradient-peaceful: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(159, 122, 234, 0.1) 100%);
+      --surface-glass: rgba(148, 163, 184, 0.08);
+      --border-soft: rgba(212, 175, 55, 0.28);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      background: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.1), transparent 50%),
+                  radial-gradient(ellipse at bottom, rgba(159, 122, 234, 0.1), transparent 50%);
+    }
+
+    .hero-content {
+      max-width: 900px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: var(--gradient-peaceful);
+      border: 1px solid var(--border-soft);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      background: var(--gradient-spiritual);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeIn 1s ease 0.2s backwards;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      animation: fadeIn 1s ease 0.4s backwards;
+    }
+
+    .sacred-texts {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+      animation: fadeIn 1s ease 0.6s backwards;
+    }
+
+    .sacred-text {
+      padding: 0.5rem 1rem;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--accent-gold);
+    }
+
+    .hero-cta {
+      margin-top: 3rem;
+      animation: fadeIn 1s ease 0.8s backwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1.2rem 3rem;
+      background: var(--gradient-spiritual);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    .trust-note {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* What is Messiax Section */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+      margin-bottom: 1rem;
+      background: var(--gradient-spiritual);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 4rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-gold);
+      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+    }
+
+    .feature-description {
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    /* How it Works */
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: var(--gradient-spiritual);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 auto 1.5rem;
+    }
+
+    .step-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--accent-gold);
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .testimonial-quote {
+      font-size: 1.1rem;
+      font-style: italic;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-spiritual);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .author-info strong {
+      display: block;
+      color: var(--accent-gold);
+      margin-bottom: 0.2rem;
+    }
+
+    .author-info span {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Moments Section */
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .moment-card {
+      background: var(--gradient-peaceful);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .moment-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .moment-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: var(--gradient-peaceful);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 4rem auto;
+    }
+
+    .cta-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1.5rem;
+      background: var(--gradient-spiritual);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer a {
+      color: var(--accent-gold);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .footer a:hover {
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 90vh;
+        padding: 1rem;
+      }
+
+      .section {
+        padding: 3rem 1rem;
+      }
+
+      .features-grid,
+      .testimonials-grid,
+      .moments-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✨ Uma Criação INOSX</div>
+      
+      <h1 class="hero-title">
+        Encontre a Paz Que<br>Faltava na Sua Vida
+      </h1>
+      
+      <p class="hero-subtitle">
+        Messiax é sua companheira espiritual movida por IA,<br>
+        sempre presente nos momentos que você mais precisa.
+      </p>
+
+      <div class="sacred-texts">
+        <span class="sacred-text">📖 Bíblia</span>
+        <span class="sacred-text">✡️ Torá</span>
+        <span class="sacred-text">☪️ Alcorão</span>
+        <span class="sacred-text">🕉️ Vedas</span>
+        <span class="sacred-text">☸️ Textos Budistas</span>
+      </div>
+
+      <p style="opacity: 0.9; margin: 1.5rem 0; font-size: 1.1rem;">
+        Não importa sua fé, você será respeitado e guiado segundo <strong>SUA</strong> tradição.
+      </p>
+
+      <div class="hero-cta">
+        <a href="https://messiax.ai" class="btn-primary" target="_blank">
+          Conhecer Messiax →
+        </a>
+        <p class="trust-note">
+          🙏 Um espaço sagrado, seguro e confidencial para sua jornada espiritual
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Messiax -->
+  <section class="section">
+    <h2 class="section-title">O Que é Messiax?</h2>
+    <p class="section-subtitle">
+      Uma companheira espiritual que entende e respeita sua tradição,<br>
+      oferecendo orientação personalizada baseada nos livros sagrados.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🙏</div>
+        <h3 class="feature-title">Sempre Presente</h3>
+        <p class="feature-description">
+          Disponível 24 horas por dia, 7 dias por semana. Messiax está aqui sempre que você precisar 
+          de orientação espiritual, conforto ou apenas um momento de reflexão.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3 class="feature-title">5 Livros Sagrados</h3>
+        <p class="feature-description">
+          Treinada profundamente na Bíblia, Torá, Alcorão, Vedas e Textos Budistas. 
+          Messiax oferece sabedoria autêntica respeitando sua tradição espiritual.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3 class="feature-title">Orientação Personalizada</h3>
+        <p class="feature-description">
+          Exercícios espirituais guiados, leituras dos livros sagrados contextualizadas 
+          e práticas adaptadas à sua jornada única de fé.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3 class="feature-title">Sem Julgamento</h3>
+        <p class="feature-description">
+          Um espaço completamente seguro e confidencial onde você pode explorar suas 
+          dúvidas, medos e esperanças sem receio de ser julgado.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌟</div>
+        <h3 class="feature-title">Inclusiva e Respeitosa</h3>
+        <p class="feature-description">
+          Seja você cristão, judeu, muçulmano, hindu, budista ou de qualquer outra tradição, 
+          Messiax respeita e honra seu caminho espiritual.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💫</div>
+        <h3 class="feature-title">Prática e Contemplação</h3>
+        <p class="feature-description">
+          Combine sabedoria ancestral com práticas espirituais diárias. Meditações, 
+          reflexões e exercícios que transformam conhecimento em experiência vivida.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="section" style="background: var(--gradient-peaceful);">
+    <h2 class="section-title">Como Funciona</h2>
+    <p class="section-subtitle">
+      Três passos simples para começar sua jornada espiritual com Messiax
+    </p>
+
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Compartilhe Sua Fé</h3>
+        <p>
+          Conte à Messiax sobre sua tradição espiritual, suas crenças e o que você busca 
+          nesta jornada. Ela se adaptará completamente ao seu caminho.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Receba Orientação</h3>
+        <p>
+          Messiax oferecerá orientações espirituais, leituras dos livros sagrados relevantes 
+          à sua fé e exercícios práticos personalizados para você.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Cresça Espiritualmente</h3>
+        <p>
+          Desenvolva uma prática espiritual consistente, encontre paz interior e 
+          aprofunde sua conexão com o sagrado no seu próprio ritmo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Moments Section -->
+  <section class="section">
+    <h2 class="section-title">Momentos em Que Messiax Pode Ajudar</h2>
+    <p class="section-subtitle">
+      Seja qual for o momento da sua jornada, Messiax está aqui para você
+    </p>
+
+    <div class="moments-grid">
+      <div class="moment-card">
+        <div class="moment-emoji">😰</div>
+        <h3 class="moment-title">Ansiedade e Estresse</h3>
+        <p>Encontre serenidade através de práticas espirituais e palavras de conforto</p>
+      </div>
+
+      <div class="moment-card">
+        <div class="moment-emoji">🤔</div>
+        <h3 class="moment-title">Busca por Propósito</h3>
+        <p>Reflexões guiadas para descobrir seu caminho e significado de vida</p>
+      </div>
+
+      <div class="moment-card">
+        <div class="moment-emoji">💔</div>
+        <h3 class="moment-title">Momentos Difíceis</h3>
+        <p>Conforto espiritual quando você mais precisa de força e esperança</p>
+      </div>
+
+      <div class="moment-card">
+        <div class="moment-emoji">🧘</div>
+        <h3 class="moment-title">Prática Espiritual</h3>
+        <p>Meditações guiadas e exercícios segundo sua tradição de fé</p>
+      </div>
+
+      <div class="moment-card">
+        <div class="moment-emoji">📖</div>
+        <h3 class="moment-title">Estudo Sagrado</h3>
+        <p>Leituras dos livros sagrados com contexto e reflexões profundas</p>
+      </div>
+
+      <div class="moment-card">
+        <div class="moment-emoji">✨</div>
+        <h3 class="moment-title">Crescimento Interior</h3>
+        <p>Jornada contínua de desenvolvimento espiritual e autoconhecimento</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background: var(--gradient-peaceful);">
+    <h2 class="section-title">Histórias de Transformação</h2>
+    <p class="section-subtitle">
+      Pessoas reais que encontraram paz e propósito com Messiax
+    </p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p class="testimonial-quote">
+          "Messiax me ajudou a reconectar com minha fé cristã de uma forma que eu não conseguia há anos. 
+          É como ter uma amiga espiritual que sempre tem a palavra certa nos momentos de dúvida."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <strong>Maria Silva</strong>
+            <span>Tradição Cristã</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-quote">
+          "Como praticante de meditação budista, encontrei em Messiax uma guia que respeita e aprofunda 
+          minha prática. As orientações são autênticas e me ajudam a manter consistência diária."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <strong>Rafael Costa</strong>
+            <span>Tradição Budista</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-quote">
+          "Nos momentos de maior ansiedade, Messiax me oferece conforto através dos ensinamentos do Alcorão. 
+          É um espaço seguro onde posso ser eu mesma e fortalecer minha fé."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">F</div>
+          <div class="author-info">
+            <strong>Fátima Ahmed</strong>
+            <span>Tradição Islâmica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="cta-section">
+      <h2 class="cta-title">
+        Comece Sua Jornada de Paz Hoje
+      </h2>
+      <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+        Dê o primeiro passo rumo à serenidade que você merece.<br>
+        Messiax está esperando para acompanhá-lo nesta jornada sagrada.
+      </p>
+      <a href="https://messiax.ai" class="btn-primary" target="_blank">
+        Conhecer Messiax →
+      </a>
+      <p style="margin-top: 1.5rem; opacity: 0.8;">
+        🙏 Totalmente confidencial • Respeitando sua fé • Sempre presente
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      <strong>Messiax.ai</strong> é uma criação <a href="https://inosx.com">INOSX</a><br>
+      Transformando vidas através da IA com sabedoria e respeito
+    </p>
+    <p style="margin-top: 1rem; opacity: 0.7; font-size: 0.9rem;">
+      © 2026 INOSX, Inc. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script>
+    // Track page view
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', {
+        'page_title': 'Messiax Landing Page',
+        'page_location': window.location.href
+      });
+    }
+
+    // Track CTA clicks
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'messiax_cta_click', {
+            'event_category': 'engagement',
+            'event_label': 'visit_messiax_site'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
