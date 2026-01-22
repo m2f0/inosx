@@ -154,7 +154,8 @@
       "email_placeholder": "Work Email *",
       "phone_placeholder": "Phone Number",
       "company_placeholder": "Company Name *",
-      "btn_continue": "Continue →"
+      "btn_continue": "Continue →",
+      "benefits": "✓ No credit card  ✓ 30-min call  ✓ Free ROI analysis"
     },
     "step2": {
       "interest_label": "What brings you to INOSX?",

@@ -154,7 +154,8 @@
       "email_placeholder": "E-mail Corporativo *",
       "phone_placeholder": "Telefone",
       "company_placeholder": "Nome da Empresa *",
-      "btn_continue": "Continuar →"
+      "btn_continue": "Continuar →",
+      "benefits": "✓ Sem cartão  ✓ Chamada 30 min  ✓ Análise ROI gratuita"
     },
     "step2": {
       "interest_label": "O que te traz à INOSX?",
