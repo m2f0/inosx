@@ -552,6 +552,34 @@
       50% { transform: scale(1.05); }
     }
 
+    @keyframes logoMegaPulse {
+      0%, 100% { 
+        transform: scale(1) translateY(0);
+        filter: brightness(1);
+      }
+      25% { 
+        transform: scale(1.08) translateY(-5px);
+        filter: brightness(1.2);
+      }
+      50% { 
+        transform: scale(1.12) translateY(-8px);
+        filter: brightness(1.3);
+      }
+      75% { 
+        transform: scale(1.08) translateY(-5px);
+        filter: brightness(1.2);
+      }
+    }
+
+    @keyframes logoGlow {
+      0%, 100% { 
+        filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3));
+      }
+      50% { 
+        filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.6)) drop-shadow(0 0 60px rgba(168, 85, 247, 0.4));
+      }
+    }
+
     /* Hero CTA Section */
     .hero-cta-section {
       width: 100%;
@@ -995,7 +1023,7 @@
     }
 
     .logo-hero-section .brand {
-      font-size: clamp(4rem, 10vw, 7rem);
+      font-size: clamp(6rem, 15vw, 10rem);
       font-weight: 900;
       background: var(--gradient-primary);
       -webkit-background-clip: text;
@@ -1003,7 +1031,8 @@
       background-clip: text;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
-      animation: logoPulse 3s ease-in-out infinite;
+      animation: logoMegaPulse 4s ease-in-out infinite, logoGlow 3s ease-in-out infinite;
+      text-shadow: 0 0 30px rgba(96, 165, 250, 0.5);
     }
 
     .language-selector select {
