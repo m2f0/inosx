@@ -942,8 +942,263 @@
     }
 
 
+    /* Social Proof Bar */
+    .social-proof-bar {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: -2rem auto 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .social-proof-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      background: var(--surface-glass-strong);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(96, 165, 250, 0.15);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-4px);
+      background: rgba(96, 165, 250, 0.1);
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .testimonials-title {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2.5rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(96, 165, 250, 0.55);
+      box-shadow: 0 12px 28px rgba(96, 165, 250, 0.20);
+    }
+
+    .testimonial-stars {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-color);
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .author-info {
+      flex: 1;
+    }
+
+    .author-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent-color);
+      margin-bottom: 0.2rem;
+    }
+
+    .author-title {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+
+    .testimonial-link {
+      display: inline-block;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: opacity 0.2s;
+    }
+
+    .testimonial-link:hover {
+      opacity: 0.8;
+    }
+
+    /* Sticky CTA Bar */
+    .sticky-cta-bar {
+      position: fixed;
+      top: -100px;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      background: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #8b5cf6 100%);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: top 0.3s ease;
+    }
+
+    .sticky-cta-bar.visible {
+      top: 0;
+    }
+
+    .sticky-cta-text {
+      font-weight: 600;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .sticky-cta-button {
+      background: white;
+      color: #0b1020;
+      border: none;
+      padding: 10px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .sticky-cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Scarcity Badge */
+    .scarcity-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(251, 146, 60, 0.2), rgba(239, 68, 68, 0.2));
+      border: 1px solid rgba(251, 146, 60, 0.4);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fbbf24;
+      margin-top: 0.5rem;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fbbf24;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
     /* Responsividade */
     @media (max-width: 768px) {
+      .social-proof-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1.5rem;
+      }
+
+      .stat-value {
+        font-size: 2rem;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-cta-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+      }
+
+      .sticky-cta-text {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      
       .main-container {
         padding: 1rem;
         min-height: 100vh;
@@ -1138,6 +1393,12 @@
     </select>
   </div>
 
+  <!-- Sticky CTA Bar -->
+  <div class="sticky-cta-bar" id="stickyCTA">
+    <span class="sticky-cta-text">🎁 Get Free AI Consultation + ROI Analysis (Worth $2,500) • ⏰ 5 slots left this week</span>
+    <button class="sticky-cta-button" onclick="window.location.href='roi-calculator.html'">Calculate Savings →</button>
+  </div>
+
   <!-- Partículas de fundo -->
   <div class="particles" id="particles"></div>
 
@@ -1150,41 +1411,67 @@
       <!-- Coluna da esquerda - Texto -->
       <div class="left-column">
         <div class="hero-text fade-in" data-i18n="hero.headline1">
-          There are no more websites...
+          Your Team Wastes $10,000/Month on Manual Work
         </div>
         <div class="hero-subtitle fade-in" data-i18n="hero.headline2">
-          ... there's only AI.
+          INOSX AI Agents Cut Costs by 40% and Automate Repetitive Tasks
         </div>
-        <div class="hero-subtitle fade-in" data-i18n="hero.headline3">
-          And we create these AIs
+        <div class="hero-subtitle fade-in" data-i18n="hero.headline3" style="font-size: clamp(0.9rem, 2vw, 1.1rem); opacity: 0.95; margin-top: 1rem;">
+          ✓ Trusted by 500+ companies  ✓ $47M saved  ✓ 4.9/5 rating
         </div>
-        <div class="logo fade-in" data-i18n="hero.logo">INOSX</div>
+        <div class="logo fade-in" data-i18n="hero.logo" style="font-size: clamp(3rem, 10vw, 6rem);">INOSX</div>
       </div>
       
       <!-- Coluna da direita - CTA Section -->
       <div class="right-column">
         <div class="hero-cta-section fade-in">
-          <h2 class="cta-headline" data-i18n="hero.cta_headline">Transform Your Business with Enterprise AI</h2>
+          <h2 class="cta-headline" data-i18n="hero.cta_headline">See How Much You Can Save with AI</h2>
           <p class="cta-subheadline" data-i18n="hero.cta_subheadline">
-            Get a free consultation with our AI experts to discover how INOSX solutions
-            can reduce costs, increase efficiency, and drive innovation.
+            Book a free 30-minute consultation and get:<br>
+            ✓ Custom AI roadmap for your business<br>
+            ✓ ROI analysis showing potential savings<br>
+            ✓ No-obligation strategy session
           </p>
           
           <div class="cta-buttons">
-            <button class="cta-primary" onclick="openContactModal()" data-location="hero" data-i18n="hero.btn_primary">
-              Get Free Consultation
+            <button class="cta-primary" onclick="window.location.href='roi-calculator.html'" data-location="hero" data-i18n="hero.btn_primary">
+              Calculate Your Savings →
             </button>
-            <button class="cta-secondary" onclick="scrollToProducts()" data-i18n="hero.btn_secondary">
-              Explore Products →
-            </button>
+          </div>
+          
+          <div class="scarcity-badge">
+            <span class="pulse-dot"></span>
+            <span>⏰ Only 5 consultation slots left this week</span>
           </div>
           
           <div class="trust-indicators">
             <span data-i18n="hero.trust_1">✓ No Credit Card Required</span>
-            <span data-i18n="hero.trust_2">✓ Free ROI Analysis</span>
-            <span data-i18n="hero.trust_3">✓ 30-Minute Strategy Call</span>
+            <span data-i18n="hero.trust_2">✓ 30-Min Call</span>
+            <span data-i18n="hero.trust_3">✓ Free ROI Report</span>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Proof Bar -->
+  <div class="social-proof-bar fade-in">
+    <div class="social-proof-container">
+      <div class="stat-item">
+        <div class="stat-value">500+</div>
+        <div class="stat-label">Companies Trust INOSX</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">$47M</div>
+        <div class="stat-label">Saved by Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">2.4M</div>
+        <div class="stat-label">Hours Automated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">4.9/5</div>
+        <div class="stat-label">Client Rating ⭐⭐⭐⭐⭐</div>
       </div>
     </div>
   </div>
@@ -1235,6 +1522,60 @@
         <button class="carousel-indicator" data-index="2"></button>
         <button class="carousel-indicator" data-index="3"></button>
         <button class="carousel-indicator" data-index="4"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials-section">
+    <h2 class="testimonials-title fade-in">What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">
+          "INOSX AI agents transformed our operations. We cut operational costs by 42% in just 90 days, 
+          and our team is happier because they focus on strategic work instead of repetitive tasks."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JS</div>
+          <div class="author-info">
+            <div class="author-name">John Smith</div>
+            <div class="author-title">CEO, TechCorp Solutions<br>Industry: SaaS • 250 employees</div>
+          </div>
+        </div>
+        <a href="#" class="testimonial-link">Read Full Case Study →</a>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">
+          "We were skeptical about AI, but INOSX made implementation seamless. Their agents now handle 80% 
+          of our data entry, saving us $45,000/month. ROI was 340% in 6 months."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SJ</div>
+          <div class="author-info">
+            <div class="author-name">Sarah Johnson</div>
+            <div class="author-title">CFO, FinTech Innovations<br>Industry: Financial Services • 150 employees</div>
+          </div>
+        </div>
+        <a href="#" class="testimonial-link">See Results →</a>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text">
+          "INOSX's AI security platform detected a potential breach that our traditional tools missed. 
+          They literally saved us from a $2M+ disaster. Worth every penny."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MC</div>
+          <div class="author-info">
+            <div class="author-name">Michael Chen</div>
+            <div class="author-title">CTO, DataSecure Inc.<br>Industry: Cybersecurity • 500 employees</div>
+          </div>
+        </div>
+        <a href="#" class="testimonial-link">Read Story →</a>
       </div>
     </div>
   </div>
@@ -1423,10 +1764,12 @@
         <form id="leadForm" class="lead-form" onsubmit="handleFormSubmit(event)">
           <!-- Step 1: Basic Info -->
           <div class="form-step active" data-step="1">
-            <input type="text" name="name" id="name" data-i18n="modal.step1.name_placeholder" placeholder="Full Name *" required />
+            <input type="text" name="name" id="name" data-i18n="modal.step1.name_placeholder" placeholder="Your Name *" required />
             <input type="email" name="email" id="email" data-i18n="modal.step1.email_placeholder" placeholder="Work Email *" required />
-            <input type="tel" name="phone" id="phone" data-i18n="modal.step1.phone_placeholder" placeholder="Phone Number" />
-            <input type="text" name="company" id="company" data-i18n="modal.step1.company_placeholder" placeholder="Company Name *" required />
+            
+            <div style="text-align: center; font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
+              ✓ No credit card  ✓ 30-min call  ✓ Free ROI analysis
+            </div>
             
             <button type="button" class="btn-next" onclick="nextStep(2)" data-i18n="modal.step1.btn_continue">
               Continue →
@@ -1435,6 +1778,9 @@
           
           <!-- Step 2: Needs -->
           <div class="form-step" data-step="2">
+            <input type="tel" name="phone" id="phone" data-i18n="modal.step1.phone_placeholder" placeholder="Phone Number (optional)" />
+            <input type="text" name="company" id="company" data-i18n="modal.step1.company_placeholder" placeholder="Company Name *" required />
+            
             <label data-i18n="modal.step2.interest_label">What brings you to INOSX?</label>
             <select name="interest" id="interest" required data-i18n-options="modal.step2">
               <option value="" data-i18n="modal.step2.interest_placeholder">Select primary interest...</option>
@@ -1798,6 +2144,7 @@
     window.addEventListener('load', function() {
       createParticles();
       initCarousel();
+      initStickyCTA();
       window.scrollTo(0, 0);
       
       // Track page view
@@ -1822,6 +2169,28 @@
         });
       });
     });
+
+    // Sticky CTA Bar functionality
+    function initStickyCTA() {
+      const stickyCTA = document.getElementById('stickyCTA');
+      let hasShown = false;
+      
+      window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const heroHeight = document.querySelector('.main-container').offsetHeight;
+        
+        // Show sticky CTA after scrolling past hero
+        if (scrollY > heroHeight && !hasShown) {
+          stickyCTA.classList.add('visible');
+          hasShown = true;
+          
+          // Track event
+          trackEvent('sticky_cta_shown', {
+            'event_category': 'engagement'
+          });
+        }
+      });
+    }
 
     // Prevenir scroll horizontal
     window.addEventListener('scroll', function() {

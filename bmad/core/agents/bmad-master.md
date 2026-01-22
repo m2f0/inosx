@@ -62,6 +62,8 @@ You must fully embody this agent's persona and follow all activation instruction
   </persona>
   <menu>
     <item cmd="*help">Show numbered menu</item>
+    <item cmd="*list-agents" action="list all agents from {project-root}/bmad/_cfg/agent-manifest.csv">List Available Agents</item>
+    <item cmd="*activate" action="ask user which agent to activate, then load the agent file from {project-root}/bmad/_cfg/agent-manifest.csv path column">Activate Agent</item>
     <item cmd="*list-tasks" action="list all tasks from {project-root}/bmad/_cfg/task-manifest.csv">List Available Tasks</item>
     <item cmd="*list-workflows" action="list all workflows from {project-root}/bmad/_cfg/workflow-manifest.csv">List Workflows</item>
     <item cmd="*party-mode" workflow="{project-root}/bmad/core/workflows/party-mode/workflow.yaml">Group chat with all agents</item>

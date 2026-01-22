@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI ROI Calculator - INOSX</title>
+  <style>
+    :root {
+      --bg-color: #0b1020;
+      --text-color: #e6f0ff;
+      --accent-color: #7dd3fc;
+      --secondary-color: #a78bfa;
+      --gradient-primary: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #8b5cf6 100%);
+      --surface-glass: rgba(148, 163, 184, 0.08);
+      --border-soft: rgba(125, 211, 252, 0.28);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calculator-container {
+      max-width: 700px;
+      width: 100%;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 60px rgba(96, 165, 250, 0.2);
+    }
+
+    .calculator-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .calculator-header h1 {
+      font-size: 2.2rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .calculator-header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(148, 163, 184, 0.08);
+      border: 1px solid var(--border-soft);
+      border-radius: 10px;
+      color: var(--text-color);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      background: rgba(125, 211, 252, 0.1);
+      box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+    }
+
+    .slider-container {
+      margin-top: 0.5rem;
+    }
+
+    .slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: rgba(148, 163, 184, 0.2);
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(125, 211, 252, 0.5);
+    }
+
+    .slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 0 10px rgba(125, 211, 252, 0.5);
+    }
+
+    .slider-value {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 0.5rem;
+    }
+
+    .calculate-btn {
+      width: 100%;
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+      margin-top: 1rem;
+    }
+
+    .calculate-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+    }
+
+    .results {
+      display: none;
+      margin-top: 2rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(139, 92, 246, 0.12));
+      border-radius: 16px;
+      border: 1px solid rgba(96, 165, 250, 0.35);
+      animation: slideUp 0.5s ease;
+    }
+
+    .results.active {
+      display: block;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .results-header h2 {
+      font-size: 1.8rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1.2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-card .value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-card .label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .breakdown {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .breakdown h3 {
+      font-size: 1.2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .breakdown-item:last-child {
+      border-bottom: none;
+    }
+
+    .breakdown-item .label {
+      opacity: 0.9;
+    }
+
+    .breakdown-item .value {
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    .cta-section {
+      margin-top: 2rem;
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cta-section p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--gradient-primary);
+      color: white;
+      text-decoration: none;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+    }
+
+    .disclaimer {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.7;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
+
+      .calculator-container {
+        padding: 1.5rem;
+      }
+
+      .calculator-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator-container">
+    <div class="calculator-header">
+      <h1>🧮 AI ROI Calculator</h1>
+      <p>Calculate how much your business can save with INOSX AI solutions</p>
+    </div>
+
+    <form id="roiForm">
+      <div class="form-group">
+        <label for="employees">Number of Employees</label>
+        <input type="range" id="employees" name="employees" min="10" max="1000" value="50" class="slider" oninput="updateSliderValue('employees')">
+        <div class="slider-value">
+          <span>10</span>
+          <span id="employeesValue">50</span>
+          <span>1000+</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="avgSalary">Average Employee Hourly Rate (USD)</label>
+        <input type="number" id="avgSalary" name="avgSalary" value="35" min="10" max="200" placeholder="35">
+      </div>
+
+      <div class="form-group">
+        <label for="manualHours">Hours/Week Spent on Repetitive Tasks (per employee)</label>
+        <input type="range" id="manualHours" name="manualHours" min="1" max="40" value="10" class="slider" oninput="updateSliderValue('manualHours')">
+        <div class="slider-value">
+          <span>1h</span>
+          <span id="manualHoursValue">10h</span>
+          <span>40h</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="industry">Industry</label>
+        <select id="industry" name="industry">
+          <option value="1.0">Technology/SaaS</option>
+          <option value="0.8">Financial Services</option>
+          <option value="0.9">Healthcare</option>
+          <option value="0.7">Manufacturing</option>
+          <option value="0.85">Retail/E-commerce</option>
+          <option value="0.75">Other</option>
+        </select>
+      </div>
+
+      <button type="submit" class="calculate-btn">Calculate My Savings →</button>
+    </form>
+
+    <div class="results" id="results">
+      <div class="results-header">
+        <h2>💰 Your Potential AI Savings</h2>
+        <p>Here's what INOSX AI could save your business</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="value" id="monthlySavings">$0</div>
+          <div class="label">Monthly Savings</div>
+        </div>
+        <div class="stat-card">
+          <div class="value" id="annualSavings">$0</div>
+          <div class="label">Annual Savings</div>
+        </div>
+        <div class="stat-card">
+          <div class="value" id="hoursSaved">0</div>
+          <div class="label">Hours Saved/Month</div>
+        </div>
+        <div class="stat-card">
+          <div class="value" id="roiPercent">0%</div>
+          <div class="label">ROI in 12 Months</div>
+        </div>
+      </div>
+
+      <div class="breakdown">
+        <h3>💡 Savings Breakdown</h3>
+        <div class="breakdown-item">
+          <span class="label">Labor Cost Reduction (40%)</span>
+          <span class="value" id="laborSavings">$0</span>
+        </div>
+        <div class="breakdown-item">
+          <span class="label">Efficiency Gains (25%)</span>
+          <span class="value" id="efficiencySavings">$0</span>
+        </div>
+        <div class="breakdown-item">
+          <span class="label">Error Reduction (15%)</span>
+          <span class="value" id="errorSavings">$0</span>
+        </div>
+        <div class="breakdown-item">
+          <span class="label">Process Automation (20%)</span>
+          <span class="value" id="automationSavings">$0</span>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <p><strong>Ready to unlock these savings?</strong></p>
+        <a href="index.html#contact" class="cta-btn" onclick="trackCalculatorCTA()">Get Free Consultation →</a>
+      </div>
+
+      <div class="disclaimer">
+        * Estimates based on industry averages and INOSX client data. Actual results may vary based on implementation scope and business specifics.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateSliderValue(sliderId) {
+      const slider = document.getElementById(sliderId);
+      const display = document.getElementById(sliderId + 'Value');
+      display.textContent = slider.value + (sliderId === 'manualHours' ? 'h' : '');
+    }
+
+    document.getElementById('roiForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      calculateROI();
+    });
+
+    function calculateROI() {
+      // Get form values
+      const employees = parseInt(document.getElementById('employees').value);
+      const avgSalary = parseFloat(document.getElementById('avgSalary').value);
+      const manualHours = parseFloat(document.getElementById('manualHours').value);
+      const industryMultiplier = parseFloat(document.getElementById('industry').value);
+
+      // Calculate base costs
+      const weeklyLaborCost = employees * manualHours * avgSalary;
+      const monthlyLaborCost = weeklyLaborCost * 4.33; // Average weeks per month
+      const annualLaborCost = monthlyLaborCost * 12;
+
+      // AI can automate 40% of repetitive tasks on average
+      const automationRate = 0.40 * industryMultiplier;
+      
+      // Calculate savings
+      const monthlySavings = monthlyLaborCost * automationRate;
+      const annualSavings = annualLaborCost * automationRate;
+      const hoursSaved = employees * manualHours * 4.33 * automationRate;
+
+      // ROI calculation (assuming INOSX costs ~20% of savings)
+      const estimatedCost = monthlySavings * 0.20 * 12;
+      const netSavings = annualSavings - estimatedCost;
+      const roi = ((netSavings / estimatedCost) * 100).toFixed(0);
+
+      // Breakdown
+      const laborSavings = monthlySavings * 0.40;
+      const efficiencySavings = monthlySavings * 0.25;
+      const errorSavings = monthlySavings * 0.15;
+      const automationSavings = monthlySavings * 0.20;
+
+      // Update UI
+      document.getElementById('monthlySavings').textContent = '$' + monthlySavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('annualSavings').textContent = '$' + annualSavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('hoursSaved').textContent = hoursSaved.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('roiPercent').textContent = roi + '%';
+
+      document.getElementById('laborSavings').textContent = '$' + laborSavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('efficiencySavings').textContent = '$' + efficiencySavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('errorSavings').textContent = '$' + errorSavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      document.getElementById('automationSavings').textContent = '$' + automationSavings.toLocaleString('en-US', { maximumFractionDigits: 0 });
+
+      // Show results
+      document.getElementById('results').classList.add('active');
+      
+      // Scroll to results
+      document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Track event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'roi_calculation', {
+          'event_category': 'calculator',
+          'event_label': 'completed',
+          'value': Math.round(monthlySavings)
+        });
+      }
+    }
+
+    function trackCalculatorCTA() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'calculator_cta_click', {
+          'event_category': 'conversion',
+          'event_label': 'from_roi_calculator'
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,11 +1,12 @@
 installation:
   version: 6.0.0-alpha.7
-  installDate: '2026-01-08T09:23:29.590Z'
-  lastUpdated: '2026-01-08T09:23:29.590Z'
+  installDate: '2026-01-22T12:26:30.677Z'
+  lastUpdated: '2026-01-22T12:26:30.677Z'
 modules:
   - core
   - bmb
   - bmm
   - cis
+  - custom-marketing-agents
 ides:
   - cursor
