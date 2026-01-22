@@ -10,6 +10,9 @@
   <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
   <link rel="shortcut icon" href="/favicon32x32.ico">
   
+  <!-- i18n System -->
+  <script src="/i18n/i18n.js" defer></script>
+  
   <style>
     :root {
       --bg-color: #0b1020;
@@ -31,11 +34,118 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--bg-color);
       color: var(--text-color);
-      padding: 2rem;
       min-height: 100vh;
+    }
+
+    /* Top Bar Menu */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, rgba(11, 16, 32, 0.95), rgba(26, 31, 53, 0.95));
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .topbar-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.8rem 1rem;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .topbar-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex: 1;
+    }
+
+    .topbar-nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      transition: all 0.2s ease;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .topbar-nav a:hover {
+      opacity: 1;
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    .topbar-nav a.active {
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    /* Language Selector in Topbar */
+    .language-selector {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 6px 10px;
+    }
+
+    .language-selector select {
+      background: transparent;
+      border: none;
+      color: var(--text-color);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      padding: 2px 6px;
+    }
+
+    .language-selector select option {
+      background: #0f1424;
+      color: var(--text-color);
+      padding: 8px;
+    }
+
+    .lang-icon {
+      font-size: 1.1rem;
+    }
+
+    /* Logo Section */
+    .logo-section {
+      margin-top: 80px;
+      padding: 2rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.05), rgba(139, 92, 246, 0.05));
+    }
+
+    .logo-section .brand {
+      font-size: 3rem;
+      font-weight: 900;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    /* Calculator Container */
+    .calculator-wrapper {
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: flex-start;
       justify-content: center;
+      min-height: calc(100vh - 200px);
     }
 
     .calculator-container {
@@ -99,6 +209,21 @@
       border-color: var(--accent-color);
       background: rgba(125, 211, 252, 0.1);
       box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+    }
+
+    .form-group select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237dd3fc' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .form-group select option {
+      background: #1a1f35;
+      color: #ffffff;
+      padding: 10px;
     }
 
     .slider-container {
@@ -299,9 +424,18 @@
       line-height: 1.5;
     }
 
-    @media (max-width: 640px) {
-      body {
-        padding: 1rem;
+    @media (max-width: 768px) {
+      .topbar-nav {
+        gap: 1rem;
+      }
+
+      .topbar-nav a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+      }
+
+      .logo-section .brand {
+        font-size: 2.5rem;
       }
 
       .calculator-container {
@@ -316,108 +450,156 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @media (max-width: 640px) {
+      .topbar-container {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 0.8rem;
+      }
+
+      .topbar-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .calculator-wrapper {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="calculator-container">
-    <div class="calculator-header">
-      <h1>🧮 AI ROI Calculator</h1>
-      <p>Calculate how much your business can save with INOSX AI solutions</p>
-    </div>
-
-    <form id="roiForm">
-      <div class="form-group">
-        <label for="employees">Number of Employees</label>
-        <input type="range" id="employees" name="employees" min="10" max="1000" value="50" class="slider" oninput="updateSliderValue('employees')">
-        <div class="slider-value">
-          <span>10</span>
-          <span id="employeesValue">50</span>
-          <span>1000+</span>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="avgSalary">Average Employee Hourly Rate (USD)</label>
-        <input type="number" id="avgSalary" name="avgSalary" value="35" min="10" max="200" placeholder="35">
-      </div>
-
-      <div class="form-group">
-        <label for="manualHours">Hours/Week Spent on Repetitive Tasks (per employee)</label>
-        <input type="range" id="manualHours" name="manualHours" min="1" max="40" value="10" class="slider" oninput="updateSliderValue('manualHours')">
-        <div class="slider-value">
-          <span>1h</span>
-          <span id="manualHoursValue">10h</span>
-          <span>40h</span>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="industry">Industry</label>
-        <select id="industry" name="industry">
-          <option value="1.0">Technology/SaaS</option>
-          <option value="0.8">Financial Services</option>
-          <option value="0.9">Healthcare</option>
-          <option value="0.7">Manufacturing</option>
-          <option value="0.85">Retail/E-commerce</option>
-          <option value="0.75">Other</option>
+  <!-- Top Bar Menu -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <nav class="topbar-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#services">Services</a>
+        <a href="roi-calculator.html" class="active">ROI Calculator</a>
+      </nav>
+      
+      <div class="language-selector">
+        <span class="lang-icon">🌍</span>
+        <select id="languageSelector">
+          <option value="en">🇺🇸 English</option>
+          <option value="pt">🇧🇷 Português</option>
+          <option value="es">🇪🇸 Español</option>
         </select>
       </div>
+    </div>
+  </div>
 
-      <button type="submit" class="calculate-btn">Calculate My Savings →</button>
-    </form>
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <div class="brand">INOSX</div>
+  </div>
 
-    <div class="results" id="results">
-      <div class="results-header">
-        <h2>💰 Your Potential AI Savings</h2>
-        <p>Here's what INOSX AI could save your business</p>
+  <!-- Calculator -->
+  <div class="calculator-wrapper">
+    <div class="calculator-container">
+      <div class="calculator-header">
+        <h1 data-i18n="roi_calculator.title">🧮 AI ROI Calculator</h1>
+        <p data-i18n="roi_calculator.subtitle">Calculate how much your business can save with INOSX AI solutions</p>
       </div>
 
-      <div class="stat-grid">
-        <div class="stat-card">
-          <div class="value" id="monthlySavings">$0</div>
-          <div class="label">Monthly Savings</div>
+      <form id="roiForm">
+        <div class="form-group">
+          <label for="employees" data-i18n="roi_calculator.employees_label">Number of Employees</label>
+          <input type="range" id="employees" name="employees" min="10" max="1000" value="50" class="slider" oninput="updateSliderValue('employees')">
+          <div class="slider-value">
+            <span data-i18n="roi_calculator.employees_min">10</span>
+            <span id="employeesValue">50</span>
+            <span data-i18n="roi_calculator.employees_max">1000+</span>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="value" id="annualSavings">$0</div>
-          <div class="label">Annual Savings</div>
-        </div>
-        <div class="stat-card">
-          <div class="value" id="hoursSaved">0</div>
-          <div class="label">Hours Saved/Month</div>
-        </div>
-        <div class="stat-card">
-          <div class="value" id="roiPercent">0%</div>
-          <div class="label">ROI in 12 Months</div>
-        </div>
-      </div>
 
-      <div class="breakdown">
-        <h3>💡 Savings Breakdown</h3>
-        <div class="breakdown-item">
-          <span class="label">Labor Cost Reduction (40%)</span>
-          <span class="value" id="laborSavings">$0</span>
+        <div class="form-group">
+          <label for="avgSalary" data-i18n="roi_calculator.salary_label">Average Employee Hourly Rate (USD)</label>
+          <input type="number" id="avgSalary" name="avgSalary" value="35" min="10" max="200" placeholder="35">
         </div>
-        <div class="breakdown-item">
-          <span class="label">Efficiency Gains (25%)</span>
-          <span class="value" id="efficiencySavings">$0</span>
-        </div>
-        <div class="breakdown-item">
-          <span class="label">Error Reduction (15%)</span>
-          <span class="value" id="errorSavings">$0</span>
-        </div>
-        <div class="breakdown-item">
-          <span class="label">Process Automation (20%)</span>
-          <span class="value" id="automationSavings">$0</span>
-        </div>
-      </div>
 
-      <div class="cta-section">
-        <p><strong>Ready to unlock these savings?</strong></p>
-        <a href="index.html#contact" class="cta-btn" onclick="trackCalculatorCTA()">Get Free Consultation →</a>
-      </div>
+        <div class="form-group">
+          <label for="manualHours" data-i18n="roi_calculator.hours_label">Hours/Week Spent on Repetitive Tasks (per employee)</label>
+          <input type="range" id="manualHours" name="manualHours" min="1" max="40" value="10" class="slider" oninput="updateSliderValue('manualHours')">
+          <div class="slider-value">
+            <span data-i18n="roi_calculator.hours_min">1h</span>
+            <span id="manualHoursValue">10h</span>
+            <span data-i18n="roi_calculator.hours_max">40h</span>
+          </div>
+        </div>
 
-      <div class="disclaimer">
-        * Estimates based on industry averages and INOSX client data. Actual results may vary based on implementation scope and business specifics.
+        <div class="form-group">
+          <label for="industry" data-i18n="roi_calculator.industry_label">Industry</label>
+          <select id="industry" name="industry">
+            <option value="1.0" data-i18n="roi_calculator.industry_tech">Technology/SaaS</option>
+            <option value="0.8" data-i18n="roi_calculator.industry_finance">Financial Services</option>
+            <option value="0.9" data-i18n="roi_calculator.industry_healthcare">Healthcare</option>
+            <option value="0.7" data-i18n="roi_calculator.industry_manufacturing">Manufacturing</option>
+            <option value="0.85" data-i18n="roi_calculator.industry_retail">Retail/E-commerce</option>
+            <option value="0.75" data-i18n="roi_calculator.industry_other">Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="calculate-btn" data-i18n="roi_calculator.calculate_btn">Calculate My Savings →</button>
+      </form>
+
+      <div class="results" id="results">
+        <div class="results-header">
+          <h2 data-i18n="roi_calculator.results_title">💰 Your Potential AI Savings</h2>
+          <p data-i18n="roi_calculator.results_subtitle">Here's what INOSX AI could save your business</p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="value" id="monthlySavings">$0</div>
+            <div class="label" data-i18n="roi_calculator.monthly_savings">Monthly Savings</div>
+          </div>
+          <div class="stat-card">
+            <div class="value" id="annualSavings">$0</div>
+            <div class="label" data-i18n="roi_calculator.annual_savings">Annual Savings</div>
+          </div>
+          <div class="stat-card">
+            <div class="value" id="hoursSaved">0</div>
+            <div class="label" data-i18n="roi_calculator.hours_saved">Hours Saved/Month</div>
+          </div>
+          <div class="stat-card">
+            <div class="value" id="roiPercent">0%</div>
+            <div class="label" data-i18n="roi_calculator.roi_percent">ROI in 12 Months</div>
+          </div>
+        </div>
+
+        <div class="breakdown">
+          <h3 data-i18n="roi_calculator.breakdown_title">💡 Savings Breakdown</h3>
+          <div class="breakdown-item">
+            <span class="label" data-i18n="roi_calculator.labor_cost">Labor Cost Reduction (40%)</span>
+            <span class="value" id="laborSavings">$0</span>
+          </div>
+          <div class="breakdown-item">
+            <span class="label" data-i18n="roi_calculator.efficiency_gains">Efficiency Gains (25%)</span>
+            <span class="value" id="efficiencySavings">$0</span>
+          </div>
+          <div class="breakdown-item">
+            <span class="label" data-i18n="roi_calculator.error_reduction">Error Reduction (15%)</span>
+            <span class="value" id="errorSavings">$0</span>
+          </div>
+          <div class="breakdown-item">
+            <span class="label" data-i18n="roi_calculator.process_automation">Process Automation (20%)</span>
+            <span class="value" id="automationSavings">$0</span>
+          </div>
+        </div>
+
+        <div class="cta-section">
+          <p data-i18n="roi_calculator.cta_text"><strong>Ready to unlock these savings?</strong></p>
+          <a href="index.html#contact" class="cta-btn" onclick="trackCalculatorCTA()" data-i18n="roi_calculator.cta_btn">Get Free Consultation →</a>
+        </div>
+
+        <div class="disclaimer" data-i18n="roi_calculator.disclaimer">
+          * Estimates based on industry averages and INOSX client data. Actual results may vary based on implementation scope and business specifics.
+        </div>
       </div>
     </div>
   </div>

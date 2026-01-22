@@ -456,6 +456,7 @@
       justify-content: center;
       align-items: center;
       padding: 2rem;
+      margin-top: 0;
     }
 
     /* Layout de duas colunas */
@@ -908,6 +909,77 @@
       padding: 8px 12px;
       backdrop-filter: blur(12px);
       box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
+    }
+
+    /* Top Bar Menu */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      background: linear-gradient(135deg, rgba(11, 16, 32, 0.95), rgba(26, 31, 53, 0.95));
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .topbar-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.8rem 1rem;
+      padding-right: 180px; /* Space for language selector */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+
+    .topbar-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .topbar-nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      transition: all 0.2s ease;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .topbar-nav a:hover {
+      opacity: 1;
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    .topbar-nav a.active {
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    /* Logo Centered Below Menu */
+    .logo-hero-section {
+      margin-top: 70px;
+      padding: 2rem 1rem 0 1rem;
+      text-align: center;
+    }
+
+    .logo-hero-section .brand {
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      font-weight: 900;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      animation: logoPulse 3s ease-in-out infinite;
     }
 
     .language-selector select {
@@ -1611,6 +1683,23 @@
   </style>
 </head>
 <body>
+  <!-- Top Bar Menu -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <nav class="topbar-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#products" onclick="scrollToProducts(); return false;">Products</a>
+        <a href="#services" onclick="document.querySelector('.services-section').scrollIntoView({behavior:'smooth'}); return false;">Services</a>
+        <a href="roi-calculator.html">ROI Calculator</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Logo Centered Below Menu -->
+  <div class="logo-hero-section">
+    <div class="brand">INOSX</div>
+  </div>
+
   <!-- Language Selector -->
   <div class="language-selector">
     <span class="lang-icon">🌍</span>
@@ -1638,16 +1727,16 @@
     <div class="two-column-layout">
       <!-- Coluna da esquerda - Texto -->
       <div class="left-column">
-        <div class="hero-text fade-in">
+        <div class="hero-text fade-in" data-i18n="hero.headline1">
           Your Team Wastes $10,000/Month on Manual Work
         </div>
-        <div class="hero-subtitle fade-in">
+        <div class="hero-subtitle fade-in" data-i18n="hero.headline2">
           INOSX AI Agents Cut Costs by 40% and Automate Repetitive Tasks
         </div>
-        <div class="hero-subtitle fade-in" style="font-size: clamp(0.9rem, 2vw, 1.1rem); opacity: 0.95; margin-top: 1rem;">
+        <div class="hero-subtitle fade-in" style="font-size: clamp(0.9rem, 2vw, 1.1rem); opacity: 0.95; margin-top: 1rem;" data-i18n="hero.headline3">
           ✓ Trusted by 500+ companies  ✓ $47M saved  ✓ 4.9/5 rating
         </div>
-        <div class="logo fade-in" style="font-size: clamp(3rem, 10vw, 6rem);">INOSX</div>
+        <div class="logo fade-in" style="font-size: clamp(3rem, 10vw, 6rem);" data-i18n="hero.logo">INOSX</div>
       </div>
       
       <!-- Coluna da direita - CTA Section -->
