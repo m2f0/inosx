@@ -30,7 +30,7 @@
   "featured_messiax": {
     "badge": "✨ Special Highlight",
     "headline": "Find the Peace That Was Missing in Your Life",
-    "description": "<strong>Messiax</strong> is your AI-powered spiritual companion, trained on 5 sacred books. No matter your faith, you will be respected and guided according to YOUR tradition.",
+    "description": "Messiax is your AI-powered spiritual companion, trained on 5 sacred books. No matter your faith, you will be respected and guided according to YOUR tradition.",
     "sacred_bible": "📖 Bible",
     "sacred_torah": "✡️ Torah",
     "sacred_quran": "☪️ Quran",
@@ -47,7 +47,7 @@
   "featured_surveyflow": {
     "badge": "✨ Featured Product",
     "headline": "Stop Guessing, Start Knowing Your Customers",
-    "description": "<strong>SurveyFlow.ai</strong> transforms feedback into actionable insights instantly. AI creates surveys, analyzes responses, and delivers insights that actually drive decisions.",
+    "description": "SurveyFlow.ai transforms feedback into actionable insights instantly. AI creates surveys, analyzes responses, and delivers insights that actually drive decisions.",
     "feature_ai": "🤖 AI Survey Builder",
     "feature_analytics": "📊 Smart Analytics",
     "feature_targeting": "🎯 Precision Targeting",
@@ -63,7 +63,7 @@
   "featured_psychox": {
     "badge": "✨ Featured Product",
     "headline": "Your Mental Wellness Journey Starts Here",
-    "description": "<strong>PsychoX.app</strong> is your AI-powered psychological support companion available 24/7. Get evidence-based guidance, mood tracking, and personalized support whenever you need it.",
+    "description": "PsychoX.app is your AI-powered psychological support companion available 24/7. Get evidence-based guidance, mood tracking, and personalized support whenever you need it.",
     "feature_support": "💜 24/7 AI Support",
     "feature_mood": "📊 Mood Tracking",
     "feature_private": "🔒 Private & Secure",
@@ -79,7 +79,7 @@
   "featured_datagpt": {
     "badge": "✨ Featured Product",
     "headline": "Talk to Your Data Like a Human",
-    "description": "<strong>DataGPT</strong> is your conversational AI analyst that turns complex data questions into instant insights. No SQL required—just ask in plain language and get answers in seconds, not weeks.",
+    "description": "DataGPT is your conversational AI analyst that turns complex data questions into instant insights. No SQL required—just ask in plain language and get answers in seconds, not weeks.",
     "feature_conversational": "💬 Conversational AI",
     "feature_instant": "⚡ Instant Insights",
     "feature_nosql": "🚀 No SQL Needed",

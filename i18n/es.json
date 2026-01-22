@@ -30,7 +30,7 @@
   "featured_messiax": {
     "badge": "✨ Destacado Especial",
     "headline": "Encuentre la Paz Que Faltaba en Su Vida",
-    "description": "<strong>Messiax</strong> es su compañera espiritual impulsada por IA, entrenada en 5 libros sagrados. No importa su fe, será respetado y guiado según SU tradición.",
+    "description": "Messiax es su compañera espiritual impulsada por IA, entrenada en 5 libros sagrados. No importa su fe, será respetado y guiado según SU tradición.",
     "sacred_bible": "📖 Biblia",
     "sacred_torah": "✡️ Torá",
     "sacred_quran": "☪️ Corán",
@@ -47,7 +47,7 @@
   "featured_surveyflow": {
     "badge": "✨ Producto Destacado",
     "headline": "Deje de Adivinar, Comience a Conocer a Sus Clientes",
-    "description": "<strong>SurveyFlow.ai</strong> transforma comentarios en insights accionables al instante. La IA crea encuestas, analiza respuestas y entrega insights que realmente impulsan decisiones.",
+    "description": "SurveyFlow.ai transforma comentarios en insights accionables al instante. La IA crea encuestas, analiza respuestas y entrega insights que realmente impulsan decisiones.",
     "feature_ai": "🤖 Constructor de Encuestas con IA",
     "feature_analytics": "📊 Análisis Inteligente",
     "feature_targeting": "🎯 Segmentación Precisa",
@@ -63,7 +63,7 @@
   "featured_psychox": {
     "badge": "✨ Producto Destacado",
     "headline": "Su Viaje de Bienestar Mental Comienza Aquí",
-    "description": "<strong>PsychoX.app</strong> es su compañero de apoyo psicológico con IA disponible 24/7. Reciba orientación basada en evidencia, seguimiento del estado de ánimo y apoyo personalizado cuando lo necesite.",
+    "description": "PsychoX.app es su compañero de apoyo psicológico con IA disponible 24/7. Reciba orientación basada en evidencia, seguimiento del estado de ánimo y apoyo personalizado cuando lo necesite.",
     "feature_support": "💜 Soporte IA 24/7",
     "feature_mood": "📊 Seguimiento del Ánimo",
     "feature_private": "🔒 Privado y Seguro",
@@ -79,7 +79,7 @@
   "featured_datagpt": {
     "badge": "✨ Producto Destacado",
     "headline": "Hable con Sus Datos Como un Humano",
-    "description": "<strong>DataGPT</strong> es su analista de IA conversacional que convierte preguntas complejas sobre datos en insights instantáneos. Sin necesidad de SQL—simplemente pregunte en lenguaje natural y obtenga respuestas en segundos, no semanas.",
+    "description": "DataGPT es su analista de IA conversacional que convierte preguntas complejas sobre datos en insights instantáneos. Sin necesidad de SQL—simplemente pregunte en lenguaje natural y obtenga respuestas en segundos, no semanas.",
     "feature_conversational": "💬 IA Conversacional",
     "feature_instant": "⚡ Insights Instantáneos",
     "feature_nosql": "🚀 Sin Necesidad de SQL",
