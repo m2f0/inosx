@@ -44,6 +44,22 @@
     "btn_access": "Access Platform →",
     "mockup_subtitle": "Your spiritual companion\nMulti-religious • Respectful • Always present"
   },
+  "featured_surveyflow": {
+    "badge": "✨ Featured Product",
+    "headline": "Stop Guessing, Start Knowing Your Customers",
+    "description": "<strong>SurveyFlow.ai</strong> transforms feedback into actionable insights instantly. AI creates surveys, analyzes responses, and delivers insights that actually drive decisions.",
+    "feature_ai": "🤖 AI Survey Builder",
+    "feature_analytics": "📊 Smart Analytics",
+    "feature_targeting": "🎯 Precision Targeting",
+    "feature_realtime": "⚡ Real-Time Results",
+    "highlight_1": "🚀 Surveys ready in seconds, not hours",
+    "highlight_2": "🎨 Full brand customization",
+    "highlight_3": "🌐 50+ languages supported",
+    "highlight_4": "📈 AI-powered insights & trends",
+    "btn_learn": "Learn About SurveyFlow →",
+    "btn_access": "Try Free Demo →",
+    "mockup_subtitle": "AI-Powered Survey Intelligence\nSmart • Fast • Insightful"
+  },
   "testimonials": {
     "title": "What Our Clients Say",
     "testimonial_1_quote": "INOSX agents cut our processing time by 60% in the first month. The ROI was immediate and continues to grow.",

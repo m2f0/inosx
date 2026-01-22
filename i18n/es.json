@@ -44,6 +44,22 @@
     "btn_access": "Acceder a la Plataforma →",
     "mockup_subtitle": "Su compañera espiritual\nMulti-religiosa • Respetuosa • Siempre presente"
   },
+  "featured_surveyflow": {
+    "badge": "✨ Producto Destacado",
+    "headline": "Deje de Adivinar, Comience a Conocer a Sus Clientes",
+    "description": "<strong>SurveyFlow.ai</strong> transforma comentarios en insights accionables al instante. La IA crea encuestas, analiza respuestas y entrega insights que realmente impulsan decisiones.",
+    "feature_ai": "🤖 Constructor de Encuestas con IA",
+    "feature_analytics": "📊 Análisis Inteligente",
+    "feature_targeting": "🎯 Segmentación Precisa",
+    "feature_realtime": "⚡ Resultados en Tiempo Real",
+    "highlight_1": "🚀 Encuestas listas en segundos, no horas",
+    "highlight_2": "🎨 Personalización completa de marca",
+    "highlight_3": "🌐 Soporte para más de 50 idiomas",
+    "highlight_4": "📈 Insights y tendencias con IA",
+    "btn_learn": "Conocer SurveyFlow →",
+    "btn_access": "Probar Demo Gratis →",
+    "mockup_subtitle": "Inteligencia de Encuestas con IA\nInteligente • Rápido • Perspicaz"
+  },
   "testimonials": {
     "title": "Lo Que Dicen Nuestros Clientes",
     "testimonial_1_quote": "Los agentes INOSX redujeron nuestro tiempo de procesamiento en un 60% en el primer mes. El ROI fue inmediato y sigue creciendo.",
