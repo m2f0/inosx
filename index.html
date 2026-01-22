@@ -100,116 +100,140 @@
       margin: 6px 0;
     }
 
-    .site-carousel {
+    /* Products Grid */
+    .products-section {
       position: relative;
-      overflow: hidden;
-      border-radius: 16px;
-      border: 1px solid var(--border-soft);
-      background: linear-gradient(180deg, var(--surface-glass), rgba(0, 0, 0, 0));
-      box-shadow: 0 10px 35px rgba(96, 165, 250, 0.15);
-    }
-
-    .carousel-track {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      padding: 1rem;
-    }
-
-    .carousel-track::-webkit-scrollbar { display: none; }
-
-    .carousel-item {
-      flex: 0 0 45%;
-      max-width: 640px;
-      scroll-snap-align: center;
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      background: #0f0f10;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .carousel-item:hover { transform: translateY(-2px); }
-
-    .carousel-image {
-      width: 100%;
-      height: 360px;
-      object-fit: cover;
-      display: block;
-      opacity: 0.95;
-    }
-
-    .carousel-caption {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 10px 14px;
-      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-    }
-
-    .carousel-caption a { color: #fff; text-decoration: none; }
-
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(2, 6, 23, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #fff;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 3;
-      transition: background 0.2s ease;
-      user-select: none;
-    }
-
-    .carousel-arrow:hover { background: rgba(96, 165, 250, 0.35); }
-
-    .carousel-arrow.left { left: 10px; }
-    .carousel-arrow.right { right: 10px; }
-
-    /* Indicadores do carrossel */
-    .carousel-indicators {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 1rem;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 3rem auto;
       padding: 0 1rem;
     }
 
-    .carousel-indicator {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.3);
-      border: none;
-      cursor: pointer;
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .product-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      overflow: hidden;
       transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
     }
 
-    .carousel-indicator.active {
-      background: var(--accent-color);
-      transform: scale(1.2);
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color);
+      box-shadow: 0 12px 40px rgba(96, 165, 250, 0.25);
     }
 
-    .carousel-indicator:hover {
-      background: rgba(96, 165, 250, 0.6);
+    .product-image-container {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background: #0a0e1a;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+
+    .product-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .product-card:hover .product-overlay {
+      opacity: 1;
+    }
+
+    .product-cta {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .product-info {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .product-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin: 0;
+    }
+
+    .product-description {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .product-coming-soon {
+      cursor: default;
+    }
+
+    .product-coming-soon:hover {
+      transform: none;
+    }
+
+    .coming-soon-overlay {
+      opacity: 1;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(139, 92, 246, 0.2));
+    }
+
+    .coming-soon-badge {
+      background: rgba(96, 165, 250, 0.2);
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      backdrop-filter: blur(12px);
+    }
+
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .product-image-container {
+        height: 200px;
+      }
     }
 
     /* Seção AI Services */
@@ -1847,46 +1871,86 @@
     <div class="divider-glow"></div>
   </div>
 
-  <!-- Carrossel de sites (Products) -->
-  <div class="carousel-wrapper">
-    <h2 class="carousel-title fade-in" data-i18n="products.title">AI Products</h2>
-    <div class="site-carousel">
-      <div class="carousel-arrow left" id="carouselPrev">‹</div>
-      <div class="carousel-arrow right" id="carouselNext">›</div>
-      <div class="carousel-track" id="carouselTrack">
-        <a class="carousel-item" href="surveyflow.html">
-          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://surveyflow.ai" alt="surveyflow.ai preview" />
-          <div class="carousel-caption"><span data-i18n="products.surveyflow">SurveyFlow.ai</span><span data-i18n="products.learn_more">Learn More →</span></div>
-        </a>
-        <a class="carousel-item" href="https://datagpt.com.br" target="_blank" rel="noopener">
-          <img class="carousel-image" src="datagpt.png" alt="DataGPT - AI para análise de dados empresariais" />
-          <div class="carousel-caption"><span data-i18n="products.datagpt">DataGPT</span><span data-i18n="products.open_site">Open site →</span></div>
-        </a>
-        <a class="carousel-item" href="https://messiax.ai" target="_blank" rel="noopener">
-          <img class="carousel-image" src="Messiax_tela.png" alt="messiax.ai preview" />
-          <div class="carousel-caption"><span data-i18n="products.messiax">messiax.ai</span><span data-i18n="products.open_site">Open site →</span></div>
-        </a>
-        <a class="carousel-item" href="https://psychox.ai" target="_blank" rel="noopener">
-          <img class="carousel-image" src="PSYCHOX_tela.png" alt="psychox.ai preview" />
-          <div class="carousel-caption"><span data-i18n="products.psychox">psychox.ai</span><span data-i18n="products.open_site">Open site →</span></div>
-        </a>
-        <a class="carousel-item" href="https://hubiabrasil.com.br" target="_blank" rel="noopener">
-          <img class="carousel-image" src="https://image.thum.io/get/width/1200/https://hubiabrasil.com.br" alt="hubiabrasil.com.br preview" />
-          <div class="carousel-caption"><span data-i18n="products.hubia">hubiabrasil.com.br</span><span data-i18n="products.open_site">Open site →</span></div>
-        </a>
-        <a class="carousel-item" href="#" target="_blank" rel="noopener">
-          <img class="carousel-image" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=600&fit=crop&crop=center" alt="INOSX Vision Robotics - 3D Vision and Visual Language Models" />
-          <div class="carousel-caption"><span data-i18n="products.vision">INOSX Vision Robotics</span><span data-i18n="products.vision_subtitle">Coming Soon →</span></div>
-        </a>
-      </div>
-      <!-- Indicadores do carrossel -->
-      <div class="carousel-indicators" id="carouselIndicators">
-        <button class="carousel-indicator active" data-index="0"></button>
-        <button class="carousel-indicator" data-index="1"></button>
-        <button class="carousel-indicator" data-index="2"></button>
-        <button class="carousel-indicator" data-index="3"></button>
-        <button class="carousel-indicator" data-index="4"></button>
-        <button class="carousel-indicator" data-index="5"></button>
+  <!-- AI Products Grid -->
+  <div class="products-section">
+    <h2 class="section-title fade-in" data-i18n="products.title">AI Products</h2>
+    <div class="products-grid">
+      <a class="product-card fade-in" href="surveyflow.html">
+        <div class="product-image-container">
+          <img class="product-image" src="https://image.thum.io/get/width/800/https://surveyflow.ai" alt="SurveyFlow.ai preview" loading="lazy" />
+          <div class="product-overlay">
+            <span class="product-cta" data-i18n="products.learn_more">Learn More →</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name" data-i18n="products.surveyflow">SurveyFlow.ai</h3>
+          <p class="product-description" data-i18n="products.surveyflow_desc">AI-powered survey intelligence platform</p>
+        </div>
+      </a>
+
+      <a class="product-card fade-in" href="https://datagpt.com.br" target="_blank" rel="noopener">
+        <div class="product-image-container">
+          <img class="product-image" src="datagpt.png" alt="DataGPT preview" loading="lazy" />
+          <div class="product-overlay">
+            <span class="product-cta" data-i18n="products.open_site">Open site →</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name" data-i18n="products.datagpt">DataGPT</h3>
+          <p class="product-description" data-i18n="products.datagpt_desc">AI for business data analysis</p>
+        </div>
+      </a>
+
+      <a class="product-card fade-in" href="https://messiax.ai" target="_blank" rel="noopener">
+        <div class="product-image-container">
+          <img class="product-image" src="Messiax_tela.png" alt="Messiax.ai preview" loading="lazy" />
+          <div class="product-overlay">
+            <span class="product-cta" data-i18n="products.open_site">Open site →</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name" data-i18n="products.messiax">Messiax.ai</h3>
+          <p class="product-description" data-i18n="products.messiax_desc">AI spiritual companion</p>
+        </div>
+      </a>
+
+      <a class="product-card fade-in" href="https://psychox.ai" target="_blank" rel="noopener">
+        <div class="product-image-container">
+          <img class="product-image" src="PSYCHOX_tela.png" alt="PsychoX.ai preview" loading="lazy" />
+          <div class="product-overlay">
+            <span class="product-cta" data-i18n="products.open_site">Open site →</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name" data-i18n="products.psychox">PsychoX.ai</h3>
+          <p class="product-description" data-i18n="products.psychox_desc">AI psychological support</p>
+        </div>
+      </a>
+
+      <a class="product-card fade-in" href="https://hubiabrasil.com.br" target="_blank" rel="noopener">
+        <div class="product-image-container">
+          <img class="product-image" src="https://image.thum.io/get/width/800/https://hubiabrasil.com.br" alt="Hubia Brasil preview" loading="lazy" />
+          <div class="product-overlay">
+            <span class="product-cta" data-i18n="products.open_site">Open site →</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name" data-i18n="products.hubia">Hubia Brasil</h3>
+          <p class="product-description" data-i18n="products.hubia_desc">Business intelligence platform</p>
+        </div>
+      </a>
+
+      <div class="product-card product-coming-soon fade-in">
+        <div class="product-image-container">
+          <img class="product-image" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&crop=center" alt="INOSX Vision Robotics" loading="lazy" />
+          <div class="product-overlay coming-soon-overlay">
+            <span class="coming-soon-badge" data-i18n="products.vision_subtitle">Coming Soon</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name" data-i18n="products.vision">INOSX Vision Robotics</h3>
+          <p class="product-description" data-i18n="products.vision_desc">3D Vision & Visual Language Models</p>
+        </div>
       </div>
     </div>
   </div>
@@ -2522,64 +2586,6 @@
     }
 
     // Carrossel: navegação e autoplay
-    function initCarousel() {
-      const track = document.getElementById('carouselTrack');
-      const prev = document.getElementById('carouselPrev');
-      const next = document.getElementById('carouselNext');
-      const indicators = document.querySelectorAll('.carousel-indicator');
-      if (!track || !prev || !next) return;
-
-      const items = track.querySelectorAll('.carousel-item');
-      const totalItems = items.length;
-      let currentIndex = 0;
-
-      const getStep = () => Math.min(track.clientWidth * 0.8, 900);
-
-      function updateIndicators() {
-        indicators.forEach((indicator, index) => {
-          indicator.classList.toggle('active', index === currentIndex);
-        });
-      }
-
-      function scrollToIndex(index) {
-        const itemWidth = getStep();
-        track.scrollTo({ left: index * itemWidth, behavior: 'smooth' });
-        currentIndex = index;
-        updateIndicators();
-      }
-
-      prev.addEventListener('click', () => {
-        const newIndex = currentIndex > 0 ? currentIndex - 1 : totalItems - 1;
-        scrollToIndex(newIndex);
-      });
-
-      next.addEventListener('click', () => {
-        const newIndex = currentIndex < totalItems - 1 ? currentIndex + 1 : 0;
-        scrollToIndex(newIndex);
-      });
-
-      // Indicadores clicáveis
-      indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-          scrollToIndex(index);
-        });
-      });
-
-      let autoTimer;
-      function startAuto() {
-        stopAuto();
-        autoTimer = setInterval(() => {
-          const newIndex = currentIndex < totalItems - 1 ? currentIndex + 1 : 0;
-          scrollToIndex(newIndex);
-        }, 8000);
-      }
-      function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
-
-      track.addEventListener('mouseenter', stopAuto);
-      track.addEventListener('mouseleave', startAuto);
-      startAuto();
-    }
-
     // Desenhar linhas entre partículas próximas usando canvas
     function initParticleLines() {
       const canvas = document.getElementById('particle-lines-canvas');
@@ -2647,7 +2653,6 @@
     // Inicializar quando a página carregar
     window.addEventListener('load', function() {
       createParticles();
-      initCarousel();
       initStickyCTA();
       window.scrollTo(0, 0);
       
