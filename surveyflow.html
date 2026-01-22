@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SurveyFlow.ai - AI-Powered Survey Intelligence | INOSX</title>
+  <meta name="description" content="Transform feedback into actionable insights instantly. SurveyFlow.ai creates intelligent surveys, analyzes responses with AI, and delivers insights that drive decisions.">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
+  <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
+  <link rel="shortcut icon" href="/favicon32x32.ico">
+  
+  <!-- i18n System -->
+  <script src="/i18n/i18n.js" defer></script>
+  
+  <style>
+    :root {
+      --bg-color: #0a0e1a;
+      --text-color: #e6f0ff;
+      --accent-teal: #14b8a6;
+      --accent-green: #10b981;
+      --accent-blue: #0ea5e9;
+      --gradient-survey: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+      --gradient-card: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+      --surface-glass: rgba(148, 163, 184, 0.08);
+      --border-soft: rgba(20, 184, 166, 0.28);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Top Bar Menu */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, rgba(11, 16, 32, 0.95), rgba(26, 31, 53, 0.95));
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .topbar-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .topbar-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex: 1;
+    }
+
+    .topbar-nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      transition: all 0.2s ease;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .topbar-nav a:hover {
+      opacity: 1;
+      color: var(--accent-teal);
+      border-bottom-color: var(--accent-teal);
+    }
+
+    .language-selector {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 6px 10px;
+    }
+
+    .language-selector select {
+      background: transparent;
+      border: none;
+      color: var(--text-color);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .language-selector select option {
+      background: #0f1424;
+      color: var(--text-color);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem 2rem 2rem;
+      position: relative;
+      background: radial-gradient(ellipse at top, rgba(20, 184, 166, 0.15), transparent 50%),
+                  radial-gradient(ellipse at bottom, rgba(14, 165, 233, 0.15), transparent 50%);
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: var(--gradient-card);
+      border: 1px solid var(--border-soft);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+      margin-bottom: 2rem;
+      animation: fadeIn 1s ease;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      background: var(--gradient-survey);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeIn 1s ease 0.2s backwards;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      opacity: 0.9;
+      margin-bottom: 3rem;
+      line-height: 1.6;
+      animation: fadeIn 1s ease 0.4s backwards;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 1s ease 0.6s backwards;
+    }
+
+    .cta-button {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-primary {
+      background: var(--gradient-survey);
+      color: white;
+      box-shadow: 0 4px 20px rgba(20, 184, 166, 0.3);
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 30px rgba(20, 184, 166, 0.5);
+    }
+
+    .cta-secondary {
+      background: transparent;
+      color: var(--accent-teal);
+      border: 2px solid var(--accent-teal);
+    }
+
+    .cta-secondary:hover {
+      background: var(--gradient-card);
+      transform: translateY(-3px);
+    }
+
+    /* Features Grid */
+    .features-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, transparent, rgba(20, 184, 166, 0.05), transparent);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 3rem;
+      background: var(--gradient-survey);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .features-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-teal);
+      box-shadow: 0 10px 40px rgba(20, 184, 166, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--accent-teal);
+    }
+
+    .feature-description {
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+
+    /* How It Works */
+    .how-it-works {
+      padding: 6rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .steps {
+      display: grid;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      font-size: 3rem;
+      font-weight: 700;
+      background: var(--gradient-survey);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--accent-teal);
+    }
+
+    .step-content p {
+      opacity: 0.9;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+
+    /* Use Cases */
+    .use-cases {
+      padding: 6rem 2rem;
+      background: var(--gradient-card);
+    }
+
+    .use-cases-grid {
+      max-width: 1200px;
+      margin: 3rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .use-case {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .use-case:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-teal);
+    }
+
+    .use-case-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .use-case-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent-teal);
+    }
+
+    /* CTA Section */
+    .final-cta {
+      padding: 6rem 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1.5rem;
+      background: var(--gradient-survey);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .final-cta p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .topbar-container {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .topbar-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .step {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+      }
+
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar Menu -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <nav class="topbar-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="messiax.html">Messiax.ai</a>
+        <a href="surveyflow.html" style="color: var(--accent-teal); border-bottom-color: var(--accent-teal);">SurveyFlow.ai</a>
+        <a href="roi-calculator.html">ROI Calculator</a>
+      </nav>
+      
+      <div class="language-selector">
+        <span class="lang-icon">🌍</span>
+        <select id="languageSelector">
+          <option value="en">🇺🇸 English</option>
+          <option value="pt">🇧🇷 Português</option>
+          <option value="es">🇪🇸 Español</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="surveyflow.badge">
+        ✨ AI-Powered Survey Intelligence
+      </div>
+      <h1 class="hero-title" data-i18n="surveyflow.hero_title">
+        Transform Feedback into Actionable Insights
+      </h1>
+      <p class="hero-subtitle" data-i18n="surveyflow.hero_subtitle">
+        Create intelligent surveys in seconds, analyze responses with AI, and get insights that actually drive decisions. No data science degree required.
+      </p>
+      <div class="hero-cta">
+        <a href="index.html#contact" class="cta-button cta-primary" data-i18n="surveyflow.cta_primary">
+          Start Free Trial →
+        </a>
+        <a href="#features" class="cta-button cta-secondary" data-i18n="surveyflow.cta_secondary">
+          See How It Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <h2 class="section-title" data-i18n="surveyflow.features_title">
+      Intelligent Features That Actually Work
+    </h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3 class="feature-title" data-i18n="surveyflow.feature1_title">AI Survey Builder</h3>
+        <p class="feature-description" data-i18n="surveyflow.feature1_desc">
+          Describe what you want to learn, and AI generates a complete survey with optimized questions in seconds.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title" data-i18n="surveyflow.feature2_title">Smart Analytics</h3>
+        <p class="feature-description" data-i18n="surveyflow.feature2_desc">
+          AI automatically summarizes thousands of responses, identifies trends, and surfaces actionable insights.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title" data-i18n="surveyflow.feature3_title">Precision Targeting</h3>
+        <p class="feature-description" data-i18n="surveyflow.feature3_desc">
+          Target surveys based on user behavior, attributes, and journey stage. Get feedback at the perfect moment.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3 class="feature-title" data-i18n="surveyflow.feature4_title">Brand Customization</h3>
+        <p class="feature-description" data-i18n="surveyflow.feature4_desc">
+          Drag-and-drop editor with full brand control. Match your colors, fonts, and style—no design skills needed.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3 class="feature-title" data-i18n="surveyflow.feature5_title">Multi-Language Support</h3>
+        <p class="feature-description" data-i18n="surveyflow.feature5_desc">
+          Deploy surveys in 50+ languages simultaneously. AI translates and adapts questions for cultural context.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title" data-i18n="surveyflow.feature6_title">Real-Time Results</h3>
+        <p class="feature-description" data-i18n="surveyflow.feature6_desc">
+          Watch responses flow in live. Get instant notifications on critical feedback that needs immediate action.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2 class="section-title" data-i18n="surveyflow.how_title">
+      How SurveyFlow Works
+    </h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3 data-i18n="surveyflow.step1_title">Tell AI What You Need</h3>
+          <p data-i18n="surveyflow.step1_desc">
+            Simply describe your research goal: "I want to understand why users abandon checkout" or "Measure customer satisfaction after support calls." AI does the rest.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3 data-i18n="surveyflow.step2_title">AI Generates Optimized Surveys</h3>
+          <p data-i18n="surveyflow.step2_desc">
+            Get a complete survey draft with research-backed questions, optimal question types, and smart skip logic—ready to launch in seconds.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3 data-i18n="surveyflow.step3_title">Deploy at the Perfect Moment</h3>
+          <p data-i18n="surveyflow.step3_desc">
+            Target specific users based on behavior, trigger surveys at key moments, and personalize the experience. Maximize response rates.
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3 data-i18n="surveyflow.step4_title">Get Instant AI Insights</h3>
+          <p data-i18n="surveyflow.step4_desc">
+            AI analyzes every response, identifies patterns, and delivers clear recommendations. See what matters, skip the spreadsheets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="use-cases">
+    <h2 class="section-title" data-i18n="surveyflow.usecases_title">
+      Perfect For Every Team
+    </h2>
+    <div class="use-cases-grid">
+      <div class="use-case">
+        <div class="use-case-icon">💼</div>
+        <div class="use-case-title" data-i18n="surveyflow.usecase1">Product Teams</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">🎯</div>
+        <div class="use-case-title" data-i18n="surveyflow.usecase2">Marketing</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">🤝</div>
+        <div class="use-case-title" data-i18n="surveyflow.usecase3">Customer Success</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">🎨</div>
+        <div class="use-case-title" data-i18n="surveyflow.usecase4">UX Research</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">👥</div>
+        <div class="use-case-title" data-i18n="surveyflow.usecase5">HR & People Ops</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-icon">📈</div>
+        <div class="use-case-title" data-i18n="surveyflow.usecase6">Sales Teams</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2 data-i18n="surveyflow.final_cta_title">
+      Ready to Stop Guessing and Start Knowing?
+    </h2>
+    <p data-i18n="surveyflow.final_cta_subtitle">
+      Join 500+ companies using SurveyFlow to make data-driven decisions with confidence.
+    </p>
+    <a href="index.html#contact" class="cta-button cta-primary" data-i18n="surveyflow.final_cta_btn">
+      Start Your Free Trial →
+    </a>
+  </section>
+
+  <script>
+    // Google Analytics tracking (if needed)
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'page_view', {
+        'page_title': 'SurveyFlow.ai Landing Page',
+        'page_location': window.location.href
+      });
+    }
+  </script>
+</body>
+</html>
