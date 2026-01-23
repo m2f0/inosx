@@ -1908,11 +1908,7 @@
     </select>
   </div>
 
-  <!-- Sticky CTA Bar -->
-  <div class="sticky-cta-bar" id="stickyCTA">
-    <span class="sticky-cta-text" data-i18n="sticky_cta.text">Ready to transform your business with AI?</span>
-    <button class="sticky-cta-button" onclick="window.location.href='roi-calculator.html'" data-i18n="sticky_cta.btn">Get Free Consultation</button>
-  </div>
+  <!-- Sticky CTA Bar - REMOVED (was overlapping top menu) -->
 
   <!-- Partículas de fundo -->
   <div class="particles" id="particles"></div>
@@ -2842,7 +2838,7 @@
     // Inicializar quando a página carregar
     window.addEventListener('load', function() {
       createParticles();
-      initStickyCTA();
+      // initStickyCTA(); // REMOVED - sticky CTA bar removed
       window.scrollTo(0, 0);
       
       // Track page view
@@ -2868,7 +2864,8 @@
       });
     });
 
-    // Sticky CTA Bar functionality
+    // Sticky CTA Bar functionality - REMOVED (was overlapping menu)
+    /*
     function initStickyCTA() {
       const stickyCTA = document.getElementById('stickyCTA');
       let hasShown = false;
@@ -2889,6 +2886,7 @@
         }
       });
     }
+    */
 
     // Prevenir scroll horizontal
     window.addEventListener('scroll', function() {
