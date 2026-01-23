@@ -2073,7 +2073,7 @@
           </div>
           
           <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde apenas se iframe carregar) -->
+            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
             <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
               <div style="text-align: center; padding: 2rem;">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">🙏</div>
@@ -2090,7 +2090,7 @@
               loading="lazy"
               allowfullscreen
               style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { if(this.contentWindow && this.contentWindow.document && this.contentWindow.document.body && this.contentWindow.document.body.innerHTML.length > 100) { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; } }, 500);"
+              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
             ></iframe>
           </div>
         </div>
@@ -2156,13 +2156,13 @@
           </div>
           
           <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual se iframe não carregar -->
-            <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); border-radius: 16px; z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.3s;">
+            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
+            <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(20, 184, 166, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
               <div style="text-align: center; padding: 2rem;">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
                 <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #14b8a6 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">SurveyFlow.ai</h3>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">AI-Powered Survey Intelligence<br><small>Smart • Fast • Insightful</small></p>
-                <a href="https://surveyflow.ai" target="_blank" class="btn-featured" style="pointer-events: all;">Visit Site →</a>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;">AI-Powered Survey Intelligence<br><small style="opacity: 0.8;">Smart • Fast • Insightful</small></p>
+                <a href="https://surveyflow.ai" target="_blank" class="btn-featured" style="pointer-events: all; display: inline-block;">Visit Site →</a>
               </div>
             </div>
             
@@ -2172,9 +2172,8 @@
               frameborder="0"
               loading="lazy"
               allowfullscreen
-              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 2;"
-              onload="this.previousElementSibling.style.opacity='0';"
-              onerror="this.previousElementSibling.style.opacity='1'; this.style.opacity='0';"
+              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
+              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
             ></iframe>
           </div>
         </div>
@@ -2240,7 +2239,7 @@
           </div>
           
           <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde apenas se iframe carregar) -->
+            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
             <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
               <div style="text-align: center; padding: 2rem;">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">💜</div>
@@ -2257,7 +2256,7 @@
               loading="lazy"
               allowfullscreen
               style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { if(this.contentWindow && this.contentWindow.document && this.contentWindow.document.body && this.contentWindow.document.body.innerHTML.length > 100) { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; } }, 500);"
+              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
             ></iframe>
           </div>
         </div>
@@ -2323,7 +2322,7 @@
           </div>
           
           <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde apenas se iframe carregar) -->
+            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
             <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(52, 211, 153, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
               <div style="text-align: center; padding: 2rem;">
                 <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
@@ -2340,7 +2339,7 @@
               loading="lazy"
               allowfullscreen
               style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { if(this.contentWindow && this.contentWindow.document && this.contentWindow.document.body && this.contentWindow.document.body.innerHTML.length > 100) { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; } }, 500);"
+              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
             ></iframe>
           </div>
         </div>
