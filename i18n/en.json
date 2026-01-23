@@ -280,7 +280,14 @@
       "benefit_5": "Natural language control and interaction"
     },
     "value_title": "INOSX Unified Value Proposition",
-    "value_text": "With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business."
+    "value_text": "With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business.",
+    "cta_button": "Get Started →",
+    "cta_button_notify": "Notify Me →",
+    "cta_title": "Ready to Transform Your Business with AI?",
+    "cta_subtitle": "Let's discuss how INOSX can build a custom AI solution for your specific needs.",
+    "cta_email": "📧 Email Us: inosx@inosx.com",
+    "cta_schedule": "Schedule Free Consultation",
+    "cta_benefits": "✓ Free 30-min consultation  ✓ Custom AI roadmap  ✓ ROI analysis  ✓ No commitment required"
   },
   "modal": {
     "title": "Get Your Free AI Consultation",

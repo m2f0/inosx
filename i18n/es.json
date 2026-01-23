@@ -280,7 +280,14 @@
       "benefit_5": "Control e interacción en lenguaje natural"
     },
     "value_title": "Propuesta de Valor Unificada INOSX",
-    "value_text": "Con las soluciones de INOSX, su organización se asocia con la IA, no solo la usa. Nuestros productos reducen costos, aumentan la eficiencia, democratizan el acceso a los datos, protegen activos digitales y orquestan procesos complejos a escala, creando un negocio más rápido, seguro y competitivo."
+    "value_text": "Con las soluciones de INOSX, su organización se asocia con la IA, no solo la usa. Nuestros productos reducen costos, aumentan la eficiencia, democratizan el acceso a los datos, protegen activos digitales y orquestan procesos complejos a escala, creando un negocio más rápido, seguro y competitivo.",
+    "cta_button": "Comenzar →",
+    "cta_button_notify": "Notifíqueme →",
+    "cta_title": "¿Listo para Transformar Su Negocio con IA?",
+    "cta_subtitle": "Hablemos sobre cómo INOSX puede construir una solución de IA personalizada para sus necesidades específicas.",
+    "cta_email": "📧 Envíenos Email: inosx@inosx.com",
+    "cta_schedule": "Agendar Consulta Gratuita",
+    "cta_benefits": "✓ Consulta gratuita de 30 min  ✓ Hoja de ruta personalizada  ✓ Análisis de ROI  ✓ Sin compromiso"
   },
   "modal": {
     "title": "Obtenga Su Consulta Gratuita de IA",

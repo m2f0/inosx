@@ -408,6 +408,277 @@
       margin: 0 auto;
     }
 
+    /* NEW: Modern Service Cards Design */
+    .services-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .services-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-card-modern {
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+      border: 1px solid rgba(96, 165, 250, 0.2);
+      border-radius: 24px;
+      padding: 0;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card-modern:hover {
+      transform: translateY(-8px);
+      border-color: rgba(96, 165, 250, 0.6);
+      box-shadow: 0 20px 60px rgba(96, 165, 250, 0.3);
+    }
+
+    .service-card-header {
+      padding: 2.5rem 2rem 2rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+
+    .service-icon-large {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.4));
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #1a1a2e;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .service-title-modern {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .service-description-modern {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .service-card-body {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .service-section {
+      margin-bottom: 2rem;
+    }
+
+    .service-section-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-list li {
+      padding: 0.75rem 0;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .list-icon {
+      color: #60a5fa;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .benefit-item {
+      background: rgba(96, 165, 250, 0.08);
+      border: 1px solid rgba(96, 165, 250, 0.15);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover {
+      background: rgba(96, 165, 250, 0.12);
+      transform: translateX(4px);
+    }
+
+    .benefit-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .service-card-footer {
+      padding: 1.5rem 2rem 2rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-service-cta {
+      display: block;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .btn-service-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(96, 165, 250, 0.5);
+    }
+
+    .btn-service-cta-secondary {
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+      border: 2px solid rgba(96, 165, 250, 0.4);
+    }
+
+    .services-value-section {
+      margin-top: 5rem;
+      padding: 4rem 3rem;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      border-radius: 32px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .value-content {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .value-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+    }
+
+    .value-text {
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .value-cta-section {
+      padding-top: 2rem;
+    }
+
+    .value-cta-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .value-cta-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2.5rem;
+    }
+
+    .value-cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn-value-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.25rem 3rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 30px rgba(96, 165, 250, 0.4);
+    }
+
+    .btn-value-cta-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(96, 165, 250, 0.6);
+    }
+
+    .btn-value-cta-secondary {
+      padding: 1.25rem 3rem;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+      color: #fff;
+      border: 2px solid rgba(168, 85, 247, 0.5);
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 1.15rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-value-cta-secondary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(168, 85, 247, 0.4);
+    }
+
+    .value-cta-benefits {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
     @media (max-width: 768px) {
       .services-grid {
         grid-template-columns: 1fr;
@@ -2643,161 +2914,319 @@
 
   <!-- AI Services Section -->
   <div class="services-section">
-    <h2 class="services-title fade-in" data-i18n="services.title">AI Services</h2>
-    
-    <div class="services-intro fade-in" data-i18n="services.intro">
-      INOSX builds practical, production-grade AI solutions that transform data, processes, and systems into measurable outcomes. Our portfolio blends automation, analytics, security, and multi-agent orchestration to drive efficiency, innovation, and competitiveness.
+    <div class="services-header fade-in">
+      <h2 class="services-title" data-i18n="services.title">AI Services</h2>
+      <p class="services-subtitle" data-i18n="services.intro">
+        INOSX builds practical, production-grade AI solutions that transform data, processes, and systems into measurable outcomes. Our portfolio blends automation, analytics, security, and multi-agent orchestration to drive efficiency, innovation, and competitiveness.
+      </p>
     </div>
 
     <div class="services-grid">
       <!-- INOSX AI Agents -->
-      <div class="service-card fade-in">
-        <h3 class="service-title">
-          <span class="service-icon">🤖</span>
-          <span data-i18n="services.ai_agents.title">INOSX AI Agents</span>
-        </h3>
-        <p class="service-description" data-i18n="services.ai_agents.description">
-          Autonomous agents that eliminate repetitive work and connect platforms end‑to‑end.
-        </p>
-        <div class="service-features">
-          <h4 data-i18n="services.ai_agents.capabilities_title">Main capabilities:</h4>
-          <ul>
-            <li data-i18n="services.ai_agents.capability_1">Auto-integration with ERPs, CRMs, databases, and APIs</li>
-            <li data-i18n="services.ai_agents.capability_2">End-to-end process execution with error reduction</li>
-            <li data-i18n="services.ai_agents.capability_3">Real-time insights and action generation</li>
-            <li data-i18n="services.ai_agents.capability_4">Continuous learning and adaptation to business needs</li>
-          </ul>
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🤖</div>
+          <h3 class="service-title-modern" data-i18n="services.ai_agents.title">INOSX AI Agents</h3>
+          <p class="service-description-modern" data-i18n="services.ai_agents.description">
+            Autonomous agents that eliminate repetitive work and connect platforms end‑to‑end.
+          </p>
         </div>
-        <div class="service-benefits">
-          <h4 data-i18n="services.ai_agents.benefits_title">Benefits:</h4>
-          <ul>
-            <li data-i18n="services.ai_agents.benefit_1">Lower operational costs</li>
-            <li data-i18n="services.ai_agents.benefit_2">Higher efficiency and productivity</li>
-            <li data-i18n="services.ai_agents.benefit_3">Faster, more confident decisions</li>
-            <li data-i18n="services.ai_agents.benefit_4">Scales alongside your growth</li>
-          </ul>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.ai_agents.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li data-i18n="services.ai_agents.capability_1">
+                <span class="list-icon">✓</span> Auto-integration with ERPs, CRMs, databases, and APIs
+              </li>
+              <li data-i18n="services.ai_agents.capability_2">
+                <span class="list-icon">✓</span> End-to-end process execution with error reduction
+              </li>
+              <li data-i18n="services.ai_agents.capability_3">
+                <span class="list-icon">✓</span> Real-time insights and action generation
+              </li>
+              <li data-i18n="services.ai_agents.capability_4">
+                <span class="list-icon">✓</span> Continuous learning and adaptation to business needs
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.ai_agents.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">💰</span>
+                <span data-i18n="services.ai_agents.benefit_1">Lower operational costs</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">⚡</span>
+                <span data-i18n="services.ai_agents.benefit_2">Higher efficiency</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🎯</span>
+                <span data-i18n="services.ai_agents.benefit_3">Faster decisions</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">📈</span>
+                <span data-i18n="services.ai_agents.benefit_4">Scalable growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in INOSX AI Agents" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
         </div>
       </div>
 
       <!-- INOSX CyberAI Security -->
-      <div class="service-card fade-in">
-        <h3 class="service-title">
-          <span class="service-icon">🔒</span>
-          <span data-i18n="services.security.title">INOSX CyberAI Security</span>
-        </h3>
-        <p class="service-description" data-i18n="services.security.description">
-          AI-powered cybersecurity for modern infrastructures.
-        </p>
-        <div class="service-features">
-          <h4 data-i18n="services.security.capabilities_title">Main capabilities:</h4>
-          <ul>
-            <li data-i18n="services.security.capability_1">Continuous monitoring across systems and networks</li>
-            <li data-i18n="services.security.capability_2">Anomaly, fraud, and intrusion detection</li>
-            <li data-i18n="services.security.capability_3">Automated and intelligent incident response</li>
-          </ul>
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🔒</div>
+          <h3 class="service-title-modern" data-i18n="services.security.title">INOSX CyberAI Security</h3>
+          <p class="service-description-modern" data-i18n="services.security.description">
+            AI-powered cybersecurity for modern infrastructures.
+          </p>
         </div>
-        <div class="service-benefits">
-          <h4 data-i18n="services.security.benefits_title">Benefits:</h4>
-          <ul>
-            <li data-i18n="services.security.benefit_1">Protection of critical digital assets</li>
-            <li data-i18n="services.security.benefit_2">Risk and vulnerability reduction</li>
-            <li data-i18n="services.security.benefit_3">Regulatory compliance assurance</li>
-          </ul>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.security.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li data-i18n="services.security.capability_1">
+                <span class="list-icon">✓</span> Continuous monitoring across systems and networks
+              </li>
+              <li data-i18n="services.security.capability_2">
+                <span class="list-icon">✓</span> Anomaly, fraud, and intrusion detection
+              </li>
+              <li data-i18n="services.security.capability_3">
+                <span class="list-icon">✓</span> Automated and intelligent incident response
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.security.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">🛡️</span>
+                <span data-i18n="services.security.benefit_1">Asset protection</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">⚠️</span>
+                <span data-i18n="services.security.benefit_2">Risk reduction</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <span data-i18n="services.security.benefit_3">Compliance assured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in CyberAI Security" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
         </div>
       </div>
 
       <!-- INOSX Knowledge Agents -->
-      <div class="service-card fade-in">
-        <h3 class="service-title">
-          <span class="service-icon">📚</span>
-          <span data-i18n="services.knowledge.title">INOSX Knowledge Agents</span>
-        </h3>
-        <p class="service-description" data-i18n="services.knowledge.description">
-          Document- and knowledge-centric agents for internal repositories.
-        </p>
-        <div class="service-features">
-          <h4 data-i18n="services.knowledge.capabilities_title">Main capabilities:</h4>
-          <ul>
-            <li data-i18n="services.knowledge.capability_1">Automatic indexing and reading of corporate documents</li>
-            <li data-i18n="services.knowledge.capability_2">Contextual, semantic search over knowledge bases</li>
-            <li data-i18n="services.knowledge.capability_3">Integrations with SharePoint, Confluence, Google Drive, and more</li>
-          </ul>
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">📚</div>
+          <h3 class="service-title-modern" data-i18n="services.knowledge.title">INOSX Knowledge Agents</h3>
+          <p class="service-description-modern" data-i18n="services.knowledge.description">
+            Document- and knowledge-centric agents for internal repositories.
+          </p>
         </div>
-        <div class="service-benefits">
-          <h4 data-i18n="services.knowledge.benefits_title">Benefits:</h4>
-          <ul>
-            <li data-i18n="services.knowledge.benefit_1">Less time spent searching for information</li>
-            <li data-i18n="services.knowledge.benefit_2">Higher team productivity</li>
-            <li data-i18n="services.knowledge.benefit_3">Centralized and reusable organizational knowledge</li>
-          </ul>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.knowledge.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li data-i18n="services.knowledge.capability_1">
+                <span class="list-icon">✓</span> Automatic indexing and reading of corporate documents
+              </li>
+              <li data-i18n="services.knowledge.capability_2">
+                <span class="list-icon">✓</span> Contextual, semantic search over knowledge bases
+              </li>
+              <li data-i18n="services.knowledge.capability_3">
+                <span class="list-icon">✓</span> Integrations with SharePoint, Confluence, Google Drive, and more
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.knowledge.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">⏱️</span>
+                <span data-i18n="services.knowledge.benefit_1">Time saved</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🚀</span>
+                <span data-i18n="services.knowledge.benefit_2">Higher productivity</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🧠</span>
+                <span data-i18n="services.knowledge.benefit_3">Centralized knowledge</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in Knowledge Agents" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
         </div>
       </div>
 
       <!-- INOSX AI Orchestration -->
-      <div class="service-card fade-in">
-        <h3 class="service-title">
-          <span class="service-icon">🎯</span>
-          <span data-i18n="services.orchestration.title">INOSX AI Orchestration</span>
-        </h3>
-        <p class="service-description" data-i18n="services.orchestration.description">
-          Orchestrates complex workflows across multiple AI agents.
-        </p>
-        <div class="service-features">
-          <h4 data-i18n="services.orchestration.capabilities_title">Main capabilities:</h4>
-          <ul>
-            <li data-i18n="services.orchestration.capability_1">Coordinates agents across corporate processes</li>
-            <li data-i18n="services.orchestration.capability_2">Integrates ERP, CRM, customer support, and operations</li>
-            <li data-i18n="services.orchestration.capability_3">Full governance and traceability of executions</li>
-          </ul>
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🎯</div>
+          <h3 class="service-title-modern" data-i18n="services.orchestration.title">INOSX AI Orchestration</h3>
+          <p class="service-description-modern" data-i18n="services.orchestration.description">
+            Orchestrates complex workflows across multiple AI agents.
+          </p>
         </div>
-        <div class="service-benefits">
-          <h4 data-i18n="services.orchestration.benefits_title">Benefits:</h4>
-          <ul>
-            <li data-i18n="services.orchestration.benefit_1">Collaborative ecosystem of intelligent agents</li>
-            <li data-i18n="services.orchestration.benefit_2">Greater reliability and transparency</li>
-            <li data-i18n="services.orchestration.benefit_3">Flexibility to evolve with business strategy</li>
-          </ul>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.orchestration.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li data-i18n="services.orchestration.capability_1">
+                <span class="list-icon">✓</span> Coordinates agents across corporate processes
+              </li>
+              <li data-i18n="services.orchestration.capability_2">
+                <span class="list-icon">✓</span> Integrates ERP, CRM, customer support, and operations
+              </li>
+              <li data-i18n="services.orchestration.capability_3">
+                <span class="list-icon">✓</span> Full governance and traceability of executions
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.orchestration.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">🤝</span>
+                <span data-i18n="services.orchestration.benefit_1">Collaborative AI</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🔍</span>
+                <span data-i18n="services.orchestration.benefit_2">Full transparency</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🔄</span>
+                <span data-i18n="services.orchestration.benefit_3">Business agility</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in AI Orchestration" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
         </div>
       </div>
 
       <!-- INOSX Vision Robotics -->
-      <div class="service-card fade-in">
-        <h3 class="service-title">
-          <span class="service-icon">🤖</span>
-          <span data-i18n="services.vision.title">INOSX Vision Robotics</span>
-        </h3>
-        <p class="service-description" data-i18n="services.vision.description">
-          Advanced robotic solutions powered by 3D vision and visual language models for autonomous operations.
-        </p>
-        <div class="service-features">
-          <h4 data-i18n="services.vision.capabilities_title">Main capabilities:</h4>
-          <ul>
-            <li data-i18n="services.vision.capability_1">3D spatial perception and object recognition</li>
-            <li data-i18n="services.vision.capability_2">Visual language model integration for natural interaction</li>
-            <li data-i18n="services.vision.capability_3">Autonomous navigation and manipulation systems</li>
-            <li data-i18n="services.vision.capability_4">Real-time decision making with computer vision</li>
-            <li data-i18n="services.vision.capability_5">Multi-sensor fusion for enhanced accuracy</li>
-          </ul>
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🤖</div>
+          <div class="service-badge">Coming Soon</div>
+          <h3 class="service-title-modern" data-i18n="services.vision.title">INOSX Vision Robotics</h3>
+          <p class="service-description-modern" data-i18n="services.vision.description">
+            Advanced robotic solutions powered by 3D vision and visual language models for autonomous operations.
+          </p>
         </div>
-        <div class="service-benefits">
-          <h4 data-i18n="services.vision.benefits_title">Benefits:</h4>
-          <ul>
-            <li data-i18n="services.vision.benefit_1">Fully autonomous robotic operations</li>
-            <li data-i18n="services.vision.benefit_2">Reduced human intervention in complex tasks</li>
-            <li data-i18n="services.vision.benefit_3">Enhanced precision and reliability</li>
-            <li data-i18n="services.vision.benefit_4">Scalable solutions for industrial applications</li>
-            <li data-i18n="services.vision.benefit_5">Natural language control and interaction</li>
-          </ul>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.vision.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li data-i18n="services.vision.capability_1">
+                <span class="list-icon">✓</span> 3D spatial perception and object recognition
+              </li>
+              <li data-i18n="services.vision.capability_2">
+                <span class="list-icon">✓</span> Visual language model integration for natural interaction
+              </li>
+              <li data-i18n="services.vision.capability_3">
+                <span class="list-icon">✓</span> Autonomous navigation and manipulation systems
+              </li>
+              <li data-i18n="services.vision.capability_4">
+                <span class="list-icon">✓</span> Real-time decision making with computer vision
+              </li>
+              <li data-i18n="services.vision.capability_5">
+                <span class="list-icon">✓</span> Multi-sensor fusion for enhanced accuracy
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.vision.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">🦾</span>
+                <span data-i18n="services.vision.benefit_1">Full autonomy</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">👤</span>
+                <span data-i18n="services.vision.benefit_2">Less intervention</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🎯</span>
+                <span data-i18n="services.vision.benefit_3">High precision</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🏭</span>
+                <span data-i18n="services.vision.benefit_4">Industrial scale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in Vision Robotics" class="btn-service-cta btn-service-cta-secondary" data-i18n="services.cta_button_notify">
+            Notify Me →
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Unified Value Proposition -->
-    <div class="value-proposition fade-in">
-      <h3 data-i18n="services.value_title">INOSX Unified Value Proposition</h3>
-      <p data-i18n="services.value_text">
-        With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business.
-      </p>
+    <!-- Value Proposition & Strong CTA -->
+    <div class="services-value-section fade-in">
+      <div class="value-content">
+        <h3 class="value-title" data-i18n="services.value_title">INOSX Unified Value Proposition</h3>
+        <p class="value-text" data-i18n="services.value_text">
+          With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business.
+        </p>
+      </div>
+      
+      <div class="value-cta-section">
+        <h3 class="value-cta-title" data-i18n="services.cta_title">Ready to Transform Your Business with AI?</h3>
+        <p class="value-cta-subtitle" data-i18n="services.cta_subtitle">
+          Let's discuss how INOSX can build a custom AI solution for your specific needs.
+        </p>
+        <div class="value-cta-buttons">
+          <a href="mailto:inosx@inosx.com?subject=Custom AI Solution Inquiry&body=Hi INOSX team,%0D%0A%0D%0AI'm interested in learning more about your AI solutions.%0D%0A%0D%0ACompany:%0D%0AIndustry:%0D%0ACurrent Challenge:%0D%0A%0D%0APlease contact me to discuss further." class="btn-value-cta-primary" data-i18n="services.cta_email">
+            📧 Email Us: inosx@inosx.com
+          </a>
+          <button class="btn-value-cta-secondary" onclick="openContactModal()" data-i18n="services.cta_schedule">
+            Schedule Free Consultation
+          </button>
+        </div>
+        <p class="value-cta-benefits" data-i18n="services.cta_benefits">
+          ✓ Free 30-min consultation  ✓ Custom AI roadmap  ✓ ROI analysis  ✓ No commitment required
+        </p>
+      </div>
     </div>
   </div>
 
