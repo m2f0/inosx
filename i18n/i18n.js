@@ -117,6 +117,7 @@ class I18n {
         // Handle select options separately
         return;
       } else {
+        // Simple text content replacement
         element.textContent = translation;
       }
     });
