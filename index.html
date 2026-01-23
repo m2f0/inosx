@@ -1597,6 +1597,24 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
+    .featured-mockup-iframe {
+      padding: 0;
+      overflow: hidden;
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .featured-mockup-iframe iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 450px;
+      border-radius: 16px;
+      border: none;
+      background: #1a1a2e;
+    }
+
     .mockup-content {
       text-align: center;
       padding: 2rem;
@@ -2054,15 +2072,15 @@
             <span class="floating-emoji">🕊️</span>
           </div>
           
-          <div class="featured-mockup">
-            <div class="mockup-content">
-              <div class="mockup-icon">🙏</div>
-              <h3 class="mockup-title">Messiax.ai</h3>
-              <p class="mockup-subtitle" data-i18n="featured_messiax.mockup_subtitle">
-                Sua companheira espiritual<br>
-                Multi-religiosa • Respeitosa • Sempre presente
-              </p>
-            </div>
+          <div class="featured-mockup featured-mockup-iframe">
+            <iframe 
+              src="https://messiax.ai" 
+              title="Messiax.ai - AI Spiritual Companion"
+              frameborder="0"
+              loading="lazy"
+              allowfullscreen
+              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none;"
+            ></iframe>
           </div>
         </div>
       </div>
