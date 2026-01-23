@@ -1124,6 +1124,152 @@
       line-height: 1.4;
     }
 
+    /* Industries We Serve Section */
+    .industries-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .industries-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .industries-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .industries-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .industry-card {
+      background: var(--surface-glass-strong);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .industry-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color);
+      box-shadow: 0 10px 40px rgba(96, 165, 250, 0.2);
+    }
+
+    .industry-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3));
+    }
+
+    .industry-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .industry-solutions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .industry-solutions li {
+      padding: 0.75rem 0;
+      padding-left: 1.75rem;
+      position: relative;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .industry-solutions li:last-child {
+      border-bottom: none;
+    }
+
+    .industry-solutions li::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      font-size: 0.9rem;
+    }
+
+    .industries-cta {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .industries-cta-text {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .btn-industries-cta {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .btn-industries-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(96, 165, 250, 0.5);
+      background: linear-gradient(135deg, #7dd3fc 0%, #c084fc 100%);
+    }
+
+    @media (max-width: 768px) {
+      .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .industry-card {
+        padding: 1.5rem;
+      }
+
+      .industries-cta {
+        padding: 2rem 1.5rem;
+      }
+    }
+
     /* Testimonials Section */
     .testimonials-section {
       position: relative;
@@ -2344,6 +2490,99 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Industries We Serve Section -->
+  <div class="industries-section">
+    <div class="industries-header fade-in">
+      <h2 class="industries-title" data-i18n="industries.title">Industries We Transform with AI</h2>
+      <p class="industries-subtitle" data-i18n="industries.subtitle">
+        Custom AI solutions tailored for your industry's unique challenges
+      </p>
+    </div>
+
+    <div class="industries-grid">
+      <!-- Contact Centers & Customer Service -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">📞</div>
+        <h3 class="industry-name" data-i18n="industries.contact_centers.title">Contact Centers & Customer Service</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.contact_centers.solution_1">Agent Assist & Copilot</li>
+          <li data-i18n="industries.contact_centers.solution_2">Contact Center Analytics</li>
+          <li data-i18n="industries.contact_centers.solution_3">Voice AI Agents</li>
+          <li data-i18n="industries.contact_centers.solution_4">QA/Compliance Automation</li>
+        </ul>
+      </div>
+
+      <!-- Sales & Revenue Teams -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">📈</div>
+        <h3 class="industry-name" data-i18n="industries.sales.title">Sales & Revenue Teams</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.sales.solution_1">Sales Enablement & Coaching</li>
+          <li data-i18n="industries.sales.solution_2">Meeting Transcription & Analytics</li>
+          <li data-i18n="industries.sales.solution_3">Deal Intelligence</li>
+          <li data-i18n="industries.sales.solution_4">Performance Optimization</li>
+        </ul>
+      </div>
+
+      <!-- Enterprise Communications -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">💬</div>
+        <h3 class="industry-name" data-i18n="industries.communications.title">Enterprise Communications</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.communications.solution_1">Meeting Intelligence Platforms</li>
+          <li data-i18n="industries.communications.solution_2">Collaboration Analytics</li>
+          <li data-i18n="industries.communications.solution_3">Content Moderation</li>
+          <li data-i18n="industries.communications.solution_4">Communication Insights</li>
+        </ul>
+      </div>
+
+      <!-- Smart Technology & IoT -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🏠</div>
+        <h3 class="industry-name" data-i18n="industries.iot.title">Smart Technology & IoT</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.iot.solution_1">Smart Home Devices</li>
+          <li data-i18n="industries.iot.solution_2">Robotics & Automation</li>
+          <li data-i18n="industries.iot.solution_3">IoT Intelligence</li>
+          <li data-i18n="industries.iot.solution_4">Predictive Maintenance</li>
+        </ul>
+      </div>
+
+      <!-- Compliance & Quality Assurance -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">✅</div>
+        <h3 class="industry-name" data-i18n="industries.compliance.title">Compliance & Quality Assurance</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.compliance.solution_1">Automated QA Systems</li>
+          <li data-i18n="industries.compliance.solution_2">Compliance Monitoring</li>
+          <li data-i18n="industries.compliance.solution_3">Risk Detection</li>
+          <li data-i18n="industries.compliance.solution_4">Audit Automation</li>
+        </ul>
+      </div>
+
+      <!-- Content & Media -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🎬</div>
+        <h3 class="industry-name" data-i18n="industries.content.title">Content & Media Platforms</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.content.solution_1">Content Moderation</li>
+          <li data-i18n="industries.content.solution_2">Media Analytics</li>
+          <li data-i18n="industries.content.solution_3">Sentiment Analysis</li>
+          <li data-i18n="industries.content.solution_4">Content Intelligence</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="industries-cta fade-in">
+      <p class="industries-cta-text" data-i18n="industries.cta_text">
+        Don't see your industry? We create custom AI solutions for any business challenge.
+      </p>
+      <a href="#contact" class="btn-industries-cta" data-i18n="industries.cta_button">
+        Discuss Your Project →
+      </a>
     </div>
   </div>
 

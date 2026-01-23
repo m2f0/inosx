@@ -92,6 +92,54 @@
     "btn_learn": "See How It Works →",
     "mockup_subtitle": "Conversational AI Analyst\nFast • Intelligent • Accessible"
   },
+  "industries": {
+    "title": "Industries We Transform with AI",
+    "subtitle": "Custom AI solutions tailored for your industry's unique challenges",
+    "contact_centers": {
+      "title": "Contact Centers & Customer Service",
+      "solution_1": "Agent Assist & Copilot",
+      "solution_2": "Contact Center Analytics",
+      "solution_3": "Voice AI Agents",
+      "solution_4": "QA/Compliance Automation"
+    },
+    "sales": {
+      "title": "Sales & Revenue Teams",
+      "solution_1": "Sales Enablement & Coaching",
+      "solution_2": "Meeting Transcription & Analytics",
+      "solution_3": "Deal Intelligence",
+      "solution_4": "Performance Optimization"
+    },
+    "communications": {
+      "title": "Enterprise Communications",
+      "solution_1": "Meeting Intelligence Platforms",
+      "solution_2": "Collaboration Analytics",
+      "solution_3": "Content Moderation",
+      "solution_4": "Communication Insights"
+    },
+    "iot": {
+      "title": "Smart Technology & IoT",
+      "solution_1": "Smart Home Devices",
+      "solution_2": "Robotics & Automation",
+      "solution_3": "IoT Intelligence",
+      "solution_4": "Predictive Maintenance"
+    },
+    "compliance": {
+      "title": "Compliance & Quality Assurance",
+      "solution_1": "Automated QA Systems",
+      "solution_2": "Compliance Monitoring",
+      "solution_3": "Risk Detection",
+      "solution_4": "Audit Automation"
+    },
+    "content": {
+      "title": "Content & Media Platforms",
+      "solution_1": "Content Moderation",
+      "solution_2": "Media Analytics",
+      "solution_3": "Sentiment Analysis",
+      "solution_4": "Content Intelligence"
+    },
+    "cta_text": "Don't see your industry? We create custom AI solutions for any business challenge.",
+    "cta_button": "Discuss Your Project →"
+  },
   "testimonials": {
     "title": "What Our Clients Say",
     "testimonial_1_quote": "INOSX agents cut our processing time by 60% in the first month. The ROI was immediate and continues to grow.",

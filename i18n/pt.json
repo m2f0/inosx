@@ -92,6 +92,54 @@
     "btn_learn": "Veja Como Funciona →",
     "mockup_subtitle": "Analista de IA Conversacional\nRápido • Inteligente • Acessível"
   },
+  "industries": {
+    "title": "Setores Que Transformamos com IA",
+    "subtitle": "Soluções de IA personalizadas para os desafios únicos da sua indústria",
+    "contact_centers": {
+      "title": "Contact Centers e Atendimento ao Cliente",
+      "solution_1": "Assistente de Agente & Copiloto",
+      "solution_2": "Análise de Contact Center",
+      "solution_3": "Agentes de IA por Voz",
+      "solution_4": "Automação de QA/Compliance"
+    },
+    "sales": {
+      "title": "Equipes de Vendas e Receita",
+      "solution_1": "Capacitação e Coaching de Vendas",
+      "solution_2": "Transcrição e Análise de Reuniões",
+      "solution_3": "Inteligência de Negócios",
+      "solution_4": "Otimização de Desempenho"
+    },
+    "communications": {
+      "title": "Comunicações Empresariais",
+      "solution_1": "Plataformas de Inteligência de Reuniões",
+      "solution_2": "Análise de Colaboração",
+      "solution_3": "Moderação de Conteúdo",
+      "solution_4": "Insights de Comunicação"
+    },
+    "iot": {
+      "title": "Tecnologia Inteligente e IoT",
+      "solution_1": "Dispositivos Domésticos Inteligentes",
+      "solution_2": "Robótica e Automação",
+      "solution_3": "Inteligência IoT",
+      "solution_4": "Manutenção Preditiva"
+    },
+    "compliance": {
+      "title": "Compliance e Garantia de Qualidade",
+      "solution_1": "Sistemas Automatizados de QA",
+      "solution_2": "Monitoramento de Compliance",
+      "solution_3": "Detecção de Riscos",
+      "solution_4": "Automação de Auditorias"
+    },
+    "content": {
+      "title": "Plataformas de Conteúdo e Mídia",
+      "solution_1": "Moderação de Conteúdo",
+      "solution_2": "Análise de Mídia",
+      "solution_3": "Análise de Sentimento",
+      "solution_4": "Inteligência de Conteúdo"
+    },
+    "cta_text": "Não encontrou seu setor? Criamos soluções personalizadas de IA para qualquer desafio empresarial.",
+    "cta_button": "Discutir Seu Projeto →"
+  },
   "testimonials": {
     "title": "O Que Nossos Clientes Dizem",
     "testimonial_1_quote": "Os agentes INOSX reduziram nosso tempo de processamento em 60% no primeiro mês. O ROI foi imediato e continua crescendo.",
