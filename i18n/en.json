@@ -3,6 +3,12 @@
     "title": "INOSX - The Future of AI | Enterprise AI Solutions",
     "description": "INOSX delivers enterprise AI solutions including autonomous agents, conversational analytics, and AI-powered security. Transform your business with practical AI."
   },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "roi_calculator": "ROI Calculator"
+  },
   "hero": {
     "headline1": "Your Team Wastes $10,000/Month on Manual Work",
     "headline2": "INOSX AI Agents Cut Costs by 40% and Automate Repetitive Tasks",

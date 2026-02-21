@@ -3,6 +3,12 @@
     "title": "INOSX - El Futuro de la IA | Soluciones Empresariales de IA",
     "description": "INOSX ofrece soluciones empresariales de IA que incluyen agentes autónomos, análisis conversacional y seguridad impulsada por IA. Transforme su negocio con IA práctica."
   },
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "services": "Servicios",
+    "roi_calculator": "Calculadora ROI"
+  },
   "hero": {
     "headline1": "Su Equipo Desperdicia $10,000/Mes en Trabajo Manual",
     "headline2": "Los Agentes de IA de INOSX Reducen Costos en un 40% y Automatizan Tareas Repetitivas",

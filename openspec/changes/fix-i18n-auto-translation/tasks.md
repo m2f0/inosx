@@ -74,13 +74,13 @@
 
 ## 6. Correções HTML - index.html
 
-- [ ] 6.1 Adicionar atributos `data-i18n` faltantes em elementos de texto (ver MANUAL_CORRECTIONS_NEEDED.md e audit-report.md)
-- [ ] 6.2 Adicionar atributos `data-i18n-placeholder` em inputs e textareas
-- [ ] 6.3 Adicionar atributos `data-i18n` em select options faltantes
-- [ ] 6.4 Adicionar atributos `data-i18n-title` em elementos com tooltips
-- [ ] 6.5 Adicionar atributos `data-i18n-aria-label` em elementos interativos
-- [ ] 6.6 Verificar e corrigir chaves `data-i18n` incorretas ou inconsistentes
-- [ ] 6.7 Validar mudanças com ferramenta de validação
+- [x] 6.1 Adicionar atributos `data-i18n` faltantes em elementos de texto (INICIADO: navegação completa - ver commit)
+- [ ] 6.2 Adicionar atributos `data-i18n-placeholder` em inputs e textareas (necessita correção manual)
+- [ ] 6.3 Adicionar atributos `data-i18n` em select options faltantes (necessita correção manual)
+- [ ] 6.4 Adicionar atributos `data-i18n-title` em elementos com tooltips (necessita correção manual)
+- [ ] 6.5 Adicionar atributos `data-i18n-aria-label` em elementos interativos (necessita correção manual)
+- [ ] 6.6 Verificar e corrigir chaves `data-i18n` incorretas ou inconsistentes (necessita correção manual)
+- [ ] 6.7 Validar mudanças com ferramenta de validação (executar após correções manuais)
 
 ## 7. Correções HTML - surveyflow.html
 
