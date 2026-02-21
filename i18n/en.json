@@ -48,7 +48,9 @@
     "highlight_4": "🤝 Safe and confidential space",
     "btn_learn": "Learn About Messiax →",
     "btn_access": "Access Platform →",
-    "mockup_subtitle": "Your spiritual companion\nMulti-religious • Respectful • Always present"
+    "mockup_subtitle": "Your spiritual companion\nMulti-religious • Respectful • Always present",
+    "mockup_title": "Messiax.ai",
+    "visit_site": "Visit Site →"
   },
   "featured_surveyflow": {
     "badge": "✨ Featured Product",
@@ -64,7 +66,9 @@
     "highlight_4": "📈 AI-powered insights & trends",
     "btn_learn": "Learn About SurveyFlow →",
     "btn_access": "Try Free Demo →",
-    "mockup_subtitle": "AI-Powered Survey Intelligence\nSmart • Fast • Insightful"
+    "mockup_subtitle": "AI-Powered Survey Intelligence\nSmart • Fast • Insightful",
+    "mockup_title": "SurveyFlow.ai",
+    "visit_site": "Visit Site →"
   },
   "featured_psychox": {
     "badge": "✨ Featured Product",
@@ -80,7 +84,9 @@
     "highlight_4": "🤝 Professional support when you need it",
     "btn_start": "Start Your Journey →",
     "btn_learn": "Learn More →",
-    "mockup_subtitle": "AI Psychological Support\nPrivate • Secure • Always Here"
+    "mockup_subtitle": "AI Psychological Support\nPrivate • Secure • Always Here",
+    "mockup_title": "PsychoX.app",
+    "visit_site": "Visit Site →"
   },
   "featured_datagpt": {
     "badge": "✨ Featured Product",
@@ -96,7 +102,9 @@
     "highlight_4": "⚡ 10x efficiency gains for analyst teams",
     "btn_start": "Start Analyzing →",
     "btn_learn": "See How It Works →",
-    "mockup_subtitle": "Conversational AI Analyst\nFast • Intelligent • Accessible"
+    "mockup_subtitle": "Conversational AI Analyst\nFast • Intelligent • Accessible",
+    "mockup_title": "DataGPT",
+    "visit_site": "Visit Site →"
   },
   "industries": {
     "title": "Industries We Transform with AI",

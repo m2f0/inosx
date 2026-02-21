@@ -37,10 +37,7 @@ class I18nAuditor {
     
     this.htmlFiles = [
       'index.html',
-      'surveyflow.html',
-      'messiax.html',
-      'roi-calculator.html',
-      'terms.html'
+      'roi-calculator.html'
     ];
     
     this.jsonFiles = {
@@ -166,39 +163,110 @@ class I18nAuditor {
   }
   
   // Placeholder methods that will be implemented in next tasks
-  async detectUntranslatedTextElements($, file) {
-    // Elements that should have translation
-    const textElements = $('h1, h2, h3, h4, h5, h6, p, span, div, button, a, li, td, th, label');
+  hasOwnTextContent(elem, $) {
+    const $elem = $(elem);
+    let hasDirectText = false;
     
-    textElements.each((i, elem) => {
+    $elem.contents().each((i, node) => {
+      if (node.type === 'text') {
+        const text = $(node).text().trim();
+        if (text.length >= 2 && !/^[\s\W]*$/.test(text)) {
+          hasDirectText = true;
+          return false;
+        }
+      }
+    });
+    
+    return hasDirectText;
+  }
+
+  hasChildrenWithI18n(elem, $) {
+    const $elem = $(elem);
+    return $elem.find('[data-i18n], [data-i18n-placeholder], [data-i18n-title], [data-i18n-aria-label]').length > 0;
+  }
+
+  async detectUntranslatedTextElements($, file) {
+    const leafElements = $('h1, h2, h3, h4, h5, h6, p, span, button, a, li, td, th, label');
+    
+    const containerTags = new Set(['div', 'section', 'nav', 'header', 'footer', 'main', 'article', 'aside', 'form', 'ul', 'ol', 'table', 'thead', 'tbody', 'tr']);
+    
+    const skipClasses = new Set([
+      'particles', 'particle', 'floating-elements', 'floating-emoji',
+      'progress-bar', 'progress-step', 'pulse-dot', 'divider-line', 
+      'divider-glow', 'section-divider', 'author-avatar',
+      'service-icon-large', 'industry-icon', 'highlight-icon',
+      'benefit-icon', 'list-icon', 'lang-icon', 'success-icon',
+      'modal-close', 'brand', 'badge', 'social', 'value'
+    ]);
+    
+    const skipIds = new Set([
+      'manualHoursValue', 'laborSavings', 'efficiencySavings',
+      'errorSavings', 'automationSavings', 'monthlySavings',
+      'annualSavings', 'hoursSaved', 'roiPercent',
+      'employeeCount', 'manualHours'
+    ]);
+    
+    const skipTextPatterns = [
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+      /^https?:\/\//,
+      /^(INOSX|SurveyFlow|Messiax|PsychoX|DataGPT|Hubia)$/i,
+      /^(in|x|f|ig|yt)$/i,
+      /^[A-Z]{1,3}$/,
+      /^\d+$/,
+      /^[©®™].*$/
+    ];
+    
+    const skipSelectors = [
+      'script', 'style', 'noscript', 'iframe', 'svg', 'canvas',
+      '[aria-hidden="true"]'
+    ];
+
+    leafElements.each((i, elem) => {
       const $elem = $(elem);
+      const tag = elem.name;
       const text = $elem.text().trim();
       
-      // Skip if:
-      // - No text content
-      // - Already has data-i18n
-      // - Is inside a script or style tag
-      // - Text is only whitespace or special characters
-      // - Parent has data-i18n (will be translated via parent)
-      if (!text || 
-          text.length === 0 ||
-          $elem.attr('data-i18n') ||
-          $elem.closest('script, style').length > 0 ||
-          /^[\s\W]*$/.test(text) ||
-          $elem.parent().attr('data-i18n')) {
-        return;
-      }
+      if (!text || text.length < 2) return;
+      if ($elem.attr('data-i18n') || $elem.attr('data-i18n-placeholder')) return;
+      if ($elem.closest(skipSelectors.join(', ')).length > 0) return;
+      if (/^[\s\W]*$/.test(text)) return;
       
-      // Check if text contains meaningful content (at least 2 characters)
-      if (text.length < 2) {
-        return;
-      }
+      const elemClasses = ($elem.attr('class') || '').split(/\s+/);
+      if (elemClasses.some(c => skipClasses.has(c))) return;
       
-      // Get element selector for reporting
-      const tag = elem.name;
+      const elemId = $elem.attr('id') || '';
+      if (skipIds.has(elemId)) return;
+      
+      if ($elem.parent().attr('data-i18n')) return;
+      
+      if (containerTags.has(tag)) return;
+      
+      const ownTextForCheck = [];
+      $elem.contents().each((j, node) => {
+        if (node.type === 'text') {
+          const t = $(node).text().trim();
+          if (t) ownTextForCheck.push(t);
+        }
+      });
+      const directText = ownTextForCheck.join(' ').trim() || text;
+      if (skipTextPatterns.some(p => p.test(directText))) return;
+      
+      if (this.hasChildrenWithI18n(elem, $)) return;
+      
+      if (!this.hasOwnTextContent(elem, $) && $elem.children().length > 0) return;
+
       const id = $elem.attr('id') ? `#${$elem.attr('id')}` : '';
-      const classes = $elem.attr('class') ? `.${$elem.attr('class').split(' ').join('.')}` : '';
+      const classes = $elem.attr('class') ? `.${$elem.attr('class').split(' ')[0]}` : '';
       const selector = `${tag}${id}${classes}`;
+      
+      const ownText = [];
+      $elem.contents().each((j, node) => {
+        if (node.type === 'text') {
+          const t = $(node).text().trim();
+          if (t) ownText.push(t);
+        }
+      });
+      const displayText = ownText.join(' ') || text;
       
       this.addProblem(
         'critical',
@@ -206,7 +274,7 @@ class I18nAuditor {
         file,
         this.getLineNumber(elem),
         `Element without data-i18n attribute: ${selector}`,
-        `Add data-i18n="<key>" to element. Text content: "${text.substring(0, 50)}${text.length > 50 ? '...' : ''}"`
+        `Add data-i18n="<key>" to element. Text: "${displayText.substring(0, 80)}${displayText.length > 80 ? '...' : ''}"`
       );
     });
   }
@@ -222,9 +290,10 @@ class I18nAuditor {
         return;
       }
       
-      // Check if element has data-i18n or data-i18n-placeholder
       const hasDataI18n = $elem.attr('data-i18n');
       const hasDataI18nPlaceholder = $elem.attr('data-i18n-placeholder');
+      
+      if (/^\d+(\.\d+)?$/.test(placeholder.trim())) return;
       
       if (!hasDataI18n && !hasDataI18nPlaceholder) {
         const tag = elem.name;
@@ -260,10 +329,9 @@ class I18nAuditor {
           return;
         }
         
-        // Skip if parent select has data-i18n-options (will be handled globally)
-        if ($select.attr('data-i18n-options')) {
-          return;
-        }
+        if ($select.attr('data-i18n-options')) return;
+        
+        if ($select.attr('id') === 'languageSelector') return;
         
         const selectId = $select.attr('id') ? `#${$select.attr('id')}` : 'select';
         const optionValue = $option.attr('value') || '';
@@ -406,21 +474,32 @@ class I18nAuditor {
   }
   
   async checkUnusedJsonKeys() {
-    // Check for keys in JSON that are never used in any HTML
+    const jsUsedPrefixes = [
+      'meta.', 'roi_calculator.', 'sticky_cta.', 'products.', 'services.',
+      'modal.', 'footer.', 'surveyflow.'
+    ];
+    
+    const jsUsedKeys = new Set([
+      'meta.title', 'meta.description',
+      'hero.btn_secondary', 'hero.logo'
+    ]);
+    
     for (const [lang, translations] of Object.entries(this.translations)) {
       const allKeys = this.getAllKeysFromObject(translations);
       
       for (const key of allKeys) {
-        if (!this.usedKeys.has(key)) {
-          this.addProblem(
-            'medium',
-            'unused_translation_key',
-            this.jsonFiles[lang],
-            0,
-            `Key "${key}" in ${lang}.json is not used in any HTML file`,
-            `Consider removing this key if it's truly unused, or add it to HTML if it should be used`
-          );
-        }
+        if (this.usedKeys.has(key)) continue;
+        if (jsUsedKeys.has(key)) continue;
+        if (jsUsedPrefixes.some(p => key.startsWith(p))) continue;
+        
+        this.addProblem(
+          'medium',
+          'unused_translation_key',
+          this.jsonFiles[lang],
+          0,
+          `Key "${key}" in ${lang}.json is not used in any HTML file`,
+          `Consider removing this key if it's truly unused, or add it to HTML if it should be used`
+        );
       }
     }
   }

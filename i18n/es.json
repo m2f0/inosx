@@ -48,7 +48,9 @@
     "highlight_4": "🤝 Espacio seguro y confidencial",
     "btn_learn": "Conocer Messiax →",
     "btn_access": "Acceder a la Plataforma →",
-    "mockup_subtitle": "Su compañera espiritual\nMulti-religiosa • Respetuosa • Siempre presente"
+    "mockup_subtitle": "Su compañera espiritual\nMulti-religiosa • Respetuosa • Siempre presente",
+    "mockup_title": "Messiax.ai",
+    "visit_site": "Visitar Sitio →"
   },
   "featured_surveyflow": {
     "badge": "✨ Producto Destacado",
@@ -64,7 +66,9 @@
     "highlight_4": "📈 Insights y tendencias con IA",
     "btn_learn": "Conocer SurveyFlow →",
     "btn_access": "Probar Demo Gratis →",
-    "mockup_subtitle": "Inteligencia de Encuestas con IA\nInteligente • Rápido • Perspicaz"
+    "mockup_subtitle": "Inteligencia de Encuestas con IA\nInteligente • Rápido • Perspicaz",
+    "mockup_title": "SurveyFlow.ai",
+    "visit_site": "Visitar Sitio →"
   },
   "featured_psychox": {
     "badge": "✨ Producto Destacado",
@@ -80,7 +84,9 @@
     "highlight_4": "🤝 Apoyo profesional cuando lo necesite",
     "btn_start": "Iniciar Su Viaje →",
     "btn_learn": "Saber Más →",
-    "mockup_subtitle": "Apoyo Psicológico con IA\nPrivado • Seguro • Siempre Aquí"
+    "mockup_subtitle": "Apoyo Psicológico con IA\nPrivado • Seguro • Siempre Aquí",
+    "mockup_title": "PsychoX.app",
+    "visit_site": "Visitar Sitio →"
   },
   "featured_datagpt": {
     "badge": "✨ Producto Destacado",
@@ -96,7 +102,9 @@
     "highlight_4": "⚡ Ganancias de eficiencia de 10x para equipos de analistas",
     "btn_start": "Comenzar a Analizar →",
     "btn_learn": "Vea Cómo Funciona →",
-    "mockup_subtitle": "Analista de IA Conversacional\nRápido • Inteligente • Accesible"
+    "mockup_subtitle": "Analista de IA Conversacional\nRápido • Inteligente • Accesible",
+    "mockup_title": "DataGPT",
+    "visit_site": "Visitar Sitio →"
   },
   "industries": {
     "title": "Industrias Que Transformamos con IA",
