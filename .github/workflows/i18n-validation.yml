@@ -1,0 +1,45 @@
+name: i18n Validation
+
+on:
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'i18n/**'
+      - '*.html'
+      - '.github/workflows/i18n-validation.yml'
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'i18n/**'
+      - '*.html'
+
+jobs:
+  validate-translations:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Validate i18n
+      run: npm run validate-i18n
+      
+    - name: Comment on PR (on failure)
+      if: failure() && github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '❌ i18n validation failed. Please fix translation issues before merging.\n\nRun `npm run validate-i18n` locally to see details.'
+          })

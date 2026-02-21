@@ -1,0 +1,4214 @@
+{
+  "metadata": {
+    "generated": "2026-02-21T20:49:22.004Z",
+    "totalIssues": 521,
+    "bySeverity": {
+      "critical": 429,
+      "high": 11,
+      "medium": 81,
+      "low": 0
+    },
+    "byFile": {
+      "index.html": 227,
+      "surveyflow.html": 40,
+      "messiax.html": 95,
+      "roi-calculator.html": 44,
+      "terms.html": 34,
+      "i18n/en.json": 27,
+      "i18n/pt.json": 27,
+      "i18n/es.json": 27
+    }
+  },
+  "problems": {
+    "critical": [
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.topbar",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\n        Products\n        Services\n        ROI...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.topbar-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\n        Products\n        Services\n        ROI...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.active",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Products\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Services\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"ROI Calculator\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.logo-hero-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.brand",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.language-selector",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌍\n    \n      🇺🇸 English\n      🇧🇷 Português\n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.main-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Your Team Wastes $10,000/Month on Manual Work\n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.two-column-layout",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Your Team Wastes $10,000/Month on Manual Work\n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.left-column",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Your Team Wastes $10,000/Month on Manual Work\n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.right-column",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"See How Much You Can Save with AI\n          \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.hero-cta-section.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"See How Much You Can Save with AI\n          \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.cta-buttons",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Calculate Your Savings →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.scarcity-badge",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⏰ Only 5 consultation slots left this week\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.trust-indicators",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓ No Credit Card Required\n            ✓ 30-Min Cal...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.social-proof-bar.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"500+\n        Companies Trust INOSX\n      \n      \n ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.social-proof-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"500+\n        Companies Trust INOSX\n      \n      \n ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"500+\n        Companies Trust INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$47M\n        Saved by Clients\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"2.4M\n        Hours Automated\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"4.9/5\n        Client Rating ⭐⭐⭐⭐⭐\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-product.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Destaque Especial\n      \n      \n        \n       ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Destaque Especial\n      \n      \n        \n       ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Encontre a Paz Que Faltava na Sua Vida\n          \n...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Encontre a Paz Que Faltava na Sua Vida\n          \n...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-sacred-texts",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📖 Bíblia\n            ✡️ Torá\n            ☪️ Alcor...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-highlights",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n              Sempre presente quando você preci...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n              Sempre presente quando você preci...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨\n              Orientações espirituais guiadas\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📚\n              Leituras dos livros sagrados\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤝\n              Espaço seguro e confidencial\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-cta",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Conhecer Messiax →\n            \n            \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-visual",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n            ✨\n            💫\n            🕊️\n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-mockup.featured-mockup-iframe",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n                Messiax.ai\n                Your...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.iframe-fallback",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n                Messiax.ai\n                Your...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n                Messiax.ai\n                Your...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Messiax.ai\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Your AI Spiritual CompanionMulti-religious • Respe...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.btn-featured",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Visit Site →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-product.featured-surveyflow.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Featured Product\n      \n      \n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Featured Product\n      \n      \n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Stop Guessing, Start Knowing Your Customers\n      ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Stop Guessing, Start Knowing Your Customers\n      ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-sacred-texts.featured-features",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖 AI Survey Builder\n            📊 Smart Analytic...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-highlights",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🚀\n              Surveys ready in seconds, not hou...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🚀\n              Surveys ready in seconds, not hou...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎨\n              Full brand customization\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌐\n              50+ languages supported\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📈\n              AI-powered insights & trends\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-cta",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Learn About SurveyFlow →\n            \n            ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-visual",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n            🎯\n            ✨\n            📈\n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-mockup.featured-mockup-iframe",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n                SurveyFlow.ai\n                A...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.iframe-fallback",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n                SurveyFlow.ai\n                A...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n                SurveyFlow.ai\n                A...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"SurveyFlow.ai\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"AI-Powered Survey IntelligenceSmart • Fast • Insig...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.btn-featured",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Visit Site →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-product.featured-psychox.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Featured Product\n      \n      \n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Featured Product\n      \n      \n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Your Mental Wellness Journey Starts Here\n         ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Your Mental Wellness Journey Starts Here\n         ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-sacred-texts.featured-features",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💜 24/7 AI Support\n            📊 Mood Tracking\n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-highlights",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌙\n              Always available, day or night\n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌙\n              Always available, day or night\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💭\n              Non-judgmental space to express y...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📈\n              Track your emotional wellness jou...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤝\n              Professional support when you nee...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-cta",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Start Your Journey →\n            \n            \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-visual",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💜\n            🌟\n            🧠\n            💭\n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-mockup.featured-mockup-iframe",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💜\n                PsychoX.app\n                AI ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.iframe-fallback",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💜\n                PsychoX.app\n                AI ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💜\n                PsychoX.app\n                AI ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"PsychoX.app\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"AI Psychological SupportPrivate • Secure • Always ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.btn-featured",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Visit Site →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-product.featured-datagpt.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Featured Product\n      \n      \n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Featured Product\n      \n      \n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Talk to Your Data Like a Human\n          \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Talk to Your Data Like a Human\n          \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-sacred-texts.featured-features",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💬 Conversational AI\n            ⚡ Instant Insight...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-highlights",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n              Query billions of rows in fractio...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n              Query billions of rows in fractio...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎯\n              99% noise reduction—surface only ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🧠\n              Root cause analysis and anomaly d...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.highlight-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⚡\n              10x efficiency gains for analyst t...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-cta",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Start Analyzing →\n            \n            \n      ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-visual",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n            💡\n            🎯\n            ⚡\n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.featured-mockup.featured-mockup-iframe",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n                DataGPT\n                Convers...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.iframe-fallback",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n                DataGPT\n                Convers...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n                DataGPT\n                Convers...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"DataGPT\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Conversational AI AnalystFast • Intelligent • Acce...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.btn-featured",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Visit Site →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industries-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Industries We Transform with AI\n      \n        Cus...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industries-header.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Industries We Transform with AI\n      \n        Cus...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industries-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📞\n        Contact Centers & Customer Service\n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industry-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📞\n        Contact Centers & Customer Service\n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industry-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📈\n        Sales & Revenue Teams\n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industry-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💬\n        Enterprise Communications\n        \n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industry-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🏠\n        Smart Technology & IoT\n        \n       ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industry-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✅\n        Compliance & Quality Assurance\n        \n...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industry-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎬\n        Content & Media Platforms\n        \n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.industries-cta.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Don't see your industry? We create custom AI solut...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonials-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"What Our Clients Say\n    \n      \n        ⭐⭐⭐⭐⭐\n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonials-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⭐⭐⭐⭐⭐\n        \n          INOSX agents cut our proc...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⭐⭐⭐⭐⭐\n        \n          INOSX agents cut our proc...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-author",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"SC\n          \n            Sarah Chen\n            O...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-avatar",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"SC\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-info",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Sarah Chen\n            Operations Director, TechCo...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⭐⭐⭐⭐⭐\n        \n          The knowledge management ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-author",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"MR\n          \n            Michael Rodriguez\n      ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-avatar",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"MR\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-info",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Michael Rodriguez\n            CTO, DataFlow Inc\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-card.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⭐⭐⭐⭐⭐\n        \n          Their AI security platfor...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-author",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"JK\n          \n            Jennifer Kim\n           ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-avatar",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"JK\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-info",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Jennifer Kim\n            CISO, SecureBank\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.services-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"AI Services\n      \n        INOSX builds practical,...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.services-header.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"AI Services\n      \n        INOSX builds practical,...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.services-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖\n          INOSX AI Agents\n          \n          ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-modern.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖\n          INOSX AI Agents\n          \n          ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-header",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖\n          INOSX AI Agents\n          \n          ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-body",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Auto-integration with ERPs, CRMs...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                End-to-end process execution wit...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Real-time insights and action ge...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Continuous learning and adaptati...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Business Benefits\n            \n              \n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefits-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💰\n                Lower operational costs\n       ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💰\n                Lower operational costs\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⚡\n                Higher efficiency\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎯\n                Faster decisions\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📈\n                Scalable growth\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-footer",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Get Started →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-modern.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🔒\n          INOSX CyberAI Security\n          \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-header",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🔒\n          INOSX CyberAI Security\n          \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-body",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Continuous monitoring across sys...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Anomaly, fraud, and intrusion de...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Automated and intelligent incide...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Business Benefits\n            \n              \n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefits-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🛡️\n                Asset protection\n             ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🛡️\n                Asset protection\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⚠️\n                Risk reduction\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✅\n                Compliance assured\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-footer",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Get Started →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-modern.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📚\n          INOSX Knowledge Agents\n          \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-header",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📚\n          INOSX Knowledge Agents\n          \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-body",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Automatic indexing and reading o...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Contextual, semantic search over...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Integrations with SharePoint, Co...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Business Benefits\n            \n              \n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefits-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⏱️\n                Time saved\n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⏱️\n                Time saved\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🚀\n                Higher productivity\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🧠\n                Centralized knowledge\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-footer",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Get Started →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-modern.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎯\n          INOSX AI Orchestration\n          \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-header",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎯\n          INOSX AI Orchestration\n          \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-body",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Coordinates agents across corpor...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Integrates ERP, CRM, customer su...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Full governance and traceability...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Business Benefits\n            \n              \n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefits-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤝\n                Collaborative AI\n              ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤝\n                Collaborative AI\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🔍\n                Full transparency\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🔄\n                Business agility\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-footer",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Get Started →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-modern.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖\n          Coming Soon\n          INOSX Vision Ro...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-header",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖\n          Coming Soon\n          INOSX Vision Ro...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-badge",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Coming Soon\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-body",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Key Capabilities\n            \n              \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                3D spatial perception and object...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Visual language model integratio...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Autonomous navigation and manipu...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Real-time decision making with c...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n                Multi-sensor fusion for enhanced...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Business Benefits\n            \n              \n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefits-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🦾\n                Full autonomy\n              \n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🦾\n                Full autonomy\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"👤\n                Less intervention\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎯\n                High precision\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.benefit-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🏭\n                Industrial scale\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.service-card-footer",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Notify Me →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.services-value-section.fade-in",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX Unified Value Proposition\n        \n         ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.value-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX Unified Value Proposition\n        \n         ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.value-cta-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Ready to Transform Your Business with AI?\n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.value-cta-buttons",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📧 Email Us: inosx@inosx.com\n          \n          ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div#contactModal.modal",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"×\n      \n      \n        Get Your Free AI Consultat...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.modal-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"×\n      \n      \n        Get Your Free AI Consultat...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div#formContainer",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Get Your Free AI Consultation\n        Tell us abou...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.form-step.active",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓ No credit card  ✓ 30-min call  ✓ Free ROI analys...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.form-step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"What brings you to INOSX?\n            \n           ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.form-buttons",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"← Back\n              \n              \n             ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.privacy-note",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"We respect your privacy. See our Privacy Policy.\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div#successMessage.success-message",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✓\n        Thank You!\n        \n          We've rece...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\n          Democratizing access to practica...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\n          Democratizing access to practica...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\n          Democratizing access to practica...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.brand",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.social",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"in\n            @\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"in\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Platform\n          \n            Home\n            P...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Products\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Services\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Support\n          \n            Terms of Service\n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Terms of Service\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Privacy Policy\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Contact\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Contact\n          \n            Emailcontact@inosx....\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.contact-box",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Emailcontact@inosx.com\n            9450 SW Gemini ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Emailcontact@inosx.com\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "index.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"contact@inosx.com\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.topbar",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\n        Products\n        Messiax.ai\n        S...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.topbar-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\n        Products\n        Messiax.ai\n        S...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Products\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Messiax.ai\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"SurveyFlow.ai\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"ROI Calculator\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.language-selector",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌍\n        \n          🇺🇸 English\n          🇧🇷 ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.hero-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ AI-Powered Survey Intelligence\n      \n      \n   ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.hero-cta",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Start Free Trial →\n        \n        \n          See...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.features-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖\n        AI Survey Builder\n        \n          De...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤖\n        AI Survey Builder\n        \n          De...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📊\n        Smart Analytics\n        \n          AI a...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎯\n        Precision Targeting\n        \n          ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎨\n        Brand Customization\n        \n          ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌐\n        Multi-Language Support\n        \n       ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"⚡\n        Real-Time Results\n        \n          Wat...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.steps",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"01\n        \n          Tell AI What You Need\n      ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"01\n        \n          Tell AI What You Need\n      ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-number",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"01\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Tell AI What You Need\n          \n            Simpl...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"02\n        \n          AI Generates Optimized Surve...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-number",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"02\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"AI Generates Optimized Surveys\n          \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"03\n        \n          Deploy at the Perfect Moment...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-number",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"03\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Deploy at the Perfect Moment\n          \n          ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"04\n        \n          Get Instant AI Insights\n    ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-number",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"04\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Get Instant AI Insights\n          \n            AI ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.use-cases-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💼\n        Product Teams\n      \n      \n        🎯\n...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.use-case",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💼\n        Product Teams\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.use-case",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎯\n        Marketing\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.use-case",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤝\n        Customer Success\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.use-case",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🎨\n        UX Research\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.use-case",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"👥\n        HR & People Ops\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.use-case",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📈\n        Sales Teams\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.hero-content",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Uma Criação INOSX\n      \n      \n        Encontre...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.hero-badge",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨ Uma Criação INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h1.hero-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Encontre a Paz QueFaltava na Sua Vida\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.hero-subtitle",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Messiax é sua companheira espiritual movida por IA...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.sacred-texts",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📖 Bíblia\n        ✡️ Torá\n        ☪️ Alcorão\n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span.sacred-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📖 Bíblia\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span.sacred-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✡️ Torá\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span.sacred-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"☪️ Alcorão\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span.sacred-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🕉️ Vedas\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span.sacred-text",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"☸️ Textos Budistas\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Não importa sua fé, você será respeitado e guiado ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.hero-cta",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Conhecer Messiax →\n        \n        \n          🙏 ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.btn-primary",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Conhecer Messiax →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.trust-note",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏 Um espaço sagrado, seguro e confidencial para s...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h2.section-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"O Que é Messiax?\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.section-subtitle",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Uma companheira espiritual que entende e respeita ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.features-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n        Sempre Presente\n        \n          Disp...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏\n        Sempre Presente\n        \n          Disp...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.feature-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Sempre Presente\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.feature-description",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Disponível 24 horas por dia, 7 dias por semana. Me...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📚\n        5 Livros Sagrados\n        \n          Tr...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.feature-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"5 Livros Sagrados\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.feature-description",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Treinada profundamente na Bíblia, Torá, Alcorão, V...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨\n        Orientação Personalizada\n        \n      ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.feature-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Orientação Personalizada\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.feature-description",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Exercícios espirituais guiados, leituras dos livro...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤝\n        Sem Julgamento\n        \n          Um es...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.feature-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Sem Julgamento\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.feature-description",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Um espaço completamente seguro e confidencial onde...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌟\n        Inclusiva e Respeitosa\n        \n       ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.feature-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Inclusiva e Respeitosa\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.feature-description",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Seja você cristão, judeu, muçulmano, hindu, budist...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.feature-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💫\n        Prática e Contemplação\n        \n       ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.feature-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Prática e Contemplação\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.feature-description",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Combine sabedoria ancestral com práticas espiritua...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h2.section-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Como Funciona\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.section-subtitle",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Três passos simples para começar sua jornada espir...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.steps-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"1\n        Compartilhe Sua Fé\n        \n          Co...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"1\n        Compartilhe Sua Fé\n        \n          Co...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.step-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Compartilhe Sua Fé\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Conte à Messiax sobre sua tradição espiritual, sua...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"2\n        Receba Orientação\n        \n          Mes...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.step-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Receba Orientação\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Messiax oferecerá orientações espirituais, leitura...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.step",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"3\n        Cresça Espiritualmente\n        \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.step-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Cresça Espiritualmente\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Desenvolva uma prática espiritual consistente, enc...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h2.section-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Momentos em Que Messiax Pode Ajudar\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.section-subtitle",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Seja qual for o momento da sua jornada, Messiax es...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.moments-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"😰\n        Ansiedade e Estresse\n        Encontre s...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.moment-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"😰\n        Ansiedade e Estresse\n        Encontre s...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.moment-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Ansiedade e Estresse\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Encontre serenidade através de práticas espirituai...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.moment-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🤔\n        Busca por Propósito\n        Reflexões g...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.moment-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Busca por Propósito\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Reflexões guiadas para descobrir seu caminho e sig...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.moment-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💔\n        Momentos Difíceis\n        Conforto espi...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.moment-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Momentos Difíceis\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Conforto espiritual quando você mais precisa de fo...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.moment-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🧘\n        Prática Espiritual\n        Meditações g...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.moment-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Prática Espiritual\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Meditações guiadas e exercícios segundo sua tradiç...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.moment-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"📖\n        Estudo Sagrado\n        Leituras dos liv...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.moment-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Estudo Sagrado\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Leituras dos livros sagrados com contexto e reflex...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.moment-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"✨\n        Crescimento Interior\n        Jornada con...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h3.moment-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Crescimento Interior\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Jornada contínua de desenvolvimento espiritual e a...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h2.section-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Histórias de Transformação\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.section-subtitle",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Pessoas reais que encontraram paz e propósito com ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonials-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"\"Messiax me ajudou a reconectar com minha fé crist...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"\"Messiax me ajudou a reconectar com minha fé crist...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.testimonial-quote",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"\"Messiax me ajudou a reconectar com minha fé crist...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-author",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"M\n          \n            Maria Silva\n            T...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-info",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Maria Silva\n            Tradição Cristã\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Tradição Cristã\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"\"Como praticante de meditação budista, encontrei e...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.testimonial-quote",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"\"Como praticante de meditação budista, encontrei e...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-author",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"R\n          \n            Rafael Costa\n            ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-info",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Rafael Costa\n            Tradição Budista\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Tradição Budista\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"\"Nos momentos de maior ansiedade, Messiax me ofere...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.testimonial-quote",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"\"Nos momentos de maior ansiedade, Messiax me ofere...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.testimonial-author",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"F\n          \n            Fátima Ahmed\n            ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.author-info",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Fátima Ahmed\n            Tradição Islâmica\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Tradição Islâmica\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.cta-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Comece Sua Jornada de Paz Hoje\n      \n      \n     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h2.cta-title",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Comece Sua Jornada de Paz Hoje\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Dê o primeiro passo rumo à serenidade que você mer...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.btn-primary",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Conhecer Messiax →\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🙏 Totalmente confidencial • Respeitando sua fé • ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Messiax.ai é uma criação INOSX\n      Transformando...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"© 2026 INOSX, Inc. Todos os direitos reservados.\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.topbar",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\n        Products\n        Services\n        ROI...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.topbar-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\n        Products\n        Services\n        ROI...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Products\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Services\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a.active",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"ROI Calculator\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.language-selector",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🌍\n        \n          🇺🇸 English\n          🇧🇷 ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.logo-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.brand",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.calculator-wrapper",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🧮 AI ROI Calculator\n        Calculate how much yo...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.calculator-container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🧮 AI ROI Calculator\n        Calculate how much yo...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.calculator-header",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"🧮 AI ROI Calculator\n        Calculate how much yo...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.form-group",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Number of Employees\n          \n          \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.slider-value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"10\n            50\n            1000+\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span#employeesValue",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"50\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.form-group",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Average Employee Hourly Rate (USD)\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.form-group",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Hours/Week Spent on Repetitive Tasks (per employee...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.slider-value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"1h\n            10h\n            40h\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span#manualHoursValue",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"10h\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.form-group",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Industry\n          \n            Technology/SaaS\n  ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div#results.results",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💰 Your Potential AI Savings\n          Here's what...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.results-header",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💰 Your Potential AI Savings\n          Here's what...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\n            Monthly Savings\n          \n        ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\n            Monthly Savings\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div#monthlySavings.value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\n            Annual Savings\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div#annualSavings.value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"0\n            Hours Saved/Month\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.stat-card",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"0%\n            ROI in 12 Months\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div#roiPercent.value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"0%\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.breakdown",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💡 Savings Breakdown\n          \n            Labor ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.breakdown-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Labor Cost Reduction (40%)\n            $0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span#laborSavings.value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.breakdown-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Efficiency Gains (25%)\n            $0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span#efficiencySavings.value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.breakdown-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Error Reduction (15%)\n            $0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span#errorSavings.value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.breakdown-item",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Process Automation (20%)\n            $0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span#automationSavings.value",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"$0\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.cta-section",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Ready to unlock these savings?\n          Get Free ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_placeholder_translation",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Input/textarea without data-i18n or data-i18n-placeholder: input#avgSalary[name=\"avgSalary\"]",
+        "suggestion": "Add data-i18n-placeholder=\"<key>\" to translate placeholder. Current: \"35\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h1",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Terms of Service\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"We, INOSX, Inc, a Delaware C Corporation and is lo...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.address",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"9450 Sw Gemini Drive Beaverton, Oregon, 97008, Uni...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"For any inquiries regarding these Terms, please re...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"support@inosx.com\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Your acceptance of these Terms is implied upon usi...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"For non-consumer entities, confirmation of authori...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h2",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"ACCOUNT CREATION AND SECURITY\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Account creation is mandatory to access our Platfo...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Safeguarding your account details, including usern...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"support@inosx.com\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p.last-updated",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"This terms was last updated on June 3, 2024.\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.container",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\n                    INOSX, Inc. • USA Corp...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.grid",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\n                    INOSX, Inc. • USA Corp...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\n                    INOSX, Inc. • USA Corp...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.brand",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"💠INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: span",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: p",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"INOSX, Inc. • USA Corporation\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Company\n                    \n                     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h4",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Company\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Home\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Products & Services\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Products & Services\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: li",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Terms of Service\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Terms of Service\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Contact\n                    \n                     ...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: h4",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Contact\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.contact-box",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Emailcontact@inosx.com\n                        945...\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"Emailcontact@inosx.com\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: a",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"contact@inosx.com\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"9450 SW Gemini Dr, Beaverton, OR 97008, USA\""
+      },
+      {
+        "severity": "critical",
+        "type": "missing_data_i18n",
+        "file": "terms.html",
+        "line": 0,
+        "description": "Element without data-i18n attribute: div.legal",
+        "suggestion": "Add data-i18n=\"<key>\" to element. Text content: \"© 2025 INOSX, Inc. All rights reserved.\""
+      }
+    ],
+    "high": [
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "index.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"en\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇺🇸 English\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "index.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"pt\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇧🇷 Português\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "index.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"es\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇪🇸 Español\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"en\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇺🇸 English\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"pt\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇧🇷 Português\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "surveyflow.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"es\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇪🇸 Español\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_i18n_script",
+        "file": "messiax.html",
+        "line": 0,
+        "description": "HTML file does not include i18n.js script",
+        "suggestion": "Add <script src=\"/i18n/i18n.js\" defer></script> to the <head> section"
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"en\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇺🇸 English\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"pt\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇧🇷 Português\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_option_translation",
+        "file": "roi-calculator.html",
+        "line": 0,
+        "description": "Select option without data-i18n: #languageSelector > option[value=\"es\"]",
+        "suggestion": "Add data-i18n=\"<key>\" to option element. Text: \"🇪🇸 Español\""
+      },
+      {
+        "severity": "high",
+        "type": "missing_i18n_script",
+        "file": "terms.html",
+        "line": 0,
+        "description": "HTML file does not include i18n.js script",
+        "suggestion": "Add <script src=\"/i18n/i18n.js\" defer></script> to the <head> section"
+      }
+    ],
+    "medium": [
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"meta.title\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"meta.description\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"hero.logo\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"hero.btn_secondary\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"featured_messiax.mockup_subtitle\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"featured_surveyflow.mockup_subtitle\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"featured_psychox.mockup_subtitle\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"featured_datagpt.mockup_subtitle\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"sticky_cta.text\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"sticky_cta.btn\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.title\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.surveyflow\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.surveyflow_desc\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.datagpt\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.datagpt_desc\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.messiax\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.messiax_desc\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.psychox\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.psychox_desc\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.hubia\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.hubia_desc\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.vision\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.vision_subtitle\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.vision_desc\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.open_site\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"products.learn_more\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/en.json",
+        "line": 0,
+        "description": "Key \"services.vision.benefit_5\" in en.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"meta.title\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"meta.description\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"hero.logo\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"hero.btn_secondary\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"featured_messiax.mockup_subtitle\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"featured_surveyflow.mockup_subtitle\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"featured_psychox.mockup_subtitle\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"featured_datagpt.mockup_subtitle\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"sticky_cta.text\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"sticky_cta.btn\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.title\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.surveyflow\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.surveyflow_desc\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.datagpt\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.datagpt_desc\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.messiax\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.messiax_desc\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.psychox\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.psychox_desc\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.hubia\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.hubia_desc\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.vision\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.vision_subtitle\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.vision_desc\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.open_site\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"products.learn_more\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/pt.json",
+        "line": 0,
+        "description": "Key \"services.vision.benefit_5\" in pt.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"meta.title\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"meta.description\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"hero.logo\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"hero.btn_secondary\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"featured_messiax.mockup_subtitle\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"featured_surveyflow.mockup_subtitle\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"featured_psychox.mockup_subtitle\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"featured_datagpt.mockup_subtitle\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"sticky_cta.text\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"sticky_cta.btn\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.title\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.surveyflow\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.surveyflow_desc\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.datagpt\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.datagpt_desc\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.messiax\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.messiax_desc\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.psychox\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.psychox_desc\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.hubia\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.hubia_desc\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.vision\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.vision_subtitle\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.vision_desc\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.open_site\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"products.learn_more\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      },
+      {
+        "severity": "medium",
+        "type": "unused_translation_key",
+        "file": "i18n/es.json",
+        "line": 0,
+        "description": "Key \"services.vision.benefit_5\" in es.json is not used in any HTML file",
+        "suggestion": "Consider removing this key if it's truly unused, or add it to HTML if it should be used"
+      }
+    ],
+    "low": []
+  },
+  "statistics": {
+    "keysWithTranslations": 299,
+    "filesAudited": [
+      "index.html",
+      "surveyflow.html",
+      "messiax.html",
+      "roi-calculator.html",
+      "terms.html"
+    ],
+    "languagesChecked": [
+      "en",
+      "pt",
+      "es"
+    ]
+  }
+}
