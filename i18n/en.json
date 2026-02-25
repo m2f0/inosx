@@ -106,6 +106,24 @@
     "mockup_title": "DataGPT",
     "visit_site": "Visit Site →"
   },
+  "featured_ccoinx": {
+    "badge": "✨ Featured Product",
+    "headline": "Convert Prices in Real Time—Point Your Camera",
+    "description": "Ccoinx.ai is the camera currency converter. Point at prices in foreign currency and see real-time conversion overlaid on the image. 100% local OCR, full privacy.",
+    "feature_1": "📷 Camera + OCR",
+    "feature_2": "⚡ Real Time",
+    "feature_3": "🔒 Private (Local)",
+    "feature_4": "💱 Updated Quotes",
+    "highlight_1": "Photos never leave your device",
+    "highlight_2": "100% OCR in browser",
+    "highlight_3": "Quotes updated every 2 min",
+    "highlight_4": "No signup required to try",
+    "btn_learn": "Learn About Ccoinx →",
+    "btn_access": "Try Now →",
+    "mockup_title": "Ccoinx.ai",
+    "mockup_subtitle": "Camera Currency Converter\nPrivate • Fast • Local",
+    "visit_site": "Visit Site →"
+  },
   "industries": {
     "title": "Industries We Transform with AI",
     "subtitle": "Custom AI solutions tailored for your industry's unique challenges",
@@ -218,6 +236,8 @@
     "psychox_desc": "AI psychological support",
     "hubia": "Hubia Brasil",
     "hubia_desc": "Business intelligence platform",
+    "ccoinx": "Ccoinx.ai",
+    "ccoinx_desc": "Camera currency converter",
     "vision": "INOSX Vision Robotics",
     "vision_subtitle": "Coming Soon",
     "vision_desc": "3D Vision & Visual Language Models",
