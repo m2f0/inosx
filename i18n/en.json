@@ -124,6 +124,24 @@
     "mockup_subtitle": "Camera Currency Converter\nPrivate • Fast • Local",
     "visit_site": "Visit Site →"
   },
+  "featured_tranquilopa": {
+    "badge": "✨ Featured Product",
+    "headline": "Find Businesses and Services You Can Trust",
+    "description": "Tranquilopa is Paraguay's trusted platform. Search, discover and rate businesses and services. Thousands of registered businesses and real reviews to help you decide with confidence.",
+    "feature_search": "🔍 Smart Search",
+    "feature_reviews": "⭐ Real Reviews",
+    "feature_categories": "📂 By Category",
+    "feature_free": "🆓 Free Registration",
+    "highlight_1": "Thousands of registered businesses",
+    "highlight_2": "Read reviews from other users",
+    "highlight_3": "Buy or hire with confidence",
+    "highlight_4": "Rate your experience",
+    "btn_start": "Explore Tranquilopa →",
+    "btn_register": "Register My Business →",
+    "mockup_title": "Tranquilopa",
+    "mockup_subtitle": "Paraguay's Trusted Platform\nSearch • Discover • Rate",
+    "visit_site": "Visit Site →"
+  },
   "industries": {
     "title": "Industries We Transform with AI",
     "subtitle": "Custom AI solutions tailored for your industry's unique challenges",

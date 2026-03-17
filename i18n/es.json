@@ -124,6 +124,24 @@
     "mockup_subtitle": "Conversor de Monedas con Cámara\nPrivado • Rápido • Local",
     "visit_site": "Visitar Sitio →"
   },
+  "featured_tranquilopa": {
+    "badge": "✨ Producto Destacado",
+    "headline": "Encuentre Negocios y Servicios en los Que Puede Confiar",
+    "description": "Tranquilopa es la plataforma de confianza de Paraguay. Busque, descubra y califique negocios y servicios. Miles de empresas registradas y reseñas reales para decidir con confianza.",
+    "feature_search": "🔍 Búsqueda Inteligente",
+    "feature_reviews": "⭐ Reseñas Reales",
+    "feature_categories": "📂 Por Categoría",
+    "feature_free": "🆓 Registro Gratuito",
+    "highlight_1": "Miles de negocios registrados",
+    "highlight_2": "Lea reseñas de otros usuarios",
+    "highlight_3": "Compre o contrate con confianza",
+    "highlight_4": "Califique su experiencia",
+    "btn_start": "Explorar Tranquilopa →",
+    "btn_register": "Registrar Mi Negocio →",
+    "mockup_title": "Tranquilopa",
+    "mockup_subtitle": "Plataforma de Confianza de Paraguay\nBuscar • Descubrir • Calificar",
+    "visit_site": "Visitar Sitio →"
+  },
   "industries": {
     "title": "Industrias Que Transformamos con IA",
     "subtitle": "Soluciones de IA personalizadas para los desafíos únicos de su industria",
