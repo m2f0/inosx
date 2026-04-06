@@ -142,6 +142,24 @@
     "mockup_subtitle": "Plataforma de Confianza de Paraguay\nBuscar • Descubrir • Calificar",
     "visit_site": "Visitar Sitio →"
   },
+  "featured_aiteam": {
+    "badge": "✨ Producto Destacado",
+    "headline": "Orquestre agentes de IA en un panel visual pixel-art",
+    "description": "AITEAM-X es el dashboard open source de INOSX para monitorizar y conversar con agentes de IA en tiempo real—con chat en streaming, Memory Vault, revisión de diffs e integración nativa con Cursor (CLI y ACP).",
+    "feature_1": "🎮 Panel 2D pixel-art",
+    "feature_2": "💬 Chat en tiempo real (SSE)",
+    "feature_3": "🖱️ Cursor CLI + ACP",
+    "feature_4": "📦 Open source (MIT)",
+    "highlight_1": "Oficina virtual con salas y estado de los agentes",
+    "highlight_2": "Memory Vault con búsqueda e inyección de contexto",
+    "highlight_3": "Revise diffs antes de persistir cambios",
+    "highlight_4": "Instale con un comando: npx aiteam-x@latest",
+    "btn_learn": "Ver en GitHub →",
+    "btn_access": "Instalar con npx →",
+    "mockup_title": "AITEAM-X",
+    "mockup_subtitle": "Dashboard para agentes de IA\nVisual • Open source • Cursor",
+    "visit_site": "Abrir repositorio →"
+  },
   "industries": {
     "title": "Industrias Que Transformamos con IA",
     "subtitle": "Soluciones de IA personalizadas para los desafíos únicos de su industria",
@@ -256,6 +274,8 @@
     "hubia_desc": "Plataforma de inteligencia de negocios",
     "ccoinx": "Ccoinx.ai",
     "ccoinx_desc": "Conversor de monedas con cámara",
+    "aiteam": "AITEAM-X",
+    "aiteam_desc": "Dashboard open source para orquestar agentes de IA con Cursor",
     "vision": "INOSX Vision Robotics",
     "vision_subtitle": "Próximamente",
     "vision_desc": "Visión 3D y Modelos de Lenguaje Visual",

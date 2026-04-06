@@ -142,6 +142,24 @@
     "mockup_subtitle": "Paraguay's Trusted Platform\nSearch • Discover • Rate",
     "visit_site": "Visit Site →"
   },
+  "featured_aiteam": {
+    "badge": "✨ Featured Product",
+    "headline": "Orchestrate AI agents in a pixel-art visual dashboard",
+    "description": "AITEAM-X is INOSX's open-source dashboard to monitor and chat with AI agents in real time—with streaming chat, Memory Vault, diff review, and native Cursor integration (CLI and ACP).",
+    "feature_1": "🎮 2D pixel-art panel",
+    "feature_2": "💬 Real-time chat (SSE)",
+    "feature_3": "🖱️ Cursor CLI + ACP",
+    "feature_4": "📦 Open source (MIT)",
+    "highlight_1": "Virtual office with rooms and agent status",
+    "highlight_2": "Memory Vault with search and context injection",
+    "highlight_3": "Review diffs before persisting changes",
+    "highlight_4": "One-command install: npx aiteam-x@latest",
+    "btn_learn": "View on GitHub →",
+    "btn_access": "Install with npx →",
+    "mockup_title": "AITEAM-X",
+    "mockup_subtitle": "Dashboard for AI agents\nVisual • Open source • Cursor",
+    "visit_site": "Open repository →"
+  },
   "industries": {
     "title": "Industries We Transform with AI",
     "subtitle": "Custom AI solutions tailored for your industry's unique challenges",
@@ -256,6 +274,8 @@
     "hubia_desc": "Business intelligence platform",
     "ccoinx": "Ccoinx.ai",
     "ccoinx_desc": "Camera currency converter",
+    "aiteam": "AITEAM-X",
+    "aiteam_desc": "Open-source dashboard to orchestrate AI agents with Cursor",
     "vision": "INOSX Vision Robotics",
     "vision_subtitle": "Coming Soon",
     "vision_desc": "3D Vision & Visual Language Models",

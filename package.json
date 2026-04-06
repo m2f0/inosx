@@ -7,11 +7,17 @@
     "validate-i18n": "node i18n/validate.js",
     "test": "npm run validate-i18n"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@inosx/agent-memory": "^0.1.0"
+  },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.12"
   },
-  "keywords": ["i18n", "internationalization", "website"],
+  "keywords": [
+    "i18n",
+    "internationalization",
+    "website"
+  ],
   "author": "INOSX",
   "license": "UNLICENSED",
   "private": true
