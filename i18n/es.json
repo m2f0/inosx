@@ -3,6 +3,23 @@
     "title": "INOSX - El Futuro de la IA | Soluciones Empresariales de IA",
     "description": "INOSX ofrece soluciones empresariales de IA que incluyen agentes autónomos, análisis conversacional y seguridad impulsada por IA. Transforme su negocio con IA práctica."
   },
+  "products_page": {
+    "meta": {
+      "title": "INOSX — Productos | Portafolio de soluciones de IA",
+      "description": "Catálogo INOSX: Messiax, SurveyFlow, PsychoX, DataGPT, Ccoinx, Tranquilopa, AITEAM-X — explore productos y contáctenos."
+    },
+    "hero_title": "Productos INOSX",
+    "hero_subtitle": "IA para personas, equipos y negocios — explore el portafolio completo.",
+    "back_home": "← Volver al inicio",
+    "contact_link": "Hable con nosotros"
+  },
+  "products_teaser": {
+    "title": "Productos INOSX",
+    "subtitle": "IA conversacional, datos, bienestar y herramientas para equipos — vea el portafolio y contáctenos para un proyecto a medida.",
+    "cta_all": "Ver todos los productos →",
+    "cta_contact": "Hable con nosotros →",
+    "learn_more": "Saber más →"
+  },
   "nav": {
     "home": "Inicio",
     "products": "Productos",
@@ -274,6 +291,8 @@
     "hubia_desc": "Plataforma de inteligencia de negocios",
     "ccoinx": "Ccoinx.ai",
     "ccoinx_desc": "Conversor de monedas con cámara",
+    "tranquilopa": "Tranquilopa",
+    "tranquilopa_desc": "Plataforma de confianza en Paraguay — búsqueda y reseñas de negocios",
     "aiteam": "AITEAM-X",
     "aiteam_desc": "Dashboard open source para orquestar agentes de IA con Cursor",
     "vision": "INOSX Vision Robotics",

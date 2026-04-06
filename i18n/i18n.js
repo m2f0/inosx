@@ -238,17 +238,19 @@ class I18n {
    */
   updateMetaTags() {
     try {
-      // Update title
-      const titleTranslation = this.t('meta.title');
-      if (titleTranslation && titleTranslation !== 'meta.title') {
+      const pageKey = document.body?.dataset?.i18nPage;
+      const titlePath = pageKey ? `${pageKey}.meta.title` : 'meta.title';
+      const descPath = pageKey ? `${pageKey}.meta.description` : 'meta.description';
+
+      const titleTranslation = this.t(titlePath);
+      if (titleTranslation && titleTranslation !== titlePath) {
         document.title = titleTranslation;
       }
-      
-      // Update meta description
+
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
-        const descTranslation = this.t('meta.description');
-        if (descTranslation && descTranslation !== 'meta.description') {
+        const descTranslation = this.t(descPath);
+        if (descTranslation && descTranslation !== descPath) {
           metaDesc.content = descTranslation;
         }
       }

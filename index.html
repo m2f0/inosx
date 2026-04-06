@@ -1720,522 +1720,125 @@
       50% { opacity: 0.5; transform: scale(1.2); }
     }
 
-    /* Featured Product Section - Messiax */
-    .featured-product {
+
+    /* Products teaser (compact homepage) */
+    .products-teaser-section {
       position: relative;
       z-index: 2;
       max-width: 1400px;
-      margin: 4rem auto 3rem auto;
+      margin: 2rem auto 3rem auto;
       padding: 0 1rem;
     }
-
-    .featured-container {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(159, 122, 234, 0.1));
-      border: 2px solid rgba(212, 175, 55, 0.4);
+    .products-teaser-inner {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
       border-radius: 20px;
-      padding: 1.5rem 2rem;
+      padding: 2rem 1.5rem;
       backdrop-filter: blur(12px);
-      box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
-      position: relative;
-      overflow: hidden;
     }
-
-    /* SurveyFlow Featured - Teal/Blue Colors */
-    .featured-surveyflow .featured-container {
-      background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(14, 165, 233, 0.1));
-      border: 2px solid rgba(20, 184, 166, 0.4);
-      box-shadow: 0 20px 60px rgba(20, 184, 166, 0.2);
-    }
-
-    .featured-surveyflow .featured-badge {
-      background: rgba(20, 184, 166, 0.2);
-      border: 1px solid rgba(20, 184, 166, 0.5);
-      color: #14b8a6;
-    }
-
-    .featured-surveyflow .featured-text h2 {
-      background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #3b82f6 100%);
+    .products-teaser-title {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 800;
+      background: var(--gradient-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-    }
-
-    .featured-surveyflow .feature-badge {
-      background: rgba(20, 184, 166, 0.15);
-      border: 1px solid rgba(20, 184, 166, 0.3);
-      color: #14b8a6;
-    }
-
-    .featured-surveyflow .btn-featured {
-      background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%);
-      box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
-    }
-
-    .featured-surveyflow .btn-featured:hover {
-      box-shadow: 0 6px 20px rgba(20, 184, 166, 0.4);
-    }
-
-    .featured-surveyflow .btn-featured-secondary {
-      color: #14b8a6;
-      border: 2px solid #14b8a6;
-    }
-
-    .featured-surveyflow .btn-featured-secondary:hover {
-      background: rgba(20, 184, 166, 0.1);
-    }
-
-    .featured-surveyflow .featured-mockup {
-      border: 1px solid rgba(20, 184, 166, 0.3);
-    }
-
-    /* PsychoX Featured - Purple/Magenta Colors */
-    .featured-psychox .featured-container {
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
-      border: 2px solid rgba(168, 85, 247, 0.4);
-      box-shadow: 0 20px 60px rgba(168, 85, 247, 0.2);
-    }
-
-    .featured-psychox .featured-badge {
-      background: rgba(168, 85, 247, 0.2);
-      border: 1px solid rgba(168, 85, 247, 0.5);
-      color: #a855f7;
-    }
-
-    .featured-psychox .featured-text h2 {
-      background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f472b6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .featured-psychox .feature-badge {
-      background: rgba(168, 85, 247, 0.15);
-      border: 1px solid rgba(168, 85, 247, 0.3);
-      color: #a855f7;
-    }
-
-    .featured-psychox .btn-featured {
-      background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
-      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
-    }
-
-    .featured-psychox .btn-featured:hover {
-      box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
-    }
-
-    .featured-psychox .btn-featured-secondary {
-      color: #a855f7;
-      border: 2px solid #a855f7;
-    }
-
-    .featured-psychox .btn-featured-secondary:hover {
-      background: rgba(168, 85, 247, 0.1);
-    }
-
-    .featured-psychox .featured-mockup {
-      border: 1px solid rgba(168, 85, 247, 0.3);
-    }
-
-    /* DataGPT Featured - Green/Emerald Colors */
-    .featured-datagpt .featured-container {
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
-      border: 2px solid rgba(16, 185, 129, 0.4);
-      box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
-    }
-
-    .featured-datagpt .featured-badge {
-      background: rgba(16, 185, 129, 0.2);
-      border: 1px solid rgba(16, 185, 129, 0.5);
-      color: #10b981;
-    }
-
-    .featured-datagpt .featured-text h2 {
-      background: linear-gradient(135deg, #10b981 0%, #059669 50%, #34d399 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .featured-datagpt .feature-badge {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      color: #10b981;
-    }
-
-    .featured-datagpt .btn-featured {
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-    }
-
-    .featured-datagpt .btn-featured:hover {
-      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-    }
-
-    .featured-datagpt .btn-featured-secondary {
-      color: #10b981;
-      border: 2px solid #10b981;
-    }
-
-    .featured-datagpt .btn-featured-secondary:hover {
-      background: rgba(16, 185, 129, 0.1);
-    }
-
-    .featured-datagpt .featured-mockup {
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-
-    /* Ccoinx Featured - Green/Amber Colors */
-    .featured-ccoinx .featured-container {
-      background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(234, 179, 8, 0.1));
-      border: 2px solid rgba(34, 197, 94, 0.4);
-      box-shadow: 0 20px 60px rgba(34, 197, 94, 0.2);
-    }
-
-    .featured-ccoinx .featured-badge {
-      background: rgba(34, 197, 94, 0.2);
-      border: 1px solid rgba(34, 197, 94, 0.5);
-      color: #22c55e;
-    }
-
-    .featured-ccoinx .featured-text h2 {
-      background: linear-gradient(135deg, #22c55e 0%, #eab308 50%, #f59e0b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .featured-ccoinx .feature-badge {
-      background: rgba(34, 197, 94, 0.15);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      color: #22c55e;
-    }
-
-    .featured-ccoinx .btn-featured {
-      background: linear-gradient(135deg, #22c55e 0%, #eab308 100%);
-      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-    }
-
-    .featured-ccoinx .btn-featured:hover {
-      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
-    }
-
-    .featured-ccoinx .btn-featured-secondary {
-      color: #22c55e;
-      border: 2px solid #22c55e;
-    }
-
-    .featured-ccoinx .btn-featured-secondary:hover {
-      background: rgba(34, 197, 94, 0.1);
-    }
-
-    .featured-ccoinx .featured-mockup {
-      border: 1px solid rgba(34, 197, 94, 0.3);
-    }
-
-    .featured-tranquilopa .featured-container {
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
-      border: 2px solid rgba(59, 130, 246, 0.4);
-    }
-
-    .featured-tranquilopa .featured-badge {
-      background: rgba(59, 130, 246, 0.2);
-      border: 1px solid rgba(59, 130, 246, 0.5);
-    }
-
-    .featured-tranquilopa .featured-text h2 {
-      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .featured-tranquilopa .feature-badge {
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-
-    .featured-tranquilopa .btn-featured {
-      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-    }
-
-    .featured-tranquilopa .btn-featured:hover {
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-    }
-
-    .featured-tranquilopa .btn-featured-secondary {
-      color: #3b82f6;
-      border: 2px solid #3b82f6;
-    }
-
-    .featured-tranquilopa .btn-featured-secondary:hover {
-      background: rgba(59, 130, 246, 0.1);
-    }
-
-    .featured-tranquilopa .featured-mockup {
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-
-    .featured-aiteam .featured-container {
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(168, 85, 247, 0.1));
-      border: 2px solid rgba(6, 182, 212, 0.45);
-    }
-
-    .featured-aiteam .featured-badge {
-      background: rgba(6, 182, 212, 0.2);
-      border: 1px solid rgba(6, 182, 212, 0.5);
-    }
-
-    .featured-aiteam .featured-text h2 {
-      background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #a855f7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .featured-aiteam .feature-badge {
-      background: rgba(6, 182, 212, 0.12);
-      border: 1px solid rgba(168, 85, 247, 0.35);
-    }
-
-    .featured-aiteam .btn-featured {
-      background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
-      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
-    }
-
-    .featured-aiteam .btn-featured:hover {
-      box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
-    }
-
-    .featured-aiteam .btn-featured-secondary {
-      color: #22d3ee;
-      border: 2px solid #22d3ee;
-    }
-
-    .featured-aiteam .btn-featured-secondary:hover {
-      background: rgba(6, 182, 212, 0.12);
-    }
-
-    .featured-aiteam .featured-mockup {
-      border: 1px solid rgba(6, 182, 212, 0.35);
-    }
-
-    .featured-badge {
-      display: inline-block;
-      padding: 0.4rem 1.2rem;
-      background: rgba(212, 175, 55, 0.2);
-      border: 1px solid rgba(212, 175, 55, 0.5);
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #d4af37;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .featured-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .featured-text h2 {
-      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-      font-weight: 700;
-      background: linear-gradient(135deg, #d4af37 0%, #9f7aea 50%, #60a5fa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.8rem;
-      line-height: 1.2;
-    }
-
-    .featured-text p {
-      font-size: 1rem;
-      opacity: 0.95;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .featured-sacred-texts {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      margin: 1rem 0;
-    }
-
-    .sacred-badge {
-      padding: 0.3rem 0.8rem;
-      background: rgba(212, 175, 55, 0.15);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: 8px;
-      font-size: 0.8rem;
-      color: #d4af37;
-    }
-
-    .featured-highlights {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.8rem;
-      margin: 1.5rem 0;
-    }
-
-    .highlight-item {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.9rem;
-    }
-
-    .highlight-icon {
-      font-size: 1.1rem;
-    }
-
-    .featured-cta {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: 1.5rem;
-    }
-
-    .btn-featured {
-      padding: 0.8rem 1.5rem;
-      background: linear-gradient(135deg, #d4af37 0%, #9f7aea 100%);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-    }
-
-    .btn-featured:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    }
-
-    .btn-featured-secondary {
-      padding: 0.8rem 1.5rem;
-      background: transparent;
-      color: #d4af37;
-      border: 2px solid #d4af37;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn-featured-secondary:hover {
-      background: rgba(212, 175, 55, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .featured-visual {
-      position: relative;
-      padding: 2rem;
-    }
-
-    .featured-mockup {
-      background: var(--surface-glass-strong);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: 20px;
-      padding: 2rem;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .featured-mockup-iframe {
-      padding: 0;
-      overflow: hidden;
-      min-height: 450px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .featured-mockup-iframe iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 450px;
-      border-radius: 16px;
-      border: none;
-      background: #1a1a2e;
-    }
-
-    .mockup-content {
+      margin-bottom: 0.5rem;
       text-align: center;
-      padding: 2rem;
     }
-
-    .mockup-icon {
-      font-size: 4rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .mockup-title {
-      font-size: 1.5rem;
-      color: #d4af37;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .mockup-subtitle {
+    .products-teaser-subtitle {
+      text-align: center;
       opacity: 0.9;
-      line-height: 1.6;
+      max-width: 42rem;
+      margin: 0 auto 1.75rem;
+      line-height: 1.5;
+      font-size: 1rem;
     }
-
-    .floating-elements {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
+    .products-teaser-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
     }
-
-    .floating-emoji {
-      position: absolute;
-      font-size: 2rem;
-      animation: float 6s ease-in-out infinite;
-      opacity: 0.6;
+    .products-teaser-card {
+      background: rgba(148, 163, 184, 0.06);
+      border: 1px solid rgba(125, 211, 252, 0.2);
+      border-radius: 14px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      min-height: 140px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
-
-    .floating-emoji:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-    .floating-emoji:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
-    .floating-emoji:nth-child(3) { bottom: 15%; left: 15%; animation-delay: 4s; }
-    .floating-emoji:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 1s; }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(5deg); }
+    .products-teaser-card:hover {
+      border-color: rgba(125, 211, 252, 0.45);
+      transform: translateY(-2px);
     }
-
-    @media (max-width: 968px) {
-      .featured-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .featured-container {
-        padding: 2rem 1.5rem;
-      }
-
-      .featured-highlights {
-        grid-template-columns: 1fr;
-      }
-
-      .featured-cta {
+    .products-teaser-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin: 0;
+    }
+    .products-teaser-card p {
+      font-size: 0.9rem;
+      opacity: 0.88;
+      line-height: 1.45;
+      margin: 0;
+      flex: 1;
+    }
+    .products-teaser-cta {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #93c5fd;
+      text-decoration: none;
+      margin-top: auto;
+    }
+    .products-teaser-cta:hover {
+      text-decoration: underline;
+    }
+    .products-teaser-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .products-teaser-btn-primary {
+      padding: 0.85rem 1.5rem;
+      background: var(--gradient-primary);
+      color: #0b1020;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .products-teaser-btn-primary:hover {
+      filter: brightness(1.08);
+    }
+    .products-teaser-btn-secondary {
+      padding: 0.85rem 1.5rem;
+      background: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .products-teaser-btn-secondary:hover {
+      background: rgba(125, 211, 252, 0.1);
+    }
+    @media (max-width: 600px) {
+      .products-teaser-actions {
         flex-direction: column;
       }
-
-      .btn-featured,
-      .btn-featured-secondary {
+      .products-teaser-btn-primary,
+      .products-teaser-btn-secondary {
         width: 100%;
         text-align: center;
       }
@@ -2457,7 +2060,7 @@
     <div class="topbar-container">
       <nav class="topbar-nav">
         <a href="index.html" class="active" data-i18n="nav.home">Home</a>
-        <a href="#products" onclick="scrollToProducts(); return false;" data-i18n="nav.products">Products</a>
+        <a href="produtos.html" data-i18n="nav.products">Products</a>
         <a href="#services" onclick="document.querySelector('.services-section').scrollIntoView({behavior:'smooth'}); return false;" data-i18n="nav.services">Services</a>
         <a href="roi-calculator.html" data-i18n="nav.roi_calculator">ROI Calculator</a>
       </nav>
@@ -2564,562 +2167,54 @@
     <div class="divider-glow"></div>
   </div>
 
-  <!-- AI Products Grid - REMOVED FOR BETTER UX -->
-  <!-- Products now showcased in Featured sections below -->
-
-  <!-- Featured Product: Messiax -->
-  <div class="featured-product fade-in">
-    <div class="featured-container">
-      <div class="featured-badge" data-i18n="featured_messiax.badge">✨ Destaque Especial</div>
-      
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2 data-i18n="featured_messiax.headline">Encontre a Paz Que Faltava na Sua Vida</h2>
-          <p data-i18n="featured_messiax.description">
-            <strong>Messiax</strong> é sua companheira espiritual movida por IA, treinada em 5 livros sagrados. 
-            Não importa sua fé, você será respeitado e guiado segundo SUA tradição.
-          </p>
-
-          <div class="featured-sacred-texts">
-            <span class="sacred-badge" data-i18n="featured_messiax.sacred_bible">📖 Bíblia</span>
-            <span class="sacred-badge" data-i18n="featured_messiax.sacred_torah">✡️ Torá</span>
-            <span class="sacred-badge" data-i18n="featured_messiax.sacred_quran">☪️ Alcorão</span>
-            <span class="sacred-badge" data-i18n="featured_messiax.sacred_vedas">🕉️ Vedas</span>
-            <span class="sacred-badge" data-i18n="featured_messiax.sacred_buddhist">☸️ Textos Budistas</span>
-          </div>
-
-          <div class="featured-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🙏</span>
-              <span data-i18n="featured_messiax.highlight_1">Sempre presente quando você precisa</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">✨</span>
-              <span data-i18n="featured_messiax.highlight_2">Orientações espirituais guiadas</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">📚</span>
-              <span data-i18n="featured_messiax.highlight_3">Leituras dos livros sagrados</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🤝</span>
-              <span data-i18n="featured_messiax.highlight_4">Espaço seguro e confidencial</span>
-            </div>
-          </div>
-
-          <div class="featured-cta">
-            <a href="messiax.html" class="btn-featured" data-i18n="featured_messiax.btn_learn">
-              Conhecer Messiax →
-            </a>
-            <a href="https://messiax.ai" class="btn-featured-secondary" target="_blank" data-i18n="featured_messiax.btn_access">
-              Acessar Plataforma →
-            </a>
-          </div>
-        </div>
-
-        <div class="featured-visual">
-          <div class="floating-elements">
-            <span class="floating-emoji">🙏</span>
-            <span class="floating-emoji">✨</span>
-            <span class="floating-emoji">💫</span>
-            <span class="floating-emoji">🕊️</span>
-          </div>
-          
-          <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
-            <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
-              <div style="text-align: center; padding: 2rem;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">🙏</div>
-                <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #fbbf24 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;" data-i18n="featured_messiax.mockup_title">Messiax.ai</h3>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="featured_messiax.mockup_subtitle">Your AI Spiritual Companion<br><small style="opacity: 0.8;">Multi-religious • Respectful • Always present</small></p>
-                <a href="https://messiax.ai" target="_blank" class="btn-featured" style="pointer-events: all; display: inline-block;" data-i18n="featured_messiax.visit_site">Visit Site →</a>
-              </div>
-            </div>
-            
-            <iframe 
-              src="https://messiax.ai" 
-              title="Messiax.ai - AI Spiritual Companion"
-              frameborder="0"
-              loading="lazy"
-              allowfullscreen
-              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
-            ></iframe>
-          </div>
-        </div>
+  <!-- Products teaser: compact links to full product page -->
+  <section id="products" class="products-teaser-section" aria-labelledby="products-teaser-title">
+    <div class="products-teaser-inner">
+      <h2 id="products-teaser-title" class="products-teaser-title" data-i18n="products_teaser.title">Produtos INOSX</h2>
+      <p class="products-teaser-subtitle" data-i18n="products_teaser.subtitle">IA conversacional, dados, bem-estar e ferramentas para equipas — explore o portfólio e fale connosco para um projeto à sua medida.</p>
+      <div class="products-teaser-grid">
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.messiax">Messiax.ai</h3>
+          <p data-i18n="products.messiax_desc">Companheira espiritual com IA.</p>
+          <a href="produtos.html#messiax" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.surveyflow">SurveyFlow.ai</h3>
+          <p data-i18n="products.surveyflow_desc">Inteligência de pesquisas com IA.</p>
+          <a href="produtos.html#surveyflow" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.psychox">PsychoX.ai</h3>
+          <p data-i18n="products.psychox_desc">Suporte psicológico com IA.</p>
+          <a href="produtos.html#psychox" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.datagpt">DataGPT</h3>
+          <p data-i18n="products.datagpt_desc">IA para análise de dados empresariais.</p>
+          <a href="produtos.html#datagpt" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.ccoinx">Ccoinx.ai</h3>
+          <p data-i18n="products.ccoinx_desc">Conversor de moedas com câmera.</p>
+          <a href="produtos.html#ccoinx" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.tranquilopa">Tranquilopa</h3>
+          <p data-i18n="products.tranquilopa_desc">Plataforma de confiança no Paraguai.</p>
+          <a href="produtos.html#tranquilopa" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.aiteam">AITEAM-X</h3>
+          <p data-i18n="products.aiteam_desc">Dashboard open source para agentes de IA.</p>
+          <a href="produtos.html#aiteam" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+      </div>
+      <div class="products-teaser-actions">
+        <a href="produtos.html" class="products-teaser-btn-primary" data-i18n="products_teaser.cta_all">Ver todos os produtos →</a>
+        <button type="button" class="products-teaser-btn-secondary" onclick="openContactModal()" data-i18n="products_teaser.cta_contact">Falar connosco →</button>
       </div>
     </div>
-  </div>
-
-  <!-- Featured Product: SurveyFlow -->
-  <div class="featured-product featured-surveyflow fade-in">
-    <div class="featured-container">
-      <div class="featured-badge" data-i18n="featured_surveyflow.badge">✨ Featured Product</div>
-      
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2 data-i18n="featured_surveyflow.headline">Stop Guessing, Start Knowing Your Customers</h2>
-          <p data-i18n="featured_surveyflow.description">
-            <strong>SurveyFlow.ai</strong> transforms feedback into actionable insights instantly. 
-            AI creates surveys, analyzes responses, and delivers insights that actually drive decisions.
-          </p>
-
-          <div class="featured-sacred-texts featured-features">
-            <span class="sacred-badge feature-badge" data-i18n="featured_surveyflow.feature_ai">🤖 AI Survey Builder</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_surveyflow.feature_analytics">📊 Smart Analytics</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_surveyflow.feature_targeting">🎯 Precision Targeting</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_surveyflow.feature_realtime">⚡ Real-Time Results</span>
-          </div>
-
-          <div class="featured-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🚀</span>
-              <span data-i18n="featured_surveyflow.highlight_1">Surveys ready in seconds, not hours</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🎨</span>
-              <span data-i18n="featured_surveyflow.highlight_2">Full brand customization</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🌐</span>
-              <span data-i18n="featured_surveyflow.highlight_3">50+ languages supported</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">📈</span>
-              <span data-i18n="featured_surveyflow.highlight_4">AI-powered insights & trends</span>
-            </div>
-          </div>
-
-          <div class="featured-cta">
-            <a href="surveyflow.html" class="btn-featured" data-i18n="featured_surveyflow.btn_learn">
-              Learn About SurveyFlow →
-            </a>
-            <a href="https://surveyflow.ai" class="btn-featured-secondary" target="_blank" data-i18n="featured_surveyflow.btn_access">
-              Try Free Demo →
-            </a>
-          </div>
-        </div>
-
-        <div class="featured-visual">
-          <div class="floating-elements">
-            <span class="floating-emoji">📊</span>
-            <span class="floating-emoji">🎯</span>
-            <span class="floating-emoji">✨</span>
-            <span class="floating-emoji">📈</span>
-          </div>
-          
-          <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
-            <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(20, 184, 166, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
-              <div style="text-align: center; padding: 2rem;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
-                <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #14b8a6 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;" data-i18n="featured_surveyflow.mockup_title">SurveyFlow.ai</h3>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="featured_surveyflow.mockup_subtitle">AI-Powered Survey Intelligence<br><small style="opacity: 0.8;">Smart • Fast • Insightful</small></p>
-                <a href="https://surveyflow.ai" target="_blank" class="btn-featured" style="pointer-events: all; display: inline-block;" data-i18n="featured_surveyflow.visit_site">Visit Site →</a>
-              </div>
-            </div>
-            
-            <iframe 
-              src="https://surveyflow.ai" 
-              title="SurveyFlow.ai - AI-Powered Survey Intelligence"
-              frameborder="0"
-              loading="lazy"
-              allowfullscreen
-              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Featured Product: PsychoX -->
-  <div class="featured-product featured-psychox fade-in">
-    <div class="featured-container">
-      <div class="featured-badge" data-i18n="featured_psychox.badge">✨ Featured Product</div>
-      
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2 data-i18n="featured_psychox.headline">Your Mental Wellness Journey Starts Here</h2>
-          <p data-i18n="featured_psychox.description">
-            <strong>PsychoX.app</strong> is your AI-powered psychological support companion available 24/7. 
-            Get evidence-based guidance, mood tracking, and personalized support whenever you need it.
-          </p>
-
-          <div class="featured-sacred-texts featured-features">
-            <span class="sacred-badge feature-badge" data-i18n="featured_psychox.feature_support">💜 24/7 AI Support</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_psychox.feature_mood">📊 Mood Tracking</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_psychox.feature_private">🔒 Private & Secure</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_psychox.feature_evidence">🧠 Evidence-Based</span>
-          </div>
-
-          <div class="featured-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🌙</span>
-              <span data-i18n="featured_psychox.highlight_1">Always available, day or night</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">💭</span>
-              <span data-i18n="featured_psychox.highlight_2">Non-judgmental space to express yourself</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">📈</span>
-              <span data-i18n="featured_psychox.highlight_3">Track your emotional wellness journey</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🤝</span>
-              <span data-i18n="featured_psychox.highlight_4">Professional support when you need it</span>
-            </div>
-          </div>
-
-          <div class="featured-cta">
-            <a href="https://psychox.app" class="btn-featured" target="_blank" data-i18n="featured_psychox.btn_start">
-              Start Your Journey →
-            </a>
-            <a href="https://psychox.app" class="btn-featured-secondary" target="_blank" data-i18n="featured_psychox.btn_learn">
-              Learn More →
-            </a>
-          </div>
-        </div>
-
-        <div class="featured-visual">
-          <div class="floating-elements">
-            <span class="floating-emoji">💜</span>
-            <span class="floating-emoji">🌟</span>
-            <span class="floating-emoji">🧠</span>
-            <span class="floating-emoji">💭</span>
-          </div>
-          
-          <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
-            <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
-              <div style="text-align: center; padding: 2rem;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">💜</div>
-                <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;" data-i18n="featured_psychox.mockup_title">PsychoX.app</h3>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="featured_psychox.mockup_subtitle">AI Psychological Support<br><small style="opacity: 0.8;">Private • Secure • Always Here</small></p>
-                <a href="https://psychox.app" target="_blank" class="btn-featured" style="pointer-events: all; display: inline-block;" data-i18n="featured_psychox.visit_site">Visit Site →</a>
-              </div>
-            </div>
-            
-            <iframe 
-              src="https://psychox.app" 
-              title="PsychoX.app - AI Psychological Support"
-              frameborder="0"
-              loading="lazy"
-              allowfullscreen
-              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Featured Product: DataGPT -->
-  <div class="featured-product featured-datagpt fade-in">
-    <div class="featured-container">
-      <div class="featured-badge" data-i18n="featured_datagpt.badge">✨ Featured Product</div>
-      
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2 data-i18n="featured_datagpt.headline">Talk to Your Data Like a Human</h2>
-          <p data-i18n="featured_datagpt.description">
-            <strong>DataGPT</strong> is your conversational AI analyst that turns complex data questions into instant insights. 
-            No SQL required—just ask in plain language and get answers in seconds, not weeks.
-          </p>
-
-          <div class="featured-sacred-texts featured-features">
-            <span class="sacred-badge feature-badge" data-i18n="featured_datagpt.feature_conversational">💬 Conversational AI</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_datagpt.feature_instant">⚡ Instant Insights</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_datagpt.feature_nosql">🚀 No SQL Needed</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_datagpt.feature_proactive">🔍 Proactive Alerts</span>
-          </div>
-
-          <div class="featured-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">📊</span>
-              <span data-i18n="featured_datagpt.highlight_1">Query billions of rows in fractions of a second</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🎯</span>
-              <span data-i18n="featured_datagpt.highlight_2">99% noise reduction—surface only what matters</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🧠</span>
-              <span data-i18n="featured_datagpt.highlight_3">Root cause analysis and anomaly detection</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">⚡</span>
-              <span data-i18n="featured_datagpt.highlight_4">10x efficiency gains for analyst teams</span>
-            </div>
-          </div>
-
-          <div class="featured-cta">
-            <a href="https://datagpt.com.br" class="btn-featured" target="_blank" data-i18n="featured_datagpt.btn_start">
-              Start Analyzing →
-            </a>
-            <a href="https://datagpt.com.br" class="btn-featured-secondary" target="_blank" data-i18n="featured_datagpt.btn_learn">
-              See How It Works →
-            </a>
-          </div>
-        </div>
-
-        <div class="featured-visual">
-          <div class="floating-elements">
-            <span class="floating-emoji">📊</span>
-            <span class="floating-emoji">💡</span>
-            <span class="floating-emoji">🎯</span>
-            <span class="floating-emoji">⚡</span>
-          </div>
-          
-          <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
-            <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(52, 211, 153, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
-              <div style="text-align: center; padding: 2rem;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
-                <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #10b981 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;" data-i18n="featured_datagpt.mockup_title">DataGPT</h3>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="featured_datagpt.mockup_subtitle">Conversational AI Analyst<br><small style="opacity: 0.8;">Fast • Intelligent • Accessible</small></p>
-                <a href="https://datagpt.com.br" target="_blank" class="btn-featured" style="pointer-events: all; display: inline-block;" data-i18n="featured_datagpt.visit_site">Visit Site →</a>
-              </div>
-            </div>
-            
-            <iframe 
-              src="https://datagpt.com.br" 
-              title="DataGPT - Conversational AI Analyst"
-              frameborder="0"
-              loading="lazy"
-              allowfullscreen
-              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Featured Product: Ccoinx -->
-  <div class="featured-product featured-ccoinx fade-in">
-    <div class="featured-container">
-      <div class="featured-badge" data-i18n="featured_ccoinx.badge">✨ Produto em Destaque</div>
-      
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2 data-i18n="featured_ccoinx.headline">Converta Preços em Tempo Real—Aponte a Câmera</h2>
-          <p data-i18n="featured_ccoinx.description">
-            <strong>Ccoinx.ai</strong> é o conversor de moedas com câmera. Aponte para preços em moeda estrangeira e veja a conversão em tempo real sobre a imagem. OCR 100% local, privacidade total.
-          </p>
-
-          <div class="featured-sacred-texts featured-features">
-            <span class="sacred-badge feature-badge" data-i18n="featured_ccoinx.feature_1">📷 Câmera + OCR</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_ccoinx.feature_2">⚡ Tempo Real</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_ccoinx.feature_3">🔒 Privado (Local)</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_ccoinx.feature_4">💱 Cotações Atualizadas</span>
-          </div>
-
-          <div class="featured-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🔒</span>
-              <span data-i18n="featured_ccoinx.highlight_1">Fotos nunca saem do dispositivo</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">📷</span>
-              <span data-i18n="featured_ccoinx.highlight_2">OCR 100% no browser</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">💱</span>
-              <span data-i18n="featured_ccoinx.highlight_3">Cotações atualizadas a cada 2 min</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">✨</span>
-              <span data-i18n="featured_ccoinx.highlight_4">Sem cadastro para testar</span>
-            </div>
-          </div>
-
-          <div class="featured-cta">
-            <a href="https://ccoinx.ai/converter" class="btn-featured" target="_blank" data-i18n="featured_ccoinx.btn_learn">
-              Conhecer Ccoinx →
-            </a>
-            <a href="https://ccoinx.ai" class="btn-featured-secondary" target="_blank" data-i18n="featured_ccoinx.btn_access">
-              Experimentar Agora →
-            </a>
-          </div>
-        </div>
-
-        <div class="featured-visual">
-          <div class="floating-elements">
-            <span class="floating-emoji">📷</span>
-            <span class="floating-emoji">💱</span>
-            <span class="floating-emoji">✨</span>
-            <span class="floating-emoji">🔒</span>
-          </div>
-          
-          <div class="featured-mockup featured-mockup-iframe">
-            <!-- Fallback visual (visível por padrão, esconde se iframe carregar) -->
-            <div class="iframe-fallback" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(234, 179, 8, 0.15) 100%); border-radius: 16px; z-index: 2; pointer-events: none; opacity: 1; transition: opacity 0.5s;">
-              <div style="text-align: center; padding: 2rem;">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">💱</div>
-                <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #22c55e 0%, #eab308 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;" data-i18n="featured_ccoinx.mockup_title">Ccoinx.ai</h3>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="featured_ccoinx.mockup_subtitle">Conversor de Moedas com Câmera<br><small style="opacity: 0.8;">Privado • Rápido • Local</small></p>
-                <a href="https://ccoinx.ai" target="_blank" class="btn-featured" style="pointer-events: all; display: inline-block;" data-i18n="featured_ccoinx.visit_site">Visitar Site →</a>
-              </div>
-            </div>
-            
-            <iframe 
-              src="https://ccoinx.ai" 
-              title="Ccoinx.ai - Conversor de Moedas com Câmera"
-              frameborder="0"
-              loading="lazy"
-              allowfullscreen
-              style="width: 100%; height: 100%; min-height: 400px; border-radius: 16px; border: none; position: relative; z-index: 1;"
-              onload="setTimeout(() => { this.previousElementSibling.style.opacity='0'; this.previousElementSibling.style.pointerEvents='none'; }, 800);"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Featured Product: Tranquilopa -->
-  <div class="featured-product featured-tranquilopa fade-in">
-    <div class="featured-container">
-      <div class="featured-badge" data-i18n="featured_tranquilopa.badge">✨ Produto em Destaque</div>
-      
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2 data-i18n="featured_tranquilopa.headline">Encontre Negócios e Serviços em Que Você Pode Confiar</h2>
-          <p data-i18n="featured_tranquilopa.description">
-            <strong>Tranquilopa</strong> é a plataforma de confiança do Paraguai. Busque, descubra e avalie negócios e serviços. 
-            Milhares de empresas cadastradas e avaliações reais para você decidir com segurança.
-          </p>
-
-          <div class="featured-sacred-texts featured-features">
-            <span class="sacred-badge feature-badge" data-i18n="featured_tranquilopa.feature_search">🔍 Busca Inteligente</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_tranquilopa.feature_reviews">⭐ Avaliações Reais</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_tranquilopa.feature_categories">📂 Por Categoria</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_tranquilopa.feature_free">🆓 Cadastro Gratuito</span>
-          </div>
-
-          <div class="featured-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🏪</span>
-              <span data-i18n="featured_tranquilopa.highlight_1">Milhares de negócios cadastrados</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">📝</span>
-              <span data-i18n="featured_tranquilopa.highlight_2">Leia avaliações de outros usuários</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🤝</span>
-              <span data-i18n="featured_tranquilopa.highlight_3">Compre ou contrate com confiança</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">✅</span>
-              <span data-i18n="featured_tranquilopa.highlight_4">Avalie sua experiência</span>
-            </div>
-          </div>
-
-          <div class="featured-cta">
-            <a href="https://tranquilopa.com" class="btn-featured" target="_blank" data-i18n="featured_tranquilopa.btn_start">
-              Explorar Tranquilopa →
-            </a>
-            <a href="https://tranquilopa.com/en/anunciar" class="btn-featured-secondary" target="_blank" data-i18n="featured_tranquilopa.btn_register">
-              Cadastrar Meu Negócio →
-            </a>
-          </div>
-        </div>
-
-        <div class="featured-visual">
-          <div class="floating-elements">
-            <span class="floating-emoji">🔍</span>
-            <span class="floating-emoji">⭐</span>
-            <span class="floating-emoji">🏪</span>
-            <span class="floating-emoji">🤝</span>
-          </div>
-          
-          <div class="featured-mockup featured-mockup-fallback" style="min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%); border-radius: 16px;">
-            <div style="text-align: center; padding: 2rem;">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">🏪</div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;" data-i18n="featured_tranquilopa.mockup_title">Tranquilopa</h3>
-              <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="featured_tranquilopa.mockup_subtitle">Plataforma de Confiança do Paraguai<br><small style="opacity: 0.8;">Buscar • Descobrir • Avaliar</small></p>
-              <a href="https://tranquilopa.com" target="_blank" class="btn-featured" style="display: inline-block;" data-i18n="featured_tranquilopa.visit_site">Visitar Site →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Featured Product: AITEAM-X -->
-  <div class="featured-product featured-aiteam fade-in">
-    <div class="featured-container">
-      <div class="featured-badge" data-i18n="featured_aiteam.badge">✨ Produto em Destaque</div>
-
-      <div class="featured-content">
-        <div class="featured-text">
-          <h2 data-i18n="featured_aiteam.headline">Coordene agentes de IA num painel visual em pixel-art</h2>
-          <p data-i18n="featured_aiteam.description">
-            <strong>AITEAM-X</strong> é o dashboard open source da INOSX para monitorar e conversar com agentes de IA em tempo real—com chat com streaming, Memory Vault, revisão de diffs e integração nativa com Cursor (CLI e ACP).
-          </p>
-
-          <div class="featured-sacred-texts featured-features">
-            <span class="sacred-badge feature-badge" data-i18n="featured_aiteam.feature_1">🎮 Painel 2D pixel-art</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_aiteam.feature_2">💬 Chat em tempo real (SSE)</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_aiteam.feature_3">🖱️ Cursor CLI + ACP</span>
-            <span class="sacred-badge feature-badge" data-i18n="featured_aiteam.feature_4">📦 Open source (MIT)</span>
-          </div>
-
-          <div class="featured-highlights">
-            <div class="highlight-item">
-              <span class="highlight-icon">🏢</span>
-              <span data-i18n="featured_aiteam.highlight_1">Escritório virtual com salas e status dos agentes</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">🧠</span>
-              <span data-i18n="featured_aiteam.highlight_2">Memory Vault com busca e injeção de contexto</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">📋</span>
-              <span data-i18n="featured_aiteam.highlight_3">Revise diffs antes de persistir alterações</span>
-            </div>
-            <div class="highlight-item">
-              <span class="highlight-icon">⚡</span>
-              <span data-i18n="featured_aiteam.highlight_4">Instale com um comando: npx aiteam-x@latest</span>
-            </div>
-          </div>
-
-          <div class="featured-cta">
-            <a href="https://github.com/INOSX/AITeam" class="btn-featured" target="_blank" rel="noopener noreferrer" data-i18n="featured_aiteam.btn_learn">
-              Ver no GitHub →
-            </a>
-            <a href="https://www.npmjs.com/package/aiteam-x" class="btn-featured-secondary" target="_blank" rel="noopener noreferrer" data-i18n="featured_aiteam.btn_access">
-              Instalar com npx →
-            </a>
-          </div>
-        </div>
-
-        <div class="featured-visual">
-          <div class="floating-elements">
-            <span class="floating-emoji">🤖</span>
-            <span class="floating-emoji">🎮</span>
-            <span class="floating-emoji">💬</span>
-            <span class="floating-emoji">⚡</span>
-          </div>
-
-          <div class="featured-mockup featured-mockup-fallback" style="min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%); border-radius: 16px;">
-            <div style="text-align: center; padding: 2rem;">
-              <div style="font-size: 3rem; margin-bottom: 1rem;">🤖</div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;" data-i18n="featured_aiteam.mockup_title">AITEAM-X</h3>
-              <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="featured_aiteam.mockup_subtitle">Dashboard para agentes de IA<br><small style="opacity: 0.8;">Visual • Open source • Cursor</small></p>
-              <a href="https://github.com/INOSX/AITeam" target="_blank" rel="noopener noreferrer" class="btn-featured" style="display: inline-block;" data-i18n="featured_aiteam.visit_site">Abrir repositório →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- Industries We Serve Section -->
   <div class="industries-section">
@@ -3818,19 +2913,6 @@
         alert('Something went wrong. Please try again or email us at contact@inosx.com');
         submitBtn.disabled = false;
         submitBtn.textContent = 'Get Free Consultation';
-      }
-    }
-
-    function scrollToProducts() {
-      document.querySelector('.carousel-wrapper').scrollIntoView({ 
-        behavior: 'smooth' 
-      });
-      
-      // Track event
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'scroll_to_products', {
-          'event_category': 'navigation'
-        });
       }
     }
 

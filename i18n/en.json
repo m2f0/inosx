@@ -3,6 +3,23 @@
     "title": "INOSX - The Future of AI | Enterprise AI Solutions",
     "description": "INOSX delivers enterprise AI solutions including autonomous agents, conversational analytics, and AI-powered security. Transform your business with practical AI."
   },
+  "products_page": {
+    "meta": {
+      "title": "INOSX — Products | AI solutions portfolio",
+      "description": "Full INOSX catalog: Messiax, SurveyFlow, PsychoX, DataGPT, Ccoinx, Tranquilopa, AITEAM-X — explore products and get in touch."
+    },
+    "hero_title": "INOSX Products",
+    "hero_subtitle": "AI for individuals, teams, and businesses — explore the full portfolio.",
+    "back_home": "← Back to home",
+    "contact_link": "Contact us"
+  },
+  "products_teaser": {
+    "title": "INOSX Products",
+    "subtitle": "Conversational AI, data, wellness, and team tools — see the portfolio and contact us for a tailored project.",
+    "cta_all": "View all products →",
+    "cta_contact": "Contact us →",
+    "learn_more": "Learn more →"
+  },
   "nav": {
     "home": "Home",
     "products": "Products",
@@ -274,6 +291,8 @@
     "hubia_desc": "Business intelligence platform",
     "ccoinx": "Ccoinx.ai",
     "ccoinx_desc": "Camera currency converter",
+    "tranquilopa": "Tranquilopa",
+    "tranquilopa_desc": "Paraguay's trusted platform — search and review businesses",
     "aiteam": "AITEAM-X",
     "aiteam_desc": "Open-source dashboard to orchestrate AI agents with Cursor",
     "vision": "INOSX Vision Robotics",
