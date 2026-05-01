@@ -3,6 +3,171 @@
     "title": "INOSX - O Futuro da IA | Soluções Empresariais de IA",
     "description": "INOSX oferece soluções empresariais de IA incluindo agentes autônomos, análise conversacional e segurança alimentada por IA. Transforme seu negócio com IA prática."
   },
+  "landing": {
+    "nav": {
+      "solutions": "Soluções",
+      "products": "Produtos",
+      "cases": "Casos",
+      "faq": "Perguntas",
+      "cta": "Fale conosco"
+    },
+    "a11y": {
+      "skip": "Pular para o conteúdo"
+    },
+    "hero": {
+      "eyebrow": "INOSX — Software studio",
+      "headline_1": "Software que se",
+      "headline_2": "usa,",
+      "headline_3": "não só se",
+      "headline_4": "demonstra.",
+      "sub": "Desenhamos e construímos produtos digitais para empresas internacionais. Da primeira conversa ao time que opera. IA quando o problema pede, nunca como manchete.",
+      "meta_1_l": "Implantação", "meta_1_v": "em semanas",
+      "meta_2_l": "Dados", "meta_2_v": "sob seu controle",
+      "meta_3_l": "Retorno", "meta_3_v": "mensurável"
+    },
+    "clients": {
+      "label": "Empresas que confiam na INOSX",
+      "note": "Selecionadas entre projetos em produção"
+    },
+    "evidence": {
+      "e1": "Produtos próprios em operação",
+      "e2": "Clientes em múltiplos continentes",
+      "e3": "Engajamentos ativos em diversas indústrias",
+      "cue_see": "Ver"
+    },
+    "pains": {
+      "eyebrow": "Soa familiar",
+      "title_1": "Você queria um produto.",
+      "title_2": "Entregaram uma demo.",
+      "sub": "Os padrões que vemos toda semana com líderes de produto e tomadores de decisão. Os que decidimos resolver com craft.",
+      "p1_t": "Fornecedores que entregam slide, não produto",
+      "p1_d": "Demos que ganham reunião e morrem na implantação. Design, engenharia e processo nunca chegam juntos.",
+      "p2_t": "UX que nenhum usuário vai usar",
+      "p2_d": "Software que o usuário abre uma vez e abandona. O investimento mora numa licença, o trabalho mora numa planilha.",
+      "p3_t": "Dados sensíveis fora do seu controle",
+      "p3_d": "Compliance, LGPD e segredo industrial inviabilizam a maior parte das plataformas de prateleira.",
+      "p4_t": "Integrações que nunca chegam",
+      "p4_d": "ERPs, CRMs, bases legadas e automações que precisam conversar. Ninguém termina os últimos 20%.",
+      "p5_t": "Custo crescente, retorno invisível",
+      "p5_d": "Horas faturadas, escopo derivando, valor sumindo na diretoria. O número que ninguém defende.",
+      "p6_t": "Vendor lock-in disfarçado",
+      "p6_d": "Plataformas fechadas que prometem facilidade e cobram caro quando você quer escalar, migrar ou possuir o código."
+    },
+    "solutions": {
+      "eyebrow": "O que fazemos",
+      "title_1": "Software,",
+      "title_2": "desenhado e construído.",
+      "sub": "Seis práticas que dividem uma promessa: produtos digitais que seu time vai usar de verdade, do primeiro esboço ao painel de operação.",
+      "s1_t": "Produtos digitais",
+      "s1_d": "Apps web, mobile e desktop modelados a partir de quem vai usar. Da pesquisa e UX a um release que o time tem orgulho de shipar.",
+      "s2_t": "Plataformas & integração",
+      "s2_d": "APIs, integrações, pipelines de dados e modernização de legado. Onde software existente precisa conversar com software novo, sem remendo.",
+      "s3_t": "IA, quando serve",
+      "s3_d": "Agentes, plataformas de conhecimento, orquestração. Em produção com observabilidade e custo sob controle. Nunca como manchete do produto.",
+      "s4_t": "Segurança & confiança",
+      "s4_d": "CyberAI: detecção, resposta e auditoria contínuas. Visibilidade do que importa em todo o produto, sem ruído, sem teatro.",
+      "s5_t": "Visão computacional",
+      "s5_d": "Inspeção, contagem, controle de qualidade e automação visual. Onde a operação física precisa de olhos digitais.",
+      "s6_t": "Estratégia de produto",
+      "s6_d": "Discovery, roadmap, design system. Decisões que sobrevivem ao primeiro usuário, à primeira auditoria e aos próximos dois anos."
+    },
+    "products": {
+      "eyebrow": "Produtos INOSX",
+      "title_1": "Software pronto para usar,",
+      "title_2": "sob medida quando preciso.",
+      "sub": "Catálogo de produtos próprios em produção real. Use prontos ou como ponto de partida customizável.",
+      "more": "Saber mais",
+      "messiax": "Atendimento conversacional com IA: respostas, follow-up e qualificação no canal do seu cliente.",
+      "surveyflow": "Pesquisas inteligentes com análise automatizada e insights acionáveis.",
+      "psychox": "Avaliações psicométricas digitais com relatório clínico assistido por IA.",
+      "datagpt": "Converse com seus dados: análises, gráficos e respostas em linguagem natural.",
+      "ccoinx": "Inteligência aplicada a finanças e ativos digitais: sinais, monitoramento e automação.",
+      "tranquilopa": "Bem-estar e saúde mental com IA: apoio contínuo, conteúdo guiado e acompanhamento.",
+      "aiteam": "Time completo de IA na sua máquina: 30+ agentes, memória compartilhada, dados locais."
+    },
+    "how": {
+      "eyebrow": "Como trabalhamos",
+      "title_1": "Três passos.",
+      "title_2": "Sem teatro de venda.",
+      "s1_t": "Diagnóstico",
+      "s1_d": "Conversa de descoberta, mapa do que existe, identificação dos casos com maior retorno e clareza de viabilidade.",
+      "s2_t": "Design + Build",
+      "s2_d": "Um release real do produto em semanas. UX modelada com seu time, indicadores definidos no início, código em produção desde o primeiro dia.",
+      "s3_t": "Escala",
+      "s3_d": "Operação contínua, observabilidade, governança e expansão para novos processos com base no que provou retorno."
+    },
+    "cases": {
+      "eyebrow": "Trabalhos selecionados",
+      "title_1": "A diferença aparece",
+      "title_2": "no produto.",
+      "w1_d": "[Substituir pelo engajamento real, ex.: \"Modernização do fluxo de originação de crédito: camada de serviços em TypeScript sobre core legado em mainframe, integrada ao pipeline de risco existente.\"]",
+      "w1_m1": "Serviços financeiros",
+      "w1_m2": "Node · TypeScript · GCP",
+      "w2_d": "[Substituir pelo engajamento real, ex.: \"Plataforma operacional interna para o time de campo: cliente React Native offline-first, gateway GraphQL, stack de observabilidade.\"]",
+      "w2_m1": "Telecom",
+      "w2_m2": "React Native · GraphQL · Kubernetes",
+      "w3_d": "[Substituir pelo engajamento real, ex.: \"Pipeline de visão computacional para controle de qualidade na linha de montagem: inferência em edge, interface de revisão de anomalias, log de auditoria.\"]",
+      "w3_m1": "Manufatura",
+      "w3_m2": "Python · PyTorch · MQTT"
+    },
+    "industries": {
+      "eyebrow": "Indústrias",
+      "title_1": "Onde já",
+      "title_2": "estamos."
+    },
+    "faq": {
+      "eyebrow": "Perguntas frequentes",
+      "title_1": "Antes que pergunte —",
+      "title_2": "já respondemos.",
+      "q1": "Como começa um projeto com a INOSX?",
+      "a1": "Com uma conversa de diagnóstico gratuita. Mapeamos seu contexto, objetivos e dados, e voltamos com proposta enxuta de piloto e cronograma realista.",
+      "q2": "Quanto tempo até ver resultado?",
+      "a2": "Pilotos típicos vão a produção em 4 a 8 semanas. O recorte é definido para gerar valor mensurável dentro deste prazo.",
+      "q3": "Meus dados ficam expostos?",
+      "a3": "Não. Trabalhamos com arquiteturas privadas, modelos locais quando necessário, segregação de dados e conformidade com LGPD.",
+      "q4": "Vocês integram com nossos sistemas?",
+      "a4": "Sim. ERPs, CRMs, bases internas, APIs e legados. Integração faz parte do escopo, não é projeto à parte.",
+      "q5": "Vocês têm um stack fixo?",
+      "a5": "Não. Selecionamos o stack certo por projeto: Node, Python, Go, Rust no back; React, Svelte, Vue no front; nuvem gerenciada ou on-prem. Arquitetura segue a realidade operacional do cliente, não a nossa preferência. O mesmo vale para IA: modelo proprietário, open-source ou local, escolhido pelo problema.",
+      "q6": "Como é a cobrança?",
+      "a6": "Escopo fechado para piloto e modelo de operação contínua para produção. Sem licenças escondidas, custos transparentes.",
+      "q7": "Atendem fora do Brasil?",
+      "a7": "Sim. PT-BR, EN e ES, com entrega remota global."
+    },
+    "lead": {
+      "eyebrow": "Conversa direta",
+      "title_1": "Conte o que",
+      "title_2": "precisa.",
+      "title_3": "Voltamos com",
+      "title_4": "um caminho.",
+      "sub": "Sem formulário interminável. Sem promessa vazia. Você nos conta o desafio em poucas linhas e em até um dia útil retornamos com diagnóstico inicial e próximos passos.",
+      "b1": "Resposta em até 1 dia útil",
+      "b2": "Diagnóstico inicial sem custo",
+      "b3": "Confidencialidade garantida (NDA sob solicitação)",
+      "form_title": "Fale com a INOSX",
+      "f_name": "Nome",
+      "f_email": "E-mail corporativo",
+      "f_company": "Empresa",
+      "f_phone": "Telefone (opcional)",
+      "f_msg": "O que você precisa resolver?",
+      "submit": "Enviar mensagem",
+      "privacy_1": "Ao enviar você concorda com os",
+      "privacy_2": "Termos & Privacidade",
+      "success": "✓ Mensagem recebida. Voltamos em breve.",
+      "error": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para inosx@inosx.com."
+    },
+    "foot": {
+      "tagline": "Software studio. Desenhamos e construímos os produtos que você lança.",
+      "h_company": "Empresa",
+      "h_legal": "Legal",
+      "h_contact": "Contato",
+      "terms": "Termos",
+      "privacy": "Privacidade",
+      "cta": "Iniciar conversa →",
+      "rights": "Todos os direitos reservados.",
+      "crafted": "Concebido em São Paulo · Operando globalmente"
+    }
+  },
   "products_page": {
     "meta": {
       "title": "INOSX — Produtos | Portfólio de soluções de IA",

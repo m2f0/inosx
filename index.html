@@ -2,3222 +2,1588 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-  <title>INOSX - The Future of AI | Enterprise AI Solutions</title>
-  <meta name="description" content="INOSX delivers enterprise AI solutions including autonomous agents, conversational analytics, and AI-powered security. Transform your business with practical AI.">
-  
-  <!-- Favicons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INOSX — A software studio</title>
+  <meta name="description" content="INOSX is a software studio. We design, build and operate custom applications and systems for international companies. Engineered for production, designed to be used. AI when the problem asks for it." />
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="INOSX — A software studio" />
+  <meta property="og:description" content="Custom applications and systems built end-to-end for international companies. Proven in production, not in pitches." />
+  <meta property="og:site_name" content="INOSX" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="INOSX — A software studio" />
+  <meta name="twitter:description" content="Custom applications and systems built end-to-end for international companies." />
+
   <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
   <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
   <link rel="shortcut icon" href="/favicon32x32.ico">
-  
-  <!-- i18n System -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <script src="/i18n/i18n.js" defer></script>
-  
+
   <style>
     :root {
-      --bg-color: #0b1020;
-      --text-color: #e6f0ff;
-      --accent-color: #7dd3fc;
-      --secondary-color: #a78bfa;
-      --gradient-primary: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #8b5cf6 100%);
-      --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #60a5fa 100%);
-      --surface-glass: rgba(148, 163, 184, 0.08);
-      --surface-glass-strong: rgba(148, 163, 184, 0.14);
-      --border-soft: rgba(125, 211, 252, 0.28);
-      --font-size-large: clamp(2rem, 6vw, 4rem);
-      --font-size-medium: clamp(1.5rem, 4vw, 2.5rem);
-      --font-size-small: clamp(1rem, 3vw, 1.5rem);
+      --bg: #0b1020;
+      --bg-soft: #0d1326;
+      --ink: #f3f6ff;
+      --ink-2: #c8d4ea;
+      --ink-3: #8ea0bf;
+      --ink-4: #5a6a87;
+      --line: rgba(199, 215, 240, 0.10);
+      --line-2: rgba(199, 215, 240, 0.18);
+      --accent: #7dd3fc;
+      --accent-2: #60a5fa;
+      --accent-3: #38bdf8;
+      --gradient-primary: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 60%, #0ea5e9 100%);
+      --gradient-soft: linear-gradient(135deg, rgba(125,211,252,0.14) 0%, rgba(56,189,248,0.10) 100%);
+
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --container: 1240px;
+      --container-narrow: 980px;
     }
 
-    /* Reset e configurações básicas */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+    @media (prefers-reduced-motion: no-preference) {
+      html { scroll-behavior: smooth; }
     }
 
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
+    /* Focus rings — single rule, applied to anything interactive */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .btn:focus-visible,
+    .form-submit:focus-visible {
+      outline-offset: 4px;
+    }
+    .field input:focus-visible,
+    .field textarea:focus-visible {
+      outline: 0;
+    }
+
+    /* Skip-to-content link, visible on focus only */
+    .skip-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.85rem 1.25rem;
+      background: var(--ink);
+      color: var(--bg);
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      font-weight: 500;
+      z-index: 100;
+      transform: translateY(-110%);
+      transition: transform 0.2s ease;
+    }
+    .skip-link:focus {
+      transform: translateY(0);
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
     }
 
     body {
-      width: 100%;
-      min-height: 100vh;
-      background: radial-gradient(1200px 600px at 20% 10%, rgba(96,165,250,0.10), rgba(139,92,246,0.06) 40%, transparent 70%),
-                  radial-gradient(1000px 500px at 85% 20%, rgba(125,211,252,0.10), transparent 60%),
-                  var(--bg-color);
-      color: var(--text-color);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--bg);
       overflow-x: hidden;
-      position: relative;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* Carrossel de sites */
-    .carousel-wrapper {
+      font-feature-settings: 'ss01', 'cv11';
       position: relative;
-      z-index: 2;
-      padding: 2rem 1rem 0 1rem; /* padding topo */
-      max-width: 1400px;
-      margin: 0 auto;
     }
 
-    .carousel-title {
-      text-align: left;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
+    /* Atmosfera: grade de hairlines flutuante (papel de desenho técnico) + radial estático no hero */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.85;
+      background-image:
+        linear-gradient(to right, rgba(199, 215, 240, 0.022) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(199, 215, 240, 0.022) 1px, transparent 1px);
+      background-size: 96px 96px;
+      animation: bg-drift 90s linear infinite;
+      will-change: background-position;
     }
-
-    /* Divisória criativa */
-    .section-divider {
-      position: relative;
-      max-width: 1400px;
-      margin: 3rem auto 1.5rem auto;
-      padding: 0 1rem;
-    }
-
-    .divider-line {
-      height: 2px;
-      background: linear-gradient(90deg, rgba(96,165,250,0) 0%, rgba(96,165,250,0.65) 50%, rgba(96,165,250,0) 100%);
-      box-shadow: 0 0 25px rgba(96,165,250,0.35);
-      border-radius: 999px;
-    }
-
-    .divider-glow {
-      height: 8px;
-      filter: blur(12px);
-      background: radial-gradient(ellipse at center, rgba(96,165,250,0.25), rgba(96,165,250,0));
-      margin: 6px 0;
-    }
-
-    /* Products Grid */
-    .products-section {
-      position: relative;
-      z-index: 2;
-      max-width: 1400px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .product-card {
-      background: var(--surface-glass);
-      border: 1px solid var(--border-soft);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-color);
-      box-shadow: 0 12px 40px rgba(96, 165, 250, 0.25);
-    }
-
-    .product-image-container {
-      position: relative;
-      width: 100%;
-      height: 240px;
-      overflow: hidden;
-      background: #0a0e1a;
-    }
-
-    .product-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover .product-image {
-      transform: scale(1.05);
-    }
-
-    .product-overlay {
+    .bg-grid::after {
+      content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 1.5rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      background:
+        radial-gradient(1100px 600px at 18% 12%, rgba(125,211,252,0.05), transparent 60%),
+        radial-gradient(900px 500px at 82% 78%, rgba(125,211,252,0.035), transparent 60%);
+      animation: bg-breathe 18s ease-in-out infinite alternate;
+    }
+    @keyframes bg-drift {
+      from { background-position: 0 0, 0 0; }
+      to   { background-position: 96px 96px, -96px -96px; }
+    }
+    @keyframes bg-breathe {
+      from { opacity: 0.6; }
+      to   { opacity: 1; }
+    }
+    .hero {
+      background: radial-gradient(900px 500px at 30% 20%, rgba(125,211,252,0.06), transparent 65%);
     }
 
-    .product-card:hover .product-overlay {
-      opacity: 1;
-    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { max-width: 100%; display: block; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 
-    .product-cta {
-      background: var(--gradient-primary);
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-    }
-
-    .product-info {
-      padding: 1.5rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .product-name {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      margin: 0;
-    }
-
-    .product-description {
-      font-size: 0.95rem;
-      opacity: 0.85;
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .product-coming-soon {
-      cursor: default;
-    }
-
-    .product-coming-soon:hover {
-      transform: none;
-    }
-
-    .coming-soon-overlay {
-      opacity: 1;
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(139, 92, 246, 0.2));
-    }
-
-    .coming-soon-badge {
-      background: rgba(96, 165, 250, 0.2);
-      border: 1px solid var(--accent-color);
-      color: var(--accent-color);
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      backdrop-filter: blur(12px);
-    }
-
-    @media (max-width: 768px) {
-      .products-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .product-image-container {
-        height: 200px;
-      }
-    }
-
-    /* Seção AI Services */
-    .services-section {
-      position: relative;
-      z-index: 2;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-    }
-
-    .services-title {
-      text-align: left;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 2rem;
-      letter-spacing: -0.02em;
-    }
-
-    .services-intro {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      line-height: 1.6;
-      color: var(--text-color);
-      opacity: 0.9;
-      margin-bottom: 3rem;
-      max-width: 1000px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .service-card {
-      background: var(--surface-glass);
-      border: 1px solid var(--border-soft);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(12px);
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(96, 165, 250, 0.55);
-      box-shadow: 0 12px 28px rgba(96, 165, 250, 0.20);
-    }
-
-    .service-title {
-      font-size: clamp(1.3rem, 3vw, 1.8rem);
-      font-weight: 700;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .service-icon {
-      font-size: 1.5rem;
-    }
-
-    .service-description {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: var(--text-color);
-      opacity: 0.9;
-      margin-bottom: 1.5rem;
-    }
-
-    .service-features {
-      margin-bottom: 1.5rem;
-    }
-
-    .service-features h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--accent-color);
-      margin-bottom: 0.8rem;
-    }
-
-    .service-features ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .service-features li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: var(--text-color);
-      opacity: 0.9;
-    }
-
-    .service-features li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent-color);
-      font-weight: bold;
-    }
-
-    .service-benefits {
-      background: rgba(96, 165, 250, 0.10);
-      border-radius: 8px;
-      padding: 1rem;
-    }
-
-    .service-benefits h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--secondary-color);
-      margin-bottom: 0.8rem;
-    }
-
-    .service-benefits ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .service-benefits li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: var(--text-color);
-      opacity: 0.9;
-    }
-
-    .service-benefits li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--secondary-color);
-      font-weight: bold;
-    }
-
-    .value-proposition {
-      margin-top: 4rem;
-      padding: 2rem;
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(139, 92, 246, 0.12));
-      border-radius: 16px;
-      border: 1px solid rgba(96, 165, 250, 0.35);
-      text-align: center;
-    }
-
-    .value-proposition h3 {
-      font-size: clamp(1.5rem, 4vw, 2.2rem);
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-    }
-
-    .value-proposition p {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: 1.6;
-      color: var(--text-color);
-      opacity: 0.9;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    /* NEW: Modern Service Cards Design */
-    .services-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .services-subtitle {
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.8);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .service-card-modern {
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
-      border: 1px solid rgba(96, 165, 250, 0.2);
-      border-radius: 24px;
-      padding: 0;
-      transition: all 0.4s ease;
-      backdrop-filter: blur(10px);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .service-card-modern:hover {
-      transform: translateY(-8px);
-      border-color: rgba(96, 165, 250, 0.6);
-      box-shadow: 0 20px 60px rgba(96, 165, 250, 0.3);
-    }
-
-    .service-card-header {
-      padding: 2.5rem 2rem 2rem 2rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      position: relative;
-    }
-
-    .service-icon-large {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-      filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.4));
-    }
-
-    .service-badge {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-      color: #1a1a2e;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .service-title-modern {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-
-    .service-description-modern {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .service-card-body {
-      padding: 2rem;
-      flex: 1;
-    }
-
-    .service-section {
-      margin-bottom: 2rem;
-    }
-
-    .service-section-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .service-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .service-list li {
-      padding: 0.75rem 0;
-      color: rgba(255, 255, 255, 0.75);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .list-icon {
-      color: #60a5fa;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
-    .benefit-item {
-      background: rgba(96, 165, 250, 0.08);
-      border: 1px solid rgba(96, 165, 250, 0.15);
-      border-radius: 12px;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.85);
-      transition: all 0.3s ease;
-    }
-
-    .benefit-item:hover {
-      background: rgba(96, 165, 250, 0.12);
-      transform: translateX(4px);
-    }
-
-    .benefit-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-
-    .service-card-footer {
-      padding: 1.5rem 2rem 2rem 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .btn-service-cta {
-      display: block;
+    .container {
       width: 100%;
-      padding: 1rem 2rem;
-      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
-      color: #fff;
-      text-decoration: none;
-      text-align: center;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-    }
-
-    .btn-service-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(96, 165, 250, 0.5);
-    }
-
-    .btn-service-cta-secondary {
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
-      border: 2px solid rgba(96, 165, 250, 0.4);
-    }
-
-    .services-value-section {
-      margin-top: 5rem;
-      padding: 4rem 3rem;
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
-      border: 1px solid rgba(96, 165, 250, 0.3);
-      border-radius: 32px;
-      backdrop-filter: blur(10px);
-      text-align: center;
-    }
-
-    .value-content {
-      margin-bottom: 3rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .value-title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1.5rem;
-    }
-
-    .value-text {
-      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.85);
-      max-width: 900px;
+      max-width: var(--container);
       margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .container.narrow { max-width: var(--container-narrow); }
+
+    /* ============ Tipografia editorial ============ */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 350;
+      letter-spacing: -0.025em;
+      line-height: 1.04;
+      color: var(--ink);
+    }
+    h1 {
+      font-size: clamp(3.2rem, 8.5vw, 7.5rem);
+      font-weight: 300;
+      font-variation-settings: "opsz" 144;
+      letter-spacing: -0.04em;
+      line-height: 0.98;
+    }
+    h2 {
+      font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+      font-weight: 300;
+      font-variation-settings: "opsz" 96;
+      letter-spacing: -0.035em;
+      line-height: 1.02;
+    }
+    h3 {
+      font-size: clamp(1.3rem, 1.8vw, 1.65rem);
+      font-weight: 400;
+      font-variation-settings: "opsz" 24;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
     }
 
-    .value-cta-section {
-      padding-top: 2rem;
+    .italic {
+      font-style: italic;
+      font-weight: 300;
+      font-variation-settings: "opsz" 144;
+      color: var(--ink);
     }
 
-    .value-cta-title {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-
-    .value-cta-subtitle {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 2.5rem;
-    }
-
-    .value-cta-buttons {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-
-    .btn-value-cta-primary {
+    .label {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 1.25rem 3rem;
-      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 16px;
-      font-weight: 700;
-      font-size: 1.15rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 30px rgba(96, 165, 250, 0.4);
+      gap: 0.7rem;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    .label .num {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-style: italic;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+      color: var(--accent);
+      text-transform: none;
+    }
+    .label .bar {
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--ink-4);
     }
 
-    .btn-value-cta-primary:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(96, 165, 250, 0.6);
+    .lead {
+      font-size: clamp(1.05rem, 1.35vw, 1.18rem);
+      line-height: 1.55;
+      color: var(--ink-2);
+      max-width: 58ch;
+      font-weight: 400;
     }
 
-    .btn-value-cta-secondary {
-      padding: 1.25rem 3rem;
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
-      color: #fff;
-      border: 2px solid rgba(168, 85, 247, 0.5);
-      border-radius: 16px;
-      font-weight: 600;
-      font-size: 1.15rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
+    .rule {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 2rem;
     }
+    .rule hr { border: 0; height: 1px; background: var(--line); }
 
-    .btn-value-cta-secondary:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(168, 85, 247, 0.4);
-    }
-
-    .value-cta-benefits {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    @media (max-width: 768px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      
-      .service-card {
-        padding: 1.5rem;
-      }
-      
-      .services-section {
-        padding: 2rem 1rem;
-      }
-    }
-
-    @media (max-width: 1024px) {
-      .carousel-item { flex-basis: 60%; max-width: 600px; }
-      .carousel-image { height: 300px; }
-    }
-
-    @media (max-width: 640px) {
-      .carousel-item { flex-basis: 90%; max-width: 520px; }
-      .carousel-image { height: 240px; }
-    }
-
-    /* Efeito de partículas de fundo */
-    .particles {
-      position: fixed;
+    /* ============ Top nav ============ */
+    .topbar {
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
+      z-index: 50;
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      background: rgba(11, 16, 32, 0.62);
+      border-bottom: 1px solid var(--line);
     }
-
-    .particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: var(--accent-color);
-      border-radius: 50%;
-      animation: float 6s ease-in-out infinite;
-      box-shadow: 0 0 12px rgba(96,165,250,0.6);
-      opacity: 0.7;
-    }
-
-    /* Canvas para linhas entre partículas */
-    #particle-lines-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
-      50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
-    }
-
-    /* Container principal */
-    .main-container {
-      position: relative;
-      z-index: 2;
-      min-height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 1rem 2rem 2rem 2rem;
-      margin-top: 0;
-    }
-
-    /* Layout de duas colunas */
-    .two-column-layout {
+    .topbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 1400px;
-      width: 100%;
-      gap: 4rem;
-    }
-
-    /* Coluna da esquerda - Texto */
-    .left-column {
-      flex: 1;
-      text-align: left;
-      max-width: 500px;
-    }
-
-    /* Coluna da direita - Widget */
-    .right-column {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      max-width: 600px;
-    }
-
-    .hero-text {
-      font-size: var(--font-size-large);
-      font-weight: 300;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow {
-      from { filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5)); }
-      to { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8)); }
-    }
-
-    .hero-subtitle {
-      font-size: var(--font-size-medium);
-      color: var(--text-color);
-      opacity: 0.9;
-      margin-bottom: 2rem;
-    }
-
-    /* Logo INOSX */
-    .logo {
-      font-size: clamp(4rem, 12vw, 8rem);
-      font-weight: 900;
-      background: var(--gradient-secondary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin: 2rem 0;
-      letter-spacing: -0.02em;
-      animation: logoPulse 3s ease-in-out infinite;
-    }
-
-    @keyframes logoPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    @keyframes logoMegaPulse {
-      0%, 100% { 
-        transform: scale(1) translateY(0);
-        filter: brightness(1);
-      }
-      25% { 
-        transform: scale(1.08) translateY(-5px);
-        filter: brightness(1.2);
-      }
-      50% { 
-        transform: scale(1.12) translateY(-8px);
-        filter: brightness(1.3);
-      }
-      75% { 
-        transform: scale(1.08) translateY(-5px);
-        filter: brightness(1.2);
-      }
-    }
-
-    @keyframes logoGlow {
-      0%, 100% { 
-        filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3));
-      }
-      50% { 
-        filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.6)) drop-shadow(0 0 60px rgba(168, 85, 247, 0.4));
-      }
-    }
-
-    /* Hero CTA Section */
-    .hero-cta-section {
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-      padding: 2rem;
-      background: var(--surface-glass);
-      border: 1px solid var(--border-soft);
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px rgba(96, 165, 250, 0.2);
-    }
-
-    .cta-headline {
-      font-size: clamp(1.5rem, 4vw, 2.2rem);
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .cta-subheadline {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: 1.6;
-      color: var(--text-color);
-      opacity: 0.9;
-      margin-bottom: 2rem;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .cta-primary {
-      background: var(--gradient-primary);
-      color: white;
-      border: none;
-      padding: 16px 32px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-      min-width: 200px;
-    }
-
-    .cta-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
-    }
-
-    .cta-primary:active {
-      transform: translateY(0);
-    }
-
-    .cta-secondary {
-      background: transparent;
-      color: var(--accent-color);
-      border: 2px solid var(--accent-color);
-      padding: 14px 32px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      min-width: 200px;
-    }
-
-    .cta-secondary:hover {
-      background: rgba(125, 211, 252, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .trust-indicators {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      font-size: 0.9rem;
-      color: var(--text-color);
-      opacity: 0.8;
-    }
-
-    .trust-indicators span {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      animation: fadeIn 0.3s ease;
-    }
-
-    .modal.active {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .modal-content {
-      background: linear-gradient(180deg, #0f1424 0%, #1a1f35 100%);
-      border: 1px solid var(--border-soft);
-      border-radius: 20px;
-      padding: 2.5rem;
-      max-width: 600px;
-      width: 90%;
-      max-height: 90vh;
-      overflow-y: auto;
-      position: relative;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-      animation: slideUp 0.3s ease;
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .modal-close {
-      color: var(--text-color);
-      float: right;
-      font-size: 32px;
-      font-weight: bold;
-      line-height: 1;
-      cursor: pointer;
-      opacity: 0.6;
-      transition: opacity 0.2s;
-    }
-
-    .modal-close:hover {
-      opacity: 1;
-    }
-
-    .modal-content h3 {
-      font-size: 2rem;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin: 0 0 0.5rem 0;
-    }
-
-    .modal-content > p {
-      color: var(--text-color);
-      opacity: 0.9;
-      margin-bottom: 2rem;
-    }
-
-    /* Form Styles */
-    .lead-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .form-step {
-      display: none;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .form-step.active {
-      display: flex;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .lead-form input,
-    .lead-form select,
-    .lead-form textarea {
-      width: 100%;
-      padding: 14px 16px;
-      background: rgba(148, 163, 184, 0.08);
-      border: 1px solid var(--border-soft);
-      border-radius: 10px;
-      color: var(--text-color);
-      font-size: 1rem;
-      font-family: inherit;
-      transition: all 0.3s ease;
-    }
-
-    .lead-form input:focus,
-    .lead-form select:focus,
-    .lead-form textarea:focus {
-      outline: none;
-      border-color: var(--accent-color);
-      background: rgba(125, 211, 252, 0.1);
-      box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
-    }
-
-    .lead-form input::placeholder,
-    .lead-form textarea::placeholder {
-      color: var(--text-color);
-      opacity: 0.5;
-    }
-
-    /* Fix select dropdown text visibility */
-    .lead-form select option {
-      background: #1a1f35;
-      color: #ffffff;
-      padding: 10px;
-    }
-    
-    /* Better visibility for select in all states */
-    .lead-form select {
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237dd3fc' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
-      padding-right: 40px;
-    }
-
-    /* Labels visibility */
-    .lead-form label {
-      color: var(--text-color);
-      font-weight: 500;
-      font-size: 0.95rem;
-      margin-bottom: 0.25rem;
-      display: block;
-    }
-
-    .lead-form label {
-      color: var(--text-color);
-      font-weight: 600;
-      margin-bottom: -0.5rem;
-    }
-
-    .form-buttons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .btn-back {
-      flex: 1;
-      background: transparent;
-      color: var(--accent-color);
-      border: 1px solid var(--border-soft);
-      padding: 14px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .btn-back:hover {
-      background: rgba(125, 211, 252, 0.1);
-      border-color: var(--accent-color);
-    }
-
-    .btn-submit,
-    .btn-next {
-      flex: 2;
-      background: var(--gradient-primary);
-      color: white;
-      border: none;
-      padding: 14px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-    }
-
-    .btn-submit:hover,
-    .btn-next:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
-    }
-
-    .btn-submit:disabled,
-    .btn-next:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .privacy-note {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-color);
-      opacity: 0.7;
-      margin-top: 1rem;
-    }
-
-    .privacy-note a {
-      color: var(--accent-color);
-      text-decoration: none;
-    }
-
-    .privacy-note a:hover {
-      text-decoration: underline;
-    }
-
-    .progress-bar {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .progress-step {
-      flex: 1;
-      height: 4px;
-      background: rgba(148, 163, 184, 0.2);
-      border-radius: 2px;
-      transition: background 0.3s ease;
-    }
-
-    .progress-step.completed {
-      background: var(--accent-color);
-    }
-
-    /* Success Message */
-    .success-message {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .success-message h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .success-message p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    .success-icon {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Language Selector */
-    .language-selector {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--surface-glass);
-      border: 1px solid var(--border-soft);
-      border-radius: 12px;
-      padding: 8px 12px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
-    }
-
-    /* Top Bar Menu */
-    .topbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 998;
-      background: linear-gradient(135deg, rgba(11, 16, 32, 0.95), rgba(26, 31, 53, 0.95));
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-soft);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .topbar-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0.8rem 1rem;
-      padding-right: 180px; /* Space for language selector */
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 2rem;
-    }
-
-    .topbar-nav {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .topbar-nav a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      opacity: 0.9;
-      transition: all 0.2s ease;
-      padding: 0.5rem 0;
-      border-bottom: 2px solid transparent;
-    }
-
-    .topbar-nav a:hover {
-      opacity: 1;
-      color: var(--accent-color);
-      border-bottom-color: var(--accent-color);
-    }
-
-    .topbar-nav a.active {
-      color: var(--accent-color);
-      border-bottom-color: var(--accent-color);
-    }
-
-    /* Logo Centered Below Menu */
-    .logo-hero-section {
-      margin-top: 70px;
-      padding: 0.5rem 1rem 0 1rem;
-      text-align: center;
-      margin-bottom: -2rem;
-    }
-
-    .logo-hero-section .brand {
-      font-size: clamp(6rem, 15vw, 10rem);
-      font-weight: 900;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.02em;
-      margin-bottom: 0;
-      animation: logoMegaPulse 4s ease-in-out infinite, logoGlow 3s ease-in-out infinite;
-      text-shadow: 0 0 30px rgba(96, 165, 250, 0.5);
-    }
-
-    .language-selector select {
-      background: transparent;
-      border: none;
-      color: var(--text-color);
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      outline: none;
-      padding: 4px 8px;
-      border-radius: 6px;
-      transition: background 0.2s ease;
-    }
-
-    .language-selector select:hover {
-      background: rgba(125, 211, 252, 0.1);
-    }
-
-    .language-selector select option {
-      background: #0f1424;
-      color: var(--text-color);
-      padding: 8px;
-    }
-
-    .lang-icon {
-      font-size: 1.2rem;
-    }
-
-    @media (max-width: 768px) {
-      .language-selector {
-        top: 10px;
-        right: 10px;
-        padding: 6px 10px;
-        font-size: 0.85rem;
-      }
-    }
-
-
-    /* Social Proof Bar */
-    .social-proof-bar {
-      position: relative;
-      z-index: 2;
-      max-width: 1400px;
-      margin: -2rem auto 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .social-proof-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      background: var(--surface-glass-strong);
-      border: 1px solid var(--border-soft);
-      border-radius: 16px;
-      padding: 2rem;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px rgba(96, 165, 250, 0.15);
-    }
-
-    .stat-item {
-      text-align: center;
-      padding: 1rem;
-      border-radius: 12px;
-      background: rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .stat-item:hover {
-      transform: translateY(-4px);
-      background: rgba(96, 165, 250, 0.1);
-    }
-
-    .stat-value {
-      font-size: 2.5rem;
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.3rem;
-      line-height: 1.2;
-    }
-
-    .stat-label {
-      font-size: 0.95rem;
-      opacity: 0.9;
-      line-height: 1.4;
-    }
-
-    /* Industries We Serve Section */
-    .industries-section {
-      position: relative;
-      z-index: 2;
-      max-width: 1400px;
-      margin: 4rem auto;
-      padding: 0 1rem;
-    }
-
-    .industries-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .industries-title {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .industries-subtitle {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: rgba(255, 255, 255, 0.7);
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-
-    .industries-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .industry-card {
-      background: var(--surface-glass-strong);
-      border: 1px solid var(--border-soft);
-      border-radius: 20px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-
-    .industry-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-color);
-      box-shadow: 0 10px 40px rgba(96, 165, 250, 0.2);
-    }
-
-    .industry-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-      filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3));
-    }
-
-    .industry-name {
+      height: 76px;
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 400;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 1.5rem;
-      line-height: 1.3;
+      letter-spacing: -0.03em;
+      color: var(--ink);
     }
+    .brand .italic { color: var(--accent); margin-left: 0.05em; }
 
-    .industry-solutions {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
       list-style: none;
-      padding: 0;
-      margin: 0;
     }
-
-    .industry-solutions li {
-      padding: 0.75rem 0;
-      padding-left: 1.75rem;
-      position: relative;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 0.95rem;
-      line-height: 1.5;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    .nav-links a {
+      font-size: 0.88rem;
+      color: var(--ink-3);
+      transition: color 0.3s ease;
     }
+    .nav-links a:hover { color: var(--ink); }
 
-    .industry-solutions li:last-child {
-      border-bottom: none;
-    }
-
-    .industry-solutions li::before {
-      content: "✨";
-      position: absolute;
-      left: 0;
-      font-size: 0.9rem;
-    }
-
-    .industries-cta {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-      border: 1px solid var(--border-soft);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-    }
-
-    .industries-cta-text {
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 1.5rem;
-      font-weight: 500;
-    }
-
-    .btn-industries-cta {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
-    }
-
-    .btn-industries-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(96, 165, 250, 0.5);
-      background: linear-gradient(135deg, #7dd3fc 0%, #c084fc 100%);
-    }
-
-    @media (max-width: 768px) {
-      .industries-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .industry-card {
-        padding: 1.5rem;
-      }
-
-      .industries-cta {
-        padding: 2rem 1.5rem;
-      }
-    }
-
-    /* Testimonials Section */
-    .testimonials-section {
-      position: relative;
-      z-index: 2;
-      max-width: 1400px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .testimonials-title {
-      text-align: center;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 2.5rem;
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-    }
-
-    .testimonial-card {
-      background: var(--surface-glass);
-      border: 1px solid var(--border-soft);
-      border-radius: 16px;
-      padding: 2rem;
-      backdrop-filter: blur(12px);
-      transition: all 0.3s ease;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(96, 165, 250, 0.55);
-      box-shadow: 0 12px 28px rgba(96, 165, 250, 0.20);
-    }
-
-    .testimonial-stars {
-      color: #fbbf24;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial-text {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--text-color);
-      opacity: 0.95;
-      margin-bottom: 1.5rem;
-    }
-
-    .testimonial-author {
+    .nav-actions {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .author-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--gradient-secondary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-    }
-
-    .author-info {
-      flex: 1;
-    }
-
-    .author-name {
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: var(--accent-color);
-      margin-bottom: 0.2rem;
-    }
-
-    .author-title {
-      font-size: 0.9rem;
-      opacity: 0.8;
-      line-height: 1.4;
-    }
-
-    .testimonial-link {
-      display: inline-block;
-      color: var(--accent-color);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-top: 1rem;
-      transition: opacity 0.2s;
-    }
-
-    .testimonial-link:hover {
-      opacity: 0.8;
-    }
-
-    /* Sticky CTA Bar */
-    .sticky-cta-bar {
-      position: fixed;
-      top: -100px;
-      left: 0;
-      right: 0;
-      z-index: 998;
-      background: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #8b5cf6 100%);
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      transition: top 0.3s ease;
-    }
-
-    .sticky-cta-bar.visible {
-      top: 0;
-    }
-
-    .sticky-cta-text {
-      font-weight: 600;
-      font-size: 1rem;
-      color: white;
-    }
-
-    .sticky-cta-button {
-      background: white;
-      color: #0b1020;
-      border: none;
-      padding: 10px 24px;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .sticky-cta-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Scarcity Badge */
-    .scarcity-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: linear-gradient(135deg, rgba(251, 146, 60, 0.2), rgba(239, 68, 68, 0.2));
-      border: 1px solid rgba(251, 146, 60, 0.4);
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #fbbf24;
-      margin-top: 0.5rem;
-    }
-
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #fbbf24;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.2); }
-    }
-
-
-    /* Products teaser (compact homepage) */
-    .products-teaser-section {
-      position: relative;
-      z-index: 2;
-      max-width: 1400px;
-      margin: 2rem auto 3rem auto;
-      padding: 0 1rem;
-    }
-    .products-teaser-inner {
-      background: var(--surface-glass);
-      border: 1px solid var(--border-soft);
-      border-radius: 20px;
-      padding: 2rem 1.5rem;
-      backdrop-filter: blur(12px);
-    }
-    .products-teaser-title {
-      font-size: clamp(1.5rem, 4vw, 2.25rem);
-      font-weight: 800;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    .products-teaser-subtitle {
-      text-align: center;
-      opacity: 0.9;
-      max-width: 42rem;
-      margin: 0 auto 1.75rem;
-      line-height: 1.5;
-      font-size: 1rem;
-    }
-    .products-teaser-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1.25rem;
     }
-    .products-teaser-card {
-      background: rgba(148, 163, 184, 0.06);
-      border: 1px solid rgba(125, 211, 252, 0.2);
-      border-radius: 14px;
-      padding: 1.25rem;
+    .lang-switch {
+      display: flex;
+      gap: 0.1rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-4);
+    }
+    .lang-switch button {
+      padding: 0.3rem 0.55rem;
+      transition: color 0.25s;
+      font-weight: 500;
+      min-width: 32px;
+    }
+    .lang-switch button.active { color: var(--ink); }
+    .lang-switch button:hover { color: var(--ink-2); }
+    .lang-switch .div { color: var(--ink-4); padding: 0.3rem 0; }
+    @media (hover: none) and (pointer: coarse) {
+      .lang-switch button { padding: 0.6rem 0.8rem; min-height: 44px; min-width: 44px; }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.3rem;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      border-radius: 999px;
+    }
+    .btn-line {
+      border: 1px solid var(--line-2);
+      color: var(--ink);
+    }
+    .btn-line:hover { border-color: var(--ink-2); transform: translateY(-1px); }
+    .btn-line:active { transform: translateY(0); }
+    .btn-line .arr { transition: transform 0.3s; display: inline-block; }
+    .btn-line:hover .arr { transform: translateX(3px); }
+
+    @media (max-width: 880px) {
+      .nav-links { display: none; }
+      .topbar-inner { height: 68px; }
+    }
+
+    /* ============ Hero ============ */
+    .hero {
+      position: relative;
+      padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(4rem, 9vw, 8rem);
+    }
+    .hero-head {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 4rem;
+      align-items: end;
+    }
+    .hero h1 { max-width: 14ch; }
+    .hero-side {
       display: flex;
       flex-direction: column;
-      gap: 0.65rem;
-      min-height: 140px;
-      transition: border-color 0.2s ease, transform 0.2s ease;
+      gap: 2rem;
+      padding-bottom: 0.5rem;
     }
-    .products-teaser-card:hover {
-      border-color: rgba(125, 211, 252, 0.45);
-      transform: translateY(-2px);
+    .hero-side .lead { max-width: 36ch; }
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
     }
-    .products-teaser-card h3 {
+    .hero-meta .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      font-size: 0.86rem;
+      color: var(--ink-3);
+    }
+    .hero-meta .row strong {
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 880px) {
+      .hero-head { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-side .lead { max-width: 100%; }
+    }
+
+    /* ============ Logos — carrossel infinito ============ */
+    .clients {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      border-top: 1px solid var(--line);
+    }
+    .clients-head {
+      max-width: var(--container);
+      margin: 0 auto 2.5rem;
+      padding: 0 2rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .clients-head .note {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-4);
+    }
+
+    .marquee {
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+              mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 45s linear infinite;
+    }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    @keyframes marquee {
+      0%   { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+    .logo-slot {
+      flex: 0 0 220px;
+      height: 110px;
+      display: grid;
+      place-items: center;
+      padding: 0 1.5rem;
+      border-right: 1px solid var(--line);
+    }
+    .logo-slot img {
+      width: auto;
+      max-width: 100%;
+      max-height: 44px;
+      object-fit: contain;
+      filter: brightness(1.05) contrast(0.95);
+      opacity: 0.55;
+      transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    }
+    .logo-slot:hover img {
+      opacity: 1;
+      filter: brightness(1.15) contrast(1);
+      transform: scale(1.06);
+    }
+    /* Altura óptica por logo: circulares maiores, texto só fino menor */
+    .l-itau img,
+    .l-volkswagen img,
+    .l-nissan img          { max-height: 56px; }
+    .l-santander img,
+    .l-telefonica img      { max-height: 30px; }
+    .l-thomson-reuters img,
+    .l-open-invention img  { max-height: 18px; }
+
+    @media (max-width: 720px) {
+      .logo-slot { flex: 0 0 170px; height: 96px; padding: 0 1rem; }
+      .l-itau img, .l-volkswagen img, .l-nissan img { max-height: 48px; }
+      .l-santander img, .l-telefonica img { max-height: 26px; }
+      .l-thomson-reuters img, .l-open-invention img { max-height: 16px; }
+    }
+
+    /* ============ Section base ============ */
+    section.block {
+      padding: clamp(5rem, 11vw, 9rem) 0;
+      position: relative;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      gap: 4rem;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+      align-items: end;
+    }
+    .section-head .label { align-self: start; }
+    .section-head h2 { max-width: 16ch; }
+    .section-head .lead { margin-top: 1.25rem; max-width: 50ch; }
+    @media (max-width: 880px) { .section-head { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+    /* ============ Evidence strip — substitui Stats por links navegáveis ============ */
+    .evidence { padding: clamp(2rem, 4vw, 3rem) 0; border-top: 1px solid var(--line); }
+    .evidence-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 720px) { .evidence-inner { grid-template-columns: 1fr; gap: 0; } }
+    .evidence a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.25s, color 0.25s;
+      color: var(--ink-2);
+    }
+    .evidence a:hover { border-bottom-color: var(--accent); color: var(--ink); }
+    .evidence .ev-line {
+      font-family: var(--font-body);
+      font-size: 0.96rem;
+      font-weight: 400;
+    }
+    .evidence .ev-cue {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      transition: color 0.25s, transform 0.25s;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .evidence a:hover .ev-cue { color: var(--accent); transform: translateX(3px); }
+
+    /* ============ Itens em linha ============ */
+    .rows { display: grid; grid-template-columns: 1fr; }
+    .row-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 4fr;
+      gap: 3rem;
+      padding: 2.25rem 0;
+      border-top: 1px solid var(--line);
+      align-items: start;
+      transition: transform 0.3s ease;
+    }
+    .row-item:last-child { border-bottom: 1px solid var(--line); }
+    .row-item:hover { transform: translateX(0.5rem); }
+    .row-item .idx {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+    .row-item h3 { font-family: var(--font-display); font-weight: 400; }
+    .row-item p { color: var(--ink-2); font-size: 0.98rem; max-width: 52ch; }
+    @media (max-width: 880px) {
+      .row-item { grid-template-columns: 1fr; gap: 0.75rem; padding: 1.75rem 0; }
+    }
+
+    /* removed: pains h3 italic violated Italic Signature Rule */
+
+    /* ============ Solutions ============ */
+    .sol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3rem;
+    }
+    @media (max-width: 980px) { .sol-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px) { .sol-grid { grid-template-columns: 1fr; } }
+    .sol-item {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+      transition: border-color 0.3s ease;
+    }
+    .sol-item:hover { border-top-color: var(--accent); }
+    .sol-item .idx {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .sol-item h3 { margin-bottom: 0.6rem; font-weight: 400; }
+    .sol-item p { color: var(--ink-2); font-size: 0.96rem; line-height: 1.55; }
+
+    /* ============ Produtos ============ */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+    .product-card {
+      padding: 2.25rem;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      transition: background 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-soft);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .product-card:hover::before { opacity: 1; }
+    .product-card > * { position: relative; z-index: 1; }
+    .product-card .name {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+    .product-card .name em { font-style: italic; color: var(--accent); font-weight: 300; }
+    .product-card .desc { color: var(--ink-2); font-size: 0.92rem; flex: 1; line-height: 1.55; }
+    .product-card a {
+      font-size: 0.82rem;
+      color: var(--ink-3);
+      letter-spacing: 0.02em;
+      align-self: flex-start;
+      transition: color 0.25s, gap 0.25s;
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .product-card:hover a { color: var(--accent); gap: 0.8rem; }
+
+    /* ============ Steps ============ */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 880px) { .steps { grid-template-columns: 1fr; } }
+    .step {
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+    .step:last-child { border-right: 1px solid var(--line); }
+    @media (max-width: 880px) {
+      .step:last-child { border-right: 0; }
+      .step { border-bottom: 1px solid var(--line); }
+    }
+    .step .idx {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .step h3 { margin-bottom: 0.7rem; font-weight: 400; }
+    .step p { color: var(--ink-2); font-size: 0.94rem; line-height: 1.55; max-width: 32ch; }
+
+    /* ============ Selected work ============ */
+    .work-list { display: grid; grid-template-columns: 1fr; }
+    .work {
+      display: grid;
+      grid-template-columns: 80px 1fr 220px;
+      gap: 3rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--line);
+      align-items: start;
+    }
+    .work:last-child { border-bottom: 1px solid var(--line); }
+    .work-idx {
+      font-family: var(--font-display);
       font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      margin: 0;
+      font-weight: 300;
+      color: var(--accent);
+      letter-spacing: 0;
     }
-    .products-teaser-card p {
-      font-size: 0.9rem;
-      opacity: 0.88;
-      line-height: 1.45;
-      margin: 0;
-      flex: 1;
+    .work-name {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.4rem, 2vw, 1.8rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
     }
-    .products-teaser-cta {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #93c5fd;
-      text-decoration: none;
-      margin-top: auto;
+    .work-desc {
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: var(--ink-2);
+      max-width: 56ch;
     }
-    .products-teaser-cta:hover {
-      text-decoration: underline;
+    .work-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
     }
-    .products-teaser-actions {
+    @media (max-width: 880px) {
+      .work { grid-template-columns: 1fr; gap: 1rem; padding: 1.75rem 0; }
+      .work-meta { flex-direction: row; gap: 1.25rem; }
+    }
+
+    /* ============ Industries ============ */
+    .industries-list {
       display: flex;
       flex-wrap: wrap;
+      max-width: 50ch;
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.5;
+      color: var(--ink-3);
+    }
+    .industries-list span { transition: color 0.25s ease; cursor: default; }
+    .industries-list span:not(:last-child)::after {
+      content: ' · ';
+      color: var(--ink-4);
+      margin: 0 0.4rem;
+    }
+    .industries-list span:hover { color: var(--ink); }
+
+    /* ============ FAQ ============ */
+    details.faq {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+    }
+    details.faq:last-of-type { border-bottom: 1px solid var(--line); }
+    details.faq summary {
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: baseline;
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+    details.faq summary:hover { color: var(--accent); }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::after {
+      content: '+';
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--ink-3);
+      transition: transform 0.3s, color 0.2s;
+    }
+    details.faq[open] summary::after { transform: rotate(45deg); color: var(--accent); }
+    details.faq p {
+      margin-top: 1.25rem;
+      color: var(--ink-2);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      max-width: 70ch;
+    }
+
+    /* ============ Lead capture ============ */
+    .lead-section {
+      position: relative;
+      padding: clamp(5rem, 10vw, 9rem) 0;
+      border-top: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    @media (max-width: 980px) { .lead-grid { grid-template-columns: 1fr; gap: 3.5rem; } }
+
+    .lead-text h2 { max-width: 12ch; }
+    .lead-text .lead { margin-top: 1.5rem; }
+    .lead-bullets {
+      list-style: none;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
+      color: var(--ink-2);
+      font-size: 0.96rem;
     }
-    .products-teaser-btn-primary {
-      padding: 0.85rem 1.5rem;
-      background: var(--gradient-primary);
-      color: #0b1020;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 700;
-      text-decoration: none;
-      cursor: pointer;
-      display: inline-block;
+    .lead-bullets li {
+      display: grid;
+      grid-template-columns: 1.2rem 1fr;
+      gap: 0.85rem;
+      align-items: baseline;
     }
-    .products-teaser-btn-primary:hover {
-      filter: brightness(1.08);
+    .lead-bullets li::before {
+      content: '—';
+      color: var(--accent);
+      font-family: var(--font-display);
+      font-style: italic;
     }
-    .products-teaser-btn-secondary {
-      padding: 0.85rem 1.5rem;
+
+    .lead-form .form-title {
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .field {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--line);
+      transition: border-color 0.25s;
+    }
+    .field:focus-within { border-bottom-color: var(--accent); }
+    .field label {
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      font-weight: 500;
+    }
+    .field input,
+    .field textarea {
+      width: 100%;
       background: transparent;
-      color: var(--accent-color);
-      border: 2px solid var(--accent-color);
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
+      border: 0;
+      color: var(--ink);
+      font: inherit;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      padding: 0;
     }
-    .products-teaser-btn-secondary:hover {
-      background: rgba(125, 211, 252, 0.1);
+    .field input::placeholder,
+    .field textarea::placeholder { color: var(--ink-4); font-weight: 300; }
+    .field input:focus, .field textarea:focus { outline: none; }
+    .field textarea { min-height: 90px; resize: vertical; line-height: 1.5; }
+
+    .field-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+    .form-bottom {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
-    @media (max-width: 600px) {
-      .products-teaser-actions {
-        flex-direction: column;
-      }
-      .products-teaser-btn-primary,
-      .products-teaser-btn-secondary {
-        width: 100%;
-        text-align: center;
-      }
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      padding: 1rem 1.6rem;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--bg);
+      font-weight: 500;
+      font-size: 0.92rem;
+      transition: all 0.3s;
     }
+    .form-submit:hover { background: var(--accent); transform: translateY(-1px); }
+    .form-submit:active { transform: translateY(0); }
+    .form-submit .arr { transition: transform 0.3s; }
+    .form-submit:hover .arr { transform: translateX(3px); }
+    .form-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .social-proof-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 1.5rem;
-      }
+    .form-foot { font-size: 0.78rem; color: var(--ink-3); max-width: 28ch; }
+    .form-foot a { color: var(--ink); border-bottom: 1px solid var(--line-2); }
+    .form-foot a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 
-      .stat-value {
-        font-size: 2rem;
-      }
+    .form-success, .form-error {
+      display: none;
+      padding: 0.85rem 1rem;
+      margin-top: 1rem;
+      font-size: 0.92rem;
+      border-radius: 4px;
+    }
+    .form-success { color: #86efac; background: #0c1f15; border: 1px solid #1a3a25; }
+    .form-error   { color: #fca5a5; background: #1f0c0c; border: 1px solid #3a1a1a; }
+    .form-success.show, .form-error.show { display: block; }
 
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
+    /* ============ Footer ============ */
+    footer.site {
+      padding: clamp(3rem, 6vw, 5rem) 0 2.5rem;
+      border-top: 1px solid var(--line);
+      position: relative;
+      z-index: 1;
+    }
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+    .foot-col h3 {
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 1.25rem;
+    }
+    .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .foot-col a { font-size: 0.92rem; color: var(--ink-2); transition: color 0.25s; }
+    .foot-col a:hover { color: var(--accent); }
+    .foot-col .signature {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+    .foot-col .signature em { color: var(--accent); font-weight: 300; }
+    .foot-col p { color: var(--ink-3); font-size: 0.9rem; max-width: 28ch; line-height: 1.5; }
 
-      .sticky-cta-bar {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-      }
-
-      .sticky-cta-text {
-        font-size: 0.9rem;
-        text-align: center;
-      }
-      
-      .main-container {
-        padding: 1rem;
-        min-height: 100vh;
-        justify-content: flex-start;
-        padding-top: 2rem;
-      }
-      
-      .two-column-layout {
-        flex-direction: column;
-        gap: 3rem;
-        text-align: center;
-        max-width: 100%;
-        min-height: 100vh;
-        width: 100%;
-      }
-      
-      .left-column {
-        text-align: center;
-        max-width: 100%;
-        width: 100%;
-        order: 1;
-        flex-shrink: 0;
-        flex: none;
-      }
-      
-      .right-column {
-        max-width: 100%;
-        width: 100%;
-        order: 2;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 500px;
-      }
-      
-      .widget-container {
-        width: 100%;
-        height: 100%;
-        min-height: 500px;
-        position: relative;
-      }
-      
-      .hero-text {
-        font-size: clamp(1.8rem, 6vw, 3rem);
-        margin-bottom: 0.5rem;
-      }
-      
-      .hero-subtitle {
-        font-size: clamp(1.2rem, 4vw, 2rem);
-        margin-bottom: 1rem;
-      }
-      
-      .logo {
-        font-size: clamp(3rem, 12vw, 5rem);
-        margin: 1rem 0;
-      }
-      
-      elevenlabs-convai {
-        max-width: 100%;
-        width: 100%;
-        height: 500px;
-        min-height: 500px;
-        border-radius: 15px;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      }
+    .foot-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--ink-3);
     }
 
-    @media (max-width: 480px) {
-      .main-container {
-        padding: 0.5rem;
-        padding-top: 1rem;
-      }
-      
-      .two-column-layout {
-        gap: 2rem;
-        min-height: 100vh;
-        flex-direction: column !important;
-        width: 100% !important;
-      }
-      
-      .left-column {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-      }
-      
-      .right-column {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-height: 450px;
-      }
-      
-      .hero-text {
-        font-size: clamp(1.5rem, 7vw, 2.5rem);
-      }
-      
-      .hero-subtitle {
-        font-size: clamp(1rem, 4vw, 1.8rem);
-      }
-      
-      .logo {
-        font-size: clamp(2.5rem, 15vw, 4rem);
-        margin: 0.5rem 0;
-      }
-    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1.1s cubic-bezier(.2,.6,.2,1), transform 1.1s cubic-bezier(.2,.6,.2,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: 0.08s; }
+    .reveal[data-delay="2"] { transition-delay: 0.16s; }
+    .reveal[data-delay="3"] { transition-delay: 0.24s; }
 
-    @media (max-width: 360px) {
-      .two-column-layout {
-        flex-direction: column !important;
-        width: 100% !important;
-      }
-      
-      .left-column {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-      }
-      
-      .right-column {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-height: 400px;
-      }
-      
-      .hero-text {
-        font-size: clamp(1.3rem, 6vw, 2rem);
-      }
-      
-      .hero-subtitle {
-        font-size: clamp(0.9rem, 3.5vw, 1.5rem);
-      }
-      
-      .logo {
-        font-size: clamp(2rem, 12vw, 3rem);
-      }
-    }
+    ::selection { background: rgba(125, 211, 252, 0.3); color: var(--ink); }
 
-    /* Forçar coluna única em mobile portrait */
-    @media (max-width: 768px) and (orientation: portrait) {
-      .two-column-layout {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 2rem !important;
-      }
-      
-      .left-column {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-        order: 1 !important;
-      }
-      
-      .right-column {
-        width: 100% !important;
-        max-width: 100% !important;
-        order: 2 !important;
-      }
-      
-    }
-
-    /* Animações de entrada */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease forwards;
-    }
-
-    .fade-in:nth-child(2) { animation-delay: 0.2s; }
-    .fade-in:nth-child(3) { animation-delay: 0.4s; }
-    .fade-in:nth-child(4) { animation-delay: 0.6s; }
-    .fade-in:nth-child(5) { animation-delay: 0.8s; }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .marquee-track { animation: none !important; }
     }
   </style>
 </head>
 <body>
-  <!-- Top Bar Menu -->
-  <div class="topbar">
-    <div class="topbar-container">
-      <nav class="topbar-nav">
-        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
-        <a href="produtos.html" data-i18n="nav.products">Products</a>
-        <a href="#services" onclick="document.querySelector('.services-section').scrollIntoView({behavior:'smooth'}); return false;" data-i18n="nav.services">Services</a>
-        <a href="roi-calculator.html" data-i18n="nav.roi_calculator">ROI Calculator</a>
+
+  <a class="skip-link" href="#main" data-i18n="landing.a11y.skip">Skip to main content</a>
+
+  <!-- Background animado: grade técnica + breathing radials -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ============ TOP NAV ============ -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/" class="brand">INOSX<span class="italic">.</span></a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#solutions" data-i18n="landing.nav.solutions">Solutions</a></li>
+          <li><a href="#products" data-i18n="landing.nav.products">Products</a></li>
+          <li><a href="#cases" data-i18n="landing.nav.cases">Cases</a></li>
+          <li><a href="#faq" data-i18n="landing.nav.faq">FAQ</a></li>
+        </ul>
       </nav>
-    </div>
-  </div>
 
-  <!-- Logo Centered Below Menu -->
-  <div class="logo-hero-section">
-    <div class="brand" data-i18n="hero.logo">INOSX</div>
-  </div>
-
-  <!-- Language Selector -->
-  <div class="language-selector">
-    <span class="lang-icon">🌍</span>
-    <select id="languageSelector">
-      <option value="en">🇺🇸 English</option>
-      <option value="pt">🇧🇷 Português</option>
-      <option value="es">🇪🇸 Español</option>
-    </select>
-  </div>
-
-  <!-- Sticky CTA Bar - REMOVED (was overlapping top menu) -->
-
-  <!-- Partículas de fundo -->
-  <div class="particles" id="particles"></div>
-
-  
-
-  <!-- Container principal -->
-  <div class="main-container">
-    <!-- Layout de duas colunas -->
-    <div class="two-column-layout">
-      <!-- Coluna da esquerda - Texto -->
-      <div class="left-column">
-        <div class="hero-text fade-in" data-i18n="hero.headline1">
-          Your Team Wastes $10,000/Month on Manual Work
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="pt" type="button" aria-label="Português">PT</button>
+          <span class="div" aria-hidden="true">/</span>
+          <button data-lang="en" type="button" class="active" aria-current="true" aria-label="English">EN</button>
         </div>
-        <div class="hero-subtitle fade-in" data-i18n="hero.headline2">
-          INOSX AI Agents Cut Costs by 40% and Automate Repetitive Tasks
-        </div>
-        <div class="hero-subtitle fade-in" style="font-size: clamp(0.9rem, 2vw, 1.1rem); opacity: 0.95; margin-top: 1rem;" data-i18n="hero.headline3">
-          ✓ Trusted by 500+ companies  ✓ $47M saved  ✓ 4.9/5 rating
-        </div>
+        <a href="#contact" class="btn btn-line" data-i18n="landing.nav.cta">
+          <span>Get in touch</span>
+          <span class="arr">→</span>
+        </a>
       </div>
-      
-      <!-- Coluna da direita - CTA Section -->
-      <div class="right-column">
-        <div class="hero-cta-section fade-in">
-          <h2 class="cta-headline" data-i18n="hero.cta_headline">See How Much You Can Save with AI</h2>
-          <p class="cta-subheadline" data-i18n="hero.cta_subheadline">
-            Book a free 30-minute consultation and get:<br>
-            ✓ Custom AI roadmap for your business<br>
-            ✓ ROI analysis showing potential savings<br>
-            ✓ No-obligation strategy session
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="main">
+    <div class="container">
+      <div class="hero-head">
+        <div>
+          <h1>
+            <span data-i18n="landing.hero.headline_1">Software you can</span>
+            <span class="italic" data-i18n="landing.hero.headline_2">use,</span>
+            <span data-i18n="landing.hero.headline_3">not just</span>
+            <span class="italic" data-i18n="landing.hero.headline_4">demo.</span>
+          </h1>
+        </div>
+
+        <div class="hero-side">
+          <p class="lead" data-i18n="landing.hero.sub">
+            We design and build digital products for international companies. From the first conversation to the team that runs it. AI when the problem asks for it, never as the headline.
           </p>
-          
-          <div class="cta-buttons">
-            <button class="cta-primary" onclick="window.location.href='roi-calculator.html'" data-location="hero" data-i18n="hero.btn_primary">
-              Calculate Your Savings →
-            </button>
-          </div>
-          
-          <div class="scarcity-badge">
-            <span class="pulse-dot"></span>
-            <span data-i18n="hero.scarcity">⏰ Only 5 consultation slots left this week</span>
-          </div>
-          
-          <div class="trust-indicators">
-            <span data-i18n="hero.trust_1">✓ No Credit Card Required</span>
-            <span data-i18n="hero.trust_2">✓ 30-Min Call</span>
-            <span data-i18n="hero.trust_3">✓ Free ROI Report</span>
+          <div class="hero-meta">
+            <div class="row"><span data-i18n="landing.hero.meta_1_l">Deployment</span><strong data-i18n="landing.hero.meta_1_v">in weeks</strong></div>
+            <div class="row"><span data-i18n="landing.hero.meta_2_l">Data</span><strong data-i18n="landing.hero.meta_2_v">under your control</strong></div>
+            <div class="row"><span data-i18n="landing.hero.meta_3_l">Return</span><strong data-i18n="landing.hero.meta_3_v">measurable</strong></div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Social Proof Bar -->
-  <div class="social-proof-bar fade-in">
-    <div class="social-proof-container">
-      <div class="stat-item">
-        <div class="stat-value" data-i18n="social_proof.stat1_value">500+</div>
-        <div class="stat-label" data-i18n="social_proof.stat1_label">Companies Trust INOSX</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" data-i18n="social_proof.stat2_value">$47M</div>
-        <div class="stat-label" data-i18n="social_proof.stat2_label">Saved by Clients</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" data-i18n="social_proof.stat3_value">2.4M</div>
-        <div class="stat-label" data-i18n="social_proof.stat3_label">Hours Automated</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value" data-i18n="social_proof.stat4_value">4.9/5</div>
-        <div class="stat-label" data-i18n="social_proof.stat4_label">Client Rating ⭐⭐⭐⭐⭐</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Divisória criativa entre herói e Products -->
-  <div class="section-divider" aria-hidden="true">
-    <div class="divider-glow"></div>
-    <div class="divider-line"></div>
-    <div class="divider-glow"></div>
-  </div>
-
-  <!-- Products teaser: compact links to full product page -->
-  <section id="products" class="products-teaser-section" aria-labelledby="products-teaser-title">
-    <div class="products-teaser-inner">
-      <h2 id="products-teaser-title" class="products-teaser-title" data-i18n="products_teaser.title">Produtos INOSX</h2>
-      <p class="products-teaser-subtitle" data-i18n="products_teaser.subtitle">IA conversacional, dados, bem-estar e ferramentas para equipas — explore o portfólio e fale connosco para um projeto à sua medida.</p>
-      <div class="products-teaser-grid">
-        <article class="products-teaser-card">
-          <h3 data-i18n="products.messiax">Messiax.ai</h3>
-          <p data-i18n="products.messiax_desc">Companheira espiritual com IA.</p>
-          <a href="produtos.html#messiax" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
-        </article>
-        <article class="products-teaser-card">
-          <h3 data-i18n="products.surveyflow">SurveyFlow.ai</h3>
-          <p data-i18n="products.surveyflow_desc">Inteligência de pesquisas com IA.</p>
-          <a href="produtos.html#surveyflow" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
-        </article>
-        <article class="products-teaser-card">
-          <h3 data-i18n="products.psychox">PsychoX.ai</h3>
-          <p data-i18n="products.psychox_desc">Suporte psicológico com IA.</p>
-          <a href="produtos.html#psychox" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
-        </article>
-        <article class="products-teaser-card">
-          <h3 data-i18n="products.datagpt">DataGPT</h3>
-          <p data-i18n="products.datagpt_desc">IA para análise de dados empresariais.</p>
-          <a href="produtos.html#datagpt" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
-        </article>
-        <article class="products-teaser-card">
-          <h3 data-i18n="products.ccoinx">Ccoinx.ai</h3>
-          <p data-i18n="products.ccoinx_desc">Conversor de moedas com câmera.</p>
-          <a href="produtos.html#ccoinx" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
-        </article>
-        <article class="products-teaser-card">
-          <h3 data-i18n="products.tranquilopa">Tranquilopa</h3>
-          <p data-i18n="products.tranquilopa_desc">Plataforma de confiança no Paraguai.</p>
-          <a href="produtos.html#tranquilopa" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
-        </article>
-        <article class="products-teaser-card">
-          <h3 data-i18n="products.aiteam">AITEAM-X</h3>
-          <p data-i18n="products.aiteam_desc">Dashboard open source para agentes de IA.</p>
-          <a href="produtos.html#aiteam" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
-        </article>
-      </div>
-      <div class="products-teaser-actions">
-        <a href="produtos.html" class="products-teaser-btn-primary" data-i18n="products_teaser.cta_all">Ver todos os produtos →</a>
-        <button type="button" class="products-teaser-btn-secondary" onclick="openContactModal()" data-i18n="products_teaser.cta_contact">Falar connosco →</button>
       </div>
     </div>
   </section>
 
-  <!-- Industries We Serve Section -->
-  <div class="industries-section">
-    <div class="industries-header fade-in">
-      <h2 class="industries-title" data-i18n="industries.title">Industries We Transform with AI</h2>
-      <p class="industries-subtitle" data-i18n="industries.subtitle">
-        Custom AI solutions tailored for your industry's unique challenges
-      </p>
+  <!-- ============ CLIENTES (carrossel) ============ -->
+  <section class="clients" id="clients">
+    <div class="clients-head reveal">
+      <div class="label">
+        <span class="num">—</span>
+        <span class="bar"></span>
+        <span data-i18n="landing.clients.label">Companies that trust INOSX</span>
+      </div>
+      <div class="note" data-i18n="landing.clients.note">Selected from production engagements</div>
     </div>
 
-    <div class="industries-grid">
-      <!-- Contact Centers & Customer Service -->
-      <div class="industry-card fade-in">
-        <div class="industry-icon">📞</div>
-        <h3 class="industry-name" data-i18n="industries.contact_centers.title">Contact Centers & Customer Service</h3>
-        <ul class="industry-solutions">
-          <li data-i18n="industries.contact_centers.solution_1">Agent Assist & Copilot</li>
-          <li data-i18n="industries.contact_centers.solution_2">Contact Center Analytics</li>
-          <li data-i18n="industries.contact_centers.solution_3">Voice AI Agents</li>
-          <li data-i18n="industries.contact_centers.solution_4">QA/Compliance Automation</li>
-        </ul>
-      </div>
-
-      <!-- Sales & Revenue Teams -->
-      <div class="industry-card fade-in">
-        <div class="industry-icon">📈</div>
-        <h3 class="industry-name" data-i18n="industries.sales.title">Sales & Revenue Teams</h3>
-        <ul class="industry-solutions">
-          <li data-i18n="industries.sales.solution_1">Sales Enablement & Coaching</li>
-          <li data-i18n="industries.sales.solution_2">Meeting Transcription & Analytics</li>
-          <li data-i18n="industries.sales.solution_3">Deal Intelligence</li>
-          <li data-i18n="industries.sales.solution_4">Performance Optimization</li>
-        </ul>
-      </div>
-
-      <!-- Enterprise Communications -->
-      <div class="industry-card fade-in">
-        <div class="industry-icon">💬</div>
-        <h3 class="industry-name" data-i18n="industries.communications.title">Enterprise Communications</h3>
-        <ul class="industry-solutions">
-          <li data-i18n="industries.communications.solution_1">Meeting Intelligence Platforms</li>
-          <li data-i18n="industries.communications.solution_2">Collaboration Analytics</li>
-          <li data-i18n="industries.communications.solution_3">Content Moderation</li>
-          <li data-i18n="industries.communications.solution_4">Communication Insights</li>
-        </ul>
-      </div>
-
-      <!-- Smart Technology & IoT -->
-      <div class="industry-card fade-in">
-        <div class="industry-icon">🏠</div>
-        <h3 class="industry-name" data-i18n="industries.iot.title">Smart Technology & IoT</h3>
-        <ul class="industry-solutions">
-          <li data-i18n="industries.iot.solution_1">Smart Home Devices</li>
-          <li data-i18n="industries.iot.solution_2">Robotics & Automation</li>
-          <li data-i18n="industries.iot.solution_3">IoT Intelligence</li>
-          <li data-i18n="industries.iot.solution_4">Predictive Maintenance</li>
-        </ul>
-      </div>
-
-      <!-- Compliance & Quality Assurance -->
-      <div class="industry-card fade-in">
-        <div class="industry-icon">✅</div>
-        <h3 class="industry-name" data-i18n="industries.compliance.title">Compliance & Quality Assurance</h3>
-        <ul class="industry-solutions">
-          <li data-i18n="industries.compliance.solution_1">Automated QA Systems</li>
-          <li data-i18n="industries.compliance.solution_2">Compliance Monitoring</li>
-          <li data-i18n="industries.compliance.solution_3">Risk Detection</li>
-          <li data-i18n="industries.compliance.solution_4">Audit Automation</li>
-        </ul>
-      </div>
-
-      <!-- Content & Media -->
-      <div class="industry-card fade-in">
-        <div class="industry-icon">🎬</div>
-        <h3 class="industry-name" data-i18n="industries.content.title">Content & Media Platforms</h3>
-        <ul class="industry-solutions">
-          <li data-i18n="industries.content.solution_1">Content Moderation</li>
-          <li data-i18n="industries.content.solution_2">Media Analytics</li>
-          <li data-i18n="industries.content.solution_3">Sentiment Analysis</li>
-          <li data-i18n="industries.content.solution_4">Content Intelligence</li>
-        </ul>
+    <div class="marquee" aria-label="Client logos">
+      <div class="marquee-track">
+        <!-- Set 1 -->
+        <div class="logo-slot l-itau"><img src="/clients/itau.svg" alt="Itaú" loading="lazy"></div>
+        <div class="logo-slot l-santander"><img src="/clients/santander.svg" alt="Santander" loading="lazy"></div>
+        <div class="logo-slot l-telefonica"><img src="/clients/telefonica.svg" alt="Telefônica" loading="lazy"></div>
+        <div class="logo-slot l-volkswagen"><img src="/clients/volkswagen.svg" alt="Volkswagen" loading="lazy"></div>
+        <div class="logo-slot l-nissan"><img src="/clients/nissan.svg" alt="Nissan" loading="lazy"></div>
+        <div class="logo-slot l-thomson-reuters"><img src="/clients/thomson-reuters.svg" alt="Thomson Reuters" loading="lazy"></div>
+        <div class="logo-slot l-open-invention"><img src="/clients/open-invention.svg" alt="Open Invention Network" loading="lazy"></div>
+        <!-- Set 2 (duplicado para loop sem-costura) -->
+        <div class="logo-slot l-itau" aria-hidden="true"><img src="/clients/itau.svg" alt="" loading="lazy"></div>
+        <div class="logo-slot l-santander" aria-hidden="true"><img src="/clients/santander.svg" alt="" loading="lazy"></div>
+        <div class="logo-slot l-telefonica" aria-hidden="true"><img src="/clients/telefonica.svg" alt="" loading="lazy"></div>
+        <div class="logo-slot l-volkswagen" aria-hidden="true"><img src="/clients/volkswagen.svg" alt="" loading="lazy"></div>
+        <div class="logo-slot l-nissan" aria-hidden="true"><img src="/clients/nissan.svg" alt="" loading="lazy"></div>
+        <div class="logo-slot l-thomson-reuters" aria-hidden="true"><img src="/clients/thomson-reuters.svg" alt="" loading="lazy"></div>
+        <div class="logo-slot l-open-invention" aria-hidden="true"><img src="/clients/open-invention.svg" alt="" loading="lazy"></div>
       </div>
     </div>
+  </section>
 
-    <div class="industries-cta fade-in">
-      <p class="industries-cta-text" data-i18n="industries.cta_text">
-        Don't see your industry? We create custom AI solutions for any business challenge.
-      </p>
-      <a href="#contact" class="btn-industries-cta" data-i18n="industries.cta_button">
-        Discuss Your Project →
-      </a>
-    </div>
-  </div>
-
-  <!-- Testimonials Section -->
-  <div class="testimonials-section">
-    <h2 class="testimonials-title fade-in" data-i18n="testimonials.title">What Our Clients Say</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars" data-i18n="testimonials.testimonial_1_rating">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text" data-i18n="testimonials.testimonial_1_quote">
-          INOSX agents cut our processing time by 60% in the first month. The ROI was immediate and continues to grow.
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">SC</div>
-          <div class="author-info">
-            <div class="author-name" data-i18n="testimonials.testimonial_1_author">Sarah Chen</div>
-            <div class="author-title" data-i18n="testimonials.testimonial_1_role">Operations Director, TechCorp</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars" data-i18n="testimonials.testimonial_2_rating">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text" data-i18n="testimonials.testimonial_2_quote">
-          The knowledge management solution transformed how our team accesses information. What used to take hours now takes seconds.
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">MR</div>
-          <div class="author-info">
-            <div class="author-name" data-i18n="testimonials.testimonial_2_author">Michael Rodriguez</div>
-            <div class="author-title" data-i18n="testimonials.testimonial_2_role">CTO, DataFlow Inc</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card fade-in">
-        <div class="testimonial-stars" data-i18n="testimonials.testimonial_3_rating">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text" data-i18n="testimonials.testimonial_3_quote">
-          Their AI security platform detected threats we didn't even know existed. Peace of mind with measurable results.
-        </p>
-        <div class="testimonial-author">
-          <div class="author-avatar">JK</div>
-          <div class="author-info">
-            <div class="author-name" data-i18n="testimonials.testimonial_3_author">Jennifer Kim</div>
-            <div class="author-title" data-i18n="testimonials.testimonial_3_role">CISO, SecureBank</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Divider below AI Products -->
-  <div class="section-divider" aria-hidden="true">
-    <div class="divider-glow"></div>
-    <div class="divider-line"></div>
-    <div class="divider-glow"></div>
-  </div>
-
-  <!-- AI Services Section -->
-  <div class="services-section">
-    <div class="services-header fade-in">
-      <h2 class="services-title" data-i18n="services.title">AI Services</h2>
-      <p class="services-subtitle" data-i18n="services.intro">
-        INOSX builds practical, production-grade AI solutions that transform data, processes, and systems into measurable outcomes. Our portfolio blends automation, analytics, security, and multi-agent orchestration to drive efficiency, innovation, and competitiveness.
-      </p>
-    </div>
-
-    <div class="services-grid">
-      <!-- INOSX AI Agents -->
-      <div class="service-card-modern fade-in">
-        <div class="service-card-header">
-          <div class="service-icon-large">🤖</div>
-          <h3 class="service-title-modern" data-i18n="services.ai_agents.title">INOSX AI Agents</h3>
-          <p class="service-description-modern" data-i18n="services.ai_agents.description">
-            Autonomous agents that eliminate repetitive work and connect platforms end‑to‑end.
-          </p>
-        </div>
-        
-        <div class="service-card-body">
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.ai_agents.capabilities_title">Key Capabilities</h4>
-            <ul class="service-list">
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.ai_agents.capability_1">Auto-integration with ERPs, CRMs, databases, and APIs</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.ai_agents.capability_2">End-to-end process execution with error reduction</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.ai_agents.capability_3">Real-time insights and action generation</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.ai_agents.capability_4">Continuous learning and adaptation to business needs</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.ai_agents.benefits_title">Business Benefits</h4>
-            <div class="benefits-grid">
-              <div class="benefit-item">
-                <span class="benefit-icon">💰</span>
-                <span data-i18n="services.ai_agents.benefit_1">Lower operational costs</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">⚡</span>
-                <span data-i18n="services.ai_agents.benefit_2">Higher efficiency</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">🎯</span>
-                <span data-i18n="services.ai_agents.benefit_3">Faster decisions</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">📈</span>
-                <span data-i18n="services.ai_agents.benefit_4">Scalable growth</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card-footer">
-          <a href="mailto:inosx@inosx.com?subject=Interest in INOSX AI Agents" class="btn-service-cta" data-i18n="services.cta_button">
-            Get Started →
-          </a>
-        </div>
-      </div>
-
-      <!-- INOSX CyberAI Security -->
-      <div class="service-card-modern fade-in">
-        <div class="service-card-header">
-          <div class="service-icon-large">🔒</div>
-          <h3 class="service-title-modern" data-i18n="services.security.title">INOSX CyberAI Security</h3>
-          <p class="service-description-modern" data-i18n="services.security.description">
-            AI-powered cybersecurity for modern infrastructures.
-          </p>
-        </div>
-        
-        <div class="service-card-body">
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.security.capabilities_title">Key Capabilities</h4>
-            <ul class="service-list">
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.security.capability_1">Continuous monitoring across systems and networks</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.security.capability_2">Anomaly, fraud, and intrusion detection</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.security.capability_3">Automated and intelligent incident response</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.security.benefits_title">Business Benefits</h4>
-            <div class="benefits-grid">
-              <div class="benefit-item">
-                <span class="benefit-icon">🛡️</span>
-                <span data-i18n="services.security.benefit_1">Asset protection</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">⚠️</span>
-                <span data-i18n="services.security.benefit_2">Risk reduction</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">✅</span>
-                <span data-i18n="services.security.benefit_3">Compliance assured</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card-footer">
-          <a href="mailto:inosx@inosx.com?subject=Interest in CyberAI Security" class="btn-service-cta" data-i18n="services.cta_button">
-            Get Started →
-          </a>
-        </div>
-      </div>
-
-      <!-- INOSX Knowledge Agents -->
-      <div class="service-card-modern fade-in">
-        <div class="service-card-header">
-          <div class="service-icon-large">📚</div>
-          <h3 class="service-title-modern" data-i18n="services.knowledge.title">INOSX Knowledge Agents</h3>
-          <p class="service-description-modern" data-i18n="services.knowledge.description">
-            Document- and knowledge-centric agents for internal repositories.
-          </p>
-        </div>
-        
-        <div class="service-card-body">
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.knowledge.capabilities_title">Key Capabilities</h4>
-            <ul class="service-list">
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.knowledge.capability_1">Automatic indexing and reading of corporate documents</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.knowledge.capability_2">Contextual, semantic search over knowledge bases</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.knowledge.capability_3">Integrations with SharePoint, Confluence, Google Drive, and more</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.knowledge.benefits_title">Business Benefits</h4>
-            <div class="benefits-grid">
-              <div class="benefit-item">
-                <span class="benefit-icon">⏱️</span>
-                <span data-i18n="services.knowledge.benefit_1">Time saved</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">🚀</span>
-                <span data-i18n="services.knowledge.benefit_2">Higher productivity</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">🧠</span>
-                <span data-i18n="services.knowledge.benefit_3">Centralized knowledge</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card-footer">
-          <a href="mailto:inosx@inosx.com?subject=Interest in Knowledge Agents" class="btn-service-cta" data-i18n="services.cta_button">
-            Get Started →
-          </a>
-        </div>
-      </div>
-
-      <!-- INOSX AI Orchestration -->
-      <div class="service-card-modern fade-in">
-        <div class="service-card-header">
-          <div class="service-icon-large">🎯</div>
-          <h3 class="service-title-modern" data-i18n="services.orchestration.title">INOSX AI Orchestration</h3>
-          <p class="service-description-modern" data-i18n="services.orchestration.description">
-            Orchestrates complex workflows across multiple AI agents.
-          </p>
-        </div>
-        
-        <div class="service-card-body">
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.orchestration.capabilities_title">Key Capabilities</h4>
-            <ul class="service-list">
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.orchestration.capability_1">Coordinates agents across corporate processes</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.orchestration.capability_2">Integrates ERP, CRM, customer support, and operations</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.orchestration.capability_3">Full governance and traceability of executions</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.orchestration.benefits_title">Business Benefits</h4>
-            <div class="benefits-grid">
-              <div class="benefit-item">
-                <span class="benefit-icon">🤝</span>
-                <span data-i18n="services.orchestration.benefit_1">Collaborative AI</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">🔍</span>
-                <span data-i18n="services.orchestration.benefit_2">Full transparency</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">🔄</span>
-                <span data-i18n="services.orchestration.benefit_3">Business agility</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card-footer">
-          <a href="mailto:inosx@inosx.com?subject=Interest in AI Orchestration" class="btn-service-cta" data-i18n="services.cta_button">
-            Get Started →
-          </a>
-        </div>
-      </div>
-
-      <!-- INOSX Vision Robotics -->
-      <div class="service-card-modern fade-in">
-        <div class="service-card-header">
-          <div class="service-icon-large">🤖</div>
-          <h3 class="service-title-modern" data-i18n="services.vision.title">INOSX Vision Robotics</h3>
-          <p class="service-description-modern" data-i18n="services.vision.description">
-            Advanced robotic solutions powered by 3D vision and visual language models for autonomous operations.
-          </p>
-        </div>
-        
-        <div class="service-card-body">
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.vision.capabilities_title">Key Capabilities</h4>
-            <ul class="service-list">
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.vision.capability_1">3D spatial perception and object recognition</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.vision.capability_2">Visual language model integration for natural interaction</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.vision.capability_3">Autonomous navigation and manipulation systems</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.vision.capability_4">Real-time decision making with computer vision</span>
-              </li>
-              <li>
-                <span class="list-icon">✓</span>
-                <span data-i18n="services.vision.capability_5">Multi-sensor fusion for enhanced accuracy</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="service-section">
-            <h4 class="service-section-title" data-i18n="services.vision.benefits_title">Business Benefits</h4>
-            <div class="benefits-grid">
-              <div class="benefit-item">
-                <span class="benefit-icon">🦾</span>
-                <span data-i18n="services.vision.benefit_1">Full autonomy</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">👤</span>
-                <span data-i18n="services.vision.benefit_2">Less intervention</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">🎯</span>
-                <span data-i18n="services.vision.benefit_3">High precision</span>
-              </div>
-              <div class="benefit-item">
-                <span class="benefit-icon">🏭</span>
-                <span data-i18n="services.vision.benefit_4">Industrial scale</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card-footer">
-          <a href="mailto:inosx@inosx.com?subject=Interest in Vision Robotics" class="btn-service-cta" data-i18n="services.cta_button">
-            Get Started →
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Value Proposition & Strong CTA -->
-    <div class="services-value-section fade-in">
-      <div class="value-content">
-        <h3 class="value-title" data-i18n="services.value_title">INOSX Unified Value Proposition</h3>
-        <p class="value-text" data-i18n="services.value_text">
-          With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business.
-        </p>
-      </div>
-      
-      <div class="value-cta-section">
-        <h3 class="value-cta-title" data-i18n="services.cta_title">Ready to Transform Your Business with AI?</h3>
-        <p class="value-cta-subtitle" data-i18n="services.cta_subtitle">
-          Let's discuss how INOSX can build a custom AI solution for your specific needs.
-        </p>
-        <div class="value-cta-buttons">
-          <a href="mailto:inosx@inosx.com?subject=Custom AI Solution Inquiry&body=Hi INOSX team,%0D%0A%0D%0AI'm interested in learning more about your AI solutions.%0D%0A%0D%0ACompany:%0D%0AIndustry:%0D%0ACurrent Challenge:%0D%0A%0D%0APlease contact me to discuss further." class="btn-value-cta-primary" data-i18n="services.cta_email">
-            📧 Email Us: inosx@inosx.com
-          </a>
-          <button class="btn-value-cta-secondary" onclick="openContactModal()" data-i18n="services.cta_schedule">
-            Schedule Free Consultation
-          </button>
-        </div>
-        <p class="value-cta-benefits" data-i18n="services.cta_benefits">
-          ✓ Free 30-min consultation  ✓ Custom AI roadmap  ✓ ROI analysis  ✓ No commitment required
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact Modal -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close" onclick="closeContactModal()">&times;</span>
-      
-      <div id="formContainer">
-        <h3 data-i18n="modal.title">Get Your Free AI Consultation</h3>
-        <p data-i18n="modal.subtitle">Tell us about your business and we'll show you how AI can help.</p>
-        
-        <div class="progress-bar">
-          <div class="progress-step completed" id="progress-1"></div>
-          <div class="progress-step" id="progress-2"></div>
-        </div>
-        
-        <form id="leadForm" class="lead-form" onsubmit="handleFormSubmit(event)">
-          <!-- Step 1: Basic Info -->
-          <div class="form-step active" data-step="1">
-            <input type="text" name="name" id="name" data-i18n-placeholder="modal.step1.name_placeholder" placeholder="Your Name *" required />
-            <input type="email" name="email" id="email" data-i18n-placeholder="modal.step1.email_placeholder" placeholder="Work Email *" required />
-            
-            <div style="text-align: center; font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;" data-i18n="modal.step1.benefits">
-              ✓ No credit card  ✓ 30-min call  ✓ Free ROI analysis
-            </div>
-            
-            <button type="button" class="btn-next" onclick="nextStep(2)" data-i18n="modal.step1.btn_continue">
-              Continue →
-            </button>
-          </div>
-          
-          <!-- Step 2: Needs -->
-          <div class="form-step" data-step="2">
-            <input type="tel" name="phone" id="phone" data-i18n-placeholder="modal.step1.phone_placeholder" placeholder="Phone Number (optional)" />
-            <input type="text" name="company" id="company" data-i18n-placeholder="modal.step1.company_placeholder" placeholder="Company Name *" required />
-            
-            <label data-i18n="modal.step2.interest_label">What brings you to INOSX?</label>
-            <select name="interest" id="interest" required data-i18n-options="modal.step2">
-              <option value="" data-i18n="modal.step2.interest_placeholder">Select primary interest...</option>
-              <option value="automate" data-i18n="modal.step2.interest_automate">Automate business processes</option>
-              <option value="analytics" data-i18n="modal.step2.interest_analytics">Data analytics & insights</option>
-              <option value="security" data-i18n="modal.step2.interest_security">AI-powered security</option>
-              <option value="knowledge" data-i18n="modal.step2.interest_knowledge">Knowledge management</option>
-              <option value="robotics" data-i18n="modal.step2.interest_robotics">Industrial robotics</option>
-              <option value="other" data-i18n="modal.step2.interest_other">Other / Not sure</option>
-            </select>
-            
-            <label data-i18n="modal.step2.size_label">Company size</label>
-            <select name="company_size" id="company_size" data-i18n-options="modal.step2">
-              <option value="" data-i18n="modal.step2.size_placeholder">Select...</option>
-              <option value="1-10" data-i18n="modal.step2.size_1_10">1-10 employees</option>
-              <option value="11-50" data-i18n="modal.step2.size_11_50">11-50 employees</option>
-              <option value="51-200" data-i18n="modal.step2.size_51_200">51-200 employees</option>
-              <option value="201-1000" data-i18n="modal.step2.size_201_1000">201-1,000 employees</option>
-              <option value="1000+" data-i18n="modal.step2.size_1000">1,000+ employees</option>
-            </select>
-            
-            <label data-i18n="modal.step2.message_label">Tell us about your AI goals (optional)</label>
-            <textarea name="message" id="message" data-i18n-placeholder="modal.step2.message_placeholder" placeholder="E.g., We want to automate our customer support process..." rows="4"></textarea>
-            
-            <div class="form-buttons">
-              <button type="button" class="btn-back" onclick="prevStep(1)" data-i18n="modal.step2.btn_back">
-                ← Back
-              </button>
-              <button type="submit" class="btn-submit" id="submitBtn" data-i18n="modal.step2.btn_submit">
-                Get Free Consultation
-              </button>
-            </div>
-          </div>
-        </form>
-        
-        <p class="privacy-note">
-          <span data-i18n="modal.privacy">We respect your privacy. See our</span> <a href="terms.html#privacy" target="_blank" data-i18n="modal.privacy_link">Privacy Policy</a>.
-        </p>
-      </div>
-      
-      <!-- Success Message (hidden by default) -->
-      <div id="successMessage" class="success-message" style="display: none;">
-        <div class="success-icon">✓</div>
-        <h3 data-i18n="modal.success_title">Thank You!</h3>
-        <p data-i18n="modal.success_text1">
-          We've received your request and one of our AI experts will contact you within 24 hours.
-        </p>
-        <p data-i18n="modal.success_text2">
-          Check your email for confirmation and next steps.
-        </p>
-        <button class="cta-primary" onclick="closeContactModal()" data-i18n="modal.btn_close">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Modal and Form Functions
-    function openContactModal() {
-      const modal = document.getElementById('contactModal');
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      
-      // Track event
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'open_contact_form', {
-          'event_category': 'engagement',
-          'event_label': 'contact_modal'
-        });
-      }
-    }
-
-    function closeContactModal() {
-      const modal = document.getElementById('contactModal');
-      modal.classList.remove('active');
-      document.body.style.overflow = 'auto';
-      
-      // Reset form
-      document.getElementById('leadForm').reset();
-      showStep(1);
-      document.getElementById('formContainer').style.display = 'block';
-      document.getElementById('successMessage').style.display = 'none';
-    }
-
-    function nextStep(step) {
-      // Validate current step
-      const currentStep = document.querySelector('.form-step.active');
-      const inputs = currentStep.querySelectorAll('input[required], select[required]');
-      let valid = true;
-      
-      inputs.forEach(input => {
-        if (!input.value || (input.type === 'email' && !isValidEmail(input.value))) {
-          valid = false;
-          input.style.borderColor = '#ff6b6b';
-        } else {
-          input.style.borderColor = '';
-        }
-      });
-      
-      if (!valid) return;
-      
-      showStep(step);
-      
-      // Track event
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_step_' + step, {
-          'event_category': 'form_progress'
-        });
-      }
-    }
-
-    function prevStep(step) {
-      showStep(step);
-    }
-
-    function showStep(step) {
-      // Hide all steps
-      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
-      
-      // Show target step
-      document.querySelector(`.form-step[data-step="${step}"]`).classList.add('active');
-      
-      // Update progress bar
-      document.getElementById('progress-1').classList.toggle('completed', step >= 1);
-      document.getElementById('progress-2').classList.toggle('completed', step >= 2);
-    }
-
-    function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-    async function handleFormSubmit(event) {
-      event.preventDefault();
-      
-      const submitBtn = document.getElementById('submitBtn');
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-      
-      const formData = new FormData(event.target);
-      const data = Object.fromEntries(formData);
-      
-      // Add tracking data
-      data.utm_source = new URLSearchParams(window.location.search).get('utm_source') || 'direct';
-      data.utm_campaign = new URLSearchParams(window.location.search).get('utm_campaign') || '';
-      data.page_url = window.location.href;
-      data.referrer = document.referrer;
-      data.timestamp = new Date().toISOString();
-      
-      try {
-        // TODO: Replace with actual endpoint
-        // For now, log to console and show success
-        console.log('Form submission:', data);
-        
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        // Track conversion
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'generate_lead', {
-            'event_category': 'conversion',
-            'event_label': 'contact_form',
-            'value': 1
-          });
-        }
-        
-        // Show success message
-        document.getElementById('formContainer').style.display = 'none';
-        document.getElementById('successMessage').style.display = 'block';
-        
-        // Optional: Send to actual backend
-        // const response = await fetch('/api/contact', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify(data)
-        // });
-        
-      } catch (error) {
-        console.error('Form submission error:', error);
-        alert('Something went wrong. Please try again or email us at contact@inosx.com');
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Get Free Consultation';
-      }
-    }
-
-    // Close modal on outside click
-    window.onclick = function(event) {
-      const modal = document.getElementById('contactModal');
-      if (event.target == modal) {
-        closeContactModal();
-      }
-    }
-
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeContactModal();
-      }
-    });
-
-    // Criar partículas de fundo
-    function createParticles() {
-      const particlesContainer = document.getElementById('particles');
-      // Canvas para linhas
-      let canvas = document.getElementById('particle-lines-canvas');
-      if (!canvas) {
-        canvas = document.createElement('canvas');
-        canvas.id = 'particle-lines-canvas';
-        particlesContainer.appendChild(canvas);
-      }
-      const particleCount = 50;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 6 + 's';
-        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-        particlesContainer.appendChild(particle);
-      }
-
-      initParticleLines();
-    }
-
-    // Carrossel: navegação e autoplay
-    // Desenhar linhas entre partículas próximas usando canvas
-    function initParticleLines() {
-      const canvas = document.getElementById('particle-lines-canvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-
-      function updateCanvasSize() {
-        const dpr = window.devicePixelRatio || 1;
-        canvas.width = Math.floor(window.innerWidth * dpr);
-        canvas.height = Math.floor(window.innerHeight * dpr);
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      }
-
-      updateCanvasSize();
-
-      const maxDistance = 140; // distância para ligar pontos
-
-      function getParticleCenters() {
-        const nodes = document.querySelectorAll('.particle');
-        const centers = [];
-        nodes.forEach(n => {
-          const r = n.getBoundingClientRect();
-          centers.push({ x: r.left + r.width / 2, y: r.top + r.height / 2 });
-        });
-        return centers;
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const centers = getParticleCenters();
-        for (let i = 0; i < centers.length; i++) {
-          for (let j = i + 1; j < centers.length; j++) {
-            const dx = centers[i].x - centers[j].x;
-            const dy = centers[i].y - centers[j].y;
-            const dist = Math.hypot(dx, dy);
-            if (dist < maxDistance) {
-              const alpha = Math.max(0, 1 - dist / maxDistance) * 0.4;
-              ctx.strokeStyle = `rgba(0, 212, 255, ${alpha.toFixed(3)})`;
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.moveTo(centers[i].x, centers[i].y);
-              ctx.lineTo(centers[j].x, centers[j].y);
-              ctx.stroke();
-            }
-          }
-        }
-        requestAnimationFrame(draw);
-      }
-
-      requestAnimationFrame(draw);
-
-      window.addEventListener('resize', () => {
-        updateCanvasSize();
-      });
-    }
-
-    // Analytics tracking helper (placeholder for future analytics)
-    function trackEvent(eventName, params) {
-      // Google Analytics can be added here later
-      console.log('Event:', eventName, params);
-    }
-
-    // Inicializar quando a página carregar
-    window.addEventListener('load', function() {
-      createParticles();
-      // initStickyCTA(); // REMOVED - sticky CTA bar removed
-      window.scrollTo(0, 0);
-      
-      // Track page view
-      trackEvent('page_view', {
-        'page_title': document.title,
-        'page_location': window.location.href
-      });
-      
-      // Track scroll depth
-      let scrollTracked = { 25: false, 50: false, 75: false, 100: false };
-      window.addEventListener('scroll', function() {
-        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-        
-        Object.keys(scrollTracked).forEach(threshold => {
-          if (scrollPercent >= parseInt(threshold) && !scrollTracked[threshold]) {
-            trackEvent('scroll_depth', {
-              'event_category': 'engagement',
-              'event_label': threshold + '%'
-            });
-            scrollTracked[threshold] = true;
-          }
-        });
-      });
-    });
-
-    // Sticky CTA Bar functionality - REMOVED (was overlapping menu)
-    /*
-    function initStickyCTA() {
-      const stickyCTA = document.getElementById('stickyCTA');
-      let hasShown = false;
-      
-      window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
-        const heroHeight = document.querySelector('.main-container').offsetHeight;
-        
-        // Show sticky CTA after scrolling past hero
-        if (scrollY > heroHeight && !hasShown) {
-          stickyCTA.classList.add('visible');
-          hasShown = true;
-          
-          // Track event
-          trackEvent('sticky_cta_shown', {
-            'event_category': 'engagement'
-          });
-        }
-      });
-    }
-    */
-
-    // Prevenir scroll horizontal
-    window.addEventListener('scroll', function() {
-      if (window.scrollX !== 0) {
-        window.scrollTo(0, window.scrollY);
-      }
-    });
-
-    // Track product clicks
-    document.addEventListener('DOMContentLoaded', function() {
-      const productLinks = document.querySelectorAll('.carousel-item');
-      productLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          const productName = this.querySelector('.carousel-caption span').textContent;
-          trackEvent('product_click', {
-            'event_category': 'products',
-            'event_label': productName,
-            'outbound': true
-          });
-        });
-      });
-      
-      // Track service card views
-      const serviceCards = document.querySelectorAll('.service-card');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !entry.target.dataset.tracked) {
-            const serviceName = entry.target.querySelector('.service-title').textContent.trim();
-            trackEvent('service_view', {
-              'event_category': 'services',
-              'event_label': serviceName
-            });
-            entry.target.dataset.tracked = 'true';
-          }
-        });
-      }, { threshold: 0.5 });
-      
-      serviceCards.forEach(card => observer.observe(card));
-
-      // Track Messiax featured section
-      const messiaxFeatured = document.querySelector('.featured-product');
-      if (messiaxFeatured) {
-        const messiaxObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.dataset.tracked) {
-              trackEvent('messiax_featured_view', {
-                'event_category': 'products',
-                'event_label': 'featured_section_viewed'
-              });
-              entry.target.dataset.tracked = 'true';
-            }
-          });
-        }, { threshold: 0.5 });
-        
-        messiaxObserver.observe(messiaxFeatured);
-      }
-
-      // Track Messiax CTA clicks
-      document.querySelectorAll('.btn-featured, .btn-featured-secondary').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-          const isExternal = this.getAttribute('target') === '_blank';
-          const destination = isExternal ? 'messiax_platform' : 'messiax_landing';
-          
-          trackEvent('messiax_cta_click', {
-            'event_category': 'conversion',
-            'event_label': destination,
-            'value': 1
-          });
-        });
-      });
-    });
-  </script>
-  
-  <!-- INOSX Footer -->
-  <style>
-    .inosx-footer {
-      margin-top: 4rem;
-      background: linear-gradient(135deg, #2a4b7a 0%, #5f5dbd 100%);
-      color: #ffffff;
-    }
-    .inosx-footer a { color: #ffffff; text-decoration: none; opacity: 0.9; }
-    .inosx-footer a:hover { opacity: 1; }
-    .inosx-footer .container { max-width: 1400px; margin: 0 auto; padding: 3rem 1rem; }
-    .inosx-footer .grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
-    .inosx-footer h4 { margin-bottom: 0.8rem; font-size: 1.1rem; }
-    .inosx-footer p { opacity: 0.95; line-height: 1.6; }
-    .inosx-footer ul { list-style: none; padding: 0; margin: 0; }
-    .inosx-footer li { margin: 0.5rem 0; }
-    .inosx-footer .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.2rem; }
-    .inosx-footer .badge { width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,0.2); display: inline-flex; align-items: center; justify-content: center; }
-    .inosx-footer .legal { border-top: 1px solid rgba(255,255,255,0.2); padding: 1rem 0; font-size: 0.9rem; opacity: 0.9; }
-    .inosx-footer .contact-box { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; padding: 1rem; }
-    .inosx-footer .company-meta { margin-top: 0.75rem; font-size: 0.92rem; opacity: 0.95; }
-    .inosx-footer .social { display: flex; gap: 10px; margin-top: 12px; }
-    .inosx-footer .social a { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; }
-    @media (max-width: 900px) {
-      .inosx-footer .grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .inosx-footer .grid { grid-template-columns: 1fr; }
-    }
-  </style>
-
-  <footer class="inosx-footer">
+  <!-- ============ EVIDENCE STRIP — links pra evidência real, sem numerais fabricados ============ -->
+  <section class="evidence">
     <div class="container">
-      <div class="grid">
-        <div>
-          <div class="brand"><span class="badge">💠</span><span>INOSX</span></div>
-          <p style="margin-top:0.5rem" data-i18n="footer.tagline">Democratizing access to practical and secure AI solutions for businesses.</p>
-          <div class="company-meta" data-i18n="footer.company_meta">
-            INOSX, Inc. • USA Corporation
-          </div>
-          <div class="social">
-            <a href="https://www.linkedin.com/company/inosx" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-            <a href="mailto:contact@inosx.com" aria-label="Email">@</a>
-          </div>
+      <div class="evidence-inner">
+        <a href="#products" class="reveal">
+          <span class="ev-line" data-i18n="landing.evidence.e1">Proprietary products running in production</span>
+          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
+        </a>
+        <a href="#clients" class="reveal" data-delay="1">
+          <span class="ev-line" data-i18n="landing.evidence.e2">Clients across multiple continents</span>
+          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
+        </a>
+        <a href="#industries" class="reveal" data-delay="2">
+          <span class="ev-line" data-i18n="landing.evidence.e3">Active engagements across industries</span>
+          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"><hr></div>
+
+  <!-- ============ PAINS ============ -->
+  <section class="block pains">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">
+          <span class="num">i.</span>
+          <span class="bar"></span>
+          <span data-i18n="landing.pains.eyebrow">Sound familiar</span>
         </div>
         <div>
-          <h4 data-i18n="footer.platform_title">Platform</h4>
-          <ul>
-            <li><a href="index.html" data-i18n="footer.platform_home">Home</a></li>
-            <li><a href="#" data-i18n="footer.platform_products">Products</a></li>
-            <li><a href="#" data-i18n="footer.platform_services">Services</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 data-i18n="footer.support_title">Support</h4>
-          <ul>
-            <li><a href="terms.html" data-i18n="footer.support_terms">Terms of Service</a></li>
-            <li><a href="terms.html#privacy" data-i18n="footer.support_privacy">Privacy Policy</a></li>
-            <li><a href="mailto:contact@inosx.com" data-i18n="footer.support_contact">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 data-i18n="footer.contact_title">Contact</h4>
-          <div class="contact-box">
-            <div><strong data-i18n="footer.contact_email">Email</strong><br><a href="mailto:contact@inosx.com">contact@inosx.com</a></div>
-            <div style="margin-top:8px" data-i18n="footer.contact_address">9450 SW Gemini Dr, Beaverton, OR 97008, USA</div>
-          </div>
+          <h2>
+            <span data-i18n="landing.pains.title_1">You wanted a product.</span>
+            <span class="italic" data-i18n="landing.pains.title_2">They shipped a demo.</span>
+          </h2>
+          <p data-i18n="landing.pains.sub" class="lead">
+            The patterns we see every week with product leaders and decision makers. The ones we set out to solve with craft.
+          </p>
         </div>
       </div>
-      <div class="legal" data-i18n="footer.copyright">
-        © 2025 INOSX, Inc. All rights reserved.
+
+      <div class="rows">
+        <div class="row-item reveal">
+          <span class="idx">i.</span>
+          <h3 data-i18n="landing.pains.p1_t">Vendors that ship slides, not products</h3>
+          <p data-i18n="landing.pains.p1_d">Demos that win the meeting and die at deployment. Design, engineering and process never quite arrive together.</p>
+        </div>
+        <div class="row-item reveal">
+          <span class="idx">ii.</span>
+          <h3 data-i18n="landing.pains.p2_t">UX nobody on the team will use</h3>
+          <p data-i18n="landing.pains.p2_d">Software the user opens once and abandons. The investment lives in a license; the workflow lives in a spreadsheet.</p>
+        </div>
+        <div class="row-item reveal">
+          <span class="idx">iii.</span>
+          <h3 data-i18n="landing.pains.p3_t">Sensitive data outside your control</h3>
+          <p data-i18n="landing.pains.p3_d">Compliance, GDPR/LGPD and trade secrets rule out most off-the-shelf platforms.</p>
+        </div>
+        <div class="row-item reveal">
+          <span class="idx">iv.</span>
+          <h3 data-i18n="landing.pains.p4_t">Integrations that never land</h3>
+          <p data-i18n="landing.pains.p4_d">ERPs, CRMs, legacy bases and automations that need to talk. Nobody finishes the last 20%.</p>
+        </div>
+        <div class="row-item reveal">
+          <span class="idx">v.</span>
+          <h3 data-i18n="landing.pains.p5_t">Rising cost, invisible return</h3>
+          <p data-i18n="landing.pains.p5_d">Hours billed, scope drifting, value missing in the boardroom. The number nobody can defend.</p>
+        </div>
+        <div class="row-item reveal">
+          <span class="idx">vi.</span>
+          <h3 data-i18n="landing.pains.p6_t">Hidden vendor lock-in</h3>
+          <p data-i18n="landing.pains.p6_d">Closed platforms that promise ease and charge dearly when you want to scale, migrate or own the codebase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"><hr></div>
+
+  <!-- ============ SOLUTIONS ============ -->
+  <section class="block" id="solutions">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">
+          <span class="num">ii.</span>
+          <span class="bar"></span>
+          <span data-i18n="landing.solutions.eyebrow">What we make</span>
+        </div>
+        <div>
+          <h2>
+            <span data-i18n="landing.solutions.title_1">Software,</span>
+            <span class="italic" data-i18n="landing.solutions.title_2">designed and built.</span>
+          </h2>
+          <p class="lead" data-i18n="landing.solutions.sub">
+            Six practices that share one promise: digital products your team will actually use, shaped from the first sketch to the operations dashboard.
+          </p>
+        </div>
+      </div>
+
+      <div class="sol-grid">
+        <div class="sol-item reveal">
+          <span class="idx">01</span>
+          <h3 data-i18n="landing.solutions.s1_t">Digital products</h3>
+          <p data-i18n="landing.solutions.s1_d">Web, mobile and desktop apps shaped around the people who will use them. From research and UX to a release the team is proud to ship.</p>
+        </div>
+        <div class="sol-item reveal" data-delay="1">
+          <span class="idx">02</span>
+          <h3 data-i18n="landing.solutions.s2_t">Platforms &amp; integration</h3>
+          <p data-i18n="landing.solutions.s2_d">APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software without a remix.</p>
+        </div>
+        <div class="sol-item reveal" data-delay="2">
+          <span class="idx">03</span>
+          <h3 data-i18n="landing.solutions.s3_t">AI, when it serves</h3>
+          <p data-i18n="landing.solutions.s3_d">Agents, knowledge platforms, orchestration. Shipped to production with observability and cost control. Never the headline of the product.</p>
+        </div>
+        <div class="sol-item reveal">
+          <span class="idx">04</span>
+          <h3 data-i18n="landing.solutions.s4_t">Security &amp; trust</h3>
+          <p data-i18n="landing.solutions.s4_d">CyberAI detection, response and audit. Visibility on what matters across the product, no noise, no theater.</p>
+        </div>
+        <div class="sol-item reveal" data-delay="1">
+          <span class="idx">05</span>
+          <h3 data-i18n="landing.solutions.s5_t">Computer vision</h3>
+          <p data-i18n="landing.solutions.s5_d">Inspection, counting, quality control and visual automation. Where physical operations need digital eyes.</p>
+        </div>
+        <div class="sol-item reveal" data-delay="2">
+          <span class="idx">06</span>
+          <h3 data-i18n="landing.solutions.s6_t">Product strategy</h3>
+          <p data-i18n="landing.solutions.s6_d">Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years of growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"><hr></div>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section class="block" id="products">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">
+          <span class="num">iii.</span>
+          <span class="bar"></span>
+          <span data-i18n="landing.products.eyebrow">INOSX Products</span>
+        </div>
+        <div>
+          <h2>
+            <span data-i18n="landing.products.title_1">Off-the-shelf software,</span>
+            <span class="italic" data-i18n="landing.products.title_2">tailored when needed.</span>
+          </h2>
+          <p class="lead" data-i18n="landing.products.sub">
+            A catalog of proprietary products in real production. Use them as-is or as a customizable starting point.
+          </p>
+        </div>
+      </div>
+
+      <div class="products-grid reveal">
+        <article class="product-card">
+          <div class="name">Messi<em>ax</em></div>
+          <p class="desc" data-i18n="landing.products.messiax">AI conversational service: replies, follow-up and qualification on your customer's channel.</p>
+          <a href="produtos.html#messiax"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Survey<em>Flow</em></div>
+          <p class="desc" data-i18n="landing.products.surveyflow">Smart surveys with automated analysis and actionable insights.</p>
+          <a href="produtos.html#surveyflow"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Psycho<em>X</em></div>
+          <p class="desc" data-i18n="landing.products.psychox">Digital psychometric assessments with AI-assisted clinical reports.</p>
+          <a href="produtos.html#psychox"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Data<em>GPT</em></div>
+          <p class="desc" data-i18n="landing.products.datagpt">Talk to your data: analyses, charts and answers in natural language.</p>
+          <a href="produtos.html#datagpt"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Ccoinx<em>.ai</em></div>
+          <p class="desc" data-i18n="landing.products.ccoinx">Intelligence applied to finance and digital assets: signals, monitoring and automation.</p>
+          <a href="produtos.html#ccoinx"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Tranquil<em>opa</em></div>
+          <p class="desc" data-i18n="landing.products.tranquilopa">AI-powered well-being and mental health: continuous support, guided content and follow-up.</p>
+          <a href="produtos.html#tranquilopa"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">AITEAM<em>—X</em></div>
+          <p class="desc" data-i18n="landing.products.aiteam">Full AI team on your machine: 30+ agents, shared memory, local data.</p>
+          <a href="produtos.html#aiteam"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"><hr></div>
+
+  <!-- ============ HOW WE WORK ============ -->
+  <section class="block">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">
+          <span class="num">iv.</span>
+          <span class="bar"></span>
+          <span data-i18n="landing.how.eyebrow">How we work</span>
+        </div>
+        <div>
+          <h2>
+            <span data-i18n="landing.how.title_1">Three steps.</span>
+            <span class="italic" data-i18n="landing.how.title_2">No sales theater.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="steps reveal">
+        <div class="step">
+          <span class="idx">01</span>
+          <h3 data-i18n="landing.how.s1_t">Diagnosis</h3>
+          <p data-i18n="landing.how.s1_d">Discovery conversation, map of what exists, highest-return use cases and clear feasibility.</p>
+        </div>
+        <div class="step">
+          <span class="idx">02</span>
+          <h3 data-i18n="landing.how.s2_t">Design + Build</h3>
+          <p data-i18n="landing.how.s2_d">A real release of the product in weeks. UX shaped with your team, KPIs defined upfront, code shipped to production from day one.</p>
+        </div>
+        <div class="step">
+          <span class="idx">03</span>
+          <h3 data-i18n="landing.how.s3_t">Scale</h3>
+          <p data-i18n="landing.how.s3_d">Continuous operation, observability, governance and expansion to new processes based on proven returns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"><hr></div>
+
+  <!-- ============ CASES ============ -->
+  <section class="block" id="cases">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">
+          <span class="num">v.</span>
+          <span class="bar"></span>
+          <span data-i18n="landing.cases.eyebrow">Cases</span>
+        </div>
+        <div>
+          <h2>
+            <span data-i18n="landing.cases.title_1">The difference shows</span>
+            <span class="italic" data-i18n="landing.cases.title_2">in the product.</span>
+          </h2>
+        </div>
+      </div>
+
+      <!--
+        SELECTED WORK — placeholder real clients from the marquee + neutral technical sentences.
+        Replace .work-desc with the actual engagement scope, technology, and outcome.
+        Keep one sentence per item. Keep meta tight (industry · stack · year).
+      -->
+      <div class="work-list">
+        <article class="work reveal">
+          <div class="work-idx">01</div>
+          <div>
+            <h3 class="work-name">Itaú</h3>
+            <p class="work-desc" data-i18n="landing.cases.w1_d">[Replace with the real engagement, e.g. "Modernization of the credit-origination flow: TypeScript service layer over a legacy mainframe core, integrated with the existing risk pipeline."]</p>
+          </div>
+          <div class="work-meta">
+            <span data-i18n="landing.cases.w1_m1">Financial services</span>
+            <span data-i18n="landing.cases.w1_m2">Node · TypeScript · GCP</span>
+          </div>
+        </article>
+        <article class="work reveal" data-delay="1">
+          <div class="work-idx">02</div>
+          <div>
+            <h3 class="work-name">Telefônica</h3>
+            <p class="work-desc" data-i18n="landing.cases.w2_d">[Replace with the real engagement, e.g. "Internal operations platform for the network field team: offline-first React Native client, GraphQL gateway, observability stack."]</p>
+          </div>
+          <div class="work-meta">
+            <span data-i18n="landing.cases.w2_m1">Telecom</span>
+            <span data-i18n="landing.cases.w2_m2">React Native · GraphQL · Kubernetes</span>
+          </div>
+        </article>
+        <article class="work reveal" data-delay="2">
+          <div class="work-idx">03</div>
+          <div>
+            <h3 class="work-name">Volkswagen</h3>
+            <p class="work-desc" data-i18n="landing.cases.w3_d">[Replace with the real engagement, e.g. "Computer-vision quality-control pipeline for the assembly line: edge inference, anomaly review interface, audit log."]</p>
+          </div>
+          <div class="work-meta">
+            <span data-i18n="landing.cases.w3_m1">Manufacturing</span>
+            <span data-i18n="landing.cases.w3_m2">Python · PyTorch · MQTT</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"><hr></div>
+
+  <!-- ============ INDUSTRIES ============ -->
+  <section class="block" id="industries">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="label">
+          <span class="num">vi.</span>
+          <span class="bar"></span>
+          <span data-i18n="landing.industries.eyebrow">Industries</span>
+        </div>
+        <div>
+          <h2>
+            <span data-i18n="landing.industries.title_1">Where we</span>
+            <span class="italic" data-i18n="landing.industries.title_2">already are.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="industries-list reveal">
+        <span>Healthcare</span><span>Education</span><span>Financial services</span><span>Manufacturing</span><span>Retail</span><span>Logistics</span><span>Agribusiness</span><span>Energy</span><span>Public sector</span><span>Technology</span><span>Telecom</span><span>Legal</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"><hr></div>
+
+  <!-- ============ FAQ ============ -->
+  <section class="block" id="faq">
+    <div class="container narrow">
+      <div class="section-head reveal" style="grid-template-columns: 1fr;">
+        <div>
+          <div class="label" style="margin-bottom: 1.5rem">
+            <span class="num">vii.</span>
+            <span class="bar"></span>
+            <span data-i18n="landing.faq.eyebrow">FAQ</span>
+          </div>
+          <h2>
+            <span data-i18n="landing.faq.title_1">Before you ask —</span>
+            <span class="italic" data-i18n="landing.faq.title_2">we've answered.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <details class="faq">
+          <summary data-i18n="landing.faq.q1">How does a project with INOSX start?</summary>
+          <p data-i18n="landing.faq.a1">With a free diagnostic conversation. We map your context, objectives and data, and come back with a lean pilot proposal and a realistic timeline.</p>
+        </details>
+        <details class="faq">
+          <summary data-i18n="landing.faq.q2">How long until results?</summary>
+          <p data-i18n="landing.faq.a2">Typical pilots reach production in 4 to 8 weeks. The scope is defined to generate measurable value within that window.</p>
+        </details>
+        <details class="faq">
+          <summary data-i18n="landing.faq.q3">Will my data be exposed?</summary>
+          <p data-i18n="landing.faq.a3">No. We work with private architectures, local models when needed, data segregation and LGPD/GDPR compliance.</p>
+        </details>
+        <details class="faq">
+          <summary data-i18n="landing.faq.q4">Do you integrate with our systems?</summary>
+          <p data-i18n="landing.faq.a4">Yes. ERPs, CRMs, internal bases, APIs and legacy. Integration is part of scope, not a separate project.</p>
+        </details>
+        <details class="faq">
+          <summary data-i18n="landing.faq.q5">Do you have a fixed tech stack?</summary>
+          <p data-i18n="landing.faq.a5">No. We pick the right stack per project — Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows your operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem.</p>
+        </details>
+        <details class="faq">
+          <summary data-i18n="landing.faq.q6">How is pricing?</summary>
+          <p data-i18n="landing.faq.a6">Fixed scope for pilot and continuous-operation model for production. No hidden licenses, transparent costs.</p>
+        </details>
+        <details class="faq">
+          <summary data-i18n="landing.faq.q7">Do you serve outside Brazil?</summary>
+          <p data-i18n="landing.faq.a7">Yes. PT-BR, EN and ES, with global remote delivery.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEAD CAPTURE ============ -->
+  <section class="lead-section" id="contact">
+    <div class="container lead-grid">
+      <div class="lead-text reveal">
+        <div class="label" style="margin-bottom: 2rem">
+          <span class="num">viii.</span>
+          <span class="bar"></span>
+          <span data-i18n="landing.lead.eyebrow">Direct conversation</span>
+        </div>
+        <h2>
+          <span data-i18n="landing.lead.title_1">Tell us what</span>
+          <span class="italic" data-i18n="landing.lead.title_2">you need.</span>
+          <br>
+          <span data-i18n="landing.lead.title_3">We come back with</span>
+          <span class="italic" data-i18n="landing.lead.title_4">a path.</span>
+        </h2>
+        <p class="lead" data-i18n="landing.lead.sub">
+          No endless form. No empty promises. Tell us the challenge in a few lines and within one business day we return with an initial diagnosis and next steps.
+        </p>
+        <ul class="lead-bullets">
+          <li><span data-i18n="landing.lead.b1">Reply within 1 business day</span></li>
+          <li><span data-i18n="landing.lead.b2">Initial diagnosis at no cost</span></li>
+          <li><span data-i18n="landing.lead.b3">Confidentiality guaranteed (NDA on request)</span></li>
+        </ul>
+      </div>
+
+      <form class="lead-form reveal"
+            data-delay="1"
+            id="leadForm"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            novalidate>
+        <div class="form-title" data-i18n="landing.lead.form_title">Talk to INOSX</div>
+
+        <div class="field">
+          <label for="lf-name" data-i18n="landing.lead.f_name">Name</label>
+          <input id="lf-name" type="text" name="name" required autocomplete="name" placeholder="How should we call you" />
+        </div>
+        <div class="field">
+          <label for="lf-email" data-i18n="landing.lead.f_email">Work email</label>
+          <input id="lf-email" type="email" name="email" required autocomplete="email" placeholder="you@email.com" />
+        </div>
+        <div class="field">
+          <label for="lf-company" data-i18n="landing.lead.f_company">Company</label>
+          <input id="lf-company" type="text" name="company" required autocomplete="organization" placeholder="Company name" />
+        </div>
+        <div class="field">
+          <label for="lf-phone" data-i18n="landing.lead.f_phone">Phone (optional)</label>
+          <input id="lf-phone" type="tel" name="phone" autocomplete="tel" placeholder="+1 ..." />
+        </div>
+        <div class="field">
+          <label for="lf-msg" data-i18n="landing.lead.f_msg">What do you need to solve?</label>
+          <textarea id="lf-msg" name="message" required placeholder="In a few lines, describe what you want to build, integrate or fix."></textarea>
+        </div>
+
+        <div class="field-hp" aria-hidden="true">
+          <label>Don't fill: <input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="form-bottom">
+          <button type="submit" class="form-submit" id="leadSubmit">
+            <span data-i18n="landing.lead.submit">Send message</span>
+            <span class="arr">→</span>
+          </button>
+          <p class="form-foot">
+            <span data-i18n="landing.lead.privacy_1">By submitting you agree to our</span>
+            <a href="terms.html" data-i18n="landing.lead.privacy_2">Terms &amp; Privacy</a>.
+          </p>
+        </div>
+
+        <div class="form-success" id="leadSuccess" data-i18n="landing.lead.success">
+          ✓ Message received. We'll be in touch shortly.
+        </div>
+        <div class="form-error" id="leadError" data-i18n="landing.lead.error">
+          We couldn't send right now. Try again in a moment or write to inosx@inosx.com.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <div class="signature">INOSX<em>.</em></div>
+          <p data-i18n="landing.foot.tagline">A software studio. We design and build the products you ship.</p>
+        </div>
+        <div class="foot-col">
+          <h3 data-i18n="landing.foot.h_company">Company</h3>
+          <ul>
+            <li><a href="#solutions" data-i18n="landing.nav.solutions">Solutions</a></li>
+            <li><a href="produtos.html" data-i18n="landing.nav.products">Products</a></li>
+            <li><a href="#cases" data-i18n="landing.nav.cases">Cases</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3 data-i18n="landing.foot.h_legal">Legal</h3>
+          <ul>
+            <li><a href="terms.html" data-i18n="landing.foot.terms">Terms</a></li>
+            <li><a href="terms.html" data-i18n="landing.foot.privacy">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3 data-i18n="landing.foot.h_contact">Contact</h3>
+          <ul>
+            <li><a href="mailto:inosx@inosx.com">inosx@inosx.com</a></li>
+            <li><a href="#contact" data-i18n="landing.foot.cta">Start conversation →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© <span id="year"></span> INOSX. <span data-i18n="landing.foot.rights">All rights reserved.</span></span>
+        <span data-i18n="landing.foot.crafted">Conceived in São Paulo · Operating globally</span>
       </div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function(e){ e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function(e){ io.observe(e); });
+    })();
+
+    (function() {
+      var form = document.getElementById('leadForm');
+      var btn = document.getElementById('leadSubmit');
+      var ok = document.getElementById('leadSuccess');
+      var err = document.getElementById('leadError');
+      if (!form) return;
+
+      form.addEventListener('submit', function(ev) {
+        ev.preventDefault();
+        ok.classList.remove('show');
+        err.classList.remove('show');
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        btn.disabled = true;
+        var labelSpan = btn.querySelector('span:first-child');
+        var prev = labelSpan.textContent;
+        labelSpan.textContent = 'Sending…';
+
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) { ok.classList.add('show'); form.reset(); }
+          else { err.classList.add('show'); }
+        }).catch(function() { err.classList.add('show'); })
+          .finally(function() { btn.disabled = false; labelSpan.textContent = prev; });
+      });
+    })();
+
+    (function() {
+      var btns = document.querySelectorAll('.lang-switch button');
+      btns.forEach(function(b) {
+        b.addEventListener('click', function() {
+          btns.forEach(function(x){ x.classList.remove('active'); x.removeAttribute('aria-current'); });
+          b.classList.add('active');
+          b.setAttribute('aria-current', 'true');
+          var lang = b.getAttribute('data-lang');
+          if (window.i18n && typeof window.i18n.setLanguage === 'function') {
+            window.i18n.setLanguage(lang);
+          } else {
+            document.documentElement.lang = (lang === 'en') ? 'en' : 'pt-BR';
+          }
+        });
+      });
+      // Boot em EN se i18n.js suportar
+      if (window.i18n && typeof window.i18n.setLanguage === 'function') {
+        try { window.i18n.setLanguage('en'); } catch(e){}
+      }
+    })();
+  </script>
 </body>
 </html>

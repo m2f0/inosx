@@ -1,0 +1,3223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>INOSX - The Future of AI | Enterprise AI Solutions</title>
+  <meta name="description" content="INOSX delivers enterprise AI solutions including autonomous agents, conversational analytics, and AI-powered security. Transform your business with practical AI.">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
+  <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
+  <link rel="shortcut icon" href="/favicon32x32.ico">
+  
+  <!-- i18n System -->
+  <script src="/i18n/i18n.js" defer></script>
+  
+  <style>
+    :root {
+      --bg-color: #0b1020;
+      --text-color: #e6f0ff;
+      --accent-color: #7dd3fc;
+      --secondary-color: #a78bfa;
+      --gradient-primary: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #8b5cf6 100%);
+      --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #60a5fa 100%);
+      --surface-glass: rgba(148, 163, 184, 0.08);
+      --surface-glass-strong: rgba(148, 163, 184, 0.14);
+      --border-soft: rgba(125, 211, 252, 0.28);
+      --font-size-large: clamp(2rem, 6vw, 4rem);
+      --font-size-medium: clamp(1.5rem, 4vw, 2.5rem);
+      --font-size-small: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    /* Reset e configurações básicas */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(96,165,250,0.10), rgba(139,92,246,0.06) 40%, transparent 70%),
+                  radial-gradient(1000px 500px at 85% 20%, rgba(125,211,252,0.10), transparent 60%),
+                  var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Carrossel de sites */
+    .carousel-wrapper {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 1rem 0 1rem; /* padding topo */
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .carousel-title {
+      text-align: left;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* Divisória criativa */
+    .section-divider {
+      position: relative;
+      max-width: 1400px;
+      margin: 3rem auto 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .divider-line {
+      height: 2px;
+      background: linear-gradient(90deg, rgba(96,165,250,0) 0%, rgba(96,165,250,0.65) 50%, rgba(96,165,250,0) 100%);
+      box-shadow: 0 0 25px rgba(96,165,250,0.35);
+      border-radius: 999px;
+    }
+
+    .divider-glow {
+      height: 8px;
+      filter: blur(12px);
+      background: radial-gradient(ellipse at center, rgba(96,165,250,0.25), rgba(96,165,250,0));
+      margin: 6px 0;
+    }
+
+    /* Products Grid */
+    .products-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .product-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color);
+      box-shadow: 0 12px 40px rgba(96, 165, 250, 0.25);
+    }
+
+    .product-image-container {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      background: #0a0e1a;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+
+    .product-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .product-card:hover .product-overlay {
+      opacity: 1;
+    }
+
+    .product-cta {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .product-info {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .product-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin: 0;
+    }
+
+    .product-description {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .product-coming-soon {
+      cursor: default;
+    }
+
+    .product-coming-soon:hover {
+      transform: none;
+    }
+
+    .coming-soon-overlay {
+      opacity: 1;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(139, 92, 246, 0.2));
+    }
+
+    .coming-soon-badge {
+      background: rgba(96, 165, 250, 0.2);
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      backdrop-filter: blur(12px);
+    }
+
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .product-image-container {
+        height: 200px;
+      }
+    }
+
+    /* Seção AI Services */
+    .services-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    .services-title {
+      text-align: left;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .services-intro {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 3rem;
+      max-width: 1000px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(96, 165, 250, 0.55);
+      box-shadow: 0 12px 28px rgba(96, 165, 250, 0.20);
+    }
+
+    .service-title {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .service-icon {
+      font-size: 1.5rem;
+    }
+
+    .service-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-features li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    .service-features li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .service-benefits {
+      background: rgba(96, 165, 250, 0.10);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .service-benefits h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-benefits li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    .service-benefits li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    .value-proposition {
+      margin-top: 4rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.12), rgba(139, 92, 246, 0.12));
+      border-radius: 16px;
+      border: 1px solid rgba(96, 165, 250, 0.35);
+      text-align: center;
+    }
+
+    .value-proposition h3 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+    }
+
+    .value-proposition p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* NEW: Modern Service Cards Design */
+    .services-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .services-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service-card-modern {
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+      border: 1px solid rgba(96, 165, 250, 0.2);
+      border-radius: 24px;
+      padding: 0;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card-modern:hover {
+      transform: translateY(-8px);
+      border-color: rgba(96, 165, 250, 0.6);
+      box-shadow: 0 20px 60px rgba(96, 165, 250, 0.3);
+    }
+
+    .service-card-header {
+      padding: 2.5rem 2rem 2rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+
+    .service-icon-large {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.4));
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: #1a1a2e;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .service-title-modern {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .service-description-modern {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .service-card-body {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .service-section {
+      margin-bottom: 2rem;
+    }
+
+    .service-section-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-list li {
+      padding: 0.75rem 0;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .list-icon {
+      color: #60a5fa;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .benefit-item {
+      background: rgba(96, 165, 250, 0.08);
+      border: 1px solid rgba(96, 165, 250, 0.15);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover {
+      background: rgba(96, 165, 250, 0.12);
+      transform: translateX(4px);
+    }
+
+    .benefit-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .service-card-footer {
+      padding: 1.5rem 2rem 2rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-service-cta {
+      display: block;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .btn-service-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(96, 165, 250, 0.5);
+    }
+
+    .btn-service-cta-secondary {
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+      border: 2px solid rgba(96, 165, 250, 0.4);
+    }
+
+    .services-value-section {
+      margin-top: 5rem;
+      padding: 4rem 3rem;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      border-radius: 32px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .value-content {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .value-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+    }
+
+    .value-text {
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .value-cta-section {
+      padding-top: 2rem;
+    }
+
+    .value-cta-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .value-cta-subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2.5rem;
+    }
+
+    .value-cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn-value-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.25rem 3rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 30px rgba(96, 165, 250, 0.4);
+    }
+
+    .btn-value-cta-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(96, 165, 250, 0.6);
+    }
+
+    .btn-value-cta-secondary {
+      padding: 1.25rem 3rem;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+      color: #fff;
+      border: 2px solid rgba(168, 85, 247, 0.5);
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 1.15rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-value-cta-secondary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(168, 85, 247, 0.4);
+    }
+
+    .value-cta-benefits {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .service-card {
+        padding: 1.5rem;
+      }
+      
+      .services-section {
+        padding: 2rem 1rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .carousel-item { flex-basis: 60%; max-width: 600px; }
+      .carousel-image { height: 300px; }
+    }
+
+    @media (max-width: 640px) {
+      .carousel-item { flex-basis: 90%; max-width: 520px; }
+      .carousel-image { height: 240px; }
+    }
+
+    /* Efeito de partículas de fundo */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+      box-shadow: 0 0 12px rgba(96,165,250,0.6);
+      opacity: 0.7;
+    }
+
+    /* Canvas para linhas entre partículas */
+    #particle-lines-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+      50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+    }
+
+    /* Container principal */
+    .main-container {
+      position: relative;
+      z-index: 2;
+      min-height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1rem 2rem 2rem 2rem;
+      margin-top: 0;
+    }
+
+    /* Layout de duas colunas */
+    .two-column-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1400px;
+      width: 100%;
+      gap: 4rem;
+    }
+
+    /* Coluna da esquerda - Texto */
+    .left-column {
+      flex: 1;
+      text-align: left;
+      max-width: 500px;
+    }
+
+    /* Coluna da direita - Widget */
+    .right-column {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 600px;
+    }
+
+    .hero-text {
+      font-size: var(--font-size-large);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5)); }
+      to { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8)); }
+    }
+
+    .hero-subtitle {
+      font-size: var(--font-size-medium);
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    /* Logo INOSX */
+    .logo {
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 900;
+      background: var(--gradient-secondary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 2rem 0;
+      letter-spacing: -0.02em;
+      animation: logoPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes logoPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes logoMegaPulse {
+      0%, 100% { 
+        transform: scale(1) translateY(0);
+        filter: brightness(1);
+      }
+      25% { 
+        transform: scale(1.08) translateY(-5px);
+        filter: brightness(1.2);
+      }
+      50% { 
+        transform: scale(1.12) translateY(-8px);
+        filter: brightness(1.3);
+      }
+      75% { 
+        transform: scale(1.08) translateY(-5px);
+        filter: brightness(1.2);
+      }
+    }
+
+    @keyframes logoGlow {
+      0%, 100% { 
+        filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3));
+      }
+      50% { 
+        filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.6)) drop-shadow(0 0 60px rgba(168, 85, 247, 0.4));
+      }
+    }
+
+    /* Hero CTA Section */
+    .hero-cta-section {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      padding: 2rem;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(96, 165, 250, 0.2);
+    }
+
+    .cta-headline {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .cta-subheadline {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .cta-primary {
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+      min-width: 200px;
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+    }
+
+    .cta-primary:active {
+      transform: translateY(0);
+    }
+
+    .cta-secondary {
+      background: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 200px;
+    }
+
+    .cta-secondary:hover {
+      background: rgba(125, 211, 252, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .trust-indicators {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+
+    .trust-indicators span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: linear-gradient(180deg, #0f1424 0%, #1a1f35 100%);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2.5rem;
+      max-width: 600px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close {
+      color: var(--text-color);
+      float: right;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .modal-close:hover {
+      opacity: 1;
+    }
+
+    .modal-content h3 {
+      font-size: 2rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .modal-content > p {
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    /* Form Styles */
+    .lead-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-step {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-step.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .lead-form input,
+    .lead-form select,
+    .lead-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(148, 163, 184, 0.08);
+      border: 1px solid var(--border-soft);
+      border-radius: 10px;
+      color: var(--text-color);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .lead-form input:focus,
+    .lead-form select:focus,
+    .lead-form textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      background: rgba(125, 211, 252, 0.1);
+      box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.1);
+    }
+
+    .lead-form input::placeholder,
+    .lead-form textarea::placeholder {
+      color: var(--text-color);
+      opacity: 0.5;
+    }
+
+    /* Fix select dropdown text visibility */
+    .lead-form select option {
+      background: #1a1f35;
+      color: #ffffff;
+      padding: 10px;
+    }
+    
+    /* Better visibility for select in all states */
+    .lead-form select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237dd3fc' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    /* Labels visibility */
+    .lead-form label {
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .lead-form label {
+      color: var(--text-color);
+      font-weight: 600;
+      margin-bottom: -0.5rem;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .btn-back {
+      flex: 1;
+      background: transparent;
+      color: var(--accent-color);
+      border: 1px solid var(--border-soft);
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: rgba(125, 211, 252, 0.1);
+      border-color: var(--accent-color);
+    }
+
+    .btn-submit,
+    .btn-next {
+      flex: 2;
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .btn-submit:hover,
+    .btn-next:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+    }
+
+    .btn-submit:disabled,
+    .btn-next:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .privacy-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-color);
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+
+    .privacy-note a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .privacy-note a:hover {
+      text-decoration: underline;
+    }
+
+    .progress-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .progress-step {
+      flex: 1;
+      height: 4px;
+      background: rgba(148, 163, 184, 0.2);
+      border-radius: 2px;
+      transition: background 0.3s ease;
+    }
+
+    .progress-step.completed {
+      background: var(--accent-color);
+    }
+
+    /* Success Message */
+    .success-message {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .success-message h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .success-message p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .success-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Language Selector */
+    .language-selector {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 8px 12px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2);
+    }
+
+    /* Top Bar Menu */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      background: linear-gradient(135deg, rgba(11, 16, 32, 0.95), rgba(26, 31, 53, 0.95));
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .topbar-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.8rem 1rem;
+      padding-right: 180px; /* Space for language selector */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+
+    .topbar-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .topbar-nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      opacity: 0.9;
+      transition: all 0.2s ease;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .topbar-nav a:hover {
+      opacity: 1;
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    .topbar-nav a.active {
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+    }
+
+    /* Logo Centered Below Menu */
+    .logo-hero-section {
+      margin-top: 70px;
+      padding: 0.5rem 1rem 0 1rem;
+      text-align: center;
+      margin-bottom: -2rem;
+    }
+
+    .logo-hero-section .brand {
+      font-size: clamp(6rem, 15vw, 10rem);
+      font-weight: 900;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      margin-bottom: 0;
+      animation: logoMegaPulse 4s ease-in-out infinite, logoGlow 3s ease-in-out infinite;
+      text-shadow: 0 0 30px rgba(96, 165, 250, 0.5);
+    }
+
+    .language-selector select {
+      background: transparent;
+      border: none;
+      color: var(--text-color);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .language-selector select:hover {
+      background: rgba(125, 211, 252, 0.1);
+    }
+
+    .language-selector select option {
+      background: #0f1424;
+      color: var(--text-color);
+      padding: 8px;
+    }
+
+    .lang-icon {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .language-selector {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+      }
+    }
+
+
+    /* Social Proof Bar */
+    .social-proof-bar {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: -2rem auto 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .social-proof-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      background: var(--surface-glass-strong);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(96, 165, 250, 0.15);
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-4px);
+      background: rgba(96, 165, 250, 0.1);
+    }
+
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+
+    /* Industries We Serve Section */
+    .industries-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .industries-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .industries-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .industries-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .industry-card {
+      background: var(--surface-glass-strong);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .industry-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color);
+      box-shadow: 0 10px 40px rgba(96, 165, 250, 0.2);
+    }
+
+    .industry-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3));
+    }
+
+    .industry-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .industry-solutions {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .industry-solutions li {
+      padding: 0.75rem 0;
+      padding-left: 1.75rem;
+      position: relative;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .industry-solutions li:last-child {
+      border-bottom: none;
+    }
+
+    .industry-solutions li::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+      font-size: 0.9rem;
+    }
+
+    .industries-cta {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .industries-cta-text {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .btn-industries-cta {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+    }
+
+    .btn-industries-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(96, 165, 250, 0.5);
+      background: linear-gradient(135deg, #7dd3fc 0%, #c084fc 100%);
+    }
+
+    @media (max-width: 768px) {
+      .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .industry-card {
+        padding: 1.5rem;
+      }
+
+      .industries-cta {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .testimonials-title {
+      text-align: center;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2.5rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(96, 165, 250, 0.55);
+      box-shadow: 0 12px 28px rgba(96, 165, 250, 0.20);
+    }
+
+    .testimonial-stars {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-color);
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gradient-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .author-info {
+      flex: 1;
+    }
+
+    .author-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--accent-color);
+      margin-bottom: 0.2rem;
+    }
+
+    .author-title {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      line-height: 1.4;
+    }
+
+    .testimonial-link {
+      display: inline-block;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: opacity 0.2s;
+    }
+
+    .testimonial-link:hover {
+      opacity: 0.8;
+    }
+
+    /* Sticky CTA Bar */
+    .sticky-cta-bar {
+      position: fixed;
+      top: -100px;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      background: linear-gradient(135deg, #7dd3fc 0%, #60a5fa 45%, #8b5cf6 100%);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: top 0.3s ease;
+    }
+
+    .sticky-cta-bar.visible {
+      top: 0;
+    }
+
+    .sticky-cta-text {
+      font-weight: 600;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .sticky-cta-button {
+      background: white;
+      color: #0b1020;
+      border: none;
+      padding: 10px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .sticky-cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Scarcity Badge */
+    .scarcity-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(251, 146, 60, 0.2), rgba(239, 68, 68, 0.2));
+      border: 1px solid rgba(251, 146, 60, 0.4);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fbbf24;
+      margin-top: 0.5rem;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fbbf24;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
+
+    /* Products teaser (compact homepage) */
+    .products-teaser-section {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      margin: 2rem auto 3rem auto;
+      padding: 0 1rem;
+    }
+    .products-teaser-inner {
+      background: var(--surface-glass);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      backdrop-filter: blur(12px);
+    }
+    .products-teaser-title {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .products-teaser-subtitle {
+      text-align: center;
+      opacity: 0.9;
+      max-width: 42rem;
+      margin: 0 auto 1.75rem;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+    .products-teaser-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .products-teaser-card {
+      background: rgba(148, 163, 184, 0.06);
+      border: 1px solid rgba(125, 211, 252, 0.2);
+      border-radius: 14px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      min-height: 140px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .products-teaser-card:hover {
+      border-color: rgba(125, 211, 252, 0.45);
+      transform: translateY(-2px);
+    }
+    .products-teaser-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin: 0;
+    }
+    .products-teaser-card p {
+      font-size: 0.9rem;
+      opacity: 0.88;
+      line-height: 1.45;
+      margin: 0;
+      flex: 1;
+    }
+    .products-teaser-cta {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #93c5fd;
+      text-decoration: none;
+      margin-top: auto;
+    }
+    .products-teaser-cta:hover {
+      text-decoration: underline;
+    }
+    .products-teaser-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .products-teaser-btn-primary {
+      padding: 0.85rem 1.5rem;
+      background: var(--gradient-primary);
+      color: #0b1020;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .products-teaser-btn-primary:hover {
+      filter: brightness(1.08);
+    }
+    .products-teaser-btn-secondary {
+      padding: 0.85rem 1.5rem;
+      background: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .products-teaser-btn-secondary:hover {
+      background: rgba(125, 211, 252, 0.1);
+    }
+    @media (max-width: 600px) {
+      .products-teaser-actions {
+        flex-direction: column;
+      }
+      .products-teaser-btn-primary,
+      .products-teaser-btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .social-proof-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1.5rem;
+      }
+
+      .stat-value {
+        font-size: 2rem;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-cta-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+      }
+
+      .sticky-cta-text {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      
+      .main-container {
+        padding: 1rem;
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding-top: 2rem;
+      }
+      
+      .two-column-layout {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+        max-width: 100%;
+        min-height: 100vh;
+        width: 100%;
+      }
+      
+      .left-column {
+        text-align: center;
+        max-width: 100%;
+        width: 100%;
+        order: 1;
+        flex-shrink: 0;
+        flex: none;
+      }
+      
+      .right-column {
+        max-width: 100%;
+        width: 100%;
+        order: 2;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+      }
+      
+      .widget-container {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        position: relative;
+      }
+      
+      .hero-text {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+        margin-bottom: 0.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        margin-bottom: 1rem;
+      }
+      
+      .logo {
+        font-size: clamp(3rem, 12vw, 5rem);
+        margin: 1rem 0;
+      }
+      
+      elevenlabs-convai {
+        max-width: 100%;
+        width: 100%;
+        height: 500px;
+        min-height: 500px;
+        border-radius: 15px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-container {
+        padding: 0.5rem;
+        padding-top: 1rem;
+      }
+      
+      .two-column-layout {
+        gap: 2rem;
+        min-height: 100vh;
+        flex-direction: column !important;
+        width: 100% !important;
+      }
+      
+      .left-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+      }
+      
+      .right-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 450px;
+      }
+      
+      .hero-text {
+        font-size: clamp(1.5rem, 7vw, 2.5rem);
+      }
+      
+      .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.8rem);
+      }
+      
+      .logo {
+        font-size: clamp(2.5rem, 15vw, 4rem);
+        margin: 0.5rem 0;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .two-column-layout {
+        flex-direction: column !important;
+        width: 100% !important;
+      }
+      
+      .left-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+      }
+      
+      .right-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 400px;
+      }
+      
+      .hero-text {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+      }
+      
+      .hero-subtitle {
+        font-size: clamp(0.9rem, 3.5vw, 1.5rem);
+      }
+      
+      .logo {
+        font-size: clamp(2rem, 12vw, 3rem);
+      }
+    }
+
+    /* Forçar coluna única em mobile portrait */
+    @media (max-width: 768px) and (orientation: portrait) {
+      .two-column-layout {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 2rem !important;
+      }
+      
+      .left-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        order: 1 !important;
+      }
+      
+      .right-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        order: 2 !important;
+      }
+      
+    }
+
+    /* Animações de entrada */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .fade-in:nth-child(2) { animation-delay: 0.2s; }
+    .fade-in:nth-child(3) { animation-delay: 0.4s; }
+    .fade-in:nth-child(4) { animation-delay: 0.6s; }
+    .fade-in:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar Menu -->
+  <div class="topbar">
+    <div class="topbar-container">
+      <nav class="topbar-nav">
+        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+        <a href="produtos.html" data-i18n="nav.products">Products</a>
+        <a href="#services" onclick="document.querySelector('.services-section').scrollIntoView({behavior:'smooth'}); return false;" data-i18n="nav.services">Services</a>
+        <a href="roi-calculator.html" data-i18n="nav.roi_calculator">ROI Calculator</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Logo Centered Below Menu -->
+  <div class="logo-hero-section">
+    <div class="brand" data-i18n="hero.logo">INOSX</div>
+  </div>
+
+  <!-- Language Selector -->
+  <div class="language-selector">
+    <span class="lang-icon">🌍</span>
+    <select id="languageSelector">
+      <option value="en">🇺🇸 English</option>
+      <option value="pt">🇧🇷 Português</option>
+      <option value="es">🇪🇸 Español</option>
+    </select>
+  </div>
+
+  <!-- Sticky CTA Bar - REMOVED (was overlapping top menu) -->
+
+  <!-- Partículas de fundo -->
+  <div class="particles" id="particles"></div>
+
+  
+
+  <!-- Container principal -->
+  <div class="main-container">
+    <!-- Layout de duas colunas -->
+    <div class="two-column-layout">
+      <!-- Coluna da esquerda - Texto -->
+      <div class="left-column">
+        <div class="hero-text fade-in" data-i18n="hero.headline1">
+          Your Team Wastes $10,000/Month on Manual Work
+        </div>
+        <div class="hero-subtitle fade-in" data-i18n="hero.headline2">
+          INOSX AI Agents Cut Costs by 40% and Automate Repetitive Tasks
+        </div>
+        <div class="hero-subtitle fade-in" style="font-size: clamp(0.9rem, 2vw, 1.1rem); opacity: 0.95; margin-top: 1rem;" data-i18n="hero.headline3">
+          ✓ Trusted by 500+ companies  ✓ $47M saved  ✓ 4.9/5 rating
+        </div>
+      </div>
+      
+      <!-- Coluna da direita - CTA Section -->
+      <div class="right-column">
+        <div class="hero-cta-section fade-in">
+          <h2 class="cta-headline" data-i18n="hero.cta_headline">See How Much You Can Save with AI</h2>
+          <p class="cta-subheadline" data-i18n="hero.cta_subheadline">
+            Book a free 30-minute consultation and get:<br>
+            ✓ Custom AI roadmap for your business<br>
+            ✓ ROI analysis showing potential savings<br>
+            ✓ No-obligation strategy session
+          </p>
+          
+          <div class="cta-buttons">
+            <button class="cta-primary" onclick="window.location.href='roi-calculator.html'" data-location="hero" data-i18n="hero.btn_primary">
+              Calculate Your Savings →
+            </button>
+          </div>
+          
+          <div class="scarcity-badge">
+            <span class="pulse-dot"></span>
+            <span data-i18n="hero.scarcity">⏰ Only 5 consultation slots left this week</span>
+          </div>
+          
+          <div class="trust-indicators">
+            <span data-i18n="hero.trust_1">✓ No Credit Card Required</span>
+            <span data-i18n="hero.trust_2">✓ 30-Min Call</span>
+            <span data-i18n="hero.trust_3">✓ Free ROI Report</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Proof Bar -->
+  <div class="social-proof-bar fade-in">
+    <div class="social-proof-container">
+      <div class="stat-item">
+        <div class="stat-value" data-i18n="social_proof.stat1_value">500+</div>
+        <div class="stat-label" data-i18n="social_proof.stat1_label">Companies Trust INOSX</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" data-i18n="social_proof.stat2_value">$47M</div>
+        <div class="stat-label" data-i18n="social_proof.stat2_label">Saved by Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" data-i18n="social_proof.stat3_value">2.4M</div>
+        <div class="stat-label" data-i18n="social_proof.stat3_label">Hours Automated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" data-i18n="social_proof.stat4_value">4.9/5</div>
+        <div class="stat-label" data-i18n="social_proof.stat4_label">Client Rating ⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divisória criativa entre herói e Products -->
+  <div class="section-divider" aria-hidden="true">
+    <div class="divider-glow"></div>
+    <div class="divider-line"></div>
+    <div class="divider-glow"></div>
+  </div>
+
+  <!-- Products teaser: compact links to full product page -->
+  <section id="products" class="products-teaser-section" aria-labelledby="products-teaser-title">
+    <div class="products-teaser-inner">
+      <h2 id="products-teaser-title" class="products-teaser-title" data-i18n="products_teaser.title">Produtos INOSX</h2>
+      <p class="products-teaser-subtitle" data-i18n="products_teaser.subtitle">IA conversacional, dados, bem-estar e ferramentas para equipas — explore o portfólio e fale connosco para um projeto à sua medida.</p>
+      <div class="products-teaser-grid">
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.messiax">Messiax.ai</h3>
+          <p data-i18n="products.messiax_desc">Companheira espiritual com IA.</p>
+          <a href="produtos.html#messiax" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.surveyflow">SurveyFlow.ai</h3>
+          <p data-i18n="products.surveyflow_desc">Inteligência de pesquisas com IA.</p>
+          <a href="produtos.html#surveyflow" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.psychox">PsychoX.ai</h3>
+          <p data-i18n="products.psychox_desc">Suporte psicológico com IA.</p>
+          <a href="produtos.html#psychox" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.datagpt">DataGPT</h3>
+          <p data-i18n="products.datagpt_desc">IA para análise de dados empresariais.</p>
+          <a href="produtos.html#datagpt" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.ccoinx">Ccoinx.ai</h3>
+          <p data-i18n="products.ccoinx_desc">Conversor de moedas com câmera.</p>
+          <a href="produtos.html#ccoinx" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.tranquilopa">Tranquilopa</h3>
+          <p data-i18n="products.tranquilopa_desc">Plataforma de confiança no Paraguai.</p>
+          <a href="produtos.html#tranquilopa" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+        <article class="products-teaser-card">
+          <h3 data-i18n="products.aiteam">AITEAM-X</h3>
+          <p data-i18n="products.aiteam_desc">Dashboard open source para agentes de IA.</p>
+          <a href="produtos.html#aiteam" class="products-teaser-cta" data-i18n="products_teaser.learn_more">Saber mais →</a>
+        </article>
+      </div>
+      <div class="products-teaser-actions">
+        <a href="produtos.html" class="products-teaser-btn-primary" data-i18n="products_teaser.cta_all">Ver todos os produtos →</a>
+        <button type="button" class="products-teaser-btn-secondary" onclick="openContactModal()" data-i18n="products_teaser.cta_contact">Falar connosco →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries We Serve Section -->
+  <div class="industries-section">
+    <div class="industries-header fade-in">
+      <h2 class="industries-title" data-i18n="industries.title">Industries We Transform with AI</h2>
+      <p class="industries-subtitle" data-i18n="industries.subtitle">
+        Custom AI solutions tailored for your industry's unique challenges
+      </p>
+    </div>
+
+    <div class="industries-grid">
+      <!-- Contact Centers & Customer Service -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">📞</div>
+        <h3 class="industry-name" data-i18n="industries.contact_centers.title">Contact Centers & Customer Service</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.contact_centers.solution_1">Agent Assist & Copilot</li>
+          <li data-i18n="industries.contact_centers.solution_2">Contact Center Analytics</li>
+          <li data-i18n="industries.contact_centers.solution_3">Voice AI Agents</li>
+          <li data-i18n="industries.contact_centers.solution_4">QA/Compliance Automation</li>
+        </ul>
+      </div>
+
+      <!-- Sales & Revenue Teams -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">📈</div>
+        <h3 class="industry-name" data-i18n="industries.sales.title">Sales & Revenue Teams</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.sales.solution_1">Sales Enablement & Coaching</li>
+          <li data-i18n="industries.sales.solution_2">Meeting Transcription & Analytics</li>
+          <li data-i18n="industries.sales.solution_3">Deal Intelligence</li>
+          <li data-i18n="industries.sales.solution_4">Performance Optimization</li>
+        </ul>
+      </div>
+
+      <!-- Enterprise Communications -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">💬</div>
+        <h3 class="industry-name" data-i18n="industries.communications.title">Enterprise Communications</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.communications.solution_1">Meeting Intelligence Platforms</li>
+          <li data-i18n="industries.communications.solution_2">Collaboration Analytics</li>
+          <li data-i18n="industries.communications.solution_3">Content Moderation</li>
+          <li data-i18n="industries.communications.solution_4">Communication Insights</li>
+        </ul>
+      </div>
+
+      <!-- Smart Technology & IoT -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🏠</div>
+        <h3 class="industry-name" data-i18n="industries.iot.title">Smart Technology & IoT</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.iot.solution_1">Smart Home Devices</li>
+          <li data-i18n="industries.iot.solution_2">Robotics & Automation</li>
+          <li data-i18n="industries.iot.solution_3">IoT Intelligence</li>
+          <li data-i18n="industries.iot.solution_4">Predictive Maintenance</li>
+        </ul>
+      </div>
+
+      <!-- Compliance & Quality Assurance -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">✅</div>
+        <h3 class="industry-name" data-i18n="industries.compliance.title">Compliance & Quality Assurance</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.compliance.solution_1">Automated QA Systems</li>
+          <li data-i18n="industries.compliance.solution_2">Compliance Monitoring</li>
+          <li data-i18n="industries.compliance.solution_3">Risk Detection</li>
+          <li data-i18n="industries.compliance.solution_4">Audit Automation</li>
+        </ul>
+      </div>
+
+      <!-- Content & Media -->
+      <div class="industry-card fade-in">
+        <div class="industry-icon">🎬</div>
+        <h3 class="industry-name" data-i18n="industries.content.title">Content & Media Platforms</h3>
+        <ul class="industry-solutions">
+          <li data-i18n="industries.content.solution_1">Content Moderation</li>
+          <li data-i18n="industries.content.solution_2">Media Analytics</li>
+          <li data-i18n="industries.content.solution_3">Sentiment Analysis</li>
+          <li data-i18n="industries.content.solution_4">Content Intelligence</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="industries-cta fade-in">
+      <p class="industries-cta-text" data-i18n="industries.cta_text">
+        Don't see your industry? We create custom AI solutions for any business challenge.
+      </p>
+      <a href="#contact" class="btn-industries-cta" data-i18n="industries.cta_button">
+        Discuss Your Project →
+      </a>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials-section">
+    <h2 class="testimonials-title fade-in" data-i18n="testimonials.title">What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars" data-i18n="testimonials.testimonial_1_rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text" data-i18n="testimonials.testimonial_1_quote">
+          INOSX agents cut our processing time by 60% in the first month. The ROI was immediate and continues to grow.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SC</div>
+          <div class="author-info">
+            <div class="author-name" data-i18n="testimonials.testimonial_1_author">Sarah Chen</div>
+            <div class="author-title" data-i18n="testimonials.testimonial_1_role">Operations Director, TechCorp</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars" data-i18n="testimonials.testimonial_2_rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text" data-i18n="testimonials.testimonial_2_quote">
+          The knowledge management solution transformed how our team accesses information. What used to take hours now takes seconds.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div class="author-info">
+            <div class="author-name" data-i18n="testimonials.testimonial_2_author">Michael Rodriguez</div>
+            <div class="author-title" data-i18n="testimonials.testimonial_2_role">CTO, DataFlow Inc</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-stars" data-i18n="testimonials.testimonial_3_rating">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-text" data-i18n="testimonials.testimonial_3_quote">
+          Their AI security platform detected threats we didn't even know existed. Peace of mind with measurable results.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JK</div>
+          <div class="author-info">
+            <div class="author-name" data-i18n="testimonials.testimonial_3_author">Jennifer Kim</div>
+            <div class="author-title" data-i18n="testimonials.testimonial_3_role">CISO, SecureBank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider below AI Products -->
+  <div class="section-divider" aria-hidden="true">
+    <div class="divider-glow"></div>
+    <div class="divider-line"></div>
+    <div class="divider-glow"></div>
+  </div>
+
+  <!-- AI Services Section -->
+  <div class="services-section">
+    <div class="services-header fade-in">
+      <h2 class="services-title" data-i18n="services.title">AI Services</h2>
+      <p class="services-subtitle" data-i18n="services.intro">
+        INOSX builds practical, production-grade AI solutions that transform data, processes, and systems into measurable outcomes. Our portfolio blends automation, analytics, security, and multi-agent orchestration to drive efficiency, innovation, and competitiveness.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- INOSX AI Agents -->
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🤖</div>
+          <h3 class="service-title-modern" data-i18n="services.ai_agents.title">INOSX AI Agents</h3>
+          <p class="service-description-modern" data-i18n="services.ai_agents.description">
+            Autonomous agents that eliminate repetitive work and connect platforms end‑to‑end.
+          </p>
+        </div>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.ai_agents.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.ai_agents.capability_1">Auto-integration with ERPs, CRMs, databases, and APIs</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.ai_agents.capability_2">End-to-end process execution with error reduction</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.ai_agents.capability_3">Real-time insights and action generation</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.ai_agents.capability_4">Continuous learning and adaptation to business needs</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.ai_agents.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">💰</span>
+                <span data-i18n="services.ai_agents.benefit_1">Lower operational costs</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">⚡</span>
+                <span data-i18n="services.ai_agents.benefit_2">Higher efficiency</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🎯</span>
+                <span data-i18n="services.ai_agents.benefit_3">Faster decisions</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">📈</span>
+                <span data-i18n="services.ai_agents.benefit_4">Scalable growth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in INOSX AI Agents" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
+        </div>
+      </div>
+
+      <!-- INOSX CyberAI Security -->
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🔒</div>
+          <h3 class="service-title-modern" data-i18n="services.security.title">INOSX CyberAI Security</h3>
+          <p class="service-description-modern" data-i18n="services.security.description">
+            AI-powered cybersecurity for modern infrastructures.
+          </p>
+        </div>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.security.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.security.capability_1">Continuous monitoring across systems and networks</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.security.capability_2">Anomaly, fraud, and intrusion detection</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.security.capability_3">Automated and intelligent incident response</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.security.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">🛡️</span>
+                <span data-i18n="services.security.benefit_1">Asset protection</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">⚠️</span>
+                <span data-i18n="services.security.benefit_2">Risk reduction</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <span data-i18n="services.security.benefit_3">Compliance assured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in CyberAI Security" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
+        </div>
+      </div>
+
+      <!-- INOSX Knowledge Agents -->
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">📚</div>
+          <h3 class="service-title-modern" data-i18n="services.knowledge.title">INOSX Knowledge Agents</h3>
+          <p class="service-description-modern" data-i18n="services.knowledge.description">
+            Document- and knowledge-centric agents for internal repositories.
+          </p>
+        </div>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.knowledge.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.knowledge.capability_1">Automatic indexing and reading of corporate documents</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.knowledge.capability_2">Contextual, semantic search over knowledge bases</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.knowledge.capability_3">Integrations with SharePoint, Confluence, Google Drive, and more</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.knowledge.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">⏱️</span>
+                <span data-i18n="services.knowledge.benefit_1">Time saved</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🚀</span>
+                <span data-i18n="services.knowledge.benefit_2">Higher productivity</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🧠</span>
+                <span data-i18n="services.knowledge.benefit_3">Centralized knowledge</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in Knowledge Agents" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
+        </div>
+      </div>
+
+      <!-- INOSX AI Orchestration -->
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🎯</div>
+          <h3 class="service-title-modern" data-i18n="services.orchestration.title">INOSX AI Orchestration</h3>
+          <p class="service-description-modern" data-i18n="services.orchestration.description">
+            Orchestrates complex workflows across multiple AI agents.
+          </p>
+        </div>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.orchestration.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.orchestration.capability_1">Coordinates agents across corporate processes</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.orchestration.capability_2">Integrates ERP, CRM, customer support, and operations</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.orchestration.capability_3">Full governance and traceability of executions</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.orchestration.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">🤝</span>
+                <span data-i18n="services.orchestration.benefit_1">Collaborative AI</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🔍</span>
+                <span data-i18n="services.orchestration.benefit_2">Full transparency</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🔄</span>
+                <span data-i18n="services.orchestration.benefit_3">Business agility</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in AI Orchestration" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
+        </div>
+      </div>
+
+      <!-- INOSX Vision Robotics -->
+      <div class="service-card-modern fade-in">
+        <div class="service-card-header">
+          <div class="service-icon-large">🤖</div>
+          <h3 class="service-title-modern" data-i18n="services.vision.title">INOSX Vision Robotics</h3>
+          <p class="service-description-modern" data-i18n="services.vision.description">
+            Advanced robotic solutions powered by 3D vision and visual language models for autonomous operations.
+          </p>
+        </div>
+        
+        <div class="service-card-body">
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.vision.capabilities_title">Key Capabilities</h4>
+            <ul class="service-list">
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.vision.capability_1">3D spatial perception and object recognition</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.vision.capability_2">Visual language model integration for natural interaction</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.vision.capability_3">Autonomous navigation and manipulation systems</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.vision.capability_4">Real-time decision making with computer vision</span>
+              </li>
+              <li>
+                <span class="list-icon">✓</span>
+                <span data-i18n="services.vision.capability_5">Multi-sensor fusion for enhanced accuracy</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-section">
+            <h4 class="service-section-title" data-i18n="services.vision.benefits_title">Business Benefits</h4>
+            <div class="benefits-grid">
+              <div class="benefit-item">
+                <span class="benefit-icon">🦾</span>
+                <span data-i18n="services.vision.benefit_1">Full autonomy</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">👤</span>
+                <span data-i18n="services.vision.benefit_2">Less intervention</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🎯</span>
+                <span data-i18n="services.vision.benefit_3">High precision</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">🏭</span>
+                <span data-i18n="services.vision.benefit_4">Industrial scale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card-footer">
+          <a href="mailto:inosx@inosx.com?subject=Interest in Vision Robotics" class="btn-service-cta" data-i18n="services.cta_button">
+            Get Started →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Value Proposition & Strong CTA -->
+    <div class="services-value-section fade-in">
+      <div class="value-content">
+        <h3 class="value-title" data-i18n="services.value_title">INOSX Unified Value Proposition</h3>
+        <p class="value-text" data-i18n="services.value_text">
+          With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business.
+        </p>
+      </div>
+      
+      <div class="value-cta-section">
+        <h3 class="value-cta-title" data-i18n="services.cta_title">Ready to Transform Your Business with AI?</h3>
+        <p class="value-cta-subtitle" data-i18n="services.cta_subtitle">
+          Let's discuss how INOSX can build a custom AI solution for your specific needs.
+        </p>
+        <div class="value-cta-buttons">
+          <a href="mailto:inosx@inosx.com?subject=Custom AI Solution Inquiry&body=Hi INOSX team,%0D%0A%0D%0AI'm interested in learning more about your AI solutions.%0D%0A%0D%0ACompany:%0D%0AIndustry:%0D%0ACurrent Challenge:%0D%0A%0D%0APlease contact me to discuss further." class="btn-value-cta-primary" data-i18n="services.cta_email">
+            📧 Email Us: inosx@inosx.com
+          </a>
+          <button class="btn-value-cta-secondary" onclick="openContactModal()" data-i18n="services.cta_schedule">
+            Schedule Free Consultation
+          </button>
+        </div>
+        <p class="value-cta-benefits" data-i18n="services.cta_benefits">
+          ✓ Free 30-min consultation  ✓ Custom AI roadmap  ✓ ROI analysis  ✓ No commitment required
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeContactModal()">&times;</span>
+      
+      <div id="formContainer">
+        <h3 data-i18n="modal.title">Get Your Free AI Consultation</h3>
+        <p data-i18n="modal.subtitle">Tell us about your business and we'll show you how AI can help.</p>
+        
+        <div class="progress-bar">
+          <div class="progress-step completed" id="progress-1"></div>
+          <div class="progress-step" id="progress-2"></div>
+        </div>
+        
+        <form id="leadForm" class="lead-form" onsubmit="handleFormSubmit(event)">
+          <!-- Step 1: Basic Info -->
+          <div class="form-step active" data-step="1">
+            <input type="text" name="name" id="name" data-i18n-placeholder="modal.step1.name_placeholder" placeholder="Your Name *" required />
+            <input type="email" name="email" id="email" data-i18n-placeholder="modal.step1.email_placeholder" placeholder="Work Email *" required />
+            
+            <div style="text-align: center; font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;" data-i18n="modal.step1.benefits">
+              ✓ No credit card  ✓ 30-min call  ✓ Free ROI analysis
+            </div>
+            
+            <button type="button" class="btn-next" onclick="nextStep(2)" data-i18n="modal.step1.btn_continue">
+              Continue →
+            </button>
+          </div>
+          
+          <!-- Step 2: Needs -->
+          <div class="form-step" data-step="2">
+            <input type="tel" name="phone" id="phone" data-i18n-placeholder="modal.step1.phone_placeholder" placeholder="Phone Number (optional)" />
+            <input type="text" name="company" id="company" data-i18n-placeholder="modal.step1.company_placeholder" placeholder="Company Name *" required />
+            
+            <label data-i18n="modal.step2.interest_label">What brings you to INOSX?</label>
+            <select name="interest" id="interest" required data-i18n-options="modal.step2">
+              <option value="" data-i18n="modal.step2.interest_placeholder">Select primary interest...</option>
+              <option value="automate" data-i18n="modal.step2.interest_automate">Automate business processes</option>
+              <option value="analytics" data-i18n="modal.step2.interest_analytics">Data analytics & insights</option>
+              <option value="security" data-i18n="modal.step2.interest_security">AI-powered security</option>
+              <option value="knowledge" data-i18n="modal.step2.interest_knowledge">Knowledge management</option>
+              <option value="robotics" data-i18n="modal.step2.interest_robotics">Industrial robotics</option>
+              <option value="other" data-i18n="modal.step2.interest_other">Other / Not sure</option>
+            </select>
+            
+            <label data-i18n="modal.step2.size_label">Company size</label>
+            <select name="company_size" id="company_size" data-i18n-options="modal.step2">
+              <option value="" data-i18n="modal.step2.size_placeholder">Select...</option>
+              <option value="1-10" data-i18n="modal.step2.size_1_10">1-10 employees</option>
+              <option value="11-50" data-i18n="modal.step2.size_11_50">11-50 employees</option>
+              <option value="51-200" data-i18n="modal.step2.size_51_200">51-200 employees</option>
+              <option value="201-1000" data-i18n="modal.step2.size_201_1000">201-1,000 employees</option>
+              <option value="1000+" data-i18n="modal.step2.size_1000">1,000+ employees</option>
+            </select>
+            
+            <label data-i18n="modal.step2.message_label">Tell us about your AI goals (optional)</label>
+            <textarea name="message" id="message" data-i18n-placeholder="modal.step2.message_placeholder" placeholder="E.g., We want to automate our customer support process..." rows="4"></textarea>
+            
+            <div class="form-buttons">
+              <button type="button" class="btn-back" onclick="prevStep(1)" data-i18n="modal.step2.btn_back">
+                ← Back
+              </button>
+              <button type="submit" class="btn-submit" id="submitBtn" data-i18n="modal.step2.btn_submit">
+                Get Free Consultation
+              </button>
+            </div>
+          </div>
+        </form>
+        
+        <p class="privacy-note">
+          <span data-i18n="modal.privacy">We respect your privacy. See our</span> <a href="terms.html#privacy" target="_blank" data-i18n="modal.privacy_link">Privacy Policy</a>.
+        </p>
+      </div>
+      
+      <!-- Success Message (hidden by default) -->
+      <div id="successMessage" class="success-message" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h3 data-i18n="modal.success_title">Thank You!</h3>
+        <p data-i18n="modal.success_text1">
+          We've received your request and one of our AI experts will contact you within 24 hours.
+        </p>
+        <p data-i18n="modal.success_text2">
+          Check your email for confirmation and next steps.
+        </p>
+        <button class="cta-primary" onclick="closeContactModal()" data-i18n="modal.btn_close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Modal and Form Functions
+    function openContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Track event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'open_contact_form', {
+          'event_category': 'engagement',
+          'event_label': 'contact_modal'
+        });
+      }
+    }
+
+    function closeContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      
+      // Reset form
+      document.getElementById('leadForm').reset();
+      showStep(1);
+      document.getElementById('formContainer').style.display = 'block';
+      document.getElementById('successMessage').style.display = 'none';
+    }
+
+    function nextStep(step) {
+      // Validate current step
+      const currentStep = document.querySelector('.form-step.active');
+      const inputs = currentStep.querySelectorAll('input[required], select[required]');
+      let valid = true;
+      
+      inputs.forEach(input => {
+        if (!input.value || (input.type === 'email' && !isValidEmail(input.value))) {
+          valid = false;
+          input.style.borderColor = '#ff6b6b';
+        } else {
+          input.style.borderColor = '';
+        }
+      });
+      
+      if (!valid) return;
+      
+      showStep(step);
+      
+      // Track event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'form_step_' + step, {
+          'event_category': 'form_progress'
+        });
+      }
+    }
+
+    function prevStep(step) {
+      showStep(step);
+    }
+
+    function showStep(step) {
+      // Hide all steps
+      document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+      
+      // Show target step
+      document.querySelector(`.form-step[data-step="${step}"]`).classList.add('active');
+      
+      // Update progress bar
+      document.getElementById('progress-1').classList.toggle('completed', step >= 1);
+      document.getElementById('progress-2').classList.toggle('completed', step >= 2);
+    }
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    async function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+      
+      // Add tracking data
+      data.utm_source = new URLSearchParams(window.location.search).get('utm_source') || 'direct';
+      data.utm_campaign = new URLSearchParams(window.location.search).get('utm_campaign') || '';
+      data.page_url = window.location.href;
+      data.referrer = document.referrer;
+      data.timestamp = new Date().toISOString();
+      
+      try {
+        // TODO: Replace with actual endpoint
+        // For now, log to console and show success
+        console.log('Form submission:', data);
+        
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        // Track conversion
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'generate_lead', {
+            'event_category': 'conversion',
+            'event_label': 'contact_form',
+            'value': 1
+          });
+        }
+        
+        // Show success message
+        document.getElementById('formContainer').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Optional: Send to actual backend
+        // const response = await fetch('/api/contact', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify(data)
+        // });
+        
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('Something went wrong. Please try again or email us at contact@inosx.com');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Get Free Consultation';
+      }
+    }
+
+    // Close modal on outside click
+    window.onclick = function(event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target == modal) {
+        closeContactModal();
+      }
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeContactModal();
+      }
+    });
+
+    // Criar partículas de fundo
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      // Canvas para linhas
+      let canvas = document.getElementById('particle-lines-canvas');
+      if (!canvas) {
+        canvas = document.createElement('canvas');
+        canvas.id = 'particle-lines-canvas';
+        particlesContainer.appendChild(canvas);
+      }
+      const particleCount = 50;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        particlesContainer.appendChild(particle);
+      }
+
+      initParticleLines();
+    }
+
+    // Carrossel: navegação e autoplay
+    // Desenhar linhas entre partículas próximas usando canvas
+    function initParticleLines() {
+      const canvas = document.getElementById('particle-lines-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      function updateCanvasSize() {
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.floor(window.innerWidth * dpr);
+        canvas.height = Math.floor(window.innerHeight * dpr);
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      updateCanvasSize();
+
+      const maxDistance = 140; // distância para ligar pontos
+
+      function getParticleCenters() {
+        const nodes = document.querySelectorAll('.particle');
+        const centers = [];
+        nodes.forEach(n => {
+          const r = n.getBoundingClientRect();
+          centers.push({ x: r.left + r.width / 2, y: r.top + r.height / 2 });
+        });
+        return centers;
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const centers = getParticleCenters();
+        for (let i = 0; i < centers.length; i++) {
+          for (let j = i + 1; j < centers.length; j++) {
+            const dx = centers[i].x - centers[j].x;
+            const dy = centers[i].y - centers[j].y;
+            const dist = Math.hypot(dx, dy);
+            if (dist < maxDistance) {
+              const alpha = Math.max(0, 1 - dist / maxDistance) * 0.4;
+              ctx.strokeStyle = `rgba(0, 212, 255, ${alpha.toFixed(3)})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(centers[i].x, centers[i].y);
+              ctx.lineTo(centers[j].x, centers[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+
+      requestAnimationFrame(draw);
+
+      window.addEventListener('resize', () => {
+        updateCanvasSize();
+      });
+    }
+
+    // Analytics tracking helper (placeholder for future analytics)
+    function trackEvent(eventName, params) {
+      // Google Analytics can be added here later
+      console.log('Event:', eventName, params);
+    }
+
+    // Inicializar quando a página carregar
+    window.addEventListener('load', function() {
+      createParticles();
+      // initStickyCTA(); // REMOVED - sticky CTA bar removed
+      window.scrollTo(0, 0);
+      
+      // Track page view
+      trackEvent('page_view', {
+        'page_title': document.title,
+        'page_location': window.location.href
+      });
+      
+      // Track scroll depth
+      let scrollTracked = { 25: false, 50: false, 75: false, 100: false };
+      window.addEventListener('scroll', function() {
+        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        
+        Object.keys(scrollTracked).forEach(threshold => {
+          if (scrollPercent >= parseInt(threshold) && !scrollTracked[threshold]) {
+            trackEvent('scroll_depth', {
+              'event_category': 'engagement',
+              'event_label': threshold + '%'
+            });
+            scrollTracked[threshold] = true;
+          }
+        });
+      });
+    });
+
+    // Sticky CTA Bar functionality - REMOVED (was overlapping menu)
+    /*
+    function initStickyCTA() {
+      const stickyCTA = document.getElementById('stickyCTA');
+      let hasShown = false;
+      
+      window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+        const heroHeight = document.querySelector('.main-container').offsetHeight;
+        
+        // Show sticky CTA after scrolling past hero
+        if (scrollY > heroHeight && !hasShown) {
+          stickyCTA.classList.add('visible');
+          hasShown = true;
+          
+          // Track event
+          trackEvent('sticky_cta_shown', {
+            'event_category': 'engagement'
+          });
+        }
+      });
+    }
+    */
+
+    // Prevenir scroll horizontal
+    window.addEventListener('scroll', function() {
+      if (window.scrollX !== 0) {
+        window.scrollTo(0, window.scrollY);
+      }
+    });
+
+    // Track product clicks
+    document.addEventListener('DOMContentLoaded', function() {
+      const productLinks = document.querySelectorAll('.carousel-item');
+      productLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          const productName = this.querySelector('.carousel-caption span').textContent;
+          trackEvent('product_click', {
+            'event_category': 'products',
+            'event_label': productName,
+            'outbound': true
+          });
+        });
+      });
+      
+      // Track service card views
+      const serviceCards = document.querySelectorAll('.service-card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.dataset.tracked) {
+            const serviceName = entry.target.querySelector('.service-title').textContent.trim();
+            trackEvent('service_view', {
+              'event_category': 'services',
+              'event_label': serviceName
+            });
+            entry.target.dataset.tracked = 'true';
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      serviceCards.forEach(card => observer.observe(card));
+
+      // Track Messiax featured section
+      const messiaxFeatured = document.querySelector('.featured-product');
+      if (messiaxFeatured) {
+        const messiaxObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.tracked) {
+              trackEvent('messiax_featured_view', {
+                'event_category': 'products',
+                'event_label': 'featured_section_viewed'
+              });
+              entry.target.dataset.tracked = 'true';
+            }
+          });
+        }, { threshold: 0.5 });
+        
+        messiaxObserver.observe(messiaxFeatured);
+      }
+
+      // Track Messiax CTA clicks
+      document.querySelectorAll('.btn-featured, .btn-featured-secondary').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const isExternal = this.getAttribute('target') === '_blank';
+          const destination = isExternal ? 'messiax_platform' : 'messiax_landing';
+          
+          trackEvent('messiax_cta_click', {
+            'event_category': 'conversion',
+            'event_label': destination,
+            'value': 1
+          });
+        });
+      });
+    });
+  </script>
+  
+  <!-- INOSX Footer -->
+  <style>
+    .inosx-footer {
+      margin-top: 4rem;
+      background: linear-gradient(135deg, #2a4b7a 0%, #5f5dbd 100%);
+      color: #ffffff;
+    }
+    .inosx-footer a { color: #ffffff; text-decoration: none; opacity: 0.9; }
+    .inosx-footer a:hover { opacity: 1; }
+    .inosx-footer .container { max-width: 1400px; margin: 0 auto; padding: 3rem 1rem; }
+    .inosx-footer .grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+    .inosx-footer h4 { margin-bottom: 0.8rem; font-size: 1.1rem; }
+    .inosx-footer p { opacity: 0.95; line-height: 1.6; }
+    .inosx-footer ul { list-style: none; padding: 0; margin: 0; }
+    .inosx-footer li { margin: 0.5rem 0; }
+    .inosx-footer .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.2rem; }
+    .inosx-footer .badge { width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,0.2); display: inline-flex; align-items: center; justify-content: center; }
+    .inosx-footer .legal { border-top: 1px solid rgba(255,255,255,0.2); padding: 1rem 0; font-size: 0.9rem; opacity: 0.9; }
+    .inosx-footer .contact-box { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; padding: 1rem; }
+    .inosx-footer .company-meta { margin-top: 0.75rem; font-size: 0.92rem; opacity: 0.95; }
+    .inosx-footer .social { display: flex; gap: 10px; margin-top: 12px; }
+    .inosx-footer .social a { width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; }
+    @media (max-width: 900px) {
+      .inosx-footer .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .inosx-footer .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <footer class="inosx-footer">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <div class="brand"><span class="badge">💠</span><span>INOSX</span></div>
+          <p style="margin-top:0.5rem" data-i18n="footer.tagline">Democratizing access to practical and secure AI solutions for businesses.</p>
+          <div class="company-meta" data-i18n="footer.company_meta">
+            INOSX, Inc. • USA Corporation
+          </div>
+          <div class="social">
+            <a href="https://www.linkedin.com/company/inosx" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="mailto:contact@inosx.com" aria-label="Email">@</a>
+          </div>
+        </div>
+        <div>
+          <h4 data-i18n="footer.platform_title">Platform</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="footer.platform_home">Home</a></li>
+            <li><a href="#" data-i18n="footer.platform_products">Products</a></li>
+            <li><a href="#" data-i18n="footer.platform_services">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.support_title">Support</h4>
+          <ul>
+            <li><a href="terms.html" data-i18n="footer.support_terms">Terms of Service</a></li>
+            <li><a href="terms.html#privacy" data-i18n="footer.support_privacy">Privacy Policy</a></li>
+            <li><a href="mailto:contact@inosx.com" data-i18n="footer.support_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact_title">Contact</h4>
+          <div class="contact-box">
+            <div><strong data-i18n="footer.contact_email">Email</strong><br><a href="mailto:contact@inosx.com">contact@inosx.com</a></div>
+            <div style="margin-top:8px" data-i18n="footer.contact_address">9450 SW Gemini Dr, Beaverton, OR 97008, USA</div>
+          </div>
+        </div>
+      </div>
+      <div class="legal" data-i18n="footer.copyright">
+        © 2025 INOSX, Inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
