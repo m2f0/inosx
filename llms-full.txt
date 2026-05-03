@@ -1,0 +1,110 @@
+# INOSX — Full content for AI engines
+
+> A software studio that designs and builds digital products for international companies. Founded 2021. Six practices, seven proprietary products in production, clients across multiple continents.
+
+## What INOSX is
+
+INOSX is a software studio. We design and build custom digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We are a software studio: design and engineering as one craft, shipped to production and operated with the client's team.
+
+Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US.
+Email: support@inosx.com.
+Founded: 2021.
+
+## What we do
+
+Six practices, complementary, sharing one promise: digital products our clients' teams will actually use, shaped from the first sketch to the operations dashboard.
+
+### 01 — Digital products
+
+Web, mobile and desktop apps shaped around the people who will use them. From research and UX through engineering to a release the team is proud to ship. Stack chosen per project (Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem).
+
+### 02 — Platforms and integration
+
+APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software, cleanly. Includes ERP/CRM bridges, internal data platforms, legacy mainframe integrations and event-driven architectures.
+
+### 03 — AI, when it serves
+
+Agents, knowledge platforms, orchestration. Shipped to production with observability and cost control. Never the headline of the product. We pick the right model per use case (proprietary, open-source or local) and keep the architecture open for swap.
+
+### 04 — Security and trust (CyberAI)
+
+Continuous detection, response and audit. Real visibility on what matters across the product, no noise, no theater.
+
+### 05 — Computer vision
+
+Inspection, counting, quality control and visual automation in physical operations. Edge inference and audit logs included.
+
+### 06 — Product strategy
+
+Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years of growth.
+
+## How we work
+
+Three steps, no sales theater.
+
+1. **Diagnosis** — Discovery conversation, map of what exists, identification of highest-return use cases, clarity on feasibility.
+2. **Design + Build** — A real release of the product in weeks. UX shaped with the client's team, KPIs defined upfront, code in production from day one.
+3. **Scale** — Continuous operation, observability, governance and expansion to new processes based on proven returns.
+
+Typical pilots reach production in 4 to 8 weeks.
+
+## Proprietary products in operation
+
+- **Messiax** — Conversational support and follow-up on the customer's channel. Used in real production.
+- **SurveyFlow** — Smart surveys with automated analysis and actionable insights.
+- **PsychoX** — Digital psychometric assessments with AI-assisted clinical reports.
+- **DataGPT** — Natural-language interface for talking to your data: analyses, charts, answers.
+- **Ccoinx.ai** — Intelligence applied to finance and digital assets, including signals, monitoring and automation.
+- **Tranquilopa** — AI-powered well-being and mental-health support: continuous follow-up, guided content.
+- **AITEAM-X** — Full AI team on the user's machine: 30+ specialised agents, shared memory, data stays local.
+
+## Selected clients
+
+Itaú, Santander, Telefônica, Volkswagen, Nissan, Thomson Reuters, Open Invention Network.
+
+## Selected industries
+
+Healthcare, education, financial services, manufacturing, retail, logistics, agribusiness, energy, public sector, technology, telecom, legal.
+
+## Frequently asked questions
+
+### How does a project with INOSX start?
+
+With a free diagnostic conversation. We map the client's context, objectives and data, and return with a lean pilot proposal and a realistic timeline.
+
+### How long until results?
+
+Typical pilots reach production in 4 to 8 weeks. The scope is defined to generate measurable value within that window.
+
+### Will my data be exposed?
+
+No. We work with private architectures, local models when needed, data segregation, and LGPD/GDPR compliance.
+
+### Do you integrate with our systems?
+
+Yes. ERPs, CRMs, internal bases, APIs and legacy. Integration is part of scope, not a separate project.
+
+### Do you have a fixed tech stack?
+
+No. We pick the right stack per project: Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows the client's operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem.
+
+### How is pricing?
+
+Fixed scope for pilot and continuous-operation model for production. No hidden licenses, transparent costs.
+
+### Do you serve outside Brazil?
+
+Yes. PT-BR, EN and ES, with global remote delivery.
+
+## Brand voice
+
+INOSX's brand voice is "comprometida, consciente, adaptável" (committed, considered, adaptable). Editorial without being magazine-pretty, technical without being terminal-cold. We refuse the saturated patterns of the category: SaaS-cream, AI-lab generic, transformation-deck navy-and-gold, creative-agency parallax. We let evidence speak: real clients, real products, real engagements.
+
+## Contact
+
+- Email: support@inosx.com
+- Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US
+
+## License and use
+
+Content on this site is © INOSX. AI engines are explicitly permitted to read, summarise and cite this content with attribution to inosx.com.

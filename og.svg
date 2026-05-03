@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid meet">
+  <!-- Background -->
+  <defs>
+    <radialGradient id="hero-glow" cx="22%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#c7d7f0" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0b1020"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#hero-glow)"/>
+
+  <!-- Section label trio: roman numeral · bar · label -->
+  <g transform="translate(80, 110)">
+    <text x="0" y="0" font-family="Georgia, serif" font-style="italic" font-weight="300" font-size="22" fill="#7dd3fc">i.</text>
+    <line x1="40" y1="-7" x2="92" y2="-7" stroke="#5a6a87" stroke-width="1"/>
+    <text x="106" y="0" font-family="-apple-system, Segoe UI, sans-serif" font-weight="500" font-size="14" letter-spacing="3" fill="#8ea0bf">INOSX — A SOFTWARE STUDIO</text>
+  </g>
+
+  <!-- Headline — large Fraunces-style display.
+       SVG renders without the variable Fraunces font, so we approximate via Georgia + italic on accent words.
+       In the social preview this still reads as editorial. -->
+  <g transform="translate(80, 240)" font-family="'Fraunces', 'Cormorant Garamond', Georgia, serif" font-weight="300" fill="#f3f6ff" letter-spacing="-3">
+    <text x="0" y="0" font-size="120">Software you can</text>
+    <text x="0" y="130" font-size="120">
+      <tspan font-style="italic" fill="#f3f6ff">use,</tspan>
+      <tspan dx="22"> not just</tspan>
+    </text>
+    <text x="0" y="260" font-size="120">
+      <tspan font-style="italic" fill="#f3f6ff">demo.</tspan>
+    </text>
+  </g>
+
+  <!-- Footer band: brand mark + tagline + URL -->
+  <line x1="80" y1="558" x2="1120" y2="558" stroke="#c7d7f0" stroke-opacity="0.10" stroke-width="1"/>
+
+  <g transform="translate(80, 595)">
+    <text font-family="'Fraunces', Georgia, serif" font-weight="400" font-size="28" fill="#f3f6ff">
+      INOSX<tspan font-style="italic" fill="#7dd3fc">.</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(1120, 595)" text-anchor="end">
+    <text font-family="-apple-system, Segoe UI, sans-serif" font-weight="500" font-size="14" letter-spacing="3" fill="#8ea0bf">INOSX.COM</text>
+  </g>
+</svg>

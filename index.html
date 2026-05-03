@@ -4,18 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INOSX — A software studio</title>
-  <meta name="description" content="INOSX is a software studio. We design, build and operate custom applications and systems for international companies. Engineered for production, designed to be used. AI when the problem asks for it." />
+  <meta name="description" content="INOSX is a software studio. We design and build digital products for international companies. From the first conversation to the team that runs it. AI when the problem asks for it, never as the headline." />
+
+  <!-- Canonical + hreflang -->
+  <link rel="canonical" href="https://inosx.com/" />
+  <link rel="alternate" hreflang="en"        href="https://inosx.com/" />
+  <link rel="alternate" hreflang="pt-BR"     href="https://inosx.com/?lang=pt" />
+  <link rel="alternate" hreflang="es"        href="https://inosx.com/?lang=es" />
+  <link rel="alternate" hreflang="x-default" href="https://inosx.com/" />
 
   <!-- Open Graph / social share -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://inosx.com/" />
   <meta property="og:title" content="INOSX — A software studio" />
-  <meta property="og:description" content="Custom applications and systems built end-to-end for international companies. Proven in production, not in pitches." />
+  <meta property="og:description" content="We design and build digital products for international companies. From the first conversation to the team that runs it." />
   <meta property="og:site_name" content="INOSX" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:image" content="https://inosx.com/og.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="INOSX — Software you can use, not just demo" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="INOSX — A software studio" />
-  <meta name="twitter:description" content="Custom applications and systems built end-to-end for international companies." />
+  <meta name="twitter:description" content="We design and build digital products for international companies." />
+  <meta name="twitter:image" content="https://inosx.com/og.svg" />
 
   <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
   <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
@@ -1515,6 +1529,138 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============ JSON-LD structured data ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://inosx.com/#organization",
+        "name": "INOSX",
+        "url": "https://inosx.com/",
+        "logo": "https://inosx.com/INOSXlogo.png",
+        "image": "https://inosx.com/og.svg",
+        "email": "support@inosx.com",
+        "foundingDate": "2021",
+        "description": "A software studio that designs and builds digital products for international companies. AI when the problem asks for it, never as the headline.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "131 Continental Dr Suite 305",
+          "addressLocality": "Newark",
+          "addressRegion": "DE",
+          "postalCode": "19713",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@inosx.com",
+          "contactType": "customer support",
+          "availableLanguage": ["en", "pt-BR", "es"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://inosx.com/#website",
+        "url": "https://inosx.com/",
+        "name": "INOSX",
+        "description": "A software studio. We design and build digital products for international companies.",
+        "publisher": { "@id": "https://inosx.com/#organization" },
+        "inLanguage": ["en", "pt-BR", "es"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://inosx.com/#webpage",
+        "url": "https://inosx.com/",
+        "name": "INOSX — A software studio",
+        "isPartOf": { "@id": "https://inosx.com/#website" },
+        "about": { "@id": "https://inosx.com/#organization" },
+        "description": "We design and build digital products for international companies. From the first conversation to the team that runs it.",
+        "dateModified": "2026-05-01",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://inosx.com/#faq",
+        "isPartOf": { "@id": "https://inosx.com/#webpage" },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does a project with INOSX start?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With a free diagnostic conversation. We map your context, objectives and data, and come back with a lean pilot proposal and a realistic timeline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long until results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Typical pilots reach production in 4 to 8 weeks. The scope is defined to generate measurable value within that window."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will my data be exposed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We work with private architectures, local models when needed, data segregation and LGPD/GDPR compliance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you integrate with our systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ERPs, CRMs, internal bases, APIs and legacy. Integration is part of scope, not a separate project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you have a fixed tech stack?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We pick the right stack per project: Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows your operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is pricing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fixed scope for pilot and continuous-operation model for production. No hidden licenses, transparent costs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you serve outside Brazil?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. PT-BR, EN and ES, with global remote delivery."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://inosx.com/#products",
+        "name": "INOSX proprietary products",
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Messiax",     "url": "https://inosx.com/messiax.html" },
+          { "@type": "ListItem", "position": 2, "name": "SurveyFlow",  "url": "https://inosx.com/surveyflow.html" },
+          { "@type": "ListItem", "position": 3, "name": "PsychoX",     "url": "https://inosx.com/produtos.html#psychox" },
+          { "@type": "ListItem", "position": 4, "name": "DataGPT",     "url": "https://inosx.com/produtos.html#datagpt" },
+          { "@type": "ListItem", "position": 5, "name": "Ccoinx.ai",   "url": "https://inosx.com/produtos.html#ccoinx" },
+          { "@type": "ListItem", "position": 6, "name": "Tranquilopa", "url": "https://inosx.com/produtos.html#tranquilopa" },
+          { "@type": "ListItem", "position": 7, "name": "AITEAM-X",    "url": "https://inosx.com/produtos.html#aiteam" }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();

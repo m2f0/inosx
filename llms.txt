@@ -1,0 +1,53 @@
+# INOSX
+
+> A software studio that designs and builds digital products for international companies. Web, mobile, desktop, platforms, integration. AI when the problem asks for it, never as the headline.
+
+INOSX is a software studio founded in 2021. We design and build custom digital products end-to-end for B2B clients across multiple continents. Our practice covers six fronts: digital products, platforms and integration, AI when it serves, security and trust (CyberAI), computer vision, and product strategy.
+
+The studio's commitment is "show, don't promise": real clients in production, real proprietary products in operation, real engagements documented as Selected Work. We refuse the AI-lab aesthetic and the engineering-firm voice — we are a software studio that does both, design and engineering as one craft.
+
+## Pages
+
+- [Home](https://inosx.com/): hero, disciplines, products, FAQ, lead form
+- [Products](https://inosx.com/produtos.html): catalogue of proprietary products in production
+- [Messiax](https://inosx.com/messiax.html): conversational support product
+- [SurveyFlow](https://inosx.com/surveyflow.html): smart-survey product
+- [ROI Calculator](https://inosx.com/roi-calculator.html): tool for prospects to estimate value
+- [Terms](https://inosx.com/terms.html): terms of service and privacy
+
+## Practices
+
+- **Digital products** — Web, mobile and desktop apps shaped from research and UX through engineering and operation.
+- **Platforms and integration** — APIs, integrations, data pipelines, legacy modernization. Where existing software has to talk to new software.
+- **AI, when it serves** — Agents, knowledge platforms, orchestration. Shipped to production with observability and cost control. Never the headline of the product.
+- **Security and trust (CyberAI)** — Continuous detection, response and audit across the product surface.
+- **Computer vision** — Inspection, counting, quality control and visual automation in physical operations.
+- **Product strategy** — Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years.
+
+## Proprietary products in operation
+
+- **Messiax** — Conversational support and follow-up on the customer's channel.
+- **SurveyFlow** — Smart surveys with automated analysis and actionable insights.
+- **PsychoX** — Digital psychometric assessments with AI-assisted clinical reports.
+- **DataGPT** — Natural-language interface for talking to your data.
+- **Ccoinx.ai** — Intelligence applied to finance and digital assets.
+- **Tranquilopa** — AI-powered well-being and mental-health support.
+- **AITEAM-X** — Full AI team on your machine, 30+ agents, shared memory, local data.
+
+## Selected industries
+
+Healthcare, education, financial services, manufacturing, retail, logistics, agribusiness, energy, public sector, technology, telecom, legal.
+
+## Selected clients
+
+Itaú, Santander, Telefônica, Volkswagen, Nissan, Thomson Reuters, Open Invention Network.
+
+## How a project starts
+
+A free diagnostic conversation. INOSX maps the client's context, objectives and data, and returns with a lean pilot proposal and a realistic timeline. Typical pilots reach production in 4 to 8 weeks. Architecture follows the client's operational reality, not the studio's preference: Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem.
+
+## Contact
+
+- Email: support@inosx.com
+- Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US
+- Founded: 2021

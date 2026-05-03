@@ -1,0 +1,74 @@
+# INOSX — robots.txt
+# Allow general web crawlers and explicit AI crawlers.
+
+User-agent: *
+Allow: /
+Disallow: /i18n/backup/
+Disallow: /temp/
+Disallow: /node_modules/
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /openspec/
+Disallow: /bmad/
+Disallow: /index-legacy.html
+
+# AI / LLM training and answer-engine crawlers — explicitly allowed.
+# Listing each makes the intent unambiguous to webmasters and crawlers.
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+Sitemap: https://inosx.com/sitemap.xml
