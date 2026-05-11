@@ -71,3 +71,19 @@ wheels/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Claude Code (config local + skills instaladas localmente)
+.claude/settings.local.json
+.claude/skills/
+CLAUDE.local.md
+CHANGELOG.claude.md
+.agents/
+skills-lock.json
+
+# Outras ferramentas de IDE/IA
+.cursor/
+.memory/
+
+# Temp local
+/tmp/
+*.tmp

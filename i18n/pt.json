@@ -154,7 +154,7 @@
       "privacy_1": "Ao enviar você concorda com os",
       "privacy_2": "Termos & Privacidade",
       "success": "✓ Mensagem recebida. Voltamos em breve.",
-      "error": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para inosx@inosx.com."
+      "error": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para support@inosx.com."
     },
     "foot": {
       "tagline": "Software studio. Desenhamos e construímos os produtos que você lança.",
@@ -165,7 +165,7 @@
       "privacy": "Privacidade",
       "cta": "Iniciar conversa →",
       "rights": "Todos os direitos reservados.",
-      "crafted": "Concebido em São Paulo · Operando globalmente"
+      "crafted": "Sede nos Estados Unidos · Operação global"
     }
   },
   "products_page": {
@@ -541,7 +541,7 @@
     "cta_button_notify": "Me Notifique →",
     "cta_title": "Pronto para Transformar Seu Negócio com IA?",
     "cta_subtitle": "Vamos discutir como a INOSX pode construir uma solução personalizada de IA para suas necessidades específicas.",
-    "cta_email": "📧 Envie Email: inosx@inosx.com",
+    "cta_email": "📧 Envie Email: support@inosx.com",
     "cta_schedule": "Agendar Consultoria Gratuita",
     "cta_benefits": "✓ Consultoria gratuita de 30 min  ✓ Roadmap personalizado de IA  ✓ Análise de ROI  ✓ Sem compromisso"
   },
