@@ -935,6 +935,41 @@
 
     ::selection { background: rgba(125, 211, 252, 0.3); color: var(--ink); }
 
+    /* ============ Version badge (bottom-right floating) ============ */
+    .version-badge {
+      position: fixed;
+      bottom: 14px;
+      right: 14px;
+      z-index: 60;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.75rem;
+      background: rgba(11, 16, 32, 0.85);
+      backdrop-filter: blur(10px) saturate(140%);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+      border: 1px solid var(--line-2);
+      border-radius: 999px;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-3);
+      text-decoration: none;
+      opacity: 0.55;
+      transition: opacity 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      user-select: none;
+    }
+    .version-badge:hover {
+      opacity: 1;
+      color: var(--ink);
+      border-color: var(--accent);
+    }
+    .version-badge .sep { color: var(--ink-4); }
+    .version-badge:hover .hash { color: var(--accent); }
+    @media (max-width: 720px) {
+      .version-badge { bottom: 10px; right: 10px; font-size: 0.62rem; padding: 0.3rem 0.6rem; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
       .reveal { opacity: 1 !important; transform: none !important; }
@@ -1193,41 +1228,47 @@
         </div>
       </div>
 
+      <!-- Ordem: complexidade de desenvolvimento (mais complexo primeiro), espelhando mariomayerle.com -->
       <div class="products-grid reveal">
         <article class="product-card">
-          <div class="name">Messi<em>ax</em></div>
-          <p class="desc" data-i18n="landing.products.messiax">AI conversational service: replies, follow-up and qualification on your customer's channel.</p>
-          <a href="produtos.html#messiax"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Survey<em>Flow</em></div>
-          <p class="desc" data-i18n="landing.products.surveyflow">Smart surveys with automated analysis and actionable insights.</p>
-          <a href="produtos.html#surveyflow"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Psycho<em>X</em></div>
-          <p class="desc" data-i18n="landing.products.psychox">Digital psychometric assessments with AI-assisted clinical reports.</p>
-          <a href="produtos.html#psychox"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+          <div class="name">AITEAM<em>—X</em></div>
+          <p class="desc" data-i18n="landing.products.aiteam">Agent orchestration dashboard. Full AI team on your machine: 30+ specialised agents, shared memory, data stays local.</p>
+          <a href="https://aiteam-x.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
         </article>
         <article class="product-card">
           <div class="name">Data<em>GPT</em></div>
-          <p class="desc" data-i18n="landing.products.datagpt">Talk to your data: analyses, charts and answers in natural language.</p>
+          <p class="desc" data-i18n="landing.products.datagpt">AI for enterprise data analysis. Talk to your data in natural language: analyses, charts, answers.</p>
           <a href="produtos.html#datagpt"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
         </article>
         <article class="product-card">
-          <div class="name">Ccoinx<em>.ai</em></div>
-          <p class="desc" data-i18n="landing.products.ccoinx">Intelligence applied to finance and digital assets: signals, monitoring and automation.</p>
-          <a href="produtos.html#ccoinx"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+          <div class="name">Messi<em>ax</em></div>
+          <p class="desc" data-i18n="landing.products.messiax">AI spiritual companion. Conversational support, guided content and follow-up that respects the user's tradition.</p>
+          <a href="https://messiax.ai" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Tube<em>Lens</em></div>
+          <p class="desc" data-i18n="landing.products.tubelens">AI editorial analysis for YouTube videos. Quality scores across density, clarity, credibility and originality. Popularity is not quality.</p>
+          <a href="https://tubelens.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Psycho<em>X</em></div>
+          <p class="desc" data-i18n="landing.products.psychox">Psychological support with AI. Digital psychometric assessments and AI-assisted clinical reports.</p>
+          <a href="https://psychox.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+        </article>
+        <article class="product-card">
+          <div class="name">Survey<em>Flow</em></div>
+          <p class="desc" data-i18n="landing.products.surveyflow">Survey intelligence with AI. Smart surveys with automated analysis and actionable insights.</p>
+          <a href="https://surveyflow.ai" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
         </article>
         <article class="product-card">
           <div class="name">Tranquil<em>opa</em></div>
-          <p class="desc" data-i18n="landing.products.tranquilopa">AI-powered well-being and mental health: continuous support, guided content and follow-up.</p>
-          <a href="produtos.html#tranquilopa"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+          <p class="desc" data-i18n="landing.products.tranquilopa">Trust platform. AI-powered well-being and mental-health support, continuous follow-up, guided content.</p>
+          <a href="https://tranquilopa.com" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
         </article>
         <article class="product-card">
-          <div class="name">AITEAM<em>—X</em></div>
-          <p class="desc" data-i18n="landing.products.aiteam">Full AI team on your machine: 30+ agents, shared memory, local data.</p>
-          <a href="produtos.html#aiteam"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+          <div class="name">Ccoinx<em>.ai</em></div>
+          <p class="desc" data-i18n="landing.products.ccoinx">Currency converter with camera. Intelligence applied to finance and digital assets: signals, monitoring, automation.</p>
+          <a href="https://ccoinx.ai" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
         </article>
       </div>
     </div>
@@ -1531,6 +1572,13 @@
     </div>
   </footer>
 
+  <!-- ============ Version badge (bottom-right, fetches /version.json) ============ -->
+  <a class="version-badge" id="versionBadge" href="https://github.com/m2f0/inosx" target="_blank" rel="noopener" aria-label="Version">
+    <span class="ver" id="versionBadgeVer">v—</span>
+    <span class="sep" aria-hidden="true">·</span>
+    <span class="hash" id="versionBadgeHash">—</span>
+  </a>
+
   <!-- ============ JSON-LD structured data ============ -->
   <script type="application/ld+json">
   {
@@ -1667,6 +1715,21 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Version badge — fetches /version.json (gitignored cache hint: 5min)
+    (function() {
+      var badge = document.getElementById('versionBadge');
+      if (!badge) return;
+      fetch('/version.json', { cache: 'default' })
+        .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function(v) {
+          document.getElementById('versionBadgeVer').textContent = 'v' + v.version;
+          var shortHash = (v.hash || '').slice(0, 7);
+          document.getElementById('versionBadgeHash').textContent = shortHash;
+          if (v.hash) badge.href = 'https://github.com/m2f0/inosx/commit/' + v.hash;
+        })
+        .catch(function() { badge.style.display = 'none'; });
+    })();
 
     (function() {
       var els = document.querySelectorAll('.reveal');
