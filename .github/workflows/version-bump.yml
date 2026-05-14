@@ -1,0 +1,64 @@
+name: Update version.json hash on main
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    # Não roda no commit do proprio bot (evita loop infinito).
+    if: "!contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, 'chore(version):')"
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Update version.json with the SHA that triggered this run
+        run: |
+          set -euo pipefail
+
+          # SHA do push do usuario (o trigger desta workflow).
+          HASH="${GITHUB_SHA}"
+          DATE=$(date -u +"%Y-%m-%d")
+
+          # Preserva version e channel; reescreve hash e date.
+          python3 - <<PY
+          import json
+          p = "version.json"
+          with open(p) as f:
+              v = json.load(f)
+          v["hash"] = "${HASH}"
+          v["date"] = "${DATE}"
+          with open(p, "w") as f:
+              json.dump(v, f, indent=2)
+              f.write("\n")
+          PY
+
+          echo "version.json after update:"
+          cat version.json
+
+      - name: Commit and push (if changed)
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add version.json
+          if git diff --staged --quiet; then
+            echo "version.json sem mudancas, nada a commitar."
+            exit 0
+          fi
+
+          SHORT=$(git rev-parse --short HEAD)
+          # [skip ci] no commit do bot impede a workflow de re-disparar.
+          git commit -m "chore(version): auto-update hash to ${SHORT} [skip ci]"
+          git push origin main
