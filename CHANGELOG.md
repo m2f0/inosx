@@ -4,6 +4,17 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [3.0.2] - 2026-05-20
+
+### Fixed
+- Corrigido o formulário de lead capture para não depender de um endpoint placeholder e abrir email endereçado a `support@inosx.com` quando não houver endpoint configurado.
+- Removidos placeholders visíveis da seção de cases, substituindo por descrições públicas e conservadoras.
+- Corrigida a chave ausente `landing.products.tubelens` em EN/PT/ES.
+- Completada a árvore `landing` em espanhol para restaurar validação i18n completa.
+- Ajustado o comportamento mobile de títulos, grid de produtos e badge de versão.
+
+---
+
 ## [2.1.0] - 2025-01-08
 
 ### 🌍 Multilingual Support

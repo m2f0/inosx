@@ -1,6 +1,6 @@
 # INOSX — Site institucional (inosx.com)
 
-> Leia também `~/.claude/CLAUDE.md` (perfil global INOSX) para regras
+> Leia também `~/.Codex/AGENTS.md` (perfil global INOSX) para regras
 > universais (idioma pt-br, privacidade, branching, versionamento).
 
 ## O que é

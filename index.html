@@ -190,6 +190,13 @@
       letter-spacing: -0.035em;
       line-height: 1.02;
     }
+    @media (max-width: 480px) {
+      h2 {
+        font-size: clamp(2rem, 10.5vw, 2.7rem);
+        letter-spacing: -0.025em;
+        line-height: 1.14;
+      }
+    }
     h3 {
       font-size: clamp(1.3rem, 1.8vw, 1.65rem);
       font-weight: 400;
@@ -475,7 +482,10 @@
     .section-head .label { align-self: start; }
     .section-head h2 { max-width: 16ch; }
     .section-head .lead { margin-top: 1.25rem; max-width: 50ch; }
-    @media (max-width: 880px) { .section-head { grid-template-columns: 1fr; gap: 1.5rem; } }
+    @media (max-width: 880px) {
+      .section-head { grid-template-columns: 1fr; gap: 1.5rem; }
+      .section-head h2 { max-width: 100%; }
+    }
 
     /* ============ Evidence strip — substitui Stats por links navegáveis ============ */
     .evidence { padding: clamp(2rem, 4vw, 3rem) 0; border-top: 1px solid var(--line); }
@@ -616,6 +626,10 @@
       align-items: center;
     }
     .product-card:hover a { color: var(--accent); gap: 0.8rem; }
+    @media (max-width: 720px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .product-card { padding: 2rem 2.25rem; min-height: 0; }
+    }
 
     /* ============ Steps ============ */
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -763,7 +777,10 @@
       gap: 5rem;
       align-items: start;
     }
-    @media (max-width: 980px) { .lead-grid { grid-template-columns: 1fr; gap: 3.5rem; } }
+    @media (max-width: 980px) {
+      .lead-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+      .lead-text h2 { max-width: 100%; }
+    }
 
     .lead-text h2 { max-width: 12ch; }
     .lead-text .lead { margin-top: 1.5rem; }
@@ -967,7 +984,8 @@
     .version-badge .sep { color: var(--ink-4); }
     .version-badge:hover .hash { color: var(--accent); }
     @media (max-width: 720px) {
-      .version-badge { bottom: 10px; right: 10px; font-size: 0.62rem; padding: 0.3rem 0.6rem; }
+      .version-badge { bottom: 8px; right: 8px; font-size: 0.58rem; padding: 0.26rem 0.52rem; opacity: 0.38; }
+      .version-badge:hover { opacity: 1; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1330,17 +1348,12 @@
         </div>
       </div>
 
-      <!--
-        SELECTED WORK — placeholder real clients from the marquee + neutral technical sentences.
-        Replace .work-desc with the actual engagement scope, technology, and outcome.
-        Keep one sentence per item. Keep meta tight (industry · stack · year).
-      -->
       <div class="work-list">
         <article class="work reveal">
           <div class="work-idx">01</div>
           <div>
             <h3 class="work-name">Itaú</h3>
-            <p class="work-desc" data-i18n="landing.cases.w1_d">[Replace with the real engagement, e.g. "Modernization of the credit-origination flow: TypeScript service layer over a legacy mainframe core, integrated with the existing risk pipeline."]</p>
+            <p class="work-desc" data-i18n="landing.cases.w1_d">Enterprise financial software work across data, integration and operational workflows, built for regulated environments where reliability matters.</p>
           </div>
           <div class="work-meta">
             <span data-i18n="landing.cases.w1_m1">Financial services</span>
@@ -1351,7 +1364,7 @@
           <div class="work-idx">02</div>
           <div>
             <h3 class="work-name">Telefônica</h3>
-            <p class="work-desc" data-i18n="landing.cases.w2_d">[Replace with the real engagement, e.g. "Internal operations platform for the network field team: offline-first React Native client, GraphQL gateway, observability stack."]</p>
+            <p class="work-desc" data-i18n="landing.cases.w2_d">Digital product and platform delivery for telecom operations, connecting business workflows with engineering execution at enterprise scale.</p>
           </div>
           <div class="work-meta">
             <span data-i18n="landing.cases.w2_m1">Telecom</span>
@@ -1362,7 +1375,7 @@
           <div class="work-idx">03</div>
           <div>
             <h3 class="work-name">Volkswagen</h3>
-            <p class="work-desc" data-i18n="landing.cases.w3_d">[Replace with the real engagement, e.g. "Computer-vision quality-control pipeline for the assembly line: edge inference, anomaly review interface, audit log."]</p>
+            <p class="work-desc" data-i18n="landing.cases.w3_d">Software delivery for industrial contexts, where process, traceability and user adoption have to survive the realities of production.</p>
           </div>
           <div class="work-meta">
             <span data-i18n="landing.cases.w3_m1">Manufacturing</span>
@@ -1479,7 +1492,9 @@
       <form class="lead-form reveal"
             data-delay="1"
             id="leadForm"
-            action="https://formspree.io/f/YOUR_FORM_ID"
+            action="mailto:support@inosx.com"
+            data-endpoint=""
+            enctype="text/plain"
             method="POST"
             novalidate>
         <div class="form-title" data-i18n="landing.lead.form_title">Talk to INOSX</div>
@@ -1762,15 +1777,34 @@
         labelSpan.textContent = 'Sending…';
 
         var data = new FormData(form);
-        fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        }).then(function(res) {
-          if (res.ok) { ok.classList.add('show'); form.reset(); }
-          else { err.classList.add('show'); }
-        }).catch(function() { err.classList.add('show'); })
-          .finally(function() { btn.disabled = false; labelSpan.textContent = prev; });
+        var endpoint = form.getAttribute('data-endpoint');
+        if (endpoint) {
+          fetch(endpoint, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res) {
+            if (res.ok) { ok.classList.add('show'); form.reset(); }
+            else { err.classList.add('show'); }
+          }).catch(function() { err.classList.add('show'); })
+            .finally(function() { btn.disabled = false; labelSpan.textContent = prev; });
+          return;
+        }
+
+        var subject = 'INOSX project inquiry from ' + (data.get('company') || data.get('name') || 'website');
+        var body = [
+          'Name: ' + (data.get('name') || ''),
+          'Work email: ' + (data.get('email') || ''),
+          'Company: ' + (data.get('company') || ''),
+          'Phone: ' + (data.get('phone') || ''),
+          '',
+          'Challenge:',
+          data.get('message') || ''
+        ].join('\n');
+        window.location.href = 'mailto:support@inosx.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        ok.classList.add('show');
+        btn.disabled = false;
+        labelSpan.textContent = prev;
       });
     })();
 

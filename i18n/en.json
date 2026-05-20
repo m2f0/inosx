@@ -18,8 +18,6 @@
       "eyebrow": "INOSX — A software studio",
       "headline_1": "Software",
       "headline_2": "shaped to your operation.",
-      "headline_3": "",
-      "headline_4": "",
       "sub": "Custom systems built around how your company actually works. From discovery and design to a release your team runs. AI when the problem asks for it, never as the headline.",
       "meta_1_l": "Built around", "meta_1_v": "your processes",
       "meta_2_l": "Live in", "meta_2_v": "4–8 weeks",
@@ -81,6 +79,7 @@
       "surveyflow": "Smart surveys with automated analysis and actionable insights.",
       "psychox": "Digital psychometric assessments with AI-assisted clinical reports.",
       "datagpt": "Talk to your data: analyses, charts and answers in natural language.",
+      "tubelens": "Editorial analysis for YouTube videos: density, clarity, credibility and originality. Popularity is not quality.",
       "ccoinx": "Intelligence applied to finance and digital assets: signals, monitoring and automation.",
       "tranquilopa": "AI-powered well-being and mental health: continuous support, guided content and follow-up.",
       "aiteam": "Full AI team on your machine: 30+ agents, shared memory, local data."
@@ -100,13 +99,13 @@
       "eyebrow": "Selected work",
       "title_1": "The difference shows",
       "title_2": "in the product.",
-      "w1_d": "[Replace with the real engagement, e.g. \"Modernization of the credit-origination flow: TypeScript service layer over a legacy mainframe core, integrated with the existing risk pipeline.\"]",
+      "w1_d": "Enterprise financial software work across data, integration and operational workflows, built for regulated environments where reliability matters.",
       "w1_m1": "Financial services",
       "w1_m2": "Node · TypeScript · GCP",
-      "w2_d": "[Replace with the real engagement, e.g. \"Internal operations platform for the network field team: offline-first React Native client, GraphQL gateway, observability stack.\"]",
+      "w2_d": "Digital product and platform delivery for telecom operations, connecting business workflows with engineering execution at enterprise scale.",
       "w2_m1": "Telecom",
       "w2_m2": "React Native · GraphQL · Kubernetes",
-      "w3_d": "[Replace with the real engagement, e.g. \"Computer-vision quality-control pipeline for the assembly line: edge inference, anomaly review interface, audit log.\"]",
+      "w3_d": "Software delivery for industrial contexts, where process, traceability and user adoption have to survive the realities of production.",
       "w3_m1": "Manufacturing",
       "w3_m2": "Python · PyTorch · MQTT"
     },
@@ -153,7 +152,7 @@
       "submit": "Send message",
       "privacy_1": "By submitting you agree to our",
       "privacy_2": "Terms & Privacy",
-      "success": "✓ Message received. We'll be in touch shortly.",
+      "success": "Your email app is opening with the message ready to send.",
       "error": "We couldn't send right now. Try again in a moment or write to support@inosx.com."
     },
     "foot": {

@@ -18,8 +18,6 @@
       "eyebrow": "INOSX — Software studio",
       "headline_1": "Software",
       "headline_2": "moldado à sua operação.",
-      "headline_3": "",
-      "headline_4": "",
       "sub": "Sistemas sob medida construídos em torno de como sua empresa realmente trabalha. Da descoberta e design a um release que seu time opera. IA quando o problema pede, nunca como manchete.",
       "meta_1_l": "Em torno", "meta_1_v": "dos seus processos",
       "meta_2_l": "No ar em", "meta_2_v": "4–8 semanas",
@@ -81,6 +79,7 @@
       "surveyflow": "Pesquisas inteligentes com análise automatizada e insights acionáveis.",
       "psychox": "Avaliações psicométricas digitais com relatório clínico assistido por IA.",
       "datagpt": "Converse com seus dados: análises, gráficos e respostas em linguagem natural.",
+      "tubelens": "Análise editorial de vídeos do YouTube: densidade, clareza, credibilidade e originalidade. Popularidade não é qualidade.",
       "ccoinx": "Inteligência aplicada a finanças e ativos digitais: sinais, monitoramento e automação.",
       "tranquilopa": "Bem-estar e saúde mental com IA: apoio contínuo, conteúdo guiado e acompanhamento.",
       "aiteam": "Time completo de IA na sua máquina: 30+ agentes, memória compartilhada, dados locais."
@@ -100,13 +99,13 @@
       "eyebrow": "Trabalhos selecionados",
       "title_1": "A diferença aparece",
       "title_2": "no produto.",
-      "w1_d": "[Substituir pelo engajamento real, ex.: \"Modernização do fluxo de originação de crédito: camada de serviços em TypeScript sobre core legado em mainframe, integrada ao pipeline de risco existente.\"]",
+      "w1_d": "Trabalho em software financeiro empresarial, cobrindo dados, integração e fluxos operacionais para ambientes regulados onde confiabilidade é central.",
       "w1_m1": "Serviços financeiros",
       "w1_m2": "Node · TypeScript · GCP",
-      "w2_d": "[Substituir pelo engajamento real, ex.: \"Plataforma operacional interna para o time de campo: cliente React Native offline-first, gateway GraphQL, stack de observabilidade.\"]",
+      "w2_d": "Entrega de produtos digitais e plataformas para operações de telecom, conectando fluxos de negócio com execução de engenharia em escala empresarial.",
       "w2_m1": "Telecom",
       "w2_m2": "React Native · GraphQL · Kubernetes",
-      "w3_d": "[Substituir pelo engajamento real, ex.: \"Pipeline de visão computacional para controle de qualidade na linha de montagem: inferência em edge, interface de revisão de anomalias, log de auditoria.\"]",
+      "w3_d": "Entrega de software para contextos industriais, onde processo, rastreabilidade e adoção pelo usuário precisam sobreviver à realidade da produção.",
       "w3_m1": "Manufatura",
       "w3_m2": "Python · PyTorch · MQTT"
     },
@@ -153,7 +152,7 @@
       "submit": "Enviar mensagem",
       "privacy_1": "Ao enviar você concorda com os",
       "privacy_2": "Termos & Privacidade",
-      "success": "✓ Mensagem recebida. Voltamos em breve.",
+      "success": "Seu app de email está abrindo com a mensagem pronta para envio.",
       "error": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para support@inosx.com."
     },
     "foot": {
