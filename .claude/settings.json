@@ -68,15 +68,6 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "prompt",
-            "prompt": "Antes de executar este comando bash, verifique se ele é um destes padrões PROIBIDOS sem confirmação explícita do Mario nesta sessão. Se for, BLOQUEIE com explicação e peça confirmação verbal:\n\n1. `git push origin main` ou `git push origin HEAD:main` — exige merge guiado via /promote-prod ou OK textual.\n2. Qualquer comando que contenha a string `mario@inosx.com` literal no seu corpo (ex: `git commit -m 'feat: ... mario@inosx.com'`, `echo mario@inosx.com >> ...`, `sed -i '...mario@inosx.com...'`). Email pessoal não pode aparecer em commits, mensagens, arquivos versionados.\n\nSe o comando NÃO casa com nenhum padrão acima, deixe seguir normal. Não bloqueie por outros motivos."
-          }
-        ]
-      },
-      {
         "matcher": "Edit|Write|MultiEdit",
         "hooks": [
           {

@@ -16,30 +16,30 @@
     },
     "hero": {
       "eyebrow": "INOSX — Software studio",
-      "headline_1": "Software que se",
-      "headline_2": "usa,",
-      "headline_3": "não só se",
-      "headline_4": "demonstra.",
-      "sub": "Desenhamos e construímos produtos digitais para empresas internacionais. Da primeira conversa ao time que opera. IA quando o problema pede, nunca como manchete.",
-      "meta_1_l": "Implantação", "meta_1_v": "em semanas",
-      "meta_2_l": "Dados", "meta_2_v": "sob seu controle",
-      "meta_3_l": "Retorno", "meta_3_v": "mensurável"
+      "headline_1": "Software",
+      "headline_2": "moldado à sua operação.",
+      "headline_3": "",
+      "headline_4": "",
+      "sub": "Sistemas sob medida construídos em torno de como sua empresa realmente trabalha. Da descoberta e design a um release que seu time opera. IA quando o problema pede, nunca como manchete.",
+      "meta_1_l": "Em torno", "meta_1_v": "dos seus processos",
+      "meta_2_l": "No ar em", "meta_2_v": "4–8 semanas",
+      "meta_3_l": "Operado pelo", "meta_3_v": "seu time"
     },
     "clients": {
-      "label": "Empresas que confiam na INOSX",
+      "label": "Construído para, entregue com",
       "note": "Selecionadas entre projetos em produção"
     },
     "evidence": {
-      "e1": "Produtos próprios em operação",
-      "e2": "Clientes em múltiplos continentes",
-      "e3": "Engajamentos ativos em diversas indústrias",
+      "e1": "Oito produtos no ar e operados hoje",
+      "e2": "Clientes em três continentes",
+      "e3": "Doze indústrias atendidas",
       "cue_see": "Ver"
     },
     "pains": {
       "eyebrow": "Soa familiar",
       "title_1": "Você queria um produto.",
       "title_2": "Entregaram uma demo.",
-      "sub": "Os padrões que vemos toda semana com líderes de produto e tomadores de decisão. Os que decidimos resolver com craft.",
+      "sub": "Seis padrões matam a maioria dos projetos de software enterprise. Construímos nossa prática para resolver cada um deles.",
       "p1_t": "Fornecedores que entregam slide, não produto",
       "p1_d": "Demos que ganham reunião e morrem na implantação. Design, engenharia e processo nunca chegam juntos.",
       "p2_t": "UX que nenhum usuário vai usar",
@@ -57,7 +57,7 @@
       "eyebrow": "O que fazemos",
       "title_1": "Software,",
       "title_2": "desenhado e construído.",
-      "sub": "Seis práticas que dividem uma promessa: produtos digitais que seu time vai usar de verdade, do primeiro esboço ao painel de operação.",
+      "sub": "Uma promessa em seis práticas: software que seu time usa de verdade, desenhado e construído do primeiro esboço ao painel de operação.",
       "s1_t": "Produtos digitais",
       "s1_d": "Apps web, mobile e desktop modelados a partir de quem vai usar. Da pesquisa e UX a um release que o time tem orgulho de shipar.",
       "s2_t": "Plataformas & integração",
@@ -75,7 +75,7 @@
       "eyebrow": "Produtos INOSX",
       "title_1": "Software pronto para usar,",
       "title_2": "sob medida quando preciso.",
-      "sub": "Catálogo de produtos próprios em produção real. Use prontos ou como ponto de partida customizável.",
+      "sub": "Oito produtos que entregamos e operamos. Pegue um pronto, ou encomende o seu.",
       "more": "Saber mais",
       "messiax": "Atendimento conversacional com IA: respostas, follow-up e qualificação no canal do seu cliente.",
       "surveyflow": "Pesquisas inteligentes com análise automatizada e insights acionáveis.",
@@ -112,8 +112,8 @@
     },
     "industries": {
       "eyebrow": "Indústrias",
-      "title_1": "Onde já",
-      "title_2": "estamos."
+      "title_1": "Onde",
+      "title_2": "entregamos hoje."
     },
     "faq": {
       "eyebrow": "Perguntas frequentes",
@@ -157,7 +157,7 @@
       "error": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para support@inosx.com."
     },
     "foot": {
-      "tagline": "Software studio. Desenhamos e construímos os produtos que você lança.",
+      "tagline": "Software studio. Construímos sistemas moldados à sua operação.",
       "h_company": "Empresa",
       "h_legal": "Legal",
       "h_contact": "Contato",
