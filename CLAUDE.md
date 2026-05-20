@@ -83,6 +83,29 @@ Slash command `/promote-prod` guia o merge `develop → main`.
 - **PRODUCT register:** `brand` (design IS o produto, é uma landing). Cada
   projeto INOSX tem seu próprio PRODUCT.md.
 
+## Ritual de release (OBRIGATÓRIO antes de cada publicação)
+
+**Toda vez que houver modificações no site e formos publicar (merge `develop → main` + push)**:
+
+1. **Bump em `version.json`** ANTES do push para `main`:
+   - PATCH (`3.0.X+1`): tweaks de conteúdo, correções de copy, fixes pequenos, ajuste de meta
+   - MINOR (`3.X+1.0`): nova seção/produto, nova feature visível, novo idioma, novo template de página
+   - MAJOR (`X+1.0.0`): rewrite de posicionamento, mudança de stack, redesign visual completo
+
+2. **Atualizar `CHANGELOG.md`** com entrada para a versão nova (formato Keep a Changelog pt-BR, seção `Added/Changed/Fixed/Removed`).
+
+3. **Commit + push** seguindo o fluxo `develop → main`. A GitHub Action `version-bump.yml` reescreve automaticamente o `hash` e `date` em `version.json` após o push em `main` — então essas duas linhas não precisam ser editadas à mão.
+
+4. **Validar pós-deploy** (GitHub Pages reconstrói em 1-5 min):
+   ```bash
+   curl -s https://inosx.com/version.json   # confirma version e hash novos
+   curl -I https://inosx.com/sitemap.xml    # 200 + application/xml
+   ```
+
+5. O badge flutuante no canto inferior-direito de `index.html` lê `/version.json` e renderiza `vX.Y.Z · <hash>` — é a prova visual de que o release foi publicado.
+
+**Regra resumida**: se a página mudou e vai pro ar, o `version` em `version.json` tem que mudar primeiro. Não tem release sem bump.
+
 ## Como validar mudanças
 
 Antes de commitar, rodar local:

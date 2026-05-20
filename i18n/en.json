@@ -16,30 +16,30 @@
     },
     "hero": {
       "eyebrow": "INOSX — A software studio",
-      "headline_1": "Software you can",
-      "headline_2": "use,",
-      "headline_3": "not just",
-      "headline_4": "demo.",
-      "sub": "We design and build digital products for international companies. From the first conversation to the team that runs it. AI when the problem asks for it, never as the headline.",
-      "meta_1_l": "Deployment", "meta_1_v": "in weeks",
-      "meta_2_l": "Data", "meta_2_v": "under your control",
-      "meta_3_l": "Return", "meta_3_v": "measurable"
+      "headline_1": "Software",
+      "headline_2": "shaped to your operation.",
+      "headline_3": "",
+      "headline_4": "",
+      "sub": "Custom systems built around how your company actually works. From discovery and design to a release your team runs. AI when the problem asks for it, never as the headline.",
+      "meta_1_l": "Built around", "meta_1_v": "your processes",
+      "meta_2_l": "Live in", "meta_2_v": "4–8 weeks",
+      "meta_3_l": "Operated by", "meta_3_v": "your team"
     },
     "clients": {
-      "label": "Companies that trust INOSX",
+      "label": "Built for, shipped with",
       "note": "Selected from production engagements"
     },
     "evidence": {
-      "e1": "Proprietary products running in production",
-      "e2": "Clients across multiple continents",
-      "e3": "Active engagements across industries",
+      "e1": "Eight products live and operated today",
+      "e2": "Clients on three continents",
+      "e3": "Twelve industries we ship to",
       "cue_see": "See"
     },
     "pains": {
       "eyebrow": "Sound familiar",
       "title_1": "You wanted a product.",
       "title_2": "They shipped a demo.",
-      "sub": "The patterns we see every week with product leaders and decision makers. The ones we set out to solve with craft.",
+      "sub": "Six patterns kill most enterprise software projects. We built our practice to solve every one of them.",
       "p1_t": "Vendors that ship slides, not products",
       "p1_d": "Demos that win the meeting and die at deployment. Design, engineering and process never quite arrive together.",
       "p2_t": "UX nobody on the team will use",
@@ -57,7 +57,7 @@
       "eyebrow": "What we make",
       "title_1": "Software,",
       "title_2": "designed and built.",
-      "sub": "Six practices that share one promise: digital products your team will actually use, shaped from the first sketch to the operations dashboard.",
+      "sub": "One promise across six practices: software your team actually uses, designed and built from the first sketch to the operations dashboard.",
       "s1_t": "Digital products",
       "s1_d": "Web, mobile and desktop apps shaped around the people who will use them. From research and UX to a release the team is proud to ship.",
       "s2_t": "Platforms & integration",
@@ -75,7 +75,7 @@
       "eyebrow": "INOSX Products",
       "title_1": "Off-the-shelf software,",
       "title_2": "tailored when needed.",
-      "sub": "A catalog of proprietary products in real production. Use them as-is or as a customizable starting point.",
+      "sub": "Eight products we ship and operate ourselves. Take one off the shelf, or commission your own.",
       "more": "Learn more",
       "messiax": "AI conversational service: replies, follow-up and qualification on your customer's channel.",
       "surveyflow": "Smart surveys with automated analysis and actionable insights.",
@@ -113,7 +113,7 @@
     "industries": {
       "eyebrow": "Industries",
       "title_1": "Where we",
-      "title_2": "already are."
+      "title_2": "ship today."
     },
     "faq": {
       "eyebrow": "FAQ",
@@ -157,7 +157,7 @@
       "error": "We couldn't send right now. Try again in a moment or write to support@inosx.com."
     },
     "foot": {
-      "tagline": "A software studio. We design and build the products you ship.",
+      "tagline": "A software studio. We build systems shaped to your operation.",
       "h_company": "Company",
       "h_legal": "Legal",
       "h_contact": "Contact",
