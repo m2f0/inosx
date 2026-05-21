@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "INOSX - El Futuro de la IA | Soluciones Empresariales de IA",
-    "description": "INOSX ofrece soluciones empresariales de IA que incluyen agentes autónomos, análisis conversacional y seguridad impulsada por IA. Transforme su negocio con IA práctica."
+    "title": "INOSX - Automatización con IA para Crecer Ingresos y Reducir Costos",
+    "description": "INOSX diseña agentes de IA, workflows y sistemas de automatización que ayudan a las empresas a vender más, operar más rápido y reducir trabajo manual."
   },
   "landing": {
     "nav": {
@@ -15,10 +15,10 @@
       "skip": "Saltar al contenido principal"
     },
     "hero": {
-      "eyebrow": "INOSX - Software studio",
-      "headline_1": "Software",
-      "headline_2": "moldeado a su operación.",
-      "sub": "Sistemas a medida construidos alrededor de cómo su empresa realmente trabaja. Desde discovery y diseño hasta un release que su equipo opera. IA cuando el problema lo pide, nunca como titular.",
+      "eyebrow": "INOSX - AI automation studio",
+      "headline_1": "Automatización con IA",
+      "headline_2": "para crecer ingresos y reducir costos.",
+      "sub": "Diseñamos agentes de IA, workflows y sistemas de automatización que ayudan a las empresas a vender más, operar más rápido y reducir trabajo manual.",
       "meta_1_l": "Construido en torno",
       "meta_1_v": "a sus procesos",
       "meta_2_l": "En vivo en",
@@ -56,15 +56,15 @@
     },
     "solutions": {
       "eyebrow": "Qué hacemos",
-      "title_1": "Software,",
-      "title_2": "diseñado y construido.",
-      "sub": "Seis prácticas que comparten una promesa: productos digitales que su equipo realmente usará, desde el primer boceto hasta el panel de operación.",
+      "title_1": "Automatización con IA,",
+      "title_2": "diseñada y construida.",
+      "sub": "Seis prácticas que comparten una promesa: automatización con IA que su equipo realmente usará, desde el primer diagnóstico hasta el panel de operación.",
       "s1_t": "Productos digitales",
       "s1_d": "Apps web, móviles y desktop diseñadas alrededor de las personas que las usarán. Desde investigación y UX hasta un release que el equipo quiera lanzar.",
       "s2_t": "Plataformas e integración",
       "s2_d": "APIs, integraciones, pipelines de datos y modernización de sistemas legados. Donde el software existente necesita hablar con el nuevo sin parches.",
-      "s3_t": "IA, cuando sirve",
-      "s3_d": "Agentes, plataformas de conocimiento, orquestación. En producción con observabilidad y control de costos. Nunca como titular del producto.",
+      "s3_t": "AI consulting y agentes",
+      "s3_d": "AI consulting para casos de alto retorno; luego agentes de IA, plataformas de conocimiento y orquestación en producción con observabilidad y control de costos.",
       "s4_t": "Seguridad y confianza",
       "s4_d": "CyberAI: detección, respuesta y auditoría. Visibilidad sobre lo que importa en todo el producto, sin ruido, sin teatro.",
       "s5_t": "Visión computacional",
@@ -159,7 +159,7 @@
       "error": "No fue posible enviar ahora. Inténtelo de nuevo en unos instantes o escriba a support@inosx.com."
     },
     "foot": {
-      "tagline": "Un software studio. Diseñamos y construimos los productos que usted lanza.",
+      "tagline": "Automatización con IA para crecer ingresos, acelerar operaciones y reducir trabajo manual.",
       "h_company": "Empresa",
       "h_legal": "Legal",
       "h_contact": "Contacto",

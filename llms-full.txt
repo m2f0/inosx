@@ -1,10 +1,10 @@
 # INOSX — Full content for AI engines
 
-> A software studio that designs and builds digital products for international companies. Founded 2021. Six practices, seven proprietary products in production, clients across multiple continents.
+> AI automation for revenue growth and cost reduction. INOSX designs AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work. Founded 2021.
 
 ## What INOSX is
 
-INOSX is a software studio. We design and build custom digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We are a software studio: design and engineering as one craft, shipped to production and operated with the client's team.
+INOSX is an AI automation studio. We design and build AI agents, workflows, automation systems, and custom digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We use AI automation as the primary service term, AI consulting for service-page language, and AI agents as a technical subcategory inside production systems.
 
 Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US.
 Email: support@inosx.com.
@@ -13,29 +13,33 @@ Founded: 2021.
 
 ## What we do
 
-Six practices, complementary, sharing one promise: digital products our clients' teams will actually use, shaped from the first sketch to the operations dashboard.
+Seven practices, complementary, sharing one promise: AI automation and digital products our clients' teams will actually use, shaped from the first diagnostic to the operations dashboard.
 
-### 01 — Digital products
+### 01 — AI automation
+
+AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work. Includes sales automation, operational workflows, internal tools, knowledge systems, and measurable cost-reduction use cases.
+
+### 02 — Digital products
 
 Web, mobile and desktop apps shaped around the people who will use them. From research and UX through engineering to a release the team is proud to ship. Stack chosen per project (Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem).
 
-### 02 — Platforms and integration
+### 03 — Platforms and integration
 
 APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software, cleanly. Includes ERP/CRM bridges, internal data platforms, legacy mainframe integrations and event-driven architectures.
 
-### 03 — AI, when it serves
+### 04 — AI consulting and agents
 
-Agents, knowledge platforms, orchestration. Shipped to production with observability and cost control. Never the headline of the product. We pick the right model per use case (proprietary, open-source or local) and keep the architecture open for swap.
+AI consulting for high-return use-case discovery, followed by production AI agents, knowledge platforms and orchestration. Shipped with observability and cost control. We pick the right model per use case (proprietary, open-source or local) and keep the architecture open for swap.
 
-### 04 — Security and trust (CyberAI)
+### 05 — Security and trust (CyberAI)
 
 Continuous detection, response and audit. Real visibility on what matters across the product, no noise, no theater.
 
-### 05 — Computer vision
+### 06 — Computer vision
 
 Inspection, counting, quality control and visual automation in physical operations. Edge inference and audit logs included.
 
-### 06 — Product strategy
+### 07 — Product strategy
 
 Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years of growth.
 
