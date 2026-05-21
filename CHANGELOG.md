@@ -4,6 +4,16 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [3.0.4] - 2026-05-21
+
+### Fixed
+- Corrigidos alertas do `impeccable` na landing, removendo falsos positivos de contraste e ajustando estados hover com superfície cyan acessível.
+- Trocada a dupla tipográfica para Bodoni Moda + Manrope para sair da família de fontes saturadas apontada pelo detector.
+- Ajustado o hero para a nova métrica tipográfica, preservando o H1 no primeiro fold sem overflow horizontal.
+- Alinhados `DESIGN.md`, `DESIGN.json`, `AGENTS.md` e `og.svg` com os novos tokens visuais.
+
+---
+
 ## [3.0.3] - 2026-05-21
 
 ### Changed
