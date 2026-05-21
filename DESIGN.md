@@ -7,50 +7,50 @@ colors:
   page-white: "#f3f6ff"
   ink-muted: "#c8d4ea"
   ink-quiet: "#8ea0bf"
-  ink-receded: "#5a6a87"
+  ink-receded: "#7284a3"
   hairline: "#c7d7f01a"
   hairline-strong: "#c7d7f02e"
   drafting-cyan: "#7dd3fc"
   schematic-blue: "#60a5fa"
-  deep-cyan: "#38bdf8"
+  deep-cyan: "#155e75"
   signal-success: "#86efac"
   signal-error: "#fca5a5"
 typography:
   display:
-    fontFamily: "Fraunces, Georgia, serif"
-    fontSize: "clamp(3.2rem, 8.5vw, 7.5rem)"
+    fontFamily: "Bodoni Moda, Georgia, serif"
+    fontSize: "clamp(3rem, 7.4vw, 6.5rem)"
     fontWeight: 300
-    lineHeight: 0.98
-    letterSpacing: "-0.04em"
-    fontVariation: "opsz 144"
+    lineHeight: 0.9
+    letterSpacing: "-0.035em"
+    fontVariation: "opsz 96"
   headline:
-    fontFamily: "Fraunces, Georgia, serif"
+    fontFamily: "Bodoni Moda, Georgia, serif"
     fontSize: "clamp(2.4rem, 5.5vw, 4.5rem)"
     fontWeight: 300
     lineHeight: 1.02
     letterSpacing: "-0.035em"
-    fontVariation: "opsz 96"
+    fontVariation: "opsz 72"
   title:
-    fontFamily: "Fraunces, Georgia, serif"
+    fontFamily: "Bodoni Moda, Georgia, serif"
     fontSize: "clamp(1.3rem, 1.8vw, 1.65rem)"
     fontWeight: 400
     lineHeight: 1.25
     letterSpacing: "-0.015em"
     fontVariation: "opsz 24"
   body:
-    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontFamily: "Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
     letterSpacing: "normal"
   lead:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "Manrope, sans-serif"
     fontSize: "clamp(1.05rem, 1.35vw, 1.18rem)"
     fontWeight: 400
     lineHeight: 1.55
     letterSpacing: "normal"
   label:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "Manrope, sans-serif"
     fontSize: "0.72rem"
     fontWeight: 500
     lineHeight: 1
@@ -104,16 +104,16 @@ INOSX is a software studio, not an AI lab and not an engineering subcontractor. 
 
 The system explicitly rejects the saturated lanes that the category trains for. It is **not SaaS-cream** (no white-on-white with violet gradient blob, no inflated 3D illustrations, no hero promising "AI for everything"). It is **not AI-lab-generic** (no monospace-on-bone-paper, no asterisk-emblem, no "we believe AI will" copy). It is **not engineering-only** (no terminal aesthetic, no schematic diagrams as decoration, no "stack-first" copy that hides the product). It is not creative-agency parallax. It is not the navy-and-gold transformation-deck of a big consultancy. The voice is adult, speaks to a product leader and to a CTO at the same time, lands evidence over pitch.
 
-Density follows the principle "show, don't promise": every section earns its space with a real artefact (real client logo, real product, real engagement). Headlines are set as editorial — large, italic-inflected Fraunces with the optical-size axis pushed wide so display-size feels carved, not inflated. Body is Inter, set long-form. White space is asymmetric on purpose: the eye travels by hierarchy, not by symmetry. The page reads as a portfolio that happens to also sell, not as a pitch deck that happens to ship.
+Density follows the principle "show, don't promise": every section earns its space with a real artefact (real client logo, real product, real engagement). Headlines are set as editorial — large, italic-inflected Bodoni Moda with the optical-size axis pushed wide so display-size feels carved, not inflated. Body is Manrope, set long-form. White space is asymmetric on purpose: the eye travels by hierarchy, not by symmetry. The page reads as a portfolio that happens to also sell, not as a pitch deck that happens to ship.
 
 **Key Characteristics:**
 - Deep blue-black surface (`#0b1020`) tinted toward the brand hue — never pure black
 - Paper-white text (`#f3f6ff`) — tinted toward the surface, never pure white
 - Hairline borders at 10% opacity organize the page; no card backgrounds, no shadows
-- Display set in Fraunces variable font with optical-size axis maxed out (opsz 144)
+- Display set in Bodoni Moda variable font with optical-size axis maxed out (opsz 96)
 - Accent palette restrained to ≤10% of any screen — drafting cyan, pressed iris, schematic blue
 - Section labels in tracked-out small-caps with Roman numerals as ordinals (`i.`, `ii.`)
-- Italic Fraunces is the signature voice — used sparingly to mark accent words in headlines
+- Italic Bodoni Moda is the signature voice — used sparingly to mark accent words in headlines
 - Background atmosphere via slow-drifting blurred blobs, never via gradient panels
 
 ## 2. Colors: The Vellum Palette
@@ -125,7 +125,7 @@ The palette is a single deep blue-tinted neutral surface with a paper-white type
 
 ### Secondary
 - **Schematic Blue** (`#60a5fa`): The mid-tone bridge inside the brand gradient. Used only as part of `--gradient-primary`, never as a standalone surface.
-- **Deep Cyan** (`#38bdf8`): The dark anchor of the gradient. Same rule: lives inside gradients, never as a flat color.
+- **Deep Cyan** (`#155e75`): Accessible cyan surface for filled hover states and dark gradient stops where light text must remain readable.
 
 ### Neutral
 - **Midnight Vellum** (`#0b1020`): The page surface. Deep blue-tinted near-black; the hue tilts the entire palette warm-cool. Body background.
@@ -133,7 +133,7 @@ The palette is a single deep blue-tinted neutral surface with a paper-white type
 - **Page White** (`#f3f6ff`): The type colour and the primary button background. Tinted slightly cool toward the surface; never `#fff`.
 - **Ink Muted** (`#c8d4ea`): Body and lead paragraph text. Carries the long reading.
 - **Ink Quiet** (`#8ea0bf`): Section subheads, metadata, label text, secondary copy.
-- **Ink Receded** (`#5a6a87`): Decorative dividers in section labels, placeholder text, footer micro-copy.
+- **Ink Receded** (`#7284a3`): Decorative dividers in section labels, placeholder text, footer micro-copy.
 
 ### Hairlines
 - **Hairline** (`rgba(199,215,240,0.10)`): The default 1px divider. Section bottoms, card grid lines, form field underlines, FAQ separators. The page is held together almost entirely by this single line value.
@@ -152,27 +152,27 @@ The palette is a single deep blue-tinted neutral surface with a paper-white type
 
 ## 3. Typography
 
-**Display Font:** Fraunces (with Georgia, serif fallback)
-**Body Font:** Inter (with `-apple-system`, `BlinkMacSystemFont`, `Segoe UI`, sans-serif fallback)
+**Display Font:** Bodoni Moda (with Georgia, serif fallback)
+**Body Font:** Manrope (with `-apple-system`, `BlinkMacSystemFont`, `Segoe UI`, sans-serif fallback)
 
-**Character:** A pair built on intentional contrast: Fraunces is a high-contrast variable serif with strong optical-size axis, set quietly until pushed to display where it becomes carved and editorial. Inter is the technical voice — quiet, even, neutral — carrying body, UI labels and meta. The pair reads as "magazine-grade publication produced by an engineering studio".
+**Character:** A pair built on intentional contrast: Bodoni Moda is a high-contrast variable serif with strong optical-size axis, set quietly until pushed to display where it becomes carved and editorial. Manrope is the technical voice — quiet, even, neutral — carrying body, UI labels and meta. The pair reads as "magazine-grade publication produced by an engineering studio".
 
 ### Hierarchy
 
-- **Display** (weight 300, `clamp(3.2rem, 8.5vw, 7.5rem)`, line-height 0.98, letter-spacing -0.04em, `font-variation-settings: opsz 144`): Hero headline only. Maximum optical size makes terminals and joinery visible — at this scale the font is meant to look carved.
-- **Headline** (weight 300, `clamp(2.4rem, 5.5vw, 4.5rem)`, line-height 1.02, opsz 96): Section H2s. One step softer than display — same family, narrower optical axis.
+- **Display** (weight 300, `clamp(3rem, 7.4vw, 6.5rem)`, line-height 0.9, letter-spacing -0.035em, `font-variation-settings: opsz 96`): Hero headline only. Maximum optical size makes terminals and joinery visible at this scale.
+- **Headline** (weight 300, `clamp(2.4rem, 5.5vw, 4.5rem)`, line-height 1.02, opsz 72): Section H2s. One step softer than display, same family, narrower optical axis.
 - **Title** (weight 400, `clamp(1.3rem, 1.8vw, 1.65rem)`, line-height 1.25, opsz 24): Card H3s and FAQ summaries. Optical size dialed back so the serif reads as text-grade, not display-grade.
-- **Body** (weight 400, `1rem`, line-height 1.6): Inter, default. Used for everything that is not display, label, or italic accent. Body line length capped at 65–75ch.
-- **Lead** (weight 400, `clamp(1.05rem, 1.35vw, 1.18rem)`, line-height 1.55): Inter, the slightly-larger reading copy directly under H2s. Color `Ink Muted`.
-- **Label** (weight 500, `0.72rem`, letter-spacing 0.22em, uppercase): Inter, tracked-out small-caps. Used for section eyebrows, form field labels, footer column heads. Always paired with a Roman numeral (`i.` `ii.`) set in Fraunces italic.
+- **Body** (weight 400, `1rem`, line-height 1.6): Manrope, default. Used for everything that is not display, label, or italic accent. Body line length capped at 65–75ch.
+- **Lead** (weight 400, `clamp(1.05rem, 1.35vw, 1.18rem)`, line-height 1.55): Manrope, the slightly-larger reading copy directly under H2s. Color `Ink Muted`.
+- **Label** (weight 500, `0.72rem`, letter-spacing 0.22em, uppercase): Manrope, tracked-out small-caps. Used for section eyebrows, form field labels, footer column heads. Always paired with a Roman numeral (`i.` `ii.`) set in Bodoni Moda italic.
 
 ### Named Rules
 
-**The Italic Signature Rule.** Fraunces italic at weight 300 is the brand voice. It marks one or two accent words per headline (`delivers`, `not promises`) and one or two phrases on the page. It is never used for full sentences, never for body text, and never inside buttons or labels. Italic is a punctuation mark.
+**The Italic Signature Rule.** Bodoni Moda italic at weight 300 is the brand voice. It marks one or two accent words per headline (`delivers`, `not promises`) and one or two phrases on the page. It is never used for full sentences, never for body text, and never inside buttons or labels. Italic is a punctuation mark.
 
-**The Optical-Size Discipline.** When Fraunces appears at headline size or larger, `opsz` axis must be 96 or 144. Skipping this is the single fastest way to make the serif look like a free Google Font instead of a typeset display face.
+**The Optical-Size Discipline.** When Bodoni Moda appears at headline size or larger, `opsz` axis must be 72 or 96. Skipping this is the single fastest way to make the serif look like a free Google Font instead of a typeset display face.
 
-**The Inter-Quiet Rule.** Inter never goes above weight 600. The contrast is always Fraunces:Inter, never Inter-bold:Inter-regular. Heavy Inter pulls the page into SaaS lane.
+**The Manrope-Quiet Rule.** Manrope never goes above weight 600. The contrast is always Bodoni Moda:Manrope, never Manrope-bold:Manrope-regular. Heavy Manrope pulls the page into SaaS lane.
 
 ## 4. Elevation
 
@@ -202,12 +202,12 @@ The system is **flat by doctrine**. **Zero `box-shadow` anywhere.** Depth is rea
 
 ### Cards / Containers
 - **Cards are forbidden as default containers.** When a grid is needed, use border-collapsed grid lines (`Hairline`) instead of card backgrounds.
-- **Product card** (the one exception): no background fill at rest; gradient soft fill on hover (`gradient-soft`). Borders supplied by the parent grid's `Hairline`. Internal padding 36px.
+- **Product card** (the one exception): no background fill at rest; gradient soft fill on hover (`gradient-soft`). Borders supplied by the parent grid's `Hairline`. Manropenal padding 36px.
 - **Solution item:** no card. A `Hairline` top border, italic numeral idx, H3, body. On hover the top border switches to `Drafting Cyan`.
 - **Pain row:** full-width row with 1fr / 1fr / 4fr column grid, top hairline border, italic Roman numeral as the index column.
 
 ### Inputs / Fields
-- **Style:** transparent background, no border on three sides; only a `Hairline` bottom border. Field input is set in **Fraunces** at 1.15rem weight 400 — the typed value is a typographic event. Label is Inter small-caps tracked-out (the **Label** spec from §3).
+- **Style:** transparent background, no border on three sides; only a `Hairline` bottom border. Field input is set in **Bodoni Moda** at 1.15rem weight 400 — the typed value is a typographic event. Label is Manrope small-caps tracked-out (the **Label** spec from §3).
 - **Focus:** bottom border switches from `Hairline` to `Drafting Cyan`. No box, no glow.
 - **Placeholder:** `Ink Receded`, italic, weight 300. Whispered, not shouted.
 - **Error / Success:** colour-only indicator (`Signal Error` / `Signal Success`) plus copy line above the line — never a red box.
@@ -215,25 +215,25 @@ The system is **flat by doctrine**. **Zero `box-shadow` anywhere.** Depth is rea
 ### Navigation
 - Sticky topbar at 76px height, backdrop-filtered (`blur(18px) saturate(140%)`), background `rgba(11,16,32,0.62)` so content shows through.
 - Links: `Ink Quiet` default, `Page White` hover. No underline, no active-state pill.
-- Brand wordmark in Fraunces 1.5rem weight 400 with a single italic dot (`.`) in `Drafting Cyan` — the punctuation IS the accent.
+- Brand wordmark in Bodoni Moda 1.5rem weight 400 with a single italic dot (`.`) in `Drafting Cyan` — the punctuation IS the accent.
 
 ### Section labels (signature)
-The single most distinctive component. Three parts in a row: italic Roman numeral (`i.`, `ii.`) in Fraunces 0.95rem `Drafting Cyan`, then a 28px hairline bar in `Ink Receded`, then small-caps tracked-out label text. Used as section eyebrows on every block. This is the spine of the page.
+The single most distinctive component. Three parts in a row: italic Roman numeral (`i.`, `ii.`) in Bodoni Moda 0.95rem `Drafting Cyan`, then a 28px hairline bar in `Ink Receded`, then small-caps tracked-out label text. Used as section eyebrows on every block. This is the spine of the page.
 
 ### Industries list (signature)
-A horizontal flowing list of industry names set in Fraunces display-weight (clamp 1.4rem to 2rem) at 300, separated by `·` middle dots in `Ink Receded`. Each name turns italic on hover. Refuses the chip-grid lane entirely.
+A horizontal flowing list of industry names set in Bodoni Moda display-weight (clamp 1.4rem to 2rem) at 300, separated by `·` middle dots in `Ink Receded`. Each name turns italic on hover. Refuses the chip-grid lane entirely.
 
 ### Marquee logos (signature)
 Continuous horizontal scroll of client logos, 220px slot width, 110px height, masked at both edges with a CSS gradient mask (`linear-gradient(90deg, transparent, #000 8% 92%, transparent)`). Animation: 45s linear infinite. Pauses on hover. Logos default to `opacity: 0.55`, scale to `1.06` on hover with full opacity. The grayscale fade is the brand's "we don't shout these names" gesture.
 
 ### Hero (no decoration)
-The hero is a two-column typographic composition: an oversized Fraunces H1 on the left, a Lead paragraph plus a hairline-divided meta strip on the right. There is **no orb, no illustration, no graphic ornament**. The hero earns its weight from typography alone (Fraunces opsz 144 italic accents) and one subtle radial gradient (drafting-cyan at 6% opacity) painted as the section's `background`. Decorative shapes were retired during pivot v2 — they were reading as "AI lab" instead of "software studio".
+The hero is a two-column typographic composition: an oversized Bodoni Moda H1 on the left, a Lead paragraph plus a hairline-divided meta strip on the right. There is **no orb, no illustration, no graphic ornament**. The hero earns its weight from typography alone (Bodoni Moda opsz 96 italic accents) and one subtle radial gradient (drafting-cyan at 6% opacity) painted as the section's `background`. Decorative shapes were retired during pivot v2 — they were reading as "AI lab" instead of "software studio".
 
 ### Evidence strip (signature)
 Replaces the conventional "stats with big gradient numerals" pattern. Three navigable links arranged in a row, each with a one-line claim plus a small UPPERCASE cue (e.g. `SEE →`) on the right. Bottom border is transparent at rest, switches to drafting-cyan on hover. Each link anchors to a section that contains the actual evidence (`#products`, `#clients`, `#industries`). The doctrine is "show, don't promise" — numbers are replaced by navigable proof.
 
 ### Selected Work item (signature)
-Three-column grid (idx / body / meta) with a 1px hairline top border. Idx is the Fraunces italic ordinal in drafting-cyan. Body holds the client wordmark (Fraunces 1.4-1.8rem) plus a single-sentence technical description. Meta is a small UPPERCASE column listing industry and stack. No quote marks, no portrait, no rating stars. The item replaces the conventional "anonymous testimonial" pattern.
+Three-column grid (idx / body / meta) with a 1px hairline top border. Idx is the Bodoni Moda italic ordinal in drafting-cyan. Body holds the client wordmark (Bodoni Moda 1.4-1.8rem) plus a single-sentence technical description. Meta is a small UPPERCASE column listing industry and stack. No quote marks, no portrait, no rating stars. The item replaces the conventional "anonymous testimonial" pattern.
 
 ### Skip link
 Hidden above the viewport at rest, slides into view on `:focus` with a 0.2s `ease` translate. Sits at the top-left, page-white background on midnight-vellum text, drafting-cyan focus outline. Aterrissa em `#main` (hero section).
@@ -247,11 +247,11 @@ A single global rule paints a 2px solid drafting-cyan outline with 3-4px offset 
 - **Do** tint every neutral toward the brand blue. `Midnight Vellum` (`#0b1020`) and `Page White` (`#f3f6ff`) are the only allowed surface and type colors.
 - **Do** set every section eyebrow with the trio: italic Roman numeral, hairline bar, tracked-out label. This is the spine.
 - **Do** keep accents below 10% surface coverage. `Drafting Cyan` is the only flat accent. `Schematic Blue` and `Deep Cyan` exist solely inside the brand gradient.
-- **Do** push Fraunces' optical-size axis (`opsz 144` for hero, `96` for H2, `24` for H3). Variable axis is the signature.
-- **Do** use one or two italic accent words per headline (Fraunces italic 300). One per section, never more.
+- **Do** push Bodoni Moda's optical-size axis (`opsz 96` for hero, `72` for H2, `24` for H3). Variable axis is the signature.
+- **Do** use one or two italic accent words per headline (Bodoni Moda italic 300). One per section, never more.
 - **Do** organize the page with `Hairline` (10%) borders. Card backgrounds are forbidden as a default.
 - **Do** keep buttons to two shapes: pill primary and pill ghost. Anything else is a text link.
-- **Do** set form-field values in Fraunces. The user's typed input is a typographic event, not data entry.
+- **Do** set form-field values in Bodoni Moda. The user's typed input is a typographic event, not data entry.
 - **Do** mask marquee edges with a transparent gradient. Hard cuts at the viewport edge are forbidden.
 - **Do** disable all motion (marquee, blobs, reveals, orb spin) when `prefers-reduced-motion: reduce`.
 
@@ -267,6 +267,6 @@ A single global rule paints a 2px solid drafting-cyan outline with 3-4px offset 
 - **Don't** make the page feel like an AI lab — no typewriter mono on bone, no asterisk emblem, no "we believe AI" first-person copy, no "frontier" buzzword.
 - **Don't** make the page feel like a transformation-deck — no stock photo of people in a meeting, no flat-coloured pictogram icons, no "digital transformation journey" copy, no navy + gold.
 - **Don't** add scroll-jacking, parallax pinning, or WebGL flourishes. Motion is restrained: marquee, breathing orb, ambient blobs, reveal-on-scroll. Nothing else.
-- **Don't** use Inter weight 700 or above. Heavy Inter is a SaaS tell.
+- **Don't** use Manrope weight 700 or above. Heavy Manrope is a SaaS tell.
 - **Don't** use em dashes in copy. Use commas, colons, semicolons, periods, parentheses.
 - **Don't** invent badges (`Trusted by 500+`, `4.9/5 stars`). Confidence is quiet — evidence is the real client logos and the real product names.

@@ -13,8 +13,8 @@ captação de leads via formulário. Servido em `https://inosx.com` por
 ## Stack
 
 - **Frontend:** HTML/CSS/JS estático puro. Sem framework.
-- **Tipografia:** Fraunces (display, variable, opsz axis 144/96/24) +
-  Inter (body, weight ≤ 600). Carregadas via Google Fonts.
+- **Tipografia:** Bodoni Moda (display, variable, opsz axis 96/72/24) +
+  Manrope (body, weight ? 600). Carregadas via Google Fonts.
 - **i18n:** sistema próprio em `i18n/i18n.js` lendo `i18n/{en,pt,es}.json`.
   Idioma default = EN. Toggle PT/EN no nav; ES presente em JSON mas não
   wirado na UI ainda.
