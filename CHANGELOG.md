@@ -4,6 +4,16 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [3.0.3] - 2026-05-21
+
+### Changed
+- Reposicionada a home para usar **AI automation** como termo principal de SEO.
+- Atualizados headline, subheadline, meta tags, Open Graph, Twitter cards e JSON-LD da landing para enfatizar crescimento de receita, redução de custos e menos trabalho manual.
+- Alinhadas traduções EN/PT/ES com a nova mensagem principal.
+- Atualizados `llms.txt` e `llms-full.txt` para GEO, usando AI automation como termo principal, AI consulting como linguagem de serviço e AI agents como subcategoria técnica.
+
+---
+
 ## [3.0.2] - 2026-05-20
 
 ### Fixed
