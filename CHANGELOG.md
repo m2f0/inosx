@@ -4,6 +4,14 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [3.0.6] - 2026-06-01
+
+### Changed
+- Encurtados os textos em destaque da home para incluir automação, criação de software, web software e AI software sem alongar o hero.
+- Ajustados títulos principais em EN/PT/ES e metatítulos sociais para manter a mensagem mais direta.
+
+---
+
 ## [3.0.5] - 2026-06-01
 
 ### Changed

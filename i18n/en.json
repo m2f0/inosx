@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "INOSX - AI Automation, Custom Software, Web Software and AI Software",
+    "title": "INOSX - AI Automation and Software Creation",
     "description": "INOSX designs AI automation, custom software, web software and AI software: agents, workflows and systems that help businesses sell more, operate faster and reduce manual work."
   },
   "landing": {
@@ -17,7 +17,7 @@
     "hero": {
       "eyebrow": "INOSX — AI automation studio",
       "headline_1": "AI Automation",
-      "headline_2": "for Revenue Growth and Cost Reduction",
+      "headline_2": "Custom, Web and AI Software",
       "sub": "We design AI automation, custom software, web software and AI software: AI agents, workflows and systems that help businesses sell more, operate faster and reduce manual work.",
       "meta_1_l": "Built around", "meta_1_v": "your processes",
       "meta_2_l": "Live in", "meta_2_v": "4–8 weeks",
@@ -53,8 +53,8 @@
     },
     "solutions": {
       "eyebrow": "What we make",
-      "title_1": "AI automation,",
-      "title_2": "designed and built.",
+      "title_1": "Automation and software,",
+      "title_2": "built for use.",
       "sub": "One promise across six practices: AI automation, custom software, web software and AI software your team actually uses, designed and built from the first diagnostic to the operations dashboard.",
       "s1_t": "Custom software & web software",
       "s1_d": "Creation of custom software, web software, AI software and web, mobile and desktop apps shaped around the people who will use them.",
