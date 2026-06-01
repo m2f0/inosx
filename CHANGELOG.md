@@ -4,6 +4,14 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [3.0.5] - 2026-06-01
+
+### Changed
+- Ampliada a mensagem de SEO da home para incluir criação de softwares, web softwares e AI softwares junto de AI automation.
+- Atualizados hero, metadados, Open Graph, Twitter cards, JSON-LD, i18n e arquivos GEO/LLM com a nova cobertura de oferta.
+
+---
+
 ## [3.0.4] - 2026-05-21
 
 ### Fixed

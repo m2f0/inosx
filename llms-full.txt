@@ -1,10 +1,10 @@
 # INOSX — Full content for AI engines
 
-> AI automation for revenue growth and cost reduction. INOSX designs AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work. Founded 2021.
+> AI automation for revenue growth and cost reduction. INOSX designs AI automation, custom software, web software and AI software: AI agents, workflows and systems that help businesses sell more, operate faster and reduce manual work. Founded 2021.
 
 ## What INOSX is
 
-INOSX is an AI automation studio. We design and build AI agents, workflows, automation systems, and custom digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We use AI automation as the primary service term, AI consulting for service-page language, and AI agents as a technical subcategory inside production systems.
+INOSX is an AI automation and software creation studio. We design and build AI agents, workflows, automation systems, custom software, web software, AI software and custom digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We use AI automation as the primary service term, custom software, web software and AI software as software-creation terms, AI consulting for service-page language, and AI agents as a technical subcategory inside production systems.
 
 Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US.
 Email: support@inosx.com.
@@ -13,15 +13,15 @@ Founded: 2021.
 
 ## What we do
 
-Seven practices, complementary, sharing one promise: AI automation and digital products our clients' teams will actually use, shaped from the first diagnostic to the operations dashboard.
+Seven practices, complementary, sharing one promise: AI automation, custom software, web software and AI software our clients' teams will actually use, shaped from the first diagnostic to the operations dashboard.
 
 ### 01 — AI automation
 
 AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work. Includes sales automation, operational workflows, internal tools, knowledge systems, and measurable cost-reduction use cases.
 
-### 02 — Digital products
+### 02 — Custom software and web software
 
-Web, mobile and desktop apps shaped around the people who will use them. From research and UX through engineering to a release the team is proud to ship. Stack chosen per project (Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem).
+Creation of custom software, web software, AI software and web, mobile and desktop apps shaped around the people who will use them. From research and UX through engineering to a release the team is proud to ship. Stack chosen per project (Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem).
 
 ### 03 — Platforms and integration
 

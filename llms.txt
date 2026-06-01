@@ -1,8 +1,8 @@
 # INOSX
 
-> AI automation for revenue growth and cost reduction. INOSX designs AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work.
+> AI automation for revenue growth and cost reduction. INOSX designs AI automation, custom software, web software and AI software: AI agents, workflows and systems that help businesses sell more, operate faster and reduce manual work.
 
-INOSX is an AI automation studio founded in 2021. We design and build AI agents, workflows, automation systems, and custom digital products end-to-end for B2B clients across multiple continents. Our practice covers six fronts: AI automation, digital products, platforms and integration, security and trust (CyberAI), computer vision, and product strategy.
+INOSX is an AI automation and software creation studio founded in 2021. We design and build AI agents, workflows, automation systems, custom software, web software, AI software and custom digital products end-to-end for B2B clients across multiple continents. Our practice covers seven fronts: AI automation, custom software and web software, platforms and integration, AI consulting and agents, security and trust (CyberAI), computer vision, and product strategy.
 
 The studio's commitment is "show, don't promise": real clients in production, real proprietary products in operation, real engagements documented as Selected Work. We use AI automation as the primary service term, AI consulting for service-page language, and AI agents as a technical subcategory inside production systems.
 
@@ -18,7 +18,7 @@ The studio's commitment is "show, don't promise": real clients in production, re
 ## Practices
 
 - **AI automation** — AI agents, workflows, and automation systems for revenue growth, faster operations, and reduced manual work.
-- **Digital products** — Web, mobile and desktop apps shaped from research and UX through engineering and operation.
+- **Custom software and web software** — Creation of custom software, web software, AI software, and web, mobile and desktop apps shaped from research and UX through engineering and operation.
 - **Platforms and integration** — APIs, integrations, data pipelines, legacy modernization. Where existing software has to talk to new software.
 - **AI consulting and agents** — High-return use-case discovery, knowledge platforms, orchestration, and production AI agents shipped with observability and cost control.
 - **Security and trust (CyberAI)** — Continuous detection, response and audit across the product surface.
