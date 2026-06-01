@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "INOSX - Automação com IA, Criação de Softwares, Web Softwares e AI Softwares",
+    "title": "INOSX - Automação com IA e Criação de Softwares",
     "description": "A INOSX desenha automação com IA, criação de softwares, web softwares e AI softwares: agentes, workflows e sistemas que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual."
   },
   "landing": {
@@ -17,7 +17,7 @@
     "hero": {
       "eyebrow": "INOSX — AI automation studio",
       "headline_1": "Automação com IA",
-      "headline_2": "para crescer receita e reduzir custos.",
+      "headline_2": "softwares, web e AI softwares.",
       "sub": "Desenhamos automação com IA, criação de softwares, web softwares e AI softwares: agentes de IA, workflows e sistemas que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual.",
       "meta_1_l": "Em torno", "meta_1_v": "dos seus processos",
       "meta_2_l": "No ar em", "meta_2_v": "4–8 semanas",
@@ -53,8 +53,8 @@
     },
     "solutions": {
       "eyebrow": "O que fazemos",
-      "title_1": "Automação com IA,",
-      "title_2": "desenhada e construída.",
+      "title_1": "Automação e softwares,",
+      "title_2": "feitos para usar.",
       "sub": "Uma promessa em seis práticas: automação com IA, criação de softwares, web softwares e AI softwares que seu time usa de verdade, do primeiro diagnóstico ao painel de operação.",
       "s1_t": "Criação de softwares",
       "s1_d": "Criação de softwares sob medida, web softwares, AI softwares e apps web, mobile e desktop modelados a partir de quem vai usar.",
