@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "INOSX - AI Automation for Revenue Growth and Cost Reduction",
-    "description": "INOSX designs AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work."
+    "title": "INOSX - AI Automation, Custom Software, Web Software and AI Software",
+    "description": "INOSX designs AI automation, custom software, web software and AI software: agents, workflows and systems that help businesses sell more, operate faster and reduce manual work."
   },
   "landing": {
     "nav": {
@@ -18,7 +18,7 @@
       "eyebrow": "INOSX — AI automation studio",
       "headline_1": "AI Automation",
       "headline_2": "for Revenue Growth and Cost Reduction",
-      "sub": "We design AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work.",
+      "sub": "We design AI automation, custom software, web software and AI software: AI agents, workflows and systems that help businesses sell more, operate faster and reduce manual work.",
       "meta_1_l": "Built around", "meta_1_v": "your processes",
       "meta_2_l": "Live in", "meta_2_v": "4–8 weeks",
       "meta_3_l": "Operated by", "meta_3_v": "your team"
@@ -55,9 +55,9 @@
       "eyebrow": "What we make",
       "title_1": "AI automation,",
       "title_2": "designed and built.",
-      "sub": "One promise across six practices: AI automation your team actually uses, designed and built from the first diagnostic to the operations dashboard.",
-      "s1_t": "Digital products",
-      "s1_d": "Web, mobile and desktop apps shaped around the people who will use them. From research and UX to a release the team is proud to ship.",
+      "sub": "One promise across six practices: AI automation, custom software, web software and AI software your team actually uses, designed and built from the first diagnostic to the operations dashboard.",
+      "s1_t": "Custom software & web software",
+      "s1_d": "Creation of custom software, web software, AI software and web, mobile and desktop apps shaped around the people who will use them.",
       "s2_t": "Platforms & integration",
       "s2_d": "APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software without a remix.",
       "s3_t": "AI consulting & agents",

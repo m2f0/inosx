@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "INOSX - Automação com IA para Crescer Receita e Reduzir Custos",
-    "description": "A INOSX desenha agentes de IA, workflows e sistemas de automação que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual."
+    "title": "INOSX - Automação com IA, Criação de Softwares, Web Softwares e AI Softwares",
+    "description": "A INOSX desenha automação com IA, criação de softwares, web softwares e AI softwares: agentes, workflows e sistemas que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual."
   },
   "landing": {
     "nav": {
@@ -18,7 +18,7 @@
       "eyebrow": "INOSX — AI automation studio",
       "headline_1": "Automação com IA",
       "headline_2": "para crescer receita e reduzir custos.",
-      "sub": "Desenhamos agentes de IA, workflows e sistemas de automação que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual.",
+      "sub": "Desenhamos automação com IA, criação de softwares, web softwares e AI softwares: agentes de IA, workflows e sistemas que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual.",
       "meta_1_l": "Em torno", "meta_1_v": "dos seus processos",
       "meta_2_l": "No ar em", "meta_2_v": "4–8 semanas",
       "meta_3_l": "Operado pelo", "meta_3_v": "seu time"
@@ -55,9 +55,9 @@
       "eyebrow": "O que fazemos",
       "title_1": "Automação com IA,",
       "title_2": "desenhada e construída.",
-      "sub": "Uma promessa em seis práticas: automação com IA que seu time usa de verdade, desenhada e construída do primeiro diagnóstico ao painel de operação.",
-      "s1_t": "Produtos digitais",
-      "s1_d": "Apps web, mobile e desktop modelados a partir de quem vai usar. Da pesquisa e UX a um release que o time tem orgulho de shipar.",
+      "sub": "Uma promessa em seis práticas: automação com IA, criação de softwares, web softwares e AI softwares que seu time usa de verdade, do primeiro diagnóstico ao painel de operação.",
+      "s1_t": "Criação de softwares",
+      "s1_d": "Criação de softwares sob medida, web softwares, AI softwares e apps web, mobile e desktop modelados a partir de quem vai usar.",
       "s2_t": "Plataformas & integração",
       "s2_d": "APIs, integrações, pipelines de dados e modernização de legado. Onde software existente precisa conversar com software novo, sem remendo.",
       "s3_t": "AI consulting & agentes",
