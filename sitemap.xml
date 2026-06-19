@@ -69,4 +69,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inosx.com/terms.html" />
   </url>
 
+  <url>
+    <loc>https://inosx.com/privacy-policy</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

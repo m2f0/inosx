@@ -4,6 +4,17 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [3.1.0] - 2026-06-19
+
+### Added
+- Adicionada pagina publica de Politica de Privacidade em `https://inosx.com/privacy-policy`, adequada para configuracao do LinkedIn Developer App.
+- Incluidas secoes sobre dados processados, uso de LinkedIn OAuth, nao venda de dados, retencao basica, contato e solicitacao de exclusao.
+
+### Changed
+- Atualizados links de privacidade na home, no rodape de termos e no sitemap para apontar para a nova URL publica.
+
+---
+
 ## [3.0.6] - 2026-06-01
 
 ### Changed

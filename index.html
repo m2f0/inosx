@@ -56,8 +56,8 @@
       --accent-2: #60a5fa;
       --accent-3: #155e75;
       --accent-surface: #155e75;
-      --gradient-primary: linear-gradient(135deg, #083344 0%, #0e7490 64%, #155e75 100%);
-      --gradient-soft: linear-gradient(135deg, rgba(8,51,68,0.52) 0%, rgba(14,116,144,0.28) 100%);
+      --gradient-primary: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 64%, var(--accent-3) 100%);
+      --gradient-soft: linear-gradient(135deg, var(--bg-soft) 0%, var(--accent) 100%);
 
       --font-display: 'Bodoni Moda', Georgia, serif;
       --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -80,7 +80,6 @@
     :focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
-      border-radius: 2px;
     }
     .btn:focus-visible,
     .form-submit:focus-visible {
@@ -397,7 +396,7 @@
 
     /* ============ Logos — carrossel infinito ============ */
     .clients {
-      padding: clamp(3rem, 6vw, 5rem) 0;
+      padding: 5rem 0;
       border-top: 1px solid var(--line);
     }
     .clients-head {
@@ -422,8 +421,8 @@
       overflow: hidden;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0) 8%, rgb(0 0 0) 92%, transparent 100%);
-              mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0) 8%, rgb(0 0 0) 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
+              mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
     }
     .marquee-track {
       display: flex;
@@ -494,7 +493,7 @@
     }
 
     /* ============ Evidence strip — substitui Stats por links navegáveis ============ */
-    .evidence { padding: clamp(2rem, 4vw, 3rem) 0; border-top: 1px solid var(--line); }
+    .evidence { padding: 3rem 0; border-top: 1px solid var(--line); }
     .evidence-inner {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -520,8 +519,7 @@
     .evidence .ev-cue {
       font-family: var(--font-body);
       font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      letter-spacing: 0.04em;
       color: var(--ink-3);
       transition: color 0.25s, transform 0.25s;
       display: inline-flex;
@@ -702,8 +700,7 @@
       gap: 0.35rem;
       font-family: var(--font-body);
       font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      letter-spacing: 0.04em;
       color: var(--ink-3);
     }
     @media (max-width: 880px) {
@@ -773,7 +770,7 @@
     /* ============ Lead capture ============ */
     .lead-section {
       position: relative;
-      padding: clamp(5rem, 10vw, 9rem) 0;
+      padding: 9rem 0;
       border-top: 1px solid var(--line);
       overflow: hidden;
     }
@@ -808,7 +805,7 @@
       align-items: baseline;
     }
     .lead-bullets li::before {
-      content: '—';
+      content: '-';
       color: var(--accent-text);
       font-family: var(--font-display);
       font-style: italic;
@@ -818,8 +815,7 @@
       font-family: var(--font-body);
       font-size: 0.74rem;
       font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      letter-spacing: 0.04em;
       color: var(--ink-3);
       margin-bottom: 2rem;
       padding-bottom: 1.25rem;
@@ -836,8 +832,7 @@
     .field:focus-within { border-bottom-color: var(--accent-text); }
     .field label {
       font-size: 0.74rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      letter-spacing: 0.04em;
       color: var(--ink-3);
       font-weight: 500;
     }
@@ -900,10 +895,10 @@
       padding: 0.85rem 1rem;
       margin-top: 1rem;
       font-size: 0.92rem;
-      border-radius: 4px;
+      border-radius: 0;
     }
-    .form-success { color: #86efac; background: #0c1f15; border: 1px solid #1a3a25; }
-    .form-error   { color: #fca5a5; background: #1f0c0c; border: 1px solid #3a1a1a; }
+    .form-success { color: var(--accent-text); background: var(--bg-soft); border: 1px solid var(--line-2); }
+    .form-error   { color: var(--ink-2); background: var(--bg-soft); border: 1px solid var(--line-2); }
     .form-success.show, .form-error.show { display: block; }
 
     /* ============ Footer ============ */
@@ -924,7 +919,7 @@
       font-family: var(--font-body);
       font-size: 0.74rem;
       font-weight: 500;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--ink-3);
       margin-bottom: 1.25rem;
@@ -977,7 +972,7 @@
       -webkit-backdrop-filter: blur(10px) saturate(140%);
       border: 1px solid var(--line-2);
       border-radius: 999px;
-      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-family: var(--font-body);
       font-size: 0.68rem;
       letter-spacing: 0.04em;
       color: var(--ink-3);
@@ -1069,7 +1064,7 @@
   <section class="clients" id="clients">
     <div class="clients-head reveal">
       <div class="label">
-        <span class="num">—</span>
+        <span class="num">i.</span>
         <span class="bar"></span>
         <span data-i18n="landing.clients.label">Built for, shipped with</span>
       </div>
@@ -1199,32 +1194,32 @@
 
       <div class="sol-grid">
         <div class="sol-item reveal">
-          <span class="idx">01</span>
+          <span class="idx">i.</span>
           <h3 data-i18n="landing.solutions.s1_t">Custom software & web software</h3>
           <p data-i18n="landing.solutions.s1_d">Creation of custom software, web software, AI software and web, mobile and desktop apps shaped around the people who will use them.</p>
         </div>
         <div class="sol-item reveal" data-delay="1">
-          <span class="idx">02</span>
+          <span class="idx">ii.</span>
           <h3 data-i18n="landing.solutions.s2_t">Platforms &amp; integration</h3>
           <p data-i18n="landing.solutions.s2_d">APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software without a remix.</p>
         </div>
         <div class="sol-item reveal" data-delay="2">
-          <span class="idx">03</span>
+          <span class="idx">iii.</span>
           <h3 data-i18n="landing.solutions.s3_t">AI consulting & agents</h3>
           <p data-i18n="landing.solutions.s3_d">AI consulting for high-return use cases, then AI agents, knowledge platforms and orchestration shipped to production with observability and cost control.</p>
         </div>
         <div class="sol-item reveal">
-          <span class="idx">04</span>
+          <span class="idx">iv.</span>
           <h3 data-i18n="landing.solutions.s4_t">Security &amp; trust</h3>
           <p data-i18n="landing.solutions.s4_d">CyberAI detection, response and audit. Visibility on what matters across the product, no noise, no theater.</p>
         </div>
         <div class="sol-item reveal" data-delay="1">
-          <span class="idx">05</span>
+          <span class="idx">v.</span>
           <h3 data-i18n="landing.solutions.s5_t">Computer vision</h3>
           <p data-i18n="landing.solutions.s5_d">Inspection, counting, quality control and visual automation. Where physical operations need digital eyes.</p>
         </div>
         <div class="sol-item reveal" data-delay="2">
-          <span class="idx">06</span>
+          <span class="idx">vi.</span>
           <h3 data-i18n="landing.solutions.s6_t">Product strategy</h3>
           <p data-i18n="landing.solutions.s6_d">Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years of growth.</p>
         </div>
@@ -1257,7 +1252,7 @@
       <!-- Ordem: complexidade de desenvolvimento (mais complexo primeiro), espelhando mariomayerle.com -->
       <div class="products-grid reveal">
         <article class="product-card">
-          <div class="name">AITEAM<em>—X</em></div>
+          <div class="name">AITEAM<em>-X</em></div>
           <p class="desc" data-i18n="landing.products.aiteam">Agent orchestration dashboard. Full AI team on your machine: 30+ specialised agents, shared memory, data stays local.</p>
           <a href="https://aiteam-x.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
         </article>
@@ -1313,25 +1308,25 @@
         </div>
         <div>
           <h2>
-            <span data-i18n="landing.how.title_1">Three steps.</span>
-            <span class="italic" data-i18n="landing.how.title_2">No sales theater.</span>
+            <span data-i18n="landing.how.title_1">Three practical steps.</span>
+            <span class="italic" data-i18n="landing.how.title_2">From diagnosis to scale.</span>
           </h2>
         </div>
       </div>
 
       <div class="steps reveal">
         <div class="step">
-          <span class="idx">01</span>
+          <span class="idx">i.</span>
           <h3 data-i18n="landing.how.s1_t">Diagnosis</h3>
           <p data-i18n="landing.how.s1_d">Discovery conversation, map of what exists, highest-return use cases and clear feasibility.</p>
         </div>
         <div class="step">
-          <span class="idx">02</span>
+          <span class="idx">ii.</span>
           <h3 data-i18n="landing.how.s2_t">Design + Build</h3>
           <p data-i18n="landing.how.s2_d">A real release of the product in weeks. UX shaped with your team, KPIs defined upfront, code shipped to production from day one.</p>
         </div>
         <div class="step">
-          <span class="idx">03</span>
+          <span class="idx">iii.</span>
           <h3 data-i18n="landing.how.s3_t">Scale</h3>
           <p data-i18n="landing.how.s3_d">Continuous operation, observability, governance and expansion to new processes based on proven returns.</p>
         </div>
@@ -1360,7 +1355,7 @@
 
       <div class="work-list">
         <article class="work reveal">
-          <div class="work-idx">01</div>
+          <div class="work-idx">i.</div>
           <div>
             <h3 class="work-name">Itaú</h3>
             <p class="work-desc" data-i18n="landing.cases.w1_d">Enterprise financial software work across data, integration and operational workflows, built for regulated environments where reliability matters.</p>
@@ -1371,7 +1366,7 @@
           </div>
         </article>
         <article class="work reveal" data-delay="1">
-          <div class="work-idx">02</div>
+          <div class="work-idx">ii.</div>
           <div>
             <h3 class="work-name">Telefônica</h3>
             <p class="work-desc" data-i18n="landing.cases.w2_d">Digital product and platform delivery for telecom operations, connecting business workflows with engineering execution at enterprise scale.</p>
@@ -1382,7 +1377,7 @@
           </div>
         </article>
         <article class="work reveal" data-delay="2">
-          <div class="work-idx">03</div>
+          <div class="work-idx">iii.</div>
           <div>
             <h3 class="work-name">Volkswagen</h3>
             <p class="work-desc" data-i18n="landing.cases.w3_d">Software delivery for industrial contexts, where process, traceability and user adoption have to survive the realities of production.</p>
@@ -1434,7 +1429,7 @@
             <span data-i18n="landing.faq.eyebrow">FAQ</span>
           </div>
           <h2>
-            <span data-i18n="landing.faq.title_1">Before you ask —</span>
+            <span data-i18n="landing.faq.title_1">Before you ask,</span>
             <span class="italic" data-i18n="landing.faq.title_2">we've answered.</span>
           </h2>
         </div>
@@ -1459,7 +1454,7 @@
         </details>
         <details class="faq">
           <summary data-i18n="landing.faq.q5">Do you have a fixed tech stack?</summary>
-          <p data-i18n="landing.faq.a5">No. We pick the right stack per project — Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows your operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem.</p>
+          <p data-i18n="landing.faq.a5">No. We pick the right stack per project: Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows your operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem.</p>
         </details>
         <details class="faq">
           <summary data-i18n="landing.faq.q6">How is pricing?</summary>
@@ -1541,7 +1536,9 @@
           </button>
           <p class="form-foot">
             <span data-i18n="landing.lead.privacy_1">By submitting you agree to our</span>
-            <a href="terms.html" data-i18n="landing.lead.privacy_2">Terms &amp; Privacy</a>.
+            <a href="terms.html" data-i18n="landing.foot.terms">Terms</a>
+            &amp;
+            <a href="/privacy-policy" data-i18n="landing.foot.privacy">Privacy</a>.
           </p>
         </div>
 
@@ -1575,7 +1572,7 @@
           <h3 data-i18n="landing.foot.h_legal">Legal</h3>
           <ul>
             <li><a href="terms.html" data-i18n="landing.foot.terms">Terms</a></li>
-            <li><a href="terms.html" data-i18n="landing.foot.privacy">Privacy</a></li>
+            <li><a href="/privacy-policy" data-i18n="landing.foot.privacy">Privacy</a></li>
           </ul>
         </div>
         <div class="foot-col">
@@ -1597,9 +1594,9 @@
 
   <!-- ============ Version badge (bottom-right, fetches /version.json) ============ -->
   <a class="version-badge" id="versionBadge" href="https://github.com/m2f0/inosx" target="_blank" rel="noopener" aria-label="Version">
-    <span class="ver" id="versionBadgeVer">v—</span>
+    <span class="ver" id="versionBadgeVer">v...</span>
     <span class="sep" aria-hidden="true">·</span>
-    <span class="hash" id="versionBadgeHash">—</span>
+    <span class="hash" id="versionBadgeHash">...</span>
   </a>
 
   <!-- ============ JSON-LD structured data ============ -->
