@@ -1,10 +1,10 @@
 # INOSX
 
-> AI automation for revenue growth and cost reduction. INOSX designs AI automation, custom software, web software and AI software: AI agents, workflows and systems that help businesses sell more, operate faster and reduce manual work.
+> Application development, technology solutions and AI solution development for production. INOSX builds custom applications, platforms, integrations, automation and AI systems that fit real business operations.
 
-INOSX is an AI automation and software creation studio founded in 2021. We design and build AI agents, workflows, automation systems, custom software, web software, AI software and custom digital products end-to-end for B2B clients across multiple continents. Our practice covers seven fronts: AI automation, custom software and web software, platforms and integration, AI consulting and agents, security and trust (CyberAI), computer vision, and product strategy.
+INOSX is a technology studio founded in 2021. We develop applications, technology solutions and AI solutions end-to-end for B2B clients across multiple continents: custom software, web and mobile apps, platforms, integrations, automation, AI systems and production operations. Our practice covers seven fronts: application development, platforms and integration, AI solution development and automation, security and trust (CyberAI), computer vision, product strategy, and proprietary products in operation.
 
-The studio's commitment is "show, don't promise": real clients in production, real proprietary products in operation, real engagements documented as Selected Work. We use AI automation as the primary service term, AI consulting for service-page language, and AI agents as a technical subcategory inside production systems.
+The studio's commitment is "show, don't promise": real clients in production, real proprietary products in operation, real engagements documented as Selected Work. We use application development and technology solutions as the primary positioning; AI solution development, AI agents and automation remain explicit capabilities inside production systems.
 
 ## Pages
 
@@ -17,10 +17,10 @@ The studio's commitment is "show, don't promise": real clients in production, re
 
 ## Practices
 
-- **AI automation** — AI agents, workflows, and automation systems for revenue growth, faster operations, and reduced manual work.
-- **Custom software and web software** — Creation of custom software, web software, AI software, and web, mobile and desktop apps shaped from research and UX through engineering and operation.
+- **Application development** — Custom web, mobile, desktop and internal apps shaped from research and UX through engineering and operation.
+- **Technology and AI solutions** — Custom software, platforms, integration layers, automation and AI systems built for production.
 - **Platforms and integration** — APIs, integrations, data pipelines, legacy modernization. Where existing software has to talk to new software.
-- **AI consulting and agents** — High-return use-case discovery, knowledge platforms, orchestration, and production AI agents shipped with observability and cost control.
+- **AI solution development and automation** — High-return use-case discovery, knowledge platforms, orchestration, and production AI agents shipped with observability and cost control.
 - **Security and trust (CyberAI)** — Continuous detection, response and audit across the product surface.
 - **Computer vision** — Inspection, counting, quality control and visual automation in physical operations.
 - **Product strategy** — Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years.

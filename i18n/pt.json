@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "INOSX - Automação com IA e Criação de Softwares",
-    "description": "A INOSX desenha automação com IA, criação de softwares, web softwares e AI softwares: agentes, workflows e sistemas que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual."
+    "title": "INOSX - Desenvolvimento de Aplicativos e Soluções Tecnológicas",
+    "description": "A INOSX desenvolve aplicativos, soluções tecnológicas e soluções de IA para empresas: software sob medida, plataformas, integrações e automação que chegam à produção."
   },
   "landing": {
     "nav": {
@@ -15,10 +15,10 @@
       "skip": "Pular para o conteúdo"
     },
     "hero": {
-      "eyebrow": "INOSX — AI automation studio",
-      "headline_1": "Automação com IA",
-      "headline_2": "softwares, web e AI softwares.",
-      "sub": "Desenhamos automação com IA, criação de softwares, web softwares e AI softwares: agentes de IA, workflows e sistemas que ajudam empresas a vender mais, operar mais rápido e reduzir trabalho manual.",
+      "eyebrow": "INOSX - studio de tecnologia",
+      "headline_1": "Desenvolvimento de aplicativos",
+      "headline_2": "e soluções tecnológicas.",
+      "sub": "Desenvolvemos aplicativos, plataformas, integrações e soluções de IA que se encaixam na sua operação e chegam à produção com o seu time.",
       "meta_1_l": "Em torno", "meta_1_v": "dos seus processos",
       "meta_2_l": "No ar em", "meta_2_v": "4–8 semanas",
       "meta_3_l": "Operado pelo", "meta_3_v": "seu time"
@@ -35,11 +35,11 @@
     },
     "pains": {
       "eyebrow": "Soa familiar",
-      "title_1": "Você queria um produto.",
-      "title_2": "Entregaram uma demo.",
+      "title_1": "Você precisava de produção.",
+      "title_2": "Pararam no protótipo.",
       "sub": "Seis padrões matam a maioria dos projetos de software enterprise. Construímos nossa prática para resolver cada um deles.",
-      "p1_t": "Fornecedores que entregam slide, não produto",
-      "p1_d": "Demos que ganham reunião e morrem na implantação. Design, engenharia e processo nunca chegam juntos.",
+      "p1_t": "Fornecedores que param antes do lançamento",
+      "p1_d": "Conceitos que ficam bonitos na reunião e quebram quando chegam o fluxo real, os dados e os usuários.",
       "p2_t": "UX que nenhum usuário vai usar",
       "p2_d": "Software que o usuário abre uma vez e abandona. O investimento mora numa licença, o trabalho mora numa planilha.",
       "p3_t": "Dados sensíveis fora do seu controle",
@@ -53,15 +53,15 @@
     },
     "solutions": {
       "eyebrow": "O que fazemos",
-      "title_1": "Automação e softwares,",
+      "title_1": "Aplicativos e tecnologia,",
       "title_2": "feitos para usar.",
-      "sub": "Uma promessa em seis práticas: automação com IA, criação de softwares, web softwares e AI softwares que seu time usa de verdade, do primeiro diagnóstico ao painel de operação.",
-      "s1_t": "Criação de softwares",
-      "s1_d": "Criação de softwares sob medida, web softwares, AI softwares e apps web, mobile e desktop modelados a partir de quem vai usar.",
+      "sub": "Uma promessa em seis práticas: aplicativos, plataformas, integrações e soluções de IA que seu time usa de verdade, do primeiro diagnóstico ao painel de operação.",
+      "s1_t": "Desenvolvimento de aplicativos",
+      "s1_d": "Apps web, mobile, desktop e internos, sob medida para as pessoas que vão usar.",
       "s2_t": "Plataformas & integração",
       "s2_d": "APIs, integrações, pipelines de dados e modernização de legado. Onde software existente precisa conversar com software novo, sem remendo.",
-      "s3_t": "AI consulting & agentes",
-      "s3_d": "AI consulting para casos de alto retorno; depois agentes de IA, plataformas de conhecimento e orquestração em produção com observabilidade e custo sob controle.",
+      "s3_t": "Desenvolvimento de soluções de IA",
+      "s3_d": "Agentes de IA, plataformas de conhecimento e orquestração em produção com observabilidade, segurança e custo sob controle.",
       "s4_t": "Segurança & confiança",
       "s4_d": "CyberAI: detecção, resposta e auditoria contínuas. Visibilidade do que importa em todo o produto, sem ruído, sem teatro.",
       "s5_t": "Visão computacional",
@@ -156,7 +156,7 @@
       "error": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para support@inosx.com."
     },
     "foot": {
-      "tagline": "Automação com IA para crescer receita, acelerar operações e reduzir trabalho manual.",
+      "tagline": "Desenvolvimento de aplicativos, tecnologia e soluções de IA para produção.",
       "h_company": "Empresa",
       "h_legal": "Legal",
       "h_contact": "Contato",
@@ -169,17 +169,17 @@
   },
   "products_page": {
     "meta": {
-      "title": "INOSX — Produtos | Portfólio de soluções de IA",
-      "description": "Catálogo INOSX: Messiax, SurveyFlow, PsychoX, DataGPT, Ccoinx, Tranquilopa, AITEAM-X e mais — explore produtos e entre em contacto."
+      "title": "INOSX - Produtos | Portfólio tecnológico",
+      "description": "Catálogo INOSX: produtos e plataformas tecnológicas em produção, de aplicativos e ferramentas de dados a automação e soluções de IA."
     },
     "hero_title": "Produtos INOSX",
-    "hero_subtitle": "Soluções de IA para pessoas, equipas e negócios — explore o portfólio completo.",
+    "hero_subtitle": "Produtos tecnológicos para pessoas, equipas e negócios, construídos e operados em produção.",
     "back_home": "← Voltar ao início",
     "contact_link": "Falar connosco"
   },
   "products_teaser": {
     "title": "Produtos INOSX",
-    "subtitle": "IA conversacional, dados, bem-estar e ferramentas para equipas — veja o portfólio e fale connosco para um projeto à sua medida.",
+    "subtitle": "Software em produção, dados, automação e ferramentas para equipas — veja o portfólio e fale connosco para um projeto à sua medida.",
     "cta_all": "Ver todos os produtos →",
     "cta_contact": "Falar connosco →",
     "learn_more": "Saber mais →"
@@ -246,7 +246,7 @@
     "highlight_3": "🌐 Suporte para mais de 50 idiomas",
     "highlight_4": "📈 Insights e tendências com IA",
     "btn_learn": "Conhecer SurveyFlow →",
-    "btn_access": "Experimentar Demo Grátis →",
+    "btn_access": "Acessar Produto →",
     "mockup_subtitle": "Inteligência de Pesquisas com IA\nInteligente • Rápido • Perspicaz",
     "mockup_title": "SurveyFlow.ai",
     "visit_site": "Visitar Site →"
@@ -410,7 +410,7 @@
   },
   "roi_calculator": {
     "title": "🧮 Calculadora de ROI de IA",
-    "subtitle": "Calcule quanto sua empresa pode economizar com as soluções de IA da INOSX",
+    "subtitle": "Calcule quanto sua empresa pode economizar com as soluções tecnológicas e de IA da INOSX",
     "employees_label": "Número de Funcionários",
     "employees_min": "10",
     "employees_max": "1000+",
@@ -466,8 +466,8 @@
     "learn_more": "Saiba Mais →"
   },
   "services": {
-    "title": "Serviços de IA",
-    "intro": "A INOSX constrói soluções de IA práticas e prontas para produção que transformam dados, processos e sistemas em resultados mensuráveis. Nosso portfólio combina automação, análise, segurança e orquestração multi-agente para impulsionar eficiência, inovação e competitividade.",
+    "title": "Serviços de tecnologia e IA",
+    "intro": "A INOSX constrói soluções tecnológicas e soluções de IA práticas, prontas para produção, que transformam dados, processos e sistemas em resultados mensuráveis. Nosso portfólio combina software, automação, análise, segurança e orquestração com IA quando o problema pede.",
     "ai_agents": {
       "title": "Agentes de IA INOSX",
       "description": "Agentes autônomos que eliminam trabalho repetitivo e conectam plataformas de ponta a ponta.",
@@ -535,11 +535,11 @@
       "benefit_5": "Controle e interação em linguagem natural"
     },
     "value_title": "Proposta de Valor Unificada INOSX",
-    "value_text": "Com as soluções INOSX, sua organização se torna parceira da IA—não apenas a utiliza. Nossos produtos reduzem custos, aumentam a eficiência, democratizam o acesso aos dados, protegem ativos digitais e orquestram processos complexos em escala—criando um negócio mais rápido, seguro e competitivo.",
+    "value_text": "Com as soluções INOSX, sua organização ganha software e sistemas com IA que se encaixam na operação. Nossos produtos reduzem custos, aumentam eficiência, melhoram o acesso aos dados, protegem ativos digitais e orquestram processos complexos em escala.",
     "cta_button": "Começar →",
     "cta_button_notify": "Me Notifique →",
-    "cta_title": "Pronto para Transformar Seu Negócio com IA?",
-    "cta_subtitle": "Vamos discutir como a INOSX pode construir uma solução personalizada de IA para suas necessidades específicas.",
+    "cta_title": "Pronto para Construir uma Solução Tecnológica ou de IA?",
+    "cta_subtitle": "Vamos discutir como a INOSX pode construir software sob medida ou uma solução de IA para suas necessidades específicas.",
     "cta_email": "📧 Envie Email: support@inosx.com",
     "cta_schedule": "Agendar Consultoria Gratuita",
     "cta_benefits": "✓ Consultoria gratuita de 30 min  ✓ Roadmap personalizado de IA  ✓ Análise de ROI  ✓ Sem compromisso"
@@ -584,7 +584,7 @@
     "btn_close": "Fechar"
   },
   "footer": {
-    "tagline": "Democratizando o acesso a soluções de IA práticas e seguras para empresas.",
+    "tagline": "Soluções tecnológicas e de IA práticas e seguras para empresas.",
     "company_meta": "INOSX, Inc. • Corporação EUA",
     "platform_title": "Plataforma",
     "platform_home": "Início",

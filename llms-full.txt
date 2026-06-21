@@ -1,10 +1,10 @@
 # INOSX — Full content for AI engines
 
-> AI automation for revenue growth and cost reduction. INOSX designs AI automation, custom software, web software and AI software: AI agents, workflows and systems that help businesses sell more, operate faster and reduce manual work. Founded 2021.
+> Application development, technology solutions and AI solution development for production. INOSX builds custom applications, platforms, integrations, automation and AI systems that fit real business operations. Founded 2021.
 
 ## What INOSX is
 
-INOSX is an AI automation and software creation studio. We design and build AI agents, workflows, automation systems, custom software, web software, AI software and custom digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We use AI automation as the primary service term, custom software, web software and AI software as software-creation terms, AI consulting for service-page language, and AI agents as a technical subcategory inside production systems.
+INOSX is a technology studio for application development, AI solution development and production software. We design and build custom applications, platforms, integrations, automation, AI systems and proprietary digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We use application development and technology solutions as the primary positioning; AI solution development, AI agents and automation remain explicit capabilities inside production systems.
 
 Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US.
 Email: support@inosx.com.
@@ -13,23 +13,23 @@ Founded: 2021.
 
 ## What we do
 
-Seven practices, complementary, sharing one promise: AI automation, custom software, web software and AI software our clients' teams will actually use, shaped from the first diagnostic to the operations dashboard.
+Seven practices, complementary, sharing one promise: applications, platforms, integrations and AI solutions our clients' teams will actually use, shaped from the first diagnostic to the operations dashboard.
 
-### 01 — AI automation
+### 01 — Application development
 
-AI agents, workflows, and automation systems that help businesses sell more, operate faster, and reduce manual work. Includes sales automation, operational workflows, internal tools, knowledge systems, and measurable cost-reduction use cases.
+Custom web, mobile, desktop and internal apps shaped around the people who will use them. From research and UX through engineering to a release the team is proud to ship. Stack chosen per project (Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem).
 
-### 02 — Custom software and web software
+### 02 — Technology and AI solutions
 
-Creation of custom software, web software, AI software and web, mobile and desktop apps shaped around the people who will use them. From research and UX through engineering to a release the team is proud to ship. Stack chosen per project (Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem).
+Custom software, platforms, integration layers, automation and AI systems built around the client's operation, data and team.
 
 ### 03 — Platforms and integration
 
 APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software, cleanly. Includes ERP/CRM bridges, internal data platforms, legacy mainframe integrations and event-driven architectures.
 
-### 04 — AI consulting and agents
+### 04 — AI solution development and automation
 
-AI consulting for high-return use-case discovery, followed by production AI agents, knowledge platforms and orchestration. Shipped with observability and cost control. We pick the right model per use case (proprietary, open-source or local) and keep the architecture open for swap.
+High-return use-case discovery, followed by production AI agents, knowledge platforms and orchestration. Shipped with observability and cost control. We pick the right model per use case (proprietary, open-source or local) and keep the architecture open for swap.
 
 ### 05 — Security and trust (CyberAI)
 

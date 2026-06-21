@@ -4,6 +4,16 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.0.0] - 2026-06-21
+
+### Changed
+- Reposicionada a home para "Application Development and Technology Solutions", com foco em aplicativos, plataformas, integracoes e producao.
+- Mantida a frente explicita de desenvolvimento de solucoes de IA em hero, servicos, i18n, SEO, Open Graph, Twitter cards, JSON-LD e arquivos GEO/LLM.
+- Trocadas referencias de demo/prototipo por linguagem de producao, lancamento e operacao real.
+- Atualizado `og.svg` para refletir aplicativos, tecnologia e solucoes de IA.
+
+---
+
 ## [3.1.0] - 2026-06-19
 
 ### Added

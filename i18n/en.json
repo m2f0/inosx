@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "INOSX - AI Automation and Software Creation",
-    "description": "INOSX designs AI automation, custom software, web software and AI software: agents, workflows and systems that help businesses sell more, operate faster and reduce manual work."
+    "title": "INOSX - Application Development and Technology Solutions",
+    "description": "INOSX develops applications, technology solutions and AI solutions for companies: custom software, platforms, integrations and automation that reach production."
   },
   "landing": {
     "nav": {
@@ -15,10 +15,10 @@
       "skip": "Skip to main content"
     },
     "hero": {
-      "eyebrow": "INOSX — AI automation studio",
-      "headline_1": "AI Automation",
-      "headline_2": "Custom, Web and AI Software",
-      "sub": "We design AI automation, custom software, web software and AI software: AI agents, workflows and systems that help businesses sell more, operate faster and reduce manual work.",
+      "eyebrow": "INOSX - technology studio",
+      "headline_1": "Application Development",
+      "headline_2": "Technology Solutions",
+      "sub": "We develop applications, platforms, integrations and AI solutions that fit your operation and reach production with your team.",
       "meta_1_l": "Built around", "meta_1_v": "your processes",
       "meta_2_l": "Live in", "meta_2_v": "4–8 weeks",
       "meta_3_l": "Operated by", "meta_3_v": "your team"
@@ -35,11 +35,11 @@
     },
     "pains": {
       "eyebrow": "Sound familiar",
-      "title_1": "You wanted a product.",
-      "title_2": "They shipped a demo.",
+      "title_1": "You needed production.",
+      "title_2": "They stopped at prototype.",
       "sub": "Six patterns kill most enterprise software projects. We built our practice to solve every one of them.",
-      "p1_t": "Vendors that ship slides, not products",
-      "p1_d": "Demos that win the meeting and die at deployment. Design, engineering and process never quite arrive together.",
+      "p1_t": "Vendors that stop before launch",
+      "p1_d": "Concepts that look good in the meeting and collapse when the real workflow, data and users arrive.",
       "p2_t": "UX nobody on the team will use",
       "p2_d": "Software the user opens once and abandons. The investment lives in a license; the workflow lives in a spreadsheet.",
       "p3_t": "Sensitive data outside your control",
@@ -53,15 +53,15 @@
     },
     "solutions": {
       "eyebrow": "What we make",
-      "title_1": "Automation and software,",
+      "title_1": "Apps and technology,",
       "title_2": "built for use.",
-      "sub": "One promise across six practices: AI automation, custom software, web software and AI software your team actually uses, designed and built from the first diagnostic to the operations dashboard.",
-      "s1_t": "Custom software & web software",
-      "s1_d": "Creation of custom software, web software, AI software and web, mobile and desktop apps shaped around the people who will use them.",
+      "sub": "One promise across six practices: applications, platforms, integrations and AI solutions your team actually uses, designed and built from the first diagnostic to the operations dashboard.",
+      "s1_t": "Application development",
+      "s1_d": "Custom web, mobile, desktop and internal apps shaped around the people who will use them.",
       "s2_t": "Platforms & integration",
       "s2_d": "APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software without a remix.",
-      "s3_t": "AI consulting & agents",
-      "s3_d": "AI consulting for high-return use cases, then AI agents, knowledge platforms and orchestration shipped to production with observability and cost control.",
+      "s3_t": "AI solution development",
+      "s3_d": "AI agents, knowledge platforms and orchestration shipped to production with observability, security and cost control.",
       "s4_t": "Security & trust",
       "s4_d": "CyberAI detection, response and audit. Visibility on what matters across the product, no noise, no theater.",
       "s5_t": "Computer vision",
@@ -156,7 +156,7 @@
       "error": "We couldn't send right now. Try again in a moment or write to support@inosx.com."
     },
     "foot": {
-      "tagline": "AI automation for revenue growth, faster operations and less manual work.",
+      "tagline": "Application development, technology and AI solutions for production.",
       "h_company": "Company",
       "h_legal": "Legal",
       "h_contact": "Contact",
@@ -169,17 +169,17 @@
   },
   "products_page": {
     "meta": {
-      "title": "INOSX — Products | AI solutions portfolio",
-      "description": "Full INOSX catalog: Messiax, SurveyFlow, PsychoX, DataGPT, Ccoinx, Tranquilopa, AITEAM-X — explore products and get in touch."
+      "title": "INOSX - Products | Technology portfolio",
+      "description": "Full INOSX catalog: products and technology platforms in production, from applications and data tools to automation and AI solutions."
     },
     "hero_title": "INOSX Products",
-    "hero_subtitle": "AI for individuals, teams, and businesses — explore the full portfolio.",
+    "hero_subtitle": "Technology products for people, teams, and businesses, built and operated in production.",
     "back_home": "← Back to home",
     "contact_link": "Contact us"
   },
   "products_teaser": {
     "title": "INOSX Products",
-    "subtitle": "Conversational AI, data, wellness, and team tools — see the portfolio and contact us for a tailored project.",
+    "subtitle": "Production software, data, automation and team tools — see the portfolio and contact us for a tailored project.",
     "cta_all": "View all products →",
     "cta_contact": "Contact us →",
     "learn_more": "Learn more →"
@@ -246,7 +246,7 @@
     "highlight_3": "🌐 50+ languages supported",
     "highlight_4": "📈 AI-powered insights & trends",
     "btn_learn": "Learn About SurveyFlow →",
-    "btn_access": "Try Free Demo →",
+    "btn_access": "Open Product →",
     "mockup_subtitle": "AI-Powered Survey Intelligence\nSmart • Fast • Insightful",
     "mockup_title": "SurveyFlow.ai",
     "visit_site": "Visit Site →"
@@ -343,7 +343,7 @@
   },
   "industries": {
     "title": "Industries We Transform with AI",
-    "subtitle": "Custom AI solutions tailored for your industry's unique challenges",
+    "subtitle": "Custom technology and AI solutions tailored for your industry's operational challenges",
     "contact_centers": {
       "title": "Contact Centers & Customer Service",
       "solution_1": "Agent Assist & Copilot",
@@ -386,7 +386,7 @@
       "solution_3": "Sentiment Analysis",
       "solution_4": "Content Intelligence"
     },
-    "cta_text": "Don't see your industry? We create custom AI solutions for any business challenge.",
+    "cta_text": "Don't see your industry? We create custom technology and AI solutions for complex business operations.",
     "cta_button": "Discuss Your Project →"
   },
   "testimonials": {
@@ -410,7 +410,7 @@
   },
   "roi_calculator": {
     "title": "🧮 AI ROI Calculator",
-    "subtitle": "Calculate how much your business can save with INOSX AI solutions",
+    "subtitle": "Calculate how much your business can save with INOSX technology and AI solutions",
     "employees_label": "Number of Employees",
     "employees_min": "10",
     "employees_max": "1000+",
@@ -466,8 +466,8 @@
     "learn_more": "Learn More →"
   },
   "services": {
-    "title": "AI Services",
-    "intro": "INOSX builds practical, production-grade AI solutions that transform data, processes, and systems into measurable outcomes. Our portfolio blends automation, analytics, security, and multi-agent orchestration to drive efficiency, innovation, and competitiveness.",
+    "title": "Technology and AI Services",
+    "intro": "INOSX builds practical, production-grade technology and AI solutions that transform data, processes and systems into measurable outcomes. Our portfolio blends software, automation, analytics, security and AI orchestration when the problem calls for it.",
     "ai_agents": {
       "title": "INOSX AI Agents",
       "description": "Autonomous agents that eliminate repetitive work and connect platforms end‑to‑end.",
@@ -535,11 +535,11 @@
       "benefit_5": "Natural language control and interaction"
     },
     "value_title": "INOSX Unified Value Proposition",
-    "value_text": "With INOSX solutions, your organization partners with AI—not just uses it. Our products reduce costs, increase efficiency, democratize data access, protect digital assets, and orchestrate complex processes at scale—creating a faster, safer, and more competitive business.",
+    "value_text": "With INOSX solutions, your organization gets software and AI systems that fit the operation. Our products reduce costs, increase efficiency, improve data access, protect digital assets, and orchestrate complex processes at scale.",
     "cta_button": "Get Started →",
     "cta_button_notify": "Notify Me →",
-    "cta_title": "Ready to Transform Your Business with AI?",
-    "cta_subtitle": "Let's discuss how INOSX can build a custom AI solution for your specific needs.",
+    "cta_title": "Ready to Build a Technology or AI Solution?",
+    "cta_subtitle": "Let's discuss how INOSX can build custom software or an AI solution for your specific needs.",
     "cta_email": "📧 Email Us: support@inosx.com",
     "cta_schedule": "Schedule Free Consultation",
     "cta_benefits": "✓ Free 30-min consultation  ✓ Custom AI roadmap  ✓ ROI analysis  ✓ No commitment required"
@@ -584,7 +584,7 @@
     "btn_close": "Close"
   },
   "footer": {
-    "tagline": "Democratizing access to practical and secure AI solutions for businesses.",
+    "tagline": "Practical and secure technology and AI solutions for businesses.",
     "company_meta": "INOSX, Inc. • USA Corporation",
     "platform_title": "Platform",
     "platform_home": "Home",
