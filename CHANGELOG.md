@@ -4,6 +4,19 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.1.0] - 2026-06-25
+
+### Added
+- Adicionados tres videos de LinkedIn Services a home: apresentacao do fundador, AITEAM-X AI Operations Desk e AI Agents, Automation & SaaS Delivery.
+- Incluidos arquivos MP4, posters web e avatar institucional de Mario Mayerle Filho nos assets publicos do site.
+
+### Changed
+- Atualizado o hero para destacar o video do fundador com avatar sobreposto e copy centralizada em largura total.
+- Reposicionado o AITEAM-X como produto em destaque, com videos relacionados ao lado no bloco de produtos.
+- Atualizados metadados e traducoes EN/PT/ES para o posicionamento "from AI experiments to reliable business operations".
+
+---
+
 ## [4.0.0] - 2026-06-21
 
 ### Changed

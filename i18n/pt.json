@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "INOSX - Desenvolvimento de Aplicativos e Soluções Tecnológicas",
-    "description": "A INOSX desenvolve aplicativos, soluções tecnológicas e soluções de IA para empresas: software sob medida, plataformas, integrações e automação que chegam à produção."
+    "description": "A INOSX ajuda empresas a sair de experimentos com IA para operações confiáveis de negócio com agentes de IA, automação, SaaS, sistemas de dados e software sob medida pronto para produção."
   },
   "landing": {
     "nav": {
@@ -68,6 +68,23 @@
       "s5_d": "Inspeção, contagem, controle de qualidade e automação visual. Onde a operação física precisa de olhos digitais.",
       "s6_t": "Estratégia de produto",
       "s6_d": "Discovery, roadmap, design system. Decisões que sobrevivem ao primeiro usuário, à primeira auditoria e aos próximos dois anos."
+    },
+    "services_videos": {
+      "eyebrow": "Serviços no LinkedIn",
+      "title_1": "De experimentos com IA a",
+      "title_2": "operações confiáveis de negócio",
+      "sub": "A INOSX ajuda times a desenhar, construir e operar agentes de IA, automação de workflows, produtos SaaS e software sob medida pronto para produção.",
+      "video1_title": "De experimentos com IA a operações confiáveis de negócio",
+      "video1_desc": "Sistemas de IA, automação de workflows, desenvolvimento SaaS e software sob medida pela INOSX, com liderança técnica do fundador.",
+      "video1_aria": "Reproduzir o vídeo de apresentação do fundador da INOSX.",
+      "video2_title": "AITEAM-X — AI Operations Desk",
+      "video2_desc": "Workflows agentic controlados, persistentes e auditáveis para times com IA.",
+      "video2_aria": "Reproduzir o vídeo AITEAM-X AI Operations Desk.",
+      "video3_title": "AI Agents, Automation & SaaS Delivery",
+      "video3_desc": "Agentes de IA, automação de workflows, produtos SaaS, sistemas de dados, modernização de legado e software sob medida.",
+      "video3_aria": "Reproduzir o vídeo AI agents, automation and SaaS delivery.",
+      "cta_text": "Precisa automatizar um processo ou construir um produto com IA?",
+      "cta_button": "Falar com a INOSX"
     },
     "products": {
       "eyebrow": "Produtos INOSX",

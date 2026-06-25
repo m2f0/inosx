@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "INOSX - Desarrollo de Aplicaciones y Soluciones Tecnológicas",
-    "description": "INOSX desarrolla aplicaciones, soluciones tecnológicas y soluciones de IA para empresas: software a medida, plataformas, integraciones y automatización que llegan a producción."
+    "description": "INOSX ayuda a las empresas a pasar de experimentos con IA a operaciones de negocio confiables con agentes de IA, automatización, SaaS, sistemas de datos y software a medida listo para producción."
   },
   "landing": {
     "nav": {
@@ -71,6 +71,23 @@
       "s5_d": "Inspección, conteo, control de calidad y automatización visual. Donde las operaciones físicas necesitan ojos digitales.",
       "s6_t": "Estrategia de producto",
       "s6_d": "Discovery, roadmap, design system. Decisiones que sobreviven al primer usuario, a la primera auditoría y a los próximos dos años de crecimiento."
+    },
+    "services_videos": {
+      "eyebrow": "Servicios en LinkedIn",
+      "title_1": "De experimentos con IA a",
+      "title_2": "operaciones de negocio confiables",
+      "sub": "INOSX ayuda a equipos a diseñar, construir y operar agentes de IA, automatización de workflows, productos SaaS y software a medida listo para producción.",
+      "video1_title": "De experimentos con IA a operaciones de negocio confiables",
+      "video1_desc": "Sistemas de IA, automatización de workflows, desarrollo SaaS y software a medida por INOSX, con liderazgo técnico del fundador.",
+      "video1_aria": "Reproducir el video de presentación del fundador de INOSX.",
+      "video2_title": "AITEAM-X — AI Operations Desk",
+      "video2_desc": "Workflows agentic controlados, persistentes y auditables para equipos impulsados por IA.",
+      "video2_aria": "Reproducir el video AITEAM-X AI Operations Desk.",
+      "video3_title": "AI Agents, Automation & SaaS Delivery",
+      "video3_desc": "Agentes de IA, automatización de workflows, productos SaaS, sistemas de datos, modernización de legado y software a medida.",
+      "video3_aria": "Reproducir el video AI agents, automation and SaaS delivery.",
+      "cta_text": "¿Necesita automatizar un proceso o crear un producto con IA?",
+      "cta_button": "Contactar a INOSX"
     },
     "products": {
       "eyebrow": "Productos INOSX",

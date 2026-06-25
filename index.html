@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INOSX - Application Development and Technology Solutions</title>
-  <meta name="description" content="INOSX develops applications, technology solutions and AI solutions for companies: custom software, platforms, integrations and automation that reach production." />
+  <meta name="description" content="INOSX helps companies move from AI experiments to reliable business operations with AI agents, workflow automation, SaaS development, data systems and production-ready custom software." />
 
   <!-- Canonical + hreflang -->
   <link rel="canonical" href="https://inosx.com/" />
@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://inosx.com/" />
   <meta property="og:title" content="INOSX - Application Development and Technology Solutions" />
-  <meta property="og:description" content="We develop applications, platforms, integrations and AI solutions that move from diagnosis to production." />
+  <meta property="og:description" content="Founder-led AI agents, workflow automation, SaaS development, data systems and custom software that move from experiments to reliable operations." />
   <meta property="og:site_name" content="INOSX" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="pt_BR" />
@@ -28,7 +28,7 @@
   <meta property="og:image:alt" content="INOSX - application development, technology and AI solutions" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="INOSX - Application Development and Technology Solutions" />
-  <meta name="twitter:description" content="Applications, platforms, integrations and AI solutions built for production." />
+  <meta name="twitter:description" content="Founder-led AI systems, workflow automation, SaaS development and custom software built for reliable operations." />
   <meta name="twitter:image" content="https://inosx.com/og.svg" />
 
   <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
@@ -354,44 +354,143 @@
       padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(4rem, 9vw, 8rem);
     }
     .hero-head {
+      --hero-video-lift: clamp(1.1rem, 3vw, 2.6rem);
       display: grid;
       grid-template-columns: 8fr 4fr;
       gap: 3.5rem;
-      align-items: end;
+      align-items: start;
     }
     .hero h1 { max-width: 17ch; }
+    .hero-title {
+      transform: translateY(calc(-1 * var(--hero-video-lift)));
+    }
     .hero-side {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.35rem;
       padding-bottom: 0.5rem;
     }
-    .hero-side .lead { max-width: 36ch; }
+    .hero-founder-video {
+      --hero-avatar-size: clamp(5.8rem, 8vw, 8.4rem);
+      position: relative;
+      z-index: 2;
+      width: 169%;
+      transform: translateX(-40.83%) translateY(calc(-1 * var(--hero-video-lift)));
+      margin-bottom: calc(-1 * var(--hero-video-lift));
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      overflow: visible;
+    }
+    .hero-founder-video video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      object-fit: cover;
+      background: var(--bg-soft);
+    }
+    .hero-avatar {
+      position: absolute;
+      top: clamp(-1.6rem, -1.9vw, -0.9rem);
+      left: clamp(-1.4rem, -1.7vw, -0.8rem);
+      z-index: 2;
+      width: var(--hero-avatar-size);
+      height: var(--hero-avatar-size);
+      border-radius: 50%;
+      border: 1px solid var(--line-2);
+      object-fit: cover;
+      object-position: 50% 28%;
+      background: var(--bg);
+    }
+    .hero-avatar-accent {
+      position: absolute;
+      z-index: 3;
+      top: calc(var(--hero-avatar-size) * 0.68);
+      left: calc(var(--hero-avatar-size) * 0.68);
+      width: clamp(1.15rem, 2vw, 1.8rem);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 3px solid var(--bg);
+      background: var(--accent-2);
+    }
+    .hero-copy {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3.25rem);
+      width: 100%;
+      margin-top: clamp(1.75rem, 4vw, 3.5rem);
+      text-align: center;
+    }
+    .hero-copy .lead {
+      width: min(100%, 920px);
+      margin: 0 auto;
+      text-wrap: balance;
+    }
     .hero-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      padding-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1rem, 3vw, 3rem);
+      width: 100%;
+      padding: 2rem 0 0;
       border-top: 1px solid var(--line);
     }
     .hero-meta .row {
       display: flex;
-      justify-content: space-between;
-      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.55rem;
       font-size: 0.86rem;
       color: var(--ink-3);
+      text-align: center;
     }
     .hero-meta .row strong {
       color: var(--ink);
       font-family: var(--font-display);
       font-style: italic;
       font-weight: 400;
-      font-size: 0.95rem;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
     }
 
     @media (max-width: 880px) {
-      .hero-head { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-side .lead { max-width: 100%; }
+      .hero-head {
+        --hero-video-lift: 0rem;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .hero-title { transform: none; }
+      .hero-founder-video {
+        --hero-avatar-size: clamp(4.4rem, 18vw, 6.2rem);
+        width: 100%;
+        max-width: 680px;
+        transform: none;
+        margin-bottom: 0;
+      }
+      .hero-copy {
+        margin-top: 2.25rem;
+      }
+      .hero-avatar {
+        top: -1rem;
+        left: -0.8rem;
+      }
+      .hero-avatar-accent {
+        border-width: 2px;
+      }
+    }
+    @media (max-width: 720px) {
+      .hero-copy {
+        text-align: left;
+      }
+      .hero-copy .lead {
+        text-wrap: initial;
+      }
+      .hero-meta {
+        grid-template-columns: 1fr;
+        gap: 1.15rem;
+      }
+      .hero-meta .row {
+        align-items: flex-start;
+        text-align: left;
+      }
     }
 
     /* ============ Logos — carrossel infinito ============ */
@@ -582,7 +681,149 @@
     .sol-item h3 { margin-bottom: 0.6rem; font-weight: 400; }
     .sol-item p { color: var(--ink-2); font-size: 0.96rem; line-height: 1.55; }
 
+    /* ============ Video modules ============ */
+    .service-video {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      border: 1px solid var(--line);
+    }
+    .service-video-media {
+      position: relative;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .service-video-media video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      background: var(--bg-soft);
+      object-fit: cover;
+    }
+    .service-video-avatar {
+      position: absolute;
+      top: clamp(0.65rem, 4%, 1rem);
+      right: clamp(0.65rem, 4%, 1rem);
+      z-index: 2;
+      width: clamp(3.25rem, 13%, 5rem);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid var(--line-2);
+      object-fit: cover;
+      object-position: 50% 28%;
+      background: var(--bg);
+    }
+    .service-video-copy {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: clamp(1.35rem, 2.1vw, 2rem);
+    }
+    .service-video .idx {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent-text);
+      line-height: 1;
+    }
+    .service-video h3 {
+      max-width: 14ch;
+      font-weight: 400;
+    }
+    .service-video p {
+      color: var(--ink-2);
+      font-size: 0.94rem;
+      line-height: 1.58;
+      max-width: 38ch;
+    }
+    @media (max-width: 1080px) {
+      .service-video {
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(260px, 4fr);
+      }
+      .service-video-media { border-right: 1px solid var(--line); border-bottom: 0; }
+      .service-video-copy { justify-content: center; }
+    }
+    @media (max-width: 720px) {
+      .service-video { display: flex; }
+      .service-video-media { border-right: 0; border-bottom: 1px solid var(--line); }
+      .service-video h3 { max-width: 100%; }
+      .service-video p { max-width: 100%; }
+    }
+
     /* ============ Produtos ============ */
+    .aiteam-feature {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr 1fr;
+      gap: clamp(0.75rem, 1.5vw, 1rem);
+      margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+    }
+    .aiteam-feature-copy {
+      border: 1px solid var(--line);
+      border-top-color: var(--accent-text);
+      background: linear-gradient(135deg, var(--bg-soft), var(--bg));
+      padding: clamp(1.6rem, 2.4vw, 2.25rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2.25rem;
+      min-height: 100%;
+    }
+    .aiteam-feature-copy .idx,
+    .aiteam-feature .service-video .idx {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent-text);
+      line-height: 1;
+      margin-bottom: 0.9rem;
+    }
+    .aiteam-feature-copy .name {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+    }
+    .aiteam-feature-copy .name em {
+      font-style: italic;
+      color: var(--accent-text);
+      font-weight: 300;
+    }
+    .aiteam-feature-copy p {
+      color: var(--ink-2);
+      font-size: clamp(1rem, 1.2vw, 1.08rem);
+      line-height: 1.58;
+      max-width: 32ch;
+      margin-top: 1.2rem;
+    }
+    .aiteam-feature-copy a {
+      font-size: 0.86rem;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+      display: inline-flex;
+      gap: 0.6rem;
+      align-items: center;
+      align-self: flex-start;
+      transition: color 0.25s, gap 0.25s;
+    }
+    .aiteam-feature-copy a:hover {
+      color: var(--accent-text);
+      gap: 0.9rem;
+    }
+    .aiteam-feature .service-video h3 { max-width: 16ch; }
+    @media (max-width: 1080px) {
+      .aiteam-feature { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .aiteam-feature-copy { min-height: 320px; }
+    }
+
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -1039,7 +1280,7 @@
   <section class="hero" id="main">
     <div class="container">
       <div class="hero-head">
-        <div>
+        <div class="hero-title">
           <h1>
             <span data-i18n="landing.hero.headline_1">Application Development</span>
             <span class="italic" data-i18n="landing.hero.headline_2">Technology Solutions</span>
@@ -1047,14 +1288,33 @@
         </div>
 
         <div class="hero-side">
-          <p class="lead" data-i18n="landing.hero.sub">
-            We develop applications, platforms, integrations and AI solutions that fit your operation and reach production with your team.
-          </p>
-          <div class="hero-meta">
-            <div class="row"><span data-i18n="landing.hero.meta_1_l">Built around</span><strong data-i18n="landing.hero.meta_1_v">your processes</strong></div>
-            <div class="row"><span data-i18n="landing.hero.meta_2_l">Live in</span><strong data-i18n="landing.hero.meta_2_v">4–8 weeks</strong></div>
-            <div class="row"><span data-i18n="landing.hero.meta_3_l">Operated by</span><strong data-i18n="landing.hero.meta_3_v">your team</strong></div>
+          <div class="hero-founder-video">
+            <video
+              controls
+              preload="metadata"
+              playsinline
+              poster="/assets/videos/posters/from-ai-experiments-to-reliable-business-operations.jpg"
+              data-i18n-aria-label="landing.services_videos.video1_aria">
+              <source src="/assets/videos/from-ai-experiments-to-reliable-business-operations.mp4" type="video/mp4">
+            </video>
+            <img
+              class="hero-avatar"
+              src="/assets/images/mario-mayerle-avatar.jpg"
+              alt="Mario Mayerle Filho"
+              decoding="async"
+              fetchpriority="high">
+            <span class="hero-avatar-accent" aria-hidden="true"></span>
           </div>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="lead" data-i18n="landing.hero.sub">
+          We develop applications, platforms, integrations and AI solutions that fit your operation and reach production with your team.
+        </p>
+        <div class="hero-meta">
+          <div class="row"><span data-i18n="landing.hero.meta_1_l">Built around</span><strong data-i18n="landing.hero.meta_1_v">your processes</strong></div>
+          <div class="row"><span data-i18n="landing.hero.meta_2_l">Live in</span><strong data-i18n="landing.hero.meta_2_v">4–8 weeks</strong></div>
+          <div class="row"><span data-i18n="landing.hero.meta_3_l">Operated by</span><strong data-i18n="landing.hero.meta_3_v">your team</strong></div>
         </div>
       </div>
     </div>
@@ -1250,12 +1510,70 @@
       </div>
 
       <!-- Ordem: complexidade de desenvolvimento (mais complexo primeiro), espelhando mariomayerle.com -->
-      <div class="products-grid reveal">
-        <article class="product-card">
-          <div class="name">AITEAM<em>-X</em></div>
-          <p class="desc" data-i18n="landing.products.aiteam">Agent orchestration dashboard. Full AI team on your machine: 30+ specialised agents, shared memory, data stays local.</p>
-          <a href="https://aiteam-x.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
+      <div class="aiteam-feature reveal" aria-label="AITEAM-X featured product and videos">
+        <article class="aiteam-feature-copy">
+          <div>
+            <span class="idx">i.</span>
+            <div class="name">AITEAM<em>-X</em></div>
+            <p data-i18n="landing.products.aiteam">Full AI team on your machine: 30+ agents, shared memory, local data.</p>
+          </div>
+          <a href="https://aiteam-x.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>-&gt;</span></a>
         </article>
+
+        <article class="service-video" aria-labelledby="video-aiteamx-title">
+          <div class="service-video-media">
+            <video
+              controls
+              preload="metadata"
+              playsinline
+              poster="/assets/videos/posters/aiteamx-ai-operations-desk.jpg"
+              aria-describedby="video-aiteamx-description"
+              data-i18n-aria-label="landing.services_videos.video2_aria">
+              <source src="/assets/videos/aiteamx-ai-operations-desk.mp4" type="video/mp4">
+            </video>
+            <img
+              class="service-video-avatar"
+              src="/assets/images/mario-mayerle-avatar.jpg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async">
+          </div>
+          <div class="service-video-copy">
+            <span class="idx">ii.</span>
+            <h3 id="video-aiteamx-title" data-i18n="landing.services_videos.video2_title">AITEAM-X &mdash; AI Operations Desk</h3>
+            <p id="video-aiteamx-description" data-i18n="landing.services_videos.video2_desc">Controlled, persistent and auditable agentic workflows for AI-powered teams.</p>
+          </div>
+        </article>
+
+        <article class="service-video" aria-labelledby="video-services-title">
+          <div class="service-video-media">
+            <video
+              controls
+              preload="metadata"
+              playsinline
+              poster="/assets/videos/posters/ai-agents-automation-saas-delivery.jpg"
+              aria-describedby="video-services-description"
+              data-i18n-aria-label="landing.services_videos.video3_aria">
+              <source src="/assets/videos/ai-agents-automation-saas-delivery.mp4" type="video/mp4">
+            </video>
+            <img
+              class="service-video-avatar"
+              src="/assets/images/mario-mayerle-avatar.jpg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async">
+          </div>
+          <div class="service-video-copy">
+            <span class="idx">iii.</span>
+            <h3 id="video-services-title" data-i18n="landing.services_videos.video3_title">AI Agents, Automation &amp; SaaS Delivery</h3>
+            <p id="video-services-description" data-i18n="landing.services_videos.video3_desc">AI agents, workflow automation, SaaS products, data systems, legacy modernization and custom software delivery.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="products-grid reveal">
         <article class="product-card">
           <div class="name">Data<em>GPT</em></div>
           <p class="desc" data-i18n="landing.products.datagpt">AI for enterprise data analysis. Talk to your data in natural language: analyses, charts, answers.</p>

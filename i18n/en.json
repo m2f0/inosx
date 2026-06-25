@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "INOSX - Application Development and Technology Solutions",
-    "description": "INOSX develops applications, technology solutions and AI solutions for companies: custom software, platforms, integrations and automation that reach production."
+    "description": "INOSX helps companies move from AI experiments to reliable business operations with AI agents, workflow automation, SaaS development, data systems and production-ready custom software."
   },
   "landing": {
     "nav": {
@@ -68,6 +68,23 @@
       "s5_d": "Inspection, counting, quality control and visual automation. Where physical operations need digital eyes.",
       "s6_t": "Product strategy",
       "s6_d": "Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years of growth."
+    },
+    "services_videos": {
+      "eyebrow": "LinkedIn services",
+      "title_1": "From AI Experiments to",
+      "title_2": "Reliable Business Operations",
+      "sub": "INOSX helps teams design, build and operate AI agents, workflow automation, SaaS products and production-ready custom software.",
+      "video1_title": "From AI Experiments to Reliable Business Operations",
+      "video1_desc": "Founder-led AI systems, workflow automation, SaaS development and custom software delivery by INOSX.",
+      "video1_aria": "Play the founder intro video from INOSX.",
+      "video2_title": "AITEAM-X — AI Operations Desk",
+      "video2_desc": "Controlled, persistent and auditable agentic workflows for AI-powered teams.",
+      "video2_aria": "Play the AITEAM-X AI Operations Desk video.",
+      "video3_title": "AI Agents, Automation & SaaS Delivery",
+      "video3_desc": "AI agents, workflow automation, SaaS products, data systems, legacy modernization and custom software delivery.",
+      "video3_aria": "Play the AI agents, automation and SaaS delivery video.",
+      "cta_text": "Need to automate a process or build an AI product?",
+      "cta_button": "Contact INOSX"
     },
     "products": {
       "eyebrow": "INOSX Products",
