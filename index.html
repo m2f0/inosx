@@ -362,6 +362,9 @@
     }
     .hero h1 { max-width: 17ch; }
     .hero-title {
+      position: relative;
+      z-index: 4;
+      pointer-events: none;
       transform: translateY(calc(-1 * var(--hero-video-lift)));
     }
     .hero-side {
@@ -375,7 +378,7 @@
       position: relative;
       z-index: 2;
       width: 169%;
-      transform: translateX(-40.83%) translateY(calc(-1 * var(--hero-video-lift)));
+      transform: translateX(-28%) translateY(calc(-1 * var(--hero-video-lift)));
       margin-bottom: calc(-1 * var(--hero-video-lift));
       border: 1px solid var(--line);
       background: var(--bg-soft);
@@ -449,6 +452,27 @@
       font-style: italic;
       font-weight: 400;
       font-size: clamp(1rem, 1.6vw, 1.25rem);
+    }
+
+    @media (max-width: 1300px) {
+      .hero-head {
+        --hero-video-lift: 0rem;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .hero-title {
+        transform: none;
+        pointer-events: auto;
+      }
+      .hero-founder-video {
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+        transform: none;
+      }
+      .hero-copy {
+        margin-top: 2.25rem;
+      }
     }
 
     @media (max-width: 880px) {

@@ -4,6 +4,14 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.1.1] - 2026-06-25
+
+### Fixed
+- Corrigida a sobreposicao do video do hero sobre o titulo principal em producao.
+- Adicionado breakpoint do hero para evitar overflow horizontal em telas compactas.
+
+---
+
 ## [4.1.0] - 2026-06-25
 
 ### Added
