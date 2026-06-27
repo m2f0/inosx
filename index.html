@@ -374,7 +374,10 @@
       padding-bottom: 0.5rem;
     }
     .hero-founder-video {
-      --hero-avatar-size: clamp(5.8rem, 8vw, 8.4rem);
+      --hero-avatar-size: clamp(5rem, 6vw, 5.8rem);
+      --hero-avatar-overlap: 1.5rem;
+      --hero-avatar-top: calc(-1 * var(--hero-avatar-size) + var(--hero-avatar-overlap));
+      --hero-avatar-left: clamp(-1.2rem, -1.45vw, -0.8rem);
       position: relative;
       z-index: 2;
       width: 169%;
@@ -394,8 +397,8 @@
     }
     .hero-avatar {
       position: absolute;
-      top: clamp(-1.6rem, -1.9vw, -0.9rem);
-      left: clamp(-1.4rem, -1.7vw, -0.8rem);
+      top: var(--hero-avatar-top);
+      left: var(--hero-avatar-left);
       z-index: 2;
       width: var(--hero-avatar-size);
       height: var(--hero-avatar-size);
@@ -404,17 +407,19 @@
       object-fit: cover;
       object-position: 50% 28%;
       background: var(--bg);
+      pointer-events: none;
     }
     .hero-avatar-accent {
       position: absolute;
       z-index: 3;
-      top: calc(var(--hero-avatar-size) * 0.68);
-      left: calc(var(--hero-avatar-size) * 0.68);
+      top: calc(var(--hero-avatar-top) + (var(--hero-avatar-size) * 0.68));
+      left: calc(var(--hero-avatar-left) + (var(--hero-avatar-size) * 0.68));
       width: clamp(1.15rem, 2vw, 1.8rem);
       aspect-ratio: 1;
       border-radius: 50%;
       border: 3px solid var(--bg);
       background: var(--accent-2);
+      pointer-events: none;
     }
     .hero-copy {
       display: grid;
@@ -465,9 +470,10 @@
         pointer-events: auto;
       }
       .hero-founder-video {
+        --hero-avatar-top: calc(-1 * var(--hero-avatar-size) + var(--hero-avatar-overlap));
         width: 100%;
         max-width: 860px;
-        margin: 0 auto;
+        margin: clamp(1rem, 2vw, 1.75rem) auto 0;
         transform: none;
       }
       .hero-copy {
@@ -484,17 +490,16 @@
       .hero-title { transform: none; }
       .hero-founder-video {
         --hero-avatar-size: clamp(4.4rem, 18vw, 6.2rem);
+        --hero-avatar-overlap: clamp(0.8rem, 3vw, 1.1rem);
+        --hero-avatar-top: calc(-1 * var(--hero-avatar-size) + var(--hero-avatar-overlap));
+        --hero-avatar-left: -0.8rem;
         width: 100%;
         max-width: 680px;
         transform: none;
-        margin-bottom: 0;
+        margin: clamp(1.25rem, 5vw, 2rem) auto 0;
       }
       .hero-copy {
         margin-top: 2.25rem;
-      }
-      .hero-avatar {
-        top: -1rem;
-        left: -0.8rem;
       }
       .hero-avatar-accent {
         border-width: 2px;
