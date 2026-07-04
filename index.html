@@ -787,9 +787,19 @@
     /* ============ Produtos ============ */
     .aiteam-feature {
       display: grid;
-      grid-template-columns: 1.05fr 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: clamp(0.75rem, 1.5vw, 1rem);
       margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+    }
+    .aiteam-feature-primary,
+    .aiteam-feature-videos {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.38fr);
+      gap: clamp(0.75rem, 1.5vw, 1rem);
+      align-items: stretch;
+    }
+    .aiteam-feature-videos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .aiteam-feature-copy {
       border: 1px solid var(--line);
@@ -801,6 +811,26 @@
       justify-content: space-between;
       gap: 2.25rem;
       min-height: 100%;
+    }
+    .aiteam-youtube {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+    .aiteam-youtube-media {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--bg-soft);
+    }
+    .aiteam-youtube iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: var(--bg-soft);
     }
     .aiteam-feature-copy .idx,
     .aiteam-feature .service-video .idx {
@@ -847,10 +877,14 @@
     }
     .aiteam-feature .service-video h3 { max-width: 16ch; }
     @media (max-width: 1080px) {
-      .aiteam-feature { grid-template-columns: 1fr; }
+      .aiteam-feature-primary,
+      .aiteam-feature-videos {
+        grid-template-columns: 1fr;
+      }
     }
     @media (max-width: 720px) {
       .aiteam-feature-copy { min-height: 320px; }
+      .aiteam-youtube-media { min-height: 0; }
     }
 
     .products-grid {
@@ -1540,66 +1574,83 @@
 
       <!-- Ordem: complexidade de desenvolvimento (mais complexo primeiro), espelhando mariomayerle.com -->
       <div class="aiteam-feature reveal" aria-label="AITEAM-X featured product and videos">
-        <article class="aiteam-feature-copy">
-          <div>
-            <span class="idx">i.</span>
-            <div class="name">AITEAM<em>-X</em></div>
-            <p data-i18n="landing.products.aiteam">Full AI team on your machine: 30+ agents, shared memory, local data.</p>
-          </div>
-          <a href="https://aiteam-x.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>-&gt;</span></a>
-        </article>
+        <div class="aiteam-feature-primary">
+          <article class="aiteam-feature-copy">
+            <div>
+              <span class="idx">i.</span>
+              <div class="name">AITEAM<em>-X</em></div>
+              <p data-i18n="landing.products.aiteam">Full AI team on your machine: 30+ agents, shared memory, local data.</p>
+            </div>
+            <a href="https://aiteam-x.app" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>-&gt;</span></a>
+          </article>
 
-        <article class="service-video" aria-labelledby="video-aiteamx-title">
-          <div class="service-video-media">
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="/assets/videos/posters/aiteamx-ai-operations-desk.jpg"
-              aria-describedby="video-aiteamx-description"
-              data-i18n-aria-label="landing.services_videos.video2_aria">
-              <source src="/assets/videos/aiteamx-ai-operations-desk.mp4" type="video/mp4">
-            </video>
-            <img
-              class="service-video-avatar"
-              src="/assets/images/mario-mayerle-avatar.jpg"
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async">
+          <div class="aiteam-youtube">
+            <div class="aiteam-youtube-media">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/l9ob9KGVqhQ?rel=0&modestbranding=1"
+                title="AITEAM-X product video"
+                data-i18n-title="landing.services_videos.youtube_title"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
           </div>
-          <div class="service-video-copy">
-            <span class="idx">ii.</span>
-            <h3 id="video-aiteamx-title" data-i18n="landing.services_videos.video2_title">AITEAM-X &mdash; AI Operations Desk</h3>
-            <p id="video-aiteamx-description" data-i18n="landing.services_videos.video2_desc">Controlled, persistent and auditable agentic workflows for AI-powered teams.</p>
-          </div>
-        </article>
+        </div>
 
-        <article class="service-video" aria-labelledby="video-services-title">
-          <div class="service-video-media">
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="/assets/videos/posters/ai-agents-automation-saas-delivery.jpg"
-              aria-describedby="video-services-description"
-              data-i18n-aria-label="landing.services_videos.video3_aria">
-              <source src="/assets/videos/ai-agents-automation-saas-delivery.mp4" type="video/mp4">
-            </video>
-            <img
-              class="service-video-avatar"
-              src="/assets/images/mario-mayerle-avatar.jpg"
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async">
-          </div>
-          <div class="service-video-copy">
-            <span class="idx">iii.</span>
-            <h3 id="video-services-title" data-i18n="landing.services_videos.video3_title">AI Agents, Automation &amp; SaaS Delivery</h3>
-            <p id="video-services-description" data-i18n="landing.services_videos.video3_desc">AI agents, workflow automation, SaaS products, data systems, legacy modernization and custom software delivery.</p>
-          </div>
-        </article>
+        <div class="aiteam-feature-videos">
+          <article class="service-video" aria-labelledby="video-aiteamx-title">
+            <div class="service-video-media">
+              <video
+                controls
+                preload="metadata"
+                playsinline
+                poster="/assets/videos/posters/aiteamx-ai-operations-desk.jpg"
+                aria-describedby="video-aiteamx-description"
+                data-i18n-aria-label="landing.services_videos.video2_aria">
+                <source src="/assets/videos/aiteamx-ai-operations-desk.mp4" type="video/mp4">
+              </video>
+              <img
+                class="service-video-avatar"
+                src="/assets/images/mario-mayerle-avatar.jpg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async">
+            </div>
+            <div class="service-video-copy">
+              <span class="idx">ii.</span>
+              <h3 id="video-aiteamx-title" data-i18n="landing.services_videos.video2_title">AITEAM-X &mdash; AI Operations Desk</h3>
+              <p id="video-aiteamx-description" data-i18n="landing.services_videos.video2_desc">Controlled, persistent and auditable agentic workflows for AI-powered teams.</p>
+            </div>
+          </article>
+
+          <article class="service-video" aria-labelledby="video-services-title">
+            <div class="service-video-media">
+              <video
+                controls
+                preload="metadata"
+                playsinline
+                poster="/assets/videos/posters/ai-agents-automation-saas-delivery.jpg"
+                aria-describedby="video-services-description"
+                data-i18n-aria-label="landing.services_videos.video3_aria">
+                <source src="/assets/videos/ai-agents-automation-saas-delivery.mp4" type="video/mp4">
+              </video>
+              <img
+                class="service-video-avatar"
+                src="/assets/images/mario-mayerle-avatar.jpg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async">
+            </div>
+            <div class="service-video-copy">
+              <span class="idx">iii.</span>
+              <h3 id="video-services-title" data-i18n="landing.services_videos.video3_title">AI Agents, Automation &amp; SaaS Delivery</h3>
+              <p id="video-services-description" data-i18n="landing.services_videos.video3_desc">AI agents, workflow automation, SaaS products, data systems, legacy modernization and custom software delivery.</p>
+            </div>
+          </article>
+        </div>
       </div>
 
       <div class="products-grid reveal">

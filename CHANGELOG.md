@@ -4,6 +4,17 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.2.0] - 2026-07-04
+
+### Added
+- Adicionado video do YouTube como midia principal do AITEAM-X no bloco de produtos da home.
+
+### Changed
+- Reorganizado o destaque do AITEAM-X para exibir o card do produto ao lado do video principal.
+- Reposicionados os dois videos existentes para uma faixa abaixo do card AITEAM-X e do novo video.
+
+---
+
 ## [4.1.1] - 2026-06-25
 
 ### Fixed
