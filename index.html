@@ -1297,10 +1297,196 @@
       .version-badge:hover { opacity: 1; }
     }
 
+    /* ============ Whitepaper lead magnet ============ */
+    .whitepaper-toast {
+      position: fixed;
+      left: 16px;
+      bottom: 16px;
+      z-index: 70;
+      width: min(430px, calc(100vw - 32px));
+      padding: 1rem;
+      border: 1px solid var(--line-2);
+      background: rgba(11, 16, 32, 0.96);
+      backdrop-filter: blur(12px) saturate(140%);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      color: var(--ink);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .whitepaper-toast[hidden] { display: none; }
+    .whitepaper-toast.is-visible { opacity: 1; transform: none; }
+    .whitepaper-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid var(--line-2);
+      background: transparent;
+      color: var(--ink-2);
+      font: inherit;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .whitepaper-close:hover, .whitepaper-close:focus-visible {
+      color: var(--accent-text);
+      border-color: var(--accent-text);
+    }
+    .whitepaper-kicker {
+      max-width: calc(100% - 3rem);
+      margin: 0 0 0.65rem;
+      color: var(--accent-text);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .whitepaper-toast h2 {
+      max-width: 13ch;
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 7vw, 2.45rem);
+      font-weight: 400;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+    .whitepaper-copy {
+      margin: 0.8rem 0 1rem;
+      color: var(--ink-2);
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+    .whitepaper-preview {
+      display: flex;
+      gap: 0.45rem;
+      margin: 0 0 1rem;
+      padding-bottom: 0.45rem;
+      overflow-x: auto;
+      scrollbar-color: var(--accent-text) rgba(255,255,255,0.08);
+      scrollbar-width: thin;
+    }
+    .whitepaper-preview figure {
+      flex: 0 0 82px;
+      aspect-ratio: 1055 / 1491;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line-2);
+      background: #f7f1e8;
+    }
+    .whitepaper-preview figure:first-child { flex-basis: 100px; }
+    .whitepaper-preview img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .whitepaper-form {
+      display: grid;
+      gap: 0.7rem;
+    }
+    .whitepaper-form label {
+      display: grid;
+      gap: 0.35rem;
+      color: var(--ink-2);
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .whitepaper-form label small { color: var(--ink-4); font-weight: 500; }
+    .whitepaper-form input[type="email"],
+    .whitepaper-form input[type="text"] {
+      width: 100%;
+      height: 2.45rem;
+      border: 1px solid var(--line-2);
+      background: var(--bg-soft);
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.84rem;
+      padding: 0.55rem 0.65rem;
+      border-radius: 0;
+    }
+    .whitepaper-form input:focus {
+      outline: 1px solid var(--accent-text);
+      outline-offset: 2px;
+    }
+    .whitepaper-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+    }
+    .whitepaper-consent {
+      display: flex !important;
+      align-items: flex-start;
+      gap: 0.5rem !important;
+      color: var(--ink-3) !important;
+      font-size: 0.7rem !important;
+      line-height: 1.4;
+    }
+    .whitepaper-consent input {
+      width: 1rem;
+      height: 1rem;
+      flex: 0 0 1rem;
+      margin-top: 0.1rem;
+      accent-color: var(--accent-text);
+    }
+    .whitepaper-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+    }
+    .whitepaper-actions button {
+      min-height: 2.6rem;
+      border: 1px solid var(--accent-text);
+      background: var(--accent-text);
+      color: var(--bg);
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+    .whitepaper-actions button:disabled {
+      cursor: wait;
+      opacity: 0.6;
+    }
+    .whitepaper-download {
+      color: var(--accent-text);
+      font-size: 0.76rem;
+      font-weight: 600;
+      border-bottom: 1px solid var(--accent-text);
+    }
+    .whitepaper-download[hidden] { display: none; }
+    .whitepaper-status {
+      min-height: 1.05rem;
+      margin: 0;
+      color: var(--ink-3);
+      font-size: 0.74rem;
+      line-height: 1.4;
+    }
+    .whitepaper-status.is-error { color: #fecaca; }
+    .whitepaper-status.is-success { color: var(--accent-text); }
+
+    @media (max-width: 720px) {
+      .whitepaper-toast {
+        left: 10px;
+        right: 10px;
+        bottom: 42px;
+        width: auto;
+        max-height: calc(100dvh - 64px);
+        overflow-y: auto;
+      }
+      .whitepaper-grid { grid-template-columns: 1fr; }
+      .whitepaper-preview figure { flex-basis: 76px; }
+      .whitepaper-preview figure:first-child { flex-basis: 90px; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
       .reveal { opacity: 1 !important; transform: none !important; }
       .marquee-track { animation: none !important; }
+      .whitepaper-toast { transition: none; }
     }
   </style>
 </head>
@@ -1997,6 +2183,55 @@
     <span class="hash" id="versionBadgeHash">...</span>
   </a>
 
+  <aside
+    class="whitepaper-toast"
+    data-whitepaper-toast
+    data-endpoint="https://dodvgrtxbwufbuiyfhab.supabase.co/functions/v1/whitepaper-lead"
+    data-asset-id="operating-agents-whitepaper"
+    data-product-id="inosx"
+    aria-labelledby="whitepaperToastTitle"
+    hidden
+  >
+    <button class="whitepaper-close" type="button" data-whitepaper-close aria-label="Dismiss whitepaper offer">&times;</button>
+    <p class="whitepaper-kicker">Free whitepaper</p>
+    <h2 id="whitepaperToastTitle">Turn AI work into an operation.</h2>
+    <p class="whitepaper-copy">Get the AITEAM-X Operating Agents whitepaper and see how goals, memory, proof and human control become reliable AI operations.</p>
+
+    <div class="whitepaper-preview" aria-label="AITEAM-X Operating Agents whitepaper page previews">
+      <figure><img src="/assets/whitepaper-preview/operating-agents-cover.jpg" alt="Whitepaper cover preview" width="420" height="594" loading="lazy" decoding="async"></figure>
+      <figure><img src="/assets/whitepaper-preview/operating-agents-contents.jpg" alt="Whitepaper contents preview" width="420" height="594" loading="lazy" decoding="async"></figure>
+      <figure><img src="/assets/whitepaper-preview/operating-agents-specops.jpg" alt="SpecOps and AgentOps preview page" width="420" height="594" loading="lazy" decoding="async"></figure>
+      <figure><img src="/assets/whitepaper-preview/operating-agents-memory.jpg" alt="Memory and local-first execution preview page" width="420" height="594" loading="lazy" decoding="async"></figure>
+      <figure><img src="/assets/whitepaper-preview/operating-agents-operations-desk.jpg" alt="AI Operations Desk preview page" width="420" height="594" loading="lazy" decoding="async"></figure>
+    </div>
+
+    <form class="whitepaper-form" data-whitepaper-form novalidate>
+      <label>
+        <span>Email</span>
+        <input name="email" type="email" autocomplete="email" maxlength="120" required placeholder="you@company.com">
+      </label>
+      <div class="whitepaper-grid">
+        <label>
+          <span>Name <small>optional</small></span>
+          <input name="name" type="text" autocomplete="name" maxlength="80" placeholder="Your name">
+        </label>
+        <label>
+          <span>Company <small>optional</small></span>
+          <input name="company" type="text" autocomplete="organization" maxlength="120" placeholder="Company">
+        </label>
+      </div>
+      <label class="whitepaper-consent">
+        <input name="consent" type="checkbox" required>
+        <span>I agree to share this email with INOSX so the team can send product updates and follow up about AI operations.</span>
+      </label>
+      <div class="whitepaper-actions">
+        <button type="submit">Download free whitepaper</button>
+        <a class="whitepaper-download" data-whitepaper-download href="#" target="_blank" rel="noopener noreferrer" hidden>Open whitepaper</a>
+      </div>
+      <p class="whitepaper-status" data-whitepaper-status role="status" aria-live="polite">Instant signed download link.</p>
+    </form>
+  </aside>
+
   <!-- ============ JSON-LD structured data ============ -->
   <script type="application/ld+json">
   {
@@ -2232,6 +2467,154 @@
       if (window.i18n && typeof window.i18n.setLanguage === 'function') {
         try { window.i18n.setLanguage('en'); } catch(e){}
       }
+    })();
+
+    (function() {
+      var toast = document.querySelector('[data-whitepaper-toast]');
+      if (!toast) return;
+
+      var endpoint = toast.getAttribute('data-endpoint') || '';
+      var assetId = toast.getAttribute('data-asset-id') || 'operating-agents-whitepaper';
+      var productId = toast.getAttribute('data-product-id') || 'inosx';
+      var form = toast.querySelector('[data-whitepaper-form]');
+      var closeButton = toast.querySelector('[data-whitepaper-close]');
+      var status = toast.querySelector('[data-whitepaper-status]');
+      var submitButton = form ? form.querySelector('button[type="submit"]') : null;
+      var downloadLink = toast.querySelector('[data-whitepaper-download]');
+      var dismissedKey = 'inosx.whitepaper.dismissedUntil';
+      var completedKey = 'inosx.whitepaper.completedUntil';
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      function trimField(value, limit) {
+        return String(value || '').trim().slice(0, limit);
+      }
+      function now() { return Date.now(); }
+      function daysFromNow(days) { return now() + days * 24 * 60 * 60 * 1000; }
+      function getStoredUntil(key) {
+        var value = Number(window.localStorage.getItem(key) || 0);
+        return Number.isFinite(value) ? value : 0;
+      }
+      function suppressUntil(key, days) {
+        window.localStorage.setItem(key, String(daysFromNow(days)));
+      }
+      function isSuppressed() {
+        return getStoredUntil(dismissedKey) > now() || getStoredUntil(completedKey) > now();
+      }
+      function setStatus(message, type) {
+        if (!status) return;
+        status.textContent = message || '';
+        status.classList.toggle('is-error', type === 'error');
+        status.classList.toggle('is-success', type === 'success');
+      }
+      function isSafeEndpoint(value) {
+        try {
+          var url = new URL(value);
+          return url.protocol === 'https:'
+            && url.hostname === 'dodvgrtxbwufbuiyfhab.supabase.co'
+            && url.pathname === '/functions/v1/whitepaper-lead';
+        } catch (e) {
+          return false;
+        }
+      }
+      function getAllowedUtm(name) {
+        var value = new URLSearchParams(window.location.search).get(name);
+        return /^[a-zA-Z0-9_.:-]{1,120}$/.test(value || '') ? value : '';
+      }
+      function showToast() {
+        if (isSuppressed()) return;
+        toast.hidden = false;
+        window.requestAnimationFrame(function() { toast.classList.add('is-visible'); });
+      }
+      function hideToast() {
+        toast.classList.remove('is-visible');
+        window.setTimeout(function() { toast.hidden = true; }, 180);
+      }
+
+      if (closeButton) {
+        closeButton.addEventListener('click', function() {
+          suppressUntil(dismissedKey, 7);
+          hideToast();
+        });
+      }
+
+      if (form) {
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          var formData = new FormData(form);
+          var email = trimField(formData.get('email'), 120).toLowerCase();
+          var name = trimField(formData.get('name'), 80);
+          var company = trimField(formData.get('company'), 120);
+          var consent = formData.get('consent') === 'on';
+
+          if (!email || !emailPattern.test(email)) {
+            setStatus('Enter a valid email to get the whitepaper.', 'error');
+            var emailInput = form.querySelector('input[name="email"]');
+            if (emailInput) emailInput.focus();
+            return;
+          }
+          if (!consent) {
+            setStatus('Consent is required before we can send the signed link.', 'error');
+            var consentInput = form.querySelector('input[name="consent"]');
+            if (consentInput) consentInput.focus();
+            return;
+          }
+          if (!isSafeEndpoint(endpoint)) {
+            setStatus('Whitepaper download is not configured for this page.', 'error');
+            return;
+          }
+
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Preparing...';
+          }
+          if (downloadLink) downloadLink.hidden = true;
+          setStatus('Creating your signed whitepaper link...');
+
+          fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              assetId: assetId,
+              productId: productId,
+              email: email,
+              name: name,
+              company: company,
+              consent: true,
+              context: {
+                pageUrl: window.location.origin + window.location.pathname,
+                referrer: document.referrer || '',
+                utmSource: getAllowedUtm('utm_source'),
+                utmCampaign: getAllowedUtm('utm_campaign')
+              }
+            })
+          }).then(function(response) {
+            return response.json().catch(function() { return {}; }).then(function(data) {
+              if (!response.ok || data.error || !data.url) {
+                throw new Error(data.error || ('whitepaper_failed_' + response.status));
+              }
+              return data;
+            });
+          }).then(function(data) {
+            suppressUntil(completedKey, 30);
+            if (downloadLink) {
+              downloadLink.href = data.url;
+              downloadLink.hidden = false;
+              downloadLink.focus();
+              downloadLink.click();
+            }
+            setStatus('Your whitepaper link is ready. If it did not open, use the button above.', 'success');
+          }).catch(function() {
+            setStatus('Could not create the whitepaper link right now. Please try again.', 'error');
+          }).finally(function() {
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = 'Download free whitepaper';
+            }
+          });
+        });
+      }
+
+      window.setTimeout(showToast, 1800);
     })();
   </script>
 </body>

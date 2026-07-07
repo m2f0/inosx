@@ -4,6 +4,14 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.0] - 2026-07-07
+
+### Added
+- Adicionado toaster de lead magnet para download gratuito do whitepaper AITEAM-X Operating Agents, com previews visuais otimizados e captura de email segmentada para `inosx`.
+- Incluidas miniaturas locais do whitepaper em `assets/whitepaper-preview/` para preservar performance e prova visual da qualidade do material.
+
+---
+
 ## [4.2.0] - 2026-07-04
 
 ### Added
