@@ -4,6 +4,14 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.1] - 2026-07-18
+
+### Added
+- Adicionada uma chamada responsiva na seção de vídeos do AITEAM-X para divulgar o canal oficial no YouTube e facilitar o acesso a mais vídeos das aplicações e demonstrações.
+- Incluída a nova chamada em inglês, português e espanhol no sistema de internacionalização da home.
+
+---
+
 ## [4.3.0] - 2026-07-07
 
 ### Added
