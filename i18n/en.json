@@ -173,8 +173,9 @@
       "submit": "Send message",
       "privacy_1": "By submitting you agree to our",
       "privacy_2": "Terms & Privacy",
-      "success": "Your email app is opening with the message ready to send.",
-      "error": "We couldn't send right now. Try again in a moment or write to support@inosx.com."
+      "consent": "I agree that INOSX may use these details to respond to this request.",
+      "success": "Message received. The INOSX team will respond within one business day.",
+      "error": "We could not securely send this message. Please try again or email support@inosx.com."
     },
     "foot": {
       "tagline": "Application development, technology and AI solutions for production.",

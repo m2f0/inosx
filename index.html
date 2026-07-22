@@ -1550,6 +1550,26 @@
       .whitepaper-toast { transition: none; }
     }
   </style>
+  <script>
+    window.INOSX_PUBLIC_INTAKE = {
+      endpoint: 'https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake',
+      turnstileSiteKey: ''
+    };
+    window.inosxTurnstileReady = function() {
+      var config = window.INOSX_PUBLIC_INTAKE || {};
+      if (!config.turnstileSiteKey || !window.turnstile) return;
+      document.querySelectorAll('[data-turnstile-container]').forEach(function(container) {
+        if (container.getAttribute('data-widget-id')) return;
+        var id = window.turnstile.render(container, {
+          sitekey: config.turnstileSiteKey,
+          action: 'public_intake',
+          theme: 'auto'
+        });
+        container.setAttribute('data-widget-id', String(id));
+      });
+    };
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=inosxTurnstileReady&render=explicit" async defer></script>
 </head>
 <body>
 
@@ -2153,9 +2173,8 @@
       <form class="lead-form reveal"
             data-delay="1"
             id="leadForm"
-            action="mailto:support@inosx.com"
-            data-endpoint=""
-            enctype="text/plain"
+            action="https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake"
+            data-endpoint="https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake"
             method="POST"
             novalidate>
         <div class="form-title" data-i18n="landing.lead.form_title">Talk to INOSX</div>
@@ -2184,6 +2203,12 @@
         <div class="field-hp" aria-hidden="true">
           <label>Don't fill: <input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label>
         </div>
+
+        <label class="whitepaper-consent">
+          <input name="consent" type="checkbox" required>
+          <span data-i18n="landing.lead.consent">I agree that INOSX may use these details to respond to this request.</span>
+        </label>
+        <div data-turnstile-container></div>
 
         <div class="form-bottom">
           <button type="submit" class="form-submit" id="leadSubmit">
@@ -2258,7 +2283,8 @@
   <aside
     class="whitepaper-toast"
     data-whitepaper-toast
-    data-endpoint="https://dodvgrtxbwufbuiyfhab.supabase.co/functions/v1/whitepaper-lead"
+    data-endpoint="https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake"
+    data-download-endpoint="https://dodvgrtxbwufbuiyfhab.supabase.co/functions/v1/whitepaper-lead"
     data-asset-id="operating-agents-whitepaper"
     data-product-id="inosx"
     aria-labelledby="whitepaperToastTitle"
@@ -2296,6 +2322,7 @@
         <input name="consent" type="checkbox" required>
         <span>I agree to share this email with INOSX so the team can send product updates and follow up about AI operations.</span>
       </label>
+      <div data-turnstile-container></div>
       <div class="whitepaper-actions">
         <button type="submit">Download free whitepaper</button>
         <a class="whitepaper-download" data-whitepaper-download href="#" target="_blank" rel="noopener noreferrer" hidden>Open whitepaper</a>
@@ -2489,34 +2516,59 @@
         labelSpan.textContent = 'Sending…';
 
         var data = new FormData(form);
-        var endpoint = form.getAttribute('data-endpoint');
-        if (endpoint) {
-          fetch(endpoint, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          }).then(function(res) {
-            if (res.ok) { ok.classList.add('show'); form.reset(); }
-            else { err.classList.add('show'); }
-          }).catch(function() { err.classList.add('show'); })
-            .finally(function() { btn.disabled = false; labelSpan.textContent = prev; });
+        var endpoint = form.getAttribute('data-endpoint') || '';
+        var widget = form.querySelector('[data-turnstile-container]');
+        var widgetId = widget ? widget.getAttribute('data-widget-id') : '';
+        var turnstileToken = widgetId && window.turnstile ? window.turnstile.getResponse(Number(widgetId)) : '';
+        var safeEndpoint = false;
+        try {
+          var endpointUrl = new URL(endpoint);
+          safeEndpoint = endpointUrl.protocol === 'https:'
+            && endpointUrl.hostname === 'iivsihiudfydtofrdhup.supabase.co'
+            && endpointUrl.pathname === '/functions/v1/public-intake';
+        } catch (e) {}
+        if (!safeEndpoint || !turnstileToken) {
+          err.classList.add('show');
+          btn.disabled = false;
+          labelSpan.textContent = prev;
           return;
         }
 
-        var subject = 'INOSX project inquiry from ' + (data.get('company') || data.get('name') || 'website');
-        var body = [
-          'Name: ' + (data.get('name') || ''),
-          'Work email: ' + (data.get('email') || ''),
-          'Company: ' + (data.get('company') || ''),
-          'Phone: ' + (data.get('phone') || ''),
-          '',
-          'Challenge:',
-          data.get('message') || ''
-        ].join('\n');
-        window.location.href = 'mailto:support@inosx.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        ok.classList.add('show');
-        btn.disabled = false;
-        labelSpan.textContent = prev;
+        if (data.get('_gotcha')) {
+          ok.classList.add('show');
+          form.reset();
+          btn.disabled = false;
+          labelSpan.textContent = prev;
+          return;
+        }
+
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            requestId: window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : undefined,
+            kind: 'contact',
+            name: data.get('name'),
+            email: data.get('email'),
+            company: data.get('company'),
+            phone: data.get('phone'),
+            message: data.get('message'),
+            consent: data.get('consent') === 'on',
+            locale: document.documentElement.lang === 'en' ? 'en' : 'pt-BR',
+            turnstileToken: turnstileToken
+          })
+        }).then(function(res) {
+          return res.json().catch(function() { return {}; }).then(function(result) {
+            if (!res.ok || (result.status !== 'accepted' && result.status !== 'duplicate')) throw new Error('intake_failed');
+            ok.classList.add('show');
+            form.reset();
+          });
+        }).catch(function() { err.classList.add('show'); })
+          .finally(function() {
+            if (widgetId && window.turnstile) window.turnstile.reset(Number(widgetId));
+            btn.disabled = false;
+            labelSpan.textContent = prev;
+          });
       });
     })();
 
@@ -2546,6 +2598,7 @@
       if (!toast) return;
 
       var endpoint = toast.getAttribute('data-endpoint') || '';
+      var downloadEndpoint = toast.getAttribute('data-download-endpoint') || '';
       var assetId = toast.getAttribute('data-asset-id') || 'operating-agents-whitepaper';
       var productId = toast.getAttribute('data-product-id') || 'inosx';
       var form = toast.querySelector('[data-whitepaper-form]');
@@ -2578,7 +2631,17 @@
         status.classList.toggle('is-error', type === 'error');
         status.classList.toggle('is-success', type === 'success');
       }
-      function isSafeEndpoint(value) {
+      function isSafeIntakeEndpoint(value) {
+        try {
+          var url = new URL(value);
+          return url.protocol === 'https:'
+            && url.hostname === 'iivsihiudfydtofrdhup.supabase.co'
+            && url.pathname === '/functions/v1/public-intake';
+        } catch (e) {
+          return false;
+        }
+      }
+      function isSafeDownloadEndpoint(value) {
         try {
           var url = new URL(value);
           return url.protocol === 'https:'
@@ -2630,7 +2693,10 @@
             if (consentInput) consentInput.focus();
             return;
           }
-          if (!isSafeEndpoint(endpoint)) {
+          var widget = form.querySelector('[data-turnstile-container]');
+          var widgetId = widget ? widget.getAttribute('data-widget-id') : '';
+          var turnstileToken = widgetId && window.turnstile ? window.turnstile.getResponse(Number(widgetId)) : '';
+          if (!isSafeIntakeEndpoint(endpoint) || !isSafeDownloadEndpoint(downloadEndpoint) || !turnstileToken) {
             setStatus('Whitepaper download is not configured for this page.', 'error');
             return;
           }
@@ -2642,10 +2708,30 @@
           if (downloadLink) downloadLink.hidden = true;
           setStatus('Creating your signed whitepaper link...');
 
+          var requestId = window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : undefined;
           fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
+              requestId: requestId,
+              kind: 'whitepaper',
+              email: email,
+              name: name || email.split('@')[0],
+              company: company,
+              message: 'Requested AITEAM-X Operating Agents whitepaper',
+              consent: true,
+              locale: document.documentElement.lang === 'en' ? 'en' : 'pt-BR',
+              turnstileToken: turnstileToken
+            })
+          }).then(function(response) {
+            return response.json().catch(function() { return {}; }).then(function(data) {
+              if (!response.ok || (data.status !== 'accepted' && data.status !== 'duplicate')) {
+                throw new Error(data.status || ('intake_failed_' + response.status));
+              }
+              return fetch(downloadEndpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
               assetId: assetId,
               productId: productId,
               email: email,
@@ -2658,7 +2744,9 @@
                 utmSource: getAllowedUtm('utm_source'),
                 utmCampaign: getAllowedUtm('utm_campaign')
               }
-            })
+                })
+              });
+            });
           }).then(function(response) {
             return response.json().catch(function() { return {}; }).then(function(data) {
               if (!response.ok || data.error || !data.url) {
@@ -2678,6 +2766,7 @@
           }).catch(function() {
             setStatus('Could not create the whitepaper link right now. Please try again.', 'error');
           }).finally(function() {
+            if (widgetId && window.turnstile) window.turnstile.reset(Number(widgetId));
             if (submitButton) {
               submitButton.disabled = false;
               submitButton.textContent = 'Download free whitepaper';

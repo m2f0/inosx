@@ -173,8 +173,9 @@
       "submit": "Enviar mensagem",
       "privacy_1": "Ao enviar você concorda com os",
       "privacy_2": "Termos & Privacidade",
-      "success": "Seu app de email está abrindo com a mensagem pronta para envio.",
-      "error": "Não foi possível enviar agora. Tente novamente em instantes ou escreva para support@inosx.com."
+      "consent": "Concordo que a INOSX use estes dados para responder a esta solicitação.",
+      "success": "Mensagem recebida. A equipe INOSX responderá em até um dia útil.",
+      "error": "Não foi possível enviar esta mensagem com segurança. Tente novamente ou escreva para support@inosx.com."
     },
     "foot": {
       "tagline": "Desenvolvimento de aplicativos, tecnologia e soluções de IA para produção.",
