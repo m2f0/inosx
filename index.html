@@ -137,44 +137,52 @@
       z-index: 0;
       overflow: hidden;
       background:
-        radial-gradient(88vw 62vw at 4% 5%, rgba(96, 165, 250, 0.075), transparent 64%),
-        radial-gradient(78vw 54vw at 96% 18%, rgba(21, 94, 117, 0.12), transparent 62%),
+        radial-gradient(88vw 64vw at 95% 12%, rgba(96, 165, 250, 0.12), transparent 62%),
+        radial-gradient(78vw 54vw at 5% 90%, rgba(21, 94, 117, 0.11), transparent 64%),
         linear-gradient(118deg, #0b1020 7%, #0d1326 48%, #0b1020 92%);
     }
     .bg-liquid::before,
     .bg-liquid::after {
       content: '';
       position: absolute;
-      width: 72vw;
+      width: min(106vw, 1540px);
       aspect-ratio: 1;
-      border-radius: 45% 55% 58% 42% / 48% 43% 57% 52%;
-      filter: blur(48px);
-      opacity: 0.58;
+      border-radius: 50%;
       will-change: transform, border-radius;
     }
     .bg-liquid::before {
-      top: -24vw;
-      left: -20vw;
+      top: -42vw;
+      right: -40vw;
+      border: 1px solid rgba(125, 211, 252, 0.34);
       background:
-        radial-gradient(circle at 62% 52%, rgba(125, 211, 252, 0.16), transparent 34%),
-        radial-gradient(circle at 42% 44%, rgba(21, 94, 117, 0.22), transparent 66%);
-      animation: liquid-tide-one 26s cubic-bezier(.45, 0, .55, 1) infinite alternate;
+        radial-gradient(ellipse at 34% 71%, rgba(125, 211, 252, 0.23) 0 2%, transparent 12%),
+        radial-gradient(ellipse at 59% 48%, rgba(96, 165, 250, 0.15) 0 9%, transparent 30%),
+        conic-gradient(from 224deg at 49% 52%, transparent 0 16%, rgba(125, 211, 252, 0.20) 22%, transparent 30% 45%, rgba(96, 165, 250, 0.13) 52%, transparent 63% 81%, rgba(125, 211, 252, 0.24) 89%, transparent 100%);
+      box-sizing: border-box;
+      filter: blur(0.2px);
+      opacity: 0.88;
+      animation: liquid-prism-drift 17s cubic-bezier(.22, 1, .36, 1) infinite alternate;
     }
     .bg-liquid::after {
-      right: -23vw;
-      bottom: -28vw;
+      top: -30vw;
+      right: -28vw;
+      width: min(84vw, 1240px);
+      border: 1px solid rgba(199, 215, 240, 0.18);
       background:
-        radial-gradient(circle at 35% 38%, rgba(96, 165, 250, 0.12), transparent 30%),
-        radial-gradient(circle at 55% 58%, rgba(21, 94, 117, 0.20), transparent 67%);
-      animation: liquid-tide-two 31s cubic-bezier(.45, 0, .55, 1) infinite alternate;
+        radial-gradient(ellipse at 31% 73%, rgba(243, 246, 255, 0.12), transparent 2%, transparent 16%),
+        radial-gradient(ellipse at 49% 56%, transparent 0 37%, rgba(125, 211, 252, 0.16) 44%, transparent 51%),
+        conic-gradient(from 160deg at 50% 50%, transparent 0 23%, rgba(125, 211, 252, 0.20) 29%, transparent 39% 65%, rgba(96, 165, 250, 0.16) 73%, transparent 84%);
+      filter: blur(0.4px);
+      opacity: 0.74;
+      animation: liquid-prism-inner 13s cubic-bezier(.22, 1, .36, 1) infinite alternate;
     }
-    @keyframes liquid-tide-one {
-      from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); border-radius: 45% 55% 58% 42% / 48% 43% 57% 52%; }
-      to { transform: translate3d(18vw, 16vh, 0) rotate(18deg) scale(1.15); border-radius: 58% 42% 46% 54% / 38% 57% 43% 62%; }
+    @keyframes liquid-prism-drift {
+      from { transform: translate3d(0, 0, 0) rotate(-11deg) scale(1); border-radius: 47% 53% 51% 49% / 54% 43% 57% 46%; }
+      to { transform: translate3d(-19vw, 30vh, 0) rotate(12deg) scale(1.08); border-radius: 58% 42% 46% 54% / 38% 57% 43% 62%; }
     }
-    @keyframes liquid-tide-two {
-      from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); border-radius: 45% 55% 58% 42% / 48% 43% 57% 52%; }
-      to { transform: translate3d(-19vw, -13vh, 0) rotate(-16deg) scale(1.12); border-radius: 39% 61% 45% 55% / 57% 39% 61% 43%; }
+    @keyframes liquid-prism-inner {
+      from { transform: translate3d(0, 0, 0) rotate(8deg) scale(1); border-radius: 49% 51% 44% 56% / 41% 58% 42% 59%; }
+      to { transform: translate3d(-13vw, 19vh, 0) rotate(-10deg) scale(1.13); border-radius: 42% 58% 55% 45% / 59% 39% 61% 41%; }
     }
     .hero {
       background: radial-gradient(900px 500px at 30% 20%, rgba(21,94,117,0.12), transparent 65%);

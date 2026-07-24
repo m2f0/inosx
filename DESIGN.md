@@ -188,7 +188,7 @@ The system is **flat by doctrine**. **Zero `box-shadow` anywhere.** Depth is rea
 
 **The Liquid Lens Exception.** Liquid material is allowed only for the sticky navigation, primary action controls and a small number of media or product-proof frames. It uses a controlled dark plate, a 1px cyan-tinted edge, one inner stroke and a directional highlight band. It never uses a drop shadow, never sits behind long-form copy and never becomes a repeated card treatment.
 
-**The Liquid Field Exception.** A single fixed liquid field may sit behind the complete page when the direction calls for it. It remains low contrast, cyan-only, non-interactive and slower than reading. It must never add shadows, parallax, particles or moving content panels, and it fully stops with `prefers-reduced-motion`.
+**The Liquid Field Exception.** A single fixed liquid prism may sit partially outside the complete page when the direction calls for it. Its refractive cyan edges and inner lens travel slowly behind the content, remain non-interactive and fully stop with `prefers-reduced-motion`. It must never add shadows, parallax, particles or moving content panels.
 
 ## 5. Components
 

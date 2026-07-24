@@ -4,6 +4,13 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.6] - 2026-07-24
+
+### Changed
+- Substituido o fundo Liquid Field por um prisma liquido refrativo, parcialmente fora da tela, com movimento mais visivel e bordas cyan em camadas.
+
+---
+
 ## [4.3.5] - 2026-07-24
 
 ### Changed
