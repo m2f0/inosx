@@ -130,35 +130,51 @@
     }
 
     /* Atmosfera: grade de hairlines flutuante (papel de desenho técnico) + radial estático no hero */
-    .bg-grid {
+    .bg-liquid {
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.85;
-      background-image:
-        linear-gradient(to right, rgba(199, 215, 240, 0.022) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(199, 215, 240, 0.022) 1px, transparent 1px);
-      background-size: 96px 96px;
-      animation: bg-drift 90s linear infinite;
-      will-change: background-position;
+      overflow: hidden;
+      background:
+        radial-gradient(88vw 62vw at 4% 5%, rgba(96, 165, 250, 0.075), transparent 64%),
+        radial-gradient(78vw 54vw at 96% 18%, rgba(21, 94, 117, 0.12), transparent 62%),
+        linear-gradient(118deg, #0b1020 7%, #0d1326 48%, #0b1020 92%);
     }
-    .bg-grid::after {
+    .bg-liquid::before,
+    .bg-liquid::after {
       content: '';
       position: absolute;
-      inset: 0;
+      width: 72vw;
+      aspect-ratio: 1;
+      border-radius: 45% 55% 58% 42% / 48% 43% 57% 52%;
+      filter: blur(48px);
+      opacity: 0.58;
+      will-change: transform, border-radius;
+    }
+    .bg-liquid::before {
+      top: -24vw;
+      left: -20vw;
       background:
-        radial-gradient(1100px 600px at 18% 12%, rgba(21,94,117,0.10), transparent 60%),
-        radial-gradient(900px 500px at 82% 78%, rgba(21,94,117,0.07), transparent 60%);
-      animation: bg-breathe 18s ease-in-out infinite alternate;
+        radial-gradient(circle at 62% 52%, rgba(125, 211, 252, 0.16), transparent 34%),
+        radial-gradient(circle at 42% 44%, rgba(21, 94, 117, 0.22), transparent 66%);
+      animation: liquid-tide-one 26s cubic-bezier(.45, 0, .55, 1) infinite alternate;
     }
-    @keyframes bg-drift {
-      from { background-position: 0 0, 0 0; }
-      to   { background-position: 96px 96px, -96px -96px; }
+    .bg-liquid::after {
+      right: -23vw;
+      bottom: -28vw;
+      background:
+        radial-gradient(circle at 35% 38%, rgba(96, 165, 250, 0.12), transparent 30%),
+        radial-gradient(circle at 55% 58%, rgba(21, 94, 117, 0.20), transparent 67%);
+      animation: liquid-tide-two 31s cubic-bezier(.45, 0, .55, 1) infinite alternate;
     }
-    @keyframes bg-breathe {
-      from { opacity: 0.6; }
-      to   { opacity: 1; }
+    @keyframes liquid-tide-one {
+      from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); border-radius: 45% 55% 58% 42% / 48% 43% 57% 52%; }
+      to { transform: translate3d(18vw, 16vh, 0) rotate(18deg) scale(1.15); border-radius: 58% 42% 46% 54% / 38% 57% 43% 62%; }
+    }
+    @keyframes liquid-tide-two {
+      from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); border-radius: 45% 55% 58% 42% / 48% 43% 57% 52%; }
+      to { transform: translate3d(-19vw, -13vh, 0) rotate(-16deg) scale(1.12); border-radius: 39% 61% 45% 55% / 57% 39% 61% 43%; }
     }
     .hero {
       background: radial-gradient(900px 500px at 30% 20%, rgba(21,94,117,0.12), transparent 65%);
@@ -1785,7 +1801,7 @@
   <a class="skip-link" href="#main" data-i18n="landing.a11y.skip">Skip to main content</a>
 
   <!-- Background animado: grade técnica + breathing radials -->
-  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-liquid" aria-hidden="true"></div>
 
   <!-- ============ TOP NAV ============ -->
   <header class="topbar">

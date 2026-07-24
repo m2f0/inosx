@@ -4,6 +4,14 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.5] - 2026-07-24
+
+### Changed
+- Adicionado um campo Liquid animado de baixo contraste ao fundo de toda a home, com marés lentas em cyan profundo e suporte a `prefers-reduced-motion`.
+- Atualizado o sistema visual para limitar o novo efeito a uma única camada fixa, sem parallax, partículas, sombras ou painéis móveis.
+
+---
+
 ## [4.3.4] - 2026-07-24
 
 ### Changed
