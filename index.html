@@ -669,13 +669,30 @@
 
     .marquee {
       position: relative;
+      isolation: isolate;
       overflow: hidden;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      padding: 0.42rem;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1.2rem;
+      background: var(--glass-plate);
+      backdrop-filter: blur(16px) saturate(130%);
+      -webkit-backdrop-filter: blur(16px) saturate(130%);
       -webkit-mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
               mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
     }
+    .marquee::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 42%;
+      border-radius: 1.1rem 1.1rem 44% 44%;
+      background: linear-gradient(180deg, var(--glass-highlight), transparent);
+      pointer-events: none;
+    }
     .marquee-track {
+      position: relative;
+      z-index: 1;
       display: flex;
       width: max-content;
       animation: marquee 45s linear infinite;
@@ -781,28 +798,67 @@
 
     /* ============ Itens em linha ============ */
     .rows { display: grid; grid-template-columns: 1fr; }
-    .row-item {
+    .liquid-workflow {
+      position: relative;
+      isolation: isolate;
       display: grid;
-      grid-template-columns: 1fr 1fr 4fr;
-      gap: 3rem;
-      padding: 2.25rem 0;
-      border-top: 1px solid var(--line);
-      align-items: start;
-      transition: transform 0.3s ease;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1.2rem;
+      background: var(--glass-plate);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
     }
-    .row-item:last-child { border-bottom: 1px solid var(--line); }
-    .row-item:hover { transform: translateX(0.5rem); }
-    .row-item .idx {
+    .liquid-workflow::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 48%;
+      border-radius: 1.1rem 1.1rem 45% 45%;
+      background: linear-gradient(180deg, var(--glass-highlight), transparent);
+      pointer-events: none;
+    }
+    .workflow-step {
+      position: relative;
+      z-index: 1;
+      min-height: 230px;
+      padding: clamp(1.65rem, 3vw, 2.75rem);
+      display: grid;
+      align-content: space-between;
+      gap: 2.5rem;
+      border-right: 1px solid var(--line-2);
+    }
+    .workflow-step:last-of-type { border-right: 0; }
+    .workflow-step .idx {
       font-family: var(--font-display);
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       font-style: italic;
       font-weight: 300;
       color: var(--accent-text);
     }
-    .row-item h3 { font-family: var(--font-display); font-weight: 400; }
-    .row-item p { color: var(--ink-2); font-size: 0.98rem; max-width: 52ch; }
+    .workflow-step h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.55rem, 2.5vw, 2.2rem); }
+    .workflow-step p { color: var(--ink-2); font-size: 0.96rem; max-width: 25ch; }
+    .workflow-orb {
+      width: 0.72rem;
+      height: 0.72rem;
+      border: 1px solid var(--glass-edge-bright);
+      border-radius: 999px;
+      background: var(--accent-text);
+      opacity: 0.68;
+      animation: liquid-current 3.8s cubic-bezier(.25,1,.5,1) infinite;
+    }
+    .workflow-step:nth-child(2) .workflow-orb { animation-delay: 0.35s; }
+    .workflow-step:nth-child(3) .workflow-orb { animation-delay: 0.7s; }
+    @keyframes liquid-current {
+      0%, 100% { transform: scale(0.72); opacity: 0.36; }
+      45% { transform: scale(1); opacity: 0.92; }
+    }
     @media (max-width: 880px) {
-      .row-item { grid-template-columns: 1fr; gap: 0.75rem; padding: 1.75rem 0; }
+      .liquid-workflow { grid-template-columns: 1fr; }
+      .workflow-step { min-height: 0; gap: 1.5rem; border-right: 0; border-bottom: 1px solid var(--line-2); }
+      .workflow-step:last-of-type { border-bottom: 0; }
     }
 
     /* removed: pains h3 italic violated Italic Signature Rule */
@@ -1746,7 +1802,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="https://admin.inosx.com" class="nav-admin">
+        <a href="https://admin.inosx.com" class="nav-admin" target="_blank" rel="noopener noreferrer">
           <span data-i18n="landing.nav.admin">Admin</span>
           <span class="arr" aria-hidden="true">↗</span>
         </a>
@@ -1801,7 +1857,6 @@
         <div class="hero-meta">
           <div class="row"><span data-i18n="landing.hero.meta_1_l">Built around</span><strong data-i18n="landing.hero.meta_1_v">your processes</strong></div>
           <div class="row"><span data-i18n="landing.hero.meta_2_l">Live in</span><strong data-i18n="landing.hero.meta_2_v">4–8 weeks</strong></div>
-          <div class="row"><span data-i18n="landing.hero.meta_3_l">Operated by</span><strong data-i18n="landing.hero.meta_3_v">your team</strong></div>
         </div>
       </div>
     </div>
@@ -1815,7 +1870,6 @@
         <span class="bar"></span>
         <span data-i18n="landing.clients.label">Built for, shipped with</span>
       </div>
-      <div class="note" data-i18n="landing.clients.note">Selected from production engagements</div>
     </div>
 
     <div class="marquee" aria-label="Client logos">
@@ -1841,27 +1895,6 @@
   </section>
 
   <!-- ============ EVIDENCE STRIP — links pra evidência real, sem numerais fabricados ============ -->
-  <section class="evidence">
-    <div class="container">
-      <div class="evidence-inner">
-        <a href="#products" class="reveal">
-          <span class="ev-line" data-i18n="landing.evidence.e1">Eight products live and operated today</span>
-          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
-        </a>
-        <a href="#clients" class="reveal" data-delay="1">
-          <span class="ev-line" data-i18n="landing.evidence.e2">Clients on three continents</span>
-          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
-        </a>
-        <a href="#industries" class="reveal" data-delay="2">
-          <span class="ev-line" data-i18n="landing.evidence.e3">Twelve industries we ship to</span>
-          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="rule"><hr></div>
-
   <!-- ============ PAINS ============ -->
   <section class="block pains">
     <div class="container">
@@ -1877,41 +1910,29 @@
             <span class="italic" data-i18n="landing.pains.title_2">They stopped at prototype.</span>
           </h2>
           <p data-i18n="landing.pains.sub" class="lead">
-            Six patterns kill most enterprise software projects. We built our practice to solve every one of them.
+            The path from prototype to production should be visible.
           </p>
         </div>
       </div>
 
-      <div class="rows">
-        <div class="row-item reveal">
+      <div class="liquid-workflow reveal">
+        <div class="workflow-step">
           <span class="idx">i.</span>
-          <h3 data-i18n="landing.pains.p1_t">Vendors that stop before launch</h3>
-          <p data-i18n="landing.pains.p1_d">Concepts that look good in the meeting and collapse when the real workflow, data and users arrive.</p>
+          <h3 data-i18n="landing.pains.w1_t">Prototype</h3>
+          <p data-i18n="landing.pains.w1_d">A useful idea needs more than a convincing demo.</p>
+          <span class="workflow-orb" aria-hidden="true"></span>
         </div>
-        <div class="row-item reveal">
+        <div class="workflow-step">
           <span class="idx">ii.</span>
-          <h3 data-i18n="landing.pains.p2_t">UX nobody on the team will use</h3>
-          <p data-i18n="landing.pains.p2_d">Software the user opens once and abandons. The investment lives in a license; the workflow lives in a spreadsheet.</p>
+          <h3 data-i18n="landing.pains.w2_t">Reality</h3>
+          <p data-i18n="landing.pains.w2_d">Data, integrations and people enter the frame.</p>
+          <span class="workflow-orb" aria-hidden="true"></span>
         </div>
-        <div class="row-item reveal">
+        <div class="workflow-step">
           <span class="idx">iii.</span>
-          <h3 data-i18n="landing.pains.p3_t">Sensitive data outside your control</h3>
-          <p data-i18n="landing.pains.p3_d">Compliance, GDPR/LGPD and trade secrets rule out most off-the-shelf platforms.</p>
-        </div>
-        <div class="row-item reveal">
-          <span class="idx">iv.</span>
-          <h3 data-i18n="landing.pains.p4_t">Integrations that never land</h3>
-          <p data-i18n="landing.pains.p4_d">ERPs, CRMs, legacy bases and automations that need to talk. Nobody finishes the last 20%.</p>
-        </div>
-        <div class="row-item reveal">
-          <span class="idx">v.</span>
-          <h3 data-i18n="landing.pains.p5_t">Rising cost, invisible return</h3>
-          <p data-i18n="landing.pains.p5_d">Hours billed, scope drifting, value missing in the boardroom. The number nobody can defend.</p>
-        </div>
-        <div class="row-item reveal">
-          <span class="idx">vi.</span>
-          <h3 data-i18n="landing.pains.p6_t">Hidden vendor lock-in</h3>
-          <p data-i18n="landing.pains.p6_d">Closed platforms that promise ease and charge dearly when you want to scale, migrate or own the codebase.</p>
+          <h3 data-i18n="landing.pains.w3_t">Production</h3>
+          <p data-i18n="landing.pains.w3_d">A system the team can use, own and return to.</p>
+          <span class="workflow-orb" aria-hidden="true"></span>
         </div>
       </div>
     </div>
@@ -1934,7 +1955,7 @@
             <span class="italic" data-i18n="landing.solutions.title_2">built for use.</span>
           </h2>
           <p class="lead" data-i18n="landing.solutions.sub">
-            One promise across six practices: applications, platforms, integrations and intelligent systems your team actually uses, designed and built from the first diagnostic to the operations dashboard.
+            Three capabilities, shaped around your operation.
           </p>
         </div>
       </div>
@@ -1954,21 +1975,6 @@
           <span class="idx">iii.</span>
           <h3 data-i18n="landing.solutions.s3_t">AI solution development</h3>
           <p data-i18n="landing.solutions.s3_d">AI agents, knowledge platforms and orchestration shipped to production with observability, security and cost control.</p>
-        </div>
-        <div class="sol-item reveal">
-          <span class="idx">iv.</span>
-          <h3 data-i18n="landing.solutions.s4_t">Security &amp; trust</h3>
-          <p data-i18n="landing.solutions.s4_d">CyberAI detection, response and audit. Visibility on what matters across the product, no noise, no theater.</p>
-        </div>
-        <div class="sol-item reveal" data-delay="1">
-          <span class="idx">v.</span>
-          <h3 data-i18n="landing.solutions.s5_t">Computer vision</h3>
-          <p data-i18n="landing.solutions.s5_d">Inspection, counting, quality control and visual automation. Where physical operations need digital eyes.</p>
-        </div>
-        <div class="sol-item reveal" data-delay="2">
-          <span class="idx">vi.</span>
-          <h3 data-i18n="landing.solutions.s6_t">Product strategy</h3>
-          <p data-i18n="landing.solutions.s6_d">Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years of growth.</p>
         </div>
       </div>
     </div>
@@ -2902,7 +2908,7 @@
         });
       }
 
-      window.setTimeout(showToast, 1800);
+      // The whitepaper remains available for a future contextual trigger. It must not interrupt the first reading pass.
     })();
   </script>
 </body>

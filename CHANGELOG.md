@@ -4,6 +4,16 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.4] - 2026-07-24
+
+### Changed
+- Simplificada a leitura da home: removidos sinais redundantes do hero, uma faixa de provas e metade das capacidades exibidas na primeira passagem.
+- Transformada a mensagem de producao em um workflow animado de tres etapas, com relevo Liquid Glass contido e movimento de corrente em cyan.
+- Aplicada moldura Liquid Glass ao carrossel de clientes e desativada a abertura automatica do whitepaper para evitar interrupcao da navegacao.
+- Configurado o acesso `Admin` para abrir em uma nova aba.
+
+---
+
 ## [4.3.3] - 2026-07-24
 
 ### Added
