@@ -4,6 +4,15 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.2] - 2026-07-24
+
+### Fixed
+- Conectados os formulários de contato e whitepaper ao Worker produtivo `api.inosx.com`, com payload compatível com o CRM do INOSX Admin e validação Turnstile.
+- Removidas as dependências de funções Supabase desativadas na captação pública.
+- Restaurado o download do whitepaper diretamente pelo site após a captação ser aceita.
+
+---
+
 ## [4.3.1] - 2026-07-18
 
 ### Added
