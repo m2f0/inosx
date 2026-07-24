@@ -4,6 +4,18 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.3] - 2026-07-24
+
+### Added
+- Adicionado acesso `Admin` na navegaÃ§Ã£o principal para `admin.inosx.com`.
+
+### Changed
+- Aplicada a direÃ§Ã£o visual Vellum Lens: topbar, controles e molduras de prova agora usam relevo lÃ­quido contido, com placas estabilizadas, bordas internas e destaques direcionais em cyan.
+- Ajustada a navegaÃ§Ã£o mobile para preservar marca, Admin, idioma e CTA em telas estreitas.
+- Documentada a exceÃ§Ã£o limitada de Liquid Lens no sistema de design, sem sombras e sem ampliar o efeito para texto longo ou grades de conteÃºdo.
+
+---
+
 ## [4.3.2] - 2026-07-24
 
 ### Fixed

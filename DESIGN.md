@@ -186,6 +186,8 @@ The system is **flat by doctrine**. **Zero `box-shadow` anywhere.** Depth is rea
 
 **The Flat-By-Default Rule.** Surfaces are flat. Containers do not lift on hover, cards do not gain shadows, modals are forbidden as a first thought. If a thing must read as raised, the answer is a hairline border or a 4-6% background tint, never `box-shadow`. The single exception is the form-success / form-error message pair, which uses an opaque dark-tinted background plus a 1px border in the same hue family.
 
+**The Liquid Lens Exception.** Liquid material is allowed only for the sticky navigation, primary action controls and a small number of media or product-proof frames. It uses a controlled dark plate, a 1px cyan-tinted edge, one inner stroke and a directional highlight band. It never uses a drop shadow, never sits behind long-form copy and never becomes a repeated card treatment.
+
 **The No-Atmosphere Rule.** Animated background blobs, drifting radials, parallax layers, glassmorphism panels and ambient particles are forbidden. The page's atmosphere comes from typography and hairlines, not from blurred color clouds. Anything decorative that moves is treated as a tell of AI generation and refused.
 
 ## 5. Components
