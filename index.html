@@ -1552,7 +1552,7 @@
   </style>
   <script>
     window.INOSX_PUBLIC_INTAKE = {
-      endpoint: 'https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake',
+      endpoint: 'https://api.inosx.com/v1/public-intake',
       turnstileSiteKey: '0x4AAAAAAD7_d54OZxbyLsTV'
     };
     window.inosxTurnstileReady = function() {
@@ -2173,8 +2173,8 @@
       <form class="lead-form reveal"
             data-delay="1"
             id="leadForm"
-            action="https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake"
-            data-endpoint="https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake"
+            action="https://api.inosx.com/v1/public-intake"
+            data-endpoint="https://api.inosx.com/v1/public-intake"
             method="POST"
             novalidate>
         <div class="form-title" data-i18n="landing.lead.form_title">Talk to INOSX</div>
@@ -2283,10 +2283,8 @@
   <aside
     class="whitepaper-toast"
     data-whitepaper-toast
-    data-endpoint="https://iivsihiudfydtofrdhup.supabase.co/functions/v1/public-intake"
-    data-download-endpoint="https://dodvgrtxbwufbuiyfhab.supabase.co/functions/v1/whitepaper-lead"
-    data-asset-id="operating-agents-whitepaper"
-    data-product-id="inosx"
+    data-endpoint="https://api.inosx.com/v1/public-intake"
+    data-download-url="/assets/whitepaper/AITEAM-X_Operating_Agents_Whitepaper.pdf"
     aria-labelledby="whitepaperToastTitle"
     hidden
   >
@@ -2325,7 +2323,7 @@
       <div data-turnstile-container></div>
       <div class="whitepaper-actions">
         <button type="submit">Download free whitepaper</button>
-        <a class="whitepaper-download" data-whitepaper-download href="#" target="_blank" rel="noopener noreferrer" hidden>Open whitepaper</a>
+        <a class="whitepaper-download" data-whitepaper-download href="#" download="AITEAM-X_Operating_Agents_Whitepaper.pdf" hidden>Open whitepaper</a>
       </div>
       <p class="whitepaper-status" data-whitepaper-status role="status" aria-live="polite">Instant signed download link.</p>
     </form>
@@ -2524,8 +2522,8 @@
         try {
           var endpointUrl = new URL(endpoint);
           safeEndpoint = endpointUrl.protocol === 'https:'
-            && endpointUrl.hostname === 'iivsihiudfydtofrdhup.supabase.co'
-            && endpointUrl.pathname === '/functions/v1/public-intake';
+            && endpointUrl.hostname === 'api.inosx.com'
+            && endpointUrl.pathname === '/v1/public-intake';
         } catch (e) {}
         if (!safeEndpoint || !turnstileToken) {
           err.classList.add('show');
@@ -2546,13 +2544,14 @@
           method: 'POST',
           headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            requestId: window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : undefined,
-            kind: 'contact',
+            type: 'contact',
             name: data.get('name'),
             email: data.get('email'),
             company: data.get('company'),
             phone: data.get('phone'),
             message: data.get('message'),
+            source: 'inosx.com',
+            sourceRef: 'contact-form',
             consent: data.get('consent') === 'on',
             locale: document.documentElement.lang === 'en' ? 'en' : 'pt-BR',
             turnstileToken: turnstileToken
@@ -2598,9 +2597,7 @@
       if (!toast) return;
 
       var endpoint = toast.getAttribute('data-endpoint') || '';
-      var downloadEndpoint = toast.getAttribute('data-download-endpoint') || '';
-      var assetId = toast.getAttribute('data-asset-id') || 'operating-agents-whitepaper';
-      var productId = toast.getAttribute('data-product-id') || 'inosx';
+      var downloadUrl = toast.getAttribute('data-download-url') || '';
       var form = toast.querySelector('[data-whitepaper-form]');
       var closeButton = toast.querySelector('[data-whitepaper-close]');
       var status = toast.querySelector('[data-whitepaper-status]');
@@ -2635,25 +2632,22 @@
         try {
           var url = new URL(value);
           return url.protocol === 'https:'
-            && url.hostname === 'iivsihiudfydtofrdhup.supabase.co'
-            && url.pathname === '/functions/v1/public-intake';
+            && url.hostname === 'api.inosx.com'
+            && url.pathname === '/v1/public-intake';
         } catch (e) {
           return false;
         }
       }
-      function isSafeDownloadEndpoint(value) {
+      function isSafeDownloadUrl(value) {
         try {
-          var url = new URL(value);
-          return url.protocol === 'https:'
-            && url.hostname === 'dodvgrtxbwufbuiyfhab.supabase.co'
-            && url.pathname === '/functions/v1/whitepaper-lead';
+          var url = new URL(value, window.location.origin);
+          return url.origin === window.location.origin
+            && url.pathname === '/assets/whitepaper/AITEAM-X_Operating_Agents_Whitepaper.pdf'
+            && !url.search
+            && !url.hash;
         } catch (e) {
           return false;
         }
-      }
-      function getAllowedUtm(name) {
-        var value = new URLSearchParams(window.location.search).get(name);
-        return /^[a-zA-Z0-9_.:-]{1,120}$/.test(value || '') ? value : '';
       }
       function showToast() {
         if (isSuppressed()) return;
@@ -2688,7 +2682,7 @@
             return;
           }
           if (!consent) {
-            setStatus('Consent is required before we can send the signed link.', 'error');
+            setStatus('Consent is required before we can provide the whitepaper.', 'error');
             var consentInput = form.querySelector('input[name="consent"]');
             if (consentInput) consentInput.focus();
             return;
@@ -2696,7 +2690,7 @@
           var widget = form.querySelector('[data-turnstile-container]');
           var widgetId = widget ? widget.getAttribute('data-widget-id') : '';
           var turnstileToken = widgetId && window.turnstile ? window.turnstile.getResponse(Number(widgetId)) : '';
-          if (!isSafeIntakeEndpoint(endpoint) || !isSafeDownloadEndpoint(downloadEndpoint) || !turnstileToken) {
+          if (!isSafeIntakeEndpoint(endpoint) || !isSafeDownloadUrl(downloadUrl) || !turnstileToken) {
             setStatus('Whitepaper download is not configured for this page.', 'error');
             return;
           }
@@ -2706,19 +2700,19 @@
             submitButton.textContent = 'Preparing...';
           }
           if (downloadLink) downloadLink.hidden = true;
-          setStatus('Creating your signed whitepaper link...');
+          setStatus('Preparing your whitepaper...');
 
-          var requestId = window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : undefined;
           fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              requestId: requestId,
-              kind: 'whitepaper',
+              type: 'whitepaper',
               email: email,
               name: name || email.split('@')[0],
               company: company,
               message: 'Requested AITEAM-X Operating Agents whitepaper',
+              source: 'inosx.com',
+              sourceRef: 'operating-agents-whitepaper',
               consent: true,
               locale: document.documentElement.lang === 'en' ? 'en' : 'pt-BR',
               turnstileToken: turnstileToken
@@ -2728,41 +2722,17 @@
               if (!response.ok || (data.status !== 'accepted' && data.status !== 'duplicate')) {
                 throw new Error(data.status || ('intake_failed_' + response.status));
               }
-              return fetch(downloadEndpoint, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-              assetId: assetId,
-              productId: productId,
-              email: email,
-              name: name,
-              company: company,
-              consent: true,
-              context: {
-                pageUrl: window.location.origin + window.location.pathname,
-                referrer: document.referrer || '',
-                utmSource: getAllowedUtm('utm_source'),
-                utmCampaign: getAllowedUtm('utm_campaign')
-              }
-                })
-              });
-            });
-          }).then(function(response) {
-            return response.json().catch(function() { return {}; }).then(function(data) {
-              if (!response.ok || data.error || !data.url) {
-                throw new Error(data.error || ('whitepaper_failed_' + response.status));
-              }
               return data;
             });
-          }).then(function(data) {
+          }).then(function() {
             suppressUntil(completedKey, 30);
             if (downloadLink) {
-              downloadLink.href = data.url;
+              downloadLink.href = downloadUrl;
               downloadLink.hidden = false;
               downloadLink.focus();
               downloadLink.click();
             }
-            setStatus('Your whitepaper link is ready. If it did not open, use the button above.', 'success');
+            setStatus('Your whitepaper is ready. If it did not download, use the button above.', 'success');
           }).catch(function() {
             setStatus('Could not create the whitepaper link right now. Please try again.', 'error');
           }).finally(function() {
