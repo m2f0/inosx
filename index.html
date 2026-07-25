@@ -145,10 +145,12 @@
     .bg-liquid::after {
       content: '';
       position: absolute;
-      width: min(106vw, 1540px);
+      width: min(92vw, 1280px);
       aspect-ratio: 1;
-      border-radius: 50%;
-      will-change: transform, border-radius;
+      border-radius: 52% 48% 56% 44% / 48% 55% 45% 52%;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      transform: translateZ(0);
     }
     .bg-liquid::before {
       top: -42vw;
@@ -159,30 +161,36 @@
         radial-gradient(ellipse at 59% 48%, rgba(96, 165, 250, 0.15) 0 9%, transparent 30%),
         conic-gradient(from 224deg at 49% 52%, transparent 0 16%, rgba(125, 211, 252, 0.20) 22%, transparent 30% 45%, rgba(96, 165, 250, 0.13) 52%, transparent 63% 81%, rgba(125, 211, 252, 0.24) 89%, transparent 100%);
       box-sizing: border-box;
-      filter: blur(0.2px);
       opacity: 0.88;
-      animation: liquid-prism-drift 17s cubic-bezier(.22, 1, .36, 1) infinite alternate;
+      animation: liquid-prism-drift 22s cubic-bezier(.22, 1, .36, 1) infinite alternate;
     }
     .bg-liquid::after {
       top: -30vw;
       right: -28vw;
-      width: min(84vw, 1240px);
+      width: min(68vw, 960px);
       border: 1px solid rgba(199, 215, 240, 0.18);
       background:
         radial-gradient(ellipse at 31% 73%, rgba(243, 246, 255, 0.12), transparent 2%, transparent 16%),
         radial-gradient(ellipse at 49% 56%, transparent 0 37%, rgba(125, 211, 252, 0.16) 44%, transparent 51%),
         conic-gradient(from 160deg at 50% 50%, transparent 0 23%, rgba(125, 211, 252, 0.20) 29%, transparent 39% 65%, rgba(96, 165, 250, 0.16) 73%, transparent 84%);
-      filter: blur(0.4px);
       opacity: 0.74;
-      animation: liquid-prism-inner 13s cubic-bezier(.22, 1, .36, 1) infinite alternate;
+      animation: liquid-prism-inner 18s cubic-bezier(.22, 1, .36, 1) infinite alternate;
     }
     @keyframes liquid-prism-drift {
-      from { transform: translate3d(0, 0, 0) rotate(-11deg) scale(1); border-radius: 47% 53% 51% 49% / 54% 43% 57% 46%; }
-      to { transform: translate3d(-19vw, 30vh, 0) rotate(12deg) scale(1.08); border-radius: 58% 42% 46% 54% / 38% 57% 43% 62%; }
+      from { transform: translate3d(0, 0, 0) rotate(-8deg) scale(1); opacity: 0.78; }
+      to { transform: translate3d(-14vw, 20vh, 0) rotate(8deg) scale(1.04); opacity: 0.92; }
     }
     @keyframes liquid-prism-inner {
-      from { transform: translate3d(0, 0, 0) rotate(8deg) scale(1); border-radius: 49% 51% 44% 56% / 41% 58% 42% 59%; }
-      to { transform: translate3d(-13vw, 19vh, 0) rotate(-10deg) scale(1.13); border-radius: 42% 58% 55% 45% / 59% 39% 61% 41%; }
+      from { transform: translate3d(0, 0, 0) rotate(6deg) scale(1); opacity: 0.62; }
+      to { transform: translate3d(-9vw, 13vh, 0) rotate(-6deg) scale(1.06); opacity: 0.78; }
+    }
+    @media (max-width: 800px), (update: slow) {
+      .bg-liquid::before {
+        width: 118vw;
+        right: -54vw;
+        animation-duration: 28s;
+      }
+      .bg-liquid::after { display: none; }
     }
     .hero {
       background: radial-gradient(900px 500px at 30% 20%, rgba(21,94,117,0.12), transparent 65%);

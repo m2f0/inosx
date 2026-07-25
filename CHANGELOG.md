@@ -4,6 +4,14 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.7] - 2026-07-25
+
+### Fixed
+- Otimizado o prisma líquido para animar apenas `transform` e `opacity`, eliminando deformação geométrica e filtros recalculados a cada frame.
+- Reduzidas as superfícies gráficas e aplicada uma única camada em telas menores ou dispositivos com atualização lenta.
+
+---
+
 ## [4.3.6] - 2026-07-24
 
 ### Changed
