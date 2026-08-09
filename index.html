@@ -22,18 +22,18 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="pt_BR" />
   <meta property="og:locale:alternate" content="es_ES" />
-  <meta property="og:image" content="https://inosx.com/og.svg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png" />
+  <meta property="og:image:width" content="1500" />
+  <meta property="og:image:height" content="500" />
   <meta property="og:image:alt" content="INOSX - application development, technology and AI solutions" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="INOSX - Application Development and Technology Solutions" />
   <meta name="twitter:description" content="Founder-led AI systems, workflow automation, SaaS development and custom software built for reliable operations." />
-  <meta name="twitter:image" content="https://inosx.com/og.svg" />
+  <meta name="twitter:image" content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png" />
 
-  <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
-  <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
-  <link rel="shortcut icon" href="/favicon32x32.ico">
+  <link rel="icon" type="image/png" href="/assets/brand/inosx/v1/inosx-icon-16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/brand/inosx/v1/inosx-icon-32.png" sizes="32x32">
+  <link rel="shortcut icon" href="/assets/brand/inosx/v1/favicon.ico">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -340,13 +340,15 @@
     }
     .topbar-inner > * { position: relative; z-index: 1; }
     .brand {
-      font-family: var(--font-display);
-      font-weight: 400;
-      font-size: 1.5rem;
-      letter-spacing: -0.03em;
-      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
     }
-    .brand .italic { color: var(--accent-text); margin-left: 0.05em; }
+    .brand img {
+      display: block;
+      width: 150px;
+      height: auto;
+    }
 
     .nav-links {
       display: flex;
@@ -459,7 +461,7 @@
     }
     @media (max-width: 560px) {
       .topbar-inner { gap: 0.35rem; padding: 0 0.55rem; }
-      .brand { font-size: 1.35rem; }
+      .brand img { width: 132px; }
       .nav-actions { gap: 0.25rem; }
       .nav-admin { min-height: 38px; padding: 0.48rem 0.58rem; }
       .lang-switch { gap: 0; }
@@ -1534,14 +1536,14 @@
     .foot-col a { font-size: 0.92rem; color: var(--ink-2); transition: color 0.25s; }
     .foot-col a:hover { color: var(--accent-text); }
     .foot-col .signature {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      color: var(--ink);
       margin-bottom: 0.75rem;
     }
-    .foot-col .signature em { color: var(--accent-text); font-weight: 300; }
+    .foot-col .signature img {
+      display: block;
+      width: 210px;
+      max-width: 100%;
+      height: auto;
+    }
     .foot-col p { color: var(--ink-3); font-size: 0.9rem; max-width: 28ch; line-height: 1.5; }
 
     .foot-bottom {
@@ -1822,7 +1824,9 @@
   <!-- ============ TOP NAV ============ -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="/" class="brand">INOSX<span class="italic">.</span></a>
+      <a href="/" class="brand" aria-label="INOSX home">
+        <img src="/assets/brand/inosx/v1/inosx-lockup-dark.svg" alt="INOSX" width="1500" height="330">
+      </a>
 
       <nav aria-label="Primary">
         <ul class="nav-links">
@@ -2433,7 +2437,9 @@
     <div class="container">
       <div class="foot-grid">
         <div class="foot-col">
-          <div class="signature">INOSX<em>.</em></div>
+          <div class="signature">
+            <img src="/assets/brand/inosx/v1/inosx-lockup-dark.svg" alt="INOSX" width="1500" height="330" loading="lazy">
+          </div>
           <p data-i18n="landing.foot.tagline">Application development, technology and AI solutions for production.</p>
         </div>
         <div class="foot-col">
@@ -2534,8 +2540,8 @@
         "@id": "https://inosx.com/#organization",
         "name": "INOSX",
         "url": "https://inosx.com/",
-        "logo": "https://inosx.com/INOSXlogo.png",
-        "image": "https://inosx.com/og.svg",
+        "logo": "https://inosx.com/assets/brand/inosx/v1/inosx-lockup-dark-2400.png",
+        "image": "https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png",
         "email": "support@inosx.com",
         "telephone": "+1-302-457-7323",
         "foundingDate": "2021",

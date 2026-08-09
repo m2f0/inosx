@@ -4,6 +4,13 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.8] - 2026-08-09
+
+### Changed
+- Atualizados o lockup do cabecalho e do rodape, os favicons, a imagem social e os metadados estruturados da pagina inicial com os ativos oficiais do BrandKit INOSX.
+
+---
+
 ## [4.3.7] - 2026-07-25
 
 ### Fixed
