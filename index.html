@@ -22,18 +22,18 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="pt_BR" />
   <meta property="og:locale:alternate" content="es_ES" />
-  <meta property="og:image" content="https://inosx.com/og.svg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png" />
+  <meta property="og:image:width" content="1500" />
+  <meta property="og:image:height" content="500" />
   <meta property="og:image:alt" content="INOSX - application development, technology and AI solutions" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="INOSX - Application Development and Technology Solutions" />
   <meta name="twitter:description" content="Founder-led AI systems, workflow automation, SaaS development and custom software built for reliable operations." />
-  <meta name="twitter:image" content="https://inosx.com/og.svg" />
+  <meta name="twitter:image" content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png" />
 
-  <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
-  <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
-  <link rel="shortcut icon" href="/favicon32x32.ico">
+  <link rel="icon" type="image/png" href="/assets/brand/inosx/v1/inosx-icon-16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/brand/inosx/v1/inosx-icon-32.png" sizes="32x32">
+  <link rel="shortcut icon" href="/assets/brand/inosx/v1/favicon.ico">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +58,11 @@
       --accent-surface: #155e75;
       --gradient-primary: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 64%, var(--accent-3) 100%);
       --gradient-soft: linear-gradient(135deg, var(--bg-soft) 0%, var(--accent) 100%);
+      --glass-plate: rgba(13, 19, 38, 0.72);
+      --glass-plate-strong: rgba(13, 19, 38, 0.88);
+      --glass-edge: rgba(199, 215, 240, 0.30);
+      --glass-edge-bright: rgba(125, 211, 252, 0.62);
+      --glass-highlight: rgba(243, 246, 255, 0.14);
 
       --font-display: 'Bodoni Moda', Georgia, serif;
       --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -125,35 +130,67 @@
     }
 
     /* Atmosfera: grade de hairlines flutuante (papel de desenho técnico) + radial estático no hero */
-    .bg-grid {
+    .bg-liquid {
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.85;
-      background-image:
-        linear-gradient(to right, rgba(199, 215, 240, 0.022) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(199, 215, 240, 0.022) 1px, transparent 1px);
-      background-size: 96px 96px;
-      animation: bg-drift 90s linear infinite;
-      will-change: background-position;
+      overflow: hidden;
+      background:
+        radial-gradient(88vw 64vw at 95% 12%, rgba(96, 165, 250, 0.12), transparent 62%),
+        radial-gradient(78vw 54vw at 5% 90%, rgba(21, 94, 117, 0.11), transparent 64%),
+        linear-gradient(118deg, #0b1020 7%, #0d1326 48%, #0b1020 92%);
     }
-    .bg-grid::after {
+    .bg-liquid::before,
+    .bg-liquid::after {
       content: '';
       position: absolute;
-      inset: 0;
+      width: min(92vw, 1280px);
+      aspect-ratio: 1;
+      border-radius: 52% 48% 56% 44% / 48% 55% 45% 52%;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    .bg-liquid::before {
+      top: -42vw;
+      right: -40vw;
+      border: 1px solid rgba(125, 211, 252, 0.34);
       background:
-        radial-gradient(1100px 600px at 18% 12%, rgba(21,94,117,0.10), transparent 60%),
-        radial-gradient(900px 500px at 82% 78%, rgba(21,94,117,0.07), transparent 60%);
-      animation: bg-breathe 18s ease-in-out infinite alternate;
+        radial-gradient(ellipse at 34% 71%, rgba(125, 211, 252, 0.23) 0 2%, transparent 12%),
+        radial-gradient(ellipse at 59% 48%, rgba(96, 165, 250, 0.15) 0 9%, transparent 30%),
+        conic-gradient(from 224deg at 49% 52%, transparent 0 16%, rgba(125, 211, 252, 0.20) 22%, transparent 30% 45%, rgba(96, 165, 250, 0.13) 52%, transparent 63% 81%, rgba(125, 211, 252, 0.24) 89%, transparent 100%);
+      box-sizing: border-box;
+      opacity: 0.88;
+      animation: liquid-prism-drift 22s cubic-bezier(.22, 1, .36, 1) infinite alternate;
     }
-    @keyframes bg-drift {
-      from { background-position: 0 0, 0 0; }
-      to   { background-position: 96px 96px, -96px -96px; }
+    .bg-liquid::after {
+      top: -30vw;
+      right: -28vw;
+      width: min(68vw, 960px);
+      border: 1px solid rgba(199, 215, 240, 0.18);
+      background:
+        radial-gradient(ellipse at 31% 73%, rgba(243, 246, 255, 0.12), transparent 2%, transparent 16%),
+        radial-gradient(ellipse at 49% 56%, transparent 0 37%, rgba(125, 211, 252, 0.16) 44%, transparent 51%),
+        conic-gradient(from 160deg at 50% 50%, transparent 0 23%, rgba(125, 211, 252, 0.20) 29%, transparent 39% 65%, rgba(96, 165, 250, 0.16) 73%, transparent 84%);
+      opacity: 0.74;
+      animation: liquid-prism-inner 18s cubic-bezier(.22, 1, .36, 1) infinite alternate;
     }
-    @keyframes bg-breathe {
-      from { opacity: 0.6; }
-      to   { opacity: 1; }
+    @keyframes liquid-prism-drift {
+      from { transform: translate3d(0, 0, 0) rotate(-8deg) scale(1); opacity: 0.78; }
+      to { transform: translate3d(-14vw, 20vh, 0) rotate(8deg) scale(1.04); opacity: 0.92; }
+    }
+    @keyframes liquid-prism-inner {
+      from { transform: translate3d(0, 0, 0) rotate(6deg) scale(1); opacity: 0.62; }
+      to { transform: translate3d(-9vw, 13vh, 0) rotate(-6deg) scale(1.06); opacity: 0.78; }
+    }
+    @media (max-width: 800px), (update: slow) {
+      .bg-liquid::before {
+        width: 118vw;
+        right: -54vw;
+        animation-duration: 28s;
+      }
+      .bg-liquid::after { display: none; }
     }
     .hero {
       background: radial-gradient(900px 500px at 30% 20%, rgba(21,94,117,0.12), transparent 65%);
@@ -264,25 +301,54 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(18px) saturate(140%);
-      -webkit-backdrop-filter: blur(18px) saturate(140%);
-      background: rgba(11, 16, 32, 0.62);
-      border-bottom: 1px solid var(--line);
+      padding: 0.7rem 0;
+      background: transparent;
     }
     .topbar-inner {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 76px;
+      padding: 0 1.25rem;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1.2rem;
+      background: var(--glass-plate);
+      backdrop-filter: blur(20px) saturate(135%);
+      -webkit-backdrop-filter: blur(20px) saturate(135%);
+      isolation: isolate;
+      overflow: hidden;
     }
+    .topbar-inner::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 40%;
+      border-radius: 1.1rem 1.1rem 45% 45%;
+      background: linear-gradient(180deg, var(--glass-highlight), transparent);
+      pointer-events: none;
+    }
+    .topbar-inner::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 5px;
+      border: 1px solid rgba(199, 215, 240, 0.07);
+      border-radius: 0.9rem;
+      pointer-events: none;
+    }
+    .topbar-inner > * { position: relative; z-index: 1; }
     .brand {
-      font-family: var(--font-display);
-      font-weight: 400;
-      font-size: 1.5rem;
-      letter-spacing: -0.03em;
-      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
     }
-    .brand .italic { color: var(--accent-text); margin-left: 0.05em; }
+    .brand img {
+      display: block;
+      width: 150px;
+      height: auto;
+    }
 
     .nav-links {
       display: flex;
@@ -300,7 +366,7 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 0.8rem;
     }
     .lang-switch {
       display: flex;
@@ -323,6 +389,9 @@
     }
 
     .btn {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
       display: inline-flex;
       align-items: center;
       gap: 0.55rem;
@@ -330,22 +399,82 @@
       font-size: 0.86rem;
       font-weight: 500;
       letter-spacing: 0.01em;
-      transition: all 0.3s ease;
+      transition: border-color 0.28s cubic-bezier(.25,1,.5,1), color 0.28s cubic-bezier(.25,1,.5,1), background-color 0.28s cubic-bezier(.25,1,.5,1), transform 0.28s cubic-bezier(.25,1,.5,1);
       white-space: nowrap;
       border-radius: 999px;
     }
     .btn-line {
-      border: 1px solid var(--line-2);
+      border: 1px solid var(--glass-edge);
+      background: var(--glass-plate);
       color: var(--ink);
+      backdrop-filter: blur(12px) saturate(130%);
+      -webkit-backdrop-filter: blur(12px) saturate(130%);
     }
-    .btn-line:hover { border-color: var(--ink-2); transform: translateY(-1px); }
-    .btn-line:active { transform: translateY(0); }
+    .btn-line::before,
+    .nav-admin::before,
+    .form-submit::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 48%;
+      border-radius: inherit;
+      background: linear-gradient(180deg, var(--glass-highlight), transparent);
+      opacity: 0.72;
+      transition: opacity 0.28s cubic-bezier(.25,1,.5,1);
+    }
+    .btn > *, .nav-admin > * { position: relative; z-index: 1; }
+    .btn-line:hover { border-color: var(--glass-edge-bright); transform: translateY(-1px); }
+    .btn-line:hover::before { opacity: 1; }
+    .btn-line:active { transform: translateY(0) scale(0.985); }
     .btn-line .arr { transition: transform 0.3s; display: inline-block; }
     .btn-line:hover .arr { transform: translateX(3px); }
+    .nav-admin {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+      min-height: 40px;
+      padding: 0.55rem 0.82rem;
+      border: 1px solid var(--glass-edge);
+      border-radius: 999px;
+      background: var(--glass-plate);
+      color: var(--ink-2);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(12px) saturate(130%);
+      -webkit-backdrop-filter: blur(12px) saturate(130%);
+      transition: border-color 0.28s cubic-bezier(.25,1,.5,1), color 0.28s cubic-bezier(.25,1,.5,1), transform 0.28s cubic-bezier(.25,1,.5,1);
+    }
+    .nav-admin .arr { color: var(--accent-text); font-size: 0.95rem; line-height: 1; transition: transform 0.28s cubic-bezier(.25,1,.5,1); }
+    .nav-admin:hover { color: var(--ink); border-color: var(--glass-edge-bright); transform: translateY(-1px); }
+    .nav-admin:hover .arr { transform: translate(2px, -2px); }
+    .nav-admin:active { transform: scale(0.985); }
 
     @media (max-width: 880px) {
       .nav-links { display: none; }
-      .topbar-inner { height: 68px; }
+      .topbar { padding: 0.45rem 0; }
+      .topbar-inner { height: 68px; border-radius: 1rem; }
+    }
+    @media (max-width: 560px) {
+      .topbar-inner { gap: 0.35rem; padding: 0 0.55rem; }
+      .brand img { width: 132px; }
+      .nav-actions { gap: 0.25rem; }
+      .nav-admin { min-height: 38px; padding: 0.48rem 0.58rem; }
+      .lang-switch { gap: 0; }
+      .lang-switch button { min-width: auto; padding: 0.3rem 0.32rem; }
+      .lang-switch .div { padding: 0.3rem 0.08rem; }
+      .btn-line {
+        width: 40px;
+        min-height: 40px;
+        justify-content: center;
+        padding: 0;
+      }
+      .btn-line > span:first-child { display: none; }
+      .btn-line .arr { margin: 0; }
     }
 
     /* ============ Hero ============ */
@@ -383,17 +512,44 @@
       width: 169%;
       transform: translateX(-28%) translateY(calc(-1 * var(--hero-video-lift)));
       margin-bottom: calc(-1 * var(--hero-video-lift));
-      border: 1px solid var(--line);
-      background: var(--bg-soft);
+      padding: 0.42rem;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1.1rem;
+      background: var(--glass-plate-strong);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
       overflow: visible;
+      isolation: isolate;
+    }
+    .hero-founder-video::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 42%;
+      border-radius: 0.95rem 0.95rem 44% 44%;
+      background: linear-gradient(180deg, var(--glass-highlight), transparent);
+      pointer-events: none;
+    }
+    .hero-founder-video::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 0.42rem;
+      border: 1px solid rgba(199, 215, 240, 0.10);
+      border-radius: 0.76rem;
+      pointer-events: none;
     }
     .hero-founder-video video {
+      position: relative;
+      z-index: 1;
       display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
       height: auto;
       object-fit: cover;
       background: var(--bg-soft);
+      border-radius: 0.72rem;
     }
     .hero-avatar {
       position: absolute;
@@ -403,7 +559,8 @@
       width: var(--hero-avatar-size);
       height: var(--hero-avatar-size);
       border-radius: 50%;
-      border: 1px solid var(--line-2);
+      border: 1px solid var(--glass-edge);
+      outline: 4px solid rgba(11, 16, 32, 0.82);
       object-fit: cover;
       object-position: 50% 28%;
       background: var(--bg);
@@ -546,13 +703,30 @@
 
     .marquee {
       position: relative;
+      isolation: isolate;
       overflow: hidden;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      padding: 0.42rem;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1.2rem;
+      background: var(--glass-plate);
+      backdrop-filter: blur(16px) saturate(130%);
+      -webkit-backdrop-filter: blur(16px) saturate(130%);
       -webkit-mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
               mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
     }
+    .marquee::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 42%;
+      border-radius: 1.1rem 1.1rem 44% 44%;
+      background: linear-gradient(180deg, var(--glass-highlight), transparent);
+      pointer-events: none;
+    }
     .marquee-track {
+      position: relative;
+      z-index: 1;
       display: flex;
       width: max-content;
       animation: marquee 45s linear infinite;
@@ -658,28 +832,67 @@
 
     /* ============ Itens em linha ============ */
     .rows { display: grid; grid-template-columns: 1fr; }
-    .row-item {
+    .liquid-workflow {
+      position: relative;
+      isolation: isolate;
       display: grid;
-      grid-template-columns: 1fr 1fr 4fr;
-      gap: 3rem;
-      padding: 2.25rem 0;
-      border-top: 1px solid var(--line);
-      align-items: start;
-      transition: transform 0.3s ease;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1.2rem;
+      background: var(--glass-plate);
+      backdrop-filter: blur(18px) saturate(130%);
+      -webkit-backdrop-filter: blur(18px) saturate(130%);
     }
-    .row-item:last-child { border-bottom: 1px solid var(--line); }
-    .row-item:hover { transform: translateX(0.5rem); }
-    .row-item .idx {
+    .liquid-workflow::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 48%;
+      border-radius: 1.1rem 1.1rem 45% 45%;
+      background: linear-gradient(180deg, var(--glass-highlight), transparent);
+      pointer-events: none;
+    }
+    .workflow-step {
+      position: relative;
+      z-index: 1;
+      min-height: 230px;
+      padding: clamp(1.65rem, 3vw, 2.75rem);
+      display: grid;
+      align-content: space-between;
+      gap: 2.5rem;
+      border-right: 1px solid var(--line-2);
+    }
+    .workflow-step:last-of-type { border-right: 0; }
+    .workflow-step .idx {
       font-family: var(--font-display);
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       font-style: italic;
       font-weight: 300;
       color: var(--accent-text);
     }
-    .row-item h3 { font-family: var(--font-display); font-weight: 400; }
-    .row-item p { color: var(--ink-2); font-size: 0.98rem; max-width: 52ch; }
+    .workflow-step h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.55rem, 2.5vw, 2.2rem); }
+    .workflow-step p { color: var(--ink-2); font-size: 0.96rem; max-width: 25ch; }
+    .workflow-orb {
+      width: 0.72rem;
+      height: 0.72rem;
+      border: 1px solid var(--glass-edge-bright);
+      border-radius: 999px;
+      background: var(--accent-text);
+      opacity: 0.68;
+      animation: liquid-current 3.8s cubic-bezier(.25,1,.5,1) infinite;
+    }
+    .workflow-step:nth-child(2) .workflow-orb { animation-delay: 0.35s; }
+    .workflow-step:nth-child(3) .workflow-orb { animation-delay: 0.7s; }
+    @keyframes liquid-current {
+      0%, 100% { transform: scale(0.72); opacity: 0.36; }
+      45% { transform: scale(1); opacity: 0.92; }
+    }
     @media (max-width: 880px) {
-      .row-item { grid-template-columns: 1fr; gap: 0.75rem; padding: 1.75rem 0; }
+      .liquid-workflow { grid-template-columns: 1fr; }
+      .workflow-step { min-height: 0; gap: 1.5rem; border-right: 0; border-bottom: 1px solid var(--line-2); }
+      .workflow-step:last-of-type { border-bottom: 0; }
     }
 
     /* removed: pains h3 italic violated Italic Signature Rule */
@@ -802,9 +1015,14 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .aiteam-feature-copy {
-      border: 1px solid var(--line);
-      border-top-color: var(--accent-text);
-      background: linear-gradient(135deg, var(--bg-soft), var(--bg));
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1rem;
+      background: var(--glass-plate);
+      backdrop-filter: blur(14px) saturate(125%);
+      -webkit-backdrop-filter: blur(14px) saturate(125%);
       padding: clamp(1.6rem, 2.4vw, 2.25rem);
       display: flex;
       flex-direction: column;
@@ -812,10 +1030,29 @@
       gap: 2.25rem;
       min-height: 100%;
     }
+    .aiteam-feature-copy::before,
+    .aiteam-youtube::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      inset: 1px 1px auto;
+      height: 40%;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgba(243, 246, 255, 0.10), transparent);
+      pointer-events: none;
+    }
+    .aiteam-feature-copy > *, .aiteam-youtube > * { position: relative; z-index: 1; }
     .aiteam-youtube {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
       min-width: 0;
-      border: 1px solid var(--line);
-      background: var(--bg-soft);
+      padding: 0.42rem;
+      border: 1px solid var(--glass-edge);
+      border-radius: 1rem;
+      background: var(--glass-plate);
+      backdrop-filter: blur(14px) saturate(125%);
+      -webkit-backdrop-filter: blur(14px) saturate(125%);
     }
     .aiteam-youtube-media {
       width: 100%;
@@ -824,6 +1061,7 @@
       aspect-ratio: 16 / 9;
       overflow: hidden;
       background: var(--bg-soft);
+      border-radius: 0.7rem;
     }
     .aiteam-youtube iframe {
       display: block;
@@ -1230,23 +1468,28 @@
       flex-wrap: wrap;
     }
     .form-submit {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
       display: inline-flex;
       align-items: center;
       gap: 0.9rem;
       padding: 1rem 1.6rem;
       border-radius: 999px;
-      background: var(--ink);
+      border: 1px solid var(--glass-edge);
+      background: rgba(243, 246, 255, 0.94);
       color: var(--bg);
       font-weight: 500;
       font-size: 0.92rem;
-      transition: all 0.3s;
+      transition: border-color 0.28s cubic-bezier(.25,1,.5,1), color 0.28s cubic-bezier(.25,1,.5,1), background-color 0.28s cubic-bezier(.25,1,.5,1), transform 0.28s cubic-bezier(.25,1,.5,1);
     }
     .form-submit:hover {
       background: var(--accent-surface);
+      border-color: var(--glass-edge-bright);
       color: var(--ink);
       transform: translateY(-1px);
     }
-    .form-submit:active { transform: translateY(0); }
+    .form-submit:active { transform: translateY(0) scale(0.985); }
     .form-submit .arr { transition: transform 0.3s; }
     .form-submit:hover .arr { transform: translateX(3px); }
     .form-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
@@ -1293,14 +1536,14 @@
     .foot-col a { font-size: 0.92rem; color: var(--ink-2); transition: color 0.25s; }
     .foot-col a:hover { color: var(--accent-text); }
     .foot-col .signature {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      color: var(--ink);
       margin-bottom: 0.75rem;
     }
-    .foot-col .signature em { color: var(--accent-text); font-weight: 300; }
+    .foot-col .signature img {
+      display: block;
+      width: 210px;
+      max-width: 100%;
+      height: auto;
+    }
     .foot-col p { color: var(--ink-3); font-size: 0.9rem; max-width: 28ch; line-height: 1.5; }
 
     .foot-bottom {
@@ -1576,12 +1819,14 @@
   <a class="skip-link" href="#main" data-i18n="landing.a11y.skip">Skip to main content</a>
 
   <!-- Background animado: grade técnica + breathing radials -->
-  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-liquid" aria-hidden="true"></div>
 
   <!-- ============ TOP NAV ============ -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="/" class="brand">INOSX<span class="italic">.</span></a>
+      <a href="/" class="brand" aria-label="INOSX home">
+        <img src="/assets/brand/inosx/v1/inosx-lockup-dark.svg" alt="INOSX" width="1500" height="330">
+      </a>
 
       <nav aria-label="Primary">
         <ul class="nav-links">
@@ -1593,13 +1838,17 @@
       </nav>
 
       <div class="nav-actions">
+        <a href="https://admin.inosx.com" class="nav-admin" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="landing.nav.admin">Admin</span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a>
         <div class="lang-switch" role="group" aria-label="Language">
           <button data-lang="pt" type="button" aria-label="Português">PT</button>
           <span class="div" aria-hidden="true">/</span>
           <button data-lang="en" type="button" class="active" aria-current="true" aria-label="English">EN</button>
         </div>
-        <a href="#contact" class="btn btn-line" data-i18n="landing.nav.cta">
-          <span>Get in touch</span>
+        <a href="#contact" class="btn btn-line">
+          <span data-i18n="landing.nav.cta">Get in touch</span>
           <span class="arr">→</span>
         </a>
       </div>
@@ -1644,7 +1893,6 @@
         <div class="hero-meta">
           <div class="row"><span data-i18n="landing.hero.meta_1_l">Built around</span><strong data-i18n="landing.hero.meta_1_v">your processes</strong></div>
           <div class="row"><span data-i18n="landing.hero.meta_2_l">Live in</span><strong data-i18n="landing.hero.meta_2_v">4–8 weeks</strong></div>
-          <div class="row"><span data-i18n="landing.hero.meta_3_l">Operated by</span><strong data-i18n="landing.hero.meta_3_v">your team</strong></div>
         </div>
       </div>
     </div>
@@ -1658,7 +1906,6 @@
         <span class="bar"></span>
         <span data-i18n="landing.clients.label">Built for, shipped with</span>
       </div>
-      <div class="note" data-i18n="landing.clients.note">Selected from production engagements</div>
     </div>
 
     <div class="marquee" aria-label="Client logos">
@@ -1684,27 +1931,6 @@
   </section>
 
   <!-- ============ EVIDENCE STRIP — links pra evidência real, sem numerais fabricados ============ -->
-  <section class="evidence">
-    <div class="container">
-      <div class="evidence-inner">
-        <a href="#products" class="reveal">
-          <span class="ev-line" data-i18n="landing.evidence.e1">Eight products live and operated today</span>
-          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
-        </a>
-        <a href="#clients" class="reveal" data-delay="1">
-          <span class="ev-line" data-i18n="landing.evidence.e2">Clients on three continents</span>
-          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
-        </a>
-        <a href="#industries" class="reveal" data-delay="2">
-          <span class="ev-line" data-i18n="landing.evidence.e3">Twelve industries we ship to</span>
-          <span class="ev-cue"><span data-i18n="landing.evidence.cue_see">See</span> <span>→</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="rule"><hr></div>
-
   <!-- ============ PAINS ============ -->
   <section class="block pains">
     <div class="container">
@@ -1720,41 +1946,29 @@
             <span class="italic" data-i18n="landing.pains.title_2">They stopped at prototype.</span>
           </h2>
           <p data-i18n="landing.pains.sub" class="lead">
-            Six patterns kill most enterprise software projects. We built our practice to solve every one of them.
+            The path from prototype to production should be visible.
           </p>
         </div>
       </div>
 
-      <div class="rows">
-        <div class="row-item reveal">
+      <div class="liquid-workflow reveal">
+        <div class="workflow-step">
           <span class="idx">i.</span>
-          <h3 data-i18n="landing.pains.p1_t">Vendors that stop before launch</h3>
-          <p data-i18n="landing.pains.p1_d">Concepts that look good in the meeting and collapse when the real workflow, data and users arrive.</p>
+          <h3 data-i18n="landing.pains.w1_t">Prototype</h3>
+          <p data-i18n="landing.pains.w1_d">A useful idea needs more than a convincing demo.</p>
+          <span class="workflow-orb" aria-hidden="true"></span>
         </div>
-        <div class="row-item reveal">
+        <div class="workflow-step">
           <span class="idx">ii.</span>
-          <h3 data-i18n="landing.pains.p2_t">UX nobody on the team will use</h3>
-          <p data-i18n="landing.pains.p2_d">Software the user opens once and abandons. The investment lives in a license; the workflow lives in a spreadsheet.</p>
+          <h3 data-i18n="landing.pains.w2_t">Reality</h3>
+          <p data-i18n="landing.pains.w2_d">Data, integrations and people enter the frame.</p>
+          <span class="workflow-orb" aria-hidden="true"></span>
         </div>
-        <div class="row-item reveal">
+        <div class="workflow-step">
           <span class="idx">iii.</span>
-          <h3 data-i18n="landing.pains.p3_t">Sensitive data outside your control</h3>
-          <p data-i18n="landing.pains.p3_d">Compliance, GDPR/LGPD and trade secrets rule out most off-the-shelf platforms.</p>
-        </div>
-        <div class="row-item reveal">
-          <span class="idx">iv.</span>
-          <h3 data-i18n="landing.pains.p4_t">Integrations that never land</h3>
-          <p data-i18n="landing.pains.p4_d">ERPs, CRMs, legacy bases and automations that need to talk. Nobody finishes the last 20%.</p>
-        </div>
-        <div class="row-item reveal">
-          <span class="idx">v.</span>
-          <h3 data-i18n="landing.pains.p5_t">Rising cost, invisible return</h3>
-          <p data-i18n="landing.pains.p5_d">Hours billed, scope drifting, value missing in the boardroom. The number nobody can defend.</p>
-        </div>
-        <div class="row-item reveal">
-          <span class="idx">vi.</span>
-          <h3 data-i18n="landing.pains.p6_t">Hidden vendor lock-in</h3>
-          <p data-i18n="landing.pains.p6_d">Closed platforms that promise ease and charge dearly when you want to scale, migrate or own the codebase.</p>
+          <h3 data-i18n="landing.pains.w3_t">Production</h3>
+          <p data-i18n="landing.pains.w3_d">A system the team can use, own and return to.</p>
+          <span class="workflow-orb" aria-hidden="true"></span>
         </div>
       </div>
     </div>
@@ -1777,7 +1991,7 @@
             <span class="italic" data-i18n="landing.solutions.title_2">built for use.</span>
           </h2>
           <p class="lead" data-i18n="landing.solutions.sub">
-            One promise across six practices: applications, platforms, integrations and intelligent systems your team actually uses, designed and built from the first diagnostic to the operations dashboard.
+            Three capabilities, shaped around your operation.
           </p>
         </div>
       </div>
@@ -1797,21 +2011,6 @@
           <span class="idx">iii.</span>
           <h3 data-i18n="landing.solutions.s3_t">AI solution development</h3>
           <p data-i18n="landing.solutions.s3_d">AI agents, knowledge platforms and orchestration shipped to production with observability, security and cost control.</p>
-        </div>
-        <div class="sol-item reveal">
-          <span class="idx">iv.</span>
-          <h3 data-i18n="landing.solutions.s4_t">Security &amp; trust</h3>
-          <p data-i18n="landing.solutions.s4_d">CyberAI detection, response and audit. Visibility on what matters across the product, no noise, no theater.</p>
-        </div>
-        <div class="sol-item reveal" data-delay="1">
-          <span class="idx">v.</span>
-          <h3 data-i18n="landing.solutions.s5_t">Computer vision</h3>
-          <p data-i18n="landing.solutions.s5_d">Inspection, counting, quality control and visual automation. Where physical operations need digital eyes.</p>
-        </div>
-        <div class="sol-item reveal" data-delay="2">
-          <span class="idx">vi.</span>
-          <h3 data-i18n="landing.solutions.s6_t">Product strategy</h3>
-          <p data-i18n="landing.solutions.s6_d">Discovery, roadmap, design system. Decisions that survive the first user, the first audit and the next two years of growth.</p>
         </div>
       </div>
     </div>
@@ -2238,7 +2437,9 @@
     <div class="container">
       <div class="foot-grid">
         <div class="foot-col">
-          <div class="signature">INOSX<em>.</em></div>
+          <div class="signature">
+            <img src="/assets/brand/inosx/v1/inosx-lockup-dark.svg" alt="INOSX" width="1500" height="330" loading="lazy">
+          </div>
           <p data-i18n="landing.foot.tagline">Application development, technology and AI solutions for production.</p>
         </div>
         <div class="foot-col">
@@ -2339,8 +2540,8 @@
         "@id": "https://inosx.com/#organization",
         "name": "INOSX",
         "url": "https://inosx.com/",
-        "logo": "https://inosx.com/INOSXlogo.png",
-        "image": "https://inosx.com/og.svg",
+        "logo": "https://inosx.com/assets/brand/inosx/v1/inosx-lockup-dark-2400.png",
+        "image": "https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png",
         "email": "support@inosx.com",
         "telephone": "+1-302-457-7323",
         "foundingDate": "2021",
@@ -2745,7 +2946,7 @@
         });
       }
 
-      window.setTimeout(showToast, 1800);
+      // The whitepaper remains available for a future contextual trigger. It must not interrupt the first reading pass.
     })();
   </script>
 </body>

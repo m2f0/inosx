@@ -186,7 +186,9 @@ The system is **flat by doctrine**. **Zero `box-shadow` anywhere.** Depth is rea
 
 **The Flat-By-Default Rule.** Surfaces are flat. Containers do not lift on hover, cards do not gain shadows, modals are forbidden as a first thought. If a thing must read as raised, the answer is a hairline border or a 4-6% background tint, never `box-shadow`. The single exception is the form-success / form-error message pair, which uses an opaque dark-tinted background plus a 1px border in the same hue family.
 
-**The No-Atmosphere Rule.** Animated background blobs, drifting radials, parallax layers, glassmorphism panels and ambient particles are forbidden. The page's atmosphere comes from typography and hairlines, not from blurred color clouds. Anything decorative that moves is treated as a tell of AI generation and refused.
+**The Liquid Lens Exception.** Liquid material is allowed only for the sticky navigation, primary action controls and a small number of media or product-proof frames. It uses a controlled dark plate, a 1px cyan-tinted edge, one inner stroke and a directional highlight band. It never uses a drop shadow, never sits behind long-form copy and never becomes a repeated card treatment.
+
+**The Liquid Field Exception.** A single fixed liquid prism may sit partially outside the complete page when the direction calls for it. Its refractive cyan edges travel using compositor-only `transform` and `opacity`, remain non-interactive and fully stop with `prefers-reduced-motion`. Geometry and filters never animate; smaller or slow-update screens receive one layer only. It must never add shadows, parallax, particles or moving content panels.
 
 ## 5. Components
 
@@ -261,7 +263,7 @@ A single global rule paints a 2px solid drafting-cyan outline with 3-4px offset 
 - **Don't** use `border-left` greater than 1px as a colored stripe accent. Side-stripe borders are an absolute ban.
 - **Don't** use `background-clip: text` gradient text anywhere. Period. The previous "ordinals exception" was retired during polish — solid drafting-cyan paints the step numerals now.
 - **Don't** introduce violet, purple, magenta, pink or any saturated non-cyan hue. The palette is monochrome cyan plus tinted neutrals. Adding a second accent is the fastest way to drift back into AI-lab visual territory.
-- **Don't** add ambient blobs, drifting gradients, parallax layers or glassmorphism. The No-Atmosphere Rule is hard.
+- **Don't** add a second atmospheric system, parallax layers, particles or glassmorphism panels. The single Liquid Field is the only background motion allowed.
 - **Don't** ship a card grid. Solutions, pains and products are linear-bordered, not card-filled. The product grid is the single allowed exception (and it has no background fill at rest).
 - **Don't** make the page feel like SaaS-cream — no white background, no violet gradient blob behind the hero, no inflated 3D illustrations, no "AI for everything" hero copy.
 - **Don't** make the page feel like an AI lab — no typewriter mono on bone, no asterisk emblem, no "we believe AI" first-person copy, no "frontier" buzzword.

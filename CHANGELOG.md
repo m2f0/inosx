@@ -4,6 +4,58 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.3.8] - 2026-08-09
+
+### Changed
+- Atualizados o lockup do cabecalho e do rodape, os favicons, a imagem social e os metadados estruturados da pagina inicial com os ativos oficiais do BrandKit INOSX.
+
+---
+
+## [4.3.7] - 2026-07-25
+
+### Fixed
+- Otimizado o prisma líquido para animar apenas `transform` e `opacity`, eliminando deformação geométrica e filtros recalculados a cada frame.
+- Reduzidas as superfícies gráficas e aplicada uma única camada em telas menores ou dispositivos com atualização lenta.
+
+---
+
+## [4.3.6] - 2026-07-24
+
+### Changed
+- Substituido o fundo Liquid Field por um prisma liquido refrativo, parcialmente fora da tela, com movimento mais visivel e bordas cyan em camadas.
+
+---
+
+## [4.3.5] - 2026-07-24
+
+### Changed
+- Adicionado um campo Liquid animado de baixo contraste ao fundo de toda a home, com marés lentas em cyan profundo e suporte a `prefers-reduced-motion`.
+- Atualizado o sistema visual para limitar o novo efeito a uma única camada fixa, sem parallax, partículas, sombras ou painéis móveis.
+
+---
+
+## [4.3.4] - 2026-07-24
+
+### Changed
+- Simplificada a leitura da home: removidos sinais redundantes do hero, uma faixa de provas e metade das capacidades exibidas na primeira passagem.
+- Transformada a mensagem de producao em um workflow animado de tres etapas, com relevo Liquid Glass contido e movimento de corrente em cyan.
+- Aplicada moldura Liquid Glass ao carrossel de clientes e desativada a abertura automatica do whitepaper para evitar interrupcao da navegacao.
+- Configurado o acesso `Admin` para abrir em uma nova aba.
+
+---
+
+## [4.3.3] - 2026-07-24
+
+### Added
+- Adicionado acesso `Admin` na navegaÃ§Ã£o principal para `admin.inosx.com`.
+
+### Changed
+- Aplicada a direÃ§Ã£o visual Vellum Lens: topbar, controles e molduras de prova agora usam relevo lÃ­quido contido, com placas estabilizadas, bordas internas e destaques direcionais em cyan.
+- Ajustada a navegaÃ§Ã£o mobile para preservar marca, Admin, idioma e CTA em telas estreitas.
+- Documentada a exceÃ§Ã£o limitada de Liquid Lens no sistema de design, sem sombras e sem ampliar o efeito para texto longo ou grades de conteÃºdo.
+
+---
+
 ## [4.3.2] - 2026-07-24
 
 ### Fixed
