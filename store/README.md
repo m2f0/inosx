@@ -21,4 +21,4 @@ Prepared on `develop`. Repository AGENTS.md requires explicit approval before me
 
 ## App-store visual update
 
-Responsive app cards replace the editorial list. Stashmunk uses its existing brand asset; the other SVGs are functional placeholder symbols, not official product logos. Icon and title links open product details.
+Responsive app cards replace the editorial list. All products use original brand assets, with sources recorded in `icons/SOURCES.md`. Icon and title links open product details.
