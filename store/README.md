@@ -18,3 +18,7 @@ Static EN/PT/ES product discovery page at `/store/`. No payment is collected her
 ## Publication
 
 Prepared on `develop`. Repository AGENTS.md requires explicit approval before merging into production `main`. Version 4.4.0 and sitemap entry are staged for that release.
+
+## App-store visual update
+
+Responsive app cards replace the editorial list. Stashmunk uses its existing brand asset; the other SVGs are functional placeholder symbols, not official product logos. Icon and title links open product details.

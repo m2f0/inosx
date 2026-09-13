@@ -6,6 +6,7 @@ All notable changes to the INOSX website will be documented in this file.
 ## [4.4.0] - 2026-09-13
 
 ### Added
+- Vitrine de aplicativos com cards responsivos, ícones por produto e destaque compacto inspirado em app stores.
 - INOSX Store em /store/: coleção pesquisável, filtros por uso e detalhes de produto compartilháveis.
 - Interface EN/PT/ES, destaque Stashmunk com 7 dias gratuitos e US$ 4/mês após abertura das assinaturas.
 - Links de navegação e entrada no sitemap; pagamentos permanecem nos produtos, sem cobrança nesta página.
