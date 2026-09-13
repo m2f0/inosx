@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INOSX — Terms of Service</title>
-    <meta name="description" content="Terms of service and privacy policy for INOSX." />
+    <title>INOSX &mdash; Terms of Service</title>
+    <meta name="description" content="Terms of Service for INOSX services, including the INOSX AgentOS closed beta." />
 
     <link rel="canonical" href="https://inosx.com/terms.html" />
     <link rel="alternate" hreflang="en"        href="https://inosx.com/terms.html" />
@@ -15,13 +15,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://inosx.com/terms.html" />
     <meta property="og:title" content="INOSX — Terms of Service" />
-    <meta property="og:description" content="Terms of service and privacy policy for INOSX." />
+    <meta property="og:description" content="Terms of Service for INOSX services, including the INOSX AgentOS closed beta." />
     <meta property="og:site_name" content="INOSX" />
     <meta property="og:image" content="https://inosx.com/og.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="INOSX — Terms of Service" />
+    <meta name="twitter:description" content="Terms of Service for INOSX services, including the INOSX AgentOS closed beta." />
     <meta name="twitter:image" content="https://inosx.com/og.svg" />
 
     <script type="application/ld+json">
@@ -42,9 +43,9 @@
           "@type": "WebPage",
           "url": "https://inosx.com/terms.html",
           "name": "INOSX — Terms of Service",
-          "description": "Terms of service and privacy policy for INOSX.",
+          "description": "Terms of Service for INOSX services, including the INOSX AgentOS closed beta.",
           "isPartOf": { "@id": "https://inosx.com/#website" },
-          "dateModified": "2026-05-01",
+          "dateModified": "2026-09-03",
           "inLanguage": "en"
         }
       ]
@@ -81,27 +82,62 @@
 </head>
 <body>
     <h1>Terms of Service</h1>
-    
-    <p>We, INOSX, Inc, a Delaware C Corporation and is located at:</p>
-    
+
+    <p>These Terms of Service ("Terms") govern your use of services provided by INOSX, Inc., a Delaware C Corporation ("INOSX," "we," "us," or "our"), including the invitation-only INOSX AgentOS closed beta ("AgentOS").</p>
+
     <div class="address">
-        9450 Sw Gemini Drive Beaverton, Oregon, 97008, United States
+        INOSX, Inc.<br>
+        131 Continental Dr Suite 305<br>
+        Newark, DE 19713, United States
     </div>
 
-    <p>For any inquiries regarding these Terms, please reach out to us at <a href="mailto:support@inosx.com">support@inosx.com</a>.</p>
+    <p>By creating an account, accepting an invitation, installing AgentOS, or using an INOSX service, you agree to these Terms and our <a href="/privacy-policy">Privacy Policy</a>. If you use a service for an organization, you represent that you have authority to bind that organization. If you do not agree, do not install or use the service.</p>
 
-    <p>Your acceptance of these Terms is implied upon using our Platform. If you do not agree with them, refraining from using our Platform is necessary.</p>
+    <h2>1. ACCOUNTS AND SECURITY</h2>
+    <p>You must provide accurate account information, keep it current, use a strong password, and protect your sign-in and recovery methods. Accounts and invitations are personal and may not be shared or transferred. Notify <a href="mailto:support@inosx.com">support@inosx.com</a> promptly if you suspect unauthorized access.</p>
 
-    <p>For non-consumer entities, confirmation of authority to bind the business to these Terms is required. References to "you" or "your" pertain to the business entity accepting these Terms unless specified otherwise.</p>
+    <h2>2. AGENTOS CLOSED BETA</h2>
+    <p>The AgentOS closed beta is available only to users expressly invited by INOSX. An invitation requires a verified email address, has a stated expiration, may be revoked, and does not create a right to continued access. The beta is provided for evaluation and feedback, may contain defects, and may change or be discontinued.</p>
+    <p>Your limited license is personal, revocable, non-exclusive, non-transferable, and solely for lawful evaluation and internal business use during the invitation period. The beta is not a public release, resale license, or production service-level commitment.</p>
 
-    <h2>ACCOUNT CREATION AND SECURITY</h2>
-    <p>Account creation is mandatory to access our Platform. Accuracy and currency of information provided during registration are essential. Upon registration, you are granted a personal, non-transferable right and license to use the Platform for internal business purposes until termination as outlined in these Terms.</p>
+    <h2>3. LOCAL CONTENT AND AI PROCESSING</h2>
+    <p>AgentOS is designed so that conversation history, memory, and files remain in the user's local encrypted workspace. INOSX does not receive those local archives through the Agent and Policy Catalog.</p>
+    <p>When you ask an agent to respond, the prompt and the context you choose to include are transmitted to the configured AI provider so the request can be processed. For this closed beta, that path uses OpenRouter and a selected free model. Those providers process submitted content under their own terms and privacy practices. Do not submit secrets, regulated data, third-party personal data, or confidential material unless you are authorized to do so and accept that processing.</p>
 
-    <p>Safeguarding your account details, including username and password, is imperative. Prompt notification to us at <a href="mailto:support@inosx.com">support@inosx.com</a> is required if unauthorized access is suspected.</p>
+    <h2>4. AGENTS, POLICIES, AND EXTERNAL ACTIONS</h2>
+    <p>INOSX may update signed agent and policy definitions through the Agent and Policy Catalog. The catalog distributes configuration and policy bundles; it is not intended to store your conversations, memory, or files. A newly started run may use a newer valid bundle.</p>
+    <p>AI output may be incomplete, inaccurate, or unsuitable. You are responsible for reviewing it before relying on it. AgentOS does not replace professional legal, medical, financial, safety, or other regulated advice. Actions affecting external systems, people, money, publication, or commitments require the human approval presented by the product. You remain responsible for approved actions.</p>
 
-    <!-- Continue with the rest of the terms... -->
+    <h2>5. UNSIGNED WINDOWS INSTALLER</h2>
+    <p>The closed-beta installer is distributed without Microsoft Authenticode, a commercial code-signing certificate, or a timestamp. Windows may display "Unknown publisher" or a Microsoft Defender SmartScreen warning. This does not establish publisher identity.</p>
+    <p>Install only the package delivered privately by INOSX and compare its SHA-256 value with the value supplied through a separate channel. The internal manifest signature verifies package integrity for AgentOS but is not an Authenticode signature and must not be represented as Windows publisher trust. Do not disable or bypass Windows security protections to install AgentOS. If the package or hash is unexpected, stop and contact INOSX.</p>
 
-    <p class="last-updated">This terms was last updated on June 3, 2024.</p>
+    <h2>6. ACCEPTABLE USE</h2>
+    <p>You may not use INOSX services to violate law or third-party rights; introduce malware; evade access controls or safety measures; probe accounts or systems without authorization; impersonate another person; or use output to make unlawful, deceptive, discriminatory, or harmful decisions. You may not reverse engineer or redistribute AgentOS except where applicable law expressly permits it.</p>
+
+    <h2>7. OWNERSHIP AND FEEDBACK</h2>
+    <p>INOSX and its licensors retain all rights in AgentOS, the website, agent and policy bundles, branding, software, and documentation. These Terms grant only the limited right to use the service described above. You retain rights in content you lawfully provide. If you voluntarily provide feedback, you permit INOSX to use it without restriction or compensation, without identifying you publicly unless you separately agree.</p>
+
+    <h2>8. SUSPENSION AND TERMINATION</h2>
+    <p>You may stop using AgentOS at any time. INOSX may suspend or revoke an invitation or account to protect users or systems, address suspected misuse, comply with law, or end the beta. When access ends, you must stop using and uninstall the beta. Local data remains your responsibility; uninstalling the application may not remove a separately preserved local archive.</p>
+
+    <h2>9. DISCLAIMERS</h2>
+    <p>To the maximum extent permitted by law, the closed beta and other services are provided "as is" and "as available," without warranties of uninterrupted operation, accuracy, fitness for a particular purpose, merchantability, non-infringement, or compatibility. Nothing in these Terms excludes rights or warranties that cannot lawfully be excluded.</p>
+
+    <h2>10. LIMITATION OF LIABILITY</h2>
+    <p>To the maximum extent permitted by law, INOSX will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, revenue, business, goodwill, or data arising from the beta or services. INOSX's aggregate liability arising from the free closed beta will not exceed US$100. These limits do not apply where liability cannot lawfully be limited.</p>
+
+    <h2>11. PRIVACY</h2>
+    <p>Our <a href="/privacy-policy">Privacy Policy</a> explains what information INOSX processes, what stays local, the providers involved in the closed beta, and how to exercise privacy rights.</p>
+
+    <h2>12. GOVERNING LAW AND DISPUTES</h2>
+    <p>These Terms are governed by the laws of the State of Delaware, without regard to conflict-of-law rules. Subject to any mandatory consumer rights, the state and federal courts located in Delaware have exclusive jurisdiction over disputes arising from these Terms.</p>
+
+    <h2>13. CHANGES AND CONTACT</h2>
+    <p>We may update these Terms as AgentOS and our services evolve. We will post the updated date and, when required, provide additional notice. Continued use after an update takes effect constitutes acceptance of the revised Terms.</p>
+    <p>Questions about these Terms may be sent to <a href="mailto:support@inosx.com">support@inosx.com</a>.</p>
+
+    <p class="last-updated">Last updated: September 3, 2026.</p>
     
     <!-- INOSX Footer -->
     <style>
@@ -144,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="legal">© 2025 INOSX, Inc. All rights reserved.</div>
+            <div class="legal">&copy; 2026 INOSX, Inc. All rights reserved.</div>
         </div>
     </footer>
 </body>

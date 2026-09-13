@@ -11,6 +11,16 @@ All notable changes to the INOSX website will be documented in this file.
 - Interface EN/PT/ES, destaque Stashmunk com 7 dias gratuitos e US$ 4/mês após abertura das assinaturas.
 - Links de navegação e entrada no sitemap; pagamentos permanecem nos produtos, sem cobrança nesta página.
 
+---
+
+## [4.3.9] - 2026-09-03
+
+### Changed
+- Completados os Termos de Servico e a Politica de Privacidade com disposicoes especificas para o beta fechado do INOSX AgentOS.
+- Documentados dados locais, processamento por provedores de IA, convites temporarios e a distribuicao privada sem Authenticode.
+
+---
+
 ## [4.3.8] - 2026-08-09
 
 ### Changed
