@@ -1,0 +1,174 @@
+{
+  "0": {
+    "en": "Privacy Policy",
+    "es": "Política de privacidad"
+  },
+  "1": {
+    "en": "\n        This Privacy Policy explains how INOSX, Inc. processes limited personal data when providing INOSX AgentOS, AI automation, custom software services, and approved LinkedIn publishing workflows.\n      ",
+    "es": "Esta Política de privacidad explica cómo INOSX, Inc. procesa datos personales limitados al proporcionar INOSX AgentOS, automatización con IA, servicios de software a medida y flujos de publicación en LinkedIn aprobados."
+  },
+  "2": {
+    "en": "Last updated: September 3, 2026",
+    "es": "Última actualización: 3 de septiembre de 2026"
+  },
+  "3": {
+    "en": "Scope and Controller",
+    "es": "Alcance y responsable del tratamiento"
+  },
+  "4": {
+    "en": "INOSX, Inc. is responsible for the personal data described in this policy when it determines how and why that data is processed. This policy applies to INOSX websites, account services, the invitation-only AgentOS closed beta, and approved service workflows.",
+    "es": "INOSX, Inc. es responsable de los datos personales descritos en esta política cuando determina cómo y por qué se procesan. Esta política se aplica a los sitios web de INOSX, los servicios de cuentas, la beta cerrada de AgentOS disponible únicamente por invitación y los flujos de servicio aprobados."
+  },
+  "5": {
+    "en": "Data We Process",
+    "es": "Datos que procesamos"
+  },
+  "6": {
+    "en": "We process only data reasonably needed to provide, secure, support, and document the service. Depending on how you use INOSX services, this may include:",
+    "es": "Procesamos únicamente los datos razonablemente necesarios para prestar, proteger, respaldar y documentar el servicio. Según cómo utilice los servicios de INOSX, esto puede incluir:"
+  },
+  "7": {
+    "en": "Contact details you provide, such as name, work email, company, phone number, and message content.",
+    "es": "Datos de contacto que proporcione, como nombre, correo laboral, empresa, número de teléfono y contenido de los mensajes."
+  },
+  "8": {
+    "en": "AgentOS account and security data, such as a password hash, email-verification status, session and recovery records, device-activation identifiers, and security or access audit events.",
+    "es": "Datos de cuenta y seguridad de AgentOS, como un hash de contraseña, estado de verificación del correo, registros de sesión y recuperación, identificadores de activación del dispositivo y eventos de auditoría de seguridad o acceso."
+  },
+  "9": {
+    "en": "Closed-beta invitation data, such as the account identifier, grant and expiration times, revocation status, and administrative reason and actor records. The invitation record does not need to duplicate your email address.",
+    "es": "Datos de invitación a la beta cerrada, como el identificador de cuenta, las fechas de concesión y vencimiento, el estado de revocación y los registros del motivo administrativo y de la persona responsable. El registro de invitación no necesita duplicar su dirección de correo."
+  },
+  "10": {
+    "en": "LinkedIn account information made available through LinkedIn OAuth, such as your LinkedIn member identifier, name, profile information, organization or page identifiers, and permission status.",
+    "es": "Información de la cuenta de LinkedIn disponible mediante LinkedIn OAuth, como su identificador de miembro, nombre, información del perfil, identificadores de organización o página y estado de los permisos."
+  },
+  "11": {
+    "en": "Content you create, approve, schedule, or ask INOSX to publish to LinkedIn.",
+    "es": "Contenido que cree, apruebe, programe o solicite a INOSX que publique en LinkedIn."
+  },
+  "12": {
+    "en": "Operational records such as approval status, publishing timestamps, basic service events, fraud-prevention signals, and troubleshooting logs.",
+    "es": "Registros operativos, como el estado de aprobación, las marcas de tiempo de publicación, eventos básicos del servicio, señales de prevención de fraude y registros de diagnóstico."
+  },
+  "13": {
+    "en": "We do not intentionally collect unnecessary personal data.",
+    "es": "No recopilamos intencionadamente datos personales innecesarios."
+  },
+  "14": {
+    "en": "What Stays Local in AgentOS",
+    "es": "Qué permanece local en AgentOS"
+  },
+  "15": {
+    "en": "AgentOS is designed to keep conversation history, memory, and files in the user's local encrypted workspace. The Agent and Policy Catalog distributes signed configuration and policy bundles and is not intended to receive or store that local content.",
+    "es": "AgentOS está diseñado para mantener el historial de conversaciones, la memoria y los archivos en el espacio de trabajo local cifrado del usuario. El Catálogo de Agentes y Políticas distribuye paquetes firmados de configuración y políticas y no está destinado a recibir ni almacenar ese contenido local."
+  },
+  "16": {
+    "en": "When you ask an agent to respond, the prompt and any context you choose to include are sent from the application to the configured AI service for processing. In this closed beta, that path uses OpenRouter and a selected free model. The submitted content is then subject to the relevant provider's privacy practices. Do not include personal data you are not authorized to submit.",
+    "es": "Cuando solicita una respuesta a un agente, la instrucción y el contexto que decida incluir se envían desde la aplicación al servicio de IA configurado para su procesamiento. En esta beta cerrada, ese flujo utiliza OpenRouter y un modelo gratuito seleccionado. El contenido enviado queda sujeto a las prácticas de privacidad del proveedor correspondiente. No incluya datos personales que no esté autorizado a enviar."
+  },
+  "17": {
+    "en": "LinkedIn OAuth",
+    "es": "LinkedIn OAuth"
+  },
+  "18": {
+    "en": "When a workflow uses LinkedIn, we may ask you to connect your LinkedIn account through LinkedIn OAuth. OAuth lets you authorize INOSX to perform specific actions, such as publishing approved content, without sharing your LinkedIn password with INOSX.",
+    "es": "Cuando un flujo de trabajo utiliza LinkedIn, podemos solicitarle que conecte su cuenta mediante LinkedIn OAuth. OAuth le permite autorizar a INOSX a realizar acciones específicas, como publicar contenido aprobado, sin compartir su contraseña de LinkedIn con INOSX."
+  },
+  "19": {
+    "en": "INOSX only uses LinkedIn access for the permissions you approve and for the workflow you requested. We do not publish to LinkedIn unless the content has been approved by you or by an authorized person in your organization.",
+    "es": "INOSX solo utiliza el acceso a LinkedIn para los permisos que apruebe y el flujo de trabajo solicitado. No publicamos en LinkedIn a menos que usted o una persona autorizada de su organización haya aprobado el contenido."
+  },
+  "20": {
+    "en": "You can revoke LinkedIn access through your LinkedIn account settings at any time.",
+    "es": "Puede revocar el acceso a LinkedIn desde la configuración de su cuenta de LinkedIn en cualquier momento."
+  },
+  "21": {
+    "en": "How We Use Data",
+    "es": "Cómo utilizamos los datos"
+  },
+  "22": {
+    "en": "We use data to create and secure accounts; verify email; administer, expire, or revoke beta access; activate AgentOS on an authorized device; provide requested AI or publishing workflows; communicate with you; prevent abuse; troubleshoot incidents; and maintain required operational and audit records.",
+    "es": "Utilizamos los datos para crear y proteger cuentas; verificar el correo; administrar, hacer vencer o revocar el acceso a la beta; activar AgentOS en un dispositivo autorizado; proporcionar los flujos de IA o publicación solicitados; comunicarnos con usted; prevenir abusos; diagnosticar incidentes; y mantener los registros operativos y de auditoría necesarios."
+  },
+  "23": {
+    "en": "Depending on the context, processing is based on performing our agreement with you, our legitimate interests in providing and securing the service, compliance with legal obligations, or consent where law requires it.",
+    "es": "Según el contexto, el tratamiento se basa en la ejecución de nuestro acuerdo con usted, nuestros intereses legítimos de prestar y proteger el servicio, el cumplimiento de obligaciones legales o el consentimiento cuando la ley lo requiera."
+  },
+  "24": {
+    "en": "We do not sell user data.",
+    "es": "No vendemos datos de los usuarios."
+  },
+  "25": {
+    "en": "Service Providers and Sharing",
+    "es": "Proveedores de servicios y divulgación"
+  },
+  "26": {
+    "en": "We disclose data only as needed to operate the service, comply with law, protect rights and systems, or complete a transaction you request. Providers used for the AgentOS closed beta include Vercel for account-service hosting, Neon for account and access-control records, Resend for transactional account email, and OpenRouter and the selected model provider for AI requests.",
+    "es": "Divulgamos datos únicamente cuando es necesario para operar el servicio, cumplir la ley, proteger derechos y sistemas o completar una transacción que solicite. Los proveedores utilizados para la beta cerrada de AgentOS incluyen Vercel para alojar el servicio de cuentas, Neon para los registros de cuentas y control de acceso, Resend para correos transaccionales de cuentas y OpenRouter y el proveedor del modelo seleccionado para las solicitudes de IA."
+  },
+  "27": {
+    "en": "These providers process data under their own terms and data-protection commitments. We do not share your local AgentOS archive with them as part of catalog distribution. We may also disclose information if required by law or in connection with a corporate transaction, subject to applicable safeguards.",
+    "es": "Estos proveedores procesan datos conforme a sus propios términos y compromisos de protección de datos. No compartimos con ellos su archivo local de AgentOS como parte de la distribución del catálogo. También podemos divulgar información cuando la ley lo exija o en relación con una operación societaria, con las salvaguardas aplicables."
+  },
+  "28": {
+    "en": "Retention",
+    "es": "Conservación"
+  },
+  "29": {
+    "en": "We keep account, invitation, security, and workflow data only for as long as reasonably needed to provide the service, preserve security and audit history, resolve disputes, respond to requests, or comply with law. An expired or revoked beta invitation may remain in the audit history even though it no longer grants access.",
+    "es": "Conservamos los datos de cuentas, invitaciones, seguridad y flujos de trabajo únicamente durante el tiempo razonablemente necesario para prestar el servicio, preservar el historial de seguridad y auditoría, resolver controversias, responder solicitudes o cumplir la ley. Una invitación a la beta vencida o revocada puede permanecer en el historial de auditoría aunque ya no conceda acceso."
+  },
+  "30": {
+    "en": "When data is no longer needed, we delete or de-identify it where practical. Local AgentOS data remains under the user's control and is not removed by an INOSX account deletion unless it has separately been submitted to INOSX. LinkedIn OAuth access may also be revoked directly through LinkedIn.",
+    "es": "Cuando los datos dejan de ser necesarios, los eliminamos o desidentificamos cuando resulta viable. Los datos locales de AgentOS permanecen bajo el control del usuario y no se eliminan al borrar una cuenta de INOSX, salvo que se hayan enviado por separado a INOSX. El acceso OAuth de LinkedIn también puede revocarse directamente en LinkedIn."
+  },
+  "31": {
+    "en": "Security and International Processing",
+    "es": "Seguridad y procesamiento internacional"
+  },
+  "32": {
+    "en": "We use technical and organizational safeguards appropriate to the service, including encrypted transport, access controls, email verification, scoped credentials, audit records, and integrity verification for AgentOS packages and catalog bundles. No method of storage or transmission is completely secure.",
+    "es": "Utilizamos salvaguardas técnicas y organizativas adecuadas al servicio, como transporte cifrado, controles de acceso, verificación de correo, credenciales de alcance limitado, registros de auditoría y verificación de integridad de los paquetes de AgentOS y del catálogo. Ningún método de almacenamiento o transmisión es completamente seguro."
+  },
+  "33": {
+    "en": "INOSX and its providers may process data in the United States and other countries. Where required, we use contractual or other lawful safeguards for international transfers.",
+    "es": "INOSX y sus proveedores pueden procesar datos en Estados Unidos y otros países. Cuando es necesario, utilizamos salvaguardas contractuales u otras medidas legales para las transferencias internacionales."
+  },
+  "34": {
+    "en": "Your Privacy Choices and Rights",
+    "es": "Sus opciones y derechos de privacidad"
+  },
+  "35": {
+    "en": "Depending on where you live, including under Brazil's LGPD, you may have rights to confirmation of processing, access, correction, portability, deletion or anonymization, information about sharing, objection, restriction, or withdrawal of consent. These rights may be subject to lawful exceptions.",
+    "es": "Según su lugar de residencia, incluso en virtud de la LGPD brasileña, puede tener derecho a la confirmación del tratamiento, acceso, rectificación, portabilidad, eliminación o anonimización, información sobre la divulgación, oposición, limitación o retirada del consentimiento. Estos derechos pueden estar sujetos a excepciones legales."
+  },
+  "36": {
+    "en": "To submit a request, email <a href=\"mailto:support@inosx.com\">support@inosx.com</a> with the subject line \"Privacy request\" and enough information for us to identify the relevant account or workflow. We may verify your identity before acting. We will review the request, take the action required by applicable law, and confirm the outcome.",
+    "es": "Para presentar una solicitud, escriba a <a href=\"mailto:support@inosx.com\">support@inosx.com</a> con el asunto \"Solicitud de privacidad\" e información suficiente para identificar la cuenta o el flujo de trabajo correspondiente. Podemos verificar su identidad antes de actuar. Revisaremos la solicitud, tomaremos las medidas exigidas por la legislación aplicable y confirmaremos el resultado."
+  },
+  "37": {
+    "en": "Children and Changes",
+    "es": "Menores y cambios"
+  },
+  "38": {
+    "en": "INOSX services are intended for adults and organizations and are not directed to children under 18. We do not knowingly collect children's personal data through the AgentOS closed beta.",
+    "es": "Los servicios de INOSX están destinados a adultos y organizaciones y no se dirigen a menores de 18 años. No recopilamos deliberadamente datos personales de menores mediante la beta cerrada de AgentOS."
+  },
+  "39": {
+    "en": "We may update this policy as services or legal requirements change. We will post the revised date and provide additional notice when required.",
+    "es": "Podemos actualizar esta política cuando cambien los servicios o los requisitos legales. Publicaremos la fecha revisada y proporcionaremos avisos adicionales cuando sea necesario."
+  },
+  "40": {
+    "en": "Contact",
+    "es": "Contacto"
+  },
+  "41": {
+    "en": "For privacy questions, access requests, or deletion requests, contact:",
+    "es": "Para consultas de privacidad, solicitudes de acceso o solicitudes de eliminación, contacte con:"
+  },
+  "42": {
+    "en": "<strong>INOSX, Inc.</strong><br/>\n          131 Continental Dr Suite 305<br/>\n          Newark, DE 19713, United States<br/>\n<a href=\"mailto:support@inosx.com\">support@inosx.com</a>",
+    "es": "<strong>INOSX, Inc.</strong><br>131 Continental Dr Suite 305<br>Newark, DE 19713, Estados Unidos<br><a href=\"mailto:support@inosx.com\">support@inosx.com</a>"
+  }
+}

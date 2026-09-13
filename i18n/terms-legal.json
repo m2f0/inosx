@@ -1,0 +1,142 @@
+{
+  "0": {
+    "en": "Terms of Service",
+    "es": "Términos de servicio"
+  },
+  "1": {
+    "en": "These Terms of Service (\"Terms\") govern your use of services provided by INOSX, Inc., a Delaware C Corporation (\"INOSX,\" \"we,\" \"us,\" or \"our\"), including the invitation-only INOSX AgentOS closed beta (\"AgentOS\").",
+    "es": "Estos Términos de servicio (\"Términos\") regulan el uso de los servicios prestados por INOSX, Inc., una corporación C de Delaware (\"INOSX\" o \"nosotros\"), incluida la beta cerrada de INOSX AgentOS, disponible únicamente por invitación (\"AgentOS\")."
+  },
+  "2": {
+    "en": "By creating an account, accepting an invitation, installing AgentOS, or using an INOSX service, you agree to these Terms and our <a href=\"/privacy-policy\">Privacy Policy</a>. If you use a service for an organization, you represent that you have authority to bind that organization. If you do not agree, do not install or use the service.",
+    "es": "Al crear una cuenta, aceptar una invitación, instalar AgentOS o utilizar un servicio de INOSX, acepta estos Términos y nuestra <a href=\"/privacy-policy.html\">Política de privacidad</a>. Si utiliza un servicio en nombre de una organización, declara que tiene autoridad para obligarla. Si no está de acuerdo, no instale ni utilice el servicio."
+  },
+  "3": {
+    "en": "1. ACCOUNTS AND SECURITY",
+    "es": "1. CUENTAS Y SEGURIDAD"
+  },
+  "4": {
+    "en": "You must provide accurate account information, keep it current, use a strong password, and protect your sign-in and recovery methods. Accounts and invitations are personal and may not be shared or transferred. Notify <a href=\"mailto:support@inosx.com\">support@inosx.com</a> promptly if you suspect unauthorized access.",
+    "es": "Debe proporcionar información exacta sobre su cuenta, mantenerla actualizada, utilizar una contraseña segura y proteger sus métodos de acceso y recuperación. Las cuentas e invitaciones son personales y no pueden compartirse ni transferirse. Avise de inmediato a <a href=\"mailto:support@inosx.com\">support@inosx.com</a> si sospecha un acceso no autorizado."
+  },
+  "5": {
+    "en": "2. AGENTOS CLOSED BETA",
+    "es": "2. BETA CERRADA DE AGENTOS"
+  },
+  "6": {
+    "en": "The AgentOS closed beta is available only to users expressly invited by INOSX. An invitation requires a verified email address, has a stated expiration, may be revoked, and does not create a right to continued access. The beta is provided for evaluation and feedback, may contain defects, and may change or be discontinued.",
+    "es": "La beta cerrada de AgentOS solo está disponible para usuarios expresamente invitados por INOSX. La invitación requiere una dirección de correo verificada, tiene una fecha de vencimiento indicada, puede revocarse y no genera un derecho de acceso continuado. La beta se ofrece para evaluación y comentarios, puede contener defectos y puede modificarse o suspenderse."
+  },
+  "7": {
+    "en": "Your limited license is personal, revocable, non-exclusive, non-transferable, and solely for lawful evaluation and internal business use during the invitation period. The beta is not a public release, resale license, or production service-level commitment.",
+    "es": "Su licencia limitada es personal, revocable, no exclusiva, intransferible y únicamente para evaluación lícita y uso empresarial interno durante el período de invitación. La beta no es una versión pública, una licencia de reventa ni un compromiso de nivel de servicio de producción."
+  },
+  "8": {
+    "en": "3. LOCAL CONTENT AND AI PROCESSING",
+    "es": "3. CONTENIDO LOCAL Y PROCESAMIENTO CON IA"
+  },
+  "9": {
+    "en": "AgentOS is designed so that conversation history, memory, and files remain in the user's local encrypted workspace. INOSX does not receive those local archives through the Agent and Policy Catalog.",
+    "es": "AgentOS está diseñado para que el historial de conversaciones, la memoria y los archivos permanezcan en el espacio de trabajo local cifrado del usuario. INOSX no recibe esos archivos locales a través del Catálogo de Agentes y Políticas."
+  },
+  "10": {
+    "en": "When you ask an agent to respond, the prompt and the context you choose to include are transmitted to the configured AI provider so the request can be processed. For this closed beta, that path uses OpenRouter and a selected free model. Those providers process submitted content under their own terms and privacy practices. Do not submit secrets, regulated data, third-party personal data, or confidential material unless you are authorized to do so and accept that processing.",
+    "es": "Cuando solicita una respuesta a un agente, la instrucción y el contexto que decide incluir se transmiten al proveedor de IA configurado para procesar la solicitud. En esta beta cerrada, ese flujo utiliza OpenRouter y un modelo gratuito seleccionado. Esos proveedores procesan el contenido enviado conforme a sus propios términos y prácticas de privacidad. No envíe secretos, datos regulados, datos personales de terceros ni material confidencial a menos que esté autorizado y acepte dicho procesamiento."
+  },
+  "11": {
+    "en": "4. AGENTS, POLICIES, AND EXTERNAL ACTIONS",
+    "es": "4. AGENTES, POLÍTICAS Y ACCIONES EXTERNAS"
+  },
+  "12": {
+    "en": "INOSX may update signed agent and policy definitions through the Agent and Policy Catalog. The catalog distributes configuration and policy bundles; it is not intended to store your conversations, memory, or files. A newly started run may use a newer valid bundle.",
+    "es": "INOSX puede actualizar las definiciones firmadas de agentes y políticas mediante el Catálogo de Agentes y Políticas. El catálogo distribuye paquetes de configuración y políticas; no está destinado a almacenar conversaciones, memoria ni archivos. Una ejecución recién iniciada puede utilizar un paquete válido más reciente."
+  },
+  "13": {
+    "en": "AI output may be incomplete, inaccurate, or unsuitable. You are responsible for reviewing it before relying on it. AgentOS does not replace professional legal, medical, financial, safety, or other regulated advice. Actions affecting external systems, people, money, publication, or commitments require the human approval presented by the product. You remain responsible for approved actions.",
+    "es": "Los resultados de la IA pueden ser incompletos, inexactos o inadecuados. Usted es responsable de revisarlos antes de utilizarlos. AgentOS no sustituye el asesoramiento profesional jurídico, médico, financiero, de seguridad ni de otras actividades reguladas. Las acciones que afecten a sistemas externos, personas, dinero, publicaciones o compromisos requieren la aprobación humana presentada por el producto. Usted sigue siendo responsable de las acciones aprobadas."
+  },
+  "14": {
+    "en": "5. UNSIGNED WINDOWS INSTALLER",
+    "es": "5. INSTALADOR DE WINDOWS SIN FIRMA"
+  },
+  "15": {
+    "en": "The closed-beta installer is distributed without Microsoft Authenticode, a commercial code-signing certificate, or a timestamp. Windows may display \"Unknown publisher\" or a Microsoft Defender SmartScreen warning. This does not establish publisher identity.",
+    "es": "El instalador de la beta cerrada se distribuye sin Microsoft Authenticode, certificado comercial de firma de código ni sello de tiempo. Windows puede mostrar \"Editor desconocido\" o una advertencia de Microsoft Defender SmartScreen. Esto no acredita la identidad del editor."
+  },
+  "16": {
+    "en": "Install only the package delivered privately by INOSX and compare its SHA-256 value with the value supplied through a separate channel. The internal manifest signature verifies package integrity for AgentOS but is not an Authenticode signature and must not be represented as Windows publisher trust. Do not disable or bypass Windows security protections to install AgentOS. If the package or hash is unexpected, stop and contact INOSX.",
+    "es": "Instale únicamente el paquete entregado de forma privada por INOSX y compare su valor SHA-256 con el proporcionado por un canal independiente. La firma del manifiesto interno verifica la integridad del paquete para AgentOS, pero no es una firma Authenticode y no debe presentarse como una garantía de confianza de Windows en el editor. No desactive ni eluda las protecciones de seguridad de Windows para instalar AgentOS. Si el paquete o su hash no coinciden con lo esperado, deténgase y contacte con INOSX."
+  },
+  "17": {
+    "en": "6. ACCEPTABLE USE",
+    "es": "6. USO ACEPTABLE"
+  },
+  "18": {
+    "en": "You may not use INOSX services to violate law or third-party rights; introduce malware; evade access controls or safety measures; probe accounts or systems without authorization; impersonate another person; or use output to make unlawful, deceptive, discriminatory, or harmful decisions. You may not reverse engineer or redistribute AgentOS except where applicable law expressly permits it.",
+    "es": "No puede utilizar los servicios de INOSX para infringir la ley o derechos de terceros; introducir malware; eludir controles de acceso o medidas de seguridad; explorar cuentas o sistemas sin autorización; suplantar a otra persona; ni utilizar resultados para tomar decisiones ilícitas, engañosas, discriminatorias o perjudiciales. No puede realizar ingeniería inversa ni redistribuir AgentOS, salvo cuando la legislación aplicable lo permita expresamente."
+  },
+  "19": {
+    "en": "7. OWNERSHIP AND FEEDBACK",
+    "es": "7. PROPIEDAD Y COMENTARIOS"
+  },
+  "20": {
+    "en": "INOSX and its licensors retain all rights in AgentOS, the website, agent and policy bundles, branding, software, and documentation. These Terms grant only the limited right to use the service described above. You retain rights in content you lawfully provide. If you voluntarily provide feedback, you permit INOSX to use it without restriction or compensation, without identifying you publicly unless you separately agree.",
+    "es": "INOSX y sus licenciantes conservan todos los derechos sobre AgentOS, el sitio web, los paquetes de agentes y políticas, las marcas, el software y la documentación. Estos Términos solo conceden el derecho limitado de uso del servicio descrito anteriormente. Usted conserva los derechos sobre el contenido que proporcione lícitamente. Si aporta comentarios voluntariamente, permite que INOSX los utilice sin restricciones ni compensación, sin identificarlo públicamente salvo que lo autorice por separado."
+  },
+  "21": {
+    "en": "8. SUSPENSION AND TERMINATION",
+    "es": "8. SUSPENSIÓN Y TERMINACIÓN"
+  },
+  "22": {
+    "en": "You may stop using AgentOS at any time. INOSX may suspend or revoke an invitation or account to protect users or systems, address suspected misuse, comply with law, or end the beta. When access ends, you must stop using and uninstall the beta. Local data remains your responsibility; uninstalling the application may not remove a separately preserved local archive.",
+    "es": "Puede dejar de utilizar AgentOS en cualquier momento. INOSX puede suspender o revocar una invitación o cuenta para proteger a usuarios o sistemas, abordar sospechas de uso indebido, cumplir la ley o finalizar la beta. Al terminar el acceso, debe dejar de utilizar y desinstalar la beta. Los datos locales siguen siendo su responsabilidad; desinstalar la aplicación puede no eliminar un archivo local conservado por separado."
+  },
+  "23": {
+    "en": "9. DISCLAIMERS",
+    "es": "9. EXENCIÓN DE GARANTÍAS"
+  },
+  "24": {
+    "en": "To the maximum extent permitted by law, the closed beta and other services are provided \"as is\" and \"as available,\" without warranties of uninterrupted operation, accuracy, fitness for a particular purpose, merchantability, non-infringement, or compatibility. Nothing in these Terms excludes rights or warranties that cannot lawfully be excluded.",
+    "es": "En la máxima medida permitida por la ley, la beta cerrada y los demás servicios se ofrecen \"tal cual\" y \"según disponibilidad\", sin garantías de funcionamiento ininterrumpido, exactitud, idoneidad para un fin determinado, comerciabilidad, ausencia de infracción ni compatibilidad. Nada en estos Términos excluye derechos o garantías que no puedan excluirse legalmente."
+  },
+  "25": {
+    "en": "10. LIMITATION OF LIABILITY",
+    "es": "10. LIMITACIÓN DE RESPONSABILIDAD"
+  },
+  "26": {
+    "en": "To the maximum extent permitted by law, INOSX will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, revenue, business, goodwill, or data arising from the beta or services. INOSX's aggregate liability arising from the free closed beta will not exceed US$100. These limits do not apply where liability cannot lawfully be limited.",
+    "es": "En la máxima medida permitida por la ley, INOSX no será responsable de daños indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, ni de pérdidas de beneficios, ingresos, negocio, reputación comercial o datos derivadas de la beta o los servicios. La responsabilidad total de INOSX derivada de la beta cerrada gratuita no superará los US$100. Estos límites no se aplican cuando la responsabilidad no pueda limitarse legalmente."
+  },
+  "27": {
+    "en": "11. PRIVACY",
+    "es": "11. PRIVACIDAD"
+  },
+  "28": {
+    "en": "Our <a href=\"/privacy-policy\">Privacy Policy</a> explains what information INOSX processes, what stays local, the providers involved in the closed beta, and how to exercise privacy rights.",
+    "es": "Nuestra <a href=\"/privacy-policy.html\">Política de privacidad</a> explica qué información procesa INOSX, qué permanece local, qué proveedores intervienen en la beta cerrada y cómo ejercer los derechos de privacidad."
+  },
+  "29": {
+    "en": "12. GOVERNING LAW AND DISPUTES",
+    "es": "12. LEGISLACIÓN APLICABLE Y CONTROVERSIAS"
+  },
+  "30": {
+    "en": "These Terms are governed by the laws of the State of Delaware, without regard to conflict-of-law rules. Subject to any mandatory consumer rights, the state and federal courts located in Delaware have exclusive jurisdiction over disputes arising from these Terms.",
+    "es": "Estos Términos se rigen por las leyes del Estado de Delaware, sin considerar sus normas sobre conflicto de leyes. Sin perjuicio de los derechos imperativos de los consumidores, los tribunales estatales y federales situados en Delaware tienen jurisdicción exclusiva sobre las controversias derivadas de estos Términos."
+  },
+  "31": {
+    "en": "13. CHANGES AND CONTACT",
+    "es": "13. CAMBIOS Y CONTACTO"
+  },
+  "32": {
+    "en": "We may update these Terms as AgentOS and our services evolve. We will post the updated date and, when required, provide additional notice. Continued use after an update takes effect constitutes acceptance of the revised Terms.",
+    "es": "Podemos actualizar estos Términos a medida que AgentOS y nuestros servicios evolucionen. Publicaremos la fecha actualizada y, cuando sea necesario, proporcionaremos un aviso adicional. Continuar utilizando el servicio después de la entrada en vigor de una actualización constituye la aceptación de los Términos revisados."
+  },
+  "33": {
+    "en": "Questions about these Terms may be sent to <a href=\"mailto:support@inosx.com\">support@inosx.com</a>.",
+    "es": "Puede enviar preguntas sobre estos Términos a <a href=\"mailto:support@inosx.com\">support@inosx.com</a>."
+  },
+  "34": {
+    "en": "Last updated: September 3, 2026.",
+    "es": "Última actualización: 3 de septiembre de 2026."
+  }
+}

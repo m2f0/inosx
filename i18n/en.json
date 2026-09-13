@@ -5,9 +5,9 @@
   },
   "landing": {
     "store_promo": {
-          "title": "Discover your next favorite app.",
-          "body": "Meet the INOSX Store. Explore our apps, discover what each one does and find the right tool for your day.",
-          "cta": "Explore the INOSX Store"
+      "title": "Discover your next favorite app.",
+      "body": "Meet the INOSX Store. Explore our apps, discover what each one does and find the right tool for your day.",
+      "cta": "Explore the INOSX Store"
     },
     "nav": {
       "solutions": "Solutions",
@@ -26,9 +26,12 @@
       "headline_1": "Application Development",
       "headline_2": "Technology Solutions",
       "sub": "We develop applications, platforms, integrations and AI solutions that fit your operation and reach production with your team.",
-      "meta_1_l": "Built around", "meta_1_v": "your processes",
-      "meta_2_l": "Live in", "meta_2_v": "4–8 weeks",
-      "meta_3_l": "Operated by", "meta_3_v": "your team"
+      "meta_1_l": "Built around",
+      "meta_1_v": "your processes",
+      "meta_2_l": "Live in",
+      "meta_2_v": "4–8 weeks",
+      "meta_3_l": "Operated by",
+      "meta_3_v": "your team"
     },
     "clients": {
       "label": "Built for, shipped with",
@@ -200,6 +203,47 @@
       "cta": "Start conversation →",
       "rights": "All rights reserved.",
       "crafted": "Headquartered in the United States · Operating globally"
+    },
+    "extra": {
+      "industry_0": "Healthcare",
+      "industry_1": "Education",
+      "industry_2": "Financial services",
+      "industry_3": "Manufacturing",
+      "industry_4": "Retail",
+      "industry_5": "Logistics",
+      "industry_6": "Agribusiness",
+      "industry_7": "Energy",
+      "industry_8": "Public sector",
+      "industry_9": "Technology",
+      "industry_10": "Telecom",
+      "industry_11": "Legal",
+      "ui_0": "Free whitepaper",
+      "ui_1": "Turn AI work into an operation.",
+      "ui_2": "Get the AITEAM-X Operating Agents whitepaper and see how goals, memory, proof and human control become reliable AI operations.",
+      "ui_3": "Email",
+      "ui_4": "Name (optional)",
+      "ui_5": "Company (optional)",
+      "ui_6": "I agree to share this email with INOSX so the team can send product updates and follow up about AI operations.",
+      "ui_7": "Download free whitepaper",
+      "ui_8": "Open whitepaper",
+      "ui_9": "Instant signed download link.",
+      "attr_0": "Dismiss whitepaper offer",
+      "attr_1": "you@company.com",
+      "attr_2": "Your name",
+      "attr_3": "Company",
+      "attr_4": "INOSX home",
+      "attr_5": "Primary",
+      "attr_6": "Language",
+      "attr_7": "Client logos",
+      "message_0": "Sending…",
+      "message_1": "Enter a valid email to get the whitepaper.",
+      "message_2": "Consent is required before we can provide the whitepaper.",
+      "message_3": "Whitepaper download is not configured for this page.",
+      "message_4": "Preparing...",
+      "message_5": "Preparing your whitepaper...",
+      "message_6": "Your whitepaper is ready. If it did not download, use the button above.",
+      "message_7": "Could not create the whitepaper link right now. Please try again.",
+      "message_8": "Download free whitepaper"
     }
   },
   "products_page": {

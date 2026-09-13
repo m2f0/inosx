@@ -5,9 +5,9 @@
   },
   "landing": {
     "store_promo": {
-          "title": "Descubre tu próxima aplicación favorita.",
-          "body": "Conoce la INOSX Store. Explora nuestras aplicaciones, descubre qué hace cada una y encuentra la herramienta ideal para tu día.",
-          "cta": "Explora la INOSX Store"
+      "title": "Descubre tu próxima aplicación favorita.",
+      "body": "Conoce la INOSX Store. Explora nuestras aplicaciones, descubre qué hace cada una y encuentra la herramienta ideal para tu día.",
+      "cta": "Explora la INOSX Store"
     },
     "nav": {
       "solutions": "Soluciones",
@@ -127,7 +127,7 @@
       "title_2": "Del diagnóstico a la escala.",
       "s1_t": "Diagnóstico",
       "s1_d": "Conversación de discovery, mapa de lo existente, casos de mayor retorno y claridad de viabilidad.",
-      "s2_t": "Design + Build",
+      "s2_t": "Diseño y desarrollo",
       "s2_d": "Un release real del producto en semanas. UX diseñada con su equipo, KPIs definidos desde el inicio, código en producción desde el primer día.",
       "s3_t": "Escala",
       "s3_d": "Operación continua, observabilidad, gobernanza y expansión a nuevos procesos basada en retornos probados."
@@ -203,6 +203,47 @@
       "cta": "Iniciar conversación →",
       "rights": "Todos los derechos reservados.",
       "crafted": "Sede en Estados Unidos · Operación global"
+    },
+    "extra": {
+      "industry_0": "Salud",
+      "industry_1": "Educación",
+      "industry_2": "Servicios financieros",
+      "industry_3": "Manufactura",
+      "industry_4": "Comercio minorista",
+      "industry_5": "Logística",
+      "industry_6": "Agronegocios",
+      "industry_7": "Energía",
+      "industry_8": "Sector público",
+      "industry_9": "Tecnología",
+      "industry_10": "Telecomunicaciones",
+      "industry_11": "Jurídico",
+      "ui_0": "Documento técnico gratuito",
+      "ui_1": "Convierta el trabajo con IA en una operación.",
+      "ui_2": "Obtenga el documento técnico AITEAM-X Operating Agents y descubra cómo los objetivos, la memoria, las evidencias y el control humano se convierten en operaciones confiables de IA.",
+      "ui_3": "Correo electrónico",
+      "ui_4": "Nombre (opcional)",
+      "ui_5": "Empresa (opcional)",
+      "ui_6": "Acepto compartir este correo con INOSX para que el equipo envíe novedades de productos y se comunique sobre operaciones de IA.",
+      "ui_7": "Descargar documento técnico gratuito",
+      "ui_8": "Abrir documento técnico",
+      "ui_9": "Enlace firmado de descarga inmediata.",
+      "attr_0": "Cerrar oferta del documento técnico",
+      "attr_1": "usted@empresa.com",
+      "attr_2": "Su nombre",
+      "attr_3": "Empresa",
+      "attr_4": "Inicio de INOSX",
+      "attr_5": "Navegación principal",
+      "attr_6": "Idioma",
+      "attr_7": "Logotipos de clientes",
+      "message_0": "Enviando…",
+      "message_1": "Introduzca un correo válido para obtener el documento técnico.",
+      "message_2": "Se requiere su consentimiento para proporcionar el documento técnico.",
+      "message_3": "La descarga no está configurada para esta página.",
+      "message_4": "Preparando...",
+      "message_5": "Preparando su documento técnico...",
+      "message_6": "Su documento técnico está listo. Si no se descargó, use el botón de arriba.",
+      "message_7": "No se pudo crear el enlace ahora. Inténtelo de nuevo.",
+      "message_8": "Descargar documento técnico gratuito"
     }
   },
   "products_page": {

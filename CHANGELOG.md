@@ -3,6 +3,13 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.5.0] - 2026-09-13
+
+### Added
+- Espanhol selecionável na landing page, com prioridade do idioma da URL e preservação de idioma, parâmetros e âncoras nos links internos.
+- Tradução espanhola integral dos Termos e da Política de Privacidade, preservando o conteúdo e a data de vigência existentes.
+- Navegação localizada para catálogo, calculadora de ROI e Store.
+
 ## [4.4.1] - 2026-09-13
 
 ### Added

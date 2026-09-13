@@ -29,7 +29,8 @@ class I18n {
       // Get saved language or detect browser language
       const savedLang = localStorage.getItem('inosx_lang');
       const browserLang = this.detectBrowserLanguage();
-      const initialLang = savedLang || browserLang || this.defaultLanguage;
+      const requestedLang = new URL(location.href).searchParams.get('lang');
+      const initialLang = this.supportedLanguages.includes(requestedLang) ? requestedLang : (savedLang || browserLang || this.defaultLanguage);
       
       await this.setLanguage(initialLang);
       this.setupLanguageSelector();
@@ -71,7 +72,7 @@ class I18n {
    */
   async loadTranslations(lang) {
     try {
-      const response = await fetch(`/i18n/${lang}.json?v=4.4.1`);
+      const response = await fetch(`/i18n/${lang}.json?v=4.5.0-es`);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: Failed to load ${lang}.json`);
       }
@@ -127,6 +128,8 @@ class I18n {
     document.documentElement.lang = lang;
     this.updatePage();
     this.updateLanguageSelector();
+    const url = new URL(location.href); url.searchParams.set("lang", lang); history.replaceState(null, "", url);
+    document.dispatchEvent(new CustomEvent("inosx-language", {detail: lang}));
   }
 
   /**
@@ -385,6 +388,7 @@ class I18n {
    * Update language selector UI
    */
   updateLanguageSelector() {
+    document.querySelectorAll('[data-lang]').forEach(button => { const active = button.dataset.lang === this.currentLang; button.classList.toggle('active', active); active ? button.setAttribute('aria-current', 'true') : button.removeAttribute('aria-current'); });
     const selector = document.getElementById('languageSelector');
     if (selector) {
       selector.value = this.currentLang;

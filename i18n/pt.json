@@ -5,9 +5,9 @@
   },
   "landing": {
     "store_promo": {
-          "title": "Descubra seu próximo aplicativo favorito.",
-          "body": "Conheça a INOSX Store. Explore nossos aplicativos, descubra o que cada um faz e encontre a ferramenta certa para o seu dia.",
-          "cta": "Explore a INOSX Store"
+      "title": "Descubra seu próximo aplicativo favorito.",
+      "body": "Conheça a INOSX Store. Explore nossos aplicativos, descubra o que cada um faz e encontre a ferramenta certa para o seu dia.",
+      "cta": "Explore a INOSX Store"
     },
     "nav": {
       "solutions": "Soluções",
@@ -26,9 +26,12 @@
       "headline_1": "Desenvolvimento de aplicativos",
       "headline_2": "e soluções tecnológicas.",
       "sub": "Desenvolvemos aplicativos, plataformas, integrações e soluções de IA que se encaixam na sua operação e chegam à produção com o seu time.",
-      "meta_1_l": "Em torno", "meta_1_v": "dos seus processos",
-      "meta_2_l": "No ar em", "meta_2_v": "4–8 semanas",
-      "meta_3_l": "Operado pelo", "meta_3_v": "seu time"
+      "meta_1_l": "Em torno",
+      "meta_1_v": "dos seus processos",
+      "meta_2_l": "No ar em",
+      "meta_2_v": "4–8 semanas",
+      "meta_3_l": "Operado pelo",
+      "meta_3_v": "seu time"
     },
     "clients": {
       "label": "Construído para, entregue com",
@@ -200,6 +203,47 @@
       "cta": "Iniciar conversa →",
       "rights": "Todos os direitos reservados.",
       "crafted": "Sede nos Estados Unidos · Operação global"
+    },
+    "extra": {
+      "industry_0": "Saúde",
+      "industry_1": "Educação",
+      "industry_2": "Serviços financeiros",
+      "industry_3": "Manufatura",
+      "industry_4": "Varejo",
+      "industry_5": "Logística",
+      "industry_6": "Agronegócio",
+      "industry_7": "Energia",
+      "industry_8": "Setor público",
+      "industry_9": "Tecnologia",
+      "industry_10": "Telecomunicações",
+      "industry_11": "Jurídico",
+      "ui_0": "Whitepaper gratuito",
+      "ui_1": "Transforme o trabalho com IA em uma operação.",
+      "ui_2": "Receba o whitepaper AITEAM-X Operating Agents e veja como objetivos, memória, evidências e controle humano se tornam operações confiáveis de IA.",
+      "ui_3": "E-mail",
+      "ui_4": "Nome (opcional)",
+      "ui_5": "Empresa (opcional)",
+      "ui_6": "Concordo em compartilhar este e-mail com a INOSX para receber atualizações de produtos e contato sobre operações de IA.",
+      "ui_7": "Baixar whitepaper gratuito",
+      "ui_8": "Abrir whitepaper",
+      "ui_9": "Link assinado de download imediato.",
+      "attr_0": "Fechar oferta de whitepaper",
+      "attr_1": "voce@empresa.com",
+      "attr_2": "Seu nome",
+      "attr_3": "Empresa",
+      "attr_4": "Página inicial INOSX",
+      "attr_5": "Navegação principal",
+      "attr_6": "Idioma",
+      "attr_7": "Logotipos de clientes",
+      "message_0": "Enviando…",
+      "message_1": "Informe um e-mail válido para receber o whitepaper.",
+      "message_2": "Seu consentimento é necessário para fornecer o whitepaper.",
+      "message_3": "O download não está configurado nesta página.",
+      "message_4": "Preparando...",
+      "message_5": "Preparando seu whitepaper...",
+      "message_6": "Seu whitepaper está pronto. Se o download não iniciou, use o botão acima.",
+      "message_7": "Não foi possível criar o link agora. Tente novamente.",
+      "message_8": "Baixar whitepaper gratuito"
     }
   },
   "products_page": {
