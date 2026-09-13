@@ -4,6 +4,11 @@
     "description": "A INOSX ajuda empresas a sair de experimentos com IA para operações confiáveis de negócio com agentes de IA, automação, SaaS, sistemas de dados e software sob medida pronto para produção."
   },
   "landing": {
+    "store_promo": {
+          "title": "Descubra seu próximo aplicativo favorito.",
+          "body": "Conheça a INOSX Store. Explore nossos aplicativos, descubra o que cada um faz e encontre a ferramenta certa para o seu dia.",
+          "cta": "Explore a INOSX Store"
+    },
     "nav": {
       "solutions": "Soluções",
       "products": "Produtos",

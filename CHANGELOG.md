@@ -3,6 +3,11 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.4.1] - 2026-09-13
+
+### Added
+- Chamada de destaque para a Store na landing page, com ícones reais, texto EN/PT/ES e botão que preserva o idioma.
+
 ## [4.4.0] - 2026-09-13
 
 ### Added

@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300..600;1,6..96,300..500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <script src="/i18n/i18n.js" defer></script>
+  <script src="/i18n/i18n.js?v=4.4.1" defer></script>
 
   <style>
     :root {
@@ -1792,6 +1792,13 @@
       .marquee-track { animation: none !important; }
       .whitepaper-toast { transition: none; }
     }
+
+    .store-promo{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:36px;margin-block:48px;border:1px solid var(--line);border-radius:20px;background:rgba(125,211,252,.06)}
+    .store-promo h2{font-size:clamp(28px,4vw,44px);margin:0 0 12px}.store-promo p{max-width:620px;color:var(--ink-2);line-height:1.7;margin:0 0 20px}
+    .store-promo-link{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:12px 22px;background:#7dd3fc;color:#0b1020;border-radius:10px;text-decoration:none;font-weight:600}.store-promo-link:hover{background:#c8d4ea}.store-promo-link:focus-visible{outline:2px solid #f3f6ff;outline-offset:5px}
+    .store-promo-icons{display:flex;gap:14px;flex-shrink:0}.store-promo-icons img{width:76px;height:76px;object-fit:contain;border-radius:16px}
+    @media(max-width:800px){.store-promo{flex-direction:column;align-items:flex-start;padding:24px;gap:24px}.store-promo-icons{order:-1}.store-promo-icons img{width:60px;height:60px}}
+
   </style>
   <script>
     window.INOSX_PUBLIC_INTAKE = {
@@ -2018,6 +2025,27 @@
   </section>
 
   <div class="rule"><hr></div>
+
+  <section class="container store-promo" id="store" aria-labelledby="store-promo-title">
+    <div>
+      <h2 id="store-promo-title" data-i18n="landing.store_promo.title">Discover your next favorite app.</h2>
+      <p data-i18n="landing.store_promo.body">Meet the INOSX Store. Explore our apps, discover what each one does and find the right tool for your day.</p>
+      <a class="store-promo-link" href="/store/"><span data-i18n="landing.store_promo.cta">Explore the INOSX Store</span><span aria-hidden="true">→</span></a>
+    </div>
+    <div class="store-promo-icons" aria-hidden="true">
+      <img src="/store/stashmunk.png" alt="" width="76" height="76" loading="lazy">
+      <img src="/store/icons/agentos.png" alt="" width="76" height="76" loading="lazy">
+      <img src="/store/icons/tubelens.svg?v=original" alt="" width="76" height="76" loading="lazy">
+    </div>
+  </section>
+  <script>
+    document.querySelectorAll('a[href="/store/"]').forEach(function(link){
+      link.addEventListener('click',function(){
+        var language=document.documentElement.lang.slice(0,2);
+        link.href='/store/?lang='+(['en','pt','es'].includes(language)?language:'en');
+      });
+    });
+  </script>
 
   <!-- ============ PRODUCTS ============ -->
   <section class="block" id="products">

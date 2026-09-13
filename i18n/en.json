@@ -4,6 +4,11 @@
     "description": "INOSX helps companies move from AI experiments to reliable business operations with AI agents, workflow automation, SaaS development, data systems and production-ready custom software."
   },
   "landing": {
+    "store_promo": {
+          "title": "Discover your next favorite app.",
+          "body": "Meet the INOSX Store. Explore our apps, discover what each one does and find the right tool for your day.",
+          "cta": "Explore the INOSX Store"
+    },
     "nav": {
       "solutions": "Solutions",
       "products": "Products",
