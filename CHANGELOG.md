@@ -3,6 +3,13 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.6.0] - 2026-09-14
+
+### Added
+- Faixa animada de lançamento do AgentOS no topo, com pausa, movimento reduzido e confetes a cada cinco segundos.
+- Destaque do AgentOS com vídeo localizado em inglês, português e espanhol.
+- Retrospectiva do AITEAM-X com demonstrações históricas preservadas.
+
 ## [4.5.0] - 2026-09-13
 
 ### Added
