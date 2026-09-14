@@ -244,6 +244,22 @@
       "message_6": "Seu whitepaper está pronto. Se o download não iniciou, use o botão acima.",
       "message_7": "Não foi possível criar o link agora. Tente novamente.",
       "message_8": "Baixar whitepaper gratuito"
+    },
+    "agentos": {
+      "kicker": "Um novo capítulo começa hoje · Lançamento do MVP",
+      "title": "O MVP do novo AgentOS chegou.",
+      "description": "Feito para sua equipe digital. Celebre com a gente — e ajude a construir os próximos passos.",
+      "join": "Participe do beta fechado gratuito",
+      "pause": "Pausar a festa",
+      "resume": "Retomar a festa",
+      "product": "Sua equipe digital, no navegador. Dê direção, colabore com empregados de IA e revise os resultados. Beta fechado gratuito com limites de uso.",
+      "video": "Conheça a equipe digital do AgentOS",
+      "language": "Idioma do vídeo",
+      "retro": "AITEAM-X — retrospectiva e próximo capítulo",
+      "history": "O AITEAM-X explorou um espaço compartilhado para agentes de IA, memória e revisão humana. Suas demonstrações permanecem aqui como registro desse capítulo anterior.",
+      "learning": "O AgentOS leva essa direção a uma experiência mais clara: uma equipe digital com nomes, responsabilidades familiares, conversas e supervisão humana. O foco é ajudar as pessoas a delegar, colaborar e dar continuidade ao trabalho.",
+      "boundary": "Estes vídeos do AITEAM-X são demonstrações históricas, não uma descrição dos recursos disponíveis no beta Web do AgentOS.",
+      "archive": "Assistir ao tour original da plataforma AITEAM-X"
     }
   },
   "products_page": {

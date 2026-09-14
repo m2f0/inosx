@@ -244,6 +244,22 @@
       "message_6": "Your whitepaper is ready. If it did not download, use the button above.",
       "message_7": "Could not create the whitepaper link right now. Please try again.",
       "message_8": "Download free whitepaper"
+    },
+    "agentos": {
+      "kicker": "A new chapter starts today · MVP launch",
+      "title": "The new AgentOS MVP is here.",
+      "description": "Built for your digital team. Join us in celebrating — and help shape what comes next.",
+      "join": "Join the free closed beta",
+      "pause": "Pause the party",
+      "resume": "Resume the party",
+      "product": "Your digital team, in your browser. Give direction, collaborate with AI employees and review the results. Free closed beta with usage limits.",
+      "video": "Meet the AgentOS digital team",
+      "language": "Video language",
+      "retro": "AITEAM-X — retrospective and next chapter",
+      "history": "AITEAM-X explored a shared workspace for AI agents, memory and human review. Its demonstrations remain here as a record of that earlier chapter.",
+      "learning": "AgentOS carries this direction into a clearer experience: a named digital team, familiar responsibilities, conversations and human oversight. The focus is on helping people delegate, collaborate and continue their work.",
+      "boundary": "These AITEAM-X videos are historical demonstrations, not a description of the features available in the AgentOS Web beta.",
+      "archive": "Watch the original AITEAM-X platform tour"
     }
   },
   "products_page": {
