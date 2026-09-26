@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300..600;1,6..96,300..500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <script src="/i18n/i18n.js?v=4.7.0" defer></script>
+  <script src="/i18n/i18n.js?v=4.7.3" defer></script>
 
   <style>
     :root {
@@ -1066,12 +1066,10 @@
     #agentos-commercial { scroll-margin-top: 100px; margin: 40px 0; }
     #agentos-commercial .aiteam-youtube-media { height: auto; min-height: 0; }
     #agentos-commercial iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
-    .commercial-heading { display: grid; gap: 12px; margin-bottom: 24px; max-width: 760px; }
+    .commercial-heading { padding-top: clamp(3rem, 6vw, 5rem); }
     #agentos-commercial-title { margin: 0; text-wrap: balance; }
-    #agentos-commercial .commercial-description { margin: 0; max-width: 62ch; font-size: 0.94rem; line-height: 1.58; color: var(--ink-2); }
     #agentos-commercial .commercial-language { margin: 4px 0 0; font-size: 0.85rem; line-height: 1.5; color: var(--ink-2); }
     #agentos-commercial .commercial-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 20px 0 0; font-size: 0.85rem; line-height: 1.6; }
-    @media (max-width: 640px) { .commercial-heading { gap: 10px; margin-bottom: 20px; } }
     .aiteam-youtube iframe {
       display: block;
       width: 100%;
@@ -1831,7 +1829,7 @@
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=inosxTurnstileReady&render=explicit" async defer></script>
 <script src="/i18n/routing.js?v=4.5.0-es" defer></script>
 <link rel="stylesheet" href="/css/agentos-launch.css">
-<script src="/scripts/agentos-launch.js?v=4.7.0" defer></script>
+<script src="/scripts/agentos-launch.js?v=4.7.3" defer></script>
 </head>
 <body>
 
@@ -2109,10 +2107,16 @@
 
         <div class="agentos-video-language"><label for="agentos-video-language"><span data-i18n="landing.agentos.language">Video language</span></label><select id="agentos-video-language"><option value="en">English</option><option value="pt">Português</option><option value="es">Español</option></select></div>
         <section id="agentos-commercial" aria-labelledby="agentos-commercial-title">
-          <div class="commercial-heading">
-          <h3 id="agentos-commercial-title" data-i18n="landing.commercial.title">Your digital team in action</h3>
-          <p class="commercial-description" data-i18n="landing.commercial.body">See how Adebayo, Priya, Lukas and Helena collaborate on work you can review.</p>
-          <p class="commercial-language" data-i18n="landing.commercial.audio">Video in English.</p>
+          <div class="section-head commercial-heading">
+            <div class="label"><span class="bar"></span><span>AgentOS</span></div>
+            <div>
+              <h2 id="agentos-commercial-title">
+                <span data-i18n="landing.commercial.title_1">Your digital team,</span>
+                <span class="italic" data-i18n="landing.commercial.title_2">in action.</span>
+              </h2>
+              <p class="lead commercial-description" data-i18n="landing.commercial.body">See how Adebayo, Priya, Lukas and Helena collaborate on work you can review.</p>
+              <p class="commercial-language" data-i18n="landing.commercial.audio">Video in English.</p>
+            </div>
           </div>
           <div class="aiteam-youtube-media">
             <iframe id="agentos-commercial-video" src="https://www.youtube-nocookie.com/embed/vOsdKmG0hGQ?hl=en&amp;rel=0" title="AgentOS commercial in English" data-i18n-title="landing.commercial.player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>

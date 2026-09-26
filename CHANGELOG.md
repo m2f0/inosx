@@ -1,3 +1,9 @@
+# Changelog
+
+## [4.7.3] - 2026-09-26
+### Fixed
+- Cabeçalho do vídeo comercial alinhado à composição editorial de Produtos: grid, h2, itálico e texto lead em PT/EN/ES.
+
 # INOSX Website - Changelog
 All notable changes to the INOSX website will be documented in this file.
 

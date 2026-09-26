@@ -141,4 +141,4 @@ Roteiro completo de validação SEO/GEO em `docs/SEO-CHECKLIST.md`.
 - 2026-09-26: Commercial videos follow page language: PT uses KvdfqKYER9g, EN/ES use vOsdKmG0hGQ. Preserve earlier launch videos; no autoplay for commercials.
 - 2026-09-26: Remove MVP references from public homepage copy and accessibility labels in EN/PT/ES.
 
-- 2026-09-26: Commercial video heading needs clear hierarchy: reuse the global h3 typography (Bodoni Moda) and existing video-description typography; retain constrained description width, secondary language note and consistent spacing across PT/EN/ES. Do not override the title with Manrope.
+- 2026-09-26: Commercial video header follows the Products section reference: reuse section-head 4fr/8fr grid, global h2, italic emphasis and lead text. Do not use the small h3/card typography for this section. Preserve mobile stacking.
