@@ -1063,10 +1063,15 @@
       background: var(--bg-soft);
       border-radius: 0.7rem;
     }
-    #agentos-commercial { scroll-margin-top: 100px; }
+    #agentos-commercial { scroll-margin-top: 100px; margin: 40px 0; }
     #agentos-commercial .aiteam-youtube-media { height: auto; min-height: 0; }
     #agentos-commercial iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
-    #agentos-commercial p { margin: 12px 0; }
+    .commercial-heading { display: grid; gap: 12px; margin-bottom: 24px; max-width: 760px; }
+    #agentos-commercial-title { margin: 0; font-family: var(--font-body); font-size: clamp(1.55rem, 2.5vw, 2.2rem); font-weight: 600; line-height: 1.25; letter-spacing: -0.015em; text-wrap: balance; }
+    #agentos-commercial .commercial-description { margin: 0; max-width: 62ch; font-size: 1rem; font-weight: 400; line-height: 1.6; letter-spacing: normal; color: #c8d4ea; }
+    #agentos-commercial .commercial-language { margin: 4px 0 0; font-size: 0.85rem; line-height: 1.5; color: #8ea0bf; }
+    #agentos-commercial .commercial-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 20px 0 0; font-size: 0.85rem; line-height: 1.6; }
+    @media (max-width: 640px) { .commercial-heading { gap: 10px; margin-bottom: 20px; } }
     .aiteam-youtube iframe {
       display: block;
       width: 100%;
@@ -2103,14 +2108,16 @@
         </div>
 
         <div class="agentos-video-language"><label for="agentos-video-language"><span data-i18n="landing.agentos.language">Video language</span></label><select id="agentos-video-language"><option value="en">English</option><option value="pt">Português</option><option value="es">Español</option></select></div>
-        <section id="agentos-commercial" aria-labelledby="agentos-commercial-title" style="margin:40px 0">
+        <section id="agentos-commercial" aria-labelledby="agentos-commercial-title">
+          <div class="commercial-heading">
           <h3 id="agentos-commercial-title" data-i18n="landing.commercial.title">Your digital team in action</h3>
-          <p data-i18n="landing.commercial.body">See how Adebayo, Priya, Lukas and Helena collaborate on work you can review.</p>
-          <p data-i18n="landing.commercial.audio">Video in English.</p>
+          <p class="commercial-description" data-i18n="landing.commercial.body">See how Adebayo, Priya, Lukas and Helena collaborate on work you can review.</p>
+          <p class="commercial-language" data-i18n="landing.commercial.audio">Video in English.</p>
+          </div>
           <div class="aiteam-youtube-media">
             <iframe id="agentos-commercial-video" src="https://www.youtube-nocookie.com/embed/vOsdKmG0hGQ?hl=en&amp;rel=0" title="AgentOS commercial in English" data-i18n-title="landing.commercial.player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
           </div>
-          <p><a id="agentos-commercial-youtube" href="https://youtu.be/vOsdKmG0hGQ" target="_blank" rel="noopener noreferrer" data-i18n="landing.commercial.watch">Watch on YouTube</a> · <a href="https://agentos.inosx.com/?lang=en" data-agentos-link data-i18n="landing.commercial.cta">Explore AgentOS</a></p>
+          <p class="commercial-links"><a id="agentos-commercial-youtube" href="https://youtu.be/vOsdKmG0hGQ" target="_blank" rel="noopener noreferrer" data-i18n="landing.commercial.watch">Watch on YouTube</a> <a href="https://agentos.inosx.com/?lang=en" data-agentos-link data-i18n="landing.commercial.cta">Explore AgentOS</a></p>
         </section>
         <details class="agentos-retrospective" id="aiteam-x-retrospective"><summary><span data-i18n="landing.agentos.retro">AITEAM-X — retrospective and next chapter</span></summary><p data-i18n="landing.agentos.history">AITEAM-X explored a shared workspace for AI agents, memory and human review. Its demonstrations remain here as a record of that earlier chapter.</p><p data-i18n="landing.agentos.learning">AgentOS carries this direction into a clearer experience: a named digital team, familiar responsibilities, conversations and human oversight. The focus is on helping people delegate, collaborate and continue their work.</p><p data-i18n="landing.agentos.boundary">These AITEAM-X videos are historical demonstrations, not a description of the features available in the AgentOS Web beta.</p><p><a href="https://www.youtube.com/watch?v=l9ob9KGVqhQ" target="_blank" rel="noopener"><span data-i18n="landing.agentos.archive">Watch the original AITEAM-X platform tour</span></a></p>
         <div class="aiteam-feature-videos">

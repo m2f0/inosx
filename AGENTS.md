@@ -140,3 +140,5 @@ Roteiro completo de validação SEO/GEO em `docs/SEO-CHECKLIST.md`.
 
 - 2026-09-26: Commercial videos follow page language: PT uses KvdfqKYER9g, EN/ES use vOsdKmG0hGQ. Preserve earlier launch videos; no autoplay for commercials.
 - 2026-09-26: Remove MVP references from public homepage copy and accessibility labels in EN/PT/ES.
+
+- 2026-09-26: Commercial video heading needs clear hierarchy: Manrope title, constrained description width, secondary language note and consistent spacing across PT/EN/ES.

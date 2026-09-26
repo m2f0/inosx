@@ -3,6 +3,11 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.7.1] - 2026-09-26
+
+### Fixed
+- Hierarquia tipográfica e espaçamento do cabeçalho do vídeo comercial em PT, EN e ES; descrição com largura de leitura limitada e idioma em texto secundário.
+
 ## [4.7.0] - 2026-09-26
 
 ### Added
