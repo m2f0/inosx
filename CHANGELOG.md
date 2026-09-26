@@ -3,6 +3,11 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.7.2] - 2026-09-26
+
+### Fixed
+- Cabeçalho comercial reutiliza a tipografia global dos títulos e descrições de vídeos da página, removendo o estilo divergente.
+
 ## [4.7.1] - 2026-09-26
 
 ### Fixed
