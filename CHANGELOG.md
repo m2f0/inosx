@@ -3,6 +3,15 @@ All notable changes to the INOSX website will be documented in this file.
 
 ---
 
+## [4.7.0] - 2026-09-26
+
+### Added
+- Vídeo comercial do AgentOS com seleção automática pelo idioma: português em PT, inglês em EN e ES.
+- Textos localizados, indicação do idioma do áudio e links para YouTube e AgentOS.
+
+### Changed
+- Removidas referências a MVP da página inicial nos três idiomas, inclusive rótulo de acessibilidade.
+
 ## [4.6.0] - 2026-09-14
 
 ### Added

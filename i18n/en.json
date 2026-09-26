@@ -4,6 +4,14 @@
     "description": "INOSX helps companies move from AI experiments to reliable business operations with AI agents, workflow automation, SaaS development, data systems and production-ready custom software."
   },
   "landing": {
+    "commercial": {
+      "title": "Your digital team in action",
+      "body": "See how Adebayo, Priya, Lukas and Helena collaborate on work you can review.",
+      "audio": "Video in English.",
+      "player": "AgentOS commercial in English",
+      "watch": "Watch on YouTube",
+      "cta": "Explore AgentOS"
+    },
     "store_promo": {
       "title": "Discover your next favorite app.",
       "body": "Meet the INOSX Store. Explore our apps, discover what each one does and find the right tool for your day.",
@@ -246,8 +254,8 @@
       "message_8": "Download free whitepaper"
     },
     "agentos": {
-      "kicker": "A new chapter starts today · MVP launch",
-      "title": "The new AgentOS MVP is here.",
+      "kicker": "A new chapter starts today · Now available",
+      "title": "The new AgentOS is here.",
       "description": "Built for your digital team. Join us in celebrating — and help shape what comes next.",
       "join": "Join the free closed beta",
       "pause": "Pause the party",

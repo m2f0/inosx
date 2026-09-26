@@ -4,6 +4,14 @@
     "description": "INOSX ayuda a las empresas a pasar de experimentos con IA a operaciones de negocio confiables con agentes de IA, automatización, SaaS, sistemas de datos y software a medida listo para producción."
   },
   "landing": {
+    "commercial": {
+      "title": "Tu equipo digital en acción",
+      "body": "Descubre cómo Adebayo, Priya, Lukas y Helena colaboran en trabajos que puedes revisar.",
+      "audio": "Vídeo en inglés.",
+      "player": "Vídeo comercial de AgentOS en inglés",
+      "watch": "Ver en YouTube",
+      "cta": "Conoce AgentOS"
+    },
     "store_promo": {
       "title": "Descubre tu próxima aplicación favorita.",
       "body": "Conoce la INOSX Store. Explora nuestras aplicaciones, descubre qué hace cada una y encuentra la herramienta ideal para tu día.",
@@ -246,8 +254,8 @@
       "message_8": "Descargar documento técnico gratuito"
     },
     "agentos": {
-      "kicker": "Un nuevo capítulo empieza hoy · Lanzamiento del MVP",
-      "title": "Ya llegó el MVP del nuevo AgentOS.",
+      "kicker": "Un nuevo capítulo empieza hoy · Ya disponible",
+      "title": "Ya llegó el nuevo AgentOS.",
       "description": "Creado para tu equipo digital. Celebra con nosotros y ayuda a construir lo que viene.",
       "join": "Participa en la beta cerrada gratuita",
       "pause": "Pausar la fiesta",

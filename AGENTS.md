@@ -137,3 +137,6 @@ Roteiro completo de validação SEO/GEO em `docs/SEO-CHECKLIST.md`.
 ## Contato externo
 
 `support@inosx.com` — único email a usar em qualquer artefato público.
+
+- 2026-09-26: Commercial videos follow page language: PT uses KvdfqKYER9g, EN/ES use vOsdKmG0hGQ. Preserve earlier launch videos; no autoplay for commercials.
+- 2026-09-26: Remove MVP references from public homepage copy and accessibility labels in EN/PT/ES.
