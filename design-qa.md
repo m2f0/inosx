@@ -30,3 +30,11 @@ final result: passed
 
 Nenhuma divergência P0/P1/P2 remanescente no bloco alterado. Escala do screenshot fornecido não é tratada como medida CSS exata. Não foi alterado o restante da página.
 `nValidação automatizada: validate-i18n passou; impeccable retornou exit 1 com 56 notas consultivas do site existente (cores, glows e tamanhos), sem alterar superfícies fora do escopo.
+
+## 4.7.4 — lista de setores
+- Referência: screenshot do usuário codex-clipboard-00ac968c-1ee3-4272-a20a-7f308d6e7379.png, seção existente com lista corrida de baixo contraste.
+- Resultado desktop: C:/Users/mario/Documents/INOSX/Products/outputs/video/agentos-commercial-en-v1/industries-desktop.png.
+- Melhoria solicitada, sem requisito de reprodução literal: cabeçalho e identidade preservados; lista semântica em grid 3/2/1 colunas, Manrope body, ink-2 e divisórias line.
+- PT/EN/ES: 12 itens traduzidos confirmados por interação com seletor; mobile ES 390x844 sem overflow horizontal, nomes longos legíveis.
+- Conteúdo e assets preservados; nenhum novo controle ou ícone. Fontes e cores reutilizam tokens existentes. Validação i18n passou.
+- final result: passed

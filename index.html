@@ -1320,23 +1320,30 @@
 
     /* ============ Industries ============ */
     .industries-list {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 50ch;
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.2vw, 2rem);
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      line-height: 1.5;
-      color: var(--ink-3);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: clamp(1.5rem, 4vw, 4rem);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: var(--ink-2);
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.35vw, 1.18rem);
+      font-weight: 400;
+      line-height: 1.55;
     }
-    .industries-list span { transition: color 0.25s ease; cursor: default; }
-    .industries-list span:not(:last-child)::after {
-      content: ' · ';
-      color: var(--ink-4);
-      margin: 0 0.4rem;
+    .industries-list li {
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--line);
+      overflow-wrap: anywhere;
     }
-    .industries-list span:hover { color: var(--ink); }
+    @media (max-width: 880px) {
+      .industries-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .industries-list { grid-template-columns: 1fr; }
+      .industries-list li { padding: 1rem 0; }
+    }
 
     /* ============ FAQ ============ */
     details.faq {
@@ -2346,9 +2353,21 @@
         </div>
       </div>
 
-      <div class="industries-list reveal">
-        <span data-i18n="landing.extra.industry_0">Healthcare</span><span data-i18n="landing.extra.industry_1">Education</span><span data-i18n="landing.extra.industry_2">Financial services</span><span data-i18n="landing.extra.industry_3">Manufacturing</span><span data-i18n="landing.extra.industry_4">Retail</span><span data-i18n="landing.extra.industry_5">Logistics</span><span data-i18n="landing.extra.industry_6">Agribusiness</span><span data-i18n="landing.extra.industry_7">Energy</span><span data-i18n="landing.extra.industry_8">Public sector</span><span data-i18n="landing.extra.industry_9">Technology</span><span data-i18n="landing.extra.industry_10">Telecom</span><span data-i18n="landing.extra.industry_11">Legal</span>
-      </div>
+      <ul class="industries-list reveal">
+        <li data-i18n="landing.extra.industry_0">Healthcare</li>
+        <li data-i18n="landing.extra.industry_1">Education</li>
+        <li data-i18n="landing.extra.industry_2">Financial services</li>
+        <li data-i18n="landing.extra.industry_3">Manufacturing</li>
+        <li data-i18n="landing.extra.industry_4">Retail</li>
+        <li data-i18n="landing.extra.industry_5">Logistics</li>
+        <li data-i18n="landing.extra.industry_6">Agribusiness</li>
+        <li data-i18n="landing.extra.industry_7">Energy</li>
+        <li data-i18n="landing.extra.industry_8">Public sector</li>
+        <li data-i18n="landing.extra.industry_9">Technology</li>
+        <li data-i18n="landing.extra.industry_10">Telecom</li>
+        <li data-i18n="landing.extra.industry_11">Legal</li>
+
+      </ul>
     </div>
   </section>
 

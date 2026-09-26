@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.7.4] - 2026-09-26
+### Fixed
+- Lista de setores com grid responsivo, tipografia de leitura, maior contraste e divisórias discretas nos três idiomas.
+
 ## [4.7.3] - 2026-09-26
 ### Fixed
 - Cabeçalho do vídeo comercial alinhado à composição editorial de Produtos: grid, h2, itálico e texto lead em PT/EN/ES.
