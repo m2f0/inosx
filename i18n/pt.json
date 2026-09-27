@@ -133,14 +133,17 @@
     },
     "how": {
       "eyebrow": "Como trabalhamos",
-      "title_1": "Três passos práticos.",
-      "title_2": "Do diagnóstico à escala.",
-      "s1_t": "Diagnóstico",
-      "s1_d": "Conversa de descoberta, mapa do que existe, identificação dos casos com maior retorno e clareza de viabilidade.",
-      "s2_t": "Design + Build",
-      "s2_d": "Um release real do produto em semanas. UX modelada com seu time, indicadores definidos no início, código em produção desde o primeiro dia.",
-      "s3_t": "Escala",
-      "s3_d": "Operação contínua, observabilidade, governança e expansão para novos processos com base no que provou retorno."
+      "title_1": "Entendemos seu contexto.",
+      "title_2": "Construímos com você.",
+      "sub": "Conhecemos as pessoas e o desafio, experimentamos caminhos e desenvolvemos soluções com resultados acompanhados na prática.",
+      "s1_t": "Entender",
+      "s1_d": "Pessoas, necessidades e o problema que vale resolver.",
+      "s2_t": "Experimentar",
+      "s2_d": "Ideias ganham forma e são testadas com quem usa.",
+      "s3_t": "Entregar e evoluir",
+      "s3_d": "Soluções em operação, com resultados acompanhados.",
+      "adapt": "O percurso se adapta ao seu projeto e ao que aprendemos juntos.",
+      "cta": "Conheça nosso processo"
     },
     "cases": {
       "eyebrow": "Trabalhos selecionados",
@@ -742,5 +745,76 @@
     "final_cta_title": "Pronto Para Parar de Adivinhar e Começar a Saber?",
     "final_cta_subtitle": "Junte-se a mais de 500 empresas usando o SurveyFlow para tomar decisões baseadas em dados com confiança.",
     "final_cta_btn": "Iniciar Seu Teste Grátis →"
+  },
+  "process": {
+    "title": "Como trabalhamos | INOSX",
+    "description": "Conheça o processo colaborativo e adaptável da INOSX, das necessidades das pessoas à solução em operação.",
+    "home": "Página inicial",
+    "skip": "Pular para o conteúdo",
+    "headline": "Primeiro, entendemos as pessoas.",
+    "italic": "Depois, construímos a solução.",
+    "intro": "Ouvimos quem usa e quem opera, definimos o problema e experimentamos caminhos com seu time. Cada entrega ajuda a decidir o próximo passo.",
+    "journey": "Um percurso construído com você",
+    "adapt_title": "O processo se adapta ao desafio.",
+    "adapt_body": "Podemos começar pela descoberta de uma necessidade, pela validação de uma ideia ou pela melhoria de uma solução existente. Ajustamos a profundidade das etapas ao seu contexto.",
+    "loop": "O que aprendemos nos testes pode nos levar a rever o problema ou explorar outro caminho.",
+    "delivery": "Você recebe",
+    "together": "Decisões compartilhadas. Entregas visíveis.",
+    "together_body": "Seu time participa das decisões, avalia as entregas e ajuda a orientar os ajustes. Você acompanha o que aprendemos e o que vem a seguir.",
+    "results": "Como reconhecemos o progresso",
+    "results_body": "Definimos indicadores conforme o desafio e comparamos a situação inicial com os resultados em uso.",
+    "closing": "Qual processo você quer melhorar?",
+    "closing_body": "Conte onde sua equipe perde tempo ou onde seus clientes encontram dificuldades. Vamos identificar juntos um ponto de partida.",
+    "contact": "Conversar sobre meu projeto",
+    "meta": {
+      "title": "Como trabalhamos | INOSX",
+      "description": "Conheça o processo colaborativo e adaptável da INOSX, das necessidades das pessoas à solução em operação."
+    },
+    "steps": {
+      "0": {
+        "0": "Entender as pessoas",
+        "1": "Conversamos com clientes e equipes e observamos a jornada entre canais, sistemas e pontos de contato.",
+        "2": "Necessidades e dificuldades reais, além das suposições."
+      },
+      "1": {
+        "0": "Definir o problema",
+        "1": "Escolhemos juntos o que precisa melhorar e como avaliar o progresso.",
+        "2": "Prioridades, escopo inicial e critérios de sucesso."
+      },
+      "2": {
+        "0": "Explorar soluções",
+        "1": "Comparamos caminhos considerando utilidade, viabilidade técnica e impacto esperado.",
+        "2": "Uma direção fundamentada para investir."
+      },
+      "3": {
+        "0": "Experimentar",
+        "1": "Damos forma à ideia em um protótipo que seu time pode experimentar.",
+        "2": "Fluxos visíveis para orientar decisões."
+      },
+      "4": {
+        "0": "Testar e ajustar",
+        "1": "Observamos o uso, ouvimos o feedback e aprimoramos o que ainda causa dificuldade.",
+        "2": "Evidências para manter, melhorar ou reconsiderar."
+      },
+      "5": {
+        "0": "Entregar e evoluir",
+        "1": "Desenvolvemos, integramos e acompanhamos a solução em operação.",
+        "2": "Software em uso e próximos passos baseados em resultados."
+      }
+    },
+    "metrics": {
+      "0": {
+        "0": "Operação",
+        "1": "Tempo por tarefa, retrabalho e custo por atendimento."
+      },
+      "1": {
+        "0": "Experiência",
+        "1": "Facilidade para concluir uma jornada, abandono e satisfação."
+      },
+      "2": {
+        "0": "Adoção",
+        "1": "Uso efetivo, tarefas concluídas e necessidade de suporte."
+      }
+    }
   }
 }

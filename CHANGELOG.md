@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.8.0] - 2026-09-27
+### Added
+- Página Como trabalhamos em PT/EN/ES com processo adaptável, participação do cliente e indicadores de resultado.
+### Changed
+- Seção da home substituída pelo resumo visual aprovado, com três etapas e acesso ao processo completo.
+
 ## [4.7.5] - 2026-09-27
 ### Changed
 - Comunicação do AgentOS na página inicial orientada à venda de assinaturas, com chamadas para escolher um plano em PT, EN e ES.
