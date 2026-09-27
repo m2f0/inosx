@@ -12,7 +12,7 @@
       "audio": "Video in English.",
       "player": "AgentOS commercial in English",
       "watch": "Watch on YouTube",
-      "cta": "Explore AgentOS"
+      "cta": "Choose your plan"
     },
     "store_promo": {
       "title": "Discover your next favorite app.",
@@ -256,19 +256,19 @@
       "message_8": "Download free whitepaper"
     },
     "agentos": {
-      "kicker": "A new chapter starts today · Now available",
+      "kicker": "AgentOS · Subscriptions available",
       "title": "The new AgentOS is here.",
-      "description": "Built for your digital team. Join us in celebrating — and help shape what comes next.",
-      "join": "Join the free closed beta",
+      "description": "Delegate tasks to your digital team and review the results. Choose your plan and make more time for your priorities.",
+      "join": "Choose your plan",
       "pause": "Pause the party",
       "resume": "Resume the party",
-      "product": "Your digital team, in your browser. Give direction, collaborate with AI employees and review the results. Free closed beta with usage limits.",
+      "product": "Your digital team, in your browser. Delegate tasks, collaborate with AI employees and review the results. Choose a monthly subscription to get started.",
       "video": "Meet the AgentOS digital team",
       "language": "Video language",
       "retro": "AITEAM-X — retrospective and next chapter",
       "history": "AITEAM-X explored a shared workspace for AI agents, memory and human review. Its demonstrations remain here as a record of that earlier chapter.",
       "learning": "AgentOS carries this direction into a clearer experience: a named digital team, familiar responsibilities, conversations and human oversight. The focus is on helping people delegate, collaborate and continue their work.",
-      "boundary": "These AITEAM-X videos are historical demonstrations, not a description of the features available in the AgentOS Web beta.",
+      "boundary": "These AITEAM-X videos document an earlier chapter. For current AgentOS features and subscription plans, visit the AgentOS website.",
       "archive": "Watch the original AITEAM-X platform tour"
     }
   },

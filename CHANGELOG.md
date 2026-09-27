@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.7.5] - 2026-09-27
+### Changed
+- Comunicação do AgentOS na página inicial orientada à venda de assinaturas, com chamadas para escolher um plano em PT, EN e ES.
+### Removed
+- Referências ao beta fechado e destino obsoleto do botão comercial na página inicial.
+
 ## [4.7.4] - 2026-09-26
 ### Fixed
 - Lista de setores com grid responsivo, tipografia de leitura, maior contraste e divisórias discretas nos três idiomas.

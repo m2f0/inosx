@@ -72,7 +72,7 @@ class I18n {
    */
   async loadTranslations(lang) {
     try {
-      const response = await fetch(`/i18n/${lang}.json?v=4.7.3`);
+      const response = await fetch(`/i18n/${lang}.json?v=4.7.5`);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: Failed to load ${lang}.json`);
       }
