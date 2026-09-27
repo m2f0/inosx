@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.8.1] - 2026-09-27
+### Changed
+- Acesso direto ao AgentOS no cabeçalho, chamadas comerciais e rodapé em PT/EN/ES, visível também no celular.
+- Links de entrada preservam o idioma e usam app.agentos.inosx.com.
+
 ## [4.8.0] - 2026-09-27
 ### Added
 - Página Como trabalhamos em PT/EN/ES com processo adaptável, participação do cliente e indicadores de resultado.
