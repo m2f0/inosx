@@ -1,5 +1,9 @@
 # Changelog
 
+## [4.8.2] - 2026-10-08
+### Removed
+- Telefone institucional removido das paginas, links de contato, dados estruturados e arquivos de referencia para assistentes de IA.
+
 ## [4.8.1] - 2026-09-27
 ### Changed
 - Acesso direto ao AgentOS no cabeçalho, chamadas comerciais e rodapé em PT/EN/ES, visível também no celular.

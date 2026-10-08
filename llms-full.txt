@@ -8,7 +8,6 @@ INOSX is a technology studio for application development, AI solution developmen
 
 Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US.
 Email: support@inosx.com.
-Phone: +1 (302) 457-7323.
 Founded: 2021.
 
 ## What we do
@@ -108,7 +107,6 @@ INOSX's brand voice is "comprometida, consciente, adaptável" (committed, consid
 ## Contact
 
 - Email: support@inosx.com
-- Phone: +1 (302) 457-7323
 - Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US
 
 ## License and use
