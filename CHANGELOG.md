@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.9.0] - 2026-10-09
+### Added
+- Teste da Isabella no site publico por convite temporario gerado no AgentOS staging, com conversa em portugues, ingles ou espanhol e limite de mensagens.
+- Carregador oculto para visitantes sem convite; nenhum segredo de servidor no navegador.
+
 ## [4.8.2] - 2026-10-08
 ### Removed
 - Telefone institucional removido das paginas, links de contato, dados estruturados e arquivos de referencia para assistentes de IA.
