@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.1] - 2026-10-09
+### Fixed
+- Verificacao do convite antes de liberar a conversa, com estados claros de expiracao, revogacao e limite.
+- Idioma da Isabella acompanha o site em PT/EN/ES e respeita a escolha do visitante.
+- Recuperacao de indisponibilidade temporaria e bloqueio de envio apos expiracao.
+
+
 ## [4.9.0] - 2026-10-09
 ### Added
 - Teste da Isabella no site publico por convite temporario gerado no AgentOS staging, com conversa em portugues, ingles ou espanhol e limite de mensagens.
