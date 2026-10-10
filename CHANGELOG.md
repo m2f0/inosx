@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.9.2] - 2026-10-10
+
+### Fixed
+- Acessos ao AgentOS usam https://app.inosx.com, com idioma definido pela preferência do usuário e pelo navegador.
+
 ## [4.9.1] - 2026-10-09
 ### Fixed
 - Verificacao do convite antes de liberar a conversa, com estados claros de expiracao, revogacao e limite.
