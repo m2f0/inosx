@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.9.3] - 2026-10-10
+
+### Fixed
+- Botões de acesso utilizam o endereço oficial https://app.agentos.inosx.com, sem impor idioma.
+
 ## [4.9.2] - 2026-10-10
 
 ### Fixed
