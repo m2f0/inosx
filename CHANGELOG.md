@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.10.0] - 2026-10-11
+
+### Added
+- Isabella Duarte nas páginas públicas, com atendimento comercial em português, inglês e espanhol, contato autorizado e encaminhamento à equipe conforme disponibilidade.
+- Canal de produção com limite de 500 créditos por dia e conhecimento aprovado no AgentOS.
+
 ## [4.9.3] - 2026-10-10
 
 ### Fixed
