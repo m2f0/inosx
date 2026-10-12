@@ -132,8 +132,8 @@
     "es": "Utilizamos salvaguardas técnicas y organizativas adecuadas al servicio, como transporte cifrado, controles de acceso, verificación de correo, credenciales de alcance limitado, registros de auditoría y verificación de integridad de los paquetes de AgentOS y del catálogo. Ningún método de almacenamiento o transmisión es completamente seguro."
   },
   "33": {
-    "en": "INOSX and its providers may process data in the United States and other countries. Where required, we use contractual or other lawful safeguards for international transfers.",
-    "es": "INOSX y sus proveedores pueden procesar datos en Estados Unidos y otros países. Cuando es necesario, utilizamos salvaguardas contractuales u otras medidas legales para las transferencias internacionales."
+    "en": "INOSX and its providers may process data in different countries. Where required, we use contractual or other lawful safeguards for international transfers.",
+    "es": "INOSX y sus proveedores pueden procesar datos en distintos países. Cuando es necesario, utilizamos salvaguardas contractuales u otras medidas legales para las transferencias internacionales."
   },
   "34": {
     "en": "Your Privacy Choices and Rights",
@@ -168,7 +168,7 @@
     "es": "Para consultas de privacidad, solicitudes de acceso o solicitudes de eliminación, contacte con:"
   },
   "42": {
-    "en": "<strong>INOSX, Inc.</strong><br/>\n          131 Continental Dr Suite 305<br/>\n          Newark, DE 19713, United States<br/>\n<a href=\"mailto:support@inosx.com\">support@inosx.com</a>",
-    "es": "<strong>INOSX, Inc.</strong><br>131 Continental Dr Suite 305<br>Newark, DE 19713, Estados Unidos<br><a href=\"mailto:support@inosx.com\">support@inosx.com</a>"
+    "en": "<strong>INOSX, Inc.</strong><br/>\n<a href=\"mailto:support@inosx.com\">support@inosx.com</a>",
+    "es": "<strong>INOSX, Inc.</strong><br><a href=\"mailto:support@inosx.com\">support@inosx.com</a>"
   }
 }

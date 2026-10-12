@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.10.1] - 2026-10-12
+
+### Changed
+- Removidas referências geográficas aos EUA de páginas, traduções, endereços estruturados e textos legais; valores e moeda preservados.
+
 ## [4.10.0] - 2026-10-11
 
 ### Added

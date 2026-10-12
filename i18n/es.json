@@ -215,7 +215,7 @@
       "privacy": "Privacidad",
       "cta": "Iniciar conversación →",
       "rights": "Todos los derechos reservados.",
-      "crafted": "Sede en Estados Unidos · Operación global"
+      "crafted": "Operación global"
     },
     "extra": {
       "industry_0": "Salud",
@@ -694,7 +694,7 @@
   },
   "footer": {
     "tagline": "Soluciones tecnológicas y de IA prácticas y seguras para empresas.",
-    "company_meta": "INOSX, Inc. • Corporación EE.UU.",
+    "company_meta": "INOSX, Inc.",
     "platform_title": "Plataforma",
     "platform_home": "Inicio",
     "platform_products": "Productos",
@@ -705,7 +705,6 @@
     "support_contact": "Contacto",
     "contact_title": "Contacto",
     "contact_email": "Correo",
-    "contact_address": "9450 SW Gemini Dr, Beaverton, OR 97008, EE.UU.",
     "copyright": "© 2025 INOSX, Inc. Todos los derechos reservados."
   },
   "surveyflow": {

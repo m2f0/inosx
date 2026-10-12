@@ -6,7 +6,6 @@
 
 INOSX is a technology studio for application development, AI solution development and production software. We design and build custom applications, platforms, integrations, automation, AI systems and proprietary digital products end-to-end for B2B clients internationally. The studio is **not** an AI lab, **not** an engineering subcontractor and **not** a digital-transformation consultancy. We use application development and technology solutions as the primary positioning; AI solution development, AI agents and automation remain explicit capabilities inside production systems.
 
-Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US.
 Email: support@inosx.com.
 Founded: 2021.
 
@@ -107,7 +106,6 @@ INOSX's brand voice is "comprometida, consciente, adaptável" (committed, consid
 ## Contact
 
 - Email: support@inosx.com
-- Address: 131 Continental Dr Suite 305, Newark, DE, 19713, US
 
 ## License and use
 

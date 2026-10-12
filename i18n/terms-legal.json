@@ -4,8 +4,8 @@
     "es": "Términos de servicio"
   },
   "1": {
-    "en": "These Terms of Service (\"Terms\") govern your use of services provided by INOSX, Inc., a Delaware C Corporation (\"INOSX,\" \"we,\" \"us,\" or \"our\"), including the invitation-only INOSX AgentOS closed beta (\"AgentOS\").",
-    "es": "Estos Términos de servicio (\"Términos\") regulan el uso de los servicios prestados por INOSX, Inc., una corporación C de Delaware (\"INOSX\" o \"nosotros\"), incluida la beta cerrada de INOSX AgentOS, disponible únicamente por invitación (\"AgentOS\")."
+    "en": "These Terms of Service (\"Terms\") govern your use of services provided by INOSX, Inc. (\"INOSX,\" \"we,\" \"us,\" or \"our\"), including the invitation-only INOSX AgentOS closed beta (\"AgentOS\").",
+    "es": "Estos Términos de servicio (\"Términos\") regulan el uso de los servicios prestados por INOSX, Inc. (\"INOSX\" o \"nosotros\"), incluida la beta cerrada de INOSX AgentOS, disponible únicamente por invitación (\"AgentOS\")."
   },
   "2": {
     "en": "By creating an account, accepting an invitation, installing AgentOS, or using an INOSX service, you agree to these Terms and our <a href=\"/privacy-policy\">Privacy Policy</a>. If you use a service for an organization, you represent that you have authority to bind that organization. If you do not agree, do not install or use the service.",
@@ -120,8 +120,8 @@
     "es": "12. LEGISLACIÓN APLICABLE Y CONTROVERSIAS"
   },
   "30": {
-    "en": "These Terms are governed by the laws of the State of Delaware, without regard to conflict-of-law rules. Subject to any mandatory consumer rights, the state and federal courts located in Delaware have exclusive jurisdiction over disputes arising from these Terms.",
-    "es": "Estos Términos se rigen por las leyes del Estado de Delaware, sin considerar sus normas sobre conflicto de leyes. Sin perjuicio de los derechos imperativos de los consumidores, los tribunales estatales y federales situados en Delaware tienen jurisdicción exclusiva sobre las controversias derivadas de estos Términos."
+    "en": "Applicable law and jurisdiction are determined by the legal rules applicable to the dispute, without limiting mandatory consumer rights.",
+    "es": "La ley aplicable y la jurisdicción se determinan conforme a las normas legales aplicables a la controversia, sin limitar los derechos imperativos de los consumidores."
   },
   "31": {
     "en": "13. CHANGES AND CONTACT",
@@ -136,7 +136,7 @@
     "es": "Puede enviar preguntas sobre estos Términos a <a href=\"mailto:support@inosx.com\">support@inosx.com</a>."
   },
   "34": {
-    "en": "Last updated: September 3, 2026.",
-    "es": "Última actualización: 3 de septiembre de 2026."
+    "en": "Last updated: October 12, 2026.",
+    "es": "Última actualización: 12 de octubre de 2026."
   }
 }

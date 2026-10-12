@@ -215,7 +215,7 @@
       "privacy": "Privacy",
       "cta": "Start conversation →",
       "rights": "All rights reserved.",
-      "crafted": "Headquartered in the United States · Operating globally"
+      "crafted": "Operating globally"
     },
     "extra": {
       "industry_0": "Healthcare",
@@ -694,7 +694,7 @@
   },
   "footer": {
     "tagline": "Practical and secure technology and AI solutions for businesses.",
-    "company_meta": "INOSX, Inc. • USA Corporation",
+    "company_meta": "INOSX, Inc.",
     "platform_title": "Platform",
     "platform_home": "Home",
     "platform_products": "Products",
@@ -705,7 +705,6 @@
     "support_contact": "Contact",
     "contact_title": "Contact",
     "contact_email": "Email",
-    "contact_address": "9450 SW Gemini Dr, Beaverton, OR 97008, USA",
     "copyright": "© 2025 INOSX, Inc. All rights reserved."
   },
   "surveyflow": {

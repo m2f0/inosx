@@ -9,7 +9,7 @@
  document.documentElement.lang=lang;localStorage.setItem('inosx_lang',lang);
  document.title=(document.body.dataset.legalPage==='terms'?(lang==='es'?'Términos de servicio':'Terms of Service'):(lang==='es'?'Política de privacidad':'Privacy Policy'))+' | INOSX';
  if(lang==='es'){
-  const labels={'Home':'Inicio','Company':'Empresa','Contact':'Contacto','Email':'Correo electrónico','Phone':'Teléfono','Products & Services':'Productos y servicios','Terms':'Términos','Terms of Service':'Términos de servicio','Privacy Policy':'Política de privacidad','INOSX, Inc. • USA Corporation':'INOSX, Inc. • Corporación de Estados Unidos','INOSX, Inc. All rights reserved.':'INOSX, Inc. Todos los derechos reservados.','© 2026 INOSX, Inc. All rights reserved.':'© 2026 INOSX, Inc. Todos los derechos reservados.'};
+  const labels={'Home':'Inicio','Company':'Empresa','Contact':'Contacto','Email':'Correo electrónico','Phone':'Teléfono','Products & Services':'Productos y servicios','Terms':'Términos','Terms of Service':'Términos de servicio','Privacy Policy':'Política de privacidad','INOSX, Inc. All rights reserved.':'INOSX, Inc. Todos los derechos reservados.','© 2026 INOSX, Inc. All rights reserved.':'© 2026 INOSX, Inc. Todos los derechos reservados.'};
   document.querySelectorAll('footer a,footer h4,footer strong,footer p,footer span,footer .legal').forEach(el=>{const t=el.textContent.trim();if(labels[t])el.textContent=labels[t]});
   const nav=document.querySelector('footer nav');if(nav)nav.setAttribute('aria-label','Enlaces legales');
  }
