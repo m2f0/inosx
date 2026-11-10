@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.10.2] - 2026-11-10
+
+### Changed
+- Texto do hero centralizado em desktop e celular, com os dois destaques distribuídos simetricamente.
+
+### Removed
+- Vídeo e foto circular do fundador no hero da landing principal.
+
 ## [4.10.1] - 2026-10-12
 
 ### Changed

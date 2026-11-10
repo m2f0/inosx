@@ -482,101 +482,10 @@
       position: relative;
       padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(4rem, 9vw, 8rem);
     }
-    .hero-head {
-      --hero-video-lift: clamp(1.1rem, 3vw, 2.6rem);
-      display: grid;
-      grid-template-columns: 8fr 4fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-    .hero h1 { max-width: 17ch; }
-    .hero-title {
-      position: relative;
-      z-index: 4;
-      pointer-events: none;
-      transform: translateY(calc(-1 * var(--hero-video-lift)));
-    }
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 1.35rem;
-      padding-bottom: 0.5rem;
-    }
-    .hero-founder-video {
-      --hero-avatar-size: clamp(5rem, 6vw, 5.8rem);
-      --hero-avatar-overlap: 1.5rem;
-      --hero-avatar-top: calc(-1 * var(--hero-avatar-size) + var(--hero-avatar-overlap));
-      --hero-avatar-left: clamp(-1.2rem, -1.45vw, -0.8rem);
-      position: relative;
-      z-index: 2;
-      width: 169%;
-      transform: translateX(-28%) translateY(calc(-1 * var(--hero-video-lift)));
-      margin-bottom: calc(-1 * var(--hero-video-lift));
-      padding: 0.42rem;
-      border: 1px solid var(--glass-edge);
-      border-radius: 1.1rem;
-      background: var(--glass-plate-strong);
-      backdrop-filter: blur(18px) saturate(130%);
-      -webkit-backdrop-filter: blur(18px) saturate(130%);
-      overflow: visible;
-      isolation: isolate;
-    }
-    .hero-founder-video::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 1px 1px auto;
-      height: 42%;
-      border-radius: 0.95rem 0.95rem 44% 44%;
-      background: linear-gradient(180deg, var(--glass-highlight), transparent);
-      pointer-events: none;
-    }
-    .hero-founder-video::after {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 0.42rem;
-      border: 1px solid rgba(199, 215, 240, 0.10);
-      border-radius: 0.76rem;
-      pointer-events: none;
-    }
-    .hero-founder-video video {
-      position: relative;
-      z-index: 1;
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      height: auto;
-      object-fit: cover;
-      background: var(--bg-soft);
-      border-radius: 0.72rem;
-    }
-    .hero-avatar {
-      position: absolute;
-      top: var(--hero-avatar-top);
-      left: var(--hero-avatar-left);
-      z-index: 2;
-      width: var(--hero-avatar-size);
-      height: var(--hero-avatar-size);
-      border-radius: 50%;
-      border: 1px solid var(--glass-edge);
-      outline: 4px solid rgba(11, 16, 32, 0.82);
-      object-fit: cover;
-      object-position: 50% 28%;
-      background: var(--bg);
-      pointer-events: none;
-    }
-    .hero-avatar-accent {
-      position: absolute;
-      z-index: 3;
-      top: calc(var(--hero-avatar-top) + (var(--hero-avatar-size) * 0.68));
-      left: calc(var(--hero-avatar-left) + (var(--hero-avatar-size) * 0.68));
-      width: clamp(1.15rem, 2vw, 1.8rem);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      border: 3px solid var(--bg);
-      background: var(--accent-2);
-      pointer-events: none;
+    .hero h1 {
+      max-width: 17ch;
+      margin-inline: auto;
+      text-align: center;
     }
     .hero-copy {
       display: grid;
@@ -592,7 +501,7 @@
     }
     .hero-meta {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: clamp(1rem, 3vw, 3rem);
       width: 100%;
       padding: 2rem 0 0;
@@ -617,65 +526,14 @@
     }
 
     @media (max-width: 1300px) {
-      .hero-head {
-        --hero-video-lift: 0rem;
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .hero-title {
-        transform: none;
-        pointer-events: auto;
-      }
-      .hero-founder-video {
-        --hero-avatar-top: calc(-1 * var(--hero-avatar-size) + var(--hero-avatar-overlap));
-        width: 100%;
-        max-width: 860px;
-        margin: clamp(1rem, 2vw, 1.75rem) auto 0;
-        transform: none;
-      }
       .hero-copy {
         margin-top: 2.25rem;
-      }
-    }
-
-    @media (max-width: 880px) {
-      .hero-head {
-        --hero-video-lift: 0rem;
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .hero-title { transform: none; }
-      .hero-founder-video {
-        --hero-avatar-size: clamp(4.4rem, 18vw, 6.2rem);
-        --hero-avatar-overlap: clamp(0.8rem, 3vw, 1.1rem);
-        --hero-avatar-top: calc(-1 * var(--hero-avatar-size) + var(--hero-avatar-overlap));
-        --hero-avatar-left: -0.8rem;
-        width: 100%;
-        max-width: 680px;
-        transform: none;
-        margin: clamp(1.25rem, 5vw, 2rem) auto 0;
-      }
-      .hero-copy {
-        margin-top: 2.25rem;
-      }
-      .hero-avatar-accent {
-        border-width: 2px;
       }
     }
     @media (max-width: 720px) {
-      .hero-copy {
-        text-align: left;
-      }
-      .hero-copy .lead {
-        text-wrap: initial;
-      }
       .hero-meta {
         grid-template-columns: 1fr;
         gap: 1.15rem;
-      }
-      .hero-meta .row {
-        align-items: flex-start;
-        text-align: left;
       }
     }
 
@@ -1898,34 +1756,10 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="main">
     <div class="container">
-      <div class="hero-head">
-        <div class="hero-title">
-          <h1>
-            <span data-i18n="landing.hero.headline_1">Application Development</span>
-            <span class="italic" data-i18n="landing.hero.headline_2">Technology Solutions</span>
-          </h1>
-        </div>
-
-        <div class="hero-side">
-          <div class="hero-founder-video">
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="/assets/videos/posters/from-ai-experiments-to-reliable-business-operations.jpg"
-              data-i18n-aria-label="landing.services_videos.video1_aria">
-              <source src="/assets/videos/from-ai-experiments-to-reliable-business-operations.mp4" type="video/mp4">
-            </video>
-            <img
-              class="hero-avatar"
-              src="/assets/images/mario-mayerle-avatar.jpg"
-              alt="Mario Mayerle Filho"
-              decoding="async"
-              fetchpriority="high">
-            <span class="hero-avatar-accent" aria-hidden="true"></span>
-          </div>
-        </div>
-      </div>
+      <h1>
+        <span data-i18n="landing.hero.headline_1">Application Development</span>
+        <span class="italic" data-i18n="landing.hero.headline_2">Technology Solutions</span>
+      </h1>
       <div class="hero-copy">
         <p class="lead" data-i18n="landing.hero.sub">
           We develop applications, platforms, integrations and AI solutions that fit your operation and reach production with your team.
