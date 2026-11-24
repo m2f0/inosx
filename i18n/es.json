@@ -118,9 +118,9 @@
     },
     "products": {
       "eyebrow": "Productos INOSX",
-      "title_1": "Software listo para usar,",
-      "title_2": "a medida cuando hace falta.",
-      "sub": "Catálogo de productos propios en producción real. Úselos listos o como punto de partida personalizable.",
+      "title_1": "Software y educación,",
+      "title_2": "creados por INOSX.",
+      "sub": "Descubre el software, las aplicaciones de IA, los cursos y los e-books de INOSX.",
       "more": "Saber más",
       "messiax": "Servicio conversacional con IA: respuestas, seguimiento y calificación en el canal de su cliente.",
       "surveyflow": "Encuestas inteligentes con análisis automatizado e insights accionables.",
@@ -282,7 +282,7 @@
       "description": "Catálogo INOSX: productos y plataformas tecnológicas en producción, desde aplicaciones y herramientas de datos hasta automatización y soluciones de IA."
     },
     "hero_title": "Productos INOSX",
-    "hero_subtitle": "Productos tecnológicos para personas, equipos y negocios, construidos y operados en producción.",
+    "hero_subtitle": "Descubre el software, las aplicaciones de IA, los cursos y los e-books de INOSX.",
     "back_home": "← Volver al inicio",
     "contact_link": "Hable con nosotros"
   },
@@ -816,5 +816,65 @@
         "1": "Uso efectivo, tareas completadas y necesidades de soporte."
       }
     }
+  },
+  "studio": {
+    "services": "Servicios",
+    "products": "Productos",
+    "partners": "Alianzas",
+    "contact": "Contacto",
+    "hero1": "Ingeniería",
+    "hero2": "de software e IA.",
+    "intro": "Desarrollamos software a medida para empresas y creamos productos digitales que puedes acercar a tu público.",
+    "explore": "Explorar alianzas",
+    "dev": "Desarrollo",
+    "custom": "Software a medida",
+    "digital": "IA y productos digitales",
+    "opps": "Oportunidades comerciales",
+    "invite": "Acerca un producto de INOSX a tu público.",
+    "inviteBody": "Conoce el e-book piloto y los formatos de alianza en estudio para cursos, software e IA.",
+    "catalog": "Alianzas de productos",
+    "catalogBody": "Elige un formato para conocer la función del socio y las condiciones comerciales en estudio.",
+    "all": "Todos",
+    "pub": "Publicaciones",
+    "courses": "Cursos",
+    "tech": "Tecnología",
+    "ebook": "E-book piloto",
+    "price": "Piloto · US$ 19",
+    "course": "Curso digital",
+    "software": "Software por suscripción",
+    "ai": "Aplicación de IA",
+    "study": "En estudio",
+    "ebookBody": "INOSX produce el e-book. El socio lo presenta a su público y participa en los ingresos netos elegibles de las ventas que se le atribuyan.",
+    "ebookTerms": "US$ 19 es el precio de venta de la simulación. La propuesta definirá el porcentaje, los costes deducibles, la atribución y el plazo de pago.",
+    "courseBody": "El socio presenta el curso a posibles alumnos. El público, la clase de muestra y la participación por matrícula se definirán por curso.",
+    "softwareBody": "El socio identifica posibles suscriptores. Cada propuesta definirá si la participación cubre el primer cobro, las renovaciones o ambos.",
+    "aiBody": "El socio identifica empresas con una necesidad compatible. La demostración, el perfil del cliente y las condiciones se definirán por producto.",
+    "interested": "Consultar sobre esta alianza",
+    "back": "Volver a INOSX",
+    "interest": "Alianza de interés",
+    "audience": "¿A qué público quieres llegar y cómo presentarías el producto?",
+    "metaTitle": "INOSX | Software, IA y alianzas de productos",
+    "meta": {
+      "title": "Alianzas de productos | INOSX",
+      "description": "Elige un formato para conocer la función del socio y las condiciones comerciales en estudio."
+    }
+  },
+  "studioHome": {"meta": {"title": "INOSX | Software, IA y alianzas de productos", "description": "Desarrollamos software a medida para empresas y creamos productos digitales que puedes acercar a tu público."}},
+  "education": {
+    "title": "Cursos y e-books",
+    "course": "Curso en línea",
+    "book": "E-book",
+    "visitCourse": "Conocer el curso",
+    "visitBook": "Conocer el e-book",
+    "visitCase": "Ver el caso",
+    "gda": "Curso sobre dolarización y diversificación internacional, con un mapa de estudio para cada lección.",
+    "psf": "E-book ilustrado de Mario Mayerle sobre exposición cambiaria, diversificación y planificación patrimonial internacional.",
+    "gpa": "Curso de fijación de precios para negocios digitales. El primer módulo aborda precio, coste, valor y la elección de la unidad de cobro.",
+    "caseGda": "INOSX convirtió un programa de educación sobre dolarización en un aula en línea. Cada una de las 19 lecciones tiene un mapa que conecta conceptos, ejemplos y actividades. Los alumnos pueden descargar los mapas en PDF.",
+    "casePsf": "INOSX editó y maquetó el manuscrito de Mario Mayerle. La edición digital reúne 16 capítulos ilustrados, un índice navegable y referencias que permiten consultar las fuentes.",
+    "caseGpa": "INOSX creó el primer módulo en torno a una pregunta práctica. ¿Cómo cobrar por una oferta? Cuatro lecciones, ejercicios comentados y un laboratorio de precios permiten comparar alternativas y justificar una decisión.",
+    "educationCase": "Creación de cursos",
+    "editorialCase": "Producción editorial",
+    "summary": "Descubre el software, las aplicaciones de IA, los cursos y los e-books de INOSX."
   }
 }

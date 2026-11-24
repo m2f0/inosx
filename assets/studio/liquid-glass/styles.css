@@ -1,0 +1,69 @@
+:where(.liquid-glass-effect) {
+  position: relative;
+  display: block;
+  opacity: 1;
+  overflow: hidden;
+  border-radius: inherit;
+  background: hsl(
+    0 0% 0% / var(--liquid-glass-frost, var(--liquid-glass-frost-default, 0.05))
+  );
+  box-shadow: var(
+    --liquid-glass-shadow,
+    0 0 2px 1px rgb(255 255 255 / 10%) inset,
+    0 0 10px 4px rgb(255 255 255 / 5%) inset,
+    0 4px 16px rgb(17 17 26 / 5%),
+    0 8px 24px rgb(17 17 26 / 5%),
+    0 16px 56px rgb(17 17 26 / 5%),
+    0 4px 16px rgb(17 17 26 / 5%) inset,
+    0 8px 24px rgb(17 17 26 / 5%) inset,
+    0 16px 56px rgb(17 17 26 / 5%) inset
+  );
+  --liquid-glass-filter: url("#liquid-glass-support-check");
+  backdrop-filter: var(--liquid-glass-filter);
+  -webkit-backdrop-filter: var(--liquid-glass-filter);
+}
+
+.liquid-glass-slot {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.liquid-glass-filter {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@supports not (
+  (backdrop-filter: url("#liquid-glass-support-check")) or
+    (-webkit-backdrop-filter: url("#liquid-glass-support-check"))
+) {
+  .liquid-glass-effect {
+    background: var(--liquid-glass-fallback-background, rgb(0 0 0 / 28%));
+    backdrop-filter: var(
+      --liquid-glass-fallback-filter,
+      blur(24px) saturate(150%)
+    );
+    -webkit-backdrop-filter: var(
+      --liquid-glass-fallback-filter,
+      blur(24px) saturate(150%)
+    );
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .liquid-glass-effect {
+    background: var(
+      --liquid-glass-reduced-transparency-background,
+      rgb(18 18 18 / 94%)
+    );
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}

@@ -118,9 +118,9 @@
     },
     "products": {
       "eyebrow": "INOSX Products",
-      "title_1": "Off-the-shelf software,",
-      "title_2": "tailored when needed.",
-      "sub": "Eight products we ship and operate ourselves. Take one off the shelf, or commission your own.",
+      "title_1": "Software and learning,",
+      "title_2": "built by INOSX.",
+      "sub": "Explore INOSX software, AI applications, courses and e-books.",
       "more": "Learn more",
       "messiax": "AI conversational service: replies, follow-up and qualification on your customer's channel.",
       "surveyflow": "Smart surveys with automated analysis and actionable insights.",
@@ -282,7 +282,7 @@
       "description": "Full INOSX catalog: products and technology platforms in production, from applications and data tools to automation and AI solutions."
     },
     "hero_title": "INOSX Products",
-    "hero_subtitle": "Technology products for people, teams, and businesses, built and operated in production.",
+    "hero_subtitle": "Explore INOSX software, AI applications, courses and e-books.",
     "back_home": "← Back to home",
     "contact_link": "Contact us"
   },
@@ -816,5 +816,65 @@
         "1": "Actual usage, completed tasks and support needs."
       }
     }
+  },
+  "studio": {
+    "services": "Services",
+    "products": "Products",
+    "partners": "Partnerships",
+    "contact": "Contact",
+    "hero1": "Engineering",
+    "hero2": "for software and AI.",
+    "intro": "We build custom software for businesses and create digital products you can bring to your audience.",
+    "explore": "Explore partnerships",
+    "dev": "Development",
+    "custom": "Custom software",
+    "digital": "AI and digital products",
+    "opps": "Commercial opportunities",
+    "invite": "Bring an INOSX product to your audience.",
+    "inviteBody": "Explore the e-book pilot and the partnership formats being considered for courses, software and AI.",
+    "catalog": "Product partnerships",
+    "catalogBody": "Choose a format to see the partner’s role and commercial terms under discussion.",
+    "all": "All",
+    "pub": "Publications",
+    "courses": "Courses",
+    "tech": "Technology",
+    "ebook": "Pilot e-book",
+    "price": "Pilot · US$19",
+    "course": "Digital course",
+    "software": "Subscription software",
+    "ai": "AI application",
+    "study": "Under consideration",
+    "ebookBody": "INOSX produces the e-book. The commercial partner introduces it to their audience and earns a share of eligible net revenue from attributed sales.",
+    "ebookTerms": "US$19 is the simulated retail price. The proposal will specify the percentage, deductible costs, attribution and payout schedule.",
+    "courseBody": "The partner introduces a course to prospective learners. The audience, sample lesson and share per enrolment will be defined for each course.",
+    "softwareBody": "The partner identifies potential subscribers. Each proposal will specify whether a share applies to the first payment, renewals or both.",
+    "aiBody": "The partner identifies companies with a use case suited to the application. The demo, customer profile and commercial terms will be set per product.",
+    "interested": "Discuss this partnership",
+    "back": "Back to INOSX",
+    "interest": "Partnership of interest",
+    "audience": "Which audience would you like to reach and how would you present the product?",
+    "metaTitle": "INOSX | Software, AI and product partnerships",
+    "meta": {
+      "title": "Product partnerships | INOSX",
+      "description": "Choose a format to see the partner’s role and commercial terms under discussion."
+    }
+  },
+  "studioHome": {"meta": {"title": "INOSX | Software, AI and product partnerships", "description": "We build custom software for businesses and create digital products you can bring to your audience."}},
+  "education": {
+    "title": "Courses and e-books",
+    "course": "Online course",
+    "book": "E-book",
+    "visitCourse": "Explore the course",
+    "visitBook": "Explore the e-book",
+    "visitCase": "Read the case study",
+    "gda": "A course on dollarization and international diversification, with a study map for each lesson.",
+    "psf": "Mario Mayerle’s illustrated e-book on currency exposure, diversification and international wealth planning.",
+    "gpa": "A pricing course for digital businesses. The first module covers price, cost, value and how to choose a billing unit.",
+    "caseGda": "INOSX turned a curriculum on dollarization into an online classroom. Each of its 19 lessons has a study map that connects concepts, examples and activities. Learners can download the maps as PDFs.",
+    "casePsf": "INOSX edited and designed Mario Mayerle’s manuscript as a digital book. The reading edition brings together 16 illustrated chapters, a linked table of contents and references that let readers check the sources.",
+    "caseGpa": "INOSX built the first module around a practical question: how should a business charge for an offer? Four lessons, exercises with feedback and a pricing lab let learners compare options and justify a decision.",
+    "educationCase": "Course creation",
+    "editorialCase": "E-book publishing",
+    "summary": "Explore INOSX software, AI applications, courses and e-books."
   }
 }

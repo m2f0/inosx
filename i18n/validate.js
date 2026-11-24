@@ -34,6 +34,7 @@ class I18nValidator {
     
     this.htmlFiles = [
       'index.html',
+      'parcerias/index.html',
       'surveyflow.html',
       'messiax.html',
       'roi-calculator.html',

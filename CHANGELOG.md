@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.0.0] - 2026-11-24
+
+- Redesenho da home no estilo Estúdio de vidro, com controles Liquid Glass.
+- Nova página de parcerias comerciais com filtros por formato e encaminhamento ao contato.
+- Global Dollar Academy, Patrimônio sem Fronteiras e Global Pricing Academy no portfólio e nos casos de educação e produção editorial.
+
 ## [4.10.2] - 2026-11-10
 
 ### Changed

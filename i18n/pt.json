@@ -118,9 +118,9 @@
     },
     "products": {
       "eyebrow": "Produtos INOSX",
-      "title_1": "Software pronto para usar,",
-      "title_2": "sob medida quando preciso.",
-      "sub": "Oito produtos que entregamos e operamos. Pegue um pronto, ou encomende o seu.",
+      "title_1": "Software e educação,",
+      "title_2": "criados pela INOSX.",
+      "sub": "Conheça os softwares, as aplicações de IA, os cursos e os e-books da INOSX.",
       "more": "Saber mais",
       "messiax": "Atendimento conversacional com IA: respostas, follow-up e qualificação no canal do seu cliente.",
       "surveyflow": "Pesquisas inteligentes com análise automatizada e insights acionáveis.",
@@ -282,7 +282,7 @@
       "description": "Catálogo INOSX: produtos e plataformas tecnológicas em produção, de aplicativos e ferramentas de dados a automação e soluções de IA."
     },
     "hero_title": "Produtos INOSX",
-    "hero_subtitle": "Produtos tecnológicos para pessoas, equipas e negócios, construídos e operados em produção.",
+    "hero_subtitle": "Conheça os softwares, as aplicações de IA, os cursos e os e-books da INOSX.",
     "back_home": "← Voltar ao início",
     "contact_link": "Falar connosco"
   },
@@ -816,5 +816,65 @@
         "1": "Uso efetivo, tarefas concluídas e necessidade de suporte."
       }
     }
+  },
+  "studio": {
+    "services": "Serviços",
+    "products": "Produtos",
+    "partners": "Parcerias",
+    "contact": "Contato",
+    "hero1": "Engenharia",
+    "hero2": "de software e IA.",
+    "intro": "Desenvolvemos software sob medida para empresas e criamos produtos digitais que você pode levar ao seu público.",
+    "explore": "Explorar parcerias",
+    "dev": "Desenvolvimento",
+    "custom": "Software sob medida",
+    "digital": "IA e produtos digitais",
+    "opps": "Oportunidades comerciais",
+    "invite": "Leve um produto da INOSX ao seu público.",
+    "inviteBody": "Conheça o e-book piloto e os formatos de parceria em estudo para cursos, software e IA.",
+    "catalog": "Parcerias de produtos",
+    "catalogBody": "Escolha um formato para conhecer o papel do parceiro e as condições comerciais em discussão.",
+    "all": "Todos",
+    "pub": "Publicações",
+    "courses": "Cursos",
+    "tech": "Tecnologia",
+    "ebook": "E-book piloto",
+    "price": "Piloto · US$ 19",
+    "course": "Curso digital",
+    "software": "Software por assinatura",
+    "ai": "Aplicação de IA",
+    "study": "Em estudo",
+    "ebookBody": "A INOSX produz o e-book. O parceiro o apresenta ao seu público e participa da receita líquida elegível das vendas atribuídas a ele.",
+    "ebookTerms": "US$ 19 é o preço de venda usado na simulação. A proposta definirá o percentual, os custos dedutíveis, a atribuição das vendas e o prazo de repasse.",
+    "courseBody": "O parceiro apresenta o curso a potenciais alunos. Público, aula de amostra e participação por matrícula serão definidos para cada curso.",
+    "softwareBody": "O parceiro identifica potenciais assinantes. Cada proposta definirá se o repasse considera a primeira cobrança, as renovações ou ambas.",
+    "aiBody": "O parceiro identifica empresas com uma necessidade compatível com a aplicação. A demonstração, o perfil do cliente e as condições serão definidos por produto.",
+    "interested": "Conversar sobre esta parceria",
+    "back": "Voltar à INOSX",
+    "interest": "Parceria de interesse",
+    "audience": "Qual público você pretende alcançar e como apresentaria o produto?",
+    "metaTitle": "INOSX | Software, IA e parcerias de produtos",
+    "meta": {
+      "title": "Parcerias de produtos | INOSX",
+      "description": "Escolha um formato para conhecer o papel do parceiro e as condições comerciais em discussão."
+    }
+  },
+  "studioHome": {"meta": {"title": "INOSX | Software, IA e parcerias de produtos", "description": "Desenvolvemos software sob medida para empresas e criamos produtos digitais que você pode levar ao seu público."}},
+  "education": {
+    "title": "Cursos e e-books",
+    "course": "Curso online",
+    "book": "E-book",
+    "visitCourse": "Conhecer o curso",
+    "visitBook": "Conhecer o e-book",
+    "visitCase": "Conhecer o case",
+    "gda": "Curso sobre dolarização e diversificação internacional, com um mapa de estudo para cada aula.",
+    "psf": "E-book ilustrado de Mario Mayerle sobre exposição cambial, diversificação e planejamento patrimonial internacional.",
+    "gpa": "Curso de precificação para negócios digitais. O primeiro módulo aborda preço, custo, valor e a escolha da unidade de cobrança.",
+    "caseGda": "A INOSX transformou um programa de educação em dolarização em uma sala de aula online. Cada uma das 19 aulas tem um mapa de estudo que conecta conceitos, exemplos e atividades. O aluno também pode baixar os mapas em PDF.",
+    "casePsf": "A INOSX trabalhou na edição e na diagramação do manuscrito de Mario Mayerle. A edição digital reúne 16 capítulos ilustrados, sumário navegável e referências que permitem ao leitor consultar as fontes.",
+    "caseGpa": "A INOSX criou o primeiro módulo em torno de uma pergunta prática. Como cobrar por uma oferta? Quatro aulas, exercícios comentados e um laboratório de precificação permitem comparar alternativas e justificar uma decisão.",
+    "educationCase": "Criação de cursos",
+    "editorialCase": "Produção editorial",
+    "summary": "Conheça os softwares, as aplicações de IA, os cursos e os e-books da INOSX."
   }
 }
