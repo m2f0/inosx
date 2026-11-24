@@ -8,8 +8,8 @@
     "es": "Estos Términos de servicio (\"Términos\") regulan el uso de los servicios prestados por INOSX, Inc. (\"INOSX\" o \"nosotros\"), incluida la beta cerrada de INOSX AgentOS, disponible únicamente por invitación (\"AgentOS\")."
   },
   "2": {
-    "en": "By creating an account, accepting an invitation, installing AgentOS, or using an INOSX service, you agree to these Terms and our <a href=\"/privacy-policy\">Privacy Policy</a>. If you use a service for an organization, you represent that you have authority to bind that organization. If you do not agree, do not install or use the service.",
-    "es": "Al crear una cuenta, aceptar una invitación, instalar AgentOS o utilizar un servicio de INOSX, acepta estos Términos y nuestra <a href=\"/privacy-policy.html\">Política de privacidad</a>. Si utiliza un servicio en nombre de una organización, declara que tiene autoridad para obligarla. Si no está de acuerdo, no instale ni utilice el servicio."
+    "en": "By creating an account, accepting an invitation, installing AgentOS, or using an INOSX service, you agree to these Terms and our <a href=\"/privacy-policy\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>. If you use a service for an organization, you represent that you have authority to bind that organization. If you do not agree, do not install or use the service.",
+    "es": "Al crear una cuenta, aceptar una invitación, instalar AgentOS o utilizar un servicio de INOSX, acepta estos Términos y nuestra <a href=\"/privacy-policy.html\" target=\"_blank\" rel=\"noopener\">Política de privacidad</a>. Si utiliza un servicio en nombre de una organización, declara que tiene autoridad para obligarla. Si no está de acuerdo, no instale ni utilice el servicio."
   },
   "3": {
     "en": "1. ACCOUNTS AND SECURITY",
@@ -112,8 +112,8 @@
     "es": "11. PRIVACIDAD"
   },
   "28": {
-    "en": "Our <a href=\"/privacy-policy\">Privacy Policy</a> explains what information INOSX processes, what stays local, the providers involved in the closed beta, and how to exercise privacy rights.",
-    "es": "Nuestra <a href=\"/privacy-policy.html\">Política de privacidad</a> explica qué información procesa INOSX, qué permanece local, qué proveedores intervienen en la beta cerrada y cómo ejercer los derechos de privacidad."
+    "en": "Our <a href=\"/privacy-policy\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a> explains what information INOSX processes, what stays local, the providers involved in the closed beta, and how to exercise privacy rights.",
+    "es": "Nuestra <a href=\"/privacy-policy.html\" target=\"_blank\" rel=\"noopener\">Política de privacidad</a> explica qué información procesa INOSX, qué permanece local, qué proveedores intervienen en la beta cerrada y cómo ejercer los derechos de privacidad."
   },
   "29": {
     "en": "12. GOVERNING LAW AND DISPUTES",

@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.1.1] - 2026-11-24
+
+### Changed
+- Links para subpáginas e sites de produtos abrem em novas abas. Âncoras, seletores de idioma e retornos à home usam a aba atual.
+
 ## [5.1.0] - 2026-11-24
 
 ### Changed

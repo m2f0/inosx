@@ -23,7 +23,15 @@ if(!categories.includes(category))category='all';
 const $=s=>document.querySelector(s),text=k=>copy[lang][k],description=p=>p.desc[['en','pt','es'].indexOf(lang)],normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 function link(path,params={}){const u=new URL(path,location.href);u.hash='';u.searchParams.set('lang',lang);Object.entries(params).forEach(([k,v])=>v?u.searchParams.set(k,v):u.searchParams.delete(k));return u.href}
 function node(tag,content,cls){const n=document.createElement(tag);if(content)n.textContent=content;if(cls)n.className=cls;return n}
-function anchor(label,href,cls){const n=node('a',label,cls);n.href=href;return n}
+function anchor(label, href, cls, newTab = true) {
+  const element = node('a', label, cls);
+  element.href = href;
+  if (newTab) {
+    element.target = '_blank';
+    element.rel = 'noopener';
+  }
+  return element;
+}
 function sync(){const u=new URL(location.href);u.searchParams.set('lang',lang);category==='all'?u.searchParams.delete('category'):u.searchParams.set('category',category);$('#search').value?u.searchParams.set('q',$('#search').value):u.searchParams.delete('q');history.replaceState(null,'',u)}
 function artwork(product) {
   if (product.mark) {
@@ -84,6 +92,6 @@ function renderList() {
     $('.filters').append(button);
   }
 }
-function renderDetail(){const id=new URL(location.href).searchParams.get('product');$('#detail').hidden=!id;if(!id)return;const p=products.find(p=>p.id===id);$('#detail').replaceChildren(anchor(text('back'),link(location.href,{product:null})+'#catalog'));if(!p){$('#detail').append(node('h2',text('notfound')));return}const icon=artwork(p);icon.classList.add('detail-icon');$('#detail').append(icon);$('#detail').append(node('h2',p.name),node('p',description(p)));if(p.id==='stashmunk')$('#detail').append(node('p',text('trial')+' · '+text('price')),node('p',text('preparing'),'status'),node('p',text('trialTerms')));else $('#detail').append(node('p',text('plans')));const actions=node('div',null,'detail-actions');actions.append(anchor(text('visit'),p.id==='stashmunk'?link(p.url):p.url,'button'));if(p.id==='stashmunk')actions.append(anchor(text('open'),link('https://web.stashmunk.inosx.com/account')));$('#detail').append(actions);document.title=p.name+' | INOSX Store'}
+function renderDetail(){const id=new URL(location.href).searchParams.get('product');$('#detail').hidden=!id;if(!id)return;const p=products.find(p=>p.id===id);$('#detail').replaceChildren(anchor(text('back'),link(location.href,{product:null})+'#catalog', null, false));if(!p){$('#detail').append(node('h2',text('notfound')));return}const icon=artwork(p);icon.classList.add('detail-icon');$('#detail').append(icon);$('#detail').append(node('h2',p.name),node('p',description(p)));if(p.id==='stashmunk')$('#detail').append(node('p',text('trial')+' · '+text('price')),node('p',text('preparing'),'status'),node('p',text('trialTerms')));else $('#detail').append(node('p',text('plans')));const actions=node('div',null,'detail-actions');actions.append(anchor(text('visit'),p.id==='stashmunk'?link(p.url):p.url,'button'));if(p.id==='stashmunk')actions.append(anchor(text('open'),link('https://web.stashmunk.inosx.com/account')));$('#detail').append(actions);document.title=p.name+' | INOSX Store'}
 function render(){document.querySelector('nav').setAttribute('aria-label',{en:'Main navigation',pt:'Navegação principal',es:'Navegación principal'}[lang]);document.querySelectorAll('header .brand,header [data-copy="home"],header [data-copy="partners"],footer .brand,footer [data-copy="terms"],footer [data-copy="privacy"]').forEach(a=>a.href=link(a.getAttribute('href')));document.documentElement.lang={en:'en',pt:'pt-BR',es:'es'}[lang];document.title='INOSX Store';document.querySelector('meta[name=description]').content=text('description');document.querySelectorAll('[data-copy]').forEach(n=>{n.textContent=text(n.dataset.copy)});$('#language').value=lang;$('#search').placeholder=text('placeholder');$('.filters').setAttribute('aria-label',text('all'));$('#featured-link').href=link(location.href,{product:'stashmunk'})+'#detail';renderList();renderDetail()}
 $('#search').value=(url.searchParams.get('q')||'').slice(0,120);$('#language').onchange=e=>{lang=e.target.value;sync();render()};$('#search').oninput=()=>{sync();renderList()};$('#reset').onclick=()=>{category='all';$('#search').value='';sync();renderList();$('#search').focus()};render();

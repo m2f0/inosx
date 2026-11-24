@@ -2,7 +2,7 @@
 (async () => {
  const requested=new URL(location.href).searchParams.get('lang') || localStorage.getItem('inosx_lang');
  const lang=requested==='es'?'es':'en';
- const response=await fetch('/i18n/'+document.body.dataset.legalPage+'-legal.json?v=4.5.0-es');
+ const response=await fetch('/i18n/'+document.body.dataset.legalPage+'-legal.json?v=5.1.1');
  if(!response.ok)throw new Error('Legal translation unavailable');
  const entries=await response.json();
  document.querySelectorAll('[data-legal]').forEach(el=>{el.innerHTML=entries[el.dataset.legal][lang]});
