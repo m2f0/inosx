@@ -461,11 +461,16 @@
       }
     }
   </style>
+<link rel="stylesheet" href="/assets/studio/liquid-glass/styles.css">
+<link rel="stylesheet" href="/css/studio.css">
+<link rel="stylesheet" href="/css/studio-interior.css">
+<script type="module" src="/scripts/studio.js"></script>
 </head>
-<body>
+<body data-studio-page="surveyflow">
   <!-- Top Bar Menu -->
   <div class="topbar">
     <div class="topbar-container">
+      <a class="interior-brand" href="/"><img src="/assets/studio/wordmark.svg" alt="INOSX" width="122" height="27"></a>
       <nav class="topbar-nav">
         <a href="index.html" data-i18n="nav.home">Home</a>
         <a href="produtos.html" data-i18n="nav.products">Products</a>
@@ -476,7 +481,7 @@
       
       <div class="language-selector">
         <span class="lang-icon">🌍</span>
-        <select id="languageSelector">
+        <select id="languageSelector" aria-label="Language / Idioma">
           <option value="en">🇺🇸 English</option>
           <option value="pt">🇧🇷 Português</option>
           <option value="es">🇪🇸 Español</option>
@@ -498,9 +503,9 @@
         Create intelligent surveys in seconds, analyze responses with AI, and get insights that actually drive decisions. No data science degree required.
       </p>
       <div class="hero-cta">
-        <a href="index.html#contact" class="cta-button cta-primary" data-i18n="surveyflow.cta_primary">
+        <a href="index.html#contact" class="cta-button cta-primary studio-action primary" data-optic><span data-i18n="surveyflow.cta_primary">
           Start Free Trial →
-        </a>
+        </span></a>
         <a href="#features" class="cta-button cta-secondary" data-i18n="surveyflow.cta_secondary">
           See How It Works
         </a>
@@ -653,9 +658,9 @@
     <p data-i18n="surveyflow.final_cta_subtitle">
       Join 500+ companies using SurveyFlow to make data-driven decisions with confidence.
     </p>
-    <a href="index.html#contact" class="cta-button cta-primary" data-i18n="surveyflow.final_cta_btn">
+    <a href="index.html#contact" class="cta-button cta-primary studio-action primary" data-optic><span data-i18n="surveyflow.final_cta_btn">
       Start Your Free Trial →
-    </a>
+    </span></a>
   </section>
 
   <script>

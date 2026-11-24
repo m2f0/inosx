@@ -23,3 +23,10 @@
   .education-shelf { grid-template-columns: 1fr; }
   .education-shelf article + article { padding-left: 0; border-left: 0; }
 }
+
+.education-shelf h4 .academy-link, .work-name .academy-link {
+  color: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+:is(.education-shelf h4, .work-name) .academy-link:is(:hover, :focus-visible) { text-decoration: underline; text-underline-offset: .15em; }

@@ -31,7 +31,7 @@
   <link rel="icon" type="image/x-icon" href="/favicon16x16.ico" sizes="16x16">
   <link rel="icon" type="image/x-icon" href="/favicon32x32.ico" sizes="32x32">
   <link rel="stylesheet" href="/css/featured-products.css" />
-  <script src="/i18n/i18n.js?v=5.0.0" defer></script>
+  <script src="/i18n/i18n.js?v=5.1.0" defer></script>
 
   <script type="application/ld+json">
   {
@@ -90,7 +90,7 @@
                   var(--bg-color);
       color: var(--text-color);
       min-height: 100vh;
-      padding-top: 72px;
+
     }
     .topbar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -118,19 +118,24 @@
   </style>
 <script src="/i18n/routing.js?v=4.5.0-es" defer></script>
 <link rel="stylesheet" href="/css/educacao.css">
+<link rel="stylesheet" href="/assets/studio/liquid-glass/styles.css">
+<link rel="stylesheet" href="/css/studio.css">
+<link rel="stylesheet" href="/css/studio-interior.css">
+<script type="module" src="/scripts/studio.js"></script>
 </head>
-<body data-i18n-page="products_page">
+<body data-i18n-page="products_page" data-studio-page="produtos">
   <div class="topbar">
     <div class="topbar-container">
+      <a class="interior-brand" href="/"><img src="/assets/studio/wordmark.svg" alt="INOSX" width="122" height="27"></a>
       <nav class="topbar-nav">
         <a href="index.html" data-i18n="nav.home">Home</a>
         <a href="produtos.html" class="active" data-i18n="nav.products">Products</a>
-        <a href="index.html#services" data-i18n="nav.services">Services</a>
+        <a href="/#solutions" data-i18n="nav.services">Services</a>
         <a href="roi-calculator.html" data-i18n="nav.roi_calculator">ROI Calculator</a>
       </nav>
       <div class="language-selector">
         <span class="lang-icon">🌍</span>
-        <select id="languageSelector">
+        <select id="languageSelector" aria-label="Language / Idioma">
           <option value="en">🇺🇸 English</option>
           <option value="pt">🇧🇷 Português</option>
           <option value="es">🇪🇸 Español</option>
@@ -148,7 +153,7 @@
         <h3 id="education-title"><span data-i18n="education.title">Courses and e-books</span></h3>
         <div class="education-shelf">
           <article id="product-gda">
-            <small><span data-i18n="education.course">Online course</span></small><h4>Global Dollar Academy</h4>
+            <small><span data-i18n="education.course">Online course</span></small><h4><a class="academy-link" href="https://gda.inosx.com/">Global Dollar Academy</a></h4>
             <p><span data-i18n="education.gda">A course on dollarization and international diversification, with a study map for each lesson.</span></p><a href="https://gda.inosx.com/"><span data-i18n="education.visitCourse">Explore the course</span> <span aria-hidden="true">→</span></a>
           </article>
           <article id="product-psf">
@@ -156,8 +161,8 @@
             <p><span data-i18n="education.psf">Mario Mayerle’s illustrated e-book on currency exposure, diversification and international wealth planning.</span></p><a href="https://psf.gda.inosx.com/"><span data-i18n="education.visitBook">Explore the e-book</span> <span aria-hidden="true">→</span></a>
           </article>
           <article id="product-gpa">
-            <small><span data-i18n="education.course">Online course</span></small><h4>Global Pricing Academy</h4>
-            <p><span data-i18n="education.gpa">A pricing course for digital businesses. The first module covers price, cost, value and how to choose a billing unit.</span></p><a href="/#case-gpa"><span data-i18n="education.visitCase">Read the case study</span> <span aria-hidden="true">→</span></a>
+            <small><span data-i18n="education.course">Online course</span></small><h4><a class="academy-link" href="https://gpa.inosx.com/">Global Pricing Academy</a></h4>
+            <p><span data-i18n="education.gpa">A pricing course for digital businesses. The first module covers price, cost, value and how to choose a billing unit.</span></p><a href="https://gpa.inosx.com/"><span data-i18n="education.visitCourse">Explore the course</span> <span aria-hidden="true">→</span></a>
           </article>
         </div>
       </section>

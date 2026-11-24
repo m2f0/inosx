@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.1.0] - 2026-11-24
+
+### Changed
+- Estúdio de vidro na Store, no catálogo de produtos, nas páginas de produtos, no processo de trabalho, na calculadora e nos documentos legais.
+- Store com categoria de educação e acesso aos dois cursos e ao e-book. GDA e GPA abrem seus sites na Store, no portfólio e nos cases.
+
 ## [5.0.0] - 2026-11-24
 
 - Redesenho da home no estilo Estúdio de vidro, com controles Liquid Glass.

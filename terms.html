@@ -79,9 +79,14 @@
         a { color: var(--accent); }
     </style>
 <script src="/i18n/legal.js?v=4.5.0-es" defer></script><script src="/i18n/routing.js?v=4.5.0-es" defer></script>
+<link rel="stylesheet" href="/assets/studio/liquid-glass/styles.css">
+<link rel="stylesheet" href="/css/studio.css">
+<link rel="stylesheet" href="/css/studio-interior.css">
+<script type="module" src="/scripts/studio.js"></script>
 </head>
-<body data-legal-page="terms">
-<nav class="legal-languages" aria-label="Language" style="display:flex;gap:20px;padding:16px;position:relative;z-index:2"><a href="?lang=en" lang="en">English</a><a href="?lang=es" lang="es">Español</a><a href="/store/">Store</a></nav>
+<body data-legal-page="terms" data-studio-page="terms">
+<nav class="legal-languages" aria-label="Language" style="display:flex;gap:20px;padding:16px;position:relative;z-index:2"><a class="interior-brand" href="/"><img src="/assets/studio/wordmark.svg" alt="INOSX" width="122" height="27"></a><a href="?lang=en" lang="en">English</a><a href="?lang=es" lang="es">Español</a><a href="/store/">Store</a></nav>
+<main class="legal-reading">
     <h1 data-legal="0">Terms of Service</h1>
 
     <p data-legal="1">These Terms of Service ("Terms") govern your use of services provided by INOSX, Inc. ("INOSX," "we," "us," or "our"), including the invitation-only INOSX AgentOS closed beta ("AgentOS").</p>
@@ -154,6 +159,7 @@
         .inosx-footer .contact-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:10px}
         @media(max-width:800px){.inosx-footer .grid{grid-template-columns:1fr;}}
     </style>
+    </main>
     <footer class="inosx-footer">
         <div class="container">
             <div class="grid">

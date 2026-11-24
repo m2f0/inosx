@@ -526,32 +526,32 @@
     }
   </style>
 <script src="/i18n/routing.js?v=4.5.0-es" defer></script>
+<link rel="stylesheet" href="/assets/studio/liquid-glass/styles.css">
+<link rel="stylesheet" href="/css/studio.css">
+<link rel="stylesheet" href="/css/studio-interior.css">
+<script type="module" src="/scripts/studio.js"></script>
 </head>
-<body>
+<body data-studio-page="roi-calculator">
   <!-- Top Bar Menu -->
   <div class="topbar">
     <div class="topbar-container">
+      <a class="interior-brand" href="/"><img src="/assets/studio/wordmark.svg" alt="INOSX" width="122" height="27"></a>
       <nav class="topbar-nav">
         <a href="index.html" data-i18n="nav.home">Home</a>
         <a href="produtos.html" data-i18n="nav.products">Products</a>
-        <a href="index.html#services" data-i18n="nav.services">Services</a>
+        <a href="/#solutions" data-i18n="nav.services">Services</a>
         <a href="roi-calculator.html" class="active" data-i18n="nav.roi_calculator">ROI Calculator</a>
       </nav>
       
       <div class="language-selector">
         <span class="lang-icon">🌍</span>
-        <select id="languageSelector">
+        <select id="languageSelector" aria-label="Language / Idioma">
           <option value="en">🇺🇸 English</option>
           <option value="pt">🇧🇷 Português</option>
           <option value="es">🇪🇸 Español</option>
         </select>
       </div>
     </div>
-  </div>
-
-  <!-- Logo Section -->
-  <div class="logo-section">
-    <div class="brand">INOSX</div>
   </div>
 
   <!-- Calculator -->
@@ -600,7 +600,7 @@
           </select>
         </div>
 
-        <button type="submit" class="calculate-btn" data-i18n="roi_calculator.calculate_btn">Calculate My Savings →</button>
+        <button type="submit" class="calculate-btn studio-action primary" data-optic><span data-i18n="roi_calculator.calculate_btn">Calculate My Savings →</span></button>
       </form>
 
       <div class="results" id="results">
