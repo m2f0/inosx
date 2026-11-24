@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.1.2] - 2026-11-24
+
+### Fixed
+- Turnstile inicializado após o formulário, com tamanho adaptado ao espaço disponível, estado visível e opção de tentar novamente em caso de falha.
+
 ## [5.1.1] - 2026-11-24
 
 ### Changed

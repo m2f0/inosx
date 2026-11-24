@@ -1,4 +1,12 @@
 {
+  "verification": {
+    "label": "Verificação de segurança da Cloudflare",
+    "loading": "Carregando a verificação de segurança…",
+    "pending": "Se solicitado, conclua a verificação abaixo.",
+    "complete": "Verificação concluída.",
+    "unavailable": "A verificação de segurança não foi concluída. Confira sua conexão e tente novamente.",
+    "retry": "Tentar verificar novamente"
+  },
   "meta": {
     "title": "INOSX - Desenvolvimento de Aplicativos e Soluções Tecnológicas",
     "description": "A INOSX ajuda empresas a sair de experimentos com IA para operações confiáveis de negócio com agentes de IA, automação, SaaS, sistemas de dados e software sob medida pronto para produção."

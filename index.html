@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300..600;1,6..96,300..500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <script src="/i18n/i18n.js?v=5.1.0" defer></script>
+  <script src="/i18n/i18n.js?v=5.1.2" defer></script>
 
   <style>
     :root {
@@ -1286,6 +1286,9 @@
       font-style: italic;
     }
 
+    .intake-verification { margin-block: 1rem; min-width: 0; }
+    .intake-verification [data-check-status] { margin: .4rem 0 .65rem; font-size: .92rem; color: var(--ink-2); }
+    .intake-verification [data-check-retry] { padding: .6rem 1rem; font: inherit; color: var(--ink); background: var(--bg-soft); border: 1px solid var(--line-2); border-radius: 2rem; cursor: pointer; }
     .lead-form .form-title {
       font-family: var(--font-body);
       font-size: 0.74rem;
@@ -1684,26 +1687,6 @@
       .nav-actions > .btn-line { display: none; }
     }
   </style>
-  <script>
-    window.INOSX_PUBLIC_INTAKE = {
-      endpoint: 'https://api.inosx.com/v1/public-intake',
-      turnstileSiteKey: '0x4AAAAAAD7_d54OZxbyLsTV'
-    };
-    window.inosxTurnstileReady = function() {
-      var config = window.INOSX_PUBLIC_INTAKE || {};
-      if (!config.turnstileSiteKey || !window.turnstile) return;
-      document.querySelectorAll('[data-turnstile-container]').forEach(function(container) {
-        if (container.getAttribute('data-widget-id')) return;
-        var id = window.turnstile.render(container, {
-          sitekey: config.turnstileSiteKey,
-          action: 'public_intake',
-          theme: 'auto'
-        });
-        container.setAttribute('data-widget-id', String(id));
-      });
-    };
-  </script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=inosxTurnstileReady&render=explicit" async defer></script>
 <script src="/i18n/routing.js?v=4.5.0-es" defer></script>
 
 <script src="/scripts/agentos-launch.js?v=studio1" defer></script>
@@ -2291,7 +2274,12 @@
           <input name="consent" type="checkbox" required>
           <span data-i18n="landing.lead.consent">I agree that INOSX may use these details to respond to this request.</span>
         </label>
-        <div data-turnstile-container></div>
+        <div class="intake-verification" role="group" aria-label="Security check by Cloudflare" data-i18n-aria-label="verification.label">
+          <strong data-i18n="verification.label">Security check by Cloudflare</strong>
+          <p data-check-status role="status" data-i18n="verification.loading">Loading the security check…</p>
+          <div data-turnstile-container data-sitekey="0x4AAAAAAD7_d54OZxbyLsTV"></div>
+          <button type="button" data-check-retry hidden data-i18n="verification.retry">Retry verification</button>
+        </div>
 
         <div class="form-bottom">
           <button type="submit" class="form-submit studio-action" data-optic id="leadSubmit">
@@ -2409,7 +2397,12 @@
         <input name="consent" type="checkbox" required>
         <span data-i18n="landing.extra.ui_6">I agree to share this email with INOSX so the team can send product updates and follow up about AI operations.</span>
       </label>
-      <div data-turnstile-container></div>
+      <div class="intake-verification" role="group" aria-label="Security check by Cloudflare" data-i18n-aria-label="verification.label">
+        <strong data-i18n="verification.label">Security check by Cloudflare</strong>
+        <p data-check-status role="status" data-i18n="verification.loading">Loading the security check…</p>
+        <div data-turnstile-container data-sitekey="0x4AAAAAAD7_d54OZxbyLsTV"></div>
+        <button type="button" data-check-retry hidden data-i18n="verification.retry">Retry verification</button>
+      </div>
       <div class="whitepaper-actions">
         <button type="submit" data-i18n="landing.extra.ui_7">Download free whitepaper</button>
         <a class="whitepaper-download" data-whitepaper-download href="#" download="AITEAM-X_Operating_Agents_Whitepaper.pdf" hidden data-i18n="landing.extra.ui_8">Open whitepaper</a>
@@ -2599,7 +2592,7 @@
         var endpoint = form.getAttribute('data-endpoint') || '';
         var widget = form.querySelector('[data-turnstile-container]');
         var widgetId = widget ? widget.getAttribute('data-widget-id') : '';
-        var turnstileToken = widgetId && window.turnstile ? window.turnstile.getResponse(Number(widgetId)) : '';
+        var turnstileToken = data.get('cf-turnstile-response') || '';
         var safeEndpoint = false;
         try {
           var endpointUrl = new URL(endpoint);
@@ -2646,7 +2639,7 @@
           });
         }).catch(function() { err.classList.add('show'); })
           .finally(function() {
-            if (widgetId && window.turnstile) window.turnstile.reset(Number(widgetId));
+            if (widgetId && window.turnstile) widget.dispatchEvent(new Event("intake-reset"));
             btn.disabled = false;
             labelSpan.textContent = prev;
           });
@@ -2734,6 +2727,7 @@
       function showToast() {
         if (isSuppressed()) return;
         toast.hidden = false;
+        if (window.turnstile) window.inosxTurnstileReady();
         window.requestAnimationFrame(function() { toast.classList.add('is-visible'); });
       }
       function hideToast() {
@@ -2771,7 +2765,7 @@
           }
           var widget = form.querySelector('[data-turnstile-container]');
           var widgetId = widget ? widget.getAttribute('data-widget-id') : '';
-          var turnstileToken = widgetId && window.turnstile ? window.turnstile.getResponse(Number(widgetId)) : '';
+          var turnstileToken = formData.get('cf-turnstile-response') || '';
           if (!isSafeIntakeEndpoint(endpoint) || !isSafeDownloadUrl(downloadUrl) || !turnstileToken) {
             setStatus(window.i18n.t('landing.extra.message_3'), 'error');
             return;
@@ -2818,7 +2812,7 @@
           }).catch(function() {
             setStatus(window.i18n.t('landing.extra.message_7'), 'error');
           }).finally(function() {
-            if (widgetId && window.turnstile) window.turnstile.reset(Number(widgetId));
+            if (widgetId && window.turnstile) widget.dispatchEvent(new Event("intake-reset"));
             if (submitButton) {
               submitButton.disabled = false;
               submitButton.textContent = window.i18n.t('landing.extra.message_8');
@@ -2830,6 +2824,8 @@
       // The whitepaper remains available for a future contextual trigger. It must not interrupt the first reading pass.
     })();
   </script>
+<script src="/scripts/intake-verification.js"></script>
+<script id="intake-turnstile-sdk" src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=inosxTurnstileReady&amp;render=explicit" async></script>
 <script src="/scripts/agentos-access.js" defer></script>
 <script src="/assets/isabella-test.js?v=4.9.1" defer></script>
   <script src="https://inosx-isabella-public.vercel.app/widget.js" data-channel="866d71de-5d52-4ccb-b19d-b34f91dd26c0" defer></script>
