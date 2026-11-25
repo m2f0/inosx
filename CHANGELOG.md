@@ -1,5 +1,10 @@
 # Changelog
 
+## [6.1.0] - 2026-11-25
+
+### Changed
+- O catálogo de parcerias em português apresenta o e-book antes dos filtros e distingue as propostas em estudo. Os filtros mostram quantidades e cada contato identifica a categoria.
+
 ## [6.0.0] - 2026-11-25
 
 ### Changed
