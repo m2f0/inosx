@@ -1,4 +1,36 @@
 {
+  "partnerCatalog": {
+    "nav": "Main navigation",
+    "language": "Languages",
+    "back": "← Back to INOSX",
+    "lead": "Create your e-book with INOSX or explore course, software and AI partnerships under consideration.",
+    "jump": "See partnerships under consideration ↓",
+    "available": "Available partnership · Publications",
+    "editorialRole": "INOSX helps you organize your material into an e-book or edit a manuscript you already have.",
+    "salesRole": "You handle sales.",
+    "terms": "With Comercial Revenue Share, your project agreement sets out how revenue is shared.",
+    "ebookOptions": "Explore e-book options (in Portuguese)",
+    "filterTitle": "Filter the catalog",
+    "categories": "Categories",
+    "publicationFilter": "Publications · 1 available",
+    "courseFilter": "Courses · 1 under consideration",
+    "techFilter": "Technology · 2 under consideration",
+    "allResults": "1 available partnership · 3 under consideration",
+    "studyTitle": "Partnerships under consideration",
+    "studyIntro": "Choose a topic to discuss a potential partnership.",
+    "courseContact": "Discuss a digital course",
+    "softwareContact": "Discuss subscription software",
+    "aiContact": "Discuss an AI application",
+    "pubResults": "1 publication available",
+    "courseResults": "1 course under consideration",
+    "techResults": "2 technology partnerships under consideration",
+    "showPublication": "View publication",
+    "showResults": "View results",
+    "meta": {
+      "title": "Product partnerships | INOSX",
+      "description": "Create your e-book with INOSX or explore course, software and AI partnerships under consideration."
+    }
+  },
   "verification": {
     "label": "Security check by Cloudflare",
     "loading": "Loading the security check…",

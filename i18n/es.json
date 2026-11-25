@@ -1,4 +1,36 @@
 {
+  "partnerCatalog": {
+    "nav": "Navegación principal",
+    "language": "Idiomas",
+    "back": "← Volver a INOSX",
+    "lead": "Crea tu e-book con INOSX o explora las alianzas de cursos, software e IA que están en estudio.",
+    "jump": "Ver alianzas en estudio ↓",
+    "available": "Alianza disponible · Publicaciones",
+    "editorialRole": "INOSX te ayuda a dar estructura a tu material o a editar tu manuscrito.",
+    "salesRole": "Tú te encargas de las ventas.",
+    "terms": "Con el modelo Comercial Revenue Share, el reparto de los ingresos se define en el acuerdo de cada proyecto.",
+    "ebookOptions": "Ver opciones para crear mi e-book (en portugués)",
+    "filterTitle": "Filtrar el catálogo",
+    "categories": "Categorías",
+    "publicationFilter": "Publicaciones · 1 disponible",
+    "courseFilter": "Cursos · 1 en estudio",
+    "techFilter": "Tecnología · 2 en estudio",
+    "allResults": "1 alianza disponible · 3 en estudio",
+    "studyTitle": "Alianzas en estudio",
+    "studyIntro": "Elige un tema para conversar sobre una posible alianza.",
+    "courseContact": "Conversar sobre un curso digital",
+    "softwareContact": "Conversar sobre software por suscripción",
+    "aiContact": "Conversar sobre una aplicación de IA",
+    "pubResults": "1 publicación disponible",
+    "courseResults": "1 curso en estudio",
+    "techResults": "2 alianzas de tecnología en estudio",
+    "showPublication": "Ver la publicación",
+    "showResults": "Ver resultados",
+    "meta": {
+      "title": "Alianzas de productos | INOSX",
+      "description": "Crea tu e-book con INOSX o explora las alianzas de cursos, software e IA que están en estudio."
+    }
+  },
   "verification": {
     "label": "Verificación de seguridad de Cloudflare",
     "loading": "Cargando la verificación de seguridad…",

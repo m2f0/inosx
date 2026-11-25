@@ -1,4 +1,36 @@
 {
+  "partnerCatalog": {
+    "nav": "Navegação principal",
+    "language": "Idiomas",
+    "back": "← Voltar à INOSX",
+    "lead": "Conheça a parceria para criar seu e-book ou explore as propostas de cursos, software e IA que estão em estudo.",
+    "jump": "Ver parcerias em estudo ↓",
+    "available": "Parceria disponível · Publicações",
+    "editorialRole": "A INOSX ajuda a estruturar seu material ou a editar seu manuscrito.",
+    "salesRole": "Você cuida das vendas.",
+    "terms": "No modelo Comercial Revenue Share, a receita é compartilhada conforme o acordo do projeto.",
+    "ebookOptions": "Ver opções para criar meu e-book",
+    "filterTitle": "Filtrar catálogo",
+    "categories": "Categorias",
+    "publicationFilter": "Publicações · 1 disponível",
+    "courseFilter": "Cursos · 1 em estudo",
+    "techFilter": "Tecnologia · 2 em estudo",
+    "allResults": "1 parceria disponível · 3 em estudo",
+    "studyTitle": "Parcerias em estudo",
+    "studyIntro": "Escolha um tema para conversar sobre uma possível parceria.",
+    "courseContact": "Conversar sobre curso digital",
+    "softwareContact": "Conversar sobre software por assinatura",
+    "aiContact": "Conversar sobre aplicação de IA",
+    "pubResults": "1 publicação disponível",
+    "courseResults": "1 curso em estudo",
+    "techResults": "2 parcerias de tecnologia em estudo",
+    "showPublication": "Ver a publicação",
+    "showResults": "Ver resultados",
+    "meta": {
+      "title": "Parcerias de produtos | INOSX",
+      "description": "Conheça a parceria para criar seu e-book ou explore as propostas de cursos, software e IA que estão em estudo."
+    }
+  },
   "verification": {
     "label": "Verificação de segurança da Cloudflare",
     "loading": "Carregando a verificação de segurança…",

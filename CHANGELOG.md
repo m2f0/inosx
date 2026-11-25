@@ -1,5 +1,10 @@
 # Changelog
 
+## [6.2.0] - 2026-11-25
+
+### Changed
+- As páginas de parcerias em inglês e espanhol apresentam a criação de e-books antes dos filtros e identificam os contatos de cursos, software e IA em estudo.
+
 ## [6.1.0] - 2026-11-25
 
 ### Changed

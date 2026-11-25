@@ -20,7 +20,7 @@ header{border-bottom:1px solid #383432}
 .nav a,.langs a,.langs span{font-size:.89rem;display:inline-flex;align-items:center;min-height:42px}
 .nav [aria-current]{text-decoration:underline;text-decoration-color:var(--coral);text-underline-offset:.48em}
 .langs{gap:12px;border-left:1px solid var(--edge);padding-left:24px}
-.langs span{color:var(--coral);font-weight:700}
+.langs [aria-current]{color:var(--coral);font-weight:700}
 
 .intro{padding:clamp(36px,6vw,84px) 0 0}
 .crumb{display:inline-flex;align-items:center;gap:.6em;font-size:.9rem;color:var(--muted);min-height:40px}
@@ -136,3 +136,4 @@ details[open] .sign:after{content:"−"}
 .feature{padding-bottom:20px}
 .choices{padding-bottom:22px}
 }
+@media(min-width:1200px){html:lang(en) .copy h2{max-width:17ch}}
