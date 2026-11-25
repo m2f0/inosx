@@ -97,3 +97,10 @@ body .agentos-retrospective {border-color:var(--line-2)}
 }
 @media(prefers-reduced-motion:reduce){.studio-action,.studio-action::before{transition:none;transform:none}}
 @media(prefers-reduced-transparency:reduce){.studio-action{backdrop-filter:none;background:#3c3433}.studio-action.primary{background:#87372c}}
+
+.catalog-editorial {display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:clamp(24px,5vw,72px);padding:clamp(20px,3vw,42px);background:var(--bg-soft);border-bottom:1px solid var(--line-2)}
+.catalog-editorial small {color:var(--accent-text);font-weight:600}
+.catalog-editorial h2 {font:560 clamp(1.85rem,3.5vw,3.5rem)/1.06 var(--font-display);letter-spacing:-.045em;margin:.45em 0 .3em}
+.catalog-editorial p {color:var(--ink-2);max-width:53ch;margin:0 0 1.2rem}
+.catalog-editorial img {width:100%;height:auto;aspect-ratio:1.9;object-fit:cover}
+@media(max-width:700px){.catalog-editorial {grid-template-columns:1fr}.catalog-editorial img {aspect-ratio:2.7}}

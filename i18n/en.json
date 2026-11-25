@@ -844,7 +844,8 @@
     "invite": "Bring an INOSX product to your audience.",
     "inviteBody": "Explore the e-book pilot and the partnership formats being considered for courses, software and AI.",
     "catalog": "Product partnerships",
-    "catalogBody": "Choose a format to see the partner’s role and commercial terms under discussion.",
+    "distributionPilot": "Pilot e-book distribution",
+    "catalogBody": "Start with your own e-book or explore partnerships in distribution, courses and technology.",
     "all": "All",
     "pub": "Publications",
     "courses": "Courses",
@@ -867,7 +868,7 @@
     "metaTitle": "INOSX | Software, AI and product partnerships",
     "meta": {
       "title": "Product partnerships | INOSX",
-      "description": "Choose a format to see the partner’s role and commercial terms under discussion."
+      "description": "Start with your own e-book or explore partnerships in distribution, courses and technology."
     }
   },
   "studioHome": {"meta": {"title": "INOSX | Software, AI and product partnerships", "description": "We build custom software for businesses and create digital products you can bring to your audience."}},

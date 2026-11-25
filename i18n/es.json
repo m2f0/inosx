@@ -844,7 +844,8 @@
     "invite": "Acerca un producto de INOSX a tu público.",
     "inviteBody": "Conoce el e-book piloto y los formatos de alianza en estudio para cursos, software e IA.",
     "catalog": "Alianzas de productos",
-    "catalogBody": "Elige un formato para conocer la función del socio y las condiciones comerciales en estudio.",
+    "distributionPilot": "Distribución de e-book piloto",
+    "catalogBody": "Empieza por la creación de tu e-book o explora alianzas de distribución, cursos y tecnología.",
     "all": "Todos",
     "pub": "Publicaciones",
     "courses": "Cursos",
@@ -867,7 +868,7 @@
     "metaTitle": "INOSX | Software, IA y alianzas de productos",
     "meta": {
       "title": "Alianzas de productos | INOSX",
-      "description": "Elige un formato para conocer la función del socio y las condiciones comerciales en estudio."
+      "description": "Empieza por la creación de tu e-book o explora alianzas de distribución, cursos y tecnología."
     }
   },
   "studioHome": {"meta": {"title": "INOSX | Software, IA y alianzas de productos", "description": "Desarrollamos software a medida para empresas y creamos productos digitales que puedes acercar a tu público."}},

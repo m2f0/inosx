@@ -844,7 +844,8 @@
     "invite": "Leve um produto da INOSX ao seu público.",
     "inviteBody": "Conheça o e-book piloto e os formatos de parceria em estudo para cursos, software e IA.",
     "catalog": "Parcerias de produtos",
-    "catalogBody": "Escolha um formato para conhecer o papel do parceiro e as condições comerciais em discussão.",
+    "distributionPilot": "Distribuição de e-book piloto",
+    "catalogBody": "Comece pela criação do seu e-book ou explore as parcerias de distribuição, cursos e tecnologia.",
     "all": "Todos",
     "pub": "Publicações",
     "courses": "Cursos",
@@ -867,7 +868,7 @@
     "metaTitle": "INOSX | Software, IA e parcerias de produtos",
     "meta": {
       "title": "Parcerias de produtos | INOSX",
-      "description": "Escolha um formato para conhecer o papel do parceiro e as condições comerciais em discussão."
+      "description": "Comece pela criação do seu e-book ou explore as parcerias de distribuição, cursos e tecnologia."
     }
   },
   "studioHome": {"meta": {"title": "INOSX | Software, IA e parcerias de produtos", "description": "Desenvolvemos software sob medida para empresas e criamos produtos digitais que você pode levar ao seu público."}},

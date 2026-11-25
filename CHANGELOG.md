@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.2.2] - 2026-11-25
+
+### Changed
+- O catálogo de parcerias apresenta a criação de e-books em destaque, com acesso direto à landing editorial em uma nova aba. A distribuição do e-book piloto tem identificação própria.
+
 ## [5.2.1] - 2026-11-25
 
 ### Changed
