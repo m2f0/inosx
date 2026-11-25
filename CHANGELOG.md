@@ -1,5 +1,10 @@
 # Changelog
 
+## [6.0.0] - 2026-11-25
+
+### Changed
+- Nova home em português, inglês e espanhol, organizada em serviços, produtos e parcerias comerciais. O catálogo inclui filtros e a parceria editorial mantém acesso direto à sua landing page.
+
 ## [5.2.4] - 2026-11-25
 
 ### Changed

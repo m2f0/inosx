@@ -1,2833 +1,1591 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INOSX | Software, AI and product partnerships</title>
-  <meta name="description" content="INOSX helps companies move from AI experiments to reliable business operations with AI agents, workflow automation, SaaS development, data systems and production-ready custom software." />
-
-  <!-- Canonical + hreflang -->
-  <link rel="canonical" href="https://inosx.com/" />
-  <link rel="alternate" hreflang="en"        href="https://inosx.com/" />
-  <link rel="alternate" hreflang="pt-BR"     href="https://inosx.com/?lang=pt" />
-  <link rel="alternate" hreflang="es"        href="https://inosx.com/?lang=es" />
-  <link rel="alternate" hreflang="x-default" href="https://inosx.com/" />
-
-  <!-- Open Graph / social share -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://inosx.com/" />
-  <meta property="og:title" content="INOSX | Software, AI and product partnerships" />
-  <meta property="og:description" content="Founder-led AI agents, workflow automation, SaaS development, data systems and custom software that move from experiments to reliable operations." />
-  <meta property="og:site_name" content="INOSX" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="pt_BR" />
-  <meta property="og:locale:alternate" content="es_ES" />
-  <meta property="og:image" content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png" />
-  <meta property="og:image:width" content="1500" />
-  <meta property="og:image:height" content="500" />
-  <meta property="og:image:alt" content="INOSX - application development, technology and AI solutions" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="INOSX | Software, AI and product partnerships" />
-  <meta name="twitter:description" content="Founder-led AI systems, workflow automation, SaaS development and custom software built for reliable operations." />
-  <meta name="twitter:image" content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png" />
-
-  <link rel="icon" type="image/png" href="/assets/brand/inosx/v1/inosx-icon-16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/assets/brand/inosx/v1/inosx-icon-32.png" sizes="32x32">
-  <link rel="shortcut icon" href="/assets/brand/inosx/v1/favicon.ico">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300..600;1,6..96,300..500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <script src="/i18n/i18n.js?v=5.2.0" defer></script>
-
-  <style>
-    :root {
-      --bg: #11100f;
-      --bg-soft: #151212;
-      --ink: #f7f6f5;
-      --ink-2: #d7d1d0;
-      --ink-3: #ca8073;
-      --ink-4: #ba5b4a;
-      --line: rgba(240, 207, 199, 0.10);
-      --line-2: rgba(240, 207, 199, 0.18);
-      --accent: #74372c;
-      --accent-text: #deb1a9;
-      --accent-2: #c97d70;
-      --accent-3: #74372c;
-      --accent-surface: #74372c;
-      --gradient-primary: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 64%, var(--accent-3) 100%);
-      --gradient-soft: linear-gradient(135deg, var(--bg-soft) 0%, var(--accent) 100%);
-      --glass-plate: rgba(38, 16, 13, 0.72);
-      --glass-plate-strong: rgba(38, 16, 13, 0.88);
-      --glass-edge: rgba(240, 207, 199, 0.30);
-      --glass-edge-bright: rgba(252, 168, 125, 0.62);
-      --glass-highlight: rgba(255, 244, 243, 0.14);
-
-      --font-display: 'Bodoni Moda', Georgia, serif;
-      --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-      --container: 1240px;
-      --container-narrow: 980px;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html {
-      -webkit-text-size-adjust: 100%;
-      scroll-padding-top: 88px;
-      background-color: #11100f;
-    }
-    @media (prefers-reduced-motion: no-preference) {
-      html { scroll-behavior: smooth; }
-    }
-
-    /* Focus rings — single rule, applied to anything interactive */
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-    }
-    .btn:focus-visible,
-    .form-submit:focus-visible {
-      outline-offset: 4px;
-    }
-    .field input:focus-visible,
-    .field textarea:focus-visible {
-      outline: 0;
-    }
-
-    /* Skip-to-content link, visible on focus only */
-    .skip-link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 0.85rem 1.25rem;
-      background: var(--ink);
-      color: var(--bg);
-      font-family: var(--font-body);
-      font-size: 0.86rem;
-      font-weight: 500;
-      z-index: 100;
-      transform: translateY(-110%);
-      transition: transform 0.2s ease;
-    }
-    .skip-link:focus {
-      transform: translateY(0);
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-
-    body {
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--ink);
-      background: #11100f;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-feature-settings: 'ss01', 'cv11';
-      position: relative;
-    }
-
-    /* Atmosfera: grade de hairlines flutuante (papel de desenho técnico) + radial estático no hero */
-    .bg-liquid {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-      background:
-        radial-gradient(88vw 64vw at 95% 12%, rgba(250, 130, 96, 0.12), transparent 62%),
-        radial-gradient(78vw 54vw at 5% 90%, rgba(117, 58, 21, 0.11), transparent 64%),
-        linear-gradient(118deg, #11100f 7%, #151212 48%, #11100f 92%);
-    }
-    .bg-liquid::before,
-    .bg-liquid::after {
-      content: '';
-      position: absolute;
-      width: min(92vw, 1280px);
-      aspect-ratio: 1;
-      border-radius: 52% 48% 56% 44% / 48% 55% 45% 52%;
-      will-change: transform, opacity;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-    }
-    .bg-liquid::before {
-      top: -42vw;
-      right: -40vw;
-      border: 1px solid rgba(252, 168, 125, 0.34);
-      background:
-        radial-gradient(ellipse at 34% 71%, rgba(252, 168, 125, 0.23) 0 2%, transparent 12%),
-        radial-gradient(ellipse at 59% 48%, rgba(250, 130, 96, 0.15) 0 9%, transparent 30%),
-        conic-gradient(from 224deg at 49% 52%, transparent 0 16%, rgba(252, 168, 125, 0.20) 22%, transparent 30% 45%, rgba(250, 130, 96, 0.13) 52%, transparent 63% 81%, rgba(252, 168, 125, 0.24) 89%, transparent 100%);
-      box-sizing: border-box;
-      opacity: 0.88;
-      animation: liquid-prism-drift 22s cubic-bezier(.22, 1, .36, 1) infinite alternate;
-    }
-    .bg-liquid::after {
-      top: -30vw;
-      right: -28vw;
-      width: min(68vw, 960px);
-      border: 1px solid rgba(240, 207, 199, 0.18);
-      background:
-        radial-gradient(ellipse at 31% 73%, rgba(255, 244, 243, 0.12), transparent 2%, transparent 16%),
-        radial-gradient(ellipse at 49% 56%, transparent 0 37%, rgba(252, 168, 125, 0.16) 44%, transparent 51%),
-        conic-gradient(from 160deg at 50% 50%, transparent 0 23%, rgba(252, 168, 125, 0.20) 29%, transparent 39% 65%, rgba(250, 130, 96, 0.16) 73%, transparent 84%);
-      opacity: 0.74;
-      animation: liquid-prism-inner 18s cubic-bezier(.22, 1, .36, 1) infinite alternate;
-    }
-    @keyframes liquid-prism-drift {
-      from { transform: translate3d(0, 0, 0) rotate(-8deg) scale(1); opacity: 0.78; }
-      to { transform: translate3d(-14vw, 20vh, 0) rotate(8deg) scale(1.04); opacity: 0.92; }
-    }
-    @keyframes liquid-prism-inner {
-      from { transform: translate3d(0, 0, 0) rotate(6deg) scale(1); opacity: 0.62; }
-      to { transform: translate3d(-9vw, 13vh, 0) rotate(-6deg) scale(1.06); opacity: 0.78; }
-    }
-    @media (max-width: 800px), (update: slow) {
-      .bg-liquid::before {
-        width: 118vw;
-        right: -54vw;
-        animation-duration: 28s;
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>INOSX | Software, AI and digital education</title>
+    <meta
+      content="We develop custom software for businesses. You can also explore a ready-made digital product or create your e-book in partnership with INOSX."
+      name="description"
+    />
+    <!-- Canonical + hreflang -->
+    <link href="https://inosx.com/" rel="canonical" />
+    <link href="https://inosx.com/" hreflang="en" rel="alternate" />
+    <link href="https://inosx.com/?lang=pt" hreflang="pt-BR" rel="alternate" />
+    <link href="https://inosx.com/?lang=es" hreflang="es" rel="alternate" />
+    <link href="https://inosx.com/" hreflang="x-default" rel="alternate" />
+    <!-- Open Graph / social share -->
+    <meta content="website" property="og:type" />
+    <meta content="https://inosx.com/" property="og:url" />
+    <meta
+      content="INOSX | Software, AI and digital education"
+      property="og:title"
+    />
+    <meta
+      content="We develop custom software for businesses. You can also explore a ready-made digital product or create your e-book in partnership with INOSX."
+      property="og:description"
+    />
+    <meta content="INOSX" property="og:site_name" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="pt_BR" property="og:locale:alternate" />
+    <meta content="es_ES" property="og:locale:alternate" />
+    <meta
+      content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png"
+      property="og:image"
+    />
+    <meta content="1500" property="og:image:width" />
+    <meta content="500" property="og:image:height" />
+    <meta
+      content="INOSX - application development, technology and AI solutions"
+      property="og:image:alt"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="INOSX | Software, AI and digital education"
+      name="twitter:title"
+    />
+    <meta
+      content="We develop custom software for businesses. You can also explore a ready-made digital product or create your e-book in partnership with INOSX."
+      name="twitter:description"
+    />
+    <meta
+      content="https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png"
+      name="twitter:image"
+    />
+    <link
+      href="/assets/brand/inosx/v1/inosx-icon-16.png"
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      href="/assets/brand/inosx/v1/inosx-icon-32.png"
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link href="/assets/brand/inosx/v1/favicon.ico" rel="shortcut icon" />
+    <link href="/assets/studio/liquid-glass/styles.css" rel="stylesheet" />
+    <link href="/css/home.css?v=6.0.0" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://inosx.com/#organization",
+            "name": "INOSX",
+            "url": "https://inosx.com/",
+            "logo": "https://inosx.com/assets/brand/inosx/v1/inosx-lockup-dark-2400.png",
+            "image": "https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png",
+            "email": "support@inosx.com",
+            "foundingDate": "2021",
+            "description": "Application development and technology solutions studio building custom software, platforms, integrations, automation and AI solutions for production.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "support@inosx.com",
+              "contactType": "customer support",
+              "availableLanguage": ["en", "pt-BR", "es"]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://inosx.com/#website",
+            "url": "https://inosx.com/",
+            "name": "INOSX",
+            "description": "Application development, technology solutions and AI solutions. INOSX builds custom software, platforms, integrations and automation for companies.",
+            "publisher": {
+              "@id": "https://inosx.com/#organization"
+            },
+            "inLanguage": ["en", "pt-BR", "es"]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://inosx.com/#webpage",
+            "url": "https://inosx.com/",
+            "name": "INOSX | Software, AI and digital education",
+            "isPartOf": {
+              "@id": "https://inosx.com/#website"
+            },
+            "about": {
+              "@id": "https://inosx.com/#organization"
+            },
+            "description": "We develop custom software for businesses. You can also explore a ready-made digital product or create your e-book in partnership with INOSX.",
+            "dateModified": "2026-11-25",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://inosx.com/#faq",
+            "isPartOf": {
+              "@id": "https://inosx.com/#webpage"
+            },
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does a project with INOSX start?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "With a free diagnostic conversation. We map your context, objectives and data, and come back with a lean pilot proposal and a realistic timeline."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is pricing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fixed scope for pilot and continuous-operation model for production. No hidden licenses, transparent costs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a pilot typically take to go live?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Typical pilots reach production in 4 to 8 weeks. The scope is defined to generate measurable value within that window."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you integrate with our systems?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. ERPs, CRMs, internal bases, APIs and legacy. Integration is part of scope, not a separate project."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will my data be exposed?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. We work with private architectures, local models when needed, data segregation and LGPD/GDPR compliance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you have a fixed tech stack?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. We pick the right stack per project: Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows your operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you serve outside Brazil?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. PT-BR, EN and ES, with global remote delivery."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://inosx.com/#products",
+            "name": "INOSX proprietary products",
+            "itemListOrder": "https://schema.org/ItemListUnordered",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Messiax",
+                "url": "https://inosx.com/messiax.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "SurveyFlow",
+                "url": "https://inosx.com/surveyflow.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "PsychoX",
+                "url": "https://inosx.com/produtos.html#psychox"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "DataGPT",
+                "url": "https://inosx.com/produtos.html#datagpt"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Ccoinx.ai",
+                "url": "https://inosx.com/produtos.html#ccoinx"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Tranquilopa",
+                "url": "https://inosx.com/produtos.html#tranquilopa"
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "name": "AITEAM-X",
+                "url": "https://inosx.com/produtos.html#aiteam"
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "name": "Global Dollar Academy",
+                "url": "https://gda.inosx.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 9,
+                "name": "Patrimônio sem Fronteiras",
+                "url": "https://psf.gda.inosx.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 10,
+                "name": "Global Pricing Academy",
+                "url": "https://gpa.inosx.com/"
+              }
+            ]
+          }
+        ]
       }
-      .bg-liquid::after { display: none; }
-    }
-    .hero {
-      background: radial-gradient(900px 500px at 30% 20%, rgba(117, 58, 21,0.12), transparent 65%);
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img, svg { max-width: 100%; display: block; }
-    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
-
-    .container {
-      width: 100%;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    .container.narrow { max-width: var(--container-narrow); }
-
-    /* ============ Tipografia editorial ============ */
-    h1, h2, h3, h4 {
-      font-family: var(--font-display);
-      font-weight: 350;
-      letter-spacing: -0.025em;
-      line-height: 1.04;
-      color: var(--ink);
-    }
-    h1 {
-      font-size: clamp(3rem, 7.4vw, 6.5rem);
-      font-weight: 300;
-      font-variation-settings: "opsz" 96;
-      letter-spacing: -0.035em;
-      line-height: 0.9;
-    }
-    h2 {
-      font-size: clamp(2.4rem, 5.5vw, 4.5rem);
-      font-weight: 300;
-      font-variation-settings: "opsz" 72;
-      letter-spacing: -0.035em;
-      line-height: 1.02;
-    }
-    @media (max-width: 480px) {
-      h2 {
-        font-size: clamp(2rem, 10.5vw, 2.7rem);
-        letter-spacing: -0.025em;
-        line-height: 1.14;
-      }
-    }
-    h3 {
-      font-size: clamp(1.3rem, 1.8vw, 1.65rem);
-      font-weight: 400;
-      font-variation-settings: "opsz" 24;
-      letter-spacing: -0.015em;
-      line-height: 1.25;
-    }
-
-    .italic {
-      font-style: italic;
-      font-weight: 300;
-      font-variation-settings: "opsz" 96;
-      color: var(--ink);
-    }
-
-    .label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-    }
-    .label .num {
-      font-family: var(--font-display);
-      font-weight: 300;
-      font-style: italic;
-      font-size: 0.95rem;
-      letter-spacing: 0;
-      color: var(--accent-text);
-      text-transform: none;
-    }
-    .label .bar {
-      display: inline-block;
-      width: 28px;
-      height: 1px;
-      background: var(--ink-4);
-    }
-
-    .lead {
-      font-size: clamp(1.05rem, 1.35vw, 1.18rem);
-      line-height: 1.55;
-      color: var(--ink-2);
-      max-width: 58ch;
-      font-weight: 400;
-    }
-
-    .rule {
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    .rule hr { border: 0; height: 1px; background: var(--line); }
-
-    /* ============ Top nav ============ */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      padding: 0.7rem 0;
-      background: transparent;
-    }
-    .topbar-inner {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 76px;
-      padding: 0 1.25rem;
-      border: 1px solid var(--glass-edge);
-      border-radius: 1.2rem;
-      background: var(--glass-plate);
-      backdrop-filter: blur(20px) saturate(135%);
-      -webkit-backdrop-filter: blur(20px) saturate(135%);
-      isolation: isolate;
-      overflow: hidden;
-    }
-    .topbar-inner::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 1px 1px auto;
-      height: 40%;
-      border-radius: 1.1rem 1.1rem 45% 45%;
-      background: linear-gradient(180deg, var(--glass-highlight), transparent);
-      pointer-events: none;
-    }
-    .topbar-inner::after {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 5px;
-      border: 1px solid rgba(240, 207, 199, 0.07);
-      border-radius: 0.9rem;
-      pointer-events: none;
-    }
-    .topbar-inner > * { position: relative; z-index: 1; }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      flex: 0 0 auto;
-    }
-    .brand img {
-      display: block;
-      width: 150px;
-      height: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.88rem;
-      color: var(--ink-3);
-      transition: color 0.3s ease;
-    }
-    .nav-links a:hover { color: var(--ink); }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .lang-switch {
-      display: flex;
-      gap: 0.1rem;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      color: var(--ink-4);
-    }
-    .lang-switch button {
-      padding: 0.3rem 0.55rem;
-      transition: color 0.25s;
-      font-weight: 500;
-      min-width: 32px;
-    }
-    .lang-switch button.active { color: var(--ink); }
-    .lang-switch button:hover { color: var(--ink-2); }
-    .lang-switch .div { color: var(--ink-4); padding: 0.3rem 0; }
-    @media (hover: none) and (pointer: coarse) {
-      .lang-switch button { padding: 0.6rem 0.8rem; min-height: 44px; min-width: 44px; }
-    }
-
-    .btn {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.7rem 1.3rem;
-      font-size: 0.86rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition: border-color 0.28s cubic-bezier(.25,1,.5,1), color 0.28s cubic-bezier(.25,1,.5,1), background-color 0.28s cubic-bezier(.25,1,.5,1), transform 0.28s cubic-bezier(.25,1,.5,1);
-      white-space: nowrap;
-      border-radius: 999px;
-    }
-    .btn-line {
-      border: 1px solid var(--glass-edge);
-      background: var(--glass-plate);
-      color: var(--ink);
-      backdrop-filter: blur(12px) saturate(130%);
-      -webkit-backdrop-filter: blur(12px) saturate(130%);
-    }
-    .btn-line::before,
-    .nav-admin::before,
-    .form-submit::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 1px 1px auto;
-      height: 48%;
-      border-radius: inherit;
-      background: linear-gradient(180deg, var(--glass-highlight), transparent);
-      opacity: 0.72;
-      transition: opacity 0.28s cubic-bezier(.25,1,.5,1);
-    }
-    .btn > *, .nav-admin > * { position: relative; z-index: 1; }
-    .btn-line:hover { border-color: var(--glass-edge-bright); transform: translateY(-1px); }
-    .btn-line:hover::before { opacity: 1; }
-    .btn-line:active { transform: translateY(0) scale(0.985); }
-    .btn-line .arr { transition: transform 0.3s; display: inline-block; }
-    .btn-line:hover .arr { transform: translateX(3px); }
-    .nav-admin {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.42rem;
-      min-height: 40px;
-      padding: 0.55rem 0.82rem;
-      border: 1px solid var(--glass-edge);
-      border-radius: 999px;
-      background: var(--glass-plate);
-      color: var(--ink-2);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      backdrop-filter: blur(12px) saturate(130%);
-      -webkit-backdrop-filter: blur(12px) saturate(130%);
-      transition: border-color 0.28s cubic-bezier(.25,1,.5,1), color 0.28s cubic-bezier(.25,1,.5,1), transform 0.28s cubic-bezier(.25,1,.5,1);
-    }
-    .nav-admin .arr { color: var(--accent-text); font-size: 0.95rem; line-height: 1; transition: transform 0.28s cubic-bezier(.25,1,.5,1); }
-    .nav-admin:hover { color: var(--ink); border-color: var(--glass-edge-bright); transform: translateY(-1px); }
-    .nav-admin:hover .arr { transform: translate(2px, -2px); }
-    .nav-admin:active { transform: scale(0.985); }
-
-    @media (max-width: 880px) {
-      .nav-links { display: none; }
-      .topbar { padding: 0.45rem 0; }
-      .topbar-inner { height: 68px; border-radius: 1rem; }
-    }
-    @media (max-width: 560px) {
-      .topbar-inner { gap: 0.35rem; padding: 0 0.55rem; }
-      .brand img { width: 132px; }
-      .nav-actions { gap: 0.25rem; }
-      .nav-admin { min-height: 38px; padding: 0.48rem 0.58rem; }
-      .lang-switch { gap: 0; }
-      .lang-switch button { min-width: auto; padding: 0.3rem 0.32rem; }
-      .lang-switch .div { padding: 0.3rem 0.08rem; }
-      .btn-line {
-        width: 40px;
-        min-height: 40px;
-        justify-content: center;
-        padding: 0;
-      }
-      .btn-line > span:first-child { display: none; }
-      .btn-line .arr { margin: 0; }
-    }
-
-    /* ============ Hero ============ */
-    .hero {
-      position: relative;
-      padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(4rem, 9vw, 8rem);
-    }
-    .hero h1 {
-      max-width: 17ch;
-      margin-inline: auto;
-      text-align: center;
-    }
-    .hero-copy {
-      display: grid;
-      gap: clamp(2rem, 4vw, 3.25rem);
-      width: 100%;
-      margin-top: clamp(1.75rem, 4vw, 3.5rem);
-      text-align: center;
-    }
-    .hero-copy .lead {
-      width: min(100%, 920px);
-      margin: 0 auto;
-      text-wrap: balance;
-    }
-    .hero-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(1rem, 3vw, 3rem);
-      width: 100%;
-      padding: 2rem 0 0;
-      border-top: 1px solid var(--line);
-    }
-    .hero-meta .row {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 0.55rem;
-      font-size: 0.86rem;
-      color: var(--ink-3);
-      text-align: center;
-    }
-    .hero-meta .row strong {
-      color: var(--ink);
-      font-family: var(--font-display);
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1rem, 1.6vw, 1.25rem);
-    }
-
-    @media (max-width: 1300px) {
-      .hero-copy {
-        margin-top: 2.25rem;
-      }
-    }
-    @media (max-width: 720px) {
-      .hero-meta {
-        grid-template-columns: 1fr;
-        gap: 1.15rem;
-      }
-    }
-
-    /* ============ Logos — carrossel infinito ============ */
-    .clients {
-      padding: 5rem 0;
-      border-top: 1px solid var(--line);
-    }
-    .clients-head {
-      max-width: var(--container);
-      margin: 0 auto 2.5rem;
-      padding: 0 2rem;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-    .clients-head .note {
-      font-family: var(--font-body);
-      font-size: 0.78rem;
-      letter-spacing: 0.04em;
-      color: var(--ink-4);
-    }
-
-    .marquee {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      padding: 0.42rem;
-      border: 1px solid var(--glass-edge);
-      border-radius: 1.2rem;
-      background: var(--glass-plate);
-      backdrop-filter: blur(16px) saturate(130%);
-      -webkit-backdrop-filter: blur(16px) saturate(130%);
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
-              mask-image: linear-gradient(90deg, transparent 0%, var(--bg) 8%, var(--bg) 92%, transparent 100%);
-    }
-    .marquee::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 1px 1px auto;
-      height: 42%;
-      border-radius: 1.1rem 1.1rem 44% 44%;
-      background: linear-gradient(180deg, var(--glass-highlight), transparent);
-      pointer-events: none;
-    }
-    .marquee-track {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      width: max-content;
-      animation: marquee 45s linear infinite;
-    }
-    .marquee:hover .marquee-track { animation-play-state: paused; }
-    @keyframes marquee {
-      0%   { transform: translate3d(0, 0, 0); }
-      100% { transform: translate3d(-50%, 0, 0); }
-    }
-    .logo-slot {
-      flex: 0 0 220px;
-      height: 110px;
-      display: grid;
-      place-items: center;
-      padding: 0 1.5rem;
-      border-right: 1px solid var(--line);
-    }
-    .logo-slot img {
-      width: auto;
-      max-width: 100%;
-      max-height: 44px;
-      object-fit: contain;
-      filter: brightness(1.05) contrast(0.95);
-      opacity: 0.55;
-      transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
-    }
-    .logo-slot:hover img {
-      opacity: 1;
-      filter: brightness(1.15) contrast(1);
-      transform: scale(1.06);
-    }
-    /* Altura óptica por logo: circulares maiores, texto só fino menor */
-    .l-itau img,
-    .l-volkswagen img,
-    .l-nissan img          { max-height: 56px; }
-    .l-santander img,
-    .l-telefonica img      { max-height: 30px; }
-    .l-thomson-reuters img,
-    .l-open-invention img  { max-height: 18px; }
-
-    @media (max-width: 720px) {
-      .logo-slot { flex: 0 0 170px; height: 96px; padding: 0 1rem; }
-      .l-itau img, .l-volkswagen img, .l-nissan img { max-height: 48px; }
-      .l-santander img, .l-telefonica img { max-height: 26px; }
-      .l-thomson-reuters img, .l-open-invention img { max-height: 16px; }
-    }
-
-    /* ============ Section base ============ */
-    section.block {
-      padding: clamp(5rem, 11vw, 9rem) 0;
-      position: relative;
-    }
-    .section-head {
-      display: grid;
-      grid-template-columns: 4fr 8fr;
-      gap: 4rem;
-      margin-bottom: clamp(3rem, 6vw, 5rem);
-      align-items: end;
-    }
-    .section-head .label { align-self: start; }
-    .section-head h2 { max-width: 16ch; }
-    .section-head .lead { margin-top: 1.25rem; max-width: 50ch; }
-    @media (max-width: 880px) {
-      .section-head { grid-template-columns: 1fr; gap: 1.5rem; }
-      .section-head h2 { max-width: 100%; }
-    }
-
-    /* ============ Evidence strip — substitui Stats por links navegáveis ============ */
-    .evidence { padding: 3rem 0; border-top: 1px solid var(--line); }
-    .evidence-inner {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-    @media (max-width: 720px) { .evidence-inner { grid-template-columns: 1fr; gap: 0; } }
-    .evidence a {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 1rem;
-      padding: 1.25rem 0;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.25s, color 0.25s;
-      color: var(--ink-2);
-    }
-    .evidence a:hover { border-bottom-color: var(--accent-text); color: var(--ink); }
-    .evidence .ev-line {
-      font-family: var(--font-body);
-      font-size: 0.96rem;
-      font-weight: 400;
-    }
-    .evidence .ev-cue {
-      font-family: var(--font-body);
-      font-size: 0.78rem;
-      letter-spacing: 0.04em;
-      color: var(--ink-3);
-      transition: color 0.25s, transform 0.25s;
-      display: inline-flex;
-      align-items: baseline;
-      gap: 0.5rem;
-    }
-    .evidence a:hover .ev-cue { color: var(--accent-text); transform: translateX(3px); }
-
-    /* ============ Itens em linha ============ */
-    .rows { display: grid; grid-template-columns: 1fr; }
-    .liquid-workflow {
-      position: relative;
-      isolation: isolate;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      overflow: hidden;
-      border: 1px solid var(--glass-edge);
-      border-radius: 1.2rem;
-      background: var(--glass-plate);
-      backdrop-filter: blur(18px) saturate(130%);
-      -webkit-backdrop-filter: blur(18px) saturate(130%);
-    }
-    .liquid-workflow::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 1px 1px auto;
-      height: 48%;
-      border-radius: 1.1rem 1.1rem 45% 45%;
-      background: linear-gradient(180deg, var(--glass-highlight), transparent);
-      pointer-events: none;
-    }
-    .workflow-step {
-      position: relative;
-      z-index: 1;
-      min-height: 230px;
-      padding: clamp(1.65rem, 3vw, 2.75rem);
-      display: grid;
-      align-content: space-between;
-      gap: 2.5rem;
-      border-right: 1px solid var(--line-2);
-    }
-    .workflow-step:last-of-type { border-right: 0; }
-    .workflow-step .idx {
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--accent-text);
-    }
-    .workflow-step h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.55rem, 2.5vw, 2.2rem); }
-    .workflow-step p { color: var(--ink-2); font-size: 0.96rem; max-width: 25ch; }
-    .workflow-orb {
-      width: 0.72rem;
-      height: 0.72rem;
-      border: 1px solid var(--glass-edge-bright);
-      border-radius: 999px;
-      background: var(--accent-text);
-      opacity: 0.68;
-      animation: liquid-current 3.8s cubic-bezier(.25,1,.5,1) infinite;
-    }
-    .workflow-step:nth-child(2) .workflow-orb { animation-delay: 0.35s; }
-    .workflow-step:nth-child(3) .workflow-orb { animation-delay: 0.7s; }
-    @keyframes liquid-current {
-      0%, 100% { transform: scale(0.72); opacity: 0.36; }
-      45% { transform: scale(1); opacity: 0.92; }
-    }
-    @media (max-width: 880px) {
-      .liquid-workflow { grid-template-columns: 1fr; }
-      .workflow-step { min-height: 0; gap: 1.5rem; border-right: 0; border-bottom: 1px solid var(--line-2); }
-      .workflow-step:last-of-type { border-bottom: 0; }
-    }
-
-    /* removed: pains h3 italic violated Italic Signature Rule */
-
-    /* ============ Solutions ============ */
-    .sol-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 3rem;
-    }
-    @media (max-width: 980px) { .sol-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 620px) { .sol-grid { grid-template-columns: 1fr; } }
-    .sol-item {
-      padding: 2rem 0;
-      border-top: 1px solid var(--line);
-      transition: border-color 0.3s ease;
-    }
-    .sol-item:hover { border-top-color: var(--accent-text); }
-    .sol-item .idx {
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--accent-text);
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .sol-item h3 { margin-bottom: 0.6rem; font-weight: 400; }
-    .sol-item p { color: var(--ink-2); font-size: 0.96rem; line-height: 1.55; }
-
-    /* ============ Video modules ============ */
-    .service-video {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      border: 1px solid var(--line);
-    }
-    .service-video-media {
-      position: relative;
-      background: var(--bg-soft);
-      border-bottom: 1px solid var(--line);
-      overflow: hidden;
-    }
-    .service-video-media video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      height: auto;
-      background: var(--bg-soft);
-      object-fit: cover;
-    }
-    .service-video-avatar {
-      position: absolute;
-      top: clamp(0.65rem, 4%, 1rem);
-      right: clamp(0.65rem, 4%, 1rem);
-      z-index: 2;
-      width: clamp(3.25rem, 13%, 5rem);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      border: 1px solid var(--line-2);
-      object-fit: cover;
-      object-position: 50% 28%;
-      background: var(--bg);
-    }
-    .service-video-copy {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      gap: 0.75rem;
-      padding: clamp(1.35rem, 2.1vw, 2rem);
-    }
-    .service-video .idx {
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--accent-text);
-      line-height: 1;
-    }
-    .service-video h3 {
-      max-width: 14ch;
-      font-weight: 400;
-    }
-    .service-video p {
-      color: var(--ink-2);
-      font-size: 0.94rem;
-      line-height: 1.58;
-      max-width: 38ch;
-    }
-    @media (max-width: 1080px) {
-      .service-video {
-        display: grid;
-        grid-template-columns: minmax(0, 5fr) minmax(260px, 4fr);
-      }
-      .service-video-media { border-right: 1px solid var(--line); border-bottom: 0; }
-      .service-video-copy { justify-content: center; }
-    }
-    @media (max-width: 720px) {
-      .service-video { display: flex; }
-      .service-video-media { border-right: 0; border-bottom: 1px solid var(--line); }
-      .service-video h3 { max-width: 100%; }
-      .service-video p { max-width: 100%; }
-    }
-
-    /* ============ Produtos ============ */
-    .aiteam-feature {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: clamp(0.75rem, 1.5vw, 1rem);
-      margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
-    }
-    .aiteam-feature-primary,
-    .aiteam-feature-videos {
-      display: grid;
-      grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.38fr);
-      gap: clamp(0.75rem, 1.5vw, 1rem);
-      align-items: stretch;
-    }
-    .aiteam-feature-videos {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .aiteam-feature-copy {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      border: 1px solid var(--glass-edge);
-      border-radius: 1rem;
-      background: var(--glass-plate);
-      backdrop-filter: blur(14px) saturate(125%);
-      -webkit-backdrop-filter: blur(14px) saturate(125%);
-      padding: clamp(1.6rem, 2.4vw, 2.25rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 2.25rem;
-      min-height: 100%;
-    }
-    .aiteam-feature-copy::before,
-    .aiteam-youtube::before {
-      content: '';
-      position: absolute;
-      z-index: 0;
-      inset: 1px 1px auto;
-      height: 40%;
-      border-radius: inherit;
-      background: linear-gradient(180deg, rgba(255, 244, 243, 0.10), transparent);
-      pointer-events: none;
-    }
-    .aiteam-feature-copy > *, .aiteam-youtube > * { position: relative; z-index: 1; }
-    .aiteam-youtube {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      min-width: 0;
-      padding: 0.42rem;
-      border: 1px solid var(--glass-edge);
-      border-radius: 1rem;
-      background: var(--glass-plate);
-      backdrop-filter: blur(14px) saturate(125%);
-      -webkit-backdrop-filter: blur(14px) saturate(125%);
-    }
-    .aiteam-youtube-media {
-      width: 100%;
-      height: 100%;
-      min-height: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: var(--bg-soft);
-      border-radius: 0.7rem;
-    }
-    #agentos-commercial { scroll-margin-top: 100px; margin: 40px 0; }
-    #agentos-commercial .aiteam-youtube-media { height: auto; min-height: 0; }
-    #agentos-commercial iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
-    .commercial-heading { padding-top: clamp(3rem, 6vw, 5rem); }
-    #agentos-commercial-title { margin: 0; text-wrap: balance; }
-    #agentos-commercial .commercial-language { margin: 4px 0 0; font-size: 0.85rem; line-height: 1.5; color: var(--ink-2); }
-    #agentos-commercial .commercial-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 20px 0 0; font-size: 0.85rem; line-height: 1.6; }
-    .aiteam-youtube iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      background: var(--bg-soft);
-    }
-    .aiteam-feature-copy .idx,
-    .aiteam-feature .service-video .idx {
-      font-family: var(--font-display);
-      font-size: 0.85rem;
-      font-style: italic;
-      font-weight: 300;
-      color: var(--accent-text);
-      line-height: 1;
-      margin-bottom: 0.9rem;
-    }
-    .aiteam-feature-copy .name {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3vw, 2.45rem);
-      font-weight: 400;
-      letter-spacing: -0.03em;
-      line-height: 1.02;
-    }
-    .aiteam-feature-copy .name em {
-      font-style: italic;
-      color: var(--accent-text);
-      font-weight: 300;
-    }
-    .aiteam-feature-copy p {
-      color: var(--ink-2);
-      font-size: clamp(1rem, 1.2vw, 1.08rem);
-      line-height: 1.58;
-      max-width: 32ch;
-      margin-top: 1.2rem;
-    }
-    .aiteam-feature-copy a {
-      font-size: 0.86rem;
-      color: var(--ink);
-      letter-spacing: 0.02em;
-      display: inline-flex;
-      gap: 0.6rem;
-      align-items: center;
-      align-self: flex-start;
-      transition: color 0.25s, gap 0.25s;
-    }
-    .aiteam-feature-copy a:hover {
-      color: var(--accent-text);
-      gap: 0.9rem;
-    }
-    .aiteam-feature .service-video h3 { max-width: 16ch; }
-    .aiteam-channel {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: clamp(1rem, 3vw, 3rem);
-      padding: clamp(1.1rem, 2.2vw, 1.6rem) 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      color: var(--ink);
-      transition: border-color 0.25s ease;
-    }
-    .aiteam-channel-copy {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
-      align-items: baseline;
-      gap: clamp(1rem, 2.5vw, 2.5rem);
-      min-width: 0;
-    }
-    .aiteam-channel-label {
-      color: var(--accent-text);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      line-height: 1.4;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .aiteam-channel-text {
-      color: var(--ink-2);
-      font-size: 1rem;
-      line-height: 1.55;
-      transition: color 0.25s ease;
-    }
-    .aiteam-channel-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 1rem;
-      white-space: nowrap;
-      transition: color 0.25s ease, gap 0.25s ease;
-    }
-    .aiteam-channel:hover {
-      border-color: var(--line-2);
-    }
-    .aiteam-channel:hover .aiteam-channel-text {
-      color: var(--ink);
-    }
-    .aiteam-channel:hover .aiteam-channel-cta {
-      color: var(--accent-text);
-      gap: 0.9rem;
-    }
-    @media (max-width: 1080px) {
-      .aiteam-feature-primary,
-      .aiteam-feature-videos {
-        grid-template-columns: 1fr;
-      }
-    }
-    @media (max-width: 720px) {
-      .aiteam-feature-copy { min-height: 320px; }
-      .aiteam-youtube-media { min-height: 0; }
-      .aiteam-channel,
-      .aiteam-channel-copy {
-        grid-template-columns: 1fr;
-      }
-      .aiteam-channel {
-        align-items: start;
-        gap: 1rem;
-      }
-      .aiteam-channel-copy { gap: 0.55rem; }
-      .aiteam-channel-cta { justify-self: start; }
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-    .product-card {
-      padding: 2.25rem;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      transition: background 0.4s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .product-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--gradient-soft);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-    }
-    .product-card:hover::before { opacity: 1; }
-    .product-card > * { position: relative; z-index: 1; }
-    .product-card .name {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-    }
-    .product-card .name em { font-style: italic; color: var(--accent-text); font-weight: 300; }
-    .product-card .desc { color: var(--ink-2); font-size: 0.92rem; flex: 1; line-height: 1.55; }
-    .product-card a {
-      font-size: 0.82rem;
-      color: var(--ink-3);
-      letter-spacing: 0.02em;
-      align-self: flex-start;
-      transition: color 0.25s, gap 0.25s;
-      display: inline-flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
-    .product-card:hover a { color: var(--accent-text); gap: 0.8rem; }
-    @media (max-width: 720px) {
-      .products-grid { grid-template-columns: 1fr; }
-      .product-card { padding: 2rem 2.25rem; min-height: 0; }
-    }
-
-    /* ============ Steps ============ */
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 880px) { .steps { grid-template-columns: 1fr; } }
-    .step {
-      padding: 2.5rem 2rem;
-      border-top: 1px solid var(--line);
-      border-right: 1px solid var(--line);
-    }
-    .step:last-child { border-right: 1px solid var(--line); }
-    @media (max-width: 880px) {
-      .step:last-child { border-right: 0; }
-      .step { border-bottom: 1px solid var(--line); }
-    }
-    .step .idx {
-      font-family: var(--font-display);
-      font-size: 4rem;
-      font-weight: 300;
-      font-style: italic;
-      letter-spacing: -0.04em;
-      line-height: 1;
-      color: var(--accent-text);
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-    .step h3 { margin-bottom: 0.7rem; font-weight: 400; }
-    .step p { color: var(--ink-2); font-size: 0.94rem; line-height: 1.55; max-width: 32ch; }
-
-    /* ============ Selected work ============ */
-    .work-list { display: grid; grid-template-columns: 1fr; }
-    .work {
-      display: grid;
-      grid-template-columns: 80px 1fr 220px;
-      gap: 3rem;
-      padding: 2.5rem 0;
-      border-top: 1px solid var(--line);
-      align-items: start;
-    }
-    .work:last-child { border-bottom: 1px solid var(--line); }
-    .work-idx {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 300;
-      color: var(--accent-text);
-      letter-spacing: 0;
-    }
-    .work-name {
-      font-family: var(--font-display);
-      font-weight: 400;
-      font-size: clamp(1.4rem, 2vw, 1.8rem);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
-    }
-    .work-desc {
-      font-family: var(--font-body);
-      font-size: 0.98rem;
-      line-height: 1.55;
-      color: var(--ink-2);
-      max-width: 56ch;
-    }
-    .work-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      font-family: var(--font-body);
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      color: var(--ink-3);
-    }
-    @media (max-width: 880px) {
-      .work { grid-template-columns: 1fr; gap: 1rem; padding: 1.75rem 0; }
-      .work-meta { flex-direction: row; gap: 1.25rem; }
-    }
-
-    /* ============ Industries ============ */
-    .industries-list {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      column-gap: clamp(1.5rem, 4vw, 4rem);
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      color: var(--ink-2);
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.35vw, 1.18rem);
-      font-weight: 400;
-      line-height: 1.55;
-    }
-    .industries-list li {
-      padding: 1.25rem 0;
-      border-top: 1px solid var(--line);
-      overflow-wrap: anywhere;
-    }
-    @media (max-width: 880px) {
-      .industries-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 480px) {
-      .industries-list { grid-template-columns: 1fr; }
-      .industries-list li { padding: 1rem 0; }
-    }
-
-    /* ============ FAQ ============ */
-    details.faq {
-      padding: 2rem 0;
-      border-top: 1px solid var(--line);
-    }
-    details.faq:last-of-type { border-bottom: 1px solid var(--line); }
-    details.faq summary {
-      list-style: none;
-      cursor: pointer;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2rem;
-      align-items: baseline;
-      font-family: var(--font-display);
-      font-weight: 400;
-      font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-      letter-spacing: -0.01em;
-      color: var(--ink);
-      transition: color 0.2s;
-    }
-    details.faq summary:hover { color: var(--accent-text); }
-    details.faq summary::-webkit-details-marker { display: none; }
-    details.faq summary::after {
-      content: '+';
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 300;
-      color: var(--ink-3);
-      transition: transform 0.3s, color 0.2s;
-    }
-    details.faq[open] summary::after { transform: rotate(45deg); color: var(--accent-text); }
-    details.faq p {
-      margin-top: 1.25rem;
-      color: var(--ink-2);
-      font-size: 0.98rem;
-      line-height: 1.6;
-      max-width: 70ch;
-    }
-
-    /* ============ Lead capture ============ */
-    .lead-section {
-      position: relative;
-      padding: 9rem 0;
-      border-top: 1px solid var(--line);
-      overflow: hidden;
-    }
-    .lead-grid {
-      display: grid;
-      grid-template-columns: 5fr 7fr;
-      gap: 5rem;
-      align-items: start;
-    }
-    @media (max-width: 980px) {
-      .lead-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-      .lead-text h2 { max-width: 100%; }
-    }
-
-    .lead-text h2 { max-width: 12ch; }
-    .lead-text .lead { margin-top: 1.5rem; }
-    .lead-bullets {
-      list-style: none;
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      color: var(--ink-2);
-      font-size: 0.96rem;
-    }
-    .lead-bullets li {
-      display: grid;
-      grid-template-columns: 1.2rem 1fr;
-      gap: 0.85rem;
-      align-items: baseline;
-    }
-    .lead-bullets li::before {
-      content: '-';
-      color: var(--accent-text);
-      font-family: var(--font-display);
-      font-style: italic;
-    }
-
-    .intake-verification { margin-block: 1rem; min-width: 0; }
-    .intake-verification [data-check-status] { margin: .4rem 0 .65rem; font-size: .92rem; color: var(--ink-2); }
-    .intake-verification [data-check-retry] { padding: .6rem 1rem; font: inherit; color: var(--ink); background: var(--bg-soft); border: 1px solid var(--line-2); border-radius: 2rem; cursor: pointer; }
-    .lead-form .form-title {
-      font-family: var(--font-body);
-      font-size: 0.74rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--ink-3);
-      margin-bottom: 2rem;
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid var(--line);
-    }
-    .field {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--line);
-      transition: border-color 0.25s;
-    }
-    .field:focus-within { border-bottom-color: var(--accent-text); }
-    .field label {
-      font-size: 0.74rem;
-      letter-spacing: 0.04em;
-      color: var(--ink-3);
-      font-weight: 500;
-    }
-    .field input,
-    .field textarea {
-      width: 100%;
-      background: transparent;
-      border: 0;
-      color: var(--ink);
-      font: inherit;
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 400;
-      letter-spacing: -0.01em;
-      padding: 0;
-    }
-    .field input::placeholder,
-    .field textarea::placeholder { color: var(--ink-4); font-weight: 300; }
-    .field input:focus, .field textarea:focus { outline: none; }
-    .field textarea { min-height: 90px; resize: vertical; line-height: 1.5; }
-
-    .field-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-
-    .form-bottom {
-      padding-top: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .form-submit {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.9rem;
-      padding: 1rem 1.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--glass-edge);
-      background: rgba(255, 244, 243, 0.94);
-      color: var(--bg);
-      font-weight: 500;
-      font-size: 0.92rem;
-      transition: border-color 0.28s cubic-bezier(.25,1,.5,1), color 0.28s cubic-bezier(.25,1,.5,1), background-color 0.28s cubic-bezier(.25,1,.5,1), transform 0.28s cubic-bezier(.25,1,.5,1);
-    }
-    .form-submit:hover {
-      background: var(--accent-surface);
-      border-color: var(--glass-edge-bright);
-      color: var(--ink);
-      transform: translateY(-1px);
-    }
-    .form-submit:active { transform: translateY(0) scale(0.985); }
-    .form-submit .arr { transition: transform 0.3s; }
-    .form-submit:hover .arr { transform: translateX(3px); }
-    .form-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
-
-    .form-foot { font-size: 0.78rem; color: var(--ink-3); max-width: 28ch; }
-    .form-foot a { color: var(--ink); border-bottom: 1px solid var(--line-2); }
-    .form-foot a:hover { border-bottom-color: var(--accent-text); color: var(--accent-text); }
-
-    .form-success, .form-error {
-      display: none;
-      padding: 0.85rem 1rem;
-      margin-top: 1rem;
-      font-size: 0.92rem;
-      border-radius: 0;
-    }
-    .form-success { color: var(--accent-text); background: var(--bg-soft); border: 1px solid var(--line-2); }
-    .form-error   { color: var(--ink-2); background: var(--bg-soft); border: 1px solid var(--line-2); }
-    .form-success.show, .form-error.show { display: block; }
-
-    /* ============ Footer ============ */
-    footer.site {
-      padding: clamp(3rem, 6vw, 5rem) 0 2.5rem;
-      border-top: 1px solid var(--line);
-      position: relative;
-      z-index: 1;
-    }
-    .foot-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-    @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
-    .foot-col h3 {
-      font-family: var(--font-body);
-      font-size: 0.74rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-      margin-bottom: 1.25rem;
-    }
-    .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-    .foot-col a { font-size: 0.92rem; color: var(--ink-2); transition: color 0.25s; }
-    .foot-col a:hover { color: var(--accent-text); }
-    .foot-col .signature {
-      margin-bottom: 0.75rem;
-    }
-    .foot-col .signature img {
-      display: block;
-      width: 210px;
-      max-width: 100%;
-      height: auto;
-    }
-    .foot-col p { color: var(--ink-3); font-size: 0.9rem; max-width: 28ch; line-height: 1.5; }
-
-    .foot-bottom {
-      padding-top: 2rem;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.8rem;
-      color: var(--ink-3);
-    }
-
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1.1s cubic-bezier(.2,.6,.2,1), transform 1.1s cubic-bezier(.2,.6,.2,1); }
-    .reveal.in { opacity: 1; transform: none; }
-    .reveal[data-delay="1"] { transition-delay: 0.08s; }
-    .reveal[data-delay="2"] { transition-delay: 0.16s; }
-    .reveal[data-delay="3"] { transition-delay: 0.24s; }
-
-    ::selection { background: rgba(252, 168, 125, 0.3); color: var(--ink); }
-
-    /* ============ Version badge (bottom-right floating) ============ */
-    .version-badge {
-      position: fixed;
-      bottom: 14px;
-      right: 14px;
-      z-index: 60;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.75rem;
-      background: rgba(32, 14, 11, 0.85);
-      backdrop-filter: blur(10px) saturate(140%);
-      -webkit-backdrop-filter: blur(10px) saturate(140%);
-      border: 1px solid var(--line-2);
-      border-radius: 999px;
-      font-family: var(--font-body);
-      font-size: 0.68rem;
-      letter-spacing: 0.04em;
-      color: var(--ink-3);
-      text-decoration: none;
-      opacity: 0.55;
-      transition: opacity 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-      user-select: none;
-    }
-    .version-badge:hover {
-      opacity: 1;
-      color: var(--ink);
-      border-color: var(--accent-text);
-    }
-    .version-badge .sep { color: var(--ink-4); }
-    .version-badge:hover .hash { color: var(--accent-text); }
-    @media (max-width: 720px) {
-      .version-badge { bottom: 8px; right: 8px; font-size: 0.58rem; padding: 0.26rem 0.52rem; opacity: 0.38; }
-      .version-badge:hover { opacity: 1; }
-    }
-
-    /* ============ Whitepaper lead magnet ============ */
-    .whitepaper-toast {
-      position: fixed;
-      left: 16px;
-      bottom: 16px;
-      z-index: 70;
-      width: min(430px, calc(100vw - 32px));
-      padding: 1rem;
-      border: 1px solid var(--line-2);
-      background: rgba(32, 14, 11, 0.96);
-      backdrop-filter: blur(12px) saturate(140%);
-      -webkit-backdrop-filter: blur(12px) saturate(140%);
-      color: var(--ink);
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity 0.25s ease, transform 0.25s ease;
-    }
-    .whitepaper-toast[hidden] { display: none; }
-    .whitepaper-toast.is-visible { opacity: 1; transform: none; }
-    .whitepaper-close {
-      position: absolute;
-      top: 0.75rem;
-      right: 0.75rem;
-      width: 2rem;
-      height: 2rem;
-      border: 1px solid var(--line-2);
-      background: transparent;
-      color: var(--ink-2);
-      font: inherit;
-      font-size: 1.4rem;
-      line-height: 1;
-      cursor: pointer;
-    }
-    .whitepaper-close:hover, .whitepaper-close:focus-visible {
-      color: var(--accent-text);
-      border-color: var(--accent-text);
-    }
-    .whitepaper-kicker {
-      max-width: calc(100% - 3rem);
-      margin: 0 0 0.65rem;
-      color: var(--accent-text);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .whitepaper-toast h2 {
-      max-width: 13ch;
-      margin: 0;
-      font-family: var(--font-display);
-      font-size: clamp(1.75rem, 7vw, 2.45rem);
-      font-weight: 400;
-      line-height: 0.98;
-      letter-spacing: -0.03em;
-    }
-    .whitepaper-copy {
-      margin: 0.8rem 0 1rem;
-      color: var(--ink-2);
-      font-size: 0.86rem;
-      line-height: 1.55;
-    }
-    .whitepaper-preview {
-      display: flex;
-      gap: 0.45rem;
-      margin: 0 0 1rem;
-      padding-bottom: 0.45rem;
-      overflow-x: auto;
-      scrollbar-color: var(--accent-text) rgba(255,255,255,0.08);
-      scrollbar-width: thin;
-    }
-    .whitepaper-preview figure {
-      flex: 0 0 82px;
-      aspect-ratio: 1055 / 1491;
-      margin: 0;
-      overflow: hidden;
-      border: 1px solid var(--line-2);
-      background: #f7f1e8;
-    }
-    .whitepaper-preview figure:first-child { flex-basis: 100px; }
-    .whitepaper-preview img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .whitepaper-form {
-      display: grid;
-      gap: 0.7rem;
-    }
-    .whitepaper-form label {
-      display: grid;
-      gap: 0.35rem;
-      color: var(--ink-2);
-      font-size: 0.72rem;
-      font-weight: 600;
-    }
-    .whitepaper-form label small { color: var(--ink-4); font-weight: 500; }
-    .whitepaper-form input[type="email"],
-    .whitepaper-form input[type="text"] {
-      width: 100%;
-      height: 2.45rem;
-      border: 1px solid var(--line-2);
-      background: var(--bg-soft);
-      color: var(--ink);
-      font: inherit;
-      font-size: 0.84rem;
-      padding: 0.55rem 0.65rem;
-      border-radius: 0;
-    }
-    .whitepaper-form input:focus {
-      outline: 1px solid var(--accent-text);
-      outline-offset: 2px;
-    }
-    .whitepaper-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.55rem;
-    }
-    .whitepaper-consent {
-      display: flex !important;
-      align-items: flex-start;
-      gap: 0.5rem !important;
-      color: var(--ink-3) !important;
-      font-size: 0.7rem !important;
-      line-height: 1.4;
-    }
-    .whitepaper-consent input {
-      width: 1rem;
-      height: 1rem;
-      flex: 0 0 1rem;
-      margin-top: 0.1rem;
-      accent-color: var(--accent-text);
-    }
-    .whitepaper-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      flex-wrap: wrap;
-    }
-    .whitepaper-actions button {
-      min-height: 2.6rem;
-      border: 1px solid var(--accent-text);
-      background: var(--accent-text);
-      color: var(--bg);
-      font: inherit;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0 1rem;
-      cursor: pointer;
-    }
-    .whitepaper-actions button:disabled {
-      cursor: wait;
-      opacity: 0.6;
-    }
-    .whitepaper-download {
-      color: var(--accent-text);
-      font-size: 0.76rem;
-      font-weight: 600;
-      border-bottom: 1px solid var(--accent-text);
-    }
-    .whitepaper-download[hidden] { display: none; }
-    .whitepaper-status {
-      min-height: 1.05rem;
-      margin: 0;
-      color: var(--ink-3);
-      font-size: 0.74rem;
-      line-height: 1.4;
-    }
-    .whitepaper-status.is-error { color: #fecaca; }
-    .whitepaper-status.is-success { color: var(--accent-text); }
-
-    @media (max-width: 720px) {
-      .whitepaper-toast {
-        left: 10px;
-        right: 10px;
-        bottom: 42px;
-        width: auto;
-        max-height: calc(100dvh - 64px);
-        overflow-y: auto;
-      }
-      .whitepaper-grid { grid-template-columns: 1fr; }
-      .whitepaper-preview figure { flex-basis: 76px; }
-      .whitepaper-preview figure:first-child { flex-basis: 90px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
-      .reveal { opacity: 1 !important; transform: none !important; }
-      .marquee-track { animation: none !important; }
-      .whitepaper-toast { transition: none; }
-    }
-
-    .store-promo{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:36px;margin-block:48px;border:1px solid var(--line);border-radius:20px;background:rgba(252, 168, 125,.06)}
-    .store-promo h2{font-size:clamp(28px,4vw,44px);margin:0 0 12px}.store-promo p{max-width:620px;color:var(--ink-2);line-height:1.7;margin:0 0 20px}
-    .store-promo-link{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:12px 22px;background:#deb1a9;color:#11100f;border-radius:10px;text-decoration:none;font-weight:600}.store-promo-link:hover{background:#d7d1d0}.store-promo-link:focus-visible{outline:2px solid #f7f6f5;outline-offset:5px}
-    .store-promo-icons{display:flex;gap:14px;flex-shrink:0}.store-promo-icons img{width:76px;height:76px;object-fit:contain;border-radius:16px}
-    @media(max-width:800px){.store-promo{flex-direction:column;align-items:flex-start;padding:24px;gap:24px}.store-promo-icons{order:-1}.store-promo-icons img{width:60px;height:60px}}
-
-    .nav-agentos { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0.6rem 0.85rem; border: 1px solid var(--accent-text); border-radius: 0.65rem; color: var(--accent-text); font-size: 0.85rem; font-weight: 600; white-space: nowrap; }
-    .nav-agentos:hover { color: var(--ink); border-color: var(--ink); }
-    .launch-access { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; padding: 12px 4px; }
-    @media (max-width: 1200px) { .nav-links { gap: 1rem; } .nav-actions { gap: 0.5rem; } }
-    @media (max-width: 1050px) { .topbar-inner > nav { display: none; } }
-    @media (max-width: 640px) {
-      .topbar-inner { height: auto; min-height: 68px; display: grid; grid-template-columns: 1fr; padding: 12px; gap: 10px; }
-      .brand { justify-self: center; }
-      .nav-actions { flex-wrap: wrap; justify-content: center; gap: 6px; }
-      .nav-agentos { padding-inline: 10px; }
-      .nav-actions > .btn-line { display: none; }
-    }
-  </style>
-<script src="/i18n/routing.js?v=4.5.0-es" defer></script>
-
-<script src="/scripts/agentos-launch.js?v=studio1" defer></script>
-<link rel="stylesheet" href="/css/process.css?v=4.8.0"><script src="/scripts/process.js?v=4.8.0" defer></script><link rel="stylesheet" href="/assets/studio/liquid-glass/styles.css">
-  <link rel="stylesheet" href="/css/studio.css">
-  <script type="module" src="/scripts/studio.js"></script>
-<link rel="stylesheet" href="/css/educacao.css">
-</head>
-<body data-i18n-page="studioHome">
-
-  <a class="skip-link" href="#main" data-i18n="landing.a11y.skip">Skip to main content</a>
-
-  <!-- Background animado: grade técnica + breathing radials -->
-  <header class="studio-header"><div class="studio-shell studio-bar">
-    <a class="studio-brand" href="/"><img src="/assets/studio/wordmark.svg" alt="INOSX" width="122" height="27"></a>
-    <nav aria-label="Menu"><a href="#solutions"><span data-i18n="studio.services">Services</span></a><a href="#products"><span data-i18n="studio.products">Products</span></a><a href="/parcerias/" target="_blank" rel="noopener"><span data-i18n="studio.partners">Partnerships</span></a><a href="#contact"><span data-i18n="studio.contact">Contact</span></a></nav><div class="lang-switch" role="group" aria-label="PT / EN / ES"><button type="button" data-lang="pt" aria-label="Português">PT</button><button type="button" data-lang="en" aria-label="English">EN</button><button type="button" data-lang="es" aria-label="Español">ES</button></div></div></header>
-
-  <!-- ============ HERO ============ -->
-  <main id="main"><section class="studio-hero"><div class="studio-shell">
-      <h1><span data-i18n="studio.hero1">Engineering</span><span data-i18n="studio.hero2">for software and AI.</span></h1><p><span data-i18n="studio.intro">We build custom software for businesses and create digital products you can bring to your audience.</span></p><a class="studio-action primary" data-optic href="/parcerias/" target="_blank" rel="noopener"><span data-i18n="studio.explore">Explore partnerships</span> <span aria-hidden="true">→</span></a>
-    </div></section>
-    <div class="studio-paths"><div class="studio-shell"><a href="#solutions"><strong><span data-i18n="studio.dev">Development</span></strong><small><span data-i18n="studio.custom">Custom software</span></small></a>
-<a href="#products"><strong><span data-i18n="studio.products">Products</span></strong><small><span data-i18n="studio.digital">AI and digital products</span></small></a>
-<a href="/parcerias/" target="_blank" rel="noopener"><strong><span data-i18n="studio.partners">Partnerships</span></strong><small><span data-i18n="studio.opps">Commercial opportunities</span></small></a>
-</div></div>
-
-  <!-- ============ CLIENTES (carrossel) ============ -->
-  <section class="clients" id="clients">
-    <div class="clients-head reveal">
-      <div class="label">
-        <span class="num">i.</span>
-        <span class="bar"></span>
-        <span data-i18n="landing.clients.label">Built for, shipped with</span>
-      </div>
-    </div>
-
-    <div class="marquee" aria-label="Client logos" data-i18n-aria-label="landing.extra.attr_7">
-      <div class="marquee-track">
-        <!-- Set 1 -->
-        <div class="logo-slot l-itau"><img src="/clients/itau.svg" alt="Itaú" loading="lazy"></div>
-        <div class="logo-slot l-santander"><img src="/clients/santander.svg" alt="Santander" loading="lazy"></div>
-        <div class="logo-slot l-telefonica"><img src="/clients/telefonica.svg" alt="Telefônica" loading="lazy"></div>
-        <div class="logo-slot l-volkswagen"><img src="/clients/volkswagen.svg" alt="Volkswagen" loading="lazy"></div>
-        <div class="logo-slot l-nissan"><img src="/clients/nissan.svg" alt="Nissan" loading="lazy"></div>
-        <div class="logo-slot l-thomson-reuters"><img src="/clients/thomson-reuters.svg" alt="Thomson Reuters" loading="lazy"></div>
-        <div class="logo-slot l-open-invention"><img src="/clients/open-invention.svg" alt="Open Invention Network" loading="lazy"></div>
-        <!-- Set 2 (duplicado para loop sem-costura) -->
-        <div class="logo-slot l-itau" aria-hidden="true"><img src="/clients/itau.svg" alt="" loading="lazy"></div>
-        <div class="logo-slot l-santander" aria-hidden="true"><img src="/clients/santander.svg" alt="" loading="lazy"></div>
-        <div class="logo-slot l-telefonica" aria-hidden="true"><img src="/clients/telefonica.svg" alt="" loading="lazy"></div>
-        <div class="logo-slot l-volkswagen" aria-hidden="true"><img src="/clients/volkswagen.svg" alt="" loading="lazy"></div>
-        <div class="logo-slot l-nissan" aria-hidden="true"><img src="/clients/nissan.svg" alt="" loading="lazy"></div>
-        <div class="logo-slot l-thomson-reuters" aria-hidden="true"><img src="/clients/thomson-reuters.svg" alt="" loading="lazy"></div>
-        <div class="logo-slot l-open-invention" aria-hidden="true"><img src="/clients/open-invention.svg" alt="" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EVIDENCE STRIP — links pra evidência real, sem numerais fabricados ============ -->
-  <!-- ============ PAINS ============ -->
-  <section class="block pains">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="label">
-          <span class="num">i.</span>
-          <span class="bar"></span>
-          <span data-i18n="landing.pains.eyebrow">Sound familiar</span>
+    </script>
+    <script defer="" src="/i18n/i18n.js?v=6.0.0"></script>
+    <script defer="" src="/i18n/routing.js"></script>
+    <script defer="" src="/scripts/home.js?v=6.0.0"></script>
+    <script src="/scripts/studio.js" type="module"></script>
+  </head>
+  <body data-i18n-page="studioHome" id="top">
+    <a class="skip" data-i18n="process.skip" href="#main">Skip to content</a>
+    <header>
+      <div class="bar wrap">
+        <a aria-label="INOSX" class="mark" href="#top"
+          ><img alt="INOSX" src="/assets/studio/wordmark.svg"
+        /></a>
+        <nav aria-label="Menu">
+          <a data-i18n="nav.services" href="#solutions">Services</a
+          ><a data-i18n="landing.nav.products" href="#products">Products</a
+          ><a
+            data-i18n="studio.partners"
+            href="/parcerias/"
+            rel="noopener"
+            target="_blank"
+            >Partnerships</a
+          ><a data-i18n="landing.foot.h_contact" href="#contact">Contact</a>
+        </nav>
+        <div class="langs">
+          <a aria-label="Português" data-lang="pt" href="?lang=pt" lang="pt"
+            >PT</a
+          ><a
+            aria-current="true"
+            aria-label="English"
+            data-lang="en"
+            href="?lang=en"
+            lang="en"
+            >EN</a
+          ><a aria-label="Español" data-lang="es" href="?lang=es" lang="es"
+            >ES</a
+          >
         </div>
-        <div>
-          <h2>
-            <span data-i18n="landing.pains.title_1">You needed production.</span>
-            <span class="italic" data-i18n="landing.pains.title_2">They stopped at prototype.</span>
-          </h2>
-          <p data-i18n="landing.pains.sub" class="lead">
-            The path from prototype to production should be visible.
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <h1>
+            <span data-i18n="homePage.software_ai_and">Software, AI and</span>
+            <em data-i18n="homePage.digital_education">digital education.</em>
+          </h1>
+          <p
+            data-i18n="homePage.we_develop_custom_software_for_businesses_you_can_also_explore_a_ready_m"
+          >
+            We develop custom software for businesses. You can also explore a
+            ready-made digital product or create your e-book in partnership with
+            INOSX.
           </p>
-        </div>
-      </div>
-
-      <div class="liquid-workflow reveal">
-        <div class="workflow-step">
-          <span class="idx">i.</span>
-          <h3 data-i18n="landing.pains.w1_t">Prototype</h3>
-          <p data-i18n="landing.pains.w1_d">A useful idea needs more than a convincing demo.</p>
-
-        </div>
-        <div class="workflow-step">
-          <span class="idx">ii.</span>
-          <h3 data-i18n="landing.pains.w2_t">Reality</h3>
-          <p data-i18n="landing.pains.w2_d">Data, integrations and people enter the frame.</p>
-
-        </div>
-        <div class="workflow-step">
-          <span class="idx">iii.</span>
-          <h3 data-i18n="landing.pains.w3_t">Production</h3>
-          <p data-i18n="landing.pains.w3_d">A system the team can use, own and return to.</p>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="rule"><hr></div>
-
-  <!-- ============ SOLUTIONS ============ -->
-  <section class="block" id="solutions">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="label">
-          <span class="num">ii.</span>
-          <span class="bar"></span>
-          <span data-i18n="landing.solutions.eyebrow">What we make</span>
-        </div>
-        <div>
-          <h2>
-            <span data-i18n="landing.solutions.title_1">Apps and technology,</span>
-            <span class="italic" data-i18n="landing.solutions.title_2">built for use.</span>
-          </h2>
-          <p class="lead" data-i18n="landing.solutions.sub">
-            Three capabilities, shaped around your operation.
-          </p>
-        </div>
-      </div>
-
-      <div class="sol-grid">
-        <div class="sol-item reveal">
-          <span class="idx">i.</span>
-          <h3 data-i18n="landing.solutions.s1_t">Application development</h3>
-          <p data-i18n="landing.solutions.s1_d">Custom web, mobile, desktop and internal apps shaped around the people who will use them.</p>
-        </div>
-        <div class="sol-item reveal" data-delay="1">
-          <span class="idx">ii.</span>
-          <h3 data-i18n="landing.solutions.s2_t">Platforms &amp; integration</h3>
-          <p data-i18n="landing.solutions.s2_d">APIs, integrations, data pipelines and legacy modernization. Where existing software has to talk to new software without a remix.</p>
-        </div>
-        <div class="sol-item reveal" data-delay="2">
-          <span class="idx">iii.</span>
-          <h3 data-i18n="landing.solutions.s3_t">AI solution development</h3>
-          <p data-i18n="landing.solutions.s3_d">AI agents, knowledge platforms and orchestration shipped to production with observability, security and cost control.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="rule"><hr></div>
-
-  <section class="container store-promo" id="store" aria-labelledby="store-promo-title">
-    <div>
-      <h2 id="store-promo-title" data-i18n="landing.store_promo.title">Explore the INOSX Store</h2>
-      <p data-i18n="landing.store_promo.body">Browse software, AI products, courses and e-books created by INOSX.</p>
-      <a class="store-promo-link studio-action" data-optic href="/store/" target="_blank" rel="noopener"><span data-i18n="landing.store_promo.cta">Explore the INOSX Store</span><span aria-hidden="true">→</span></a>
-    </div>
-    <div class="store-promo-icons" aria-hidden="true">
-      <img src="/store/stashmunk.png" alt="" width="76" height="76" loading="lazy">
-      <img src="/store/icons/agentos.png" alt="" width="76" height="76" loading="lazy">
-      <img src="/store/icons/tubelens.svg?v=original" alt="" width="76" height="76" loading="lazy">
-    </div>
-  </section>
-  <script>
-    document.querySelectorAll('a[href="/store/"]').forEach(function(link){
-      link.addEventListener('click',function(){
-        var language=document.documentElement.lang.slice(0,2);
-        link.href='/store/?lang='+(['en','pt','es'].includes(language)?language:'en');
-      });
-    });
-  </script>
-
-  <!-- ============ PRODUCTS ============ -->
-  <section class="block" id="products">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="label">
-          <span class="num">iii.</span>
-          <span class="bar"></span>
-          <span data-i18n="landing.products.eyebrow">INOSX Products</span>
-        </div>
-        <div>
-          <h2>
-            <span data-i18n="landing.products.title_1">Software and learning,</span>
-            <span class="italic" data-i18n="landing.products.title_2">built by INOSX.</span>
-          </h2>
-          <p class="lead" data-i18n="landing.products.sub">
-            Explore INOSX software, AI applications, courses and e-books.
-          </p>
-        </div>
-      </div>
-
-      <section class="education-products" id="cursos-e-ebooks" aria-labelledby="education-title">
-        <h3 id="education-title"><span data-i18n="education.title">Courses and e-books</span></h3>
-        <div class="education-shelf">
-          <article id="product-gda">
-            <small><span data-i18n="education.course">Online course</span></small><h4><a class="academy-link" href="https://gda.inosx.com/" target="_blank" rel="noopener">Global Dollar Academy</a></h4>
-            <p><span data-i18n="education.gda">A course on dollarization and international diversification, with a study map for each lesson.</span></p><a href="https://gda.inosx.com/" target="_blank" rel="noopener"><span data-i18n="education.visitCourse">Explore the course</span> <span aria-hidden="true">→</span></a>
-          </article>
-          <article id="product-psf">
-            <small><span data-i18n="education.book">E-book</span></small><h4>Patrimônio sem Fronteiras</h4>
-            <p><span data-i18n="education.psf">Mario Mayerle’s illustrated e-book on currency exposure, diversification and international wealth planning.</span></p><a href="https://psf.gda.inosx.com/" target="_blank" rel="noopener"><span data-i18n="education.visitBook">Explore the e-book</span> <span aria-hidden="true">→</span></a>
-          </article>
-          <article id="product-gpa">
-            <small><span data-i18n="education.course">Online course</span></small><h4><a class="academy-link" href="https://gpa.inosx.com/" target="_blank" rel="noopener">Global Pricing Academy</a></h4>
-            <p><span data-i18n="education.gpa">A pricing course for digital businesses. The first module covers price, cost, value and how to choose a billing unit.</span></p><a href="https://gpa.inosx.com/" target="_blank" rel="noopener"><span data-i18n="education.visitCourse">Explore the course</span> <span aria-hidden="true">→</span></a>
-          </article>
+          <div class="actions">
+            <a class="btn" data-optic="" href="#solutions"
+              ><span data-i18n="homePage.develop_a_project"
+                >Develop a project</span
+              >
+              <i aria-hidden="true">↓</i></a
+            ><a class="btn" data-optic="" href="#products"
+              ><span data-i18n="homePage.explore_products"
+                >Explore products</span
+              >
+              <i aria-hidden="true">↓</i></a
+            ><a
+              class="btn"
+              data-optic=""
+              href="/parcerias/"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="homePage.explore_partnerships"
+                >Explore partnerships</span
+              >
+              <i aria-hidden="true">↗</i></a
+            >
+          </div>
         </div>
       </section>
-
-      <!-- Ordem: complexidade de desenvolvimento (mais complexo primeiro), espelhando mariomayerle.com -->
-      <div class="aiteam-feature reveal" aria-label="AgentOS and AITEAM-X retrospective">
-        <div class="aiteam-feature-primary">
-          <article class="aiteam-feature-copy">
-            <div>
-              <span class="idx">i.</span>
-              <div class="name">Agent<em>OS</em></div>
-              <p data-i18n="landing.agentos.product">Your digital team, in your browser. Delegate tasks, collaborate with AI employees and review the results. Choose a monthly subscription to get started.</p>
-            </div>
-            <a href="https://agentos.inosx.com/" data-agentos-link rel="noopener" target="_blank"><span data-i18n="landing.agentos.join">Choose your plan</span> <span>-&gt;</span></a>
-            <a href="https://app.agentos.inosx.com" data-agentos-access data-i18n="landing.agentos.access" target="_blank" rel="noopener">Access AgentOS</a>
-          </article>
-
-          <div class="aiteam-youtube">
-            <div class="aiteam-youtube-media">
-              <iframe
-                id="agentos-launch-video" src="https://www.youtube-nocookie.com/embed/OfGoz1e91vs?autoplay=1&mute=1&loop=1&playlist=OfGoz1e91vs&playsinline=1&rel=0"
-                title="Meet the AgentOS digital team"
-                data-i18n-title="landing.agentos.video"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-
-        <div class="agentos-video-language"><label for="agentos-video-language"><span data-i18n="landing.agentos.language">Video language</span></label><select id="agentos-video-language"><option value="en">English</option><option value="pt">Português</option><option value="es">Español</option></select></div>
-        <section id="agentos-commercial" aria-labelledby="agentos-commercial-title">
-          <div class="section-head commercial-heading">
-            <div class="label"><span class="bar"></span><span>AgentOS</span></div>
-            <div>
-              <h2 id="agentos-commercial-title">
-                <span data-i18n="landing.commercial.title_1">Your digital team,</span>
-                <span class="italic" data-i18n="landing.commercial.title_2">in action.</span>
-              </h2>
-              <p class="lead commercial-description" data-i18n="landing.commercial.body">See how Adebayo, Priya, Lukas and Helena collaborate on work you can review.</p>
-              <p class="commercial-language" data-i18n="landing.commercial.audio">Video in English.</p>
-            </div>
-          </div>
-          <div class="aiteam-youtube-media">
-            <iframe id="agentos-commercial-video" src="https://www.youtube-nocookie.com/embed/vOsdKmG0hGQ?hl=en&amp;rel=0" title="AgentOS commercial in English" data-i18n-title="landing.commercial.player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
-          </div>
-          <p class="commercial-links"><a id="agentos-commercial-youtube" href="https://youtu.be/vOsdKmG0hGQ" target="_blank" rel="noopener noreferrer" data-i18n="landing.commercial.watch">Watch on YouTube</a> <a href="https://agentos.inosx.com/?lang=en" data-agentos-link data-i18n="landing.commercial.cta" target="_blank" rel="noopener">Choose your plan</a> <a href="https://app.agentos.inosx.com" data-agentos-access data-i18n="landing.agentos.access" target="_blank" rel="noopener">Access AgentOS</a></p>
-        </section>
-        <details class="agentos-retrospective" id="aiteam-x-retrospective"><summary><span data-i18n="landing.agentos.retro">AITEAM-X — retrospective and next chapter</span></summary><p data-i18n="landing.agentos.history">AITEAM-X explored a shared workspace for AI agents, memory and human review. Its demonstrations remain here as a record of that earlier chapter.</p><p data-i18n="landing.agentos.learning">AgentOS carries this direction into a clearer experience: a named digital team, familiar responsibilities, conversations and human oversight. The focus is on helping people delegate, collaborate and continue their work.</p><p data-i18n="landing.agentos.boundary">These AITEAM-X videos document an earlier chapter. For current AgentOS features and subscription plans, visit the AgentOS website.</p><p><a href="https://www.youtube.com/watch?v=l9ob9KGVqhQ" target="_blank" rel="noopener"><span data-i18n="landing.agentos.archive">Watch the original AITEAM-X platform tour</span></a></p>
-        <div class="aiteam-feature-videos">
-          <article class="service-video" aria-labelledby="video-aiteamx-title">
-            <div class="service-video-media">
-              <video
-                controls
-                preload="metadata"
-                playsinline
-                poster="/assets/videos/posters/aiteamx-ai-operations-desk.jpg"
-                aria-describedby="video-aiteamx-description"
-                data-i18n-aria-label="landing.services_videos.video2_aria">
-                <source src="/assets/videos/aiteamx-ai-operations-desk.mp4" type="video/mp4">
-              </video>
-              <img
-                class="service-video-avatar"
-                src="/assets/images/mario-mayerle-avatar.jpg"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                decoding="async">
-            </div>
-            <div class="service-video-copy">
-              <span class="idx">ii.</span>
-              <h3 id="video-aiteamx-title" data-i18n="landing.services_videos.video2_title">AITEAM-X &mdash; AI Operations Desk</h3>
-              <p id="video-aiteamx-description" data-i18n="landing.services_videos.video2_desc">Controlled, persistent and auditable agentic workflows for AI-powered teams.</p>
-            </div>
-          </article>
-
-          <article class="service-video" aria-labelledby="video-services-title">
-            <div class="service-video-media">
-              <video
-                controls
-                preload="metadata"
-                playsinline
-                poster="/assets/videos/posters/ai-agents-automation-saas-delivery.jpg"
-                aria-describedby="video-services-description"
-                data-i18n-aria-label="landing.services_videos.video3_aria">
-                <source src="/assets/videos/ai-agents-automation-saas-delivery.mp4" type="video/mp4">
-              </video>
-              <img
-                class="service-video-avatar"
-                src="/assets/images/mario-mayerle-avatar.jpg"
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                decoding="async">
-            </div>
-            <div class="service-video-copy">
-              <span class="idx">iii.</span>
-              <h3 id="video-services-title" data-i18n="landing.services_videos.video3_title">AI Agents, Automation &amp; SaaS Delivery</h3>
-              <p id="video-services-description" data-i18n="landing.services_videos.video3_desc">AI agents, workflow automation, SaaS products, data systems, legacy modernization and custom software delivery.</p>
-            </div>
-          </article>
-        </div>
-
-        <a class="aiteam-channel" href="https://www.youtube.com/@AITEAMX" rel="noopener" target="_blank">
-          <span class="aiteam-channel-copy">
-            <span class="aiteam-channel-label" data-i18n="landing.services_videos.channel_label">AITEAM-X / YouTube</span>
-            <span class="aiteam-channel-text" data-i18n="landing.services_videos.channel_text">More AITEAM-X application videos and demonstrations are available on YouTube.</span>
-          </span>
-          <span class="aiteam-channel-cta">
-            <span data-i18n="landing.services_videos.channel_cta">Visit the channel</span>
-            <span aria-hidden="true">-&gt;</span>
-          </span>
-        </a>
-        </details>
-      </div>
-
-      <div class="products-grid reveal">
-        <article class="product-card">
-          <div class="name">Data<em>GPT</em></div>
-          <p class="desc" data-i18n="landing.products.datagpt">AI for enterprise data analysis. Talk to your data in natural language: analyses, charts, answers.</p>
-          <a href="produtos.html#datagpt" target="_blank" rel="noopener"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Messi<em>ax</em></div>
-          <p class="desc" data-i18n="landing.products.messiax">AI spiritual companion. Conversational support, guided content and follow-up that respects the user's tradition.</p>
-          <a href="https://messiax.ai" rel="noopener" target="_blank"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Tube<em>Lens</em></div>
-          <p class="desc" data-i18n="landing.products.tubelens">AI editorial analysis for YouTube videos. Quality scores across density, clarity, credibility and originality. Popularity is not quality.</p>
-          <a href="https://tubelens.app" rel="noopener" target="_blank"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Psycho<em>X</em></div>
-          <p class="desc" data-i18n="landing.products.psychox">Psychological support with AI. Digital psychometric assessments and AI-assisted clinical reports.</p>
-          <a href="https://psychox.app" rel="noopener" target="_blank"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Survey<em>Flow</em></div>
-          <p class="desc" data-i18n="landing.products.surveyflow">Survey intelligence with AI. Smart surveys with automated analysis and actionable insights.</p>
-          <a href="https://surveyflow.ai" rel="noopener" target="_blank"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Tranquil<em>opa</em></div>
-          <p class="desc" data-i18n="landing.products.tranquilopa">Trust platform. AI-powered well-being and mental-health support, continuous follow-up, guided content.</p>
-          <a href="https://tranquilopa.com" rel="noopener" target="_blank"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-        <article class="product-card">
-          <div class="name">Ccoinx<em>.ai</em></div>
-          <p class="desc" data-i18n="landing.products.ccoinx">Currency converter with camera. Intelligence applied to finance and digital assets: signals, monitoring, automation.</p>
-          <a href="https://ccoinx.ai" rel="noopener" target="_blank"><span data-i18n="landing.products.more">Learn more</span> <span>→</span></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <div class="rule"><hr></div>
-
-  <!-- ============ HOW WE WORK ============ -->
-<section class="studio-invite" id="parceria-editorial"><div class="studio-shell"><div><h2><span data-i18n="studio.editorialTitle">Create your e-book with INOSX</span></h2><p><span data-i18n="studio.editorialBody">Structure a book from your material or edit a manuscript. INOSX prepares the edition and the contracting partner handles sales.</span></p></div><a class="studio-action primary" data-optic href="https://ebook.inosx.com/" target="_blank" rel="noopener"><span data-i18n="studio.editorialCta">Explore the editorial partnership (in Portuguese)</span> <span aria-hidden="true">↗</span></a></div></section>
-<section class="block process-summary" id="how-we-work" aria-labelledby="process-summary-title"><div class="container"><div class="section-head"><div class="label"><span class="num">iv.</span><span class="bar"></span><span data-i18n="landing.how.eyebrow" >How we work</span></div><div><h2 id="process-summary-title"><span data-i18n="landing.how.title_1" >We understand your context.</span> <em data-i18n="landing.how.title_2" >We build with you.</em></h2><p data-i18n="landing.how.sub" class="lead">We get to know the people and the challenge, explore possible paths and develop solutions whose results we track in practice.</p></div></div><ol class="process-overview"><li><span class="process-number" aria-hidden="true">01</span><h3 data-i18n="landing.how.s1_t" >Understand</h3><p data-i18n="landing.how.s1_d" >People, needs and the problem worth solving.</p></li><li><span class="process-number" aria-hidden="true">02</span><h3 data-i18n="landing.how.s2_t" >Experiment</h3><p data-i18n="landing.how.s2_d" >Ideas take shape and are tested with the people who use them.</p></li><li><span class="process-number" aria-hidden="true">03</span><h3 data-i18n="landing.how.s3_t" >Deliver and evolve</h3><p data-i18n="landing.how.s3_d" >Solutions in operation, with results we track.</p></li></ol><div class="process-bottom"><p data-i18n="landing.how.adapt" >The path adapts to your project and what we learn together.</p><a class="process-link studio-action" data-optic href="/como-trabalhamos.html?lang=en" data-process-link target="_blank" rel="noopener"><span data-i18n="landing.how.cta" >Explore our process</span> <span aria-hidden="true">→</span></a></div></div></section><div class="rule"><hr></div>
-<!-- ============ CASES ============ -->
-  <section class="block" id="cases">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="label">
-          <span class="num">v.</span>
-          <span class="bar"></span>
-          <span data-i18n="landing.cases.eyebrow">Cases</span>
-        </div>
-        <div>
-          <h2>
-            <span data-i18n="landing.cases.title_1">The difference shows</span>
-            <span class="italic" data-i18n="landing.cases.title_2">in the product.</span>
+      <section class="sec" id="solutions">
+        <div class="wrap">
+          <span class="k" data-i18n="nav.services">Services</span>
+          <h2 data-i18n="homePage.custom_software_development">
+            Custom software development
           </h2>
-        </div>
-      </div>
-
-      <div class="work-list">
-        <article class="work reveal">
-          <div class="work-idx">i.</div>
-          <div>
-            <h3 class="work-name">Itaú</h3>
-            <p class="work-desc" data-i18n="landing.cases.w1_d">Enterprise financial software work across data, integration and operational workflows, built for regulated environments where reliability matters.</p>
-          </div>
-          <div class="work-meta">
-            <span data-i18n="landing.cases.w1_m1">Financial services</span>
-            <span data-i18n="landing.cases.w1_m2">Node · TypeScript · GCP</span>
-          </div>
-        </article>
-        <article class="work reveal" data-delay="1">
-          <div class="work-idx">ii.</div>
-          <div>
-            <h3 class="work-name">Telefônica</h3>
-            <p class="work-desc" data-i18n="landing.cases.w2_d">Digital product and platform delivery for telecom operations, connecting business workflows with engineering execution at enterprise scale.</p>
-          </div>
-          <div class="work-meta">
-            <span data-i18n="landing.cases.w2_m1">Telecom</span>
-            <span data-i18n="landing.cases.w2_m2">React Native · GraphQL · Kubernetes</span>
-          </div>
-        </article>
-        <article class="work reveal" data-delay="2">
-          <div class="work-idx">iii.</div>
-          <div>
-            <h3 class="work-name">Volkswagen</h3>
-            <p class="work-desc" data-i18n="landing.cases.w3_d">Software delivery for industrial contexts, where process, traceability and user adoption have to survive the realities of production.</p>
-          </div>
-          <div class="work-meta">
-            <span data-i18n="landing.cases.w3_m1">Manufacturing</span>
-            <span data-i18n="landing.cases.w3_m2">Python · PyTorch · MQTT</span>
-          </div>
-        </article>
-        <article class="work reveal" id="case-gda">
-          <div class="work-idx" aria-hidden="true">iv.</div>
-          <div><h3 class="work-name"><a class="academy-link" href="https://gda.inosx.com/" target="_blank" rel="noopener">Global Dollar Academy</a></h3><p class="work-desc"><span data-i18n="education.caseGda">INOSX turned a curriculum on dollarization into an online classroom. Each of its 19 lessons has a study map that connects concepts, examples and activities. Learners can download the maps as PDFs.</span></p></div>
-          <div class="work-meta"><span data-i18n="education.educationCase">Course creation</span></div>
-        </article>
-        <article class="work reveal" id="case-psf">
-          <div class="work-idx" aria-hidden="true">v.</div>
-          <div><h3 class="work-name">Patrimônio sem Fronteiras</h3><p class="work-desc"><span data-i18n="education.casePsf">INOSX edited and designed Mario Mayerle’s manuscript as a digital book. The reading edition brings together 16 illustrated chapters, a linked table of contents and references that let readers check the sources.</span></p></div>
-          <div class="work-meta"><span data-i18n="education.editorialCase">E-book publishing</span></div>
-        </article>
-        <article class="work reveal" id="case-gpa">
-          <div class="work-idx" aria-hidden="true">vi.</div>
-          <div><h3 class="work-name"><a class="academy-link" href="https://gpa.inosx.com/" target="_blank" rel="noopener">Global Pricing Academy</a></h3><p class="work-desc"><span data-i18n="education.caseGpa">INOSX built the first module around a practical question: how should a business charge for an offer? Four lessons, exercises with feedback and a pricing lab let learners compare options and justify a decision.</span></p></div>
-          <div class="work-meta"><span data-i18n="education.educationCase">Course creation</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <div class="rule"><hr></div>
-
-  <!-- ============ INDUSTRIES ============ -->
-  <section class="block" id="industries">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="label">
-          <span class="num">vi.</span>
-          <span class="bar"></span>
-          <span data-i18n="landing.industries.eyebrow">Industries</span>
-        </div>
-        <div>
-          <h2>
-            <span data-i18n="landing.industries.title_1">Where we</span>
-            <span class="italic" data-i18n="landing.industries.title_2">ship today.</span>
-          </h2>
-        </div>
-      </div>
-
-      <ul class="industries-list reveal">
-        <li data-i18n="landing.extra.industry_0">Healthcare</li>
-        <li data-i18n="landing.extra.industry_1">Education</li>
-        <li data-i18n="landing.extra.industry_2">Financial services</li>
-        <li data-i18n="landing.extra.industry_3">Manufacturing</li>
-        <li data-i18n="landing.extra.industry_4">Retail</li>
-        <li data-i18n="landing.extra.industry_5">Logistics</li>
-        <li data-i18n="landing.extra.industry_6">Agribusiness</li>
-        <li data-i18n="landing.extra.industry_7">Energy</li>
-        <li data-i18n="landing.extra.industry_8">Public sector</li>
-        <li data-i18n="landing.extra.industry_9">Technology</li>
-        <li data-i18n="landing.extra.industry_10">Telecom</li>
-        <li data-i18n="landing.extra.industry_11">Legal</li>
-
-      </ul>
-    </div>
-  </section>
-
-  <div class="rule"><hr></div>
-
-  <!-- ============ FAQ ============ -->
-  <section class="block" id="faq">
-    <div class="container narrow">
-      <div class="section-head reveal" style="grid-template-columns: 1fr;">
-        <div>
-          <div class="label" style="margin-bottom: 1.5rem">
-            <span class="num">vii.</span>
-            <span class="bar"></span>
-            <span data-i18n="landing.faq.eyebrow">FAQ</span>
-          </div>
-          <h2>
-            <span data-i18n="landing.faq.title_1">Before you ask,</span>
-            <span class="italic" data-i18n="landing.faq.title_2">we've answered.</span>
-          </h2>
-        </div>
-      </div>
-
-      <div class="reveal">
-        <details class="faq">
-          <summary data-i18n="landing.faq.q1">How does a project with INOSX start?</summary>
-          <p data-i18n="landing.faq.a1">With a free diagnostic conversation. We map your context, objectives and data, and come back with a lean pilot proposal and a realistic timeline.</p>
-        </details>
-        <details class="faq">
-          <summary data-i18n="landing.faq.q2">How long until results?</summary>
-          <p data-i18n="landing.faq.a2">Typical pilots reach production in 4 to 8 weeks. The scope is defined to generate measurable value within that window.</p>
-        </details>
-        <details class="faq">
-          <summary data-i18n="landing.faq.q3">Will my data be exposed?</summary>
-          <p data-i18n="landing.faq.a3">No. We work with private architectures, local models when needed, data segregation and LGPD/GDPR compliance.</p>
-        </details>
-        <details class="faq">
-          <summary data-i18n="landing.faq.q4">Do you integrate with our systems?</summary>
-          <p data-i18n="landing.faq.a4">Yes. ERPs, CRMs, internal bases, APIs and legacy. Integration is part of scope, not a separate project.</p>
-        </details>
-        <details class="faq">
-          <summary data-i18n="landing.faq.q5">Do you have a fixed tech stack?</summary>
-          <p data-i18n="landing.faq.a5">No. We pick the right stack per project: Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows your operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem.</p>
-        </details>
-        <details class="faq">
-          <summary data-i18n="landing.faq.q6">How is pricing?</summary>
-          <p data-i18n="landing.faq.a6">Fixed scope for pilot and continuous-operation model for production. No hidden licenses, transparent costs.</p>
-        </details>
-        <details class="faq">
-          <summary data-i18n="landing.faq.q7">Do you serve outside Brazil?</summary>
-          <p data-i18n="landing.faq.a7">Yes. PT-BR, EN and ES, with global remote delivery.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LEAD CAPTURE ============ -->
-  <section class="lead-section" id="contact">
-    <div class="container lead-grid">
-      <div class="lead-text reveal">
-        <div class="label" style="margin-bottom: 2rem">
-          <span class="num">viii.</span>
-          <span class="bar"></span>
-          <span data-i18n="landing.lead.eyebrow">Direct conversation</span>
-        </div>
-        <h2>
-          <span data-i18n="landing.lead.title_1">Tell us what</span>
-          <span class="italic" data-i18n="landing.lead.title_2">you need.</span>
-          <br>
-          <span data-i18n="landing.lead.title_3">We come back with</span>
-          <span class="italic" data-i18n="landing.lead.title_4">a path.</span>
-        </h2>
-        <p class="lead" data-i18n="landing.lead.sub">
-          No endless form. No empty promises. Tell us the challenge in a few lines and within one business day we return with an initial diagnosis and next steps.
-        </p>
-        <ul class="lead-bullets">
-          <li><span data-i18n="landing.lead.b1">Reply within 1 business day</span></li>
-          <li><span data-i18n="landing.lead.b2">Initial diagnosis at no cost</span></li>
-          <li><span data-i18n="landing.lead.b3">Confidentiality guaranteed (NDA on request)</span></li>
-        </ul>
-      </div>
-
-      <form class="lead-form reveal"
-            data-delay="1"
-            id="leadForm"
-            action="https://api.inosx.com/v1/public-intake"
-            data-endpoint="https://api.inosx.com/v1/public-intake"
-            method="POST"
-            novalidate>
-        <div class="form-title" data-i18n="landing.lead.form_title">Talk to INOSX</div>
-
-        <div class="field">
-          <label for="lf-name" data-i18n="landing.lead.f_name">Name</label>
-          <input id="lf-name" type="text" name="name" required autocomplete="name" />
-        </div>
-        <div class="field">
-          <label for="lf-email" data-i18n="landing.lead.f_email">Work email</label>
-          <input id="lf-email" type="email" name="email" required autocomplete="email" placeholder="you@email.com" />
-        </div>
-        <div class="field">
-          <label for="lf-company" data-i18n="landing.lead.f_company">Company</label>
-          <input id="lf-company" type="text" name="company" required autocomplete="organization" />
-        </div>
-        <div class="field">
-          <label for="lf-phone" data-i18n="landing.lead.f_phone">Phone (optional)</label>
-          <input id="lf-phone" type="tel" name="phone" autocomplete="tel" />
-        </div>
-        <p class="partner-context" id="partner-context" hidden><span data-i18n="studio.interest">Partnership of interest</span> · <strong></strong></p>
-        <div class="field">
-          <label for="lf-msg" data-i18n="landing.lead.f_msg">What do you need to solve?</label>
-          <textarea id="lf-msg" name="message" required></textarea>
-        </div>
-
-        <div class="field-hp" aria-hidden="true">
-          <label>Don't fill: <input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label>
-        </div>
-
-        <label class="whitepaper-consent">
-          <input name="consent" type="checkbox" required>
-          <span data-i18n="landing.lead.consent">I agree that INOSX may use these details to respond to this request.</span>
-        </label>
-        <div class="intake-verification" role="group" aria-label="Security check by Cloudflare" data-i18n-aria-label="verification.label">
-          <strong data-i18n="verification.label">Security check by Cloudflare</strong>
-          <p data-check-status role="status" data-i18n="verification.loading">Loading the security check…</p>
-          <div data-turnstile-container data-sitekey="0x4AAAAAAD7_d54OZxbyLsTV"></div>
-          <button type="button" data-check-retry hidden data-i18n="verification.retry">Retry verification</button>
-        </div>
-
-        <div class="form-bottom">
-          <button type="submit" class="form-submit studio-action" data-optic id="leadSubmit">
-            <span data-i18n="landing.lead.submit">Send message</span>
-            <span class="arr">→</span>
-          </button>
-          <p class="form-foot">
-            <span data-i18n="landing.lead.privacy_1">By submitting you agree to our</span>
-            <a href="terms.html" data-i18n="landing.foot.terms" target="_blank" rel="noopener">Terms</a>
-            &amp;
-            <a href="/privacy-policy" data-i18n="landing.foot.privacy" target="_blank" rel="noopener">Privacy</a>.
+          <p
+            class="lead"
+            data-i18n="homePage.we_build_applications_connect_systems_and_develop_ai_solutions_for_your"
+          >
+            We build applications, connect systems and develop AI solutions for
+            your operations.
           </p>
-        </div>
-
-        <div class="form-success" id="leadSuccess" data-i18n="landing.lead.success">
-          ✓ Message received. We'll be in touch shortly.
-        </div>
-        <div class="form-error" id="leadError" data-i18n="landing.lead.error">
-          We couldn't send right now. Try again in a moment or write to support@inosx.com.
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
-  </main>
-  <footer class="site">
-    <div class="container">
-      <div class="foot-grid">
-        <div class="foot-col">
-          <div class="signature">
-            <img src="/assets/studio/wordmark.svg" alt="INOSX" width="1500" height="330" loading="lazy">
+          <div class="columns">
+            <article>
+              <h3 data-i18n="landing.solutions.s1_t">
+                Application development
+              </h3>
+              <p data-i18n="landing.solutions.s1_d">
+                Custom web, mobile, desktop and internal apps shaped around the
+                people who will use them.
+              </p>
+            </article>
+            <article>
+              <h3 data-i18n="landing.solutions.s2_t">
+                Platforms &amp; integration
+              </h3>
+              <p data-i18n="landing.solutions.s2_d">
+                APIs, integrations, data pipelines and legacy modernization.
+                Where existing software has to talk to new software without a
+                remix.
+              </p>
+            </article>
+            <article>
+              <h3 data-i18n="landing.solutions.s3_t">
+                AI solution development
+              </h3>
+              <p data-i18n="landing.solutions.s3_d">
+                AI agents, knowledge platforms and orchestration shipped to
+                production with observability, security and cost control.
+              </p>
+            </article>
           </div>
-          <p data-i18n="landing.foot.tagline">Application development, technology and AI solutions for production.</p>
+          <div class="actions">
+            <a class="btn hot" data-optic="" href="#contact"
+              ><span data-i18n="homePage.describe_my_project"
+                >Describe my project</span
+              >
+              <i aria-hidden="true">↓</i></a
+            >
+            <a class="textlink" href="#cases"
+              ><span data-i18n="homePage.view_selected_work"
+                >View selected work</span
+              >
+              <i aria-hidden="true">↓</i></a
+            >
+          </div>
+          <div class="compact" id="how-we-work">
+            <div>
+              <span
+                class="k"
+                data-i18n="homePage.from_prototype_to_a_system_your_team_uses"
+                >From prototype to a system your team uses.</span
+              >
+              <h3
+                data-i18n="homePage.how_your_project_moves_from_idea_to_operation"
+              >
+                How your project moves from idea to operation
+              </h3>
+              <a
+                class="textlink"
+                href="/como-trabalhamos.html"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="homePage.view_the_stages_of_a_project"
+                  >View the stages of a project</span
+                >
+                <i aria-hidden="true">↗</i></a
+              >
+            </div>
+            <div>
+              <div class="steps">
+                <div>
+                  <b data-i18n="landing.how.s1_t">Understand</b>
+                  <p data-i18n="landing.how.s1_d">
+                    People, needs and the problem worth solving.
+                  </p>
+                </div>
+                <div>
+                  <b data-i18n="landing.how.s2_t">Experiment</b>
+                  <p data-i18n="landing.how.s2_d">
+                    Ideas take shape and are tested with the people who use
+                    them.
+                  </p>
+                </div>
+                <div>
+                  <b data-i18n="landing.how.s3_t">Deliver and evolve</b>
+                  <p data-i18n="landing.how.s3_d">
+                    Solutions in operation, with results we track.
+                  </p>
+                </div>
+              </div>
+              <p class="notice" data-i18n="landing.how.adapt">
+                The path adapts to your project and what we learn together.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="foot-col">
-          <h3 data-i18n="landing.foot.h_company">Company</h3>
-          <ul>
-            <li><a href="#solutions" data-i18n="landing.nav.solutions">Solutions</a></li>
-            <li><a href="produtos.html" data-i18n="landing.nav.products" target="_blank" rel="noopener">Products</a></li>
-            <li><a href="/parcerias/" target="_blank" rel="noopener"><span data-i18n="studio.partners">Partnerships</span></a></li>
-            <li><a href="/store/" data-i18n="landing.nav.store" target="_blank" rel="noopener">Store</a></li>
-            <li><a href="#cases" data-i18n="landing.nav.cases">Cases</a></li>
-          </ul>
+      </section>
+      <section class="sec paper" id="products">
+        <div class="wrap">
+          <div class="eyeline">
+            <div>
+              <h2 data-i18n="homePage.inosx_products">INOSX products</h2>
+              <p
+                class="lead"
+                data-i18n="homePage.choose_what_to_explore_software_and_ai_applications_courses_or_e_books"
+              >
+                Choose what to explore: software and AI applications, courses or
+                e-books.
+              </p>
+            </div>
+          </div>
+          <div
+            aria-label="Products"
+            class="tabs"
+            data-i18n-aria-label="landing.nav.products"
+            role="group"
+          >
+            <button
+              aria-controls="apps"
+              aria-pressed="true"
+              class="tab"
+              data-i18n="homePage.software_and_ai"
+            >
+              Software and AI</button
+            ><button
+              aria-controls="education"
+              aria-pressed="false"
+              class="tab"
+              data-i18n="education.title"
+            >
+              Courses and e-books
+            </button>
+          </div>
+          <div id="apps">
+            <article class="feature">
+              <div class="info">
+                <h3>AgentOS</h3>
+                <p data-i18n="landing.agentos.product">
+                  Your digital team, in your browser. Delegate tasks,
+                  collaborate with AI employees and review the results. Choose a
+                  monthly subscription to get started.
+                </p>
+                <div class="actions">
+                  <a
+                    class="btn hot"
+                    data-agentos-link=""
+                    data-optic=""
+                    href="https://agentos.inosx.com/?lang=en"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><span data-i18n="homePage.view_agentos_plans"
+                      >View AgentOS plans</span
+                    >
+                    <i aria-hidden="true">↗</i></a
+                  ><a
+                    class="textlink"
+                    data-agentos-access=""
+                    href="https://app.agentos.inosx.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><span data-i18n="landing.agentos.access"
+                      >Access AgentOS</span
+                    >
+                    <i aria-hidden="true">↗</i></a
+                  >
+                </div>
+              </div>
+              <a
+                aria-label="AgentOS commercial in English"
+                class="poster"
+                data-i18n-aria-label="landing.commercial.player"
+                href="https://youtu.be/vOsdKmG0hGQ"
+                id="agentos-commercial"
+                rel="noopener"
+                target="_blank"
+                ><span class="play" data-i18n="homePage.watch_on_youtube"
+                  >▷  Watch on YouTube</span
+                ></a
+              >
+            </article>
+            <details class="product-archive fold" id="aiteam-x-retrospective">
+              <summary data-i18n="homePage.agentos_history_and_aiteam_x_demos">
+                AgentOS history and AITEAM-X demos
+              </summary>
+              <p
+                data-i18n="homePage.aiteam_x_explored_a_shared_workspace_for_ai_agents_memory_and_human_revi"
+              >
+                AITEAM-X explored a shared workspace for AI agents, memory and
+                human review. Its demonstrations remain here as a record of that
+                earlier chapter. These AITEAM-X videos document an earlier
+                chapter. For current AgentOS features and subscription plans,
+                visit the AgentOS website.
+              </p>
+              <a
+                class="textlink"
+                href="https://www.youtube.com/watch?v=l9ob9KGVqhQ"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="landing.agentos.archive"
+                  >Watch the original AITEAM-X platform tour</span
+                >
+                <i aria-hidden="true">↗</i></a
+              >
+              <a
+                class="textlink"
+                href="https://www.youtube.com/@AITEAMX"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span>AITEAM-X / YouTube</span> <i aria-hidden="true">↗</i></a
+              >
+              <a
+                class="textlink"
+                data-agentos-link=""
+                href="https://agentos.inosx.com/?lang=en"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="homePage.view_agentos_plans"
+                  >View AgentOS plans</span
+                >
+                <i aria-hidden="true">↗</i></a
+              >
+              <h3
+                data-i18n="landing.services_videos.video2_title"
+                id="video-aiteamx-title"
+              >
+                AITEAM-X — AI Operations Desk
+              </h3>
+              <video
+                aria-describedby="video-aiteamx-description"
+                controls=""
+                data-i18n-aria-label="landing.services_videos.video2_aria"
+                playsinline=""
+                poster="/assets/videos/posters/aiteamx-ai-operations-desk.jpg"
+                preload="none"
+              >
+                <source
+                  src="/assets/videos/aiteamx-ai-operations-desk.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <h3
+                data-i18n="landing.services_videos.video3_title"
+                id="video-services-title"
+              >
+                AI Agents, Automation &amp; SaaS Delivery
+              </h3>
+              <video
+                aria-describedby="video-services-description"
+                controls=""
+                data-i18n-aria-label="landing.services_videos.video3_aria"
+                playsinline=""
+                poster="/assets/videos/posters/ai-agents-automation-saas-delivery.jpg"
+                preload="none"
+              >
+                <source
+                  src="/assets/videos/ai-agents-automation-saas-delivery.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </details>
+            <div class="softlist">
+              <article class="soft">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/assets/studio/home/datagpt.webp"
+                />
+                <div>
+                  <h3>DataGPT</h3>
+                  <p data-i18n="landing.products.datagpt">
+                    Talk to your data: analyses, charts and answers in natural
+                    language.
+                  </p>
+                  <a
+                    class="textlink"
+                    href="/produtos.html#datagpt"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><span data-i18n="homePage.explore_datagpt"
+                      >Explore DataGPT</span
+                    >
+                    <i aria-hidden="true">↗</i></a
+                  >
+                </div>
+              </article>
+              <article class="soft">
+                <img
+                  alt=""
+                  loading="lazy"
+                  src="/assets/studio/home/messiax.webp"
+                />
+                <div>
+                  <h3>Messiax</h3>
+                  <p data-i18n="landing.products.messiax">
+                    AI conversational service: replies, follow-up and
+                    qualification on your customer's channel.
+                  </p>
+                  <a
+                    class="textlink"
+                    href="https://messiax.ai"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><span data-i18n="homePage.explore_messiax"
+                      >Explore Messiax</span
+                    >
+                    <i aria-hidden="true">↗</i></a
+                  >
+                </div>
+              </article>
+              <article class="soft">
+                <img alt="" loading="lazy" src="/store/icons/tubelens.svg" />
+                <div>
+                  <h3>TubeLens</h3>
+                  <p data-i18n="landing.products.tubelens">
+                    Editorial analysis for YouTube videos: density, clarity,
+                    credibility and originality. Popularity is not quality.
+                  </p>
+                  <a
+                    class="textlink"
+                    href="https://tubelens.app"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><span data-i18n="homePage.explore_tubelens"
+                      >Explore TubeLens</span
+                    >
+                    <i aria-hidden="true">↗</i></a
+                  >
+                </div>
+              </article>
+            </div>
+            <details class="fold">
+              <summary data-i18n="homePage.more_software_and_ai_products">
+                More software and AI products
+              </summary>
+              <div class="softlist">
+                <article class="soft">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="/assets/studio/home/psychox.webp"
+                  />
+                  <div>
+                    <h3>PsychoX</h3>
+                    <p data-i18n="landing.products.psychox">
+                      Digital psychometric assessments with AI-assisted clinical
+                      reports.
+                    </p>
+                    <a
+                      class="textlink"
+                      href="https://psychox.app"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      ><span data-i18n="homePage.explore_psychox"
+                        >Explore PsychoX</span
+                      >
+                      <i aria-hidden="true">↗</i></a
+                    >
+                  </div>
+                </article>
+                <article class="soft">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="/assets/studio/home/surveyflow.webp"
+                  />
+                  <div>
+                    <h3>SurveyFlow</h3>
+                    <p data-i18n="landing.products.surveyflow">
+                      Smart surveys with automated analysis and actionable
+                      insights.
+                    </p>
+                    <a
+                      class="textlink"
+                      href="https://surveyflow.ai"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      ><span data-i18n="homePage.explore_surveyflow"
+                        >Explore SurveyFlow</span
+                      >
+                      <i aria-hidden="true">↗</i></a
+                    >
+                  </div>
+                </article>
+                <article class="soft">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="/assets/studio/home/tranquilopa.webp"
+                  />
+                  <div>
+                    <h3>Tranquilopa</h3>
+                    <p data-i18n="landing.products.tranquilopa">
+                      AI-powered well-being and mental health: continuous
+                      support, guided content and follow-up.
+                    </p>
+                    <a
+                      class="textlink"
+                      href="https://tranquilopa.com"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      ><span data-i18n="homePage.explore_tranquilopa"
+                        >Explore Tranquilopa</span
+                      >
+                      <i aria-hidden="true">↗</i></a
+                    >
+                  </div>
+                </article>
+                <article class="soft">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="/assets/studio/home/ccoinx.webp"
+                  />
+                  <div>
+                    <h3>Ccoinx.ai</h3>
+                    <p data-i18n="landing.products.ccoinx">
+                      Intelligence applied to finance and digital assets:
+                      signals, monitoring and automation.
+                    </p>
+                    <a
+                      class="textlink"
+                      href="https://ccoinx.ai"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      ><span data-i18n="homePage.explore_ccoinx_ai"
+                        >Explore Ccoinx.ai</span
+                      >
+                      <i aria-hidden="true">↗</i></a
+                    >
+                  </div>
+                </article>
+              </div>
+            </details>
+          </div>
+          <div hidden="" id="education">
+            <div class="columns ed" id="cursos-e-ebooks">
+              <article>
+                <small data-i18n="education.course">Online course</small>
+                <h3>Global Dollar Academy</h3>
+                <p data-i18n="education.gda">
+                  A course on dollarization and international diversification,
+                  with a study map for each lesson.
+                </p>
+                <a
+                  class="textlink"
+                  href="https://gda.inosx.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><span data-i18n="homePage.explore_global_dollar_academy"
+                    >Explore Global Dollar Academy</span
+                  >
+                  <i aria-hidden="true">↗</i></a
+                >
+              </article>
+              <article>
+                <small>E-book</small>
+                <h3>Patrimônio sem Fronteiras</h3>
+                <p data-i18n="education.psf">
+                  Mario Mayerle’s illustrated e-book on currency exposure,
+                  diversification and international wealth planning.
+                </p>
+                <a
+                  class="textlink"
+                  href="https://psf.gda.inosx.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><span data-i18n="homePage.explore_patrim_nio_sem_fronteiras"
+                    >Explore Patrimônio sem Fronteiras</span
+                  >
+                  <i aria-hidden="true">↗</i></a
+                >
+              </article>
+              <article>
+                <small data-i18n="education.course">Online course</small>
+                <h3>Global Pricing Academy</h3>
+                <p data-i18n="education.gpa">
+                  A pricing course for digital businesses. The first module
+                  covers price, cost, value and how to choose a billing unit.
+                </p>
+                <a
+                  class="textlink"
+                  href="https://gpa.inosx.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><span data-i18n="homePage.explore_global_pricing_academy"
+                    >Explore Global Pricing Academy</span
+                  >
+                  <i aria-hidden="true">↗</i></a
+                >
+              </article>
+            </div>
+          </div>
+          <div class="familyfooter" id="store">
+            <a
+              class="textlink"
+              href="/store/"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><span data-i18n="homePage.browse_the_full_inosx_store_catalog"
+                >Browse the full INOSX Store catalog</span
+              >
+              <i aria-hidden="true">↗</i></a
+            >
+          </div>
         </div>
-        <div class="foot-col">
-          <h3 data-i18n="landing.foot.h_legal">Legal</h3>
-          <ul>
-            <li><a href="terms.html" data-i18n="landing.foot.terms" target="_blank" rel="noopener">Terms</a></li>
-            <li><a href="/privacy-policy" data-i18n="landing.foot.privacy" target="_blank" rel="noopener">Privacy</a></li>
-          </ul>
+      </section>
+      <section class="sec partner" id="partners">
+        <div class="wrap split" id="parceria-editorial">
+          <div>
+            <span class="k" data-i18n="homePage.commercial_partnerships"
+              >Commercial partnerships</span
+            >
+            <h2 data-i18n="studio.editorialTitle">
+              Create your e-book with INOSX
+            </h2>
+            <p class="lead" data-i18n="studio.editorialBody">
+              Structure a book from your material or edit a manuscript. INOSX
+              prepares the edition and the contracting partner handles sales.
+            </p>
+            <div class="actions">
+              <a
+                class="btn hot"
+                data-optic=""
+                href="https://ebook.inosx.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="studio.editorialCta"
+                  >Explore the editorial partnership (in Portuguese)</span
+                >
+                <i aria-hidden="true">↗</i></a
+              >
+            </div>
+            <p class="notice">
+              <span
+                data-i18n="homePage.course_software_and_ai_application_partnerships_are_under_study"
+                >Course, software and AI application partnerships are under
+                study.</span
+              >
+              <a
+                class="textlink"
+                href="/parcerias/"
+                rel="noopener noreferrer"
+                target="_blank"
+                ><span data-i18n="homePage.view_partnership_catalog"
+                  >View partnership catalog</span
+                >
+                <i aria-hidden="true">↗</i></a
+              >
+            </p>
+          </div>
+          <img
+            alt=""
+            class="book"
+            loading="lazy"
+            src="/parcerias/ebooks/estudio-editorial.webp"
+          />
         </div>
-        <div class="foot-col">
-          <h3 data-i18n="landing.foot.h_contact">Contact</h3>
-          <ul>
-            <li><a href="https://admin.inosx.com" data-i18n="landing.nav.admin" target="_blank" rel="noopener">Admin</a></li>
-            <li><a href="mailto:support@inosx.com">support@inosx.com</a></li>
-            <li><a href="https://app.agentos.inosx.com" data-agentos-access data-i18n="landing.agentos.access" target="_blank" rel="noopener">Access AgentOS</a></li>
-            <li><a href="#contact" data-i18n="landing.foot.cta">Start conversation →</a></li>
-          </ul>
+      </section>
+      <section class="sec" id="cases">
+        <div class="wrap">
+          <span class="k" data-i18n="landing.cases.eyebrow">Selected work</span>
+          <h2 data-i18n="homePage.inosx_projects_and_deliveries">
+            INOSX projects and deliveries
+          </h2>
+          <div class="caselist">
+            <h3 data-i18n="homePage.educational_production">
+              Educational production
+            </h3>
+            <details>
+              <summary>Global Dollar Academy</summary>
+              <p>
+                <span data-i18n="education.caseGda"
+                  >INOSX turned a curriculum on dollarization into an online
+                  classroom. Each of its 19 lessons has a study map that
+                  connects concepts, examples and activities. Learners can
+                  download the maps as PDFs.</span
+                >
+                <a
+                  class="textlink"
+                  href="https://gda.inosx.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><span data-i18n="homePage.explore_global_dollar_academy_case"
+                    >Explore Global Dollar Academy</span
+                  >
+                  <i aria-hidden="true">↗</i></a
+                >
+              </p>
+            </details>
+            <details>
+              <summary>Patrimônio sem Fronteiras</summary>
+              <p>
+                <span data-i18n="education.casePsf"
+                  >INOSX edited and designed Mario Mayerle’s manuscript as a
+                  digital book. The reading edition brings together 16
+                  illustrated chapters, a linked table of contents and
+                  references that let readers check the sources.</span
+                >
+                <a
+                  class="textlink"
+                  href="https://psf.gda.inosx.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><span data-i18n="homePage.explore_patrim_nio_sem_fronteiras"
+                    >Explore Patrimônio sem Fronteiras</span
+                  >
+                  <i aria-hidden="true">↗</i></a
+                >
+              </p>
+            </details>
+            <details>
+              <summary>Global Pricing Academy</summary>
+              <p>
+                <span data-i18n="education.caseGpa"
+                  >INOSX built the first module around a practical question: how
+                  should a business charge for an offer? Four lessons, exercises
+                  with feedback and a pricing lab let learners compare options
+                  and justify a decision.</span
+                >
+                <a
+                  class="textlink"
+                  href="https://gpa.inosx.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  ><span
+                    data-i18n="homePage.explore_global_pricing_academy_case"
+                    >Explore Global Pricing Academy</span
+                  >
+                  <i aria-hidden="true">↗</i></a
+                >
+              </p>
+            </details>
+            <h3 data-i18n="homePage.selected_work_by_industry">
+              Selected work by industry
+            </h3>
+            <details>
+              <summary>
+                <span class="caseband" id="clients"
+                  ><img alt="" src="/clients/itau.svg" /> Itaú</span
+                >
+              </summary>
+              <p data-i18n="landing.cases.w1_d">
+                Enterprise financial software work across data, integration and
+                operational workflows, built for regulated environments where
+                reliability matters.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <span class="caseband"
+                  ><img alt="" src="/clients/telefonica.svg" /> Telefônica</span
+                >
+              </summary>
+              <p data-i18n="landing.cases.w2_d">
+                Digital product and platform delivery for telecom operations,
+                connecting business workflows with engineering execution at
+                enterprise scale.
+              </p>
+            </details>
+            <details id="industries">
+              <summary>
+                <span class="caseband"
+                  ><img alt="" src="/clients/volkswagen.svg" /> Volkswagen</span
+                >
+              </summary>
+              <p data-i18n="landing.cases.w3_d">
+                Software delivery for industrial contexts, where process,
+                traceability and user adoption have to survive the realities of
+                production.
+              </p>
+            </details>
+          </div>
+          <details class="fold">
+            <summary data-i18n="homePage.industries_served">
+              Industries served
+            </summary>
+            <div class="chips">
+              <span data-i18n="landing.extra.industry_0">Healthcare</span
+              ><span data-i18n="landing.extra.industry_1">Education</span
+              ><span data-i18n="landing.cases.w1_m1">Financial services</span
+              ><span data-i18n="landing.cases.w3_m1">Manufacturing</span
+              ><span data-i18n="landing.extra.industry_4">Retail</span
+              ><span data-i18n="landing.extra.industry_5">Logistics</span
+              ><span data-i18n="landing.extra.industry_6">Agribusiness</span
+              ><span data-i18n="landing.extra.industry_7">Energy</span
+              ><span data-i18n="landing.extra.industry_8">Public sector</span
+              ><span data-i18n="landing.extra.industry_9">Technology</span
+              ><span data-i18n="landing.extra.industry_10">Telecom</span
+              ><span data-i18n="landing.extra.industry_11">Legal</span>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="sec paper" id="faq">
+        <div class="wrap faqgrid">
+          <h2 data-i18n="homePage.questions_about_custom_projects">
+            Questions about custom projects
+          </h2>
+          <div>
+            <details class="fold">
+              <summary data-i18n="landing.faq.q1">
+                How does a project with INOSX start?
+              </summary>
+              <p data-i18n="landing.faq.a1">
+                With a free diagnostic conversation. We map your context,
+                objectives and data, and come back with a lean pilot proposal
+                and a realistic timeline.
+              </p>
+            </details>
+            <details class="fold">
+              <summary data-i18n="landing.faq.q6">How is pricing?</summary>
+              <p data-i18n="landing.faq.a6">
+                Fixed scope for pilot and continuous-operation model for
+                production. No hidden licenses, transparent costs.
+              </p>
+            </details>
+            <details class="fold">
+              <summary
+                data-i18n="homePage.how_long_does_a_pilot_typically_take_to_go_live"
+              >
+                How long does a pilot typically take to go live?
+              </summary>
+              <p data-i18n="landing.faq.a2">
+                Typical pilots reach production in 4 to 8 weeks. The scope is
+                defined to generate measurable value within that window.
+              </p>
+            </details>
+            <details class="fold">
+              <summary data-i18n="landing.faq.q4">
+                Do you integrate with our systems?
+              </summary>
+              <p data-i18n="landing.faq.a4">
+                Yes. ERPs, CRMs, internal bases, APIs and legacy. Integration is
+                part of scope, not a separate project.
+              </p>
+            </details>
+            <details class="fold">
+              <summary data-i18n="landing.faq.q3">
+                Will my data be exposed?
+              </summary>
+              <p data-i18n="landing.faq.a3">
+                No. We work with private architectures, local models when
+                needed, data segregation and LGPD/GDPR compliance.
+              </p>
+            </details>
+            <details class="fold">
+              <summary data-i18n="landing.faq.q5">
+                Do you have a fixed tech stack?
+              </summary>
+              <p data-i18n="landing.faq.a5">
+                No. We pick the right stack per project: Node, Python, Go, Rust
+                on the back end; React, Svelte, Vue on the front; managed cloud
+                or on-prem. Architecture follows your operational reality, not
+                our preference. The same applies to AI: proprietary, open-source
+                or local model, picked by the problem.
+              </p>
+            </details>
+            <details class="fold">
+              <summary data-i18n="landing.faq.q7">
+                Do you serve outside Brazil?
+              </summary>
+              <p data-i18n="landing.faq.a7">
+                Yes. PT-BR, EN and ES, with global remote delivery.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="sec" id="contact">
+        <div class="wrap contactgrid">
+          <div>
+            <span class="k" data-i18n="landing.foot.h_contact">Contact</span>
+            <h2 data-i18n="landing.lead.form_title">Talk to INOSX</h2>
+            <p
+              class="lead"
+              data-i18n="homePage.describe_your_challenge_in_a_few_lines_within_one_business_day_inosx_res"
+            >
+              Describe your challenge in a few lines. Within one business day,
+              INOSX responds with an initial diagnosis and next steps.
+            </p>
+            <ul>
+              <li data-i18n="landing.lead.b2">Initial diagnosis at no cost</li>
+              <li data-i18n="landing.lead.b3">
+                Confidentiality guaranteed (NDA on request)
+              </li>
+            </ul>
+          </div>
+          <form
+            action="https://api.inosx.com/v1/public-intake"
+            class="lead-form"
+            data-delay="1"
+            data-endpoint="https://api.inosx.com/v1/public-intake"
+            id="leadForm"
+            method="POST"
+            novalidate=""
+          >
+            <div class="field">
+              <label data-i18n="landing.lead.f_name" for="lf-name">Name</label>
+              <input
+                autocomplete="name"
+                id="lf-name"
+                name="name"
+                required=""
+                type="text"
+              />
+            </div>
+            <div class="field">
+              <label data-i18n="landing.lead.f_email" for="lf-email"
+                >Work email</label
+              >
+              <input
+                autocomplete="email"
+                id="lf-email"
+                name="email"
+                placeholder="you@email.com"
+                required=""
+                type="email"
+              />
+            </div>
+            <div class="field">
+              <label data-i18n="landing.lead.f_company" for="lf-company"
+                >Company</label
+              >
+              <input
+                autocomplete="organization"
+                id="lf-company"
+                name="company"
+                required=""
+                type="text"
+              />
+            </div>
+            <div class="field">
+              <label data-i18n="landing.lead.f_phone" for="lf-phone"
+                >Phone (optional)</label
+              >
+              <input autocomplete="tel" id="lf-phone" name="phone" type="tel" />
+            </div>
+            <p class="partner-context" hidden="" id="partner-context">
+              <span data-i18n="studio.interest">Partnership of interest</span> ·
+              <strong></strong>
+            </p>
+            <div class="field">
+              <label data-i18n="landing.lead.f_msg" for="lf-msg"
+                >What do you need to solve?</label
+              >
+              <textarea
+                id="lf-msg"
+                name="message"
+                required=""
+                rows="3"
+              ></textarea>
+            </div>
+            <div aria-hidden="true" class="field-hp">
+              <label
+                >Don't fill:
+                <input
+                  autocomplete="off"
+                  name="_gotcha"
+                  tabindex="-1"
+                  type="text"
+              /></label>
+            </div>
+            <label class="whitepaper-consent">
+              <input name="consent" required="" type="checkbox" />
+              <span data-i18n="landing.lead.consent"
+                >I agree that INOSX may use these details to respond to this
+                request.</span
+              >
+            </label>
+            <div
+              aria-label="Security check by Cloudflare"
+              class="intake-verification"
+              data-i18n-aria-label="verification.label"
+              role="group"
+            >
+              <strong data-i18n="verification.label"
+                >Security check by Cloudflare</strong
+              >
+              <p
+                data-check-status=""
+                data-i18n="verification.loading"
+                role="status"
+              >
+                Loading the security check…
+              </p>
+              <div
+                data-sitekey="0x4AAAAAAD7_d54OZxbyLsTV"
+                data-turnstile-container=""
+              ></div>
+              <button
+                data-check-retry=""
+                data-i18n="verification.retry"
+                hidden=""
+                type="button"
+              >
+                Retry verification
+              </button>
+            </div>
+            <div class="form-bottom">
+              <button
+                class="btn hot"
+                data-optic=""
+                id="leadSubmit"
+                type="submit"
+              >
+                <span data-i18n="landing.lead.submit">Send message</span>
+                <span class="arr">→</span>
+              </button>
+              <p class="form-foot">
+                <span data-i18n="landing.lead.privacy_1"
+                  >By submitting you agree to our</span
+                >
+                <a
+                  data-i18n="landing.foot.terms"
+                  href="terms.html"
+                  rel="noopener"
+                  target="_blank"
+                  >Terms</a
+                >
+                &amp;
+                <a
+                  data-i18n="landing.foot.privacy"
+                  href="/privacy-policy"
+                  rel="noopener"
+                  target="_blank"
+                  >Privacy</a
+                >.
+              </p>
+            </div>
+            <div
+              class="form-success"
+              data-i18n="landing.lead.success"
+              id="leadSuccess"
+              role="status"
+            >
+              ✓ Message received. We'll be in touch shortly.
+            </div>
+            <div
+              class="form-error"
+              data-i18n="landing.lead.error"
+              id="leadError"
+              role="alert"
+            >
+              We couldn't send right now. Try again in a moment or write to
+              support@inosx.com.
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="sec">
+      <div class="wrap footgrid">
+        <div>
+          <a aria-label="INOSX" class="mark" href="#top"
+            ><img alt="INOSX" src="/assets/studio/wordmark.svg"
+          /></a>
+          <p data-i18n="landing.foot.rights">All rights reserved.</p>
+          <a
+            aria-label="Version"
+            class="version-badge"
+            href="https://github.com/m2f0/inosx"
+            id="versionBadge"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="ver" id="versionBadgeVer">v...</span>
+            <span aria-hidden="true" class="sep">·</span>
+            <span class="hash" id="versionBadgeHash">...</span>
+          </a>
+        </div>
+        <div>
+          <b data-i18n="landing.lead.f_company">Company</b
+          ><a class="textlink" href="#solutions"
+            ><span data-i18n="nav.services">Services</span>
+            <i aria-hidden="true">↓</i></a
+          ><a
+            class="textlink"
+            href="/produtos.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span data-i18n="homePage.product_catalog">Product catalog</span>
+            <i aria-hidden="true">↗</i></a
+          ><a
+            class="textlink"
+            href="/store/"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span>INOSX Store</span> <i aria-hidden="true">↗</i></a
+          ><a
+            class="textlink"
+            href="/parcerias/"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span data-i18n="studio.partners">Partnerships</span>
+            <i aria-hidden="true">↗</i></a
+          >
+        </div>
+        <div>
+          <b data-i18n="homePage.access">Access</b
+          ><a
+            class="textlink"
+            data-agentos-access=""
+            href="https://app.agentos.inosx.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span data-i18n="landing.agentos.access">Access AgentOS</span>
+            <i aria-hidden="true">↗</i></a
+          ><a
+            class="textlink"
+            href="https://admin.inosx.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span>Admin</span> <i aria-hidden="true">↗</i></a
+          ><b>Legal</b
+          ><a
+            class="textlink"
+            href="/terms.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span data-i18n="landing.foot.terms">Terms</span>
+            <i aria-hidden="true">↗</i></a
+          ><a
+            class="textlink"
+            href="/privacy-policy.html"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span data-i18n="landing.foot.privacy">Privacy</span>
+            <i aria-hidden="true">↗</i></a
+          >
+        </div>
+        <div>
+          <b data-i18n="landing.foot.h_contact">Contact</b
+          ><a
+            class="textlink"
+            href="mailto:support@inosx.com"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><span>support@inosx.com</span> <i aria-hidden="true">↗</i></a
+          ><a class="textlink" href="#contact"
+            ><span data-i18n="homePage.go_to_contact_form"
+              >Go to contact form</span
+            >
+            <i aria-hidden="true">↓</i></a
+          >
         </div>
       </div>
-
-      <div class="foot-bottom">
-        <span>© <span id="year"></span> INOSX. <span data-i18n="landing.foot.rights">All rights reserved.</span></span>
-        <span data-i18n="landing.foot.crafted">Operating globally</span>
+    </footer>
+    <aside
+      aria-labelledby="whitepaperToastTitle"
+      class="whitepaper-toast"
+      data-download-url="/assets/whitepaper/AITEAM-X_Operating_Agents_Whitepaper.pdf"
+      data-endpoint="https://api.inosx.com/v1/public-intake"
+      data-whitepaper-toast=""
+      hidden=""
+    >
+      <button
+        aria-label="Dismiss whitepaper offer"
+        class="whitepaper-close"
+        data-i18n-aria-label="landing.extra.attr_0"
+        data-whitepaper-close=""
+        type="button"
+      >
+        ×
+      </button>
+      <p class="whitepaper-kicker" data-i18n="landing.extra.ui_0">
+        Free whitepaper
+      </p>
+      <h2 data-i18n="landing.extra.ui_1" id="whitepaperToastTitle">
+        Turn AI work into an operation.
+      </h2>
+      <p class="whitepaper-copy" data-i18n="landing.extra.ui_2">
+        Get the AITEAM-X Operating Agents whitepaper and see how goals, memory,
+        proof and human control become reliable AI operations.
+      </p>
+      <div
+        aria-label="AITEAM-X Operating Agents whitepaper page previews"
+        class="whitepaper-preview"
+      >
+        <figure>
+          <img
+            alt="Whitepaper cover preview"
+            decoding="async"
+            height="594"
+            loading="lazy"
+            src="/assets/whitepaper-preview/operating-agents-cover.jpg"
+            width="420"
+          />
+        </figure>
+        <figure>
+          <img
+            alt="Whitepaper contents preview"
+            decoding="async"
+            height="594"
+            loading="lazy"
+            src="/assets/whitepaper-preview/operating-agents-contents.jpg"
+            width="420"
+          />
+        </figure>
+        <figure>
+          <img
+            alt="SpecOps and AgentOps preview page"
+            decoding="async"
+            height="594"
+            loading="lazy"
+            src="/assets/whitepaper-preview/operating-agents-specops.jpg"
+            width="420"
+          />
+        </figure>
+        <figure>
+          <img
+            alt="Memory and local-first execution preview page"
+            decoding="async"
+            height="594"
+            loading="lazy"
+            src="/assets/whitepaper-preview/operating-agents-memory.jpg"
+            width="420"
+          />
+        </figure>
+        <figure>
+          <img
+            alt="AI Operations Desk preview page"
+            decoding="async"
+            height="594"
+            loading="lazy"
+            src="/assets/whitepaper-preview/operating-agents-operations-desk.jpg"
+            width="420"
+          />
+        </figure>
       </div>
-    </div>
-  </footer>
-
-  <!-- ============ Version badge (bottom-right, fetches /version.json) ============ -->
-  <a class="version-badge" id="versionBadge" href="https://github.com/m2f0/inosx" target="_blank" rel="noopener" aria-label="Version">
-    <span class="ver" id="versionBadgeVer">v...</span>
-    <span class="sep" aria-hidden="true">·</span>
-    <span class="hash" id="versionBadgeHash">...</span>
-  </a>
-
-  <aside
-    class="whitepaper-toast"
-    data-whitepaper-toast
-    data-endpoint="https://api.inosx.com/v1/public-intake"
-    data-download-url="/assets/whitepaper/AITEAM-X_Operating_Agents_Whitepaper.pdf"
-    aria-labelledby="whitepaperToastTitle"
-    hidden
-  >
-    <button class="whitepaper-close" type="button" data-whitepaper-close aria-label="Dismiss whitepaper offer" data-i18n-aria-label="landing.extra.attr_0">&times;</button>
-    <p class="whitepaper-kicker" data-i18n="landing.extra.ui_0">Free whitepaper</p>
-    <h2 id="whitepaperToastTitle" data-i18n="landing.extra.ui_1">Turn AI work into an operation.</h2>
-    <p class="whitepaper-copy" data-i18n="landing.extra.ui_2">Get the AITEAM-X Operating Agents whitepaper and see how goals, memory, proof and human control become reliable AI operations.</p>
-
-    <div class="whitepaper-preview" aria-label="AITEAM-X Operating Agents whitepaper page previews">
-      <figure><img src="/assets/whitepaper-preview/operating-agents-cover.jpg" alt="Whitepaper cover preview" width="420" height="594" loading="lazy" decoding="async"></figure>
-      <figure><img src="/assets/whitepaper-preview/operating-agents-contents.jpg" alt="Whitepaper contents preview" width="420" height="594" loading="lazy" decoding="async"></figure>
-      <figure><img src="/assets/whitepaper-preview/operating-agents-specops.jpg" alt="SpecOps and AgentOps preview page" width="420" height="594" loading="lazy" decoding="async"></figure>
-      <figure><img src="/assets/whitepaper-preview/operating-agents-memory.jpg" alt="Memory and local-first execution preview page" width="420" height="594" loading="lazy" decoding="async"></figure>
-      <figure><img src="/assets/whitepaper-preview/operating-agents-operations-desk.jpg" alt="AI Operations Desk preview page" width="420" height="594" loading="lazy" decoding="async"></figure>
-    </div>
-
-    <form class="whitepaper-form" data-whitepaper-form novalidate>
-      <label>
-        <span data-i18n="landing.extra.ui_3">Email</span>
-        <input name="email" type="email" autocomplete="email" maxlength="120" required placeholder="you@company.com" data-i18n-placeholder="landing.extra.attr_1">
-      </label>
-      <div class="whitepaper-grid">
+      <form class="whitepaper-form" data-whitepaper-form="" novalidate="">
         <label>
-          <span data-i18n="landing.extra.ui_4">Name <small>optional</small></span>
-          <input name="name" type="text" autocomplete="name" maxlength="80" placeholder="Your name" data-i18n-placeholder="landing.extra.attr_2">
+          <span data-i18n="landing.extra.ui_3">Email</span>
+          <input
+            autocomplete="email"
+            data-i18n-placeholder="landing.extra.attr_1"
+            maxlength="120"
+            name="email"
+            placeholder="you@company.com"
+            required=""
+            type="email"
+          />
         </label>
-        <label>
-          <span data-i18n="landing.extra.ui_5">Company <small>optional</small></span>
-          <input name="company" type="text" autocomplete="organization" maxlength="120" placeholder="Company" data-i18n-placeholder="landing.extra.attr_3">
+        <div class="whitepaper-grid">
+          <label>
+            <span data-i18n="landing.extra.ui_4"
+              >Name <small>optional</small></span
+            >
+            <input
+              autocomplete="name"
+              data-i18n-placeholder="landing.extra.attr_2"
+              maxlength="80"
+              name="name"
+              placeholder="Your name"
+              type="text"
+            />
+          </label>
+          <label>
+            <span data-i18n="landing.extra.ui_5"
+              >Company <small>optional</small></span
+            >
+            <input
+              autocomplete="organization"
+              data-i18n-placeholder="landing.extra.attr_3"
+              maxlength="120"
+              name="company"
+              placeholder="Company"
+              type="text"
+            />
+          </label>
+        </div>
+        <label class="whitepaper-consent">
+          <input name="consent" required="" type="checkbox" />
+          <span data-i18n="landing.extra.ui_6"
+            >I agree to share this email with INOSX so the team can send product
+            updates and follow up about AI operations.</span
+          >
         </label>
-      </div>
-      <label class="whitepaper-consent">
-        <input name="consent" type="checkbox" required>
-        <span data-i18n="landing.extra.ui_6">I agree to share this email with INOSX so the team can send product updates and follow up about AI operations.</span>
-      </label>
-      <div class="intake-verification" role="group" aria-label="Security check by Cloudflare" data-i18n-aria-label="verification.label">
-        <strong data-i18n="verification.label">Security check by Cloudflare</strong>
-        <p data-check-status role="status" data-i18n="verification.loading">Loading the security check…</p>
-        <div data-turnstile-container data-sitekey="0x4AAAAAAD7_d54OZxbyLsTV"></div>
-        <button type="button" data-check-retry hidden data-i18n="verification.retry">Retry verification</button>
-      </div>
-      <div class="whitepaper-actions">
-        <button type="submit" data-i18n="landing.extra.ui_7">Download free whitepaper</button>
-        <a class="whitepaper-download" data-whitepaper-download href="#" download="AITEAM-X_Operating_Agents_Whitepaper.pdf" hidden data-i18n="landing.extra.ui_8">Open whitepaper</a>
-      </div>
-      <p class="whitepaper-status" data-whitepaper-status role="status" aria-live="polite" data-i18n="landing.extra.ui_9">Instant signed download link.</p>
-    </form>
-  </aside>
-
-  <!-- ============ JSON-LD structured data ============ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://inosx.com/#organization",
-        "name": "INOSX",
-        "url": "https://inosx.com/",
-        "logo": "https://inosx.com/assets/brand/inosx/v1/inosx-lockup-dark-2400.png",
-        "image": "https://inosx.com/assets/brand/inosx/v1/inosx-social-cover-1500x500.png",
-        "email": "support@inosx.com",
-        "foundingDate": "2021",
-        "description": "Application development and technology solutions studio building custom software, platforms, integrations, automation and AI solutions for production.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "support@inosx.com",
-          "contactType": "customer support",
-          "availableLanguage": ["en", "pt-BR", "es"]
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://inosx.com/#website",
-        "url": "https://inosx.com/",
-        "name": "INOSX",
-        "description": "Application development, technology solutions and AI solutions. INOSX builds custom software, platforms, integrations and automation for companies.",
-        "publisher": { "@id": "https://inosx.com/#organization" },
-        "inLanguage": ["en", "pt-BR", "es"]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://inosx.com/#webpage",
-        "url": "https://inosx.com/",
-        "name": "INOSX | Software, AI and product partnerships",
-        "isPartOf": { "@id": "https://inosx.com/#website" },
-        "about": { "@id": "https://inosx.com/#organization" },
-        "description": "We develop applications, platforms, integrations and AI solutions that fit the client's operation and reach production.",
-        "dateModified": "2026-06-21",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://inosx.com/#faq",
-        "isPartOf": { "@id": "https://inosx.com/#webpage" },
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How does a project with INOSX start?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "With a free diagnostic conversation. We map your context, objectives and data, and come back with a lean pilot proposal and a realistic timeline."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long until results?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Typical pilots reach production in 4 to 8 weeks. The scope is defined to generate measurable value within that window."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Will my data be exposed?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. We work with private architectures, local models when needed, data segregation and LGPD/GDPR compliance."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you integrate with our systems?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. ERPs, CRMs, internal bases, APIs and legacy. Integration is part of scope, not a separate project."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you have a fixed tech stack?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. We pick the right stack per project: Node, Python, Go, Rust on the back end; React, Svelte, Vue on the front; managed cloud or on-prem. Architecture follows your operational reality, not our preference. The same applies to AI: proprietary, open-source or local model, picked by the problem."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How is pricing?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Fixed scope for pilot and continuous-operation model for production. No hidden licenses, transparent costs."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you serve outside Brazil?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. PT-BR, EN and ES, with global remote delivery."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "ItemList",
-        "@id": "https://inosx.com/#products",
-        "name": "INOSX proprietary products",
-        "itemListOrder": "https://schema.org/ItemListUnordered",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Messiax",     "url": "https://inosx.com/messiax.html" },
-          { "@type": "ListItem", "position": 2, "name": "SurveyFlow",  "url": "https://inosx.com/surveyflow.html" },
-          { "@type": "ListItem", "position": 3, "name": "PsychoX",     "url": "https://inosx.com/produtos.html#psychox" },
-          { "@type": "ListItem", "position": 4, "name": "DataGPT",     "url": "https://inosx.com/produtos.html#datagpt" },
-          { "@type": "ListItem", "position": 5, "name": "Ccoinx.ai",   "url": "https://inosx.com/produtos.html#ccoinx" },
-          { "@type": "ListItem", "position": 6, "name": "Tranquilopa", "url": "https://inosx.com/produtos.html#tranquilopa" },
-          { "@type": "ListItem", "position": 7, "name": "AITEAM-X",    "url": "https://inosx.com/produtos.html#aiteam" },
-          {"@type": "ListItem", "position": 8, "name": "Global Dollar Academy", "url": "https://gda.inosx.com/"},
-          {"@type": "ListItem", "position": 9, "name": "Patrimônio sem Fronteiras", "url": "https://psf.gda.inosx.com/"},
-          {"@type": "ListItem", "position": 10, "name": "Global Pricing Academy", "url": "https://gpa.inosx.com/"}
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Version badge — fetches /version.json (gitignored cache hint: 5min)
-    (function() {
-      var badge = document.getElementById('versionBadge');
-      if (!badge) return;
-      fetch('/version.json', { cache: 'default' })
-        .then(function(r) { return r.ok ? r.json() : Promise.reject(); })
-        .then(function(v) {
-          document.getElementById('versionBadgeVer').textContent = 'v' + v.version;
-          var shortHash = (v.hash || '').slice(0, 7);
-          document.getElementById('versionBadgeHash').textContent = shortHash;
-          if (v.hash) badge.href = 'https://github.com/m2f0/inosx/commit/' + v.hash;
-        })
-        .catch(function() { badge.style.display = 'none'; });
-    })();
-
-    (function() {
-      var els = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) {
-        els.forEach(function(e){ e.classList.add('in'); });
-        return;
-      }
-      var io = new IntersectionObserver(function(entries) {
-        entries.forEach(function(en) {
-          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-        });
-      }, { threshold: 0.12 });
-      els.forEach(function(e){ io.observe(e); });
-    })();
-
-    (function() {
-      var form = document.getElementById('leadForm');
-      var btn = document.getElementById('leadSubmit');
-      var ok = document.getElementById('leadSuccess');
-      var err = document.getElementById('leadError');
-      if (!form) return;
-
-      form.addEventListener('submit', function(ev) {
-        ev.preventDefault();
-        ok.classList.remove('show');
-        err.classList.remove('show');
-        if (!form.checkValidity()) { form.reportValidity(); return; }
-
-        btn.disabled = true;
-        var labelSpan = btn.querySelector('span:first-child');
-        var prev = labelSpan.textContent;
-        labelSpan.textContent = window.i18n.t('landing.extra.message_0');
-
-        var data = new FormData(form);
-        var endpoint = form.getAttribute('data-endpoint') || '';
-        var widget = form.querySelector('[data-turnstile-container]');
-        var widgetId = widget ? widget.getAttribute('data-widget-id') : '';
-        var turnstileToken = data.get('cf-turnstile-response') || '';
-        var safeEndpoint = false;
-        try {
-          var endpointUrl = new URL(endpoint);
-          safeEndpoint = endpointUrl.protocol === 'https:'
-            && endpointUrl.hostname === 'api.inosx.com'
-            && endpointUrl.pathname === '/v1/public-intake';
-        } catch (e) {}
-        if (!safeEndpoint || !turnstileToken) {
-          err.classList.add('show');
-          btn.disabled = false;
-          labelSpan.textContent = prev;
-          return;
-        }
-
-        if (data.get('_gotcha')) {
-          ok.classList.add('show');
-          form.reset();
-          btn.disabled = false;
-          labelSpan.textContent = prev;
-          return;
-        }
-
-        fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            type: 'contact',
-            name: data.get('name'),
-            email: data.get('email'),
-            company: data.get('company'),
-            phone: data.get('phone'),
-            message: data.get('message'),
-            source: 'inosx.com',
-            sourceRef: 'contact-form',
-            consent: data.get('consent') === 'on',
-            locale: document.documentElement.lang === 'en' ? 'en' : 'pt-BR',
-            turnstileToken: turnstileToken
-          })
-        }).then(function(res) {
-          return res.json().catch(function() { return {}; }).then(function(result) {
-            if (!res.ok || (result.status !== 'accepted' && result.status !== 'duplicate')) throw new Error('intake_failed');
-            ok.classList.add('show');
-            form.reset();
-          });
-        }).catch(function() { err.classList.add('show'); })
-          .finally(function() {
-            if (widgetId && window.turnstile) widget.dispatchEvent(new Event("intake-reset"));
-            btn.disabled = false;
-            labelSpan.textContent = prev;
-          });
-      });
-    })();
-
-    (function() {
-      var btns = document.querySelectorAll('.lang-switch button');
-      btns.forEach(function(b) {
-        b.addEventListener('click', function() {
-          btns.forEach(function(x){ x.classList.remove('active'); x.removeAttribute('aria-current'); });
-          b.classList.add('active');
-          b.setAttribute('aria-current', 'true');
-          var lang = b.getAttribute('data-lang');
-          if (window.i18n && typeof window.i18n.setLanguage === 'function') {
-            window.i18n.setLanguage(lang);
-          } else {
-            document.documentElement.lang = lang;
-          }
-        });
-      });
-      // Boot em EN se i18n.js suportar
-      if (window.i18n && typeof window.i18n.setLanguage === 'function') {
-        // Initialization belongs to i18n.js; respect URL and saved language.
-      }
-    })();
-
-    (function() {
-      var toast = document.querySelector('[data-whitepaper-toast]');
-      if (!toast) return;
-
-      var endpoint = toast.getAttribute('data-endpoint') || '';
-      var downloadUrl = toast.getAttribute('data-download-url') || '';
-      var form = toast.querySelector('[data-whitepaper-form]');
-      var closeButton = toast.querySelector('[data-whitepaper-close]');
-      var status = toast.querySelector('[data-whitepaper-status]');
-      var submitButton = form ? form.querySelector('button[type="submit"]') : null;
-      var downloadLink = toast.querySelector('[data-whitepaper-download]');
-      var dismissedKey = 'inosx.whitepaper.dismissedUntil';
-      var completedKey = 'inosx.whitepaper.completedUntil';
-      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-      function trimField(value, limit) {
-        return String(value || '').trim().slice(0, limit);
-      }
-      function now() { return Date.now(); }
-      function daysFromNow(days) { return now() + days * 24 * 60 * 60 * 1000; }
-      function getStoredUntil(key) {
-        var value = Number(window.localStorage.getItem(key) || 0);
-        return Number.isFinite(value) ? value : 0;
-      }
-      function suppressUntil(key, days) {
-        window.localStorage.setItem(key, String(daysFromNow(days)));
-      }
-      function isSuppressed() {
-        return getStoredUntil(dismissedKey) > now() || getStoredUntil(completedKey) > now();
-      }
-      function setStatus(message, type) {
-        if (!status) return;
-        status.textContent = message || '';
-        status.classList.toggle('is-error', type === 'error');
-        status.classList.toggle('is-success', type === 'success');
-      }
-      function isSafeIntakeEndpoint(value) {
-        try {
-          var url = new URL(value);
-          return url.protocol === 'https:'
-            && url.hostname === 'api.inosx.com'
-            && url.pathname === '/v1/public-intake';
-        } catch (e) {
-          return false;
-        }
-      }
-      function isSafeDownloadUrl(value) {
-        try {
-          var url = new URL(value, window.location.origin);
-          return url.origin === window.location.origin
-            && url.pathname === '/assets/whitepaper/AITEAM-X_Operating_Agents_Whitepaper.pdf'
-            && !url.search
-            && !url.hash;
-        } catch (e) {
-          return false;
-        }
-      }
-      function showToast() {
-        if (isSuppressed()) return;
-        toast.hidden = false;
-        if (window.turnstile) window.inosxTurnstileReady();
-        window.requestAnimationFrame(function() { toast.classList.add('is-visible'); });
-      }
-      function hideToast() {
-        toast.classList.remove('is-visible');
-        window.setTimeout(function() { toast.hidden = true; }, 180);
-      }
-
-      if (closeButton) {
-        closeButton.addEventListener('click', function() {
-          suppressUntil(dismissedKey, 7);
-          hideToast();
-        });
-      }
-
-      if (form) {
-        form.addEventListener('submit', function(event) {
-          event.preventDefault();
-          var formData = new FormData(form);
-          var email = trimField(formData.get('email'), 120).toLowerCase();
-          var name = trimField(formData.get('name'), 80);
-          var company = trimField(formData.get('company'), 120);
-          var consent = formData.get('consent') === 'on';
-
-          if (!email || !emailPattern.test(email)) {
-            setStatus(window.i18n.t('landing.extra.message_1'), 'error');
-            var emailInput = form.querySelector('input[name="email"]');
-            if (emailInput) emailInput.focus();
-            return;
-          }
-          if (!consent) {
-            setStatus(window.i18n.t('landing.extra.message_2'), 'error');
-            var consentInput = form.querySelector('input[name="consent"]');
-            if (consentInput) consentInput.focus();
-            return;
-          }
-          var widget = form.querySelector('[data-turnstile-container]');
-          var widgetId = widget ? widget.getAttribute('data-widget-id') : '';
-          var turnstileToken = formData.get('cf-turnstile-response') || '';
-          if (!isSafeIntakeEndpoint(endpoint) || !isSafeDownloadUrl(downloadUrl) || !turnstileToken) {
-            setStatus(window.i18n.t('landing.extra.message_3'), 'error');
-            return;
-          }
-
-          if (submitButton) {
-            submitButton.disabled = true;
-            submitButton.textContent = window.i18n.t('landing.extra.message_4');
-          }
-          if (downloadLink) downloadLink.hidden = true;
-          setStatus(window.i18n.t('landing.extra.message_5'));
-
-          fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              type: 'whitepaper',
-              email: email,
-              name: name || email.split('@')[0],
-              company: company,
-              message: 'Requested AITEAM-X Operating Agents whitepaper',
-              source: 'inosx.com',
-              sourceRef: 'operating-agents-whitepaper',
-              consent: true,
-              locale: document.documentElement.lang === 'en' ? 'en' : 'pt-BR',
-              turnstileToken: turnstileToken
-            })
-          }).then(function(response) {
-            return response.json().catch(function() { return {}; }).then(function(data) {
-              if (!response.ok || (data.status !== 'accepted' && data.status !== 'duplicate')) {
-                throw new Error(data.status || ('intake_failed_' + response.status));
-              }
-              return data;
-            });
-          }).then(function() {
-            suppressUntil(completedKey, 30);
-            if (downloadLink) {
-              downloadLink.href = downloadUrl;
-              downloadLink.hidden = false;
-              downloadLink.focus();
-              downloadLink.click();
-            }
-            setStatus(window.i18n.t('landing.extra.message_6'), 'success');
-          }).catch(function() {
-            setStatus(window.i18n.t('landing.extra.message_7'), 'error');
-          }).finally(function() {
-            if (widgetId && window.turnstile) widget.dispatchEvent(new Event("intake-reset"));
-            if (submitButton) {
-              submitButton.disabled = false;
-              submitButton.textContent = window.i18n.t('landing.extra.message_8');
-            }
-          });
-        });
-      }
-
-      // The whitepaper remains available for a future contextual trigger. It must not interrupt the first reading pass.
-    })();
-  </script>
-<script src="/scripts/intake-verification.js"></script>
-<script id="intake-turnstile-sdk" src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=inosxTurnstileReady&amp;render=explicit" async></script>
-<script src="/scripts/agentos-access.js" defer></script>
-<script src="/assets/isabella-test.js?v=4.9.1" defer></script>
-  <script src="https://inosx-isabella-public.vercel.app/widget.js" data-channel="866d71de-5d52-4ccb-b19d-b34f91dd26c0" defer></script>
-</body>
+        <div
+          aria-label="Security check by Cloudflare"
+          class="intake-verification"
+          data-i18n-aria-label="verification.label"
+          role="group"
+        >
+          <strong data-i18n="verification.label"
+            >Security check by Cloudflare</strong
+          >
+          <p
+            data-check-status=""
+            data-i18n="verification.loading"
+            role="status"
+          >
+            Loading the security check…
+          </p>
+          <div
+            data-sitekey="0x4AAAAAAD7_d54OZxbyLsTV"
+            data-turnstile-container=""
+          ></div>
+          <button
+            data-check-retry=""
+            data-i18n="verification.retry"
+            hidden=""
+            type="button"
+          >
+            Retry verification
+          </button>
+        </div>
+        <div class="whitepaper-actions">
+          <button data-i18n="landing.extra.ui_7" type="submit">
+            Download free whitepaper
+          </button>
+          <a
+            class="whitepaper-download"
+            data-i18n="landing.extra.ui_8"
+            data-whitepaper-download=""
+            download="AITEAM-X_Operating_Agents_Whitepaper.pdf"
+            hidden=""
+            href="#"
+            >Open whitepaper</a
+          >
+        </div>
+        <p
+          aria-live="polite"
+          class="whitepaper-status"
+          data-i18n="landing.extra.ui_9"
+          data-whitepaper-status=""
+          role="status"
+        >
+          Instant signed download link.
+        </p>
+      </form>
+    </aside>
+    <script src="/scripts/home-intake.js"></script>
+    <script src="/scripts/home-whitepaper.js"></script>
+    <script src="/scripts/intake-verification.js"></script>
+    <script
+      async=""
+      id="intake-turnstile-sdk"
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=inosxTurnstileReady&amp;render=explicit"
+    ></script>
+    <script defer="" src="/scripts/agentos-access.js"></script>
+    <script defer="" src="/assets/isabella-test.js?v=4.9.1"></script>
+    <script
+      data-channel="866d71de-5d52-4ccb-b19d-b34f91dd26c0"
+      defer=""
+      src="https://inosx-isabella-public.vercel.app/widget.js"
+    ></script>
+  </body>
 </html>
