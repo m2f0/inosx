@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.2.0] - 2026-11-25
+
+### Added
+- Landing de parcerias editoriais em ebook.inosx.com, com duas opções de apoio, simulador de vendas e solicitação de proposta ao CRM. Acesso pelo catálogo de parcerias.
+
 ## [5.1.2] - 2026-11-24
 
 ### Fixed

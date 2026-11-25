@@ -1,0 +1,15 @@
+{
+  "name": "inosx-ebook-parcerias",
+  "compatibility_date": "2026-11-25",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "ebook.inosx.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "../parcerias/ebooks"
+  }
+}
