@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.2.1] - 2026-11-25
+
+### Changed
+- A chamada de parceria editorial na página inicial abre ebook.inosx.com em uma nova aba.
+
 ## [5.2.0] - 2026-11-25
 
 ### Added
