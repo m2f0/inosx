@@ -844,20 +844,16 @@
     "invite": "Bring an INOSX product to your audience.",
     "inviteBody": "Explore the e-book pilot and the partnership formats being considered for courses, software and AI.",
     "catalog": "Product partnerships",
-    "distributionPilot": "Pilot e-book distribution",
-    "catalogBody": "Start with your own e-book or explore partnerships in distribution, courses and technology.",
+    "catalogBody": "Create your e-book with INOSX or explore course and technology partnerships.",
     "all": "All",
     "pub": "Publications",
     "courses": "Courses",
     "tech": "Technology",
     "ebook": "Pilot e-book",
-    "price": "Pilot · US$19",
     "course": "Digital course",
     "software": "Subscription software",
     "ai": "AI application",
     "study": "Under consideration",
-    "ebookBody": "INOSX produces the e-book. The commercial partner introduces it to their audience and earns a share of eligible net revenue from attributed sales.",
-    "ebookTerms": "US$19 is the simulated retail price. The proposal will specify the percentage, deductible costs, attribution and payout schedule.",
     "courseBody": "The partner introduces a course to prospective learners. The audience, sample lesson and share per enrolment will be defined for each course.",
     "softwareBody": "The partner identifies potential subscribers. Each proposal will specify whether a share applies to the first payment, renewals or both.",
     "aiBody": "The partner identifies companies with a use case suited to the application. The demo, customer profile and commercial terms will be set per product.",
@@ -868,7 +864,7 @@
     "metaTitle": "INOSX | Software, AI and product partnerships",
     "meta": {
       "title": "Product partnerships | INOSX",
-      "description": "Start with your own e-book or explore partnerships in distribution, courses and technology."
+      "description": "Create your e-book with INOSX or explore course and technology partnerships."
     }
   },
   "studioHome": {"meta": {"title": "INOSX | Software, AI and product partnerships", "description": "We build custom software for businesses and create digital products you can bring to your audience."}},

@@ -844,20 +844,16 @@
     "invite": "Acerca un producto de INOSX a tu público.",
     "inviteBody": "Conoce el e-book piloto y los formatos de alianza en estudio para cursos, software e IA.",
     "catalog": "Alianzas de productos",
-    "distributionPilot": "Distribución de e-book piloto",
-    "catalogBody": "Empieza por la creación de tu e-book o explora alianzas de distribución, cursos y tecnología.",
+    "catalogBody": "Crea tu e-book con INOSX o explora las alianzas de cursos y tecnología.",
     "all": "Todos",
     "pub": "Publicaciones",
     "courses": "Cursos",
     "tech": "Tecnología",
     "ebook": "E-book piloto",
-    "price": "Piloto · US$ 19",
     "course": "Curso digital",
     "software": "Software por suscripción",
     "ai": "Aplicación de IA",
     "study": "En estudio",
-    "ebookBody": "INOSX produce el e-book. El socio lo presenta a su público y participa en los ingresos netos elegibles de las ventas que se le atribuyan.",
-    "ebookTerms": "US$ 19 es el precio de venta de la simulación. La propuesta definirá el porcentaje, los costes deducibles, la atribución y el plazo de pago.",
     "courseBody": "El socio presenta el curso a posibles alumnos. El público, la clase de muestra y la participación por matrícula se definirán por curso.",
     "softwareBody": "El socio identifica posibles suscriptores. Cada propuesta definirá si la participación cubre el primer cobro, las renovaciones o ambos.",
     "aiBody": "El socio identifica empresas con una necesidad compatible. La demostración, el perfil del cliente y las condiciones se definirán por producto.",
@@ -868,7 +864,7 @@
     "metaTitle": "INOSX | Software, IA y alianzas de productos",
     "meta": {
       "title": "Alianzas de productos | INOSX",
-      "description": "Empieza por la creación de tu e-book o explora alianzas de distribución, cursos y tecnología."
+      "description": "Crea tu e-book con INOSX o explora las alianzas de cursos y tecnología."
     }
   },
   "studioHome": {"meta": {"title": "INOSX | Software, IA y alianzas de productos", "description": "Desarrollamos software a medida para empresas y creamos productos digitales que puedes acercar a tu público."}},

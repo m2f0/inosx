@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.2.3] - 2026-11-25
+
+### Removed
+- A oferta de distribuição do e-book piloto foi removida do catálogo de parcerias. Publicações apresenta apenas a criação de e-books com a INOSX.
+
 ## [5.2.2] - 2026-11-25
 
 ### Changed

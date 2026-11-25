@@ -844,20 +844,16 @@
     "invite": "Leve um produto da INOSX ao seu público.",
     "inviteBody": "Conheça o e-book piloto e os formatos de parceria em estudo para cursos, software e IA.",
     "catalog": "Parcerias de produtos",
-    "distributionPilot": "Distribuição de e-book piloto",
-    "catalogBody": "Comece pela criação do seu e-book ou explore as parcerias de distribuição, cursos e tecnologia.",
+    "catalogBody": "Crie seu e-book com a INOSX ou explore as parcerias de cursos e tecnologia.",
     "all": "Todos",
     "pub": "Publicações",
     "courses": "Cursos",
     "tech": "Tecnologia",
     "ebook": "E-book piloto",
-    "price": "Piloto · US$ 19",
     "course": "Curso digital",
     "software": "Software por assinatura",
     "ai": "Aplicação de IA",
     "study": "Em estudo",
-    "ebookBody": "A INOSX produz o e-book. O parceiro o apresenta ao seu público e participa da receita líquida elegível das vendas atribuídas a ele.",
-    "ebookTerms": "US$ 19 é o preço de venda usado na simulação. A proposta definirá o percentual, os custos dedutíveis, a atribuição das vendas e o prazo de repasse.",
     "courseBody": "O parceiro apresenta o curso a potenciais alunos. Público, aula de amostra e participação por matrícula serão definidos para cada curso.",
     "softwareBody": "O parceiro identifica potenciais assinantes. Cada proposta definirá se o repasse considera a primeira cobrança, as renovações ou ambas.",
     "aiBody": "O parceiro identifica empresas com uma necessidade compatível com a aplicação. A demonstração, o perfil do cliente e as condições serão definidos por produto.",
@@ -868,7 +864,7 @@
     "metaTitle": "INOSX | Software, IA e parcerias de produtos",
     "meta": {
       "title": "Parcerias de produtos | INOSX",
-      "description": "Comece pela criação do seu e-book ou explore as parcerias de distribuição, cursos e tecnologia."
+      "description": "Crie seu e-book com a INOSX ou explore as parcerias de cursos e tecnologia."
     }
   },
   "studioHome": {"meta": {"title": "INOSX | Software, IA e parcerias de produtos", "description": "Desenvolvemos software sob medida para empresas e criamos produtos digitais que você pode levar ao seu público."}},
