@@ -827,8 +827,8 @@
   },
   "studio": {
     "editorialTitle": "Crie seu e-book com a INOSX",
-    "editorialBody": "Estruture um livro a partir do seu material ou edite um manuscrito. A INOSX prepara a edição e o contratante cuida das vendas.",
-    "editorialCta": "Conhecer a parceria editorial",
+    "editorialBody": "A INOSX ajuda a estruturar seu material ou a editar seu manuscrito. Você cuida das vendas, e a receita é compartilhada conforme o acordo do projeto.",
+    "editorialCta": "Ver opções para criar meu e-book",
     "services": "Serviços",
     "products": "Produtos",
     "partners": "Parcerias",
@@ -844,7 +844,7 @@
     "invite": "Leve um produto da INOSX ao seu público.",
     "inviteBody": "Conheça o e-book piloto e os formatos de parceria em estudo para cursos, software e IA.",
     "catalog": "Parcerias de produtos",
-    "catalogBody": "Crie seu e-book com a INOSX ou explore as parcerias de cursos e tecnologia.",
+    "catalogBody": "Crie seu e-book em parceria com a INOSX. As parcerias para cursos, software e aplicações de IA estão em estudo.",
     "all": "Todos",
     "pub": "Publicações",
     "courses": "Cursos",
@@ -864,7 +864,7 @@
     "metaTitle": "INOSX | Software, IA e parcerias de produtos",
     "meta": {
       "title": "Parcerias de produtos | INOSX",
-      "description": "Crie seu e-book com a INOSX ou explore as parcerias de cursos e tecnologia."
+      "description": "Crie seu e-book em parceria com a INOSX. As parcerias para cursos, software e aplicações de IA estão em estudo."
     }
   },
   "studioHome": {"meta": {"title": "INOSX | Software, IA e parcerias de produtos", "description": "Desenvolvemos software sob medida para empresas e criamos produtos digitais que você pode levar ao seu público."}},

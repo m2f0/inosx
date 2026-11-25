@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.2.4] - 2026-11-25
+
+### Changed
+- O catálogo em português esclarece quais parcerias estão em estudo, explica o papel do autor nas vendas e apresenta as opções de criação do e-book. O espaçamento do catálogo foi ajustado para celular.
+
 ## [5.2.3] - 2026-11-25
 
 ### Removed

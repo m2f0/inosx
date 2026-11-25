@@ -103,4 +103,8 @@ body .agentos-retrospective {border-color:var(--line-2)}
 .catalog-editorial h2 {font:560 clamp(1.85rem,3.5vw,3.5rem)/1.06 var(--font-display);letter-spacing:-.045em;margin:.45em 0 .3em}
 .catalog-editorial p {color:var(--ink-2);max-width:53ch;margin:0 0 1.2rem}
 .catalog-editorial img {width:100%;height:auto;aspect-ratio:1.9;object-fit:cover}
-@media(max-width:700px){.catalog-editorial {grid-template-columns:1fr}.catalog-editorial img {aspect-ratio:2.7}}
+@media(max-width:700px){
+ .catalog-head {padding-block:28px 10px}
+ .catalog-head p {margin-block:16px 19px}
+ .catalog-controls {margin-bottom:18px}
+ .catalog-editorial {grid-template-columns:1fr}.catalog-editorial img {aspect-ratio:2.7}}
